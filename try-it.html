@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Try a tiny step | Yaanstep</title>
+<meta name="description" content="Try the Yaanstep idea in your browser: pick your profile, get a tiny first step, and start in ten seconds.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+<a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="" width="40" height="40"><span>Yaanstep</span></a>
+<nav aria-label="Main"><a href="index.html">Home</a><a href="how-it-works.html">How it works</a><a href="try-it.html" aria-current="page">Try it</a><a href="time-calculator.html">Time calculator</a><a href="pricing.html">Pricing</a><a href="team.html">Team</a><a href="testers.html">Join the testers</a></nav>
+</div></header>
+<main id="main" class="wrap">
+
+<h1>Try a tiny step</h1>
+<p class="lead">This is a small demo of the Yaanstep idea. Pick the profile closest to your life, get a first step that takes two minutes or less, and press Start Now.</p>
+<p class="muted">The app starts with four profiles: student, job seeker, manager and desk worker. The extra ones here show where it could go and may change.</p>
+<p class="muted">It runs in your browser only. Nothing you pick is saved or sent anywhere. The real app is still in development.</p>
+
+<div class="demo" id="demo" data-demo hidden>
+  <fieldset class="choices">
+    <legend>I am a&hellip;</legend>
+    <label><input type="radio" name="profile" value="student" checked> Student</label>
+    <label><input type="radio" name="profile" value="seeker"> Job seeker</label>
+    <label><input type="radio" name="profile" value="manager"> Manager</label>
+    <label><input type="radio" name="profile" value="desk"> Desk worker</label>
+    <label><input type="radio" name="profile" value="teen"> Teen (13 to 17)</label>
+    <label><input type="radio" name="profile" value="parent"> Parent at home</label>
+    <label><input type="radio" name="profile" value="freelance"> Freelancer</label>
+    <label><input type="radio" name="profile" value="retired"> Retired</label>
+  </fieldset>
+
+  <div class="step-card" aria-live="polite">
+    <p class="tag" id="goal-label">Big goal</p>
+    <p class="goal" id="goal"></p>
+    <p class="tag">Your tiny first step</p>
+    <p class="tiny" id="tiny"></p>
+  </div>
+
+  <p class="actions">
+    <button type="button" class="btn" id="start">Start Now</button>
+    <button type="button" class="btn ghost" id="another">Show me a different step</button>
+  </p>
+
+  <div class="countdown" id="countdown" hidden>
+    <p class="count-text" id="count-text" role="timer" aria-live="off">10</p>
+    <div class="bar-track" aria-hidden="true"><div class="bar-fill" id="bar-fill"></div></div>
+    <p><button type="button" class="btn ghost" id="cancel">Not now</button></p>
+  </div>
+
+  <p class="result notice" id="result" role="status" hidden></p>
+</div>
+
+<noscript>
+<p class="notice">This demo needs JavaScript. Here is the idea without it:</p>
+</noscript>
+<section id="static-list" aria-labelledby="examples-h">
+<h2 id="examples-h">Examples of tiny steps</h2>
+<table>
+<thead><tr><th scope="col">Profile</th><th scope="col">Big goal</th><th scope="col">Tiny first step</th></tr></thead>
+<tbody>
+<tr><td>Student</td><td>Study for the exam</td><td>Open the notes and read one page</td></tr>
+<tr><td>Job seeker</td><td>Apply for jobs</td><td>Open one job post and read the title</td></tr>
+<tr><td>Manager</td><td>Plan the week</td><td>Write down the top task for tomorrow</td></tr>
+<tr><td>Desk worker</td><td>Move more</td><td>Stand up and walk to the door</td></tr>
+<tr><td>Teen (13 to 17)</td><td>Get homework started</td><td>Take out your homework and open it</td></tr>
+<tr><td>Parent at home</td><td>Tidy up</td><td>Put one thing back where it belongs</td></tr>
+<tr><td>Freelancer</td><td>Finish a client project</td><td>Open the file and write the next line</td></tr>
+<tr><td>Retired</td><td>Stay active</td><td>Put on your shoes and step outside</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Why so small?</h2>
+<p>A big goal is easy to put off. A step you can finish in under two minutes is hard to argue with. Once you have started, carrying on is often easier than you expect. If you stop after the tiny step, that still counts.</p>
+<p><a class="btn" href="testers.html">Join the closed test</a></p>
+<p class="muted">Yaanstep coaches habits. It is not therapy and not medical advice.</p>
+</section>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Yaanstep</strong> coaches habits. It is not therapy and not medical advice. For ages 13 and up.</p>
+<p>The Yaanstep team is made of AI agents, led by one human founder. <a href="team.html">Meet the team</a>.</p>
+<p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="accessibility.html">Accessibility</a></p>
+<p class="muted">This site sets no cookies and uses no trackers.</p>
+</div></footer>
+<script src="assets/try-it.js" defer></script>
+</body>
+</html>
