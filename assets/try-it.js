@@ -5,49 +5,31 @@
 
   var STEPS = {
     student: [
-      { goal: 'Study for the exam', tiny: 'Open the notes and read one page' },
-      { goal: 'Finish the essay', tiny: 'Write one sentence, even a bad one' },
-      { goal: 'Catch up on reading', tiny: 'Put the book on your desk, open to the right page' }
+      'Open your notebook or laptop to today\'s page.',
+      'Write the title of the assignment at the top.',
+      'Read only the first question.'
     ],
     seeker: [
-      { goal: 'Apply for jobs', tiny: 'Open one job post and read the title' },
-      { goal: 'Update your resume', tiny: 'Open the file and fix one line' },
-      { goal: 'Reach out to someone', tiny: 'Write the first line of a short message' }
-    ],
-    manager: [
-      { goal: 'Plan the week', tiny: 'Write down the top task for tomorrow' },
-      { goal: 'Give feedback to a teammate', tiny: 'Jot down one thing they did well' },
-      { goal: 'Clear the inbox', tiny: 'Answer one email that takes under a minute' }
+      'Sit at your work spot and open your resume file.',
+      'Write one job title you\'d be happy to get.',
+      'Open one job posting and read the first three lines.'
     ],
     desk: [
-      { goal: 'Move more', tiny: 'Stand up and walk to the door' },
-      { goal: 'Drink more water', tiny: 'Fill your glass and put it next to the keyboard' },
-      { goal: 'Rest your eyes', tiny: 'Look out of a window for twenty seconds' }
+      'Write your one top task for today on a sticky note.',
+      'Close one browser tab you don\'t need.',
+      'Stand up and refill your water.'
+    ],
+    manager: [
+      'Write down one person on your team who deserves a thank-you.',
+      'Send them one line of thanks.',
+      'Answer one waiting question with a one-line reply.'
     ],
     teen: [
-      { goal: 'Get homework started', tiny: 'Take out your homework and open it' },
-      { goal: 'Get ready for a test', tiny: 'Write down one thing you already know about it' },
-      { goal: 'Put the phone down for a bit', tiny: 'Leave your phone in another room for five minutes' }
-    ],
-    parent: [
-      { goal: 'Tidy up', tiny: 'Put one thing back where it belongs' },
-      { goal: 'Plan the meals', tiny: 'Write down one dinner for tomorrow' },
-      { goal: 'Take a moment for yourself', tiny: 'Sit down and take three slow breaths' }
-    ],
-    freelance: [
-      { goal: 'Finish a client project', tiny: 'Open the file and write the next line' },
-      { goal: 'Send an invoice', tiny: 'Open last month\'s invoice and change the date' },
-      { goal: 'Find new work', tiny: 'Write the first line of a short message to one person' }
-    ],
-    retired: [
-      { goal: 'Stay active', tiny: 'Put on your shoes and step outside' },
-      { goal: 'Stay in touch', tiny: 'Pick one person and open their message' },
-      { goal: 'Learn something new', tiny: 'Open the book or lesson to the first page' }
+      'Flip your phone over for 2 minutes. Just 2.'
     ]
   };
 
   var COUNT_SECONDS = 10;
-  var goalEl = document.getElementById('goal');
   var tinyEl = document.getElementById('tiny');
   var startBtn = document.getElementById('start');
   var anotherBtn = document.getElementById('another');
@@ -70,9 +52,8 @@
 
   function show() {
     var list = STEPS[profile()];
-    var s = list[index % list.length];
-    goalEl.textContent = s.goal;
-    tinyEl.textContent = s.tiny;
+    tinyEl.textContent = list[index % list.length];
+    anotherBtn.hidden = list.length < 2;
   }
 
   function stopTimer() {
@@ -90,8 +71,8 @@
     barFill.style.width = (100 - (left / (COUNT_SECONDS * 1000)) * 100) + '%';
     if (left <= 0) {
       stopTimer();
-      var s = STEPS[profile()][index % STEPS[profile()].length];
-      resultEl.textContent = 'Go! ' + s.tiny + '. That is the whole job. If you want to keep going afterwards, great. If not, you still started.';
+      var step = STEPS[profile()][index % STEPS[profile()].length].replace(/\.$/, '');
+      resultEl.textContent = 'Go! ' + step + '. That is the whole job. If you want to keep going afterwards, great. If not, you still started.';
       resultEl.hidden = false;
     }
   }
