@@ -18,27 +18,48 @@
 <main id="main" class="wrap">
 
 <h1>Learning in small steps</h1>
-<p class="lead">We are designing a maths and reading program for children aged 3 to 13. It is not available yet. Here are two short sample lessons you can try with your child.</p>
+<p class="lead">Short lessons and games to try with your child. Each one is new every time you play.</p>
 
 <div class="notice" role="note">
-<p><strong>Please read first.</strong> These are samples only. They were designed by Yaanstep's AI team and have not been tested with children. They do not replace school or a teacher.</p>
-<p>A parent or caregiver should sit with the child. There is no sign-in. Nothing your child does here is saved or sent anywhere. This page sets no cookies and uses no trackers.</p>
+<p><strong>Samples only.</strong> Made by Yaanstep's AI team. Not tested with children. Not a replacement for school.</p>
+<p>No sign-in. Nothing is saved or sent. No cookies, no trackers.</p>
 </div>
 
 <div id="learn" hidden>
-<h2 id="pick-h">Pick a sample lesson</h2>
+<h2 id="pick-h">Pick a game</h2>
 <ul class="cards lesson-cards" aria-labelledby="pick-h">
 <li>
-<p class="tag">Age 3, with a parent · about 8 minutes</p>
+<p class="tag">Age 3 · with a grown-up · 5 minutes</p>
 <h3>Same and different</h3>
-<p>Match socks, spot the odd one out and sort blocks by color. Then a book and a small job away from the screen.</p>
-<p><button type="button" class="btn" data-start="sorting">Start the sorting lesson</button></p>
+<p>Match socks, find the odd one, sort blocks by color.</p>
+<p class="muted">Grown-up: read the green box aloud. Your child taps.</p>
+<p><button type="button" class="btn" id="start-sorting">Start</button></p>
 </li>
 <li>
-<p class="tag">Age 6 · about 10 minutes</p>
-<h3>Picture the problem</h3>
-<p>Turn a word problem into a bar picture, then find the missing number.</p>
-<p><button type="button" class="btn" data-start="bars">Start the bar picture lesson</button></p>
+<p class="tag">Age 6 and up · a short lesson, then 5 rounds</p>
+<h3>Maths games</h3>
+<fieldset class="choices">
+<legend>What kind of questions?</legend>
+<label><input type="radio" name="kind" value="mixed" checked> Mixed</label>
+<label><input type="radio" name="kind" value="add"> Adding</label>
+<label><input type="radio" name="kind" value="take"> Taking away</label>
+<label><input type="radio" name="kind" value="more"> How many more</label>
+</fieldset>
+<fieldset class="choices">
+<legend>How big are the numbers?</legend>
+<label><input type="radio" name="size" value="10"> Up to 10</label>
+<label><input type="radio" name="size" value="20" checked> Up to 20</label>
+</fieldset>
+<fieldset class="choices">
+<legend>How do you want to play?</legend>
+<label><input type="radio" name="style" value="questions" checked> Story questions</label>
+<label><input type="radio" name="style" value="dice"> Dice</label>
+<label><input type="radio" name="style" value="hunt"> Number hunt</label>
+<label><input type="radio" name="style" value="race"> Race to the flag</label>
+<label><input type="radio" name="style" value="line"> Cards and number line</label>
+</fieldset>
+<p class="choices"><label><input type="checkbox" id="with-lesson" checked> Start with a short lesson</label></p>
+<p><button type="button" class="btn" id="start-maths">Start</button></p>
 </li>
 </ul>
 
@@ -51,21 +72,21 @@
 <p class="feedback" id="player-feedback" role="status" aria-live="polite"></p>
 <p class="actions">
 <button type="button" class="btn" id="player-next">Next</button>
-<button type="button" class="btn ghost" id="player-close">Close the lesson</button>
+<button type="button" class="btn ghost" id="player-close">Exit</button>
 </p>
 </section>
 </div>
 
 <noscript>
-<p class="notice">The sample lessons need JavaScript. Here is what they cover without it.</p>
+<p class="notice">The games need JavaScript. Here is what they cover without it.</p>
 </noscript>
 <section id="static-lessons" aria-labelledby="static-h">
-<h2 id="static-h">What the two sample lessons cover</h2>
+<h2 id="static-h">What the two games cover</h2>
 <table>
 <thead><tr><th scope="col">Lesson</th><th scope="col">On the screen</th><th scope="col">Away from the screen</th></tr></thead>
 <tbody>
-<tr><td>Same and different (age 3, with a parent)</td><td>Find two socks that match, spot the one that is different, sort red and blue blocks into two baskets</td><td>Share a picture book and name three things in it; pair up the clean socks together</td></tr>
-<tr><td>Picture the problem (age 6)</td><td>See how a bar picture shows a word problem, then solve four problems with bars</td><td>Count two groups of things at home, draw a bar for each and find the total</td></tr>
+<tr><td>Same and different (age 3, with a grown-up)</td><td>Find two socks that match, spot the one that is different, sort blocks of two colors into two baskets</td><td>Pair up real socks; share a picture book and name three things in it</td></tr>
+<tr><td>Maths games (age 6 and up)</td><td>A short lesson with dots and a bar picture, then five rounds of a game you choose: story questions, dice, number hunt, race, or cards with a number line</td><td>Count two groups of things at home and draw a bar for each</td></tr>
 </tbody>
 </table>
 </section>
@@ -75,7 +96,7 @@
 <ul>
 <li><strong>Pictures first.</strong> A new idea starts with real things, then a picture, then numbers.</li>
 <li><strong>Short, with a clear end.</strong> A lesson for a three-year-old is about 20 minutes, and half of it happens away from the screen. Nothing plays on by itself.</li>
-<li><strong>A small check, not a test.</strong> Each lesson ends with a few questions so you can see what stuck. For young children, the parent simply notes how it went.</li>
+<li><strong>New every time.</strong> The questions are made fresh each time you play, and you choose the kind of question.</li>
 <li><strong>Back to real life.</strong> Every lesson ends with one small job to do with real things.</li>
 </ul>
 <p class="muted">The full program is still being designed. If it is built, a parent will hold the account and a child will never sign in.</p>

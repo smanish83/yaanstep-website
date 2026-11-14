@@ -1,7 +1,9 @@
 /* Yaanstep learning page: two sample lessons.
    Runs in the browser only. Nothing is stored or sent: no cookies, no
    localStorage, no network requests. All state lives in variables and is
-   gone when the page is closed. */
+   gone when the page is closed.
+   There is no list of questions. Each lesson is built from random numbers,
+   names and things when it starts, so it is different every time. */
 (function () {
   'use strict';
   var root = document.getElementById('learn');
@@ -149,40 +151,105 @@
     };
   }
 
+  /* ---------- drag and drop (mouse, touch and pen) ----------
+     A thing can be dragged onto any element marked data-drop. Tapping and the
+     keyboard still work, because a press without movement stays a click. */
+  function makeDraggable(btn, onDrop) {
+    var start = null, ghost = null, dragged = false;
+    btn.style.touchAction = 'none';
+    btn.classList.add('draggable');
+    function stop() {
+      if (ghost && ghost.parentNode) ghost.parentNode.removeChild(ghost);
+      ghost = null; start = null;
+      btn.classList.remove('dragging');
+    }
+    btn.addEventListener('pointerdown', function (e) {
+      if (btn.disabled) return;
+      start = { x: e.clientX, y: e.clientY };
+      dragged = false;
+      if (btn.setPointerCapture) { try { btn.setPointerCapture(e.pointerId); } catch (err) { /* not captured */ } }
+    });
+    btn.addEventListener('pointermove', function (e) {
+      if (!start) return;
+      if (!ghost) {
+        if (Math.abs(e.clientX - start.x) + Math.abs(e.clientY - start.y) < 8) return;
+        var box = btn.getBoundingClientRect();
+        ghost = btn.cloneNode(true);
+        ghost.removeAttribute('id');
+        ghost.setAttribute('aria-hidden', 'true');
+        ghost.className = 'item-ghost';
+        ghost.style.width = box.width + 'px';
+        ghost.style.height = box.height + 'px';
+        document.body.appendChild(ghost);
+        btn.classList.add('dragging');
+        dragged = true;
+      }
+      ghost.style.left = (e.clientX - ghost.offsetWidth / 2) + 'px';
+      ghost.style.top = (e.clientY - ghost.offsetHeight / 2) + 'px';
+    });
+    btn.addEventListener('pointerup', function (e) {
+      var wasDragging = !!ghost;
+      stop();
+      if (!wasDragging) return;
+      var under = document.elementFromPoint(e.clientX, e.clientY);
+      var target = under && under.closest ? under.closest('[data-drop]') : null;
+      if (target && target !== btn) onDrop(target);
+    });
+    btn.addEventListener('pointercancel', stop);
+    btn.addEventListener('click', function (e) {
+      if (dragged) { dragged = false; e.stopImmediatePropagation(); e.preventDefault(); }
+    });
+  }
+
+  function hintLine(ctx, words) { ctx.stage.appendChild(el('p', { 'class': 'muted how' }, [words])); }
+
   function pickTwo(items) {
     return function (ctx) {
       var tray = el('div', { 'class': 'tray', role: 'group', 'aria-label': 'Socks' });
       var chosen = [];
-      var buttons = items.map(function (it) {
-        var b = el('button', { type: 'button', 'class': 'item-btn', 'aria-pressed': 'false', 'aria-label': it.name });
+      var buttons = [];
+      var misses = 0;
+      function judge(b1, b2) {
+        var same = items[buttons.indexOf(b1)].key === items[buttons.indexOf(b2)].key;
+        if (same) {
+          buttons.forEach(function (x) { x.disabled = true; x.setAttribute('aria-pressed', 'false'); });
+          b1.classList.add('done'); b2.classList.add('done');
+          ctx.tell('Yes! Those two socks are the same.', 'yes');
+          ctx.done(false);
+        } else {
+          buttons.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+          misses += 1;
+          nudge(b1); nudge(b2);
+          ctx.tell(misses < 2 ? 'Not yet. Those two are different. Try two others.'
+            : 'Not yet. Look at the color first. Then look for stripes or dots.', 'try');
+        }
+        chosen = [];
+      }
+      items.forEach(function (it) {
+        var b = el('button', { type: 'button', 'class': 'item-btn', 'aria-pressed': 'false', 'aria-label': it.name, 'data-drop': 'sock' });
         b.appendChild(sock(it.color, it.pattern));
+        makeDraggable(b, function (target) {
+          if (buttons.indexOf(target) > -1 && !target.disabled) judge(b, target);
+        });
         b.addEventListener('click', function () {
           var at = chosen.indexOf(b);
           if (at > -1) { chosen.splice(at, 1); b.setAttribute('aria-pressed', 'false'); return; }
           chosen.push(b);
           b.setAttribute('aria-pressed', 'true');
           if (chosen.length < 2) { ctx.tell('Now find one more that is the same.'); return; }
-          var same = items[buttons.indexOf(chosen[0])].key === items[buttons.indexOf(chosen[1])].key;
-          if (same) {
-            buttons.forEach(function (x) { x.disabled = true; });
-            chosen.forEach(function (x) { x.classList.add('done'); });
-            ctx.tell('Yes! Those two socks are the same.');
-            ctx.done(false);
-          } else {
-            chosen.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
-            chosen = [];
-            ctx.tell('Those two are different. Look again and try two others.');
-          }
+          judge(chosen[0], chosen[1]);
         });
         tray.appendChild(b);
-        return b;
+        buttons.push(b);
       });
       ctx.stage.appendChild(tray);
+      hintLine(ctx, 'Drag one sock onto its match, or tap both.');
     };
   }
 
   function pickOdd(items, oddIndex, rightMsg) {
     return function (ctx) {
+      var misses = 0;
       var tray = el('div', { 'class': 'tray', role: 'group', 'aria-label': 'Four things' });
       var buttons = items.map(function (it, i) {
         var b = el('button', { type: 'button', 'class': 'item-btn', 'aria-label': it.name });
@@ -191,10 +258,13 @@
           if (i === oddIndex) {
             buttons.forEach(function (x) { x.disabled = true; });
             b.classList.add('done');
-            ctx.tell(rightMsg);
+            ctx.tell(rightMsg, 'yes');
             ctx.done(false);
           } else {
-            ctx.tell('That one has friends that look the same. Which one is not like the others?');
+            misses += 1;
+            nudge(b);
+            ctx.tell(misses < 2 ? 'Not yet. That one has friends that look the same.'
+              : 'Not yet. Look at the shapes. Three are the same shape. Which shape is alone?', 'try');
           }
         });
         tray.appendChild(b);
@@ -204,303 +274,592 @@
     };
   }
 
-  function sortBlocks(colors) {
-    return function (ctx) {
-      var names = { red: 'Red', blue: 'Blue' };
-      var fills = { red: RED, blue: BLUE };
-      var selected = null;
-      var left = colors.length;
-      var tray = el('div', { 'class': 'tray', role: 'group', 'aria-label': 'Blocks to sort' });
-      var held = {};
-      var basketRow = el('div', { 'class': 'baskets' });
+  /* ---------- random helpers: every lesson is made fresh each time ---------- */
+  function rnd(n) { return Math.floor(Math.random() * n); }
+  function pick(list) { return list[rnd(list.length)]; }
+  function between(lo, hi) { return lo + rnd(hi - lo + 1); }
+  function shuffle(list) {
+    var a = list.slice(), i, j, t;
+    for (i = a.length - 1; i > 0; i--) { j = rnd(i + 1); t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
 
-      colors.forEach(function (c, i) {
+  var COLORS = [
+    { name: 'Red', word: 'red', fill: RED },
+    { name: 'Blue', word: 'blue', fill: BLUE },
+    { name: 'Green', word: 'green', fill: '#3E9B6B' },
+    { name: 'Yellow', word: 'yellow', fill: '#E0B93B' }
+  ];
+
+  function sortBlocks(pair, order) {
+    return function (ctx) {
+      var selected = null;
+      var left = order.length;
+      var tray = el('div', { 'class': 'tray', role: 'group', 'aria-label': 'Blocks to sort' });
+      var basketRow = el('div', { 'class': 'baskets' });
+      var baskets = {};
+
+      function place(word) {
+        var into = baskets[word];
+        if (!selected) { ctx.tell('Pick a block first.'); return; }
+        if (selected.color.word !== word) {
+          selected.btn.setAttribute('aria-pressed', 'false');
+          nudge(selected.btn);
+          nudge(baskets[selected.color.word].basket);
+          ctx.tell('Not yet. That block is ' + selected.color.word + '. Try the ' + selected.color.word + ' basket.', 'try');
+          selected = null;
+          return;
+        }
+        tray.removeChild(selected.btn);
+        into.box.appendChild(block(selected.color.fill, 34));
+        into.basket.setAttribute('aria-label', selected.color.name + ' basket, ' + into.box.childNodes.length + ' inside');
+        selected = null;
+        left -= 1;
+        if (left === 0) {
+          ctx.tell('All sorted! Well done.', 'yes');
+          ctx.done(false);
+        } else {
+          ctx.tell('Yes! ' + left + ' to go.', 'yes');
+          var nextBlock = tray.querySelector('button');
+          if (nextBlock) nextBlock.focus();
+        }
+      }
+
+      order.forEach(function (which, i) {
+        var c = pair[which];
         var b = el('button', {
-          type: 'button', 'class': 'item-btn', 'aria-pressed': 'false',
-          'aria-label': names[c] + ' block ' + (i + 1)
+          type: 'button', 'class': 'item-btn', 'aria-pressed': 'false', 'data-color': c.word,
+          'aria-label': c.name + ' block ' + (i + 1)
         });
-        b.appendChild(block(fills[c]));
+        b.appendChild(block(c.fill));
+        makeDraggable(b, function (target) {
+          var word = target.getAttribute('data-color');
+          if (!target.classList.contains('basket')) return;
+          if (selected) selected.btn.setAttribute('aria-pressed', 'false');
+          selected = { btn: b, color: c };
+          place(word);
+        });
         b.addEventListener('click', function () {
           if (selected) selected.btn.setAttribute('aria-pressed', 'false');
           if (selected && selected.btn === b) { selected = null; return; }
           selected = { btn: b, color: c };
           b.setAttribute('aria-pressed', 'true');
-          ctx.tell(names[c] + ' block picked. Which basket does it go in?');
+          ctx.tell(c.name + ' block. Now tap the ' + c.word + ' basket.');
         });
         tray.appendChild(b);
       });
 
-      ['red', 'blue'].forEach(function (c) {
+      pair.forEach(function (c) {
         var box = el('div', { 'class': 'held' });
-        var basket = el('button', { type: 'button', 'class': 'basket ' + c }, [names[c] + ' basket', box]);
-        held[c] = box;
-        basket.addEventListener('click', function () {
-          if (!selected) { ctx.tell('Pick a block first, then a basket.'); return; }
-          if (selected.color !== c) {
-            ctx.tell('That block is ' + selected.color + '. Try the ' + selected.color + ' basket.');
-            return;
-          }
-          tray.removeChild(selected.btn);
-          box.appendChild(block(fills[c], 34));
-          basket.setAttribute('aria-label', names[c] + ' basket, ' + box.childNodes.length + ' inside');
-          selected = null;
-          left -= 1;
-          if (left === 0) {
-            ctx.tell('All sorted! Red with red, blue with blue.');
-            ctx.done(false);
-          } else {
-            ctx.tell('In it goes. ' + left + ' left.');
-            var nextBlock = tray.querySelector('button');
-            if (nextBlock) nextBlock.focus();
-          }
-        });
+        var basket = el('button', {
+          type: 'button', 'class': 'basket', 'data-color': c.word, 'data-drop': 'basket', style: 'border-color:' + c.fill
+        }, [c.name + ' basket', box]);
+        baskets[c.word] = { basket: basket, box: box };
+        basket.addEventListener('click', function () { place(c.word); });
         basketRow.appendChild(basket);
       });
 
       ctx.stage.appendChild(tray);
       ctx.stage.appendChild(basketRow);
-    };
-  }
-
-  function observe(choices) {
-    return function (ctx) {
-      var row = el('div', { 'class': 'observe', role: 'group', 'aria-label': 'How did it go?' });
-      var buttons = choices.map(function (c) {
-        var b = el('button', { type: 'button', 'aria-pressed': 'false' }, [c.label]);
-        b.addEventListener('click', function () {
-          buttons.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
-          b.setAttribute('aria-pressed', 'true');
-          ctx.tell(c.reply);
-        });
-        row.appendChild(b);
-        return b;
-      });
-      ctx.stage.appendChild(row);
-      ctx.stage.appendChild(el('p', { 'class': 'muted' }, ['Your answer is not saved. In the full program it would choose tomorrow’s lesson.']));
-      ctx.done(false);
+      hintLine(ctx, 'Drag with the mouse or a finger. Or tap a block, then tap a basket.');
     };
   }
 
   function question(o) {
     return function (ctx) {
       var first = true;
-      var holder = el('div');
+      var misses = 0;
+      var help = el('div', { 'class': 'hint-pic' });
+      var holder = el('div', { 'class': 'drop-pic', 'data-drop': 'answer' });
       holder.appendChild(o.draw(false));
       var row = el('div', { 'class': 'num-row', role: 'group', 'aria-label': 'Choose the answer' });
       var buttons = o.options.map(function (n) {
         var b = el('button', { type: 'button', 'class': 'num-btn' }, [String(n)]);
+        makeDraggable(b, function (target) { if (target === holder && !b.disabled) b.click(); });
         b.addEventListener('click', function () {
           if (n === o.answer) {
             buttons.forEach(function (x) { x.disabled = true; });
             b.classList.add('right');
             clear(holder);
             holder.appendChild(o.draw(true));
-            ctx.tell((first ? 'Yes! ' : 'That is it. ') + o.explain);
+            holder.classList.remove('look');
+            ctx.tell((first ? 'Yes! ' : 'You worked it out! ') + o.explain, 'yes');
             ctx.done(first);
           } else {
             first = false;
+            misses += 1;
             b.classList.add('wrong');
             b.disabled = true;
-            ctx.tell('Not yet. ' + o.hint);
+            nudge(b);
+            if (misses === 1) {
+              holder.classList.add('look');
+              ctx.tell('Not yet. ' + o.hint, 'try');
+            } else if (o.spec) {
+              clear(help);
+              help.appendChild(hintDots(o.spec));
+              ctx.tell('Not yet. Here are dots to help. ' + dotsCaption(o.spec), 'try');
+            }
           }
         });
         row.appendChild(b);
         return b;
       });
       ctx.stage.appendChild(holder);
+      ctx.stage.appendChild(help);
+      ctx.stage.appendChild(row);
+      hintLine(ctx, 'Drag a number onto the picture, or tap it.');
+    };
+  }
+
+  function playAgain(ctx, label) {
+    var again = el('button', { type: 'button', 'class': 'btn' }, [label]);
+    again.addEventListener('click', function () { ctx.restart(); });
+    ctx.stage.appendChild(el('p', {}, [again]));
+  }
+
+  /* ---------- question maker: nothing here is a stored question ----------
+     Each call builds a new story, numbers, picture and answer choices. */
+  var NAMES = ['Mia', 'Tom', 'Asha', 'Ben', 'Lena', 'Sam', 'Zoe', 'Omar', 'Ivy', 'Leo'];
+  var THINGS = ['stickers', 'marbles', 'shells', 'crayons', 'toy cars', 'beads'];
+  var AWAY = [
+    { thing: 'birds', place: 'on a fence', verb: 'fly away' },
+    { thing: 'apples', place: 'in a bowl', verb: 'are eaten' },
+    { thing: 'balloons', place: 'at a party', verb: 'pop' },
+    { thing: 'ducks', place: 'on a pond', verb: 'swim away' },
+    { thing: 'cookies', place: 'on a plate', verb: 'are eaten' }
+  ];
+  var KINDS = ['add', 'take', 'more'];
+
+  function choices(answer) {
+    var near = shuffle([answer - 2, answer - 1, answer + 1, answer + 2]).filter(function (n) { return n >= 0; });
+    return [answer, near[0], near[1]].sort(function (a, b) { return a - b; });
+  }
+
+  function makeQuestion(kind, max) {
+    var a, b, whole, left, thing, t, n1, n2, names;
+    if (kind === 'add') {
+      a = between(2, max - 2); b = between(2, max - a); whole = a + b;
+      n1 = pick(NAMES); thing = pick(THINGS);
+      return {
+        kind: kind, answer: whole, options: choices(whole),
+        say: [n1 + ' has ' + a + ' ' + thing + '.', n1 + ' gets ' + b + ' more.', 'How many ' + thing + ' now?'],
+        hint: 'Start at ' + a + '. Count on ' + b + ' more.',
+        explain: a + ' and ' + b + ' make ' + whole + '.',
+        spec: { type: 'parts', whole: whole, wholeUnknown: true, parts: [{ v: a, label: 'had' }, { v: b, label: 'more' }] }
+      };
+    }
+    if (kind === 'take') {
+      whole = between(5, max); a = between(2, whole - 2); left = whole - a;
+      t = pick(AWAY);
+      return {
+        kind: kind, answer: left, options: choices(left),
+        say: ['There are ' + whole + ' ' + t.thing + ' ' + t.place + '.', a + ' ' + t.verb + '.', 'How many are left?'],
+        hint: 'What goes with ' + a + ' to make ' + whole + '?',
+        explain: a + ' and ' + left + ' make ' + whole + '. So ' + left + ' are left.',
+        spec: { type: 'parts', whole: whole, parts: [{ v: a, label: 'gone' }, { v: left, label: 'left', unknown: true }] }
+      };
+    }
+    b = between(2, max - 2); a = between(b + 2, max);
+    names = shuffle(NAMES); n1 = names[0]; n2 = names[1]; thing = pick(THINGS);
+    return {
+      kind: 'more', answer: a - b, options: choices(a - b),
+      say: [n1 + ' has ' + a + ' ' + thing + '.', n2 + ' has ' + b + '.', 'How many more does ' + n1 + ' have?'],
+      hint: 'Look at the gap. What goes with ' + b + ' to make ' + a + '?',
+      explain: b + ' and ' + (a - b) + ' make ' + a + '. So ' + n1 + ' has ' + (a - b) + ' more.',
+      spec: { type: 'compare', a: { name: n1, v: a }, b: { name: n2, v: b } }
+    };
+  }
+
+  /* Second hint for a maths question: the same story as dots to count. */
+  function hintDots(spec) {
+    var kids = [], step = 16, r = 6.5;
+    function x(i) { return 14 + i * step + (i >= 10 ? 6 : 0); }
+    function dot(i, y, fill, style) {
+      var attrs = { cx: x(i), cy: y, r: r, fill: fill, stroke: INK, 'stroke-width': 1.5 };
+      if (style === 'empty') attrs['stroke-dasharray'] = '3 3';
+      kids.push(svg('circle', attrs));
+      if (style === 'gone') kids.push(svg('path', { d: 'M' + (x(i) - 6) + ' ' + (y + 6) + ' l12 -12', stroke: INK, 'stroke-width': 2 }));
+    }
+    var i, a, b, h = 30;
+    if (spec.type === 'compare') {
+      h = 56;
+      for (i = 0; i < spec.a.v; i++) dot(i, 14, '#BFE0D8');
+      for (i = 0; i < spec.a.v; i++) dot(i, 40, i < spec.b.v ? '#F6E3A1' : '#fff', i < spec.b.v ? '' : 'empty');
+    } else if (spec.wholeUnknown) {
+      a = spec.parts[0].v; b = spec.parts[1].v;
+      for (i = 0; i < a + b; i++) dot(i, 14, i < a ? '#BFE0D8' : '#F6E3A1');
+    } else {
+      a = spec.parts[0].v;
+      for (i = 0; i < spec.whole; i++) dot(i, 14, i < a ? '#E3E3E3' : '#F6E3A1', i < a ? 'gone' : '');
+    }
+    return svg('svg', { viewBox: '0 0 344 ' + h, width: 344, height: h, role: 'img', 'aria-label': 'Dots to count. ' + dotsCaption(spec) }, kids);
+  }
+  function dotsCaption(spec) {
+    if (spec.type === 'compare') return 'Count the empty circles.';
+    return spec.wholeUnknown ? 'Count all the dots.' : 'Some are crossed out. Count the rest.';
+  }
+
+  function drawSpec(spec, reveal) {
+    return spec.type === 'compare' ? barCompare(spec, reveal) : barPartWhole(spec, reveal);
+  }
+
+  /* ---------- number facts for the games (made fresh each round) ---------- */
+  function makeFact(kind, max) {
+    var a, b, whole;
+    if (kind === 'add') {
+      a = between(1, max - 1); b = between(1, max - a);
+      return {
+        text: a + ' + ' + b, answer: a + b, start: a, hop: b,
+        hint: 'Start at ' + a + '. Count on ' + b + ' more.',
+        spec: { type: 'parts', whole: a + b, wholeUnknown: true, parts: [{ v: a }, { v: b }] }
+      };
+    }
+    whole = between(3, max); a = between(1, whole - 1);
+    if (kind === 'take') {
+      return {
+        text: whole + ' − ' + a, answer: whole - a, start: whole, hop: -a,
+        hint: 'Start at ' + whole + '. Count back ' + a + '.',
+        spec: { type: 'parts', whole: whole, parts: [{ v: a }, { v: whole - a, unknown: true }] }
+      };
+    }
+    return {
+      text: whole + ' − ' + a, answer: whole - a, start: a, hop: whole - a, more: true,
+      hint: 'Start at ' + a + '. Count up to ' + whole + '.',
+      spec: { type: 'compare', a: { name: '', v: whole }, b: { name: '', v: a } }
+    };
+  }
+
+  /* One place decides what a miss looks like: words first, then dots. */
+  function missHelp(ctx, misses, fact, helpBox, firstHint) {
+    if (misses === 1) { ctx.tell('Not yet. ' + (firstHint || fact.hint), 'try'); return; }
+    clear(helpBox);
+    helpBox.appendChild(hintDots(fact.spec));
+    ctx.tell('Not yet. Here are dots to help. ' + dotsCaption(fact.spec), 'try');
+  }
+
+  function die(n) {
+    var spots = { 1: [5], 2: [1, 9], 3: [1, 5, 9], 4: [1, 3, 7, 9], 5: [1, 3, 5, 7, 9], 6: [1, 3, 4, 6, 7, 9] }[n] || [];
+    var kids = [svg('rect', { x: 3, y: 3, width: 66, height: 66, rx: 12, fill: '#fff', stroke: INK, 'stroke-width': 2.5 })];
+    spots.forEach(function (p) {
+      kids.push(svg('circle', { cx: 18 + ((p - 1) % 3) * 18, cy: 18 + Math.floor((p - 1) / 3) * 18, r: 6, fill: TEAL }));
+    });
+    if (!n) kids.push(text(36, 46, '?', 30, 700, '#7A8B87'));
+    return svg('svg', { viewBox: '0 0 72 72', width: 72, height: 72, role: 'img', 'aria-label': n ? 'Die showing ' + n : 'Die, not rolled yet' }, kids);
+  }
+
+  /* Dice game: roll two dice, then add them or find how many more. */
+  function diceRound(kind) {
+    return function (ctx) {
+      var table = el('div', { 'class': 'dice-table' });
+      var ask = el('p', { 'class': 'ask' }, ['Roll the dice!']);
+      var help = el('div', { 'class': 'hint-pic' });
+      var row = el('div', { 'class': 'num-row', role: 'group', 'aria-label': 'Choose the answer' });
+      var roll = el('button', { type: 'button', 'class': 'btn' }, ['Roll']);
+      function show(a, b, sign) {
+        clear(table);
+        table.appendChild(die(a));
+        table.appendChild(el('span', { 'class': 'dice-sign' }, [sign]));
+        table.appendChild(die(b));
+      }
+      show(0, 0, kind === 'add' ? '+' : '−');
+      roll.addEventListener('click', function () {
+        var a = between(1, 6), b = between(1, 6), t, fact, first = true, misses = 0, buttons;
+        if (kind !== 'add') { while (a === b) b = between(1, 6); if (b > a) { t = a; a = b; b = t; } }
+        fact = kind === 'add'
+          ? { answer: a + b, spec: { type: 'parts', whole: a + b, wholeUnknown: true, parts: [{ v: a }, { v: b }] } }
+          : { answer: a - b, spec: { type: 'compare', a: { name: '', v: a }, b: { name: '', v: b } } };
+        show(a, b, kind === 'add' ? '+' : '−');
+        ask.textContent = kind === 'add' ? 'How many dots altogether?' : 'How many more dots on the first die?';
+        roll.disabled = true;
+        ctx.tell('');
+        buttons = choices(fact.answer).map(function (n) {
+          var bn = el('button', { type: 'button', 'class': 'num-btn' }, [String(n)]);
+          bn.addEventListener('click', function () {
+            if (n === fact.answer) {
+              buttons.forEach(function (x) { x.disabled = true; });
+              bn.classList.add('right');
+              ctx.tell((first ? 'Yes! ' : 'You worked it out! ') + (kind === 'add' ? a + ' and ' + b + ' make ' + (a + b) + '.' : a + ' is ' + (a - b) + ' more than ' + b + '.'), 'yes');
+              ctx.done(first);
+            } else {
+              first = false; misses += 1;
+              bn.classList.add('wrong'); bn.disabled = true; nudge(bn);
+              missHelp(ctx, misses, fact, help, kind === 'add' ? 'Count the dots on both dice.' : 'Match the dots. Count the ones left over.');
+            }
+          });
+          row.appendChild(bn);
+          return bn;
+        });
+        if (buttons[0]) buttons[0].focus();
+      });
+      ctx.stage.appendChild(table);
+      ctx.stage.appendChild(el('p', {}, [roll]));
+      ctx.stage.appendChild(ask);
+      ctx.stage.appendChild(help);
       ctx.stage.appendChild(row);
     };
   }
 
-  function pickPicture(o) {
+  /* Number hunt: find the tile that answers the card. */
+  function huntRound(fact, max) {
     return function (ctx) {
-      var first = true;
-      var row = el('div', { 'class': 'pick-row', role: 'group', 'aria-label': 'Two bar pictures' });
-      var buttons = o.pictures.map(function (p, i) {
-        var b = el('button', { type: 'button', 'class': 'item-btn', 'aria-label': 'Picture ' + (i + 1) + '. ' + p.say });
-        b.appendChild(p.draw());
+      var first = true, misses = 0;
+      var pool = [], n;
+      for (n = 0; n <= max; n++) if (n !== fact.answer) pool.push(n);
+      var tiles = shuffle(shuffle(pool).slice(0, 8).concat([fact.answer]));
+      var help = el('div', { 'class': 'hint-pic' });
+      var grid = el('div', { 'class': 'hunt-grid', role: 'group', 'aria-label': 'Number tiles' });
+      var buttons = tiles.map(function (v) {
+        var b = el('button', { type: 'button', 'class': 'tile' }, [String(v)]);
         b.addEventListener('click', function () {
-          if (i === o.answer) {
+          if (v === fact.answer) {
             buttons.forEach(function (x) { x.disabled = true; });
-            b.classList.add('done');
-            ctx.tell((first ? 'Yes! ' : 'That is it. ') + o.explain);
+            b.classList.add('right');
+            ctx.tell((first ? 'Found it! ' : 'You worked it out! ') + fact.text + ' = ' + fact.answer + '.', 'yes');
             ctx.done(first);
           } else {
-            first = false;
-            ctx.tell('Not yet. ' + o.hint);
+            first = false; misses += 1;
+            b.classList.add('wrong'); b.disabled = true; nudge(b);
+            missHelp(ctx, misses, fact, help);
           }
         });
-        row.appendChild(b);
+        grid.appendChild(b);
         return b;
       });
-      ctx.stage.appendChild(row);
+      ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
+      ctx.stage.appendChild(help);
+      ctx.stage.appendChild(grid);
     };
   }
 
-  /* ---------- the two sample lessons ---------- */
-  var READ = 'Read this aloud';
-  var GROWNUP = 'For the grown-up';
-
-  var LESSONS = {
-    sorting: {
-      kicker: 'Sample lesson · age 3, with a parent',
-      steps: [
-        {
-          name: 'Before you start', who: GROWNUP,
-          say: ['Sit side by side. You read the words in this box aloud and your child taps the pictures.',
-            'It takes about four minutes on the screen. Then you share a book and do one small job together.'],
-          build: info()
-        },
-        {
-          name: 'Find the same', who: READ,
-          say: ['Look at the socks. Can you find two socks that are the same?'],
-          build: pickTwo([
-            { key: 'a', name: 'Red sock with stripes', color: RED, pattern: 'stripes' },
-            { key: 'b', name: 'Blue sock with dots', color: BLUE, pattern: 'dots' },
-            { key: 'c', name: 'Plain yellow sock', color: '#E0B93B', pattern: 'plain' },
-            { key: 'a', name: 'Red sock with stripes', color: RED, pattern: 'stripes' }
-          ])
-        },
-        {
-          name: 'Which one is different?', who: READ,
-          say: ['Three of these are the same. One is different. Which one is different?'],
-          build: pickOdd([
-            { name: 'Green ball', draw: function () { return ball('#3E9B6B'); } },
-            { name: 'Green ball', draw: function () { return ball('#3E9B6B'); } },
-            { name: 'Orange star', draw: function () { return star('#E58A2B'); } },
-            { name: 'Green ball', draw: function () { return ball('#3E9B6B'); } }
-          ], 2, 'Yes! The star is different. The others are all balls.')
-        },
-        {
-          name: 'Sort the blocks', who: READ,
-          say: ['Red blocks go in the red basket. Blue blocks go in the blue basket.',
-            'Tap a block, then tap its basket.'],
-          build: sortBlocks(['red', 'blue', 'blue', 'red', 'blue', 'red'])
-        },
-        {
-          name: 'Now a book, away from the screen', who: GROWNUP,
-          say: ['Put the screen down and pick any picture book.',
-            'Name three things on a page and ask your child to point to each one. Then let your child name one for you to find.',
-            'Come back when you have finished.'],
-          build: info()
-        },
-        {
-          name: 'How did the sorting go?', who: GROWNUP,
-          say: ['This is the check for today. It is not a test. Choose what you saw.'],
-          build: observe([
-            { label: 'Did it alone', reply: 'Lovely. The next lesson would add a third color.' },
-            { label: 'Did it with help', reply: 'That is normal at this age. The next lesson would repeat sorting with new things.' },
-            { label: 'Not yet', reply: 'No problem. The next lessons would go back to matching pairs for a few days.' }
-          ])
-        },
-        {
-          name: 'One small job together', who: GROWNUP, end: true,
-          say: ['Pair up the clean socks together. Hold one up and ask: where is the one that is the same?'],
-          build: info(function (ctx) {
-            ctx.stage.appendChild(el('p', { 'class': 'offscreen-task' }, ['The lesson is finished. Nothing was saved. Close the screen and go find those socks.']));
-          })
-        }
-      ]
-    },
-
-    bars: {
-      kicker: 'Sample lesson · age 6',
-      steps: [
-        {
-          name: 'A picture for a problem', who: READ,
-          say: ['Mia has 8 stickers. Sam gives her 5 more. How many stickers does Mia have now?',
-            'The long line on top is all the stickers. Under it are the two parts: 8 and 5. We need to find the whole.'],
-          build: function (ctx) {
-            var spec = { whole: 13, wholeUnknown: true, parts: [{ v: 8, label: 'Mia had' }, { v: 5, label: 'Sam gave' }] };
-            var holder = el('div');
-            holder.appendChild(barPartWhole(spec, false));
-            var show = el('button', { type: 'button', 'class': 'btn ghost' }, ['Show the whole']);
-            show.addEventListener('click', function () {
-              clear(holder);
-              holder.appendChild(barPartWhole(spec, true));
-              show.disabled = true;
-              ctx.tell('8 and 5 make 13. Count on from 8: 9, 10, 11, 12, 13.');
-            });
-            ctx.stage.appendChild(holder);
-            ctx.stage.appendChild(el('p', {}, [show]));
-            ctx.done(false);
+  /* Cards and number line: tap the answer on the line. Hints show the hops. */
+  function lineRound(fact, max) {
+    return function (ctx) {
+      var first = true, misses = 0, n;
+      var line = el('div', { 'class': 'num-line', role: 'group', 'aria-label': 'Number line from 0 to ' + max });
+      var buttons = [];
+      function mark() {
+        var lo = Math.min(fact.start, fact.start + fact.hop), hi = Math.max(fact.start, fact.start + fact.hop);
+        buttons.forEach(function (b, i) {
+          if (i === fact.start) b.classList.add('start');
+          if (misses > 1 && i > lo && i <= hi && i !== fact.start) b.classList.add('hop');
+          if (misses > 1 && fact.hop < 0 && i >= lo && i < hi) b.classList.add('hop');
+        });
+      }
+      for (n = 0; n <= max; n++) (function (v) {
+        var b = el('button', { type: 'button', 'class': 'line-btn' }, [String(v)]);
+        b.addEventListener('click', function () {
+          if (v === fact.answer) {
+            buttons.forEach(function (x) { x.disabled = true; });
+            b.classList.add('right');
+            ctx.tell((first ? 'Yes! ' : 'You worked it out! ') + fact.text + ' = ' + fact.answer + '.', 'yes');
+            ctx.done(first);
+          } else {
+            first = false; misses += 1;
+            nudge(b);
+            mark();
+            ctx.tell(misses === 1 ? 'Not yet. ' + fact.hint + ' The start is marked.'
+              : 'Not yet. ' + fact.hint + ' The hops are colored. Count them.', 'try');
           }
+        });
+        line.appendChild(b);
+        buttons.push(b);
+      }(n));
+      ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
+      ctx.stage.appendChild(line);
+      hintLine(ctx, 'Tap the answer on the number line.');
+    };
+  }
+
+  /* Race: each answer moves the runner one square toward the flag. */
+  function track(at, total) {
+    var kids = [], i, x;
+    for (i = 0; i <= total; i++) {
+      x = 8 + i * 52;
+      kids.push(svg('rect', { x: x, y: 14, width: 46, height: 40, rx: 8, fill: i < at ? '#BFE0D8' : '#fff', stroke: INK, 'stroke-width': 2 }));
+      if (i === total) {
+        kids.push(svg('path', { d: 'M' + (x + 16) + ' 46 v-26 l18 7 -18 7', fill: '#E0B93B', stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }));
+      }
+    }
+    x = 8 + at * 52 + 23;
+    kids.push(svg('circle', { cx: x, cy: 34, r: 13, fill: TEAL, stroke: INK, 'stroke-width': 2 }));
+    kids.push(svg('circle', { cx: x - 4, cy: 31, r: 2, fill: '#fff' }));
+    kids.push(svg('circle', { cx: x + 4, cy: 31, r: 2, fill: '#fff' }));
+    kids.push(svg('path', { d: 'M' + (x - 5) + ' 38 q5 5 10 0', fill: 'none', stroke: '#fff', 'stroke-width': 2, 'stroke-linecap': 'round' }));
+    return svg('svg', { viewBox: '0 0 ' + (16 + (total + 1) * 52) + ' 68', width: 16 + (total + 1) * 52, height: 68, role: 'img', 'aria-label': 'Race track. You are on square ' + (at + 1) + ' of ' + (total + 1) + '.' }, kids);
+  }
+
+  var READ = 'Read aloud';
+  var GROWNUP = 'Grown-up';
+  var QUESTIONS = 5;
+  var STYLE_NAMES = { questions: 'Story questions', dice: 'Dice game', hunt: 'Number hunt', race: 'Race to the flag', line: 'Cards and number line' };
+  var KIND_WORDS = { add: 'Adding means putting two groups together.', take: 'Taking away means some go away.', more: 'How many more? Line them up and look at the extra ones.' };
+
+  /* A short lesson before the game: dots, then the bar picture, then one try. */
+  function lessonSteps(kind) {
+    var demo = makeQuestion(kind, 10);
+    var tryOne = makeQuestion(kind, 10);
+    return [
+      {
+        name: 'Lesson: see it with dots', who: READ,
+        say: [KIND_WORDS[kind]].concat(demo.say),
+        build: function (ctx) {
+          ctx.stage.appendChild(hintDots(demo.spec));
+          ctx.stage.appendChild(el('p', { 'class': 'ask' }, [dotsCaption(demo.spec)]));
+          var show = el('button', { type: 'button', 'class': 'btn ghost' }, ['Show me']);
+          show.addEventListener('click', function () { show.disabled = true; ctx.tell(demo.explain, 'yes'); });
+          ctx.stage.appendChild(el('p', {}, [show]));
+          ctx.done(false);
+        }
+      },
+      {
+        name: 'Lesson: the bar picture', who: READ,
+        say: ['A bar picture shows the same story.', 'The ? is the number we need to find.'],
+        build: function (ctx) {
+          var holder = el('div');
+          holder.appendChild(drawSpec(demo.spec, false));
+          var show = el('button', { type: 'button', 'class': 'btn ghost' }, ['Show the answer']);
+          show.addEventListener('click', function () {
+            clear(holder); holder.appendChild(drawSpec(demo.spec, true));
+            show.disabled = true; ctx.tell(demo.explain, 'yes');
+          });
+          ctx.stage.appendChild(holder);
+          ctx.stage.appendChild(el('p', {}, [show]));
+          ctx.done(false);
+        }
+      },
+      {
+        name: 'Lesson: your turn', who: READ, say: tryOne.say,
+        build: question({
+          options: tryOne.options, answer: tryOne.answer, hint: tryOne.hint, explain: tryOne.explain, spec: tryOne.spec,
+          draw: function (r) { return drawSpec(tryOne.spec, r); }
+        })
+      }
+    ];
+  }
+
+  function buildPractice(kind, max, style, lesson) {
+    var order = shuffle(KINDS);
+    var steps = lesson ? lessonSteps(kind === 'mixed' ? order[0] : kind) : [];
+    function kindAt(i) { return kind === 'mixed' ? order[i % order.length] : kind; }
+    function addRound(i) {
+      var k = kindAt(i), q, fact, label = (style === 'questions' || style === 'race' ? 'Question ' : 'Round ') + (i + 1) + ' of ' + QUESTIONS;
+      if (style === 'dice') {
+        steps.push({ name: label, who: READ, scored: true, say: ['Roll the dice. Then choose the answer.'], build: diceRound(k === 'add' ? 'add' : 'more') });
+      } else if (style === 'hunt') {
+        fact = makeFact(k, max);
+        steps.push({ name: label, who: READ, scored: true, say: ['Hunt for the answer. Tap the right tile.'], build: huntRound(fact, max) });
+      } else if (style === 'line') {
+        fact = makeFact(k, max);
+        steps.push({ name: label, who: READ, scored: true, say: ['Look at the card. Find the answer on the number line.'], build: lineRound(fact, max) });
+      } else {
+        q = makeQuestion(k, max);
+        steps.push({
+          name: label, who: READ, scored: true, say: q.say,
+          build: function (ctx) {
+            if (style === 'race') ctx.stage.appendChild(el('div', { 'class': 'track' }, [track(i, QUESTIONS)]));
+            question({
+              options: q.options, answer: q.answer, hint: q.hint, explain: q.explain, spec: q.spec,
+              draw: function (r) { return drawSpec(q.spec, r); }
+            })(ctx);
+          }
+        });
+      }
+    }
+    var i;
+    for (i = 0; i < QUESTIONS; i++) addRound(i);
+    steps.push({
+      name: style === 'race' ? 'You reached the flag!' : 'Well done!', who: GROWNUP, end: true,
+      say: ['Ask about one round: “How did you know?”',
+        'Then count two groups of things at home and draw a bar for each.'],
+      build: info(function (ctx) {
+        var n = ctx.stars(), total = ctx.scoredCount();
+        if (style === 'race') ctx.stage.appendChild(el('div', { 'class': 'track' }, [track(QUESTIONS, QUESTIONS)]));
+        ctx.stage.appendChild(el('p', {}, ['You worked out all ' + total + ' questions. Right on the first try: ' + n + '.']));
+        ctx.stage.appendChild(el('p', { 'class': 'stars', 'aria-hidden': 'true' },
+          [new Array(n + 1).join('★') + new Array(total - n + 1).join('☆')]));
+        playAgain(ctx, 'Keep going');
+        ctx.stage.appendChild(el('p', { 'class': 'muted' }, ['Keep going gives five new rounds. Nothing is saved.']));
+      })
+    });
+    return { kicker: 'Maths · ' + STYLE_NAMES[style], steps: steps };
+  }
+
+  function buildSorting() {
+    var patterns = ['stripes', 'dots', 'plain'];
+    var designs = [];
+    COLORS.forEach(function (c) {
+      patterns.forEach(function (p) {
+        designs.push({ key: c.word + p, name: c.name + ' sock, ' + p, color: c.fill, pattern: p });
+      });
+    });
+    var three = shuffle(designs).slice(0, 3);
+    var socks = shuffle([three[0], three[1], three[2], three[0]]);
+
+    var shapes = shuffle([
+      { word: 'ball', draw: ball }, { word: 'star', draw: star }, { word: 'block', draw: function (f) { return block(f, 72); } }
+    ]);
+    var two = shuffle(COLORS);
+    var oddAt = rnd(4);
+    var things = [0, 1, 2, 3].map(function (i) {
+      var shape = i === oddAt ? shapes[1] : shapes[0];
+      var color = i === oddAt ? two[1] : two[0];
+      return { name: color.name + ' ' + shape.word, draw: function () { return shape.draw(color.fill); } };
+    });
+
+    var pair = shuffle(COLORS).slice(0, 2);
+    var order = shuffle([0, 0, 0, 1, 1, 1]);
+
+    return {
+      kicker: 'Same and different · age 3, with a grown-up',
+      steps: [
+        { name: 'Find the same', who: READ, say: ['Two socks are the same. Put them together.'], build: pickTwo(socks) },
+        {
+          name: 'Find the different one', who: READ, say: ['One is different. Tap it.'],
+          build: pickOdd(things, oddAt, 'Yes! The ' + shapes[1].word + ' is different.')
         },
         {
-          name: 'Find the whole', who: READ, scored: true,
-          say: ['Tom has 7 red cars and 6 blue cars. How many cars does Tom have?'],
-          build: question({
-            draw: function (r) { return barPartWhole({ whole: 13, wholeUnknown: true, parts: [{ v: 7, label: 'red cars' }, { v: 6, label: 'blue cars' }] }, r); },
-            options: [12, 13, 14], answer: 13,
-            hint: 'Put the two parts together. Start at 7 and count on 6 more.',
-            explain: '7 and 6 make 13.'
-          })
+          name: 'Sort by color', who: READ,
+          say: ['Drag each block to the basket with the same color.'],
+          build: sortBlocks(pair, order)
         },
         {
-          name: 'Find the missing part', who: READ, scored: true,
-          say: ['There are 15 birds on a fence. 9 fly away. How many birds are left?'],
-          build: question({
-            draw: function (r) { return barPartWhole({ whole: 15, parts: [{ v: 9, label: 'flew away' }, { v: 6, label: 'left', unknown: true }] }, r); },
-            options: [5, 6, 7], answer: 6,
-            hint: '15 is the whole bar. 9 is one part. What goes with 9 to make 15?',
-            explain: '9 and 6 make 15, so 6 birds are left.'
-          })
-        },
-        {
-          name: 'Which picture fits?', who: READ, scored: true,
-          say: ['Lena has 14 grapes. She eats 5. How many grapes are left?',
-            'Do not work it out yet. Which bar picture fits this story?'],
-          build: pickPicture({
-            pictures: [
-              { say: 'Whole bar unknown. Parts 14 and 5.', draw: function () { return barPartWhole({ whole: 19, wholeUnknown: true, parts: [{ v: 14 }, { v: 5 }] }, false); } },
-              { say: 'Whole bar 14. Parts 5 and unknown.', draw: function () { return barPartWhole({ whole: 14, parts: [{ v: 5 }, { v: 9, unknown: true }] }, false); } }
-            ],
-            answer: 1,
-            hint: 'Lena starts with 14 grapes. Is 14 the whole, or only a part?',
-            explain: '14 is all the grapes, so 14 is the whole bar. 5 is the part she eats.'
-          })
-        },
-        {
-          name: 'Now work it out', who: READ, scored: true,
-          say: ['Lena has 14 grapes. She eats 5. How many grapes are left?'],
-          build: question({
-            draw: function (r) { return barPartWhole({ whole: 14, parts: [{ v: 5, label: 'eaten' }, { v: 9, label: 'left', unknown: true }] }, r); },
-            options: [8, 9, 10], answer: 9,
-            hint: 'What goes with 5 to make 14?',
-            explain: '5 and 9 make 14, so 9 grapes are left.'
-          })
-        },
-        {
-          name: 'How many more?', who: READ, scored: true,
-          say: ['Asha has 12 stickers. Ben has 7 stickers. How many more stickers does Asha have?'],
-          build: question({
-            draw: function (r) { return barCompare({ a: { name: 'Asha', v: 12 }, b: { name: 'Ben', v: 7 } }, r); },
-            options: [4, 5, 6], answer: 5,
-            hint: 'Look at the gap after Ben’s bar. What goes with 7 to make 12?',
-            explain: '7 and 5 make 12, so Asha has 5 more.'
-          })
-        },
-        {
-          name: 'One small job away from the screen', who: READ, end: true,
-          say: ['Find two groups of things at home, like spoons and forks. Count each group.',
-            'Draw a bar for each group on paper. Then find how many there are altogether.'],
+          name: 'Now do it for real', who: GROWNUP, end: true,
+          say: ['Pair up real socks together.', 'Then share a picture book and name three things in it.'],
           build: info(function (ctx) {
-            var n = ctx.stars(), total = ctx.scoredCount();
-            var stars = el('p', { 'class': 'stars', 'aria-hidden': 'true' }, [new Array(n + 1).join('★') + new Array(total - n + 1).join('☆')]);
-            ctx.stage.appendChild(el('p', {}, ['Right on the first try: ' + n + ' of ' + total + '.']));
-            ctx.stage.appendChild(stars);
-            ctx.stage.appendChild(el('p', {}, ['Grown-up: pick one problem and ask, “How did you know?” Explaining matters more than the score.']));
-            ctx.stage.appendChild(el('p', { 'class': 'offscreen-task' }, ['The lesson is finished. Nothing was saved.']));
+            playAgain(ctx, 'Play again');
+            ctx.stage.appendChild(el('p', { 'class': 'muted' }, ['Nothing was saved. The game changes each time.']));
           })
         }
       ]
-    }
-  };
+    };
+  }
 
   /* ---------- the player ---------- */
-  var current = null;   // { id, lesson, index, stars, opener }
+  var current = null;   // { maker, lesson, index, stars, opener }
 
-  function tell(msg) { feedbackEl.textContent = msg; }
+  /* Feedback always comes with a small picture. A mistake is shown as
+     "not yet" with a light bulb and a hint, never as a red cross. */
+  function moodIcon(mood) {
+    var kids = mood === 'yes'
+      ? [svg('path', { d: 'M12 2 l2.9 6.2 6.6 .9 -4.8 4.7 1.2 6.7 -5.9 -3.2 -5.9 3.2 1.2 -6.7 -4.8 -4.7 6.6 -.9 z', fill: '#E0B93B', stroke: INK, 'stroke-width': 1.2, 'stroke-linejoin': 'round' })]
+      : [svg('path', { d: 'M12 2.5 a6.5 6.5 0 0 1 3.6 11.9 v2.1 h-7.2 v-2.1 A6.5 6.5 0 0 1 12 2.5 z', fill: '#FFE08A', stroke: INK, 'stroke-width': 1.2, 'stroke-linejoin': 'round' }),
+        svg('path', { d: 'M9 19 h6 M10 21.5 h4', fill: 'none', stroke: INK, 'stroke-width': 1.4, 'stroke-linecap': 'round' })];
+    return svg('svg', { viewBox: '0 0 24 24', width: 30, height: 30, 'aria-hidden': 'true', focusable: 'false' }, kids);
+  }
+  function tell(msg, mood) {
+    clear(feedbackEl);
+    feedbackEl.className = 'feedback' + (mood ? ' ' + mood : '');
+    if (!msg) return;
+    if (mood) feedbackEl.appendChild(moodIcon(mood));
+    feedbackEl.appendChild(el('span', {}, [msg]));
+  }
+  function nudge(node) {
+    if (!node) return;
+    node.classList.remove('nudge');
+    void node.offsetWidth;
+    node.classList.add('nudge');
+    setTimeout(function () { node.classList.remove('nudge'); }, 600);
+  }
 
   function render() {
     var lesson = current.lesson;
@@ -520,6 +879,7 @@
       stage: stageEl,
       tell: tell,
       stars: function () { return current.stars; },
+      restart: function () { open(current.maker, current.opener); },
       scoredCount: function () {
         return lesson.steps.filter(function (s) { return s.scored; }).length;
       },
@@ -533,16 +893,18 @@
     titleEl.focus();
   }
 
-  function open(id, opener) {
-    current = { id: id, lesson: LESSONS[id], index: 0, stars: 0, opener: opener };
+  function open(maker, opener) {
+    current = { maker: maker, lesson: maker(), index: 0, stars: 0, opener: opener };
     player.hidden = false;
+    document.body.classList.add('playing');
     render();
-    if (player.scrollIntoView) player.scrollIntoView({ block: 'start' });
+    window.scrollTo(0, 0);
   }
 
   function close() {
     var opener = current && current.opener;
     current = null;
+    document.body.classList.remove('playing');
     player.hidden = true;
     clear(stageEl);
     tell('');
@@ -558,9 +920,25 @@
   });
   closeBtn.addEventListener('click', close);
 
-  Array.prototype.forEach.call(root.querySelectorAll('[data-start]'), function (btn) {
-    btn.addEventListener('click', function () { open(btn.getAttribute('data-start'), btn); });
+  function checked(name, fallback) {
+    var box = root.querySelector('input[name="' + name + '"]:checked');
+    return box ? box.value : fallback;
+  }
+  var sortBtn = document.getElementById('start-sorting');
+  var mathsBtn = document.getElementById('start-maths');
+  if (sortBtn) sortBtn.addEventListener('click', function () { open(buildSorting, sortBtn); });
+  if (mathsBtn) mathsBtn.addEventListener('click', function () {
+    var kind = checked('kind', 'mixed');
+    var max = parseInt(checked('size', '20'), 10);
+    var style = checked('style', 'questions');
+    var lessonBox = document.getElementById('with-lesson');
+    var lesson = lessonBox ? lessonBox.checked : true;
+    open(function () { return buildPractice(kind, max, style, lesson); }, mathsBtn);
   });
+
+  /* Used only by the automated test that checks generated questions. */
+  window.yaanstepMakeQuestion = makeQuestion;
+  window.yaanstepMakeFact = makeFact;
 
   root.hidden = false;
   if (staticBox) staticBox.hidden = true;

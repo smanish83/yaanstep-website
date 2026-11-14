@@ -36,3 +36,45 @@
 .stars{font-size:1.75rem;letter-spacing:.2rem;color:#9A6A00}
 .offscreen-task{border-left:6px solid var(--teal);padding:.25rem 0 .25rem 1rem;font-size:1.15rem}
 @media (max-width:40rem){.say{font-size:1.1rem}.item-btn{min-width:4.25rem;min-height:4.25rem}}
+.lesson-cards .choices{margin-bottom:.75rem}.lesson-cards .choices label{min-height:2.75rem}.basket{border-width:4px}
+.lesson-cards .choices{margin-bottom:.75rem}.lesson-cards .choices label{min-height:2.75rem}.basket{border-width:4px}
+
+.draggable{cursor:grab;-webkit-user-select:none;user-select:none}
+.draggable.dragging{opacity:.35}
+.item-ghost{position:fixed;z-index:50;pointer-events:none;margin:0;opacity:.9;border:3px solid var(--teal);border-radius:.8rem;background:#fff;display:grid;place-items:center;font:inherit;font-size:1.6rem;font-weight:700;color:var(--ink);box-shadow:0 6px 16px rgba(0,0,0,.25);cursor:grabbing}
+.drop-pic{display:inline-block;border:2px dashed transparent;border-radius:.6rem;padding:.25rem}
+.how{margin:.75rem 0 0}
+
+/* Game mode: while a game is open, only the game is on the page. */
+body.playing header.site,body.playing footer.site,body.playing main>*:not(#learn),body.playing #pick-h,body.playing .lesson-cards{display:none}
+body.playing main{padding-top:1rem}
+body.playing .player{margin-top:0}
+.feedback{display:flex;align-items:center;gap:.6rem;border-radius:.6rem}
+.feedback.try{background:#FFF6D6;border:1px solid #E3CF7D;padding:.6rem .9rem}
+.feedback.yes{background:#EAF4F1;border:1px solid #BFE0D8;padding:.6rem .9rem}
+.feedback svg{flex:none}
+.hint-pic{margin:.5rem 0}
+.drop-pic.look{border-color:#C79A00;background:#FFFBEA}
+@media (prefers-reduced-motion:no-preference){
+.nudge{animation:nudge .45s}
+@keyframes nudge{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-4px)}}
+}
+
+/* Lessons and games */
+.ask{font-size:1.2rem;font-weight:600;margin:.5rem 0}
+.dice-table{display:flex;align-items:center;gap:.9rem;margin:.25rem 0 .5rem}
+.dice-sign{font-size:2rem;font-weight:700}
+.fact-card{display:inline-block;font-size:2rem;font-weight:700;background:#fff;border:3px solid var(--teal);border-radius:.8rem;padding:.5rem 1.25rem;margin:.25rem 0 .75rem;box-shadow:3px 4px 0 #BFE0D8}
+.hunt-grid{display:grid;grid-template-columns:repeat(3,minmax(4.5rem,6rem));gap:.6rem}
+.tile,.line-btn{appearance:none;font:inherit;font-weight:700;color:var(--ink);background:#fff;border:3px solid #7A8B87;border-radius:.8rem;cursor:pointer}
+.tile{font-size:1.6rem;min-height:4.25rem}
+.tile:hover,.line-btn:hover{background:#EAF4F1}
+.tile.right,.line-btn.right{border-color:var(--teal);background:#EAF4F1}
+.tile.wrong{border-style:dashed;color:var(--muted)}
+.tile:focus-visible,.line-btn:focus-visible{outline:3px solid #0B4F46;outline-offset:3px}
+.num-line{display:flex;flex-wrap:wrap;gap:.3rem}
+.line-btn{min-width:2.75rem;min-height:2.75rem;font-size:1.05rem;border-width:2px}
+.line-btn.start{background:#BFE0D8;border-color:var(--teal)}
+.line-btn.hop{background:#F6E3A1}
+.track{overflow-x:auto;margin-bottom:.5rem}
+.lesson-cards input[type=checkbox]{width:1.25rem;height:1.25rem;accent-color:var(--teal)}
