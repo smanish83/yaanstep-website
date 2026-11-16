@@ -79,3 +79,10 @@ footer.site nav.foot a{border-bottom:1px solid transparent}
 /* Theme switcher, top right (SCRUM-400) */
 .theme-pick{display:flex;align-items:center;gap:.4rem;margin-left:auto;font-size:.9rem;color:var(--muted)}
 .theme-pick select{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--field-line);border-radius:var(--radius-sm);padding:.3rem .5rem;min-height:2.25rem}
+
+/* Team page portraits (AI-generated portraits, labelled on the page) */
+.portrait{width:9rem;height:9rem;border-radius:50%;object-fit:cover;display:block;margin:0 0 .5rem;background:var(--tint)}
+.cards.team li{text-align:left}
+.cards.team .role{font-weight:600}
+.cards.team .exp{font-size:.92rem}
+h3.group{margin:1.5rem 0 .5rem}
