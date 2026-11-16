@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Products",
+      "href": "products.html",
+      "also": [
+        "learning.html",
+        "try-it.html",
+        "time-calculator.html"
+      ]
+    },
+    {
+      "label": "How it works",
+      "href": "how-it-works.html"
+    },
+    {
+      "label": "Team",
+      "href": "team.html"
+    },
+    {
+      "label": "Join the testers",
+      "href": "testers.html",
+      "cta": true
+    }
+  ]
+}
