@@ -86,3 +86,9 @@ footer.site nav.foot a{border-bottom:1px solid transparent}
 .cards.team .role{font-weight:600}
 .cards.team .exp{font-size:.92rem}
 h3.group{margin:1.5rem 0 .5rem}
+
+/* Theme switcher as four colour-only buttons (names are in aria-label and tooltip) */
+.theme-pick .swatch{width:2.75rem;height:2.75rem;padding:0;border:0;background:transparent;border-radius:50%;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.theme-pick .swatch::before{content:"";width:1.6rem;height:1.6rem;border-radius:50%;background:var(--sw);border:2px solid var(--field-line);box-sizing:border-box}
+.theme-pick .swatch[aria-pressed="true"]::before{box-shadow:0 0 0 3px var(--card),0 0 0 5px var(--ink)}
+.theme-pick .swatch:focus-visible{outline:3px solid var(--focus);outline-offset:0}

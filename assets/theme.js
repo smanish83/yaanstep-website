@@ -11,14 +11,18 @@
     if (!bar) return;
     var wrap = document.createElement("div");
     wrap.className = "theme-pick";
-    var label = document.createElement("label");
-    label.setAttribute("for", "theme-select");
-    label.textContent = "Theme";
-    var sel = document.createElement("select");
-    sel.id = "theme-select";
-    THEMES.forEach(function (t) { var o = document.createElement("option"); o.value = t[0]; o.textContent = t[1]; sel.appendChild(o); });
-    sel.value = get();
-    sel.addEventListener("change", function () { apply(sel.value); set(sel.value); });
-    wrap.appendChild(label); wrap.appendChild(sel); bar.appendChild(wrap);
+    wrap.setAttribute("role", "group");
+    wrap.setAttribute("aria-label", "Colour theme");
+    var COL = { "": "#1F7A6D", sunrise: "#B93A0B", midnight: "#0B1220", bloom: "#6D28D9" };
+    var btns = [];
+    function mark() { var cur = get(); btns.forEach(function (x) { x.b.setAttribute("aria-pressed", String(x.v === cur)); }); }
+    THEMES.forEach(function (t) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "swatch"; b.style.setProperty("--sw", COL[t[0]]);
+      b.setAttribute("aria-label", "Theme: " + t[1]); b.title = t[1];
+      b.addEventListener("click", function () { apply(t[0]); set(t[0]); mark(); });
+      wrap.appendChild(b); btns.push({ b: b, v: t[0] });
+    });
+    mark(); bar.appendChild(wrap);
   });
 })();
