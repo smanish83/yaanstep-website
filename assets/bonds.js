@@ -64,7 +64,7 @@
     for (var i = 0; i < a; i++) { out.push('<circle class="ctr" data-c="teal" cx="' + x + '" cy="30" r="12" fill="' + TEAL + '"/>'); x += 28; }
     x += 16;
     for (var j = 0; j < b; j++) { out.push('<rect class="ctr" data-c="orange" x="' + (x - 12) + '" y="18" width="24" height="24" rx="4" fill="' + ORANGE + '"/>'); x += 28; }
-    return svg(340, 60, (a + b) + ' counters: ' + pl(a, 'teal circle') + ' and ' + pl(b, 'orange square') + '.', out.join(''));
+    return svg(340, 60, 'Counters: ' + pl(a, 'teal circle') + ' and ' + pl(b, 'orange square') + '.', out.join(''));
   }
 
   /** Balloons: t in a row, the last k float away (drawn faint and crossed out). */
