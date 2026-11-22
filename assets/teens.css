@@ -1,0 +1,44 @@
+/* Yaanstep Teens planner (SCRUM-500). Uses the shared theme colours so all four themes work. */
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+#app input[type=text],#app input[type=date],#app input[type=time],#app select{font:inherit;min-height:2.75rem;padding:.35rem .7rem;border:2px solid var(--field-line);border-radius:.5rem;background:var(--card);color:var(--ink);max-width:100%;box-sizing:border-box}
+#app input[type=text]{width:100%}
+#app input:focus-visible,#app select:focus-visible,#app button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+#app button{font:inherit;cursor:pointer}
+.btn.small{padding:.45rem .9rem;min-height:2.75rem;min-width:2.75rem}
+.btn.danger{color:#A12A1C;border-color:#A12A1C}
+[data-theme="midnight"] .btn.danger{color:#FCA5A5;border-color:#FCA5A5}
+button.btn{border:0}
+button.btn.ghost{border:2px solid var(--teal)}
+button.btn.ghost.danger{border-color:currentColor}
+.next-banner{font-size:1.2rem;font-weight:600;background:var(--tint);border:1px solid var(--line);border-left:6px solid var(--teal);border-radius:var(--radius-sm);padding:.8rem 1rem;margin:1.25rem 0}
+.planner-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:1.25rem;align-items:start}
+@media (max-width:760px){.planner-grid{grid-template-columns:minmax(0,1fr)}}
+.day-page,.side,.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.25rem;margin:0 0 1.25rem}
+.day-page{background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 2.05rem,var(--tint2) 2.05rem,var(--tint2) 2.15rem)}
+.day-head{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+.day-head h2{margin:0 .25rem;flex:1 1 10rem;font-size:1.35rem}
+.day-page h3,.side h3{margin:1.1rem 0 .4rem;font-size:1.05rem}
+.row{display:flex;gap:.5rem;align-items:center}
+.row input{flex:1}
+.day-events,.upcoming,.todos{list-style:none;padding:0;margin:.25rem 0}
+.ev{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem .75rem;border:1px solid var(--line);border-left:6px solid var(--cat,var(--teal));border-radius:var(--radius-sm);background:var(--card);padding:.5rem .75rem;margin:.4rem 0}
+.ev .time{font-weight:700;min-width:3.5rem}
+.ev .title{flex:1 1 8rem;font-weight:600;background:none;border:0;color:var(--teal);text-align:left;padding:.4rem 0;min-height:2.75rem;text-decoration:underline;text-underline-offset:3px}
+.ev .count{color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;font-size:.8rem;font-weight:600;padding:.05rem .5rem;border-radius:1rem;background:var(--tint);color:var(--ink);border:1px solid var(--line)}
+.todos li{display:flex;align-items:center;gap:.5rem;min-height:2.75rem}
+.todos input[type=checkbox]{width:1.4rem;height:1.4rem;accent-color:var(--teal)}
+.todos .done label{text-decoration:line-through;color:var(--muted)}
+.todos .remove{background:none;border:0;color:var(--muted);min-height:2.75rem;min-width:2.75rem;margin-left:auto}
+.count.big{font-size:1.4rem;font-weight:700;margin:.25rem 0}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:0 1rem}
+.panel fieldset{border:1px solid var(--line);border-radius:var(--radius-sm);margin:.75rem 0;padding:.5rem .9rem}
+.panel legend{font-weight:600;padding:0 .3rem}
+.choices{display:flex;flex-wrap:wrap;gap:.5rem}
+.choices label{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;padding:.3rem .8rem;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card);cursor:pointer}
+.choices label:has(input:checked){border-color:var(--teal);background:var(--tint);font-weight:600}
+.choices input{width:1.2rem;height:1.2rem;accent-color:var(--teal)}
+.topic-row{display:grid;grid-template-columns:5rem minmax(0,1fr) 4.5rem;gap:.5rem;align-items:center;margin:.35rem 0}
+.prep-plan li{margin:.3rem 0}
+.help-list{margin:.25rem 0 .75rem;padding-left:1.25rem}
+.cat-test{--cat:#B91C1C}.cat-assignment{--cat:#C2410C}.cat-school{--cat:#1D4ED8}.cat-sport{--cat:#15803D}.cat-social{--cat:#A21CAF}.cat-family{--cat:#0E7490}.cat-health{--cat:#B45309}.cat-study{--cat:#4338CA}.cat-other{--cat:#64748B}
