@@ -15,7 +15,8 @@
   var PAGES = [
     { href: 'sounds.html', name: 'Sounds and beats' },
     { href: 'rhymes.html', name: 'Rhymes and letter teams' },
-    { href: 'sentences.html', name: 'Parts of a sentence' }
+    { href: 'sentences.html', name: 'Parts of a sentence' },
+    { href: 'stories.html', name: 'Story time' }
   ];
 
   function $(id) { return document.getElementById(id); }
