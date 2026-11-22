@@ -41,6 +41,11 @@ button:disabled{cursor:default}
 .art{background:#fff;border:2px solid var(--line);border-radius:12px;padding:6px;margin:8px 0}.art svg{width:100%;height:auto;display:block}
 .say2{font-size:1.2rem;font-weight:600;margin:8px 0}.sentence{font-size:1.4rem;font-weight:800;text-align:center;margin:8px 0}
 .hops{font-weight:700;min-height:1.5em}
+.how-panel{background:#FFF8E6;border:2px solid #E3CF7D;border-radius:14px;padding:10px 14px;margin-top:10px}.how-panel h3{font-size:1rem;margin:0 0 4px}.how-panel h3:focus{outline:3px solid #0B4F46;outline-offset:2px}.how-panel p{margin:.3em 0}.muted{color:#51675f;font-size:.9rem}
+.moving svg{width:100%;height:auto;max-width:340px;display:block}.moving .mv-in,.moving .mv-away{transform-box:fill-box;transform-origin:center}.moving .mv-away{opacity:.25}
+@media (prefers-reduced-motion:no-preference){.moving .mv-in{animation:mvIn .45s ease-out both}.moving .mv-away{animation:mvAway .8s ease-in both}}
+@keyframes mvIn{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+@keyframes mvAway{from{opacity:1;transform:none}to{opacity:.25;transform:translateY(-12px)}}
 </style></head><body><main>
 <p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
 <h1>Number bonds</h1>

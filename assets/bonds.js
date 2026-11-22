@@ -136,6 +136,72 @@
   var TITLES = { bonds: 'Number bonds', take: 'Take away', track: 'Hop on the number track' };
   var TRY = { bonds: 'Not yet. Count the counters again.', take: 'Not yet. Count the balloons that are still here.', track: 'Not yet. Look where the frog is now.' };
 
+
+  /* ---------- "Show me how": a short moving lesson after a miss (SCRUM-495) ----------
+     Uses a new example with a different answer, so it teaches the idea without giving this answer away.
+     Pictures appear one step at a time; with calm mode or reduced motion they show their last picture at once. */
+  function delay(i) { return ' style="animation-delay:' + (0.3 + i * 0.55).toFixed(2) + 's"'; }
+  function lessonArt(ex) {
+    var out = [], x, i;
+    if (ex.game === 'bonds') {
+      var n = ex.a + ex.b;
+      x = 170 - (n * 28 + 16) / 2 + 14;
+      for (i = 0; i < n; i++) {
+        if (i === ex.a) x += 16;
+        out.push('<g class="mv-in"' + delay(i) + '>' + (i < ex.a
+          ? '<circle cx="' + x + '" cy="26" r="12" fill="' + TEAL + '"/>'
+          : '<rect x="' + (x - 12) + '" y="14" width="24" height="24" rx="4" fill="' + ORANGE + '"/>') +
+          '<text class="s" x="' + x + '" y="58" text-anchor="middle">' + (i + 1) + '</text></g>');
+        x += 28;
+      }
+      return svg(340, 66, 'Counting ' + pl(ex.a, 'teal counter') + ' and ' + pl(ex.b, 'orange counter') + ', one at a time: 1 to ' + n + '.', out.join(''));
+    }
+    if (ex.game === 'take') {
+      x = 170 - (ex.t * 32) / 2 + 16;
+      var left = 0;
+      for (i = 0; i < ex.t; i++) {
+        var gone = i >= ex.t - ex.k, c = i % 2 ? ORANGE : TEAL;
+        if (!gone) left++;
+        out.push(gone
+          ? '<g class="mv-away"' + delay(i - (ex.t - ex.k)) + '><ellipse cx="' + x + '" cy="30" rx="12" ry="15" fill="#fff" stroke="' + c + '" stroke-width="2"/></g>'
+          : '<g><ellipse cx="' + x + '" cy="30" rx="12" ry="15" fill="' + c + '"/><text class="s mv-in"' + delay(ex.k + left) + ' x="' + x + '" y="70" text-anchor="middle">' + left + '</text></g>');
+        x += 32;
+      }
+      return svg(340, 78, ex.t + ' balloons. ' + ex.k + (ex.k === 1 ? ' floats away.' : ' float away, one at a time.') + ' Then we count what is left: ' + (ex.t - ex.k) + '.', out.join(''));
+    }
+    var lo = Math.max(0, Math.min(Math.min(ex.start, ex.end) - 2, 10)), step = ex.op === '+' ? 1 : -1;
+    function cx(v) { return 5 + (v - lo) * 30 + 15; }
+    for (var v = lo; v <= lo + 10; v++) out.push('<rect x="' + (cx(v) - 15) + '" y="70" width="30" height="34" fill="' + (v === ex.start ? '#e6f6ea' : '#fff') + '" stroke="#17332c" stroke-width="1.5"/><text class="s" x="' + cx(v) + '" y="92" text-anchor="middle">' + v + '</text>');
+    for (i = 0; i < ex.hops; i++) {
+      var f = ex.start + i * step, t = f + step;
+      out.push('<path class="mv-in"' + delay(i) + ' d="M' + cx(f) + ' 66 Q ' + ((cx(f) + cx(t)) / 2) + ' 40 ' + cx(t) + ' 66" fill="none" stroke="' + ORANGE + '" stroke-width="2.5"/>');
+    }
+    out.push('<g class="mv-in"' + delay(ex.hops) + '><ellipse cx="' + cx(ex.end) + '" cy="56" rx="12" ry="9" fill="#3F7D20"/></g>');
+    return svg(340, 112, 'The frog starts on ' + ex.start + ' and hops ' + pl(ex.hops, 'square') + (step > 0 ? ' on' : ' back') + ', one hop at a time, to ' + ex.end + '.', out.join(''));
+  }
+  var HOW = {
+    bonds: 'Count every counter, one at a time. The last number you say is how many in all.',
+    take: 'Watch the balloons float away. Then count the ones that are still here.',
+    track: 'Put your finger on the start. Move one square for each hop, and say the numbers.'
+  };
+  function lessonFor(game) {
+    var ex, tries = 0;
+    function shows(e, n) { return e.ans === n || (e.game === 'bonds' && (e.whole === n || e.a === n || e.b === n)); }
+    do { ex = MAKE[game](); tries++; } while (shows(ex, r.ans) && tries < 50);
+    var box = el('section', { 'class': 'how-panel', id: 'lesson', 'aria-labelledby': 'lesson-h' });
+    box.appendChild(el('h3', { id: 'lesson-h', 'class': 'how-title', tabindex: '-1' }, 'Short lesson'));
+    box.appendChild(el('p', {}, HOW[game]));
+    var pic = el('div', { 'class': 'moving' });
+    pic.innerHTML = lessonArt(ex);
+    box.appendChild(pic);
+    box.appendChild(el('p', { id: 'lesson-say' }, ex.right));
+    var again = el('button', { type: 'button', id: 'watch-again' }, 'Watch again');
+    again.addEventListener('click', function () { pic.innerHTML = lessonArt(ex); });
+    box.appendChild(again);
+    box.appendChild(el('p', { 'class': 'muted' }, 'Now try the question above again.'));
+    return box;
+  }
+
   /* ---------- the game ---------- */
 
   var game = null, idx = 0, r = null, solved = false, hopped = 0;
@@ -197,11 +263,22 @@
       var b = el('button', { type: 'button', 'data-v': String(v) }, String(v));
       b.addEventListener('click', function () {
         if (v === r.ans) { solved = true; render(); $('go').focus(); }
-        else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = TRY[r.game]; }
+        else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = TRY[r.game]; offerHow(panel); }
       });
       row.appendChild(b);
     });
     panel.appendChild(row);
+  }
+
+  function offerHow(panel) {
+    if ($('howbtn') || $('lesson')) return;
+    var how = el('button', { type: 'button', id: 'howbtn' }, 'Show me how');
+    how.addEventListener('click', function () {
+      var box = lessonFor(r.game);
+      how.replaceWith(box);
+      $('lesson-h').focus();
+    });
+    panel.appendChild(how);
   }
 
   function next() {
