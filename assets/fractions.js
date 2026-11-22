@@ -88,12 +88,101 @@
   var TITLES = { name: 'Name the fraction', equal: 'Equal parts', shade: 'Shade it' };
   var TRY = { name: 'Not yet. Count all the parts, then the shaded ones.', uneven: 'Not yet. Those parts are not all the same size.', count: 'Not yet. Count the parts.', more: 'Not yet. Shade some more parts.', less: 'Not yet. That is too many parts.' };
 
+  /* ---------- Show me how: a short moving lesson with a different example ---------- */
+  var HOW = {
+    name: 'Count all the equal parts first: that is the bottom number. Then count the shaded parts: that is the top number.',
+    equal: 'Halves, thirds and quarters are parts that are all the same size. Count the parts, then check they match.',
+    shade: 'The bottom number says how many equal parts there are. The top number says how many to shade.'
+  };
+  function at(i) { return ' style="animation-delay:' + (i * 0.45).toFixed(2) + 's"'; }
+  function num(x, y, n, i) { return '<text class="mv-in" x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" text-anchor="middle" font-size="16" font-weight="700" fill="#17332c"' + at(i) + '>' + n + '</text>'; }
+  /** Parts appear one by one with their numbers, then the shaded ones fill in, then the fraction shows. */
+  function nameArt(ex) {
+    var d = ex.d, k = ex.k, body = '', t = 0, shaded = ex.parts.slice().sort(function (a, b) { return a - b; });
+    if (ex.shape === 'bar') {
+      var w = 330 / d;
+      for (var i = 0; i < d; i++) body += '<rect class="mv-in" x="' + (4 + i * w).toFixed(1) + '" y="4" width="' + w.toFixed(1) + '" height="62" fill="#fff" stroke="#17332c" stroke-width="2"' + at(t) + '/>' + num(4 + i * w + w / 2, 30, i + 1, t++);
+      shaded.forEach(function (i, n) { body += '<rect class="mv-fade" x="' + (4 + i * w + 2).toFixed(1) + '" y="6" width="' + (w - 4).toFixed(1) + '" height="58" fill="' + TEAL + '" opacity=".85"' + at(t + 1 + n) + '/>' + '<text class="mv-in" x="' + (4 + i * w + w / 2).toFixed(1) + '" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="#fff"' + at(t + 1 + n) + '>' + (n + 1) + '</text>'; });
+      t += k + 1;
+      return svg(340, 110, 'A bar cut into ' + d + ' equal parts, counted 1 to ' + d + '. Then ' + (k === 1 ? '1 shaded part is counted' : k + ' shaded parts are counted') + '. That is ' + frac(k, d) + '.',
+        body + '<text class="mv-in" x="170" y="100" text-anchor="middle" font-size="22" font-weight="800" fill="' + TEAL + '"' + at(t + 1) + '>' + frac(k, d) + '</text>');
+    }
+    var cx = 120, cy = 72, R = 62;
+    for (var j = 0; j < d; j++) {
+      var a0 = -Math.PI / 2 + 2 * Math.PI * j / d, a1 = a0 + 2 * Math.PI / d, am = (a0 + a1) / 2;
+      var p = 'M' + cx + ' ' + cy + ' L' + (cx + R * Math.cos(a0)).toFixed(1) + ' ' + (cy + R * Math.sin(a0)).toFixed(1) + ' A' + R + ' ' + R + ' 0 0 1 ' + (cx + R * Math.cos(a1)).toFixed(1) + ' ' + (cy + R * Math.sin(a1)).toFixed(1) + ' Z';
+      var on = shaded.indexOf(j);
+      body += '<path class="mv-in" d="' + p + '" fill="#fff" stroke="#17332c" stroke-width="2"' + at(t) + '/>';
+      if (on >= 0) body += '<path class="mv-fade" d="' + p + '" fill="' + TEAL + '" opacity=".85"' + at(d + 1 + on) + '/>';
+      body += num(cx + R * 0.62 * Math.cos(am), cy + R * 0.62 * Math.sin(am) + 6, j + 1, t++);
+    }
+    t += k + 1;
+    return svg(340, 144, 'A circle cut into ' + d + ' equal parts, counted 1 to ' + d + '. Then ' + (k === 1 ? '1 shaded part is counted' : k + ' shaded parts are counted') + '. That is ' + frac(k, d) + '.',
+      body + '<text class="mv-in" x="270" y="82" text-anchor="middle" font-size="30" font-weight="800" fill="' + TEAL + '"' + at(t + 1) + '>' + frac(k, d) + '</text>');
+  }
+  /** An uneven bar gets a cross; an even bar's parts pop in one by one and each gets a tick. */
+  function equalArt(ex) {
+    var d = ex.d, w = 300 / d, body = '<text x="4" y="16" font-size="14" fill="#17332c">Not the same size</text>', cuts = [0].concat(UNEVEN[d][0], [1]);
+    for (var i = 0; i < d; i++) body += '<rect x="' + (4 + cuts[i] * 300).toFixed(1) + '" y="22" width="' + ((cuts[i + 1] - cuts[i]) * 300).toFixed(1) + '" height="34" fill="#fff" stroke="#17332c" stroke-width="2"/>';
+    body += '<text class="mv-in" x="322" y="47" text-anchor="middle" font-size="24" font-weight="800" fill="#a33"' + at(1) + '>✗</text>';
+    body += '<text x="4" y="86" font-size="14" fill="#17332c">All the same size</text>';
+    for (var j = 0; j < d; j++) body += '<rect class="mv-in" x="' + (4 + j * w).toFixed(1) + '" y="92" width="' + w.toFixed(1) + '" height="34" fill="#e6f6ea" stroke="#17332c" stroke-width="2"' + at(2 + j) + '/>' + num(4 + j * w + w / 2, 115, 1 + '/' + d, 2 + j);
+    body += '<text class="mv-in" x="322" y="117" text-anchor="middle" font-size="24" font-weight="800" fill="#1b7a3d"' + at(3 + d) + '>✓</text>';
+    return svg(340, 134, 'Two bars with ' + d + ' parts each. The top bar\'s parts are not the same size. The bottom bar\'s ' + d + ' parts are all the same size, so each part is ' + fw(1, d) + '.', body);
+  }
+  /** The shape's equal parts appear, then the parts to shade fill one at a time with a count. */
+  function shadeArt(ex) {
+    var d = ex.d, k = ex.k, cols = d <= 4 ? d : d / 2, rows = d / cols, cw = 300 / cols, ch = 44, body = '';
+    for (var i = 0; i < d; i++) {
+      var x = 4 + (i % cols) * cw, y = 4 + Math.floor(i / cols) * ch;
+      body += '<rect class="mv-in" x="' + x.toFixed(1) + '" y="' + y + '" width="' + cw.toFixed(1) + '" height="' + ch + '" fill="#fff" stroke="#17332c" stroke-width="2"' + at(0) + '/>';
+      if (i < k) body += '<rect class="mv-fade" x="' + (x + 2).toFixed(1) + '" y="' + (y + 2) + '" width="' + (cw - 4).toFixed(1) + '" height="' + (ch - 4) + '" fill="' + TEAL + '"' + at(1 + i) + '/><text class="mv-in" x="' + (x + cw / 2).toFixed(1) + '" y="' + (y + 28) + '" text-anchor="middle" font-size="16" font-weight="700" fill="#fff"' + at(1 + i) + '>' + (i + 1) + '</text>';
+    }
+    return svg(340, rows * ch + 12, 'A shape cut into ' + d + ' equal parts. ' + k + (k === 1 ? ' part is' : ' parts are') + ' shaded one at a time. That is ' + frac(k, d) + '.', body);
+  }
+  function lessonWords(ex) {
+    var parts = Array.apply(null, Array(ex.k)).map(function (_, i) { return i + 1; }).join(', ');
+    if (ex.game === 'name') return 'Count all the parts: there are ' + ex.d + ', so the bottom number is ' + ex.d + '. Count the shaded parts' + (ex.k === 1 ? ': just 1' : ': ' + parts) + '. So the top number is ' + ex.k + '. That is ' + fw(ex.k, ex.d) + ', ' + frac(ex.k, ex.d) + '.';
+    if (ex.game === 'equal') return WORDS[ex.d][1][0].toUpperCase() + WORDS[ex.d][1].slice(1) + ' means ' + ex.d + ' parts that are all the same size. The top bar has ' + ex.d + ' parts, but they are not the same size. The bottom bar has ' + ex.d + ' equal parts, so each part is ' + fw(1, ex.d) + '.';
+    return 'To shade ' + fw(ex.k, ex.d) + ', the shape has ' + ex.d + ' equal parts. Shade ' + ex.k + ' of them: ' + parts + '. That is ' + frac(ex.k, ex.d) + '.';
+  }
+  function lessonFor(g) {
+    var ex, tries = 0;
+    do { ex = MAKE[g](); tries++; } while (ex.d === r.d && tries < 50);
+    var box = el('section', { 'class': 'how-panel', id: 'lesson', 'aria-labelledby': 'lesson-h' });
+    box.appendChild(el('h3', { id: 'lesson-h', tabindex: '-1' }, 'Short lesson'));
+    box.appendChild(el('p', {}, HOW[g]));
+    var pic = el('div', { 'class': 'moving' });
+    var art = function () { return g === 'name' ? nameArt(ex) : g === 'equal' ? equalArt(ex) : shadeArt(ex); };
+    pic.innerHTML = art();
+    box.appendChild(pic);
+    box.appendChild(el('p', { id: 'lesson-say' }, lessonWords(ex)));
+    var again = el('button', { type: 'button', id: 'watch-again', 'class': 'small' }, 'Watch again');
+    again.addEventListener('click', function () { pic.innerHTML = art(); });
+    box.appendChild(again);
+    box.appendChild(el('p', { 'class': 'muted' }, g === 'shade' ? 'Now shade the shape above again.' : 'Now try the question above again.'));
+    return box;
+  }
+  /* The lesson lives under the tip, outside the panel, so tapping parts does not close it. */
+  function howHolder() {
+    var h = $('howbox');
+    if (!h) { h = el('div', { id: 'howbox' }); $('tip').insertAdjacentElement('afterend', h); }
+    return h;
+  }
+  function offerHow() {
+    var h = howHolder();
+    if (h.firstChild) return;
+    var how = el('button', { type: 'button', id: 'howbtn' }, 'Show me how');
+    how.addEventListener('click', function () { h.innerHTML = ''; h.appendChild(lessonFor(r.game)); $('lesson-h').focus(); });
+    h.appendChild(how);
+  }
+
   /* ---------- the game ---------- */
   var game = null, idx = 0, r = null, solved = false, on = [];
   function show(id) { ['menu', 'game', 'alldone'].forEach(function (s) { $(s).hidden = s !== id; }); }
   function start(g) { game = g; idx = 0; $('title').textContent = TITLES[g]; show('game'); round(); }
   function round() {
-    r = MAKE[game](); solved = false; on = [];
+    r = MAKE[game](); solved = false; on = []; howHolder().innerHTML = '';
     $('count').textContent = 'Round ' + (idx + 1) + ' of ' + ROUNDS;
     $('say').textContent = r.say;
     render();
@@ -106,7 +195,7 @@
   }
   function render(keepTip) {
     var art = $('art'), panel = $('panel'), go = $('go');
-    panel.innerHTML = ''; art.innerHTML = ''; if (!keepTip) setTip('', false);
+    panel.innerHTML = ''; art.innerHTML = ''; if (!keepTip) setTip('', false); if (solved) howHolder().innerHTML = '';
     go.hidden = !solved; go.textContent = idx < ROUNDS - 1 ? 'Next round' : 'Finish';
     art.hidden = r.game !== 'name';
     if (r.game === 'name') art.innerHTML = namePic();
@@ -120,7 +209,7 @@
         b.disabled = solved;
         b.addEventListener('click', function () {
           if (i === r.ans) { solved = true; render(); $('go').focus(); }
-          else { b.classList.add('wrong'); b.disabled = true; setTip(TRY[t.kind], true); }
+          else { b.classList.add('wrong'); b.disabled = true; setTip(TRY[t.kind], true); offerHow(); }
         });
         tiles.appendChild(b);
       });
@@ -149,7 +238,7 @@
       var check = el('button', { type: 'button', id: 'check', 'class': 'primary' }, 'Check');
       check.addEventListener('click', function () {
         if (on.length === r.k) { solved = true; render(); $('go').focus(); }
-        else setTip(on.length < r.k ? TRY.more : TRY.less, true);
+        else { setTip(on.length < r.k ? TRY.more : TRY.less, true); offerHow(); }
       });
       panel.appendChild(el('div', { 'class': 'row' })).appendChild(check);
       return;
@@ -164,7 +253,7 @@
       b.appendChild(el('span', { 'class': 'small2' }, fw(p[0], p[1])));
       b.addEventListener('click', function () {
         if (v === r.ans) { solved = true; render(); $('go').focus(); }
-        else { b.classList.add('wrong'); b.disabled = true; setTip(TRY.name, true); }
+        else { b.classList.add('wrong'); b.disabled = true; setTip(TRY.name, true); offerHow(); }
       });
       row.appendChild(b);
     });
