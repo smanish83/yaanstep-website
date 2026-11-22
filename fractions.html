@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fractions | Yaanstep</title>
+<meta name="description" content="Picture maths for ages 7 to 9: name the shaded fraction, find equal parts, and shade halves, thirds, quarters, sixths and eighths. No sign-in. Nothing is sent.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f4fbf8;--ink:#17332c;--teal:#1F7A6D;--card:#fff;--line:#c6e3da}
+*{box-sizing:border-box}body{margin:0;font:18px/1.45 system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+main{max-width:680px;margin:0 auto;padding:16px;overflow-wrap:anywhere}h1{font-size:1.35rem;margin:.2em 0}
+.card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.note{font-size:.85rem;background:#fff7e0;border:1px solid #ecd48a;border-radius:10px;padding:8px 12px}
+button{font:inherit;cursor:pointer;min-height:56px;min-width:56px;border-radius:14px;border:2px solid var(--teal);background:#fff;color:var(--ink);padding:8px 14px}
+button:focus-visible{outline:4px solid #f0a500;outline-offset:2px}button.primary{background:var(--teal);color:#fff;font-weight:600}
+button:disabled{cursor:default}
+.small{min-height:48px;font-size:.85rem;border-color:#aab9b3}.top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.steps{display:grid;gap:10px}.step{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-height:72px;font-size:1.1rem;font-weight:600}.step small{color:#51675f;font-weight:400}
+.parent{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:.85rem;color:#51675f}.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0}
+.tile{min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-width:3px;padding:8px 4px}
+.tile svg{width:64px;height:64px;max-width:100%}.tile .w{font-size:1rem;font-weight:600}
+.tile.right,.choice.right{background:#e6f6ea;border-color:#1b7a3d}.tile.wrong,.choice.wrong{opacity:.55;border-style:dashed}
+.letter{font-size:3.2rem;font-weight:800;text-align:center;margin:0;line-height:1.1}
+.ask{font-size:1.15rem;font-weight:600;text-align:center;margin:6px 0}
+.sub{font-size:1rem;color:#51675f;font-weight:600;min-height:1.5em;text-align:center}.sub.yes{color:#1b7a3d}.sub.try{color:#7a5a00}
+.beatpic{display:flex;flex-direction:column;align-items:center;gap:4px;margin:8px 0}.beatpic svg{width:96px;height:96px}
+.word{font-size:1.6rem;font-weight:800}.split{font-size:1.6rem;font-weight:800;text-align:center;color:var(--teal);margin:4px 0}
+.beatbtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0}.beatbtns button{display:flex;flex-direction:column;align-items:center;font-weight:600}
+.claps{font-size:1.1rem;letter-spacing:2px}
+.done{background:#e6f6ea;border:3px solid #7bc48f;border-radius:16px;padding:18px;text-align:center;margin:12px 0}.done b{font-size:1.5rem;display:block;margin-bottom:8px}
+.count{font-size:.85rem;color:#51675f}
+.back{margin:0 0 4px}.back a{color:var(--teal);font-weight:600}
+.moveit{margin:12px 0 4px}.nexthead{margin:14px 0 4px;font-weight:600}.nextgames{justify-content:center;align-items:center}.nextgames a{display:inline-flex;align-items:center;min-height:48px;padding:0 10px;color:var(--ink)}.pic{display:flex;justify-content:center;margin:8px 0}.pic svg{width:120px;height:120px}.text{font-size:1.4rem;font-weight:600;line-height:1.5;margin:10px 0}.ask{font-size:1rem;background:#eef6fb;border:1px solid #b9d7ea;border-radius:10px;padding:8px 12px}.theend{font-size:1.6rem;font-weight:800;text-align:center;margin:8px 0}.wordshead{font-weight:600;margin:12px 0 4px}.words{display:flex;flex-wrap:wrap;gap:8px}.wordbtn{font-size:1.2rem;font-weight:600}
+.problem{font-size:1.2rem;line-height:1.55;margin:8px 0}.sent{border-radius:6px;padding:1px 2px}.sent.now{background:#fff2b3;box-shadow:0 0 0 2px #e0b93a}
+.stepline{font-weight:700;color:#1F5F55;margin:10px 0 4px}.model{background:#fff;border:2px solid var(--line);border-radius:12px;padding:6px;margin:8px 0}.model svg{width:100%;height:auto;display:block}
+.who{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:1.1rem;margin:6px 0}.who dt{font-weight:700}.who dd{margin:0}
+.opts{display:grid;gap:8px;margin:8px 0}.opts button{text-align:left;font-weight:600}.opts button.wrong{opacity:.55;border-style:dashed}
+.work{margin:8px 0;padding:0;list-style:none}.work li{background:#e6f6ea;border-radius:10px;padding:6px 10px;margin:6px 0}.work .eq{font-weight:800;font-size:1.15rem;display:block}
+.tip{font-size:.95rem;color:#51675f;min-height:1.4em;margin:4px 0}.tip.try{color:#7a5a00;font-weight:600}
+.sub2{font-size:1.15rem;margin:0 0 6px}.howto{margin:6px 0 0 1.2em;padding:0}.howto li{margin:3px 0}.bands{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin:8px 0}
+
+.art{background:#fff;border:2px solid var(--line);border-radius:12px;padding:6px;margin:8px 0}.art svg{width:100%;height:auto;display:block}
+.say2{font-size:1.2rem;font-weight:600;margin:8px 0}.sentence{font-size:1.4rem;font-weight:800;text-align:center;margin:8px 0}
+.hops{font-weight:700;min-height:1.5em}
+
+.bars{display:grid;gap:10px;margin:8px 0}.barpick{padding:8px;display:block;width:100%}.barpick svg{width:100%;height:auto;display:block}
+.barpick.right{background:#e6f6ea;border-color:#1b7a3d}.barpick.wrong{opacity:.55;border-style:dashed}
+.fgrid{display:grid;gap:0;border:3px solid #17332c;border-radius:6px;overflow:hidden;margin:8px 0}
+.fpart{border-radius:0;border:2px solid #17332c;margin:-1px;min-height:72px;min-width:48px;background:#fff}.fpart.lit{background:#1F7A6D}
+.fpart:focus-visible{outline:4px solid #f0a500;outline-offset:-6px}
+.fracbtn{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:88px}.fracbtn .big{font-size:1.4rem;font-weight:800}.fracbtn .small2{font-size:.85rem;color:#51675f}
+#choices.row{justify-content:center}
+</style></head><body><main>
+<p class="back"><a href="learning.html">&larr; Back to Learning</a></p>
+<h1>Fractions</h1>
+<p class="note"><b>Picture maths for ages 7 to 9.</b> A fraction is a part of a whole that is cut into equal parts. See the parts first, then the numbers. The games and pictures are our own, made by Yaanstep's AI team, in the "things, then pictures, then numbers" way many schools teach. Not yet tested with children. Not a replacement for school. No sign-in, no ads. Nothing is sent and nothing is saved on this device.</p>
+<section id="menu"><div class="card"><p><b>Pick a game:</b></p><div class="steps">
+<button class="step" id="play-name">1. Name the fraction<small>How much of the shape is shaded? Ages 7 to 9. 8 rounds.</small></button>
+<button class="step" id="play-equal">2. Equal parts<small>Find the bar cut into halves, thirds or quarters. Ages 7 to 9. 8 rounds.</small></button>
+<button class="step" id="play-shade">3. Shade it<small>Tap the parts to shade a fraction. Ages 7 to 9. 8 rounds.</small></button>
+</div></div>
+<div class="parent"><p>Parent area</p><p>Start with real things: fold a paper strip in half, then in half again to make quarters, and cut a sandwich into equal parts. Then play a game here, where the same idea is shown as pictures and then as numbers.</p><p>The bottom number says how many equal parts the whole is cut into. The top number says how many of those parts we mean. Parts must be the same size to count as halves, thirds or quarters.</p><p>A wrong answer only says "Not yet". There are no timers and no points here.</p></div></section>
+<section id="game" hidden><div class="card"><div class="top"><b id="title"></b><span class="count" id="count"></span><button id="exit" class="small">Back</button></div>
+<p class="say2" id="say"></p>
+<div class="art" id="art"></div>
+<div id="panel" aria-live="polite"></div>
+<p class="tip" id="tip" role="status"></p>
+<div class="row"><button id="go" class="primary" hidden>Next</button></div></div></section>
+<section id="alldone" hidden><div class="done"><b>All done!</b><p>You finished 8 rounds. Now take a break away from the screen.</p><div class="row" style="justify-content:center"><button id="again" class="primary">Play again</button><button id="other">Choose another game</button></div><p><a href="learning.html">Back to Learning</a></p></div></section>
+</main>
+<script src="assets/fractions.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>
