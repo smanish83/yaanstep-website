@@ -49,10 +49,10 @@
       say: 'A sentence tells a whole idea. It starts with a capital letter and ends with a period.',
       pic: 'cat',
       parts: [['The cat', 'who'], ['naps', 'doing'], ['.', 'stop']],
-      note: 'Capital letter at the start. Full stop at the end.'
+      note: 'Capital letter at the start. Period at the end.'
     },
     {
-      say: 'Every sentence says who or what, and what it is doing. The dog is who. Runs is what it is doing.',
+      say: 'Many sentences say who or what, and what it is doing. The dog is who. Runs is what it is doing.',
       pic: 'dog',
       parts: [['The dog', 'who'], ['runs', 'doing'], ['.', 'stop']],
       note: 'Who or what: the dog. What it is doing: runs.'
