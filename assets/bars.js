@@ -320,6 +320,7 @@
   var STEPS = { read: [1, 'Read the problem.'], who: [2, 'Who and what?'], bars: [3, 'Draw a bar for each one.'], sent: [4, 'Read one sentence at a time and change the bars.'], q: [5, 'Where does the question mark go?'], calc: [6, 'Work it out.'], say: [7, 'Say the answer in a full sentence.'] };
 
   function render() {
+    howHolder().innerHTML = '';
     var s = stages[at], kind = s.replace(/\d+$/, '');
     var n = +(s.match(/\d+$/) || [0])[0];
     $('stepline').textContent = 'Step ' + STEPS[kind][0] + ' of 7: ' + STEPS[kind][1];
@@ -352,7 +353,7 @@
           var b = el('button', { type: 'button', 'data-q': o[0] }, o[1]);
           b.addEventListener('click', function () {
             if (o[0] === p.right) { st.q = true; render(); $('go').focus(); }
-            else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = 'Not yet. Read the question again: what does it ask for?'; }
+            else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = 'Not yet. Read the question again: what does it ask for?'; offerHow(); }
           });
           box.appendChild(b);
         });
@@ -372,7 +373,7 @@
           var b = el('button', { type: 'button', 'data-v': String(v) }, String(v));
           b.addEventListener('click', function () {
             if (v === c.ans) { st.c = n + 1; render(); $('go').focus(); }
-            else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = 'Not yet. Look at the bars again.'; }
+            else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = 'Not yet. Look at the bars again.'; offerHow(); }
           });
           row.appendChild(b);
         });
@@ -389,7 +390,7 @@
           var b = el('button', { type: 'button', 'data-right': String(o[1]) }, o[0]);
           b.addEventListener('click', function () {
             if (o[1]) { done.say = true; render(); $('go').focus(); }
-            else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = 'Not yet. Look at the question mark on the bars.'; }
+            else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = 'Not yet. Look at the question mark on the bars.'; offerHow(); }
           });
           sb.appendChild(b);
         });
@@ -417,6 +418,74 @@
     var picks = [];
     alts.forEach(function (v) { if (v > 0 && v !== c.ans && picks.indexOf(v) < 0 && picks.length < 2) picks.push(v); });
     return shuffle([c.ans].concat(picks));
+  }
+
+
+  /* ---------- "Show me how": a worked example that draws itself (SCRUM-495) ----------
+     After a miss, a new problem of the same kind is worked through step by step, the way the game teaches:
+     a bar for each one, one sentence at a time, the question mark, the working, the answer sentence.
+     It is a different problem, so it never gives this answer away. With calm mode or reduced motion,
+     every step shows at once. */
+  function stillPictures() {
+    var calm = document.documentElement.classList.contains('ys-calm');
+    try { return calm || window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return calm; }
+  }
+  function remake(kind) {
+    for (var i = 0; i < 80; i++) {
+      var q = band.make[Math.floor(Math.random() * band.make.length)]();
+      if (q.kind === kind && q.calcs[q.calcs.length - 1].ans !== p.calcs[p.calcs.length - 1].ans) return q;
+    }
+    return null;
+  }
+  function frames(ex) {
+    var f = [{ st: { r: 0, q: false, c: 0 }, say: 'Draw a bar for each one: ' + ex.who + '.' }], n = ex.sentences.length - 1;
+    for (var i = 1; i <= n; i++) f.push({ st: { r: i, q: false, c: 0 }, say: ex.sentences[i - 1] });
+    f.push({ st: { r: n, q: true, c: 0 }, say: 'The question mark goes where the answer is. ' + ex.sentences[n] });
+    ex.calcs.forEach(function (c, k) { f.push({ st: { r: n, q: true, c: k + 1 }, say: c.a + ' ' + c.op + ' ' + c.b + ' = ' + c.ans + '. ' + c.say }); });
+    return f;
+  }
+  function howHolder() {
+    var h = $('howbox');
+    if (!h) { h = el('div', { id: 'howbox' }); $('tip').insertAdjacentElement('afterend', h); }
+    return h;
+  }
+  function offerHow() {
+    var h = howHolder();
+    if (h.firstChild || !band) return;
+    var ex = remake(p.kind);
+    if (!ex) return;
+    var b = el('button', { type: 'button', id: 'howbtn' }, 'Show me how');
+    b.addEventListener('click', function () {
+      var box = el('section', { 'class': 'how-panel', id: 'lesson', 'aria-labelledby': 'lesson-h' });
+      box.appendChild(el('h3', { id: 'lesson-h', tabindex: '-1' }, 'Short lesson'));
+      box.appendChild(el('p', {}, 'Watch a problem like yours, worked out one step at a time.'));
+      box.appendChild(el('p', { 'class': 'lesson-prob' }, ex.sentences.join(' ')));
+      var pic = el('div', { 'class': 'lesson-model', id: 'lesson-model' }), steps = el('ol', { 'class': 'lesson-steps', id: 'lesson-steps' });
+      box.appendChild(pic); box.appendChild(steps);
+      var again = el('button', { type: 'button', id: 'watch-again', 'class': 'small' }, 'Watch again');
+      box.appendChild(again);
+      box.appendChild(el('p', { 'class': 'muted' }, 'Now try your problem again.'));
+      var all = frames(ex), timer = null;
+      function show(k) {
+        pic.innerHTML = draw(ex, all[k].st);
+        steps.appendChild(el('li', {}, all[k].say));
+      }
+      function play() {
+        clearTimeout(timer); steps.innerHTML = '';
+        if (stillPictures()) { for (var k = 0; k < all.length; k++) show(k); return; }
+        var k2 = 0;
+        (function tick() {
+          if (!box.isConnected && k2 > 0) return;
+          show(k2); k2 += 1;
+          if (k2 < all.length) timer = setTimeout(tick, 2200);
+        })();
+      }
+      again.addEventListener('click', play);
+      h.innerHTML = ''; h.appendChild(box);
+      play();
+      $('lesson-h').focus();
+    });
+    h.appendChild(b);
   }
 
   function next() {
