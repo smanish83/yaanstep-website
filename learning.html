@@ -11,7 +11,7 @@
 <script src="assets/theme.js"></script>
 <link rel="stylesheet" href="assets/learning.css">
 </head>
-<body>
+<body data-ask-age>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="wrap bar">
 <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="" width="40" height="40"><span>Yaanstep</span></a>
@@ -31,42 +31,42 @@
 <section aria-labelledby="games-h">
 <h2 id="games-h">Maths and reading games</h2>
 <ul class="cards games-cards">
-<li>
+<li data-ages="3-12">
 <p class="tag">Ages 3 to 12 · short chapters</p>
 <h3>Maths</h3>
 <p>Counting, adding, taking away, times tables, money and clocks. Each chapter has a short lesson, then ten questions that start easy.</p>
 <p class="muted">Progress is kept only in this browser.</p>
 <p><a class="btn" href="maths.html">Play maths</a></p>
 </li>
-<li>
+<li data-ages="3-7">
 <p class="tag">Ages 3 to 7 · tap to hear</p>
 <h3>Reading</h3>
 <p>Letter sounds, picture words, tap to blend, and common words in short sentences.</p>
 <p class="muted">Uses your device's own voice. Nothing is recorded.</p>
 <p><a class="btn" href="reading.html">Play reading</a></p>
 </li>
-<li>
+<li data-ages="3-7">
 <p class="tag">Ages 3 to 7 · read together</p>
 <h3>Story time</h3>
 <p>Short picture stories to read with a grown-up, with one question to talk about on every page.</p>
 <p class="muted">Uses your device's own voice. Nothing is recorded or saved.</p>
 <p><a class="btn" href="stories.html">Read a story</a></p>
 </li>
-<li>
+<li data-ages="4-6">
 <p class="tag">Ages 4 to 6 · listen and clap</p>
 <h3>Sounds and beats</h3>
 <p>Find the picture that starts with a sound, and count the beats in a word.</p>
 <p class="muted">Uses your device's own voice. Nothing is recorded or saved.</p>
 <p><a class="btn" href="sounds.html">Play sounds and beats</a></p>
 </li>
-<li>
+<li data-ages="5-7">
 <p class="tag">Ages 5 to 7 · lesson and game</p>
 <h3>Parts of a sentence</h3>
 <p>A short lesson on who, doing, where and what it is like, then fill the gap in five sentences.</p>
 <p class="muted">Uses your device's own voice. Nothing is recorded or saved.</p>
 <p><a class="btn" href="sentences.html">Play parts of a sentence</a></p>
 </li>
-<li>
+<li data-ages="3-7">
 <p class="tag">Ages 3 to 7 · rhymes and letters</p>
 <h3>Rhymes and letter teams</h3>
 <p>Find the picture that rhymes, read four short rhymes together, and learn letter teams like sh and ee.</p>
@@ -79,14 +79,14 @@
 <div id="learn" hidden>
 <h2 id="pick-h">Pick a game</h2>
 <ul class="cards lesson-cards" aria-labelledby="pick-h">
-<li>
+<li data-ages="3-4">
 <p class="tag">Age 3 · with a grown-up · 5 minutes</p>
 <h3>Same and different</h3>
 <p>Match socks, find the odd one, sort blocks by color.</p>
 <p class="muted">Grown-up: read the green box aloud. Your child taps.</p>
 <p><button type="button" class="btn" id="start-sorting">Start</button></p>
 </li>
-<li>
+<li data-ages="6-12">
 <p class="tag">Age 6 and up · a short lesson, then 5 rounds</p>
 <h3>Maths games</h3>
 <fieldset class="choices">
@@ -158,8 +158,9 @@
 <p><strong>Yaanstep</strong> coaches habits. It is not therapy and not medical advice. The main Yaanstep app is for ages 13 and up.</p>
 <p>The Yaanstep team is made of AI agents, led by one human founder. <a href="team.html">Meet the team</a>.</p>
 <nav class="foot" aria-label="Footer"><a href="products.html">Products</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="accessibility.html">Accessibility</a></nav>
-<p class="muted">This site sets no cookies and uses no trackers. It remembers your theme choice, and progress in the learning games, only in your browser.</p>
+<p class="muted">This site sets no cookies and uses no trackers. It remembers your theme choice, progress in the learning games, and a child profile if you set one, only in your browser.</p>
 </div></footer>
 <script src="assets/learning.js" defer></script>
+<script src="assets/profile.js"></script>
 </body>
 </html>

@@ -156,7 +156,7 @@
   function init() {
     var list = $('storylist');
     STORIES.forEach(function (s) {
-      var b = el('button', { type: 'button', 'class': 'step', id: 'story-' + s.id });
+      var b = el('button', { type: 'button', 'class': 'step', id: 'story-' + s.id, 'data-ages': s.band === 'Ages 3 to 4' ? '3-4' : '5-7' });
       b.appendChild(document.createTextNode(s.title));
       b.appendChild(el('small', {}, s.band + '. ' + s.pages.length + ' pages.'));
       b.addEventListener('click', function () { open(s); });
