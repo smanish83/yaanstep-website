@@ -206,9 +206,10 @@
       paid.textContent = 'You put in ' + fmt(sum(tray)) + '. The price is ' + fmt(price) + '.';
     }
     allowed.forEach(function (k) {
-      var b = el('button', { type: 'button', id: 'add-' + k, 'aria-label': 'Put in a ' + COINS[k].name + ', ' + words(COINS[k].v) });
+      var b = el('button', { type: 'button', id: 'add-' + k });
+      b.appendChild(el('span', { 'class': 'sr' }, 'Put in a ' + COINS[k].name + ', ' + words(COINS[k].v)));
       b.appendChild(coinIcon(k));
-      b.appendChild(el('span', {}, fmt(COINS[k].v)));
+      b.appendChild(el('span', { 'aria-hidden': 'true' }, fmt(COINS[k].v)));
       b.addEventListener('click', function () { if (ctx.solved() || tray.length >= 12) return; tray.push(k); show(); ctx.setSub('', ''); });
       purse.appendChild(b);
     });

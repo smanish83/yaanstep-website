@@ -160,8 +160,11 @@
     function tiles(options, draw1, onPick, labelOf, cls) {
       var row = el('div', { 'class': cls || 'tiles', id: 'choices' });
       options.forEach(function (o) {
-        var b = el('button', { type: 'button', 'class': 'tile', 'data-v': String(o), 'aria-label': labelOf(o) });
-        b.appendChild(draw1(o));
+        // The name is spoken from a hidden line; what is drawn is for the eyes only.
+        var b = el('button', { type: 'button', 'class': 'tile', 'data-v': String(o) });
+        b.appendChild(el('span', { 'class': 'sr' }, labelOf(o)));
+        var look = draw1(o); look.setAttribute('aria-hidden', 'true');
+        b.appendChild(look);
         b.addEventListener('click', function () { if (!solved) onPick(o, b); });
         row.appendChild(b);
       });
