@@ -54,6 +54,8 @@
       '<line x1="170" y1="30" x2="230" y2="96" stroke="#17332c" stroke-width="2"/>' +
       circ(170, 30, whole, 'whole') + circ(110, 98, a, 'a') + circ(230, 98, b, 'b'));
   }
+  /** "1 square", "3 squares". */
+  function pl(n, word) { return n + ' ' + word + (n === 1 ? '' : 's'); }
   function say(v) { return v === '?' ? 'a question mark' : String(v); }
 
   /** Counters in a row: a teal circles, then a gap, then b orange squares (shape and color both differ). */
@@ -62,7 +64,7 @@
     for (var i = 0; i < a; i++) { out.push('<circle class="ctr" data-c="teal" cx="' + x + '" cy="30" r="12" fill="' + TEAL + '"/>'); x += 28; }
     x += 16;
     for (var j = 0; j < b; j++) { out.push('<rect class="ctr" data-c="orange" x="' + (x - 12) + '" y="18" width="24" height="24" rx="4" fill="' + ORANGE + '"/>'); x += 28; }
-    return svg(340, 60, (a + b) + ' counters: ' + a + ' teal circles and ' + b + ' orange squares.', out.join(''));
+    return svg(340, 60, (a + b) + ' counters: ' + pl(a, 'teal circle') + ' and ' + pl(b, 'orange square') + '.', out.join(''));
   }
 
   /** Balloons: t in a row, the last k float away (drawn faint and crossed out). */
@@ -77,7 +79,7 @@
         '</g>');
       x += 32;
     }
-    return svg(340, 80, t + ' balloons. ' + k + ' floated away, so they are crossed out.', out.join(''));
+    return svg(340, 80, t + ' balloons. ' + k + ' floated away, so ' + (k === 1 ? 'it is' : 'they are') + ' crossed out.', out.join(''));
   }
 
   /** A number track window of 11 squares, the frog on "at", the hops so far drawn as arcs. */
@@ -107,8 +109,8 @@
       var whole = rnd(3, 10), a = rnd(1, whole - 1), b = whole - a, hideWhole = Math.random() < 0.4;
       return {
         game: 'bonds', whole: whole, a: a, b: b, hide: hideWhole ? 'whole' : 'b', ans: hideWhole ? whole : b,
-        say: hideWhole ? 'There are ' + a + ' teal counters and ' + b + ' orange counters. How many counters in all?'
-          : 'There are ' + whole + ' counters. ' + a + ' are teal. How many are orange?',
+        say: hideWhole ? 'We have ' + pl(a, 'teal counter') + ' and ' + pl(b, 'orange counter') + '. How many counters in all?'
+          : 'There are ' + whole + ' counters. ' + a + (a === 1 ? ' is' : ' are') + ' teal. How many are orange?',
         right: a + ' and ' + b + ' make ' + whole + '.'
       };
     },
@@ -125,7 +127,7 @@
       var h = rnd(1, 3), add = Math.random() < 0.5, start = add ? rnd(0, 20 - h) : rnd(h, 20), end = add ? start + h : start - h;
       return {
         game: 'track', start: start, hops: h, op: add ? '+' : '−', end: end, ans: end,
-        say: 'The frog starts on ' + start + '. It hops ' + h + (add ? ' on' : ' back') + '. Where does it land?',
+        say: 'The frog starts on ' + start + '. It hops ' + pl(h, 'square') + (add ? ' on' : ' back') + '. Where does it land?',
         sum: start + ' ' + (add ? '+' : '−') + ' ' + h + ' = ?',
         right: start + ' ' + (add ? '+' : '−') + ' ' + h + ' = ' + end + '. The frog lands on ' + end + '.'
       };
