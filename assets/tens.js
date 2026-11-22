@@ -51,6 +51,8 @@
     return svg(340, 130, label, side(a, 0) + '<line x1="170" y1="6" x2="170" y2="124" stroke="#c6e3da" stroke-width="2"/>' + side(b, 172));
   }
 
+  /** A point for a question answered right, kept only with a child profile (YSPoints, in profile.js). */
+  function point(area) { if (window.YSPoints) window.YSPoints.add(area, 1); }
   /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
   function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   /** Three answer choices for a number from 10 to 99: the answer, often the digits swapped, and ten or one more or less. */
@@ -207,7 +209,7 @@
         panel.appendChild(row);
         var check = el('button', { type: 'button', id: 'check', 'class': 'primary' }, 'Check');
         check.addEventListener('click', function () {
-          if (have.t * 10 + have.o === r.n) { solved = true; howHolder().innerHTML = ''; render(); $('go').focus(); }
+          if (have.t * 10 + have.o === r.n) { if (!solved) point('maths'); solved = true; howHolder().innerHTML = ''; render(); $('go').focus(); }
           else { setTip(TRY.build, true); offerHow(); }
         });
         panel.appendChild(el('div', { 'class': 'row' })).appendChild(check);
@@ -225,7 +227,7 @@
     opts.forEach(function (v) {
       var b = el('button', { type: 'button', 'data-v': String(v) }, String(v));
       b.addEventListener('click', function () {
-        if (v === r.ans) { solved = true; howHolder().innerHTML = ''; render(); $('go').focus(); }
+        if (v === r.ans) { if (!solved) point('maths'); solved = true; howHolder().innerHTML = ''; render(); $('go').focus(); }
         else { b.classList.add('wrong'); b.disabled = true; setTip(TRY[r.game], true); offerHow(); }
       });
       row2.appendChild(b);

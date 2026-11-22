@@ -145,10 +145,12 @@
   /* ---------- the reader ---------- */
 
   var opener = null;
+  // Reaching "The end." gives 2 English points, once each time a book is opened (only with a child profile: YSPoints, in profile.js).
+  var finished = false;
   function openBook(id, from) {
     opener = from || null;
     fetch(BASE + 'books/' + id + '.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); }).then(function (b) {
-      book = b; page = -1;
+      book = b; page = -1; finished = false;
       $('btitle').textContent = b.title;
       $('library').hidden = true; $('reader').hidden = false;
       render();
@@ -191,6 +193,8 @@
     if (page >= n) {
       $('rcount').textContent = 'The end';
       area.appendChild(el('p', { 'class': 'theend', id: 'ltheend' }, 'The end.'));
+      if (!finished && window.YSPoints) window.YSPoints.add('english', 2);
+      finished = true;
       area.appendChild(el('p', {}, 'Ask: what was your favourite page? Why?'));
       area.appendChild(credits(book.credits));
       var row = el('div', { 'class': 'row' });

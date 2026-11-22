@@ -142,14 +142,18 @@
       $('alldone').hidden = false; $('keep').focus();
       return;
     }
-    round += 1; firstTry = true;
+    round += 1; firstTry = true; scored = false;
     $('count').textContent = (game === 'poems' ? 'Rhyme ' : 'Round ') + round + ' of ' + total();
     $('more').hidden = true; $('again').hidden = false;
     $('again').textContent = 'Hear it again';
     $('sub').textContent = ''; $('sub').className = 'sub';
     if (game === 'rhyme') rhymeRound(); else if (game === 'teams') teamRound(); else poem();
   }
+  /** A right answer: one English point per round, kept only with a child profile (YSPoints, in profile.js). */
+  var scored = false;
   function right(message) {
+    if (!scored && window.YSPoints) window.YSPoints.add('english', 1);
+    scored = true;
     $('sub').textContent = message;
     $('sub').className = 'sub yes';
     say(message);

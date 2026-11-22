@@ -248,6 +248,7 @@
   }
 
   S.run({
+    area: 'maths',
     names: { learn: 'Learn about money', count: 'How much money?', pay: 'Pay the price', change: 'Change, please' },
     learn: LEARN,
     games: { count: count, pay: pay, change: change }

@@ -109,12 +109,16 @@
       $('alldone').hidden = false; $('keep').focus();
       return;
     }
-    round += 1; firstTry = true;
+    round += 1; firstTry = true; scored = false;
     $('count').textContent = 'Round ' + round + ' of ' + ROUNDS;
     $('more').hidden = true; $('again').hidden = false;
     if (game === 'first') firstRound(); else beatsRound();
   }
+  /** A right answer: one English point per round, kept only with a child profile (YSPoints, in profile.js). */
+  var scored = false;
   function right(message, speech) {
+    if (!scored && window.YSPoints) window.YSPoints.add('english', 1);
+    scored = true;
     $('sub').textContent = message;
     $('sub').className = 'sub yes';
     say(speech || message);

@@ -543,6 +543,7 @@
   }
 
   S.run({
+    area: 'world',
     names: { learn: 'Learn the puzzles', memory: 'Find the pairs', next: 'What comes next?', odd: 'Odd one out', shapes: 'Shape puzzles', look: 'Look closely' },
     // Rounds per game, for a shell that reads it: a memory board takes longer than one question.
     rounds: { memory: 3 },

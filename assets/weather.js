@@ -235,6 +235,7 @@
   }
 
   S.run({
+    area: 'world',
     names: { learn: 'Learn about weather', find: 'Find the weather', dress: 'Dress for the weather', read: 'Read the thermometer', compare: 'Warmer or colder?' },
     learn: LEARN,
     games: { find: find, dress: dress, read: read, compare: compare },

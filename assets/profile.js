@@ -202,8 +202,50 @@
       gone.forEach(function (k) { ls.removeItem(k); });
     } catch (e) { /* nothing stored */ }
   }
-  function points() {
-    try { var s = JSON.parse(window.localStorage.getItem('sprouts:demo') || 'null'); return s && s.points > 0 ? Math.floor(s.points) : 0; } catch (e) { return 0; }
+  /* ---------- points: one store for every game, split by subject ----------
+     Each game calls YSPoints.add(area, n) when a question is answered right. Kept under "sprouts:points"
+     as { maths, english, world }, so "Delete progress" wipes it with the other "sprouts:" keys.
+     The maths bundle (maths.html) keeps its own points in "sprouts:demo"; they count as maths. */
+  var PTS_KEY = 'sprouts:points';
+  var AREAS = ['maths', 'english', 'world'];
+  function whole(n) { return n > 0 ? Math.floor(n) : 0; }
+  function mathsBundle() {
+    try { var s = JSON.parse(window.localStorage.getItem('sprouts:demo') || 'null'); return s ? whole(s.points) : 0; } catch (e) { return 0; }
+  }
+  function ownPoints() {
+    var s = null, o = {};
+    try { s = JSON.parse(window.localStorage.getItem(PTS_KEY) || 'null'); } catch (e) { s = null; }
+    AREAS.forEach(function (a) { o[a] = s && typeof s === 'object' ? whole(+s[a]) : 0; });
+    return o;
+  }
+  function totals() {
+    var o = ownPoints();
+    o.maths += mathsBundle();
+    o.total = o.maths + o.english + o.world;
+    return o;
+  }
+  function ptsWord(n) { return n + (n === 1 ? ' point' : ' points'); }
+  /** What the eyes see under the total: "Maths 3 · English 2", and "· World 1" only when there are world points. */
+  function splitText(t) { return 'Maths ' + t.maths + ' \u00b7 English ' + t.english + (t.world > 0 ? ' \u00b7 World ' + t.world : ''); }
+  /** What a screen reader hears: "5 points: 3 maths, 2 English, 0 world". */
+  function splitWords(t) { return ptsWord(t.total) + ': ' + t.maths + ' maths, ' + t.english + ' English, ' + t.world + ' world'; }
+  /** Adds n points (1 by default) to a subject. Does nothing without a child profile: nothing is stored then. */
+  function addPoints(area, n) {
+    if (!load()) return false;
+    if (AREAS.indexOf(area) < 0) area = 'world';
+    n = n == null ? 1 : Math.floor(+n);
+    if (!(n > 0)) return false;
+    var o = ownPoints();
+    o[area] += n;
+    try { window.localStorage.setItem(PTS_KEY, JSON.stringify(o)); } catch (e) { return false; }
+    showPoints();
+    return true;
+  }
+  /** Writes the points into the badge, if it is on the page. */
+  function showPoints() {
+    var n = $('ys-pts'); if (!n) return;
+    var t = totals(), want = [ptsWord(t.total), splitText(t), splitWords(t) + '.'];
+    [n, $('ys-split'), $('ys-pts-sr')].forEach(function (node, i) { if (node && node.textContent !== want[i]) node.textContent = want[i]; });
   }
 
   /* ---------- the avatar: drawn from the age ---------- */
@@ -251,7 +293,8 @@
     'background:#fff;color:#17312D;border:2px solid #17312D;border-radius:16px;font:600 14px/1.2 system-ui,Segoe UI,Arial,sans-serif;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.18)}' +
     '.ys-badge:focus-visible,.ys-dlg button:focus-visible,.ys-dlg input:focus-visible,.ys-ask button:focus-visible,.ys-filter button:focus-visible{outline:4px solid #f0a500;outline-offset:2px}' +
     '.ys-badge svg{width:48px;height:48px}.ys-nick{max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}' +
-    'body.ys-has-badge{padding-bottom:120px}' +
+    '.ys-split{font-size:11px;font-weight:500;max-width:140px;text-align:center;line-height:1.25}' +
+    'body.ys-has-badge{padding-bottom:150px}' +
     '.ys-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}' +
     '.ys-ask{background:#fff;color:#17312D;border:3px solid #1F7A6D;border-radius:16px;padding:16px;margin:16px 0}' +
     '.ys-ask h2{margin:0 0 6px;font-size:1.25rem;color:#17312D}.ys-ask p{margin:0 0 10px}' +
@@ -392,12 +435,14 @@
       (document.querySelector('main') || document.body).appendChild(b);
     }
     document.body.classList.add('ys-has-badge');
-    var pts = points();
     b.setAttribute('data-age', String(p.age));
+    // The total and the split are drawn for the eyes; a screen reader hears one sentence instead.
     b.innerHTML = avatar(p.age, p.color) +
       (p.nick ? '<span class="ys-nick" id="ys-nick"></span>' : '') +
-      '<span class="ys-sr">Profile, age ' + p.age + '. </span><span id="ys-pts">' + pts + (pts === 1 ? ' point' : ' points') + '</span>';
+      '<span class="ys-sr">Profile, age ' + p.age + '. </span><span id="ys-pts" aria-hidden="true"></span>' +
+      '<span id="ys-split" class="ys-split" aria-hidden="true"></span><span class="ys-sr" id="ys-pts-sr"></span>';
     if (p.nick) $('ys-nick').textContent = p.nick;
+    showPoints();
   }
 
   /* ---------- first visit: ask the age ---------- */
@@ -590,8 +635,8 @@
     Array.prototype.forEach.call(d.querySelectorAll('.ys-dages button'), function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-age') === draft.age)); });
     Array.prototype.forEach.call(d.querySelectorAll('.ys-colors button'), function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-color') === draft.color)); });
     markComfort(d);
-    var pts = points();
-    d.querySelector('#ys-ptext').textContent = 'Progress on this device: ' + pts + (pts === 1 ? ' point.' : ' points.');
+    var t = totals();
+    d.querySelector('#ys-ptext').textContent = 'Progress on this device: ' + ptsWord(t.total) + ' (' + t.maths + ' maths, ' + t.english + ' English, ' + t.world + ' world).';
     d.querySelector('#ys-confirm').hidden = true;
     var input = d.querySelector('#ys-nickin');
     if (input.value !== draft.nick) input.value = draft.nick;
@@ -637,17 +682,16 @@
     window.addEventListener('storage', refresh);
     setInterval(tickRest, 1000);
     document.addEventListener('visibilitychange', function () { lastTick = Date.now(); });
-    setInterval(function () {
-      var n = $('ys-pts'); if (!n) return;
-      var pts = points(), t = pts + (pts === 1 ? ' point' : ' points');
-      if (n.textContent !== t) n.textContent = t;
-    }, 1000);
+    // The maths bundle writes its own points, so look again every second.
+    setInterval(showPoints, 1000);
   }
 
   // Test hook: lets automated tests draw an avatar and compare it with the badge.
   window.YS_PROFILE = { comfort: COMFORT.map(function (c) { return c.id; }), avatar: avatar, stage: function (age) { return STAGES[stage(age)]; }, refresh: refresh };
   // Shared hook for the game pages: which comfort settings are on, fewer choices, and the device voice.
   window.YSComfort = { on: comfortOn, fewer: fewer, say: function (t) { reader.speak(t); }, open: openComfort };
+  // Shared hook for the game pages: a point for each question answered right, by subject (maths, english, world).
+  window.YSPoints = { add: addPoints, totals: totals };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

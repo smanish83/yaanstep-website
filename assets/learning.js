@@ -1,7 +1,7 @@
 /* Yaanstep learning page: two sample lessons.
-   Runs in the browser only. Nothing is stored or sent: no cookies, no
-   localStorage, no network requests. All state lives in variables and is
-   gone when the page is closed.
+   Runs in the browser only. Nothing is sent: no cookies, no network requests.
+   With a child profile, each question answered right adds a point for the
+   lesson's subject (YSPoints, in profile.js); without one, nothing is stored.
    There is no list of questions. Each lesson is built from random numbers,
    names and things when it starts, so it is different every time. */
 (function () {
@@ -769,7 +769,7 @@
         }
       },
       {
-        name: 'Lesson: your turn', who: READ, say: tryOne.say,
+        name: 'Lesson: your turn', who: READ, asks: true, say: tryOne.say,
         build: question({
           options: tryOne.options, answer: tryOne.answer, hint: tryOne.hint, explain: tryOne.explain, spec: tryOne.spec,
           draw: function (r) { return drawSpec(tryOne.spec, r); }
@@ -819,10 +819,10 @@
         ctx.stage.appendChild(el('p', { 'class': 'stars', 'aria-hidden': 'true' },
           [new Array(n + 1).join('★') + new Array(total - n + 1).join('☆')]));
         playAgain(ctx, 'Keep going');
-        ctx.stage.appendChild(el('p', { 'class': 'muted' }, ['Keep going gives five new rounds. Nothing is saved.']));
+        ctx.stage.appendChild(el('p', { 'class': 'muted' }, ['Keep going gives five new rounds. Only points are kept, with a child profile.']));
       })
     });
-    return { kicker: 'Maths · ' + STYLE_NAMES[style], steps: steps };
+    return { kicker: 'Maths · ' + STYLE_NAMES[style], area: 'maths', steps: steps };
   }
 
   function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
@@ -902,19 +902,20 @@
 
     return {
       kicker: 'Same and different · age 3, with a grown-up',
+      area: 'world',
       steps: [
-        { name: 'Find the same', who: READ, say: ['Two ' + kind + 's are the same. Put them together.'], build: pickTwo(pairs, kind) },
+        { name: 'Find the same', who: READ, asks: true, say: ['Two ' + kind + 's are the same. Put them together.'], build: pickTwo(pairs, kind) },
         {
-          name: 'Find the different one', who: READ, say: ['One is different. Tap it.'],
+          name: 'Find the different one', who: READ, asks: true, say: ['One is different. Tap it.'],
           build: pickOdd(things, oddAt, 'Yes! The ' + oddWord + ' is different.', oddHint)
         },
-        { name: 'Sort by ' + by, who: READ, say: [sortSay], build: sortThings(groups, order) },
+        { name: 'Sort by ' + by, who: READ, asks: true, say: [sortSay], build: sortThings(groups, order) },
         {
           name: 'Now do it for real', who: GROWNUP, end: true,
           say: real,
           build: info(function (ctx) {
             playAgain(ctx, 'Play again');
-            ctx.stage.appendChild(el('p', { 'class': 'muted' }, ['Nothing was saved. The game changes each time.']));
+            ctx.stage.appendChild(el('p', { 'class': 'muted' }, ['Only points were kept, with a child profile. The game changes each time.']));
           })
         }
       ]
@@ -1056,7 +1057,7 @@
         ctx.stage.appendChild(el('p', { 'class': 'muted' }, ['Yaanstep Sprouts picks the next game from these answers. Only the level is kept, on this device.']));
       })
     });
-    return { kicker: 'Maths · picked for you', steps: steps };
+    return { kicker: 'Maths · picked for you', area: 'maths', steps: steps };
   }
   window.yaanstepMathsLadder = LADDER;
 
@@ -1128,6 +1129,8 @@
       done: function (firstTry) {
         if (stepDone) return;
         stepDone = true;
+        // A question answered right: one point for the lesson's subject (only with a child profile).
+        if ((step.scored || step.asks) && window.YSPoints) window.YSPoints.add(lesson.area || 'world', 1);
         if (step.scored && firstTry) current.stars += 1;
         if (step.onResult) step.onResult(!!firstTry);
         nextBtn.disabled = false;

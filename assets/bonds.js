@@ -29,6 +29,8 @@
   var ROUNDS = 8;
   var TEAL = '#1F7A6D', ORANGE = '#C2410C';
 
+  /** A point for a question answered right, kept only with a child profile (YSPoints, in profile.js). */
+  function point(area) { if (window.YSPoints) window.YSPoints.add(area, 1); }
   /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
   function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   /** Three answer choices: the answer and two near it, all 0 to 20 and all different. */
@@ -264,7 +266,7 @@
     choices(r.ans).forEach(function (v) {
       var b = el('button', { type: 'button', 'data-v': String(v) }, String(v));
       b.addEventListener('click', function () {
-        if (v === r.ans) { solved = true; render(); $('go').focus(); }
+        if (v === r.ans) { if (!solved) point('maths'); solved = true; render(); $('go').focus(); }
         else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = TRY[r.game]; offerHow(panel); }
       });
       row.appendChild(b);

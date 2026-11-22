@@ -120,6 +120,7 @@
   }
 
   S.run({
+    area: 'world',
     names: names,
     learn: learn,
     games: { play: play },

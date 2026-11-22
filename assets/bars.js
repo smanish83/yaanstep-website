@@ -389,7 +389,7 @@
         shuffle([[p.calcs[p.calcs.length - 1].say, true], [p.wrong, false]]).forEach(function (o) {
           var b = el('button', { type: 'button', 'data-right': String(o[1]) }, o[0]);
           b.addEventListener('click', function () {
-            if (o[1]) { done.say = true; render(); $('go').focus(); }
+            if (o[1]) { if (!done.say) point('maths'); done.say = true; render(); $('go').focus(); }
             else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = 'Not yet. Look at the question mark on the bars.'; offerHow(); }
           });
           sb.appendChild(b);
@@ -411,6 +411,8 @@
     }
     return ul;
   }
+  /** A point for a question answered right, kept only with a child profile (YSPoints, in profile.js). */
+  function point(area) { if (window.YSPoints) window.YSPoints.add(area, 1); }
   /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
   function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   function choices(c) {

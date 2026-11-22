@@ -2,9 +2,11 @@
    A page calls YSShell.run({ names, learn, games }) where
    - names: { learn: 'Learn ...', <game id>: 'Title', ... } (the menu buttons are #play-<id>),
    - learn: a list of parts { title, text, movie: function () { return { svg, vb, label }; } },
-   - games: { <id>: function (area, ctx) { ... } } drawing one round.
+   - games: { <id>: function (area, ctx) { ... } } drawing one round,
+   - area: the subject the points go to ('maths', 'english' or 'world'; world when left out).
    Every game teaches first: a miss says what was tapped and offers a short moving lesson with another example.
-   Speech uses the device's own voice only. Nothing is stored or sent. */
+   Speech uses the device's own voice only. Nothing is sent. With a child profile, a right answer adds a point
+   (YSPoints, in profile.js); without one, nothing is stored. */
 (function () {
   'use strict';
   var ROUNDS = 8;
@@ -128,6 +130,8 @@
       say(spoken);
     }
     function win(text, speak) {
+      // One point per round: only the first win of a round counts.
+      if (!solved && window.YSPoints) window.YSPoints.add(cfg.area || 'world', 1);
       solved = true;
       setSub(text, 'yes');
       $('howbox').innerHTML = '';

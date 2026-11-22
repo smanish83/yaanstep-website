@@ -187,7 +187,9 @@
     r = pickWord(levelFor(round), []);
     ({ split: drawSplit, build: drawBuild, read: drawRead })[game](area);
   }
+  /** A point for each word answered right, kept only with a child profile (YSPoints, in profile.js). */
   function win(text) {
+    if (!solved && game !== 'learn' && window.YSPoints) window.YSPoints.add('english', 1);
     solved = true;
     setSub(text, 'yes');
     $('howbox').innerHTML = '';

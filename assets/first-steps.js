@@ -169,6 +169,7 @@
     ({ shapes: drawShapes, colors: drawColors, numbers: drawNumbers, animals: drawAnimals, listen: drawListen })[game]($('area'));
   }
   function win(text, speak) {
+    if (!solved) point(game);
     solved = true;
     setSub(text, 'yes');
     $('howbox').innerHTML = '';
@@ -203,6 +204,10 @@
     });
     h.appendChild(b);
   }
+  /** A point for a question answered right, kept only with a child profile (YSPoints, in profile.js).
+      Counting and shapes are maths; colors and animal sounds are about the world. Tap and listen is free play, with no questions. */
+  var AREA = { shapes: 'maths', numbers: 'maths', colors: 'world', animals: 'world' };
+  function point(g) { if (window.YSPoints && AREA[g]) window.YSPoints.add(AREA[g], 1); }
   /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
   function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   function tiles(options, draw1, onPick, labelOf) {

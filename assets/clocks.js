@@ -232,6 +232,7 @@
   }
 
   S.run({
+    area: 'maths',
     names: { learn: 'Learn to tell the time', read: 'Read the clock', set: 'Set the clock', howlong: 'How long?' },
     learn: LEARN,
     games: { read: read, set: set, howlong: howlong }

@@ -260,10 +260,13 @@
     area.appendChild(line);
     var row = el('div', { 'class': 'words', role: 'group', 'aria-label': 'Choose a word for the gap' });
     var asked = r.before + ' ... ' + (r.after === '.' ? '' : r.after);
+    var scored = false; // one English point per round, kept only with a child profile (YSPoints, in profile.js)
     r.choices.forEach(function (w) {
       var b = el('button', { type: 'button', 'class': 'choice', 'data-word': w }, w);
       b.addEventListener('click', function () {
         if (w === r.answer) {
+          if (!scored && window.YSPoints) window.YSPoints.add('english', 1);
+          scored = true;
           gap.textContent = w; gap.classList.add('filled');
           var full = r.before + ' ' + w + (r.after === '.' ? '.' : ' ' + r.after);
           Array.prototype.forEach.call(row.querySelectorAll('button'), function (x) { x.disabled = true; });

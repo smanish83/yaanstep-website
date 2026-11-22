@@ -47,6 +47,8 @@
   /* Uneven cuts for the "equal parts?" game: clearly not the same size, but the same number of parts. */
   var UNEVEN = { 2: [[0.3], [0.68]], 3: [[0.18, 0.5], [0.4, 0.82], [0.25, 0.75]], 4: [[0.1, 0.4, 0.75], [0.3, 0.45, 0.8], [0.15, 0.3, 0.6]] };
 
+  /** A point for a question answered right, kept only with a child profile (YSPoints, in profile.js). */
+  function point(area) { if (window.YSPoints) window.YSPoints.add(area, 1); }
   /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
   function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   /** Three choices for "what fraction is shaded": the answer, the part left white, and the same count over another size. */
@@ -210,7 +212,7 @@
         if (solved && i === r.ans) b.classList.add('right');
         b.disabled = solved;
         b.addEventListener('click', function () {
-          if (i === r.ans) { solved = true; render(); $('go').focus(); }
+          if (i === r.ans) { if (!solved) point('maths'); solved = true; render(); $('go').focus(); }
           else { b.classList.add('wrong'); b.disabled = true; setTip(TRY[t.kind], true); offerHow(); }
         });
         tiles.appendChild(b);
@@ -239,7 +241,7 @@
       if (solved) { panel.appendChild(el('p', { id: 'right', 'class': 'ask' }, r.right)); setTip('Well done!', false); return; }
       var check = el('button', { type: 'button', id: 'check', 'class': 'primary' }, 'Check');
       check.addEventListener('click', function () {
-        if (on.length === r.k) { solved = true; render(); $('go').focus(); }
+        if (on.length === r.k) { if (!solved) point('maths'); solved = true; render(); $('go').focus(); }
         else { setTip(on.length < r.k ? TRY.more : TRY.less, true); offerHow(); }
       });
       panel.appendChild(el('div', { 'class': 'row' })).appendChild(check);
@@ -254,7 +256,7 @@
       b.appendChild(el('span', { 'class': 'big' }, v));
       b.appendChild(el('span', { 'class': 'small2' }, fw(p[0], p[1])));
       b.addEventListener('click', function () {
-        if (v === r.ans) { solved = true; render(); $('go').focus(); }
+        if (v === r.ans) { if (!solved) point('maths'); solved = true; render(); $('go').focus(); }
         else { b.classList.add('wrong'); b.disabled = true; setTip(TRY.name, true); offerHow(); }
       });
       row.appendChild(b);
