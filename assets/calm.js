@@ -250,8 +250,10 @@
       li.appendChild(what);
       li.appendChild(svg(TICK, '0 0 48 48', 'tick'));
       var done = el('button', { type: 'button', 'class': 'done-btn', 'aria-pressed': String(item.done) });
-      done.appendChild(document.createTextNode('Done'));
-      done.appendChild(sr(': ' + c.name));
+      // One hidden name, so screen readers say "Done: <card>" without a stray space; the visible word is the same "Done".
+      var seen = el('span', { 'aria-hidden': 'true' }); seen.textContent = 'Done';
+      done.appendChild(seen);
+      done.appendChild(sr('Done: ' + c.name));
       done.addEventListener('click', function () {
         item.done = !item.done;
         keepPlan();
