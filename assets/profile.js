@@ -41,7 +41,9 @@
   var COMFORT = [
     { id: 'easy', name: 'Easy reading', hint: 'Bigger text with more space between letters, words and lines, on a cream background.' },
     { id: 'calm', name: 'Calm mode', hint: 'No moving pictures or bouncing. Lessons show their last picture straight away.' },
-    { id: 'big', name: 'Bigger buttons', hint: 'Buttons and answer tiles at least 64 pixels, with more space between them.' }
+    { id: 'big', name: 'Bigger buttons', hint: 'Buttons and answer tiles at least 64 pixels, with more space between them.' },
+    { id: 'contrast', name: 'Strong contrast', hint: 'Black text on white, thick dark edges on buttons, and underlined links.' },
+    { id: 'rest', name: 'Break reminders', hint: 'After 10 minutes of play, a short break to stretch and look far away.' }
   ];
   function cleanComfort(list) {
     return (Array.isArray(list) ? list : []).filter(function (c, i, all) {
@@ -141,7 +143,58 @@
     'html.ys-calm *,html.ys-calm *::before,html.ys-calm *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}' +
     /* Bigger buttons: 64px targets, 12px gaps. */
     'html.ys-big main button,html.ys-big main a.btn,html.ys-big main [role=button]{min-height:64px;min-width:64px;font-size:1.08em}' +
-    'html.ys-big main .row,html.ys-big main .num-row,html.ys-big main .hunt-grid,html.ys-big main .tiles,html.ys-big main .words,html.ys-big main .ys-row{gap:12px}';
+    'html.ys-big main .row,html.ys-big main .num-row,html.ys-big main .hunt-grid,html.ys-big main .tiles,html.ys-big main .words,html.ys-big main .ys-row{gap:12px}' +
+    /* Strong contrast: black on white, dark edges, underlined links, thick focus ring. */
+    'html.ys-contrast body{background:#fff!important;color:#000}' +
+    'html.ys-contrast main :is(p,li,h1,h2,h3,h4,label,legend,small,summary,figcaption,dt,dd,td,th,.meta,.hint,.note,.notice):not(button *,a.btn *,[role=button] *){color:#000!important}' +
+    'html.ys-contrast main :is(.card,.notice,.note,.lesson-cards li,section){border-color:#000!important}' +
+    'html.ys-contrast main :is(button,a.btn,[role=button],input,select){border:3px solid #000!important}' +
+    'html.ys-contrast a{text-decoration:underline!important}' +
+    'html.ys-contrast :focus-visible{outline:4px solid #000!important;outline-offset:3px!important}' +
+    '.ys-rest p{margin:0 0 10px}.ys-rest .ys-big-ico{font-size:2.4rem;line-height:1;margin:0 0 6px}';
+
+  /* ---------- break reminders (SCRUM-498) ----------
+     Counts time while a Sprouts page is open and visible, across pages in this visit (sessionStorage only).
+     After 10 minutes, a calm break screen; the button to go back waits 20 seconds. */
+  var REST_KEY = 'ys-rest-ms';
+  function restMs() { return +window.YS_REST_MS || 600000; }
+  function restWait() { return window.YS_REST_WAIT === undefined ? 20 : +window.YS_REST_WAIT; }
+  function played(v) {
+    try {
+      if (v === undefined) return +window.sessionStorage.getItem(REST_KEY) || 0;
+      window.sessionStorage.setItem(REST_KEY, String(v));
+    } catch (e) { /* private mode */ }
+    return v || 0;
+  }
+  var lastTick = Date.now();
+  function restOn() { var p = load(); return !!(p && p.comfort.indexOf('rest') > -1); }
+  function tickRest() {
+    var now = Date.now(), dt = Math.min(now - lastTick, 5000);
+    lastTick = now;
+    if (!restOn() || document.hidden || $('ys-rest')) return;
+    var t = played() + dt;
+    if (t >= restMs()) { played(0); showRest(); } else played(t);
+  }
+  function showRest() {
+    var d = el('dialog', { id: 'ys-rest', 'class': 'ys-dlg ys-rest', 'aria-labelledby': 'ys-rest-h' });
+    d.innerHTML = '<p class="ys-big-ico" aria-hidden="true">&#127775;</p><h2 id="ys-rest-h">Time for a little break</h2>' +
+      '<p>Stand up and stretch your arms up high. Look at something far away, like a window. Have a drink of water.</p>' +
+      '<p class="ys-hint">A grown-up turned on break reminders in the profile.</p>';
+    var go = el('button', { type: 'button', id: 'ys-rest-go' });
+    d.appendChild(go);
+    document.body.appendChild(d);
+    var left = restWait();
+    function draw() {
+      go.disabled = left > 0;
+      go.textContent = left > 0 ? 'Back to play in ' + left : 'Back to play';
+    }
+    draw();
+    var iv = setInterval(function () { left--; draw(); if (left <= 0) { clearInterval(iv); go.focus(); } }, 1000);
+    go.addEventListener('click', function () { clearInterval(iv); d.close(); d.remove(); lastTick = Date.now(); });
+    d.addEventListener('cancel', function (e) { if (left > 0) e.preventDefault(); });
+    if (d.showModal) d.showModal(); else d.setAttribute('open', '');
+    if (left <= 0) go.focus();
+  }
 
   /* ---------- filtering by age ---------- */
 
@@ -373,6 +426,8 @@
     refresh();
     // Points can change while a game is played (maths), and the profile can change in another tab.
     window.addEventListener('storage', refresh);
+    setInterval(tickRest, 1000);
+    document.addEventListener('visibilitychange', function () { lastTick = Date.now(); });
     setInterval(function () {
       var n = $('ys-pts'); if (!n) return;
       var pts = points(), t = pts + (pts === 1 ? ' point' : ' points');
