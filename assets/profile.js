@@ -32,11 +32,26 @@
     try {
       var p = JSON.parse(window.localStorage.getItem(KEY) || 'null');
       if (!p || AGES.indexOf(+p.age) < 0) return null;
-      return { age: +p.age, color: COLORS[+p.color] ? +p.color : 0, nick: cleanNick(p.nick || '') };
+      return { age: +p.age, color: COLORS[+p.color] ? +p.color : 0, nick: cleanNick(p.nick || ''), comfort: cleanComfort(p.comfort) };
     } catch (e) { return null; }
   }
   function save(p) { try { window.localStorage.setItem(KEY, JSON.stringify(p)); } catch (e) { /* private mode: works for this visit */ } }
   function forget() { try { window.localStorage.removeItem(KEY); } catch (e) { /* nothing */ } }
+  /* Comfort settings (SCRUM-498): chosen by need, never by a diagnosis. Kept inside the same profile key. */
+  var COMFORT = [
+    { id: 'easy', name: 'Easy reading', hint: 'Bigger text with more space between letters, words and lines, on a cream background.' },
+    { id: 'calm', name: 'Calm mode', hint: 'No moving pictures or bouncing. Lessons show their last picture straight away.' },
+    { id: 'big', name: 'Bigger buttons', hint: 'Buttons and answer tiles at least 64 pixels, with more space between them.' }
+  ];
+  function cleanComfort(list) {
+    return (Array.isArray(list) ? list : []).filter(function (c, i, all) {
+      return all.indexOf(c) === i && COMFORT.some(function (x) { return x.id === c; });
+    });
+  }
+  function applyComfort() {
+    var p = load(), on = p ? p.comfort : [], root = document.documentElement;
+    COMFORT.forEach(function (c) { root.classList.toggle('ys-' + c.id, on.indexOf(c.id) > -1); });
+  }
   function cleanNick(s) { return String(s).replace(/[^A-Za-z '\-]/g, '').replace(/\s+/g, ' ').trim().slice(0, 12); }
   /* Game progress: points, garden, stars and finished chapters. Settings, the profile and the theme are kept. */
   var PROGRESS_KEYS = ['demo-ch', 'demo-garden'];
@@ -108,13 +123,25 @@
     '.ys-ages button{font-size:1.2rem}.ys-ask .ys-plain,.ys-dlg .ys-plain{border-color:#7a8c86}' +
     '.ys-ask button[aria-pressed="true"],.ys-dlg button[aria-pressed="true"],.ys-dlg .ys-save{background:#1F7A6D;color:#fff}' +
     '.ys-filter{background:#E8F4F0;color:#17312D;border-radius:12px;padding:8px 12px;margin:8px 0;display:flex;flex-wrap:wrap;align-items:center;gap:8px}' +
-    '.ys-dlg{box-sizing:border-box;max-width:min(440px,calc(100vw - 24px));width:100%;border:3px solid #1F7A6D;border-radius:18px;padding:16px;background:#fff;color:#17312D;font:16px/1.4 system-ui,Segoe UI,Arial,sans-serif}' +
+    '.ys-dlg{box-sizing:border-box;max-width:min(440px,calc(100vw - 24px));width:100%;border:3px solid #1F7A6D;border-radius:18px;padding:16px;background:#fff;color:#17312D;font:16px/1.4 system-ui,Segoe UI,Arial,sans-serif;max-height:calc(100vh - 24px);overflow:auto}' +
     '.ys-dlg::backdrop{background:rgba(0,0,0,.45)}.ys-dlg h2{margin:0 0 8px;font-size:1.2rem}.ys-dlg fieldset{border:0;padding:0;margin:0 0 12px}.ys-dlg legend{font-weight:600;margin-bottom:6px;padding:0}' +
     '.ys-preview{display:flex;align-items:center;gap:10px;margin:0 0 10px}.ys-preview svg{width:64px;height:64px}' +
     '.ys-colors{display:flex;flex-wrap:wrap;gap:8px}.ys-colors button{width:48px;padding:0;display:flex;align-items:center;justify-content:center}.ys-colors span{width:28px;height:28px;border-radius:50%;display:block}' +
     '.ys-dlg label{display:block;font-weight:600;margin-bottom:4px}.ys-dlg input{box-sizing:border-box;font:inherit;width:100%;min-height:48px;padding:6px 10px;border:2px solid #5d716a;border-radius:10px;color:#17312D;background:#fff}' +
     '.ys-progress{border-top:1px solid #c8d6d1;margin-top:14px;padding-top:6px}.ys-dlg .ys-danger{background:#a3271c;border-color:#a3271c;color:#fff}' +
-    '.ys-hint{font-size:.85rem;color:#3f554d;margin:4px 0 12px}.ys-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}';
+    '.ys-hint{font-size:.85rem;color:#3f554d;margin:4px 0 12px}.ys-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}' +
+    '.ys-comfort button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;width:100%;margin:0 0 8px}.ys-comfort small{font-weight:400;font-size:.85rem}' +
+    '.ys-comfort button[aria-pressed="true"] small{color:#fff}' +
+    /* Easy reading: British Dyslexia Association style guide values. */
+    'html.ys-easy{--bg:#FBF5E6;--card:#FFFDF7}html.ys-easy body{background:#FBF5E6!important}' +
+    'html.ys-easy main{font-size:1.12em;letter-spacing:.05em;word-spacing:.16em;line-height:1.6;text-align:left}' +
+    'html.ys-easy main *{font-style:normal!important;text-transform:none!important}' +
+    'html.ys-easy main .card,html.ys-easy main .lesson-cards li{background:#FFFDF7}' +
+    /* Calm mode: nothing moves. */
+    'html.ys-calm *,html.ys-calm *::before,html.ys-calm *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}' +
+    /* Bigger buttons: 64px targets, 12px gaps. */
+    'html.ys-big main button,html.ys-big main a.btn,html.ys-big main [role=button]{min-height:64px;min-width:64px;font-size:1.08em}' +
+    'html.ys-big main .row,html.ys-big main .num-row,html.ys-big main .hunt-grid,html.ys-big main .tiles,html.ys-big main .words,html.ys-big main .ys-row{gap:12px}';
 
   /* ---------- filtering by age ---------- */
 
@@ -203,7 +230,7 @@
   function openProfile() {
     var p = load();
     if (!p) return;
-    draft = { age: p.age, color: p.color, nick: p.nick };
+    draft = { age: p.age, color: p.color, nick: p.nick, comfort: p.comfort.slice() };
     var d = $('ys-profile');
     if (!d) d = buildDialog();
     fillDialog();
@@ -227,6 +254,7 @@
       '<label for="ys-nickin">Nickname (you can leave this empty)</label>' +
       '<input id="ys-nickin" maxlength="12" autocomplete="off" spellcheck="false">' +
       '<p class="ys-hint">Please use a nickname, not a full name. Letters only, up to 12. The age, color and nickname are kept only on this device. Nothing is sent.</p>' +
+      '<fieldset class="ys-comfort"><legend>Comfort settings</legend><p class="ys-hint">For any child who reads, sees or moves more easily this way. Turn on what helps. You do not need to tell us why.</p></fieldset>' +
       '<div class="ys-row"><button type="button" class="ys-save" id="ys-save">Save</button><button type="button" id="ys-cancel">Close</button><button type="button" class="ys-plain" id="ys-remove">Remove profile</button></div>' +
       '<div class="ys-progress"><p class="ys-hint" id="ys-ptext"></p><button type="button" class="ys-plain" id="ys-reset">Reset progress…</button>' +
       '<div id="ys-confirm" role="alertdialog" aria-labelledby="ys-confirm-q" hidden><p id="ys-confirm-q"><b>Delete all points, garden, stars and finished chapters on this device?</b> This cannot be undone. The age, color and nickname stay.</p>' +
@@ -246,9 +274,23 @@
       b.addEventListener('click', function () { draft.color = i; fillDialog(); });
       cols.appendChild(b);
     });
+    var comfort = d.querySelector('.ys-comfort');
+    COMFORT.forEach(function (c) {
+      var b = el('button', { type: 'button', 'data-comfort': c.id });
+      b.appendChild(el('span', {}, c.name));
+      b.appendChild(el('small', {}, c.hint));
+      b.addEventListener('click', function () {
+        var i = draft.comfort.indexOf(c.id);
+        if (i > -1) draft.comfort.splice(i, 1); else draft.comfort.push(c.id);
+        fillDialog();
+      });
+      comfort.appendChild(b);
+    });
     d.querySelector('#ys-nickin').addEventListener('input', function (e) { draft.nick = e.target.value; });
     d.querySelector('#ys-save').addEventListener('click', function () {
-      save({ age: draft.age, color: draft.color, nick: cleanNick(draft.nick) });
+      var keep = { age: draft.age, color: draft.color, nick: cleanNick(draft.nick) };
+      if (draft.comfort.length) keep.comfort = cleanComfort(draft.comfort);
+      save(keep);
       showAll = false;
       closeProfile();
       refresh();
@@ -285,6 +327,7 @@
     d.querySelector('#ys-pvtext').textContent = 'Age ' + draft.age + ': a ' + STAGES[stage(draft.age)] + '.';
     Array.prototype.forEach.call(d.querySelectorAll('.ys-dages button'), function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-age') === draft.age)); });
     Array.prototype.forEach.call(d.querySelectorAll('.ys-colors button'), function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-color') === draft.color)); });
+    Array.prototype.forEach.call(d.querySelectorAll('.ys-comfort button'), function (b) { b.setAttribute('aria-pressed', String(draft.comfort.indexOf(b.getAttribute('data-comfort')) > -1)); });
     var pts = points();
     d.querySelector('#ys-ptext').textContent = 'Progress on this device: ' + pts + (pts === 1 ? ' point.' : ' points.');
     d.querySelector('#ys-confirm').hidden = true;
@@ -321,7 +364,7 @@
       old.parentNode.insertBefore(note, old);
     } else if (!has && note) note.remove();
   }
-  function refresh() { drawAsk(); drawBadge(); applyFilter(); placeReset(); }
+  function refresh() { applyComfort(); drawAsk(); drawBadge(); applyFilter(); placeReset(); }
   function init() {
     var st = el('style', { id: 'ys-profile-css' });
     st.textContent = CSS;
@@ -338,7 +381,7 @@
   }
 
   // Test hook: lets automated tests draw an avatar and compare it with the badge.
-  window.YS_PROFILE = { avatar: avatar, stage: function (age) { return STAGES[stage(age)]; }, refresh: refresh };
+  window.YS_PROFILE = { comfort: COMFORT.map(function (c) { return c.id; }), avatar: avatar, stage: function (age) { return STAGES[stage(age)]; }, refresh: refresh };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
