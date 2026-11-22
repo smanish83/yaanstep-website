@@ -79,3 +79,26 @@ body.playing .player{margin-top:0}
 .line-btn.hop{background:#F6E3A1}
 .track{overflow-x:auto;margin-bottom:.5rem}
 .lesson-cards input[type=checkbox]{width:1.25rem;height:1.25rem;accent-color:var(--teal)}
+
+/* Maths picked for you, "Show me how" and moving pictures (SCRUM-494, 495) */
+#maths-own{margin-top:.75rem;border-top:1px solid var(--line);padding-top:.5rem}
+#maths-own summary{cursor:pointer;font-weight:600;min-height:2.75rem;display:flex;align-items:center}
+#maths-own summary:focus-visible{outline:3px solid #0B4F46;outline-offset:3px}
+.how-slot{margin-top:1rem}
+.how-panel{background:#FFF8E6;border:2px solid #E3CF7D;border-radius:.8rem;padding:.75rem 1rem;margin-top:.5rem}
+.how-panel .how-title{font-weight:700;margin:0 0 .25rem}
+.how-panel .how-title:focus{outline:3px solid #0B4F46;outline-offset:2px}
+.moving-box{margin:.5rem 0}
+.small-btn{padding:.45rem 1rem;min-height:2.75rem}
+.moving .mv{transform-box:fill-box;transform-origin:center}
+.moving .mv-away{opacity:.3}
+@media (prefers-reduced-motion:no-preference){
+.moving .mv-in{animation:mvIn .45s ease-out both}
+.moving .mv-slide{animation:mvSlide .9s ease-in-out both}
+.moving .mv-away{animation:mvAway .8s ease-in both}
+.moving .mv-pulse{animation:mvPulse .8s ease-in-out 3 both}
+}
+@keyframes mvIn{from{opacity:0;transform:translateY(-12px) scale(.4)}to{opacity:1;transform:none}}
+@keyframes mvSlide{from{transform:translateX(var(--dx,60px))}to{transform:none}}
+@keyframes mvAway{from{opacity:1;transform:none}to{opacity:.3;transform:translateY(-10px)}}
+@keyframes mvPulse{0%,100%{transform:none}50%{transform:scale(1.35)}}

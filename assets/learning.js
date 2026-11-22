@@ -742,7 +742,7 @@
         name: 'Lesson: see it with dots', who: READ,
         say: [KIND_WORDS[kind]].concat(demo.say),
         build: function (ctx) {
-          ctx.stage.appendChild(hintDots(demo.spec));
+          ctx.stage.appendChild(movingPanel(demo.spec));
           ctx.stage.appendChild(el('p', { 'class': 'ask' }, [dotsCaption(demo.spec)]));
           var show = el('button', { type: 'button', 'class': 'btn ghost' }, ['Show me']);
           show.addEventListener('click', function () { show.disabled = true; ctx.tell(demo.explain, 'yes'); });
@@ -805,7 +805,7 @@
       }
     }
     var i;
-    for (i = 0; i < QUESTIONS; i++) addRound(i);
+    for (i = 0; i < QUESTIONS; i++) { addRound(i); steps[steps.length - 1].kind = kindAt(i); }
     steps.push({
       name: style === 'race' ? 'You reached the flag!' : 'Well done!', who: GROWNUP, end: true,
       say: ['Ask about one round: “How did you know?”',
@@ -919,6 +919,145 @@
     };
   }
 
+  /* ---------- moving pictures (SCRUM-495): dots that arrive, join, leave or stand out ----------
+     The movement is CSS only. With "reduce motion" the final picture shows at once. */
+  function movingDots(spec) {
+    var kids = [], step = 18, r = 7, t = 0;
+    function x(i) { return 16 + i * step + (i >= 10 ? 8 : 0); }
+    function dot(i, y, fill, cls, delay, dx) {
+      var style = 'animation-delay:' + delay.toFixed(2) + 's' + (dx ? ';--dx:' + dx + 'px' : '');
+      kids.push(svg('circle', { cx: x(i), cy: y, r: r, fill: fill, stroke: INK, 'stroke-width': 1.5, 'class': 'mv ' + cls, style: style }));
+    }
+    var i, a, b, h = 34, label;
+    if (spec.type === 'compare') {
+      h = 60; a = spec.a.v; b = spec.b.v;
+      for (i = 0; i < a; i++) dot(i, 16, '#BFE0D8', 'mv-in', (t = i * 0.12));
+      for (i = 0; i < b; i++) dot(i, 44, '#F6E3A1', 'mv-in', 0.3 + i * 0.12);
+      for (i = b; i < a; i++) dot(i, 16, '#BFE0D8', 'mv-pulse', t + 0.8);
+      label = 'Moving dots. Top row: ' + a + '. Bottom row: ' + b + '. The ' + (a - b) + ' extra in the top row light up.';
+    } else if (spec.wholeUnknown) {
+      a = spec.parts[0].v; b = spec.parts[1].v;
+      for (i = 0; i < a; i++) dot(i, 17, '#BFE0D8', 'mv-in', i * 0.12);
+      for (i = a; i < a + b; i++) dot(i, 17, '#F6E3A1', 'mv-slide', a * 0.12 + 0.4, 60);
+      label = 'Moving dots. ' + a + ' dots, then ' + b + ' more slide in to join them: ' + (a + b) + ' in all.';
+    } else {
+      a = spec.parts[0].v;
+      for (i = 0; i < spec.whole; i++) dot(i, 17, i < a ? '#E3E3E3' : '#F6E3A1', i < a ? 'mv-away' : 'mv-in', i < a ? 1 + i * 0.15 : i * 0.08);
+      label = 'Moving dots. ' + spec.whole + ' dots. ' + a + ' fade away. ' + (spec.whole - a) + ' are left.';
+    }
+    var w = x(Math.max(spec.whole || 0, spec.a ? spec.a.v : 0, spec.parts ? spec.parts[0].v + spec.parts[1].v : 0)) + 12;
+    return svg('svg', { viewBox: '0 0 ' + w + ' ' + h, width: w, height: h, role: 'img', 'class': 'moving', 'aria-label': label }, kids);
+  }
+  /* A moving picture with a "Watch again" button. */
+  function movingPanel(spec) {
+    var box = el('div', { 'class': 'moving-box' });
+    box.appendChild(movingDots(spec));
+    var again = el('button', { type: 'button', 'class': 'btn ghost small-btn' }, ['Watch again']);
+    again.addEventListener('click', function () { box.replaceChild(movingDots(spec), box.firstChild); });
+    box.appendChild(el('p', {}, [again]));
+    return box;
+  }
+  /* "Show me how": a short visual lesson that opens under any question once the child misses (SCRUM-494). */
+  function howPanel(kind) {
+    var k = kind === 'mixed' ? 'add' : kind;
+    var demo = makeQuestion(k, 10);
+    var box = el('section', { 'class': 'how-panel', 'aria-label': 'Short lesson' });
+    box.appendChild(el('p', { 'class': 'how-title' }, ['Short lesson']));
+    box.appendChild(el('p', {}, [KIND_WORDS[k]]));
+    box.appendChild(movingPanel(demo.spec));
+    box.appendChild(drawSpec(demo.spec, true));
+    box.appendChild(el('p', {}, [demo.explain]));
+    box.appendChild(el('p', { 'class': 'muted' }, ['Now try the question above again.']));
+    return box;
+  }
+
+  /* ---------- Sprouts picks the game (SCRUM-494) ----------
+     Easiest first: number hunt, then number line, dice, race, and story questions last (the hardest to read).
+     Adding, then taking away, then how many more, then mixed. Up to 10, then up to 20.
+     One harder story question is mixed into every set to see if the child can already do it.
+     The level moves up after a strong set and down after a hard one. It is kept only on this device. */
+  var LADDER = [
+    { kind: 'add', max: 10, style: 'hunt' }, { kind: 'add', max: 10, style: 'line' }, { kind: 'add', max: 10, style: 'dice' },
+    { kind: 'take', max: 10, style: 'hunt' }, { kind: 'take', max: 10, style: 'line' }, { kind: 'add', max: 20, style: 'hunt' },
+    { kind: 'take', max: 20, style: 'dice' }, { kind: 'more', max: 10, style: 'line' }, { kind: 'mixed', max: 20, style: 'race' },
+    { kind: 'mixed', max: 20, style: 'questions' }
+  ];
+  var LEVEL_KEY = 'sprouts:maths-level';
+  function childAge() {
+    try { var p = JSON.parse(window.localStorage.getItem('ys-profile') || 'null'); return p && +p.age || 0; } catch (e) { return 0; }
+  }
+  function startLevelFor(age) { return age >= 10 ? 8 : age === 9 ? 7 : age === 8 ? 5 : age === 7 ? 3 : 0; }
+  function loadLevel() {
+    try {
+      var s = JSON.parse(window.localStorage.getItem(LEVEL_KEY) || 'null');
+      if (s && s.level >= 0 && s.level < LADDER.length) return s;
+    } catch (e) { /* nothing saved */ }
+    return { level: startLevelFor(childAge()), kind: null };
+  }
+  function saveLevel(s) { try { window.localStorage.setItem(LEVEL_KEY, JSON.stringify(s)); } catch (e) { /* private mode */ } }
+  var STYLE_SAY = {
+    dice: 'Roll the dice. Then choose the answer.', hunt: 'Hunt for the answer. Tap the right tile.',
+    line: 'Look at the card. Find the answer on the number line.'
+  };
+
+  function buildAuto() {
+    var saved = loadLevel();
+    var live = { level: saved.level, missRun: 0, eased: false, stretch: null };
+    var start = LADDER[live.level];
+    var firstKind = start.kind === 'mixed' ? 'add' : start.kind;
+    var steps = saved.kind !== start.kind ? lessonSteps(firstKind) : [];
+    function round(i) {
+      var step = { name: 'Question ' + (i + 1) + ' of ' + QUESTIONS, who: READ, scored: true, say: [] };
+      step.prepare = function () {
+        var stretch = i === 3;
+        var lv = stretch ? LADDER[Math.min(live.level + 2, LADDER.length - 1)] : LADDER[live.level];
+        var style = stretch ? 'questions' : lv.style;
+        var k = lv.kind === 'mixed' ? pick(KINDS) : lv.kind;
+        step.kind = k;
+        step.stretch = stretch;
+        if (style === 'questions' || style === 'race') {
+          var q = makeQuestion(k, lv.max);
+          step.say = q.say;
+          step.build = function (ctx) {
+            if (style === 'race') ctx.stage.appendChild(el('div', { 'class': 'track' }, [track(i, QUESTIONS)]));
+            question({ options: q.options, answer: q.answer, hint: q.hint, explain: q.explain, spec: q.spec, draw: function (r) { return drawSpec(q.spec, r); } })(ctx);
+          };
+        } else if (style === 'dice') {
+          step.say = [STYLE_SAY.dice]; step.build = diceRound(k, lv.max);
+        } else {
+          var fact = makeFact(k, lv.max);
+          step.say = [STYLE_SAY[style]];
+          step.build = style === 'hunt' ? huntRound(fact, lv.max) : lineRound(fact, lv.max);
+        }
+      };
+      step.onResult = function (firstTry) {
+        if (step.stretch) { live.stretch = firstTry; return; }
+        live.missRun = firstTry ? 0 : live.missRun + 1;
+        if (live.missRun >= 2 && live.level > 0) { live.level -= 1; live.missRun = 0; live.eased = true; }
+      };
+      return step;
+    }
+    for (var i = 0; i < QUESTIONS; i++) steps.push(round(i));
+    steps.push({
+      name: 'Well done!', who: GROWNUP, end: true,
+      say: ['Ask about one question: “How did you know?”', 'Then count two groups of things at home and draw a bar for each.'],
+      build: info(function (ctx) {
+        var n = ctx.stars(), total = ctx.scoredCount(), was = live.level, next = was, note;
+        if (n >= 4) next = Math.min(was + (n === 5 && live.stretch ? 2 : 1), LADDER.length - 1);
+        else if (n <= 2 && !live.eased) next = Math.max(was - 1, 0);
+        note = next > was ? 'Next time: a little harder.' : next < was || live.eased ? 'Next time: a little easier.' : 'Next time: about the same, with new questions.';
+        saveLevel({ level: next, kind: start.kind });
+        ctx.stage.appendChild(el('p', {}, ['You worked out all ' + total + ' questions. Right on the first try: ' + n + '.']));
+        ctx.stage.appendChild(el('p', { 'class': 'stars', 'aria-hidden': 'true' }, [new Array(n + 1).join('★') + new Array(total - n + 1).join('☆')]));
+        ctx.stage.appendChild(el('p', { id: 'auto-next' }, [note]));
+        playAgain(ctx, 'Keep going');
+        ctx.stage.appendChild(el('p', { 'class': 'muted' }, ['Yaanstep Sprouts picks the next game from these answers. Only the level is kept, on this device.']));
+      })
+    });
+    return { kicker: 'Maths · picked for you', steps: steps };
+  }
+  window.yaanstepMathsLadder = LADDER;
+
   /* ---------- the player ---------- */
   var current = null;   // { maker, lesson, index, stars, opener }
 
@@ -950,6 +1089,8 @@
     var lesson = current.lesson;
     var step = lesson.steps[current.index];
     var stepDone = false;
+    var offered = false;
+    if (step.prepare) step.prepare();
     kickerEl.textContent = lesson.kicker;
     titleEl.textContent = step.name;
     progressEl.textContent = 'Step ' + (current.index + 1) + ' of ' + lesson.steps.length;
@@ -962,7 +1103,21 @@
     nextBtn.disabled = true;
     step.build({
       stage: stageEl,
-      tell: tell,
+      // After a first miss in a scored question, a short visual lesson is always one tap away (SCRUM-494).
+      tell: function (msg, mood) {
+        tell(msg, mood);
+        if (mood === 'try' && step.scored && !offered && !stepDone) {
+          offered = true;
+          var how = el('button', { type: 'button', 'class': 'btn ghost', id: 'show-how' }, ['Show me how']);
+          var slot = el('div', { 'class': 'how-slot' }, [el('p', {}, [how])]);
+          how.addEventListener('click', function () {
+            clear(slot);
+            slot.appendChild(howPanel(step.kind || 'add'));
+            var t = slot.querySelector('.how-title'); if (t) { t.setAttribute('tabindex', '-1'); t.focus(); }
+          });
+          stageEl.appendChild(slot);
+        }
+      },
       stars: function () { return current.stars; },
       restart: function () { open(current.maker, current.opener); },
       scoredCount: function () {
@@ -972,6 +1127,7 @@
         if (stepDone) return;
         stepDone = true;
         if (step.scored && firstTry) current.stars += 1;
+        if (step.onResult) step.onResult(!!firstTry);
         nextBtn.disabled = false;
       }
     });
@@ -1012,6 +1168,8 @@
   var sortBtn = document.getElementById('start-sorting');
   var mathsBtn = document.getElementById('start-maths');
   if (sortBtn) sortBtn.addEventListener('click', function () { open(buildSorting, sortBtn); });
+  var autoBtn = document.getElementById('start-maths-auto');
+  if (autoBtn) autoBtn.addEventListener('click', function () { open(buildAuto, autoBtn); });
   if (mathsBtn) mathsBtn.addEventListener('click', function () {
     var kind = checked('kind', 'mixed');
     var max = parseInt(checked('size', '20'), 10);
