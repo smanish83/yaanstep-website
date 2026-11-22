@@ -237,10 +237,10 @@
   }
   function startAuto() { if (!voice || !book) return; auto = true; showAuto(); $('readit').hidden = true; readOn(); $('pauseread').focus(); }
   function stopAuto() {
-    var was = auto;
+    var was = auto, hadFocus = document.activeElement && document.activeElement.id === 'pauseread';
     auto = false; clearTimeout(turnTimer); hush();
     if (book) { showAuto(); $('readit').hidden = page < 0 || page >= book.pages.length || !voice; }
-    if (was && !$('readall').hidden && document.activeElement && document.activeElement.id === 'pauseread') $('readall').focus();
+    if (was && hadFocus && !$('readall').hidden) $('readall').focus();
   }
 
   function closeBook() {
