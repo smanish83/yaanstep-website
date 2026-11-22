@@ -82,6 +82,7 @@
   /* ---------- styles (fixed colors, so they read well on every page and theme) ---------- */
 
   var CSS = '' +
+    '.ys-hidden{display:none!important}' +
     '.ys-badge{position:fixed;right:10px;bottom:10px;z-index:40;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:76px;min-height:48px;padding:6px 8px;' +
     'background:#fff;color:#17312D;border:2px solid #17312D;border-radius:16px;font:600 14px/1.2 system-ui,Segoe UI,Arial,sans-serif;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.18)}' +
     '.ys-badge:focus-visible,.ys-dlg button:focus-visible,.ys-dlg input:focus-visible,.ys-ask button:focus-visible,.ys-filter button:focus-visible{outline:4px solid #f0a500;outline-offset:2px}' +
