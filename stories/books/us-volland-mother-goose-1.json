@@ -1,0 +1,89 @@
+{
+ "id": "us-volland-mother-goose-1",
+ "title": "Mother Goose, Volland Edition, Part 1",
+ "pages": [
+  {
+   "img": "img/us-volland-mother-goose-1/01.webp",
+   "text": "Old Mother Goose, when\nShe wanted to wander,\nWould ride through the air\nOn a very fine gander."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/02.webp",
+   "text": "Cock-a-doodle-doo,\nMy dame has lost her shoe;\nMy master's lost his fiddlestick,\nAnd knows not what to do."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/03.webp",
+   "text": "One misty, moisty morning,\nWhen cloudy was the weather,\nI chanced to meet an old man clothed all in leather.\nHe began to compliment, and I began to grin,\nHow do you do, and how do you do?\nAnd how do you do again?"
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/04.webp",
+   "text": "I like little pussy, her coat is so warm,\nAnd if I don't hurt her she'll do me no harm;\nSo I'll not pull her tail, nor drive her away,\nBut pussy and I very gently will play."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/05.webp",
+   "text": "Little Bo-peep has lost her sheep,\nAnd can't tell where to find them;\nLeave them alone, and they'll come home,\nAnd bring their tails behind them."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/06.webp",
+   "text": "Little Nanny Etticoat\nIn a white petticoat,\nAnd a red nose;\nThe longer she stands\nThe shorter she grows."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/07.webp",
+   "text": "Jack, be nimble; Jack, be quick;\nJack, jump over the candlestick."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/08.webp",
+   "text": "Pretty John Watts,\nWe are troubled with rats,\nWill you drive them out of the house?\nWe have mice, too, in plenty,\nThat feast in the pantry,\nBut let them stay\nAnd nibble away,\nWhat harm in a little brown mouse?"
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/09.webp",
+   "text": "I'll tell you a story\nAbout Mary Morey,\nAnd now my story's begun.\nI'll tell you another\nAbout her brother,\nAnd now my story's done."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/10.webp",
+   "text": "Hush-a-bye, Baby, upon the tree top,\nWhen the wind blows the cradle will rock;\nWhen the bough breaks the cradle will fall,\nDown tumbles cradle and Baby and all."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/11.webp",
+   "text": "Ride away, ride away,\nJohnny shall ride,\nAnd he shall have pussy-cat\nTied to one side;\nAnd he shall have little dog\nTied to the other,\nAnd Johnny shall ride\nTo see his grandmother."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/12.webp",
+   "text": "Dickery, dickery, dock,\nThe mouse ran up the clock;\nThe clock struck one,\nThe mouse ran down,\nDickery, dickery, dock."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/13.webp",
+   "text": "A, B, C, D, E, F, G,\nH, I, J, K, L, M, N, O, P,\nQ, R, S, and T, U, V,\nW, X, and Y and Z.\nNow I've said my A, B, C,\nTell me what you think of me."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/14.webp",
+   "text": "The little robin grieves\nWhen the snow is on the ground,\nFor the trees have no leaves,\nAnd no berries can be found.\nThe air is cold, the worms are hid;\nFor robin here what can be done?\nLet's strow around some crumbs of bread,\nAnd then he'll live till snow is gone."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/15.webp",
+   "text": "Little Tommy Tittlemouse\nLived in a little house;\nHe caught fishes\nIn other men's ditches."
+  },
+  {
+   "img": "img/us-volland-mother-goose-1/16.webp",
+   "text": "About the bush, Willie, about the bee-hive,\nAbout the bush, Willie, I'll meet thee alive."
+  }
+ ],
+ "words": 449,
+ "minutes": 7,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Traditional nursery rhymes",
+   "Eulalie Osgood Grover (editor)"
+  ],
+  "illustrators": [
+   "Frederick Richardson"
+  ],
+  "translators": [],
+  "publisher": "P. F. Volland Company, Chicago, 1915",
+  "platform": "Project Gutenberg",
+  "source": "https://www.gutenberg.org/ebooks/24623",
+  "licence": "Public Domain",
+  "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "changes": "Part 1 of 6 of Mother Goose, The Original Volland Edition (1915), arranged by Eulalie Osgood Grover: each rhyme on its own page with its picture, the words that the book prints in the box on the picture given below it instead. Foreword and thirteen rhymes left out. Pictures resized and converted to WebP."
+ }
+}

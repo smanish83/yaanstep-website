@@ -1,0 +1,92 @@
+{
+ "id": "us-denslows-mother-goose-1",
+ "title": "Denslow's Mother Goose, Part 1",
+ "pages": [
+  {
+   "img": "img/us-denslows-mother-goose-1/01.webp",
+   "text": "Humpty-Dumpty sat on a wall,\nHumpty-Dumpty had a great fall;\nAll the king's horses, and all the king's men\nCannot put Humpty-Dumpty together again."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/02.webp",
+   "text": "Mistress Mary, quite contrary\nHow does your garden grow?\nWith cockle-shells and silver bells,\nAnd pretty maids all in a row."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/03.webp",
+   "text": "Little Jack Horner\nSat in the corner,\nEating a Christmas pie;\nHe put in his thumb,\nAnd he took out a plum,\nAnd said,\n\"What a good boy am I!\""
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/04.webp",
+   "text": "Old King Cole\nWas a merry old soul,\nAnd a merry old soul was he:\nHe called for his pipe,\nAnd he called for his bowl,\nAnd he called for his fiddlers three.\nEvery fiddler, he had a fiddle,\nAnd a very fine fiddle had he;\nTwee tweedle dee, tweedle dee, went the fiddlers.\nOh, there's none so rare,\nAs can compare\nWith King Cole and his fiddlers three."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/05.webp",
+   "text": "Pat-a-cake, pat-a-cake, baker's man!\nSo I will, master, as fast as I can:\nPat it, and prick it, and mark it with T, and\nPut in the oven for Tommy and me."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/06.webp",
+   "text": "Great A, little a,\nBouncing B!\nThe cat's in the cupboard,\nAnd she can't see."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/07.webp",
+   "text": "To market, to market, to buy a fat pig,\nHome again, home again, dancing a jig:\nRide to market to buy a fat hog,\nHome again, home again, jiggety-jog."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/08.webp",
+   "text": "I love little Pussy, her coat is so warm,\nAnd if I don't hurt her, she'll do me no harm.\nI'll sit by the fire, and give her some food,\nAnd Pussy will love me, because I am good."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/09.webp",
+   "text": "Higglepy, Piggleby, My black hen,\nShe lays eggs For gentlemen;\nSometimes nine, And sometimes ten,\nHigglepy, Piggleby, My black hen!"
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/10.webp",
+   "text": "Hickety; dickety, dock,\nThe mouse ran up the clock;\nThe clock struck one,\nDown the mouse ran,\nHickety, dickety, dock."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/11.webp",
+   "text": "There was an old woman who lived in a shoe,\nShe had so many children she didn't know what to do;\nShe gave them some broth with plenty of bread,\nShe kissed them all fondly and sent them to bed."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/12.webp",
+   "text": "Rain, rain, go away,\nCome again another day;\nLittle Arthur wants to play."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/13.webp",
+   "text": "The rose is red,\nThe violet's blue,\nSugar is sweet,\nAnd so are you."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/14.webp",
+   "text": "Little Boy Blue, come blow up your horn,\nThe sheep's in the meadow, the cow in the corn."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/15.webp",
+   "text": "There was an old woman tossed up in a basket\nNineteen times as high as the moon;\nWhere she was going I couldn't but ask it,\nFor in her hand she carried a broom.\nOld woman, old woman, old woman, quoth I,\nO whither, O whither, O whither so high?\nTo brush the cobwebs off the sky!\nShall I go with thee? Aye, by-and bye."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/16.webp",
+   "text": "Ride a cockhorse to Banbury-cross\nTo see an old lady upon a white horse,\nRings on her fingers, and bells on her toes,\nAnd so she makes music wherever she goes."
+  },
+  {
+   "img": "img/us-denslows-mother-goose-1/17.webp",
+   "text": "The Queen of Hearts, she made some tarts,\nAll on a summer's day;\nThe Knave of Hearts, he stole the tarts,\nAnd took them clean away."
+  }
+ ],
+ "words": 506,
+ "minutes": 8,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Traditional nursery rhymes"
+  ],
+  "illustrators": [
+   "W. W. Denslow"
+  ],
+  "translators": [],
+  "publisher": "McClure, Phillips & Company, New York, 1901",
+  "platform": "Project Gutenberg",
+  "source": "https://www.gutenberg.org/ebooks/18546",
+  "licence": "Public Domain",
+  "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "changes": "Part 1 of 2 of Denslow's Mother Goose (1901), edited by W. W. Denslow: each rhyme on its own page with its picture. The hand-lettered verse pages (lettering by Fred W. Goudy) and nine rhymes left out; two typing slips in the transcription corrected and a line missing from it (Eating of curds and whey) put back as the lettered page has it. Pictures resized and converted to WebP."
+ }
+}
