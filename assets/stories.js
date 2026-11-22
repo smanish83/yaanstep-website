@@ -97,7 +97,55 @@
       window.speechSynthesis.speak(u);
     } catch (e) { /* silent fallback */ }
   }
-  function hush() { try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) { /* nothing */ } }
+
+  /* ---------- read-along: a marker on the word being read (SCRUM-496) ----------
+     Each word of the page is its own span. While the voice reads, the word it is on lights up,
+     with a small ball above it. Browsers that tell us where the voice is (word boundary events)
+     move the marker exactly; others move it on a timer from the word lengths and the speed. */
+  var markTimer = null, reading = 0;
+  function wordSpans() { return document.querySelectorAll('#text .w'); }
+  function mark(i) {
+    var spans = wordSpans();
+    for (var k = 0; k < spans.length; k++) spans[k].className = k === i ? 'w now' : 'w';
+  }
+  function unmark() { clearTimeout(markTimer); markTimer = null; mark(-1); }
+  function wordsInto(p, text) {
+    text.split(/(\s+)/).forEach(function (part) {
+      if (!part) return;
+      if (/^\s+$/.test(part)) p.appendChild(document.createTextNode(part));
+      else p.appendChild(el('span', { 'class': 'w' }, part));
+    });
+  }
+  function readAlong(text) {
+    if (!voice) return;
+    hush();
+    var starts = [], re = /\S+/g, m;
+    while ((m = re.exec(text))) starts.push(m.index);
+    var lens = text.match(/\S+/g) || [];
+    var heard = false, me = ++reading;
+    function onTimer(i) {
+      if (heard || me !== reading) return;
+      if (i >= lens.length) { unmark(); return; }
+      mark(i);
+      var ms = (220 + 45 * lens[i].length + (/[.!?,]["”]?$/.test(lens[i]) ? 260 : 0)) / rate;
+      markTimer = setTimeout(function () { onTimer(i + 1); }, ms);
+    }
+    try {
+      var u = new SpeechSynthesisUtterance(text);
+      u.voice = voice; u.lang = voice.lang; u.rate = rate;
+      u.onstart = function () { if (!heard) onTimer(0); };
+      u.onboundary = function (e) {
+        if ((e.name && e.name !== 'word') || me !== reading) return;
+        heard = true; clearTimeout(markTimer);
+        var i = 0;
+        while (i + 1 < starts.length && starts[i + 1] <= e.charIndex) i++;
+        mark(i);
+      };
+      u.onend = u.onerror = function () { if (me === reading) unmark(); };
+      window.speechSynthesis.speak(u);
+    } catch (e) { unmark(); }
+  }
+  function hush() { reading++; unmark(); try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) { /* nothing */ } }
 
   /* ---------- reader ---------- */
 
@@ -125,7 +173,7 @@
     if (!last) {
       var p = story.pages[page];
       area.appendChild(el('div', { 'class': 'pic', id: 'pic', 'data-word': p.pic })).innerHTML = picture(p.pic);
-      area.appendChild(el('p', { 'class': 'text', id: 'text' }, p.text));
+      wordsInto(area.appendChild(el('p', { 'class': 'text', id: 'text' })), p.text);
       var ask = el('p', { 'class': 'ask', id: 'ask' });
       ask.appendChild(el('strong', {}, 'Grown-up, ask: '));
       ask.appendChild(document.createTextNode(p.ask));
@@ -166,7 +214,7 @@
     if ('speechSynthesis' in window && window.speechSynthesis.addEventListener) {
       window.speechSynthesis.addEventListener('voiceschanged', function () { setUpVoice(); if (story && !$('reader').hidden) $('readit').hidden = page >= story.pages.length || !voice; });
     }
-    $('readit').addEventListener('click', function () { if (story && page < story.pages.length) say(story.pages[page].text); });
+    $('readit').addEventListener('click', function () { if (story && page < story.pages.length) readAlong(story.pages[page].text); });
     $('next').addEventListener('click', function () { page += 1; render(); $(page >= story.pages.length ? 'reread' : 'next').focus(); });
     $('prev').addEventListener('click', function () { page = Math.max(0, page - 1); render(); });
     $('exit').addEventListener('click', function () { hush(); show('menu'); });
