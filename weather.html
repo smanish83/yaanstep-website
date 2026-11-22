@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weather and temperature | Yaanstep</title>
+<meta name="description" content="Learn about sunny, cloudy, rainy, snowy, windy and stormy weather, what to wear, and reading a thermometer in °F or °C, with moving picture lessons. Ages 3 to 8. No sign-in. Nothing is recorded or sent.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/learn.css">
+</head><body><main>
+<p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
+<h1>Weather and temperature</h1>
+<p class="note"><b>Learn about weather, then play. Ages 3 to 8.</b> Made by Yaanstep's AI team. Not yet tested with children. The pictures are our own simple drawings. No sign-in, no ads. Nothing is recorded or sent, and nothing is saved on this device.</p>
+<p id="novoice" class="note" hidden>No built-in voice was found on this device, so the games show words without sound. A grown-up can read the questions aloud.</p>
+<section id="menu"><div class="card"><p><b>Start with the lesson, or pick a game:</b></p>
+<div class="row unit" role="group" aria-label="Degrees"><span style="align-self:center">Degrees:</span><button type="button" id="unit-f" class="small" aria-pressed="true">°F (used in the US)</button><button type="button" id="unit-c" class="small" aria-pressed="false">°C</button></div>
+<div class="steps">
+<button class="step" id="play-learn">Learn about weather<small>A moving lesson in 6 short parts: kinds of weather, what to wear, the thermometer and degrees.</small></button>
+<button class="step" id="play-find">Find the weather<small>Ages 3 to 6. Find the sunny, rainy, snowy, cloudy, windy or stormy day.</small></button>
+<button class="step" id="play-dress">Dress for the weather<small>Ages 3 to 6. Pick what to wear for the weather in the picture.</small></button>
+<button class="step" id="play-read">Read the thermometer<small>Ages 6 to 8. How hot or cold is it?</small></button>
+<button class="step" id="play-compare">Warmer or colder?<small>Ages 5 to 8. Which day was warmer, and by how many degrees?</small></button>
+</div></div>
+<div class="parent"><p>Parent area</p><p>Look out of the window together each morning: what is the weather, and what should we wear? If you have an outdoor thermometer, read it together.</p><p>A wrong answer only says what happened, kindly, and offers a short moving lesson. There are no timers and no points. The degrees choice lasts for this visit only.</p><p>The voice and speed you chose on the <a href="reading.html">reading page</a> are used here as well.</p></div></section>
+<section id="game" hidden><div class="card"><div class="top"><b id="title"></b><span class="count" id="count"></span><button id="exit" class="small">Back</button></div><div id="area"></div><div id="sub" class="sub" aria-live="polite"></div><div id="howbox"></div><div class="row"><button id="again" class="small">Hear it again</button><button id="more" class="primary" hidden>Next</button></div></div>
+<div id="alldone" class="done" hidden><b>All done for now!</b>Well done. Time for a break: can you sway like a tree in the wind?<div class="row" style="justify-content:center"><button id="keep">Keep playing</button><button id="stop" class="primary">Finish</button></div></div></section>
+</main>
+<script src="assets/pictures.js"></script>
+<script src="assets/learn-shell.js"></script>
+<script src="assets/weather.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>

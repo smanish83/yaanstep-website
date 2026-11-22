@@ -1,0 +1,72 @@
+/* Shared look for the "learn, then play" pages: money, clocks, weather and the topic pages (22 Nov 2026). */
+:root{--bg:#f4fbf8;--ink:#17332c;--teal:#1F7A6D;--card:#fff;--line:#c6e3da}
+*{box-sizing:border-box}body{margin:0;font:18px/1.45 system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+main{max-width:680px;margin:0 auto;padding:16px;overflow-wrap:anywhere}h1{font-size:1.35rem;margin:.2em 0}
+.card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.note{font-size:.85rem;background:#fff7e0;border:1px solid #ecd48a;border-radius:10px;padding:8px 12px}
+button{font:inherit;cursor:pointer;min-height:56px;min-width:56px;border-radius:14px;border:2px solid var(--teal);background:#fff;color:var(--ink);padding:8px 14px}
+button:focus-visible,a:focus-visible{outline:4px solid #f0a500;outline-offset:2px}button.primary{background:var(--teal);color:#fff;font-weight:600}
+button:disabled{cursor:default}button[aria-pressed=true]{background:#e6f6ea;border-color:#1b7a3d;font-weight:700}
+.small{min-height:48px;font-size:.85rem;border-color:#aab9b3}.top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.steps{display:grid;gap:10px}.step{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-height:72px;font-size:1.1rem;font-weight:600}.step small{color:#51675f;font-weight:400}
+.parent{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:.85rem;color:#51675f}.parent a{color:var(--teal);font-weight:600}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.center{justify-content:center}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0}
+.tiles.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tile{min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-width:3px;padding:8px 4px}
+.tile svg{width:72px;height:72px;max-width:100%}.tile .w{font-size:1rem;font-weight:600}
+.tile.right{background:#e6f6ea;border-color:#1b7a3d}.tile.wrong{opacity:.55;border-style:dashed}
+.wordtile{font-size:1.5rem;font-weight:800}
+.ask{font-size:1.15rem;font-weight:600;text-align:center;margin:6px 0}h2.ask{font-size:1.2rem}
+.sub{font-size:1rem;color:#51675f;font-weight:600;min-height:1.5em;text-align:center}.sub.yes{color:#1b7a3d}.sub.try{color:#7a5a00}
+.done{background:#e6f6ea;border:3px solid #7bc48f;border-radius:16px;padding:18px;text-align:center;margin:12px 0}.done b{font-size:1.5rem;display:block;margin-bottom:8px}
+.count{font-size:.85rem;color:#51675f}.back{margin:0 0 4px}.back a{color:var(--teal);font-weight:600}
+.nexthead{margin:14px 0 4px;font-weight:600;text-align:center}.explain{font-size:1.05rem;text-align:center;margin:8px 0}
+.scene{display:flex;justify-content:center;margin:8px 0}.scene svg{width:100%;max-width:340px;height:auto}
+.how-panel{background:#FFF8E6;border:2px solid #E3CF7D;border-radius:14px;padding:10px 14px;margin-top:10px}.how-panel h3{font-size:1rem;margin:0 0 4px}.how-panel h3:focus{outline:3px solid #0B4F46;outline-offset:2px}.how-panel p{margin:.3em 0}.muted{color:#51675f;font-size:.9rem}
+.moving svg{width:100%;height:auto;max-width:400px;display:block;margin:0 auto}
+.moving .mv-in,.moving .mv-slide,.mv-pulse,.mv-bounce,.mv-wiggle,.mv-grow,.mv-spin,.mv-wave,.mv-float{transform-box:fill-box;transform-origin:center}
+.mv-grow{transform-origin:bottom}.mv-wave{transform-origin:left}
+.watch-again{display:block;margin:4px auto 8px}
+.moving .mv-draw>*{stroke-dasharray:1;stroke-dashoffset:0}
+.hand{transform-box:view-box;transform-origin:100px 100px}
+.purse,.tray{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0}
+.purse button,.tray button{display:flex;flex-direction:column;align-items:center;gap:2px;font-weight:700}
+.purse svg,.tray svg{width:44px;height:44px}.tray{min-height:64px;border:2px dashed #8aa49b;border-radius:14px;padding:6px}
+.paid{text-align:center;font-weight:700;font-size:1.1rem}
+.setclock{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-width:420px;margin:8px auto}
+.unit{justify-content:center}
+@media (prefers-reduced-motion:no-preference){
+.moving .mv-in{animation:mvIn .45s ease-out both}.moving .mv-slide{animation:mvSlide .8s ease-in-out both}
+.moving .mv-draw>*{animation:draw 1.3s ease-in-out both}.moving .mv-fade{animation:mvFade .6s ease-out both}
+.mv-bounce{animation:bounce .7s ease-in-out 3}.mv-pulse{animation:pulse .9s ease-in-out 3}
+.mv-wiggle{animation:wiggle .5s ease-in-out 4}.mv-grow{animation:grow 1.4s ease-out both}
+.mv-spin{animation:spin 3s linear 2}.mv-wave{animation:wave 1.2s ease-in-out 3}.mv-float{animation:float 1.6s ease-in-out 3}
+.mv-drive{animation:drive 1.6s ease-out both}
+.mv-fall{animation:fall 1.4s linear 4}.mv-fall2{animation:fall 1.4s linear .7s 4 both}
+.mv-snow{animation:snow 2.6s linear 2}.mv-blow{animation:blow 1.4s ease-in-out 3}
+.mv-flash{animation:flash 1.8s steps(1) 3}
+.moving .mv-turn{animation:turn 2.2s ease-in-out both}
+.moving .mv-rise{animation:rise 1.4s ease-out both;transform-box:fill-box;transform-origin:bottom}
+}
+@keyframes mvIn{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+@keyframes mvSlide{from{transform:translateX(var(--dx,0))}to{transform:none}}
+@keyframes mvFade{from{opacity:0}}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes bounce{50%{transform:translateY(-8%)}}
+@keyframes pulse{50%{transform:scale(1.12)}}
+@keyframes wiggle{25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+@keyframes grow{from{transform:scaleY(.15);opacity:.3}to{transform:none;opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes wave{50%{transform:skewY(-4deg) scaleX(.97)}}
+@keyframes float{50%{transform:translateY(-10%)}}
+@keyframes drive{from{transform:translateX(-60%);opacity:0}to{transform:none;opacity:1}}
+@keyframes fall{from{transform:translateY(-10px);opacity:0}30%{opacity:1}to{transform:translateY(18px);opacity:0}}
+@keyframes snow{from{transform:translate(0,-8px);opacity:0}30%{opacity:1}to{transform:translate(4px,20px);opacity:0}}
+@keyframes blow{50%{transform:translateX(10px)}}
+@keyframes flash{0%,100%{opacity:1}50%{opacity:.15}}
+@keyframes turn{from{transform:rotate(var(--from))}to{transform:rotate(var(--to))}}
+@keyframes rise{from{transform:scaleY(.05)}to{transform:none}}
+.topic-head{display:flex;align-items:center;gap:10px}.topic-head svg{width:48px;height:48px;flex:none}
+.topics{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+h2.topic-title{font-size:1.25rem;margin:.2em 0}h2.topic-title:focus{outline:3px solid #0B4F46;outline-offset:2px}
