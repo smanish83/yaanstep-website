@@ -547,8 +547,10 @@
     return svg('svg', { viewBox: '0 0 72 72', width: 72, height: 72, role: 'img', 'aria-label': n ? 'Die showing ' + n : 'Die, not rolled yet' }, kids);
   }
 
-  /* Dice game: roll two dice, then add them or find how many more. */
-  function diceRound(kind) {
+  /* Dice game: roll two dice, then add them, take one away, or find how many more.
+     With "Up to 10" the dice show 1 to 5, so two dice never add up to more than 10 (SCRUM-419). */
+  function diceRound(kind, max) {
+    var top = Math.max(2, Math.min(6, Math.floor((max || 12) / 2)));
     return function (ctx) {
       var table = el('div', { 'class': 'dice-table' });
       var ask = el('p', { 'class': 'ask' }, ['Roll the dice!']);
@@ -563,13 +565,15 @@
       }
       show(0, 0, kind === 'add' ? '+' : '−');
       roll.addEventListener('click', function () {
-        var a = between(1, 6), b = between(1, 6), t, fact, first = true, misses = 0, buttons;
-        if (kind !== 'add') { while (a === b) b = between(1, 6); if (b > a) { t = a; a = b; b = t; } }
+        var a = between(1, top), b = between(1, top), t, fact, first = true, misses = 0, buttons;
+        if (kind !== 'add') { if (a === b) { if (a > 1) b = a - 1; else a = 2; } if (b > a) { t = a; a = b; b = t; } }
         fact = kind === 'add'
           ? { answer: a + b, spec: { type: 'parts', whole: a + b, wholeUnknown: true, parts: [{ v: a }, { v: b }] } }
-          : { answer: a - b, spec: { type: 'compare', a: { name: '', v: a }, b: { name: '', v: b } } };
+          : kind === 'take'
+            ? { answer: a - b, spec: { type: 'parts', whole: a, parts: [{ v: b }, { v: a - b, unknown: true }] } }
+            : { answer: a - b, spec: { type: 'compare', a: { name: '', v: a }, b: { name: '', v: b } } };
         show(a, b, kind === 'add' ? '+' : '−');
-        ask.textContent = kind === 'add' ? 'How many dots altogether?' : 'How many more dots on the first die?';
+        ask.textContent = kind === 'add' ? 'How many dots altogether?' : kind === 'take' ? 'Take the second die away from the first. How many dots are left?' : 'How many more dots on the first die?';
         roll.disabled = true;
         ctx.tell('');
         buttons = choices(fact.answer).map(function (n) {
@@ -578,12 +582,12 @@
             if (n === fact.answer) {
               buttons.forEach(function (x) { x.disabled = true; });
               bn.classList.add('right');
-              ctx.tell((first ? 'Yes! ' : 'You worked it out! ') + (kind === 'add' ? a + ' and ' + b + ' make ' + (a + b) + '.' : a + ' is ' + (a - b) + ' more than ' + b + '.'), 'yes');
+              ctx.tell((first ? 'Yes! ' : 'You worked it out! ') + (kind === 'add' ? a + ' and ' + b + ' make ' + (a + b) + '.' : kind === 'take' ? a + ' take away ' + b + ' leaves ' + (a - b) + '.' : a + ' is ' + (a - b) + ' more than ' + b + '.'), 'yes');
               ctx.done(first);
             } else {
               first = false; misses += 1;
               bn.classList.add('wrong'); bn.disabled = true; nudge(bn);
-              missHelp(ctx, misses, fact, help, kind === 'add' ? 'Count the dots on both dice.' : 'Match the dots. Count the ones left over.');
+              missHelp(ctx, misses, fact, help, kind === 'add' ? 'Count the dots on both dice.' : kind === 'take' ? 'Count the dots on the first die. Count back the dots on the second.' : 'Match the dots. Count the ones left over.');
             }
           });
           row.appendChild(bn);
@@ -744,7 +748,7 @@
     function addRound(i) {
       var k = kindAt(i), q, fact, label = (style === 'questions' || style === 'race' ? 'Question ' : 'Round ') + (i + 1) + ' of ' + QUESTIONS;
       if (style === 'dice') {
-        steps.push({ name: label, who: READ, scored: true, say: ['Roll the dice. Then choose the answer.'], build: diceRound(k === 'add' ? 'add' : 'more') });
+        steps.push({ name: label, who: READ, scored: true, say: ['Roll the dice. Then choose the answer.'], build: diceRound(k, max) });
       } else if (style === 'hunt') {
         fact = makeFact(k, max);
         steps.push({ name: label, who: READ, scored: true, say: ['Hunt for the answer. Tap the right tile.'], build: huntRound(fact, max) });
