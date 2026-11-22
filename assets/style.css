@@ -30,6 +30,7 @@ h3{font-size:1.15rem;margin:.5rem 0 .25rem}
 .avatar{display:inline-grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--teal);color:var(--on-primary);font-weight:700}
 .tag{font-size:.85rem;color:var(--muted)}
 .notice{background:var(--notice-bg);border:1px solid var(--notice-line);padding:.9rem 1.1rem;border-radius:var(--radius-sm)}
+.note-small{font-size:.875rem;line-height:1.5}
 .steps{padding-left:1.25rem}
 table{border-collapse:collapse;width:100%;background:var(--card)}
 th,td{border:1px solid var(--line);padding:.6rem .8rem;text-align:left;vertical-align:top}
@@ -73,7 +74,7 @@ nav a.nav-cta:hover,nav a.nav-cta[aria-current]{background:var(--teal-dark)}
 .products li{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;display:flex;flex-direction:column;gap:.35rem}
 .products .pill{align-self:flex-start;font-size:.85rem;font-weight:600;padding:.1rem .6rem;border-radius:1rem;background:var(--tint);color:var(--ink);border:1px solid var(--line)}
 .products .btn,.products .muted{margin-top:auto}
-.p-head{display:flex;align-items:center;gap:.75rem}.p-head h2{margin:0}.p-icon{flex:none}
+.p-head{display:flex;align-items:center;gap:.75rem}.p-head h2,.p-head h3{margin:0}.p-icon{flex:none}
 .products .for{margin:0;font-weight:600;color:var(--muted)}
 .btn-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:auto}
 .products .btn-row .btn{margin-top:0}

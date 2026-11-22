@@ -5,15 +5,6 @@
       "href": "index.html"
     },
     {
-      "label": "Products",
-      "href": "products.html",
-      "also": [
-        "sprouts.html",
-        "try-it.html",
-        "time-calculator.html"
-      ]
-    },
-    {
       "label": "How it works",
       "href": "how-it-works.html"
     },
