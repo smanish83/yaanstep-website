@@ -1,0 +1,78 @@
+{
+ "id": "bd-karabos-question",
+ "title": "Karabo's Question",
+ "pages": [
+  {
+   "img": "img/bd-karabos-question/02.webp",
+   "text": "My sister Kifue chases roosters that crow.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/03.webp",
+   "text": "My brother Katleho has a ball to throw.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/04.webp",
+   "text": "My cousin Kutloano plants seeds in a row.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/05.webp",
+   "text": "My cousin Kamohelo leans on her hoe.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/06.webp",
+   "text": "My aunt Keromang has a dress to sew.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/07.webp",
+   "text": "My uncle Khotso herds the cattle that low.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/08.webp",
+   "text": "Mama dries wheat when the wind does not blow.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/09.webp",
+   "text": "Papa rides a horse over mountains in snow.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/10.webp",
+   "text": "Grandpa’s slow donkey walks to and fro.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/11.webp",
+   "text": "Grandma sings songs till the fire burns low.\n\nWhat do I do?\n\nWhat do I know?"
+  },
+  {
+   "img": "img/bd-karabos-question/12.webp",
+   "text": "You know how to say yes.\n\nYou know how to say no.\n\nThat’s what you do!\n\nThat’s what you know!"
+  },
+  {
+   "img": "img/bd-karabos-question/13.webp",
+   "text": "Everyone laughs when you put on a show.\n\nYour work is to play.\n\nYour work is to grow."
+  }
+ ],
+ "words": 196,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Liesl Jobson"
+  ],
+  "illustrators": [
+   "Natalie Propa"
+  ],
+  "translators": [],
+  "designers": [
+   "Marike Beyleveld"
+  ],
+  "editors": [
+   "Elise Varga"
+  ],
+  "publisher": "Book Dash",
+  "platform": "Book Dash",
+  "source": "https://bookdash.org/books/karabos-question/",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Originally published by Book Dash under a Creative Commons CC BY 4.0 license. This book can be read for free on www.bookdash.org and was created by Liesl Jobson, Natalie Propa, Marike Beyleveld and Elise Varga. Design: Marike Beyleveld. Editing: Elise Varga. Pictures resized and converted to WebP; the small decorative picture from the back cover is left out; formatting marks and spacing in the text tidied."
+ }
+}

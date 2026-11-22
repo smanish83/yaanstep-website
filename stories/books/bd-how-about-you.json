@@ -1,0 +1,78 @@
+{
+ "id": "bd-how-about-you",
+ "title": "How About You?",
+ "pages": [
+  {
+   "img": "img/bd-how-about-you/02.webp",
+   "text": "Who are you?"
+  },
+  {
+   "img": "img/bd-how-about-you/03.webp",
+   "text": "Is that goo?\n\nEeuw!\n\nI want some too."
+  },
+  {
+   "img": "img/bd-how-about-you/04.webp",
+   "text": "We are two.\n\nHow old are you?\n\nSix hundred and thirty two?"
+  },
+  {
+   "img": "img/bd-how-about-you/05.webp",
+   "text": "I like blue. Do you too?\n\nI choose two shoes.\n\nWhich do you choose?"
+  },
+  {
+   "img": "img/bd-how-about-you/06.webp",
+   "text": "Horseshoes!?"
+  },
+  {
+   "img": "img/bd-how-about-you/07.webp",
+   "text": "I make toys with boys."
+  },
+  {
+   "img": "img/bd-how-about-you/08.webp",
+   "text": "We make lots of noise.\n\nWhaaa!\n\neurgghhh...aargh!"
+  },
+  {
+   "img": "img/bd-how-about-you/09.webp",
+   "text": "I take a nap on Gogo’s back."
+  },
+  {
+   "img": "img/bd-how-about-you/10.webp",
+   "text": "I don’t nap!"
+  },
+  {
+   "img": "img/bd-how-about-you/11.webp",
+   "text": "I stay upright all through the night."
+  },
+  {
+   "img": "img/bd-how-about-you/12.webp",
+   "text": "The ball goes THWOCK! Buddy, you ROCK!"
+  },
+  {
+   "img": "img/bd-how-about-you/13.webp",
+   "text": "That’s what we do. How about you?"
+  }
+ ],
+ "words": 81,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Margot Bertelsmann"
+  ],
+  "illustrators": [
+   "Renate van Rensburg"
+  ],
+  "translators": [],
+  "designers": [
+   "Ronell Botes-Kerr"
+  ],
+  "editors": [
+   "Sarah McGregor"
+  ],
+  "publisher": "Book Dash",
+  "platform": "Book Dash",
+  "source": "https://bookdash.org/books/how-about-you/",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Originally published by Book Dash under a Creative Commons CC BY 4.0 license. This book can be read for free on www.bookdash.org and was created by Margot Bertelsmann, Renate van Rensburg, Ronell Botes-Kerr and Sarah McGregor. Design: Ronell Botes-Kerr. Editing: Sarah McGregor. Pictures resized and converted to WebP; the small decorative picture from the back cover is left out; formatting marks and spacing in the text tidied."
+ }
+}

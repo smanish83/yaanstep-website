@@ -1,0 +1,76 @@
+{
+ "id": "bd-sbus-special-shoes",
+ "title": "Sbu's Special Shoes",
+ "pages": [
+  {
+   "img": "img/bd-sbus-special-shoes/02.webp",
+   "text": "These are my big brother Sbu’s shoes."
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/03.webp",
+   "text": "Look what I can do in them."
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/04.webp",
+   "text": "I can race cars!"
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/05.webp",
+   "text": "Sometimes, I even race our bouncy dog."
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/06.webp",
+   "text": "With Sbu’s shoes I win every time."
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/07.webp",
+   "text": "Wait!\n\nLet me show you one more thing."
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/08.webp",
+   "text": "Watch me dance and spin."
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/09.webp",
+   "text": "I can cartwheel over and over."
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/10.webp",
+   "text": "I’m a monkey! Look at me hang upside down."
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/11.webp",
+   "text": "Watch me jump and catch the moon."
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/12.webp",
+   "text": "Here, try them on!"
+  },
+  {
+   "img": "img/bd-sbus-special-shoes/13.webp",
+   "text": "See what you can do in Sbu’s special shoes."
+  }
+ ],
+ "words": 80,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Megan Pirie"
+  ],
+  "illustrators": [
+   "Eidin Griffin"
+  ],
+  "translators": [],
+  "designers": [
+   "Mark Hardie"
+  ],
+  "editors": [],
+  "publisher": "Book Dash",
+  "platform": "Book Dash",
+  "source": "https://bookdash.org/books/sbus-special-shoes/",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Originally published by Book Dash under a Creative Commons CC BY 4.0 license. This book can be read for free on www.bookdash.org and was created by Megan Pirie, Eidin Griffin and Mark Hardie. Design: Mark Hardie. Pictures resized and converted to WebP; the small decorative picture from the back cover is left out; formatting marks and spacing in the text tidied."
+ }
+}

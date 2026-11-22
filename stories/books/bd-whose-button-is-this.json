@@ -1,0 +1,80 @@
+{
+ "id": "bd-whose-button-is-this",
+ "title": "Whose button is this?",
+ "pages": [
+  {
+   "img": "img/bd-whose-button-is-this/02.webp",
+   "text": "Tinny Tim was sitting on the road when a button bounced his way."
+  },
+  {
+   "img": "img/bd-whose-button-is-this/03.webp",
+   "text": "“I wonder where this comes from,” he said.\n\nHe wanted to find out."
+  },
+  {
+   "img": "img/bd-whose-button-is-this/04.webp",
+   "text": "It was busy on the side of the road.\n\n“Woah!”\n\nHe nearly got squashed."
+  },
+  {
+   "img": "img/bd-whose-button-is-this/05.webp",
+   "text": "He made a lucky escape.\n\n“It’s scary out here,” he said."
+  },
+  {
+   "img": "img/bd-whose-button-is-this/06.webp",
+   "text": "“Hey there, is this yours?”"
+  },
+  {
+   "img": "img/bd-whose-button-is-this/07.webp",
+   "text": "The green man said nothing. He just turned red.\n\n“What a rude person.”"
+  },
+  {
+   "img": "img/bd-whose-button-is-this/08.webp",
+   "text": "Tinny Tim carried on looking.\n\n“Whose button is this?”"
+  },
+  {
+   "img": "img/bd-whose-button-is-this/09.webp",
+   "text": "“Woah..!\n\n...at least he’s friendly.”"
+  },
+  {
+   "img": "img/bd-whose-button-is-this/10.webp",
+   "text": "“I’ve got to get to the other side.\n\nI’m sure that’s where this comes from.”"
+  },
+  {
+   "img": "img/bd-whose-button-is-this/11.webp",
+   "text": "SPLASH!\n\n“That was close.”\n\nHe waited for the cars to pass before he carried on."
+  },
+  {
+   "img": "img/bd-whose-button-is-this/12.webp",
+   "text": "Maybe this was who he was looking for.\n\n“Hello, who are you?”"
+  },
+  {
+   "img": "img/bd-whose-button-is-this/13.webp",
+   "text": "“I’m Ruby Rags.” “I think this is yours,” he said."
+  },
+  {
+   "img": "img/bd-whose-button-is-this/14.webp",
+   "text": "“Thank you, little robot. Can we be friends?”"
+  }
+ ],
+ "words": 143,
+ "minutes": 4,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Paul Kennedy"
+  ],
+  "illustrators": [
+   "James Woolley"
+  ],
+  "translators": [],
+  "designers": [
+   "Louise Gale"
+  ],
+  "editors": [],
+  "publisher": "Book Dash",
+  "platform": "Book Dash",
+  "source": "https://bookdash.org/books/whose-button-is-this/",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Originally published by Book Dash under a Creative Commons CC BY 4.0 license. This book can be read for free on www.bookdash.org and was created by Paul Kennedy, James Woolley and Louise Gale. Design: Louise Gale. Pictures resized and converted to WebP; the small decorative picture from the back cover is left out; formatting marks and spacing in the text tidied."
+ }
+}
