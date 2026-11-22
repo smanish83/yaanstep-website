@@ -91,6 +91,80 @@
         right: x + ' is ' + word + ' than ' + y + '. ' + why };
     }
   };
+
+  /* ---------- "Show me how": a short moving lesson after a miss (SCRUM-495) ----------
+     A new example with a different number, so it teaches the idea without giving this answer away.
+     The rods and cubes appear one at a time; with calm mode or reduced motion the last picture shows at once. */
+  function delay(i) { return ' style="animation-delay:' + (0.3 + i * 0.45).toFixed(2) + 's"'; }
+  function movingBlocks(t, o, x0, y0, s, from) {
+    var out = [], w = Math.round(s * 1.1), gap = Math.round(s * 1.35), x = x0, i;
+    for (i = 0; i < t; i++) {
+      out.push('<g class="mv-in"' + delay(from + i) + '><rect x="' + x + '" y="' + y0 + '" width="' + w + '" height="' + (10 * s) + '" fill="' + TEAL + '" stroke="#17332c" stroke-width="1"/></g>');
+      x += gap;
+    }
+    if (t) x += Math.round(s * 0.6);
+    for (i = 0; i < o; i++) {
+      var col = Math.floor(i / 5), row = i % 5;
+      out.push('<rect class="mv-in"' + delay(from + t + i) + ' x="' + (x + col * gap) + '" y="' + (y0 + (9 - row) * s) + '" width="' + w + '" height="' + s + '" fill="' + ORANGE + '" stroke="#17332c" stroke-width="1"/>');
+    }
+    return out.join('');
+  }
+  function countWords(n) {
+    var t = Math.floor(n / 10), o = n % 10, tens = [], ones = [];
+    for (var i = 1; i <= t; i++) tens.push(i * 10);
+    for (var j = 1; j <= o; j++) ones.push(t * 10 + j);
+    return 'Count the rods in tens: ' + tens.join(', ') + '.' + (o ? ' Then count on the cubes: ' + ones.join(', ') + '.' : '') + ' That makes ' + n + '.';
+  }
+  function lessonArt(ex) {
+    if (ex.game === 'compare') {
+      var side = function (n, x, from) { return '<text class="n" x="' + (x + 80) + '" y="22" text-anchor="middle">' + n + '</text>' + movingBlocks(Math.floor(n / 10), n % 10, x + 6, 34, 9, from); };
+      return svg(340, 130, ex.a + ' and ' + ex.b + ' built from rods and cubes, one at a time.',
+        side(ex.a, 0, 0) + '<line x1="170" y1="6" x2="170" y2="124" stroke="#c6e3da" stroke-width="2"/>' + side(ex.b, 172, Math.floor(ex.a / 10) + ex.a % 10));
+    }
+    return svg(340, 120, ex.n + ' built from ' + words(ex.t, ex.o) + ', one at a time.', movingBlocks(ex.t, ex.o, 12, 10, 10, 0));
+  }
+  var HOW = {
+    read: 'Count the rods first, in tens. Then count on the single cubes.',
+    build: 'Put down one rod for each ten. Then one cube for each one.',
+    compare: 'Look at the tens first. The number with more tens is more. If the tens are the same, look at the ones.'
+  };
+  function shows(e, avoid) {
+    var used = e.game === 'compare' ? [e.a, e.b] : [e.n];
+    return used.some(function (v) { return avoid.indexOf(v) > -1; });
+  }
+  function lessonFor(game) {
+    var ex, tries = 0, avoid = r.game === 'compare' ? [r.a, r.b] : [r.n];
+    do { ex = MAKE[game](); tries++; } while (shows(ex, avoid) && tries < 50);
+    var box = el('section', { 'class': 'how-panel', id: 'lesson', 'aria-labelledby': 'lesson-h' });
+    box.appendChild(el('h3', { id: 'lesson-h', 'class': 'how-title', tabindex: '-1' }, 'Short lesson'));
+    box.appendChild(el('p', {}, HOW[game]));
+    var pic = el('div', { 'class': 'moving' });
+    pic.innerHTML = lessonArt(ex);
+    box.appendChild(pic);
+    box.appendChild(el('p', { id: 'lesson-say' }, ex.game === 'compare' ? ex.right : countWords(ex.n)));
+    var again = el('button', { type: 'button', id: 'watch-again' }, 'Watch again');
+    again.addEventListener('click', function () { pic.innerHTML = lessonArt(ex); });
+    box.appendChild(again);
+    box.appendChild(el('p', { 'class': 'muted' }, game === 'build' ? 'Now build the number above again.' : 'Now try the question above again.'));
+    return box;
+  }
+  /* The lesson lives under the tip, outside the panel, so building blocks does not close it. */
+  function howHolder() {
+    var h = $('howbox');
+    if (!h) { h = el('div', { id: 'howbox' }); $('tip').insertAdjacentElement('afterend', h); }
+    return h;
+  }
+  function offerHow() {
+    var h = howHolder();
+    if (h.firstChild) return;
+    var how = el('button', { type: 'button', id: 'howbtn' }, 'Show me how');
+    how.addEventListener('click', function () {
+      h.innerHTML = '';
+      h.appendChild(lessonFor(r.game));
+      $('lesson-h').focus();
+    });
+    h.appendChild(how);
+  }
   var TITLES = { read: 'How many?', build: 'Build the number', compare: 'More or less?' };
   var TRY = { read: 'Not yet. Count the rods in tens, then count on the cubes.', build: 'Not yet. Count the tens, then the ones.', compare: 'Not yet. Look at the tens first.' };
 
@@ -100,6 +174,7 @@
   function start(g) { game = g; idx = 0; $('title').textContent = TITLES[g]; show('game'); round(); }
   function round() {
     r = MAKE[game](); solved = false; have = { t: 0, o: 0 };
+    howHolder().innerHTML = '';
     $('count').textContent = 'Round ' + (idx + 1) + ' of ' + ROUNDS;
     $('say').textContent = r.say;
     render();
@@ -130,8 +205,8 @@
         panel.appendChild(row);
         var check = el('button', { type: 'button', id: 'check', 'class': 'primary' }, 'Check');
         check.addEventListener('click', function () {
-          if (have.t * 10 + have.o === r.n) { solved = true; render(); $('go').focus(); }
-          else { setTip(TRY.build, true); }
+          if (have.t * 10 + have.o === r.n) { solved = true; howHolder().innerHTML = ''; render(); $('go').focus(); }
+          else { setTip(TRY.build, true); offerHow(); }
         });
         panel.appendChild(el('div', { 'class': 'row' })).appendChild(check);
         return;
@@ -148,8 +223,8 @@
     opts.forEach(function (v) {
       var b = el('button', { type: 'button', 'data-v': String(v) }, String(v));
       b.addEventListener('click', function () {
-        if (v === r.ans) { solved = true; render(); $('go').focus(); }
-        else { b.classList.add('wrong'); b.disabled = true; setTip(TRY[r.game], true); }
+        if (v === r.ans) { solved = true; howHolder().innerHTML = ''; render(); $('go').focus(); }
+        else { b.classList.add('wrong'); b.disabled = true; setTip(TRY[r.game], true); offerHow(); }
       });
       row2.appendChild(b);
     });
