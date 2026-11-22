@@ -91,7 +91,7 @@
         right: x + ' is ' + word + ' than ' + y + '. ' + why };
     }
   };
-  var TITLES = { read: 'How many?', build: 'Build the number', compare: 'Which is more?' };
+  var TITLES = { read: 'How many?', build: 'Build the number', compare: 'More or less?' };
   var TRY = { read: 'Not yet. Count the rods in tens, then count on the cubes.', build: 'Not yet. Count the tens, then the ones.', compare: 'Not yet. Look at the tens first.' };
 
   /* ---------- the game ---------- */

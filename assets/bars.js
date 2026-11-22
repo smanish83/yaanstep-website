@@ -235,6 +235,8 @@
     var out = [], said = [];
     var xs = p.rows.map(function (r) { var x = X0, a = []; r.segs.forEach(function (g) { a.push(x); x += g.v * px; }); a.push(x); return a; });
     function rowY(i) { return TOP + i * PITCH; }
+    // Before the first bar: a short box with a line of text, not a tall empty space.
+    if (st.r < 0) return '<svg viewBox="0 0 340 44" role="img" aria-label="Bar model. No bars yet."><text x="170" y="27" text-anchor="middle" style="font:600 14px system-ui,sans-serif;fill:#51675f">The bars will appear here.</text></svg>';
 
     if (st.r >= 0) p.rows.forEach(function (r, i) {
       var y = rowY(i);
