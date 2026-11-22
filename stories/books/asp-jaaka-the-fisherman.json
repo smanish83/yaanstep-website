@@ -1,0 +1,59 @@
+{
+ "id": "asp-jaaka-the-fisherman",
+ "title": "Jaaka the fisherman",
+ "pages": [
+  {
+   "img": "img/asp-jaaka-the-fisherman/02.webp",
+   "text": "This is Jaaka the fisherman from Naminya."
+  },
+  {
+   "img": "img/asp-jaaka-the-fisherman/03.webp",
+   "text": "He fishes on the river Nile."
+  },
+  {
+   "img": "img/asp-jaaka-the-fisherman/04.webp",
+   "text": "He has a boat, fishing net and a hook."
+  },
+  {
+   "img": "img/asp-jaaka-the-fisherman/05.webp",
+   "text": "He always wakes up very early in the morning to catch the Nile perch."
+  },
+  {
+   "img": "img/asp-jaaka-the-fisherman/06.webp",
+   "text": "At around 10am, he's selling his catch in Jinja central market."
+  },
+  {
+   "img": "img/asp-jaaka-the-fisherman/07.webp",
+   "text": "Jaaka what happened? Was it a loss? He's so sad."
+  },
+  {
+   "img": "img/asp-jaaka-the-fisherman/08.webp",
+   "text": "\"Today the situation is bad. The Nile breeze did not permit me to fish. And one perch swam away with my hook.\""
+  },
+  {
+   "img": "img/asp-jaaka-the-fisherman/09.webp",
+   "text": "\"But I have hope that tomorrow will be good, because I've bought a new hook.\""
+  }
+ ],
+ "words": 94,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Tom Sabwa",
+   "Children's Development Center at Masese"
+  ],
+  "illustrators": [
+   "Zablon Alex Nguku"
+  ],
+  "translators": [
+   "Cornelius Gulere"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/jaaka-fisherman",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "id": "asp-where-is-my-bat",
+ "title": "Where is my bat?",
+ "pages": [
+  {
+   "img": "img/asp-where-is-my-bat/02.webp",
+   "text": "I have lost my bat, and I cannot find it."
+  },
+  {
+   "img": "img/asp-where-is-my-bat/03.webp",
+   "text": "I looked behind the door. It was not there."
+  },
+  {
+   "img": "img/asp-where-is-my-bat/04.webp",
+   "text": "I looked for it on the shelf. I could not find it there."
+  },
+  {
+   "img": "img/asp-where-is-my-bat/05.webp",
+   "text": "I looked for it under the bed. Not there either."
+  },
+  {
+   "img": "img/asp-where-is-my-bat/06.webp",
+   "text": "I searched inside the box. There was no sign of it."
+  },
+  {
+   "img": "img/asp-where-is-my-bat/07.webp",
+   "text": "I searched the attic. It was not there."
+  },
+  {
+   "img": "img/asp-where-is-my-bat/08.webp",
+   "text": "I looked here, there and everywhere. I could not find it anywhere."
+  },
+  {
+   "img": "img/asp-where-is-my-bat/09.webp",
+   "text": ""
+  }
+ ],
+ "words": 73,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Meera Tendolkar",
+   "Madhav Chavan"
+  ],
+  "illustrators": [
+   "Rijuta Ghate"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/where-my-bat",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

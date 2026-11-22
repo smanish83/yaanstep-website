@@ -1,0 +1,52 @@
+{
+ "id": "pb-who-is-a-good-dog",
+ "title": "Who is a good dog?",
+ "pages": [
+  {
+   "img": "img/pb-who-is-a-good-dog/02.webp",
+   "text": "The dog wants to catch the bird."
+  },
+  {
+   "img": "img/pb-who-is-a-good-dog/03.webp",
+   "text": "Dog goes to man for help.\n\nPlease help me catch the bird."
+  },
+  {
+   "img": "img/pb-who-is-a-good-dog/04.webp",
+   "text": "Man swells up in anger. Why do you want to catch the poor bird?"
+  },
+  {
+   "img": "img/pb-who-is-a-good-dog/05.webp",
+   "text": "I am going to teach you a lesson."
+  },
+  {
+   "img": "img/pb-who-is-a-good-dog/06.webp",
+   "text": "I am going to teach you a lesson."
+  },
+  {
+   "img": "img/pb-who-is-a-good-dog/07.webp",
+   "text": "GOTCHA!!!"
+  },
+  {
+   "img": "img/pb-who-is-a-good-dog/08.webp",
+   "text": "Understood? No more chasing birds.\n\nGood Dog."
+  }
+ ],
+ "words": 57,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Purvi Shah"
+  ],
+  "illustrators": [
+   "Parismita"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/677-who-is-a-good-dog",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

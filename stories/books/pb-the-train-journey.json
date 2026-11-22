@@ -1,0 +1,51 @@
+{
+ "id": "pb-the-train-journey",
+ "title": "The train journey",
+ "pages": [
+  {
+   "img": "img/pb-the-train-journey/02.webp",
+   "text": "Latika , Vidvath and Shubhi were very excited to know that they would go to Gudi Gudi on a vacation."
+  },
+  {
+   "img": "img/pb-the-train-journey/03.webp",
+   "text": "Shubhi and Latika had brought some fruits , but feared that the ants will eat them. Vidvath brought his paratha along as well."
+  },
+  {
+   "img": "img/pb-the-train-journey/04.webp",
+   "text": "Everyone happily went to the station along with Mummy and Papa. The porter took the luggage along"
+  },
+  {
+   "img": "img/pb-the-train-journey/05.webp",
+   "text": "Vidvath , Latika and Shubhi sat on their seats. They had the vegetables and fruits as well which they had brought. Everybody had a great lunch."
+  },
+  {
+   "img": "img/pb-the-train-journey/06.webp",
+   "text": "The train was going over the bridge. Vidvath was very happy to see the water below in the river."
+  },
+  {
+   "img": "img/pb-the-train-journey/07.webp",
+   "text": "Once Shubhi , Latika and Vidvath reached the train station , they went further to the mountains in a bus."
+  }
+ ],
+ "words": 120,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Kanti Jadia"
+  ],
+  "illustrators": [
+   "Deepa Balsavar",
+   "Madhuvanti Anantharajan",
+   "Preeti Krishnamurthy",
+   "Santosh Pujari"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2375-the-train-journey",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "id": "pb-do-and-dont",
+ "title": "Do and Don't",
+ "pages": [
+  {
+   "img": "img/pb-do-and-dont/02.webp",
+   "text": "Good Morning!\n\nTime to wake up."
+  },
+  {
+   "img": "img/pb-do-and-dont/03.webp",
+   "text": "I DON'T want to wake up!\n\nI DON'T want to do the big job!"
+  },
+  {
+   "img": "img/pb-do-and-dont/04.webp",
+   "text": "I DON'T want to brush my teeth!\n\nI DON'T want to have a bath!\n\nI DON'T want to have idlis for breakfast!"
+  },
+  {
+   "img": "img/pb-do-and-dont/05.webp",
+   "text": "I DON'T want to go to school!"
+  },
+  {
+   "img": "img/pb-do-and-dont/06.webp",
+   "text": "Hmm...\n\nBut, today's your class picnic at the zoo!"
+  },
+  {
+   "img": "img/pb-do-and-dont/07.webp",
+   "text": "I DO like idlis with sugar!\n\nI DO want to go to school!\n\nI DO like singing while I take a bath!\n\nI DO want to use my new tooth brush!"
+  },
+  {
+   "img": "img/pb-do-and-dont/08.webp",
+   "text": "Oops! This is urgent!\n\nI DO want to go for the big job!\n\nHere I come, like a rocket... DO please give way,\n\nDON'T stand in my way!"
+  }
+ ],
+ "words": 117,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Radha HS"
+  ],
+  "illustrators": [
+   "Ruchi Shah"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/250-do-and-don-t",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

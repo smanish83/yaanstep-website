@@ -1,0 +1,44 @@
+{
+ "id": "asp-the-hungry-crocodile",
+ "title": "The hungry crocodile",
+ "pages": [
+  {
+   "img": "img/asp-the-hungry-crocodile/02.webp",
+   "text": "Once there was a very hungry crocodile."
+  },
+  {
+   "img": "img/asp-the-hungry-crocodile/03.webp",
+   "text": "He searched for food slowly and quietly. And then..."
+  },
+  {
+   "img": "img/asp-the-hungry-crocodile/04.webp",
+   "text": "POW!!! The crocodile strikes!"
+  },
+  {
+   "img": "img/asp-the-hungry-crocodile/05.webp",
+   "text": "After that he is no longer hungry, and he is happy."
+  },
+  {
+   "img": "img/asp-the-hungry-crocodile/06.webp",
+   "text": "Until he gets hungry again."
+  }
+ ],
+ "words": 36,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Christian G"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/hungry-crocodile",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

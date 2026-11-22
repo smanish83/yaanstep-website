@@ -1,0 +1,64 @@
+{
+ "id": "asp-the-sick-hyena",
+ "title": "The Sick Hyena",
+ "pages": [
+  {
+   "img": "img/asp-the-sick-hyena/02.webp",
+   "text": "Once upon a time, a long time ago, there was a time of great hunger. A very smart hyena pretended he was so sick he couldn't even go out."
+  },
+  {
+   "img": "img/asp-the-sick-hyena/03.webp",
+   "text": "Lots of animals went to visit him in his home to comfort him. But none of them ever came out!"
+  },
+  {
+   "img": "img/asp-the-sick-hyena/04.webp",
+   "text": "One beautiful afternoon, the rabbit arrived. He thought he would like to visit the hyena too."
+  },
+  {
+   "img": "img/asp-the-sick-hyena/05.webp",
+   "text": "He almost went into the hyena's cave. But suddenly he stopped, and saw there were only tracks of animals going in, and none coming out."
+  },
+  {
+   "img": "img/asp-the-sick-hyena/06.webp",
+   "text": "So he stayed outside and shouted into it, \"How are you? Are you healthy, my best friend? Are you getting better?\""
+  },
+  {
+   "img": "img/asp-the-sick-hyena/07.webp",
+   "text": "The hyena answered, \"Don't worry, my friend. Come in and give me some lovely company!\""
+  },
+  {
+   "img": "img/asp-the-sick-hyena/08.webp",
+   "text": "\"Oh, I'm not sure if I should come in. Really, I don't have time right now, and you have so many visitors . . .\"\n\n\"No, no, rabbit, everything is alright. There's nobody in here. It's no good for me to stay here all sick and alone.\""
+  },
+  {
+   "img": "img/asp-the-sick-hyena/09.webp",
+   "text": "\"You are lying! I can see the footprints of animals that have gone in but haven't come out . . .\""
+  },
+  {
+   "img": "img/asp-the-sick-hyena/10.webp",
+   "text": "The hyena went quiet and the rabbit said, \"Good-bye, my friend, I think I will visit you another day.\""
+  },
+  {
+   "img": "img/asp-the-sick-hyena/11.webp",
+   "text": "And the rabbit ran far away from that place!"
+  }
+ ],
+ "words": 216,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Mozambican folktale"
+  ],
+  "illustrators": [
+   "Razaque Lázaro Quive"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/sick-hyena",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

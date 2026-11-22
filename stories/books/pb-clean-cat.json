@@ -1,0 +1,68 @@
+{
+ "id": "pb-clean-cat",
+ "title": "Clean Cat",
+ "pages": [
+  {
+   "img": "img/pb-clean-cat/02.webp",
+   "text": "This is my house. Ma, Pa and Cheena also live here."
+  },
+  {
+   "img": "img/pb-clean-cat/03.webp",
+   "text": "The best chair in the house is for me. But sitting on the lap is even better, isn't it?"
+  },
+  {
+   "img": "img/pb-clean-cat/04.webp",
+   "text": "Cheena is my best friend. I wait for her to return from school."
+  },
+  {
+   "img": "img/pb-clean-cat/05.webp",
+   "text": "I keep myself clean without water. I do not need a bath like Tommy."
+  },
+  {
+   "img": "img/pb-clean-cat/06.webp",
+   "text": "Shhh... don't tell anyone that I am hiding here.\n\n1...2...3... Got you!"
+  },
+  {
+   "img": "img/pb-clean-cat/07.webp",
+   "text": "Ma shouts at me, when I bring some tasty food from the garden."
+  },
+  {
+   "img": "img/pb-clean-cat/08.webp",
+   "text": "I can climb trees. I can jump. I know all the short cuts here."
+  },
+  {
+   "img": "img/pb-clean-cat/09.webp",
+   "text": "Sanju lives nearby. He teases me. It makes me very angry."
+  },
+  {
+   "img": "img/pb-clean-cat/10.webp",
+   "text": "Please tell Sanju that the tiger is from our cat family. We have sharp claws."
+  },
+  {
+   "img": "img/pb-clean-cat/11.webp",
+   "text": "My friends sometimes make a lot of noise at night. By then I am quietly in bed."
+  },
+  {
+   "img": "img/pb-clean-cat/12.webp",
+   "text": "Tails can speak!\n\nDid you know how animals and birds tell us something by using their tails?\n\nA dog wags its tail when it is happy. A cat puffs up its tail when it is angry.\n\nOften we say, “As clean as a cat”. This is because cats do not like water, yet they are always keeping themselves clean by licking themselves."
+  }
+ ],
+ "words": 201,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Kanchan Bannerjee"
+  ],
+  "illustrators": [
+   "Deepa Balsavar"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1057-clean-cat",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "pb-am-i-alone",
+ "title": "Am I Alone?",
+ "pages": [
+  {
+   "img": "img/pb-am-i-alone/02.webp",
+   "text": "My name is Bhola. Today, I cannot play cricket as my friends have not come to play. What can I do? I am all alone."
+  },
+  {
+   "img": "img/pb-am-i-alone/03.webp",
+   "text": "Let me take a walk. Oh! Nature is so colourful. Pink and Yellow swaying flowers. Green trees and bushes. Green chirpy Parrots with red beak. Yellow buzzing honey bee. Blue open sky. Brown soft ground. Peach fishes with pink lips in blue water. I am feeling so fresh and happy."
+  },
+  {
+   "img": "img/pb-am-i-alone/04.webp",
+   "text": "Let me do some reading now, under the big shady tree. Wow! Short stories and long stories to read from big books and small books, fat books and thin books. My books, let me be anyone who I want to be. It also takes me to so many places."
+  },
+  {
+   "img": "img/pb-am-i-alone/05.webp",
+   "text": "Now, it is play time with my four legged rockstar friends. So much fun, we are making music together. Bow Bow barks Browny the dog. Meow Meow purrs Maumau the cat. Baa Baa bleats Rani the goat. Squeak Squeak squeaks Chua the rat. I go Sa Re Ga Ma...."
+  },
+  {
+   "img": "img/pb-am-i-alone/06.webp",
+   "text": "Ha Ha Ha, there are so many nice things to do even when I am alone. I just have to look around, the whole world wants to play with me and I am no longer alone. I am so happy."
+  }
+ ],
+ "words": 213,
+ "minutes": 3,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Sarita Shetty"
+  ],
+  "illustrators": [
+   "Rajeev Verma 'Banjara'"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4798-am-i-alone",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

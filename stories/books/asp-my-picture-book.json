@@ -1,0 +1,47 @@
+{
+ "id": "asp-my-picture-book",
+ "title": "My Picture Book",
+ "pages": [
+  {
+   "img": "img/asp-my-picture-book/02.webp",
+   "text": "A girl"
+  },
+  {
+   "img": "img/asp-my-picture-book/03.webp",
+   "text": "A bird"
+  },
+  {
+   "img": "img/asp-my-picture-book/04.webp",
+   "text": "A lion"
+  },
+  {
+   "img": "img/asp-my-picture-book/05.webp",
+   "text": "A cat"
+  }
+ ],
+ "words": 8,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Oku Modesto",
+   "Rose Alungho (adaptation)"
+  ],
+  "illustrators": [
+   "Rob Owen",
+   "Marleen Visser",
+   "Katrien Coetzer",
+   "Wiehan de Jager",
+   "Karen Lilje",
+   "Catherine Groenewald",
+   "Alice Toich"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-picture-book-0",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

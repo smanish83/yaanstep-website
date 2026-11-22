@@ -1,0 +1,72 @@
+{
+ "id": "asp-teacher-akinyi",
+ "title": "Teacher Akinyi",
+ "pages": [
+  {
+   "img": "img/asp-teacher-akinyi/02.webp",
+   "text": "This is my teacher.\n\nHer name is Teacher Akinyi.\n\nShe loves me a lot."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/03.webp",
+   "text": "Teacher Akinyi teaches us the alphabet and the vowels.\n\nI can say the letters a, e, i, o, u."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/04.webp",
+   "text": "Teacher Akinyi has taught us the colours red, blue, green, yellow, and black."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/05.webp",
+   "text": "During nap time Teacher Akinyi sings us to sleep.\n\nShe sings a lullaby to us."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/06.webp",
+   "text": "The lullaby goes like this:\n\nGolden slumber give your eyes Smiles await you when you rise\n\nSleep pretty darlings, do not cry And I'll sing you a sweet lullaby."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/07.webp",
+   "text": "Teacher Akinyi knows many stories.\n\nShe tells us a different story each day of the week."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/08.webp",
+   "text": "On Monday, she tells us stories about great men."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/09.webp",
+   "text": "On Tuesday, she tells us stories about great women."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/10.webp",
+   "text": "On Wednesday, she tells us stories about means of transport."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/11.webp",
+   "text": "On Thursday, she tells us stories about farming."
+  },
+  {
+   "img": "img/asp-teacher-akinyi/12.webp",
+   "text": "And on Friday, Teacher Akinyi asks us to tell our own stories to the class."
+  },
+  {
+   "img": null,
+   "text": "Our teacher is the best teacher in the world!\n\nWhen I grow up, I want to be like Teacher Akinyi."
+  }
+ ],
+ "words": 177,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Lawrence A. Konjuro"
+  ],
+  "illustrators": [
+   "Vusi Malindi"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/teacher-akinyi-0",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed. Some pages have no picture because no matching picture was available in the source files."
+ }
+}

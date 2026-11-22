@@ -1,0 +1,72 @@
+{
+ "id": "asp-who-wet-the-bed",
+ "title": "Who wet the bed?",
+ "pages": [
+  {
+   "img": "img/asp-who-wet-the-bed/02.webp",
+   "text": "The night has come again and it is dark."
+  },
+  {
+   "img": "img/asp-who-wet-the-bed/03.webp",
+   "text": "After meals I go to bed with my young sister Anna."
+  },
+  {
+   "img": "img/asp-who-wet-the-bed/04.webp",
+   "text": "I am always scared because every night I wet the bed."
+  },
+  {
+   "img": "img/asp-who-wet-the-bed/05.webp",
+   "text": "Whenever I dream, I suddenly wake up wet."
+  },
+  {
+   "img": "img/asp-who-wet-the-bed/06.webp",
+   "text": "I quickly change position and sleep in Anna's which is dry and warm."
+  },
+  {
+   "img": "img/asp-who-wet-the-bed/07.webp",
+   "text": "In the morning, I wake up first and leave Anna in bed."
+  },
+  {
+   "img": "img/asp-who-wet-the-bed/08.webp",
+   "text": "And when mother asks who wet the bed, I loudly say it is Anna."
+  },
+  {
+   "img": "img/asp-who-wet-the-bed/09.webp",
+   "text": "So the next day mother decides to sleep with Anna in her bed."
+  },
+  {
+   "img": "img/asp-who-wet-the-bed/10.webp",
+   "text": "Unfortunately, the same thing happens and now there is no one to else to blame."
+  },
+  {
+   "img": "img/asp-who-wet-the-bed/11.webp",
+   "text": "Finally mother finds out that Anna does not wet the bed but I do."
+  }
+ ],
+ "words": 120,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ivan higenyi"
+  ],
+  "illustrators": [
+   "Jesse Breytenbach",
+   "Rob Owen",
+   "Amy Uzzell",
+   "Rijuta Ghate",
+   "Bronwen Heath",
+   "Genevieve Terblanche",
+   "Catherine Groenewald",
+   "Felicity Bell",
+   "Melany Pietersen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/who-wet-bed",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "id": "pb-honey-bee-journey",
+ "title": "Honey Bee journey",
+ "pages": [
+  {
+   "img": "img/pb-honey-bee-journey/02.webp",
+   "text": "There is a Honey Bee. One day it is flying in the sky and found some plants around. Bee collected the honey from different flowers. It keeps flying and collected more honey. Group of Bees also followed her and did the same thing. Finally we get the honey from Bees."
+  }
+ ],
+ "words": 50,
+ "minutes": 1,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Chandra Sekhar"
+  ],
+  "illustrators": [
+   "Aahan Sarin"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2536-honey-bee-journey",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

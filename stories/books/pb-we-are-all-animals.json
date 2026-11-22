@@ -1,0 +1,139 @@
+{
+ "id": "pb-we-are-all-animals",
+ "title": "We Are All Animals",
+ "pages": [
+  {
+   "img": "img/pb-we-are-all-animals/02.webp",
+   "text": "ACT-1"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/03.webp",
+   "text": "Look at me, animals! I am a human being! I know everything!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/04.webp",
+   "text": "Look, these are my eyes. I can see everything with them."
+  },
+  {
+   "img": "img/pb-we-are-all-animals/05.webp",
+   "text": "So what? We have eyes too. And we can see in the dark!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/06.webp",
+   "text": "Fine, but look at my nose. I breathe through my nose."
+  },
+  {
+   "img": "img/pb-we-are-all-animals/07.webp",
+   "text": "So what? We also have noses and ours are prettier than yours!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/08.webp",
+   "text": "And yes, my teeth. I use my teeth to chew and bite."
+  },
+  {
+   "img": "img/pb-we-are-all-animals/09.webp",
+   "text": "Teeth? Ha! Ha! Have you seen our teeth?\n\nYou can chew. But WE CAN BITE! Hiee.. Hiee...Hiee..."
+  },
+  {
+   "img": "img/pb-we-are-all-animals/10.webp",
+   "text": "Yes, but listen! I can hear a lot with my ears!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/11.webp",
+   "text": "Little one! We can hear sounds which you cannot imagine at all!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/12.webp",
+   "text": "And I can walk, run and even dance with my feet."
+  },
+  {
+   "img": "img/pb-we-are-all-animals/13.webp",
+   "text": "Oh! We have four feet! We can jump, we can dance\n\nand we can parade too!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/14.webp",
+   "text": "I can plait my hair."
+  },
+  {
+   "img": "img/pb-we-are-all-animals/15.webp",
+   "text": "Uh! Our hair is pretty too.\n\nWe could plait it if we wanted to. Maybe!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/16.webp",
+   "text": "Look! I can work with my hands!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/17.webp",
+   "text": "Hands! Keep your hands to yourself!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/18.webp",
+   "text": "ACT-2"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/19.webp",
+   "text": "Aha! I told you! I am the best! I know it all!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/20.webp",
+   "text": "Really?\n\nHave you seen our sharp claws?"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/21.webp",
+   "text": "Yes! But your nails will pick up dirt!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/22.webp",
+   "text": "Now see, these are our lovely tails."
+  },
+  {
+   "img": "img/pb-we-are-all-animals/23.webp",
+   "text": "Tails! We gave them up long ago!\n\nHow else could we wear our shorts?"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/24.webp",
+   "text": "And we can roar!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/25.webp",
+   "text": "Roar? Have you heard my mother?"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/26.webp",
+   "text": "So then! You are only animals - I know that!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/27.webp",
+   "text": "Humans are animals too. We know that!"
+  },
+  {
+   "img": "img/pb-we-are-all-animals/28.webp",
+   "text": "You may be right. Look at my brother!\n\nMother says he is wild. He is definitely an animal."
+  },
+  {
+   "img": "img/pb-we-are-all-animals/29.webp",
+   "text": "Yes! And so are you! Believe us! We are all animals.\n\nWe all belong here. Just like you."
+  }
+ ],
+ "words": 283,
+ "minutes": 7,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Madhav Chavan",
+   "Meera Tendolkar"
+  ],
+  "illustrators": [
+   "Santosh Pujari"
+  ],
+  "translators": [
+   "Rohini Nilekani"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1111-aamhi-saare-praani",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

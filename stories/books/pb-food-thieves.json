@@ -1,0 +1,55 @@
+{
+ "id": "pb-food-thieves",
+ "title": "Food Thieves",
+ "pages": [
+  {
+   "img": "img/pb-food-thieves/02.webp",
+   "text": "One day owl went out to search for food."
+  },
+  {
+   "img": "img/pb-food-thieves/03.webp",
+   "text": "She met Mr. Bat and asked him if he wanted to join her."
+  },
+  {
+   "img": "img/pb-food-thieves/04.webp",
+   "text": "Mr. Bat agreed. While they were searching baby bat also joined them."
+  },
+  {
+   "img": "img/pb-food-thieves/05.webp",
+   "text": "They couldn't find any food but they saw a plate full of food."
+  },
+  {
+   "img": "img/pb-food-thieves/06.webp",
+   "text": "All of them ate their fill and ran away."
+  },
+  {
+   "img": "img/pb-food-thieves/07.webp",
+   "text": "The food was of an woodcutter. He was angry when his food was not there. He could never find out who took it!"
+  }
+ ],
+ "words": 79,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Pahi Shrivastava"
+  ],
+  "illustrators": [
+   "Archana Sreenivasan",
+   "Diya Bahukhandi",
+   "Greystroke",
+   "Muniza Shariq",
+   "Reshma Barve",
+   "Sonal Goyal",
+   "Wiehan de Jager",
+   "Sonal Goyal, Sumit Sakhuja"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/5454-food-thieves",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

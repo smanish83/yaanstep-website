@@ -1,0 +1,48 @@
+{
+ "id": "pb-my-best-friend-2",
+ "title": "My best friend",
+ "pages": [
+  {
+   "img": "img/pb-my-best-friend-2/02.webp",
+   "text": "My best friend lives with me. When I look in the mirror, she looks at me."
+  },
+  {
+   "img": "img/pb-my-best-friend-2/03.webp",
+   "text": "When I am happy, she is too."
+  },
+  {
+   "img": "img/pb-my-best-friend-2/04.webp",
+   "text": "When I am sad, she is too."
+  },
+  {
+   "img": "img/pb-my-best-friend-2/05.webp",
+   "text": "Me and my friend play all day long until we are tired."
+  },
+  {
+   "img": "img/pb-my-best-friend-2/06.webp",
+   "text": "We play in my dream when I am asleep."
+  },
+  {
+   "img": "img/pb-my-best-friend-2/07.webp",
+   "text": "Me and my friend live together forever."
+  }
+ ],
+ "words": 58,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Rachita Uday Kumar"
+  ],
+  "illustrators": [
+   "Suvidha Mistry"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2621-my-best-friend",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "id": "pb-chulli-and-the-cows",
+ "title": "Chulli and the cows",
+ "pages": [
+  {
+   "img": "img/pb-chulli-and-the-cows/02.webp",
+   "text": "Once upon a time, there was a very shy train named Chulli."
+  },
+  {
+   "img": "img/pb-chulli-and-the-cows/03.webp",
+   "text": "Chulli was fascinated with cows."
+  },
+  {
+   "img": "img/pb-chulli-and-the-cows/04.webp",
+   "text": "But one day, Chulli got scared when he saw a cow right on his tracks."
+  }
+ ],
+ "words": 32,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Arvind Eyunni"
+  ],
+  "illustrators": [
+   "Preeti Krishnamurthy"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4383-chulli-and-the-cows",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

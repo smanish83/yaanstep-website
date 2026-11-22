@@ -1,0 +1,88 @@
+{
+ "id": "pb-colours-of-nature",
+ "title": "Colours of Nature",
+ "pages": [
+  {
+   "img": "img/pb-colours-of-nature/02.webp",
+   "text": "I see a blue butterfly waving goodbye"
+  },
+  {
+   "img": "img/pb-colours-of-nature/03.webp",
+   "text": "I see a yellow bee drinking a cup of tea"
+  },
+  {
+   "img": "img/pb-colours-of-nature/04.webp",
+   "text": "I see a red fish in a dish"
+  },
+  {
+   "img": "img/pb-colours-of-nature/05.webp",
+   "text": "I see a green frog playing with a puppy dog"
+  },
+  {
+   "img": "img/pb-colours-of-nature/06.webp",
+   "text": "I see an orange duck\n\nwishing me good luck"
+  },
+  {
+   "img": "img/pb-colours-of-nature/07.webp",
+   "text": "I see a violet flower\n\ndancing with a caterpillar"
+  },
+  {
+   "img": "img/pb-colours-of-nature/08.webp",
+   "text": "I see a grey and black cat\n\nwearing an orange hat"
+  },
+  {
+   "img": "img/pb-colours-of-nature/09.webp",
+   "text": "I see a grey and brown mouse\n\nhiding in a pink house"
+  },
+  {
+   "img": "img/pb-colours-of-nature/10.webp",
+   "text": "I see a red and black fox\n\nwearing purple socks"
+  },
+  {
+   "img": "img/pb-colours-of-nature/11.webp",
+   "text": "I see a green grasshopper reading a\n\nblack and white newspaper"
+  },
+  {
+   "img": "img/pb-colours-of-nature/12.webp",
+   "text": "I see a black and purple goat\n\nsailing in a red boat"
+  },
+  {
+   "img": "img/pb-colours-of-nature/13.webp",
+   "text": "I see a green and brown crocodile\n\ngiving me a big smile"
+  },
+  {
+   "img": "img/pb-colours-of-nature/14.webp",
+   "text": "I see a black and blue snake\n\neating a slice of cake"
+  },
+  {
+   "img": "img/pb-colours-of-nature/15.webp",
+   "text": "I see a red and yellow hen\n\nwriting with a pen"
+  },
+  {
+   "img": "img/pb-colours-of-nature/16.webp",
+   "text": "I see a black and orange tiger\n\nstanding in the water"
+  },
+  {
+   "img": "img/pb-colours-of-nature/17.webp",
+   "text": "I see with my two black eyes\n\nall the colours as they fly"
+  }
+ ],
+ "words": 168,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Bulbul Sharma"
+  ],
+  "illustrators": [
+   "Bulbul Sharma"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/409-colours-of-nature",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

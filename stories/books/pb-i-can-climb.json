@@ -1,0 +1,68 @@
+{
+ "id": "pb-i-can-climb",
+ "title": "I Can Climb!",
+ "pages": [
+  {
+   "img": "img/pb-i-can-climb/02.webp",
+   "text": "I am a big boy now."
+  },
+  {
+   "img": "img/pb-i-can-climb/03.webp",
+   "text": "I can climb up the steps."
+  },
+  {
+   "img": "img/pb-i-can-climb/04.webp",
+   "text": "But I cannot climb down again."
+  },
+  {
+   "img": "img/pb-i-can-climb/05.webp",
+   "text": "I can climb on a chair."
+  },
+  {
+   "img": "img/pb-i-can-climb/06.webp",
+   "text": "But I cannot climb down again."
+  },
+  {
+   "img": "img/pb-i-can-climb/07.webp",
+   "text": "I climb on to the chair, and then on the table!"
+  },
+  {
+   "img": "img/pb-i-can-climb/08.webp",
+   "text": "But I cannot climb down again."
+  },
+  {
+   "img": "img/pb-i-can-climb/09.webp",
+   "text": "“Papa! Papa!” I shout.\n\nPapa laughs. “Sonu, learn to climb down!” he says."
+  },
+  {
+   "img": "img/pb-i-can-climb/10.webp",
+   "text": "I am afraid. But I do not cry."
+  },
+  {
+   "img": "img/pb-i-can-climb/11.webp",
+   "text": "Slowly, I get down from the table, and down from the chair."
+  },
+  {
+   "img": "img/pb-i-can-climb/12.webp",
+   "text": "At last, I have learnt to climb down too!"
+  }
+ ],
+ "words": 89,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Mini Shrinivasan"
+  ],
+  "illustrators": [
+   "Deval Maniar"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/822-i-can-climb",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

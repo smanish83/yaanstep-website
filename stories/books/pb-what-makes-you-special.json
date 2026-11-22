@@ -1,0 +1,60 @@
+{
+ "id": "pb-what-makes-you-special",
+ "title": "What Makes You Special?",
+ "pages": [
+  {
+   "img": "img/pb-what-makes-you-special/02.webp",
+   "text": "Who are you?\n\nI am a turtle.\n\nWhat's makes you special?\n\nI have the shiniest shell, of all the turtles in the world!\n\nNorth, South, East, West,\n\nOf all the turtles, I'm the best!"
+  },
+  {
+   "img": "img/pb-what-makes-you-special/03.webp",
+   "text": "Who are you?\n\nI am a cheetah.\n\nWhat makes you special?\n\nI run the fastest, of all the cheetahs in the world!\n\nNorth, South, East, West,\n\nOf all the cheetahs, I'm the best!"
+  },
+  {
+   "img": "img/pb-what-makes-you-special/04.webp",
+   "text": "Who are you?\n\nI am a whale.\n\nWhat makes you special?\n\nI have the biggest tummy, of all the whales in the world!\n\nNorth, South, East, West,\n\nOf all the whales, I'm the best!"
+  },
+  {
+   "img": "img/pb-what-makes-you-special/05.webp",
+   "text": "Who are you?\n\nI am a canary.\n\nWhat makes you special?\n\nI have the sweetest voice, of all the canaries in the world!\n\nNorth, South, East, West,\n\nOf all the canaries, I'm the best!"
+  },
+  {
+   "img": "img/pb-what-makes-you-special/06.webp",
+   "text": "Who are you?\n\nI am an elephant.\n\nWhat makes you special?\n\nI have the brightest memory, of all the elephants in the world!\n\nNorth, South, East, West,\n\nOf all the elephants, I'm the best!"
+  },
+  {
+   "img": "img/pb-what-makes-you-special/07.webp",
+   "text": "Who are you?\n\nI am a frog.\n\nWhat makes you special?\n\nI hop the highest, of all the frogs in the world!\n\nNorth, South, East, West,\n\nOf all the frogs, I'm the best!"
+  },
+  {
+   "img": "img/pb-what-makes-you-special/08.webp",
+   "text": "Who are you?\n\nI am a bee.\n\nWhat makes you special?\n\nI make the yummiest honey, of all the bees in the world!\n\nNorth, South, East, West,\n\nOf all the bees, I'm the best!"
+  },
+  {
+   "img": "img/pb-what-makes-you-special/09.webp",
+   "text": "Who are you?\n\nI am a dinosaur.\n\nWhat makes you special?\n\nI have the sharpest spikes, of all the dinosaurs in the world!\n\nNorth, South, East, West,\n\nOf all the dinosaurs I'm the best!"
+  },
+  {
+   "img": "img/pb-what-makes-you-special/10.webp",
+   "text": "Who are you?\n\nI am a boy.\n\nWhat makes you special?\n\nI am ME. There is only one ME in the world!\n\nNorth, South, East, West,\n\nI DON'T have to be better than the rest!"
+  }
+ ],
+ "words": 305,
+ "minutes": 5,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Nalini Sorensen"
+  ],
+  "illustrators": [
+   "Greystroke"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1928-what-makes-you-special",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

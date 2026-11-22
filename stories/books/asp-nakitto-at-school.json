@@ -1,0 +1,59 @@
+{
+ "id": "asp-nakitto-at-school",
+ "title": "Nakitto at school",
+ "pages": [
+  {
+   "img": "img/asp-nakitto-at-school/02.webp",
+   "text": "Last Monday,Nakitto started school."
+  },
+  {
+   "img": "img/asp-nakitto-at-school/03.webp",
+   "text": "She entered a new class and met new friends."
+  },
+  {
+   "img": "img/asp-nakitto-at-school/04.webp",
+   "text": "Nakitto likes picture books."
+  },
+  {
+   "img": "img/asp-nakitto-at-school/05.webp",
+   "text": "They went out for more lessons."
+  },
+  {
+   "img": "img/asp-nakitto-at-school/06.webp",
+   "text": "They learn letter sounds."
+  },
+  {
+   "img": "img/asp-nakitto-at-school/07.webp",
+   "text": "They rest after lessons. Nakitto sleeps near the teacher."
+  },
+  {
+   "img": "img/asp-nakitto-at-school/08.webp",
+   "text": "They go for study tours."
+  },
+  {
+   "img": "img/asp-nakitto-at-school/09.webp",
+   "text": "Nakitto reads with her mother at home."
+  }
+ ],
+ "words": 48,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Annet Ssebaggala"
+  ],
+  "illustrators": [
+   "Genevieve Terblanche",
+   "Wiehan de Jager",
+   "Vusi Malindi",
+   "Karlien de Villiers"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/nakitto-school",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "id": "pb-holiday-fun",
+ "title": "Holiday Fun",
+ "pages": [
+  {
+   "img": "img/pb-holiday-fun/02.webp",
+   "text": "One day there are 3 warriors. We fight evil to protect our India. But we lost and we fought back with full might and took back our India."
+  },
+  {
+   "img": "img/pb-holiday-fun/03.webp",
+   "text": "Dancing is fun!!!"
+  },
+  {
+   "img": "img/pb-holiday-fun/04.webp",
+   "text": "Swimming in the beach is awesome!!! Let's do it again!!!"
+  },
+  {
+   "img": "img/pb-holiday-fun/05.webp",
+   "text": "we love beach!!!"
+  }
+ ],
+ "words": 44,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ameyy & Jhari C"
+  ],
+  "illustrators": [
+   "Ameyy & Jhari C",
+   "samyukta guntreddy"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3547-holiday-fun",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

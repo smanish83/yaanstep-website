@@ -1,0 +1,56 @@
+{
+ "id": "asp-kabali-and-kateera",
+ "title": "Kabali and Kateera",
+ "pages": [
+  {
+   "img": "img/asp-kabali-and-kateera/02.webp",
+   "text": "Kabali and Kateera are friends."
+  },
+  {
+   "img": "img/asp-kabali-and-kateera/03.webp",
+   "text": "Kabali has a cat. Kateera has a rabbit."
+  },
+  {
+   "img": "img/asp-kabali-and-kateera/04.webp",
+   "text": "Kabali plays with his cat every day."
+  },
+  {
+   "img": "img/asp-kabali-and-kateera/05.webp",
+   "text": "Kateera feeds his rabbit twice a day."
+  },
+  {
+   "img": "img/asp-kabali-and-kateera/06.webp",
+   "text": "Kateera's rabbit produced six babies. Two rabbits were black. Two rabbits were brown. Two rabbits were white."
+  },
+  {
+   "img": "img/asp-kabali-and-kateera/07.webp",
+   "text": "Kabali's cat produced three babies. One kitten was male. Two kittens were female."
+  },
+  {
+   "img": "img/asp-kabali-and-kateera/08.webp",
+   "text": "Kateera sold three of the baby rabbits. He used the money to buy books and pencils to use at school."
+  },
+  {
+   "img": "img/asp-kabali-and-kateera/09.webp",
+   "text": "Kabali did not sell any kittens. The people in the village did not want cats."
+  }
+ ],
+ "words": 92,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Milly Kasule"
+  ],
+  "illustrators": [
+   "Franz Phooko"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/kabali-and-kateera-0",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

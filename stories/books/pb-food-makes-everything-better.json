@@ -1,0 +1,47 @@
+{
+ "id": "pb-food-makes-everything-better",
+ "title": "Food makes everything better!",
+ "pages": [
+  {
+   "img": "img/pb-food-makes-everything-better/02.webp",
+   "text": "One day, Dia was listening to the story of king Thutankan. It was a very sad story. Dia felt hungry. Amma gave her pakodas. It made her feel better."
+  },
+  {
+   "img": "img/pb-food-makes-everything-better/03.webp",
+   "text": "Collette was a nice girl, but she was weak in studies. This made her very miserable. Mom gave her some milk and biscuits. She was no longer a weak girl."
+  },
+  {
+   "img": "img/pb-food-makes-everything-better/04.webp",
+   "text": "Baloo was a greedy bear. He liked eating sardines. One day, the lake had dried up and there was no water. So Baloo made a wish that it would rain fish. And it did!Baloo ate till his heart was contended."
+  },
+  {
+   "img": "img/pb-food-makes-everything-better/05.webp",
+   "text": "Merani was a little girl. She loved pakodas and gujias. But her mother was not buying them for her. She felt sad. One day, her mom bought pakodas for her. It made Merani happy."
+  },
+  {
+   "img": "img/pb-food-makes-everything-better/06.webp",
+   "text": "Madhu and her mother were making a kolam for pongal. After putting the kolam, Madhu was tired. But her mother gave her Thepla's. Madhu was not tired anymore.\n\nSo, remember folks\n\n!!!! FOOD MAKES EVERYTHING BETTER!!!!"
+  }
+ ],
+ "words": 168,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Rachita Uday Kumar"
+  ],
+  "illustrators": [
+   "Delwyn Remedios",
+   "Lovely Samhitha",
+   "Priya Kuriyan",
+   "Taposhi Ghoshal"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3372-food-makes-everything-better",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

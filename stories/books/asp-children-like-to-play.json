@@ -1,0 +1,78 @@
+{
+ "id": "asp-children-like-to-play",
+ "title": "Children like to play",
+ "pages": [
+  {
+   "img": "img/asp-children-like-to-play/02.webp",
+   "text": "Young children like to play with Toys."
+  },
+  {
+   "img": "img/asp-children-like-to-play/03.webp",
+   "text": "I like skipping and swinging."
+  },
+  {
+   "img": "img/asp-children-like-to-play/04.webp",
+   "text": "Connie likes hide and seek."
+  },
+  {
+   "img": "img/asp-children-like-to-play/05.webp",
+   "text": "Some boys play football."
+  },
+  {
+   "img": "img/asp-children-like-to-play/06.webp",
+   "text": "Sam likes running."
+  },
+  {
+   "img": "img/asp-children-like-to-play/07.webp",
+   "text": "Some girls play net ball."
+  },
+  {
+   "img": "img/asp-children-like-to-play/08.webp",
+   "text": "Elsie likes to jump like a frog."
+  },
+  {
+   "img": "img/asp-children-like-to-play/09.webp",
+   "text": "Girls play with water."
+  },
+  {
+   "img": "img/asp-children-like-to-play/10.webp",
+   "text": "Nelly likes sliding."
+  },
+  {
+   "img": "img/asp-children-like-to-play/11.webp",
+   "text": "Children like to play wedding games."
+  },
+  {
+   "img": "img/asp-children-like-to-play/12.webp",
+   "text": "Keisha and Dona like to play with dolls."
+  },
+  {
+   "img": "img/asp-children-like-to-play/13.webp",
+   "text": "What about you?"
+  }
+ ],
+ "words": 60,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Annet Ssebaggala"
+  ],
+  "illustrators": [
+   "Mlungisi Dlamini",
+   "Eden Daniels",
+   "Wiehan de Jager",
+   "Sue Kramer",
+   "Zablon Alex Nguku",
+   "Catherine Groenewald",
+   "Angie & Upesh"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/children-play",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

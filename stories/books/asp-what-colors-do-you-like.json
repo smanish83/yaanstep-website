@@ -1,0 +1,77 @@
+{
+ "id": "asp-what-colors-do-you-like",
+ "title": "What colors do you like?",
+ "pages": [
+  {
+   "img": "img/asp-what-colors-do-you-like/02.webp",
+   "text": "Dinah likes a purple dress."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/03.webp",
+   "text": "My aunt likes an orange dress.\n\nDad bought it for her."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/04.webp",
+   "text": "Jjajja likes a blue dress."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/05.webp",
+   "text": "Dan likes a red van"
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/06.webp",
+   "text": "The baby likes a yellow chair."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/07.webp",
+   "text": "Customers like red tomatoes."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/08.webp",
+   "text": "School children like blue tops for games."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/09.webp",
+   "text": "My sister likes a yellow blouse."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/10.webp",
+   "text": "Jane likes a pink dress."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/11.webp",
+   "text": "My neighbor likes a yellow cottage.\n\nIt looks nice."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/12.webp",
+   "text": "Insects like green places."
+  },
+  {
+   "img": "img/asp-what-colors-do-you-like/13.webp",
+   "text": "My friend and I like green apple."
+  }
+ ],
+ "words": 74,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Annet Ssebaggala"
+  ],
+  "illustrators": [
+   "Sandy Lightly",
+   "Catherine Groenewald",
+   "Wiehan de Jager",
+   "Sue Kramer",
+   "Rijuta Ghate",
+   "Amir Bachir António Necas"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/what-colors-do-you-0",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

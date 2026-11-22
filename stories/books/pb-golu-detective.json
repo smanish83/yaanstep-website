@@ -1,0 +1,44 @@
+{
+ "id": "pb-golu-detective",
+ "title": "Golu Detective",
+ "pages": [
+  {
+   "img": "img/pb-golu-detective/02.webp",
+   "text": "Little Golu was roaming in a jungle with a magic torch in his hand. Golu always wanted to become a detective."
+  },
+  {
+   "img": "img/pb-golu-detective/03.webp",
+   "text": "Suddenly he saw red colored umbrellas in the jungle. They were very big in size."
+  },
+  {
+   "img": "img/pb-golu-detective/04.webp",
+   "text": "Golu went near the red umbrellas. And look what he found with his magic torch?\n\nA cute little girl."
+  },
+  {
+   "img": "img/pb-golu-detective/05.webp",
+   "text": "She was lost in the jungle while playing. So she was very sad."
+  },
+  {
+   "img": "img/pb-golu-detective/06.webp",
+   "text": "Golu promised her to take her back home. And they became good friends"
+  }
+ ],
+ "words": 81,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Swetapadma Satpathy"
+  ],
+  "illustrators": [
+   "Megha Vishwanath"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2413-golu-detective",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

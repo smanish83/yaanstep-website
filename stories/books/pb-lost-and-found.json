@@ -1,0 +1,68 @@
+{
+ "id": "pb-lost-and-found",
+ "title": "Lost and Found",
+ "pages": [
+  {
+   "img": "img/pb-lost-and-found/02.webp",
+   "text": "Not here, not there.\n\nWhere have you gone?"
+  },
+  {
+   "img": "img/pb-lost-and-found/03.webp",
+   "text": "Not on the sofa.\n\nNot under the cot."
+  },
+  {
+   "img": "img/pb-lost-and-found/04.webp",
+   "text": "Not in the box.\n\nNot under my sister's frock."
+  },
+  {
+   "img": "img/pb-lost-and-found/05.webp",
+   "text": "Not under the pillow.\n\nNot in my bag.\n\nSob, sob, where have you gone?"
+  },
+  {
+   "img": "img/pb-lost-and-found/06.webp",
+   "text": "I have looked in every room,\n\nl have looked under every book."
+  },
+  {
+   "img": "img/pb-lost-and-found/07.webp",
+   "text": "I have looked under the chair,\n\nI have looked under the stool.\n\nWhere have you gone?"
+  },
+  {
+   "img": "img/pb-lost-and-found/08.webp",
+   "text": "Soon granny came back from her walk.\n\n\"Look what I found in the park.\""
+  },
+  {
+   "img": "img/pb-lost-and-found/09.webp",
+   "text": "\"It can sway, it can bounce.\n\nIt can spin, it can dangle.\n\nHa-ha, hee-hee,\" said Granny with a giggle."
+  },
+  {
+   "img": "img/pb-lost-and-found/10.webp",
+   "text": "Oh Granny! Thank you so much!\n\nYou have found my dear yo-yo!"
+  },
+  {
+   "img": "img/pb-lost-and-found/11.webp",
+   "text": "\"Yo-yo? What a funny name!\n\nWhat a funny toy!\n\nI want to play with it,\n\nIt gives me so much joy!\""
+  },
+  {
+   "img": "img/pb-lost-and-found/12.webp",
+   "text": "Giggle, giggle, giggling away,\n\nGranny played, with my little toy.\n\nFor the rest of the day!"
+  }
+ ],
+ "words": 149,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Sukhada Rahalkar"
+  ],
+  "illustrators": [
+   "Sukhada Rahalkar"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/356-lost-and-found",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

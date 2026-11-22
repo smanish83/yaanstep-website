@@ -1,0 +1,70 @@
+{
+ "id": "pb-look-at-me",
+ "title": "Look At Me",
+ "pages": [
+  {
+   "img": "img/pb-look-at-me/02.webp",
+   "text": "Look at us.\n\nDo you want to be our friend?"
+  },
+  {
+   "img": "img/pb-look-at-me/03.webp",
+   "text": "My legs are very strong.\n\nI can run really fast with them."
+  },
+  {
+   "img": "img/pb-look-at-me/04.webp",
+   "text": "And my arms... such a nice swing!"
+  },
+  {
+   "img": "img/pb-look-at-me/05.webp",
+   "text": "I like to draw.\n\nI use my hands for drawing."
+  },
+  {
+   "img": "img/pb-look-at-me/06.webp",
+   "text": "Should I draw your picture?\n\nI can see you with my eyes."
+  },
+  {
+   "img": "img/pb-look-at-me/07.webp",
+   "text": "The bird sings a sweet song.\n\nI can hear it with my ears."
+  },
+  {
+   "img": "img/pb-look-at-me/08.webp",
+   "text": "I think Ma is making halwa.\n\nI can smell it with my nose."
+  },
+  {
+   "img": "img/pb-look-at-me/09.webp",
+   "text": "Oh! This sugarcane is so tough! But my teeth are strong too!"
+  },
+  {
+   "img": "img/pb-look-at-me/10.webp",
+   "text": "It is very sweet.\n\nMy tongue just told me."
+  },
+  {
+   "img": "img/pb-look-at-me/11.webp",
+   "text": "I can sing.\n\nShould I sing you a song?"
+  },
+  {
+   "img": "img/pb-look-at-me/12.webp",
+   "text": "Ma says I have a good voice. Does it come from my throat?"
+  }
+ ],
+ "words": 120,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Pankaj Chaturvedi"
+  ],
+  "illustrators": [
+   "Ajit Narayan"
+  ],
+  "translators": [
+   "Manisha Chaudhry"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/183-yeh-main-hoon",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

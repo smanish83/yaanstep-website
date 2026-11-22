@@ -1,0 +1,54 @@
+{
+ "id": "asp-who-is-big",
+ "title": "Who is Big?",
+ "pages": [
+  {
+   "img": "img/asp-who-is-big/02.webp",
+   "text": "Ant looked at the little plants and pebbles around him. \"I am big!\" he said."
+  },
+  {
+   "img": "img/asp-who-is-big/03.webp",
+   "text": "\"No, Ant. You are not big,\" said Squirrel. \"I am big!\""
+  },
+  {
+   "img": "img/asp-who-is-big/04.webp",
+   "text": "\"No, Squirrel. You are not big,\" said Cat. \"I am big!\""
+  },
+  {
+   "img": "img/asp-who-is-big/05.webp",
+   "text": "\"No, Cat. You are not big,\" said Hyena, \"I am big!\""
+  },
+  {
+   "img": "img/asp-who-is-big/06.webp",
+   "text": "\"No, Hyena. You are not big,\" said Rhinoceros, \"I am big!\""
+  },
+  {
+   "img": "img/asp-who-is-big/07.webp",
+   "text": "\"No, Rhinoceros. You are not big,\" said Elephant, \"I am big!\""
+  },
+  {
+   "img": "img/asp-who-is-big/08.webp",
+   "text": "Then Elephant looked up at the sky. The sky was full of stars. The sky was big and wide forever in every direction. \"No, I am not big, either! All of us are small!\""
+  }
+ ],
+ "words": 104,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Sara Saunders"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "blackmoondev.com",
+   "Karen Lilje"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/who-big",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

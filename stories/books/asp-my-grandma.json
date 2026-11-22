@@ -1,0 +1,44 @@
+{
+ "id": "asp-my-grandma",
+ "title": "My grandma.",
+ "pages": [
+  {
+   "img": "img/asp-my-grandma/02.webp",
+   "text": "Grandma greets me"
+  },
+  {
+   "img": "img/asp-my-grandma/03.webp",
+   "text": "We ran to look at grandma's cow."
+  },
+  {
+   "img": "img/asp-my-grandma/04.webp",
+   "text": "I caught up with her."
+  },
+  {
+   "img": "img/asp-my-grandma/05.webp",
+   "text": "I ran away from her."
+  },
+  {
+   "img": "img/asp-my-grandma/06.webp",
+   "text": "Grandma got very tired."
+  }
+ ],
+ "words": 24,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Augustine Napagi"
+  ],
+  "illustrators": [
+   "Ingrid Schechter"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-grandma",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

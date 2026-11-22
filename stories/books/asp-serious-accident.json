@@ -1,0 +1,58 @@
+{
+ "id": "asp-serious-accident",
+ "title": "Serious accident",
+ "pages": [
+  {
+   "img": "img/asp-serious-accident/02.webp",
+   "text": "One day my sister and I were walking near the road."
+  },
+  {
+   "img": "img/asp-serious-accident/03.webp",
+   "text": "A big truck was driving down the hill."
+  },
+  {
+   "img": "img/asp-serious-accident/04.webp",
+   "text": "A car was speeding up the hill."
+  },
+  {
+   "img": "img/asp-serious-accident/05.webp",
+   "text": "The truck driver was talking on his cell phone. He was not looking at the road."
+  },
+  {
+   "img": "img/asp-serious-accident/06.webp",
+   "text": "The truck smashed into the car!"
+  },
+  {
+   "img": "img/asp-serious-accident/07.webp",
+   "text": "An ambulance and the police came to help."
+  },
+  {
+   "img": "img/asp-serious-accident/08.webp",
+   "text": "Two tow trucks came. One towed the truck. The other towed the car."
+  },
+  {
+   "img": "img/asp-serious-accident/09.webp",
+   "text": "We saw everything. We were shocked."
+  }
+ ],
+ "words": 75,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Zanele Buthelezi",
+   "Thembani Dladla",
+   "Clare Verbeek"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/serious-accident",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

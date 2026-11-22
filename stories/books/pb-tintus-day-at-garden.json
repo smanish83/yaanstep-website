@@ -1,0 +1,51 @@
+{
+ "id": "pb-tintus-day-at-garden",
+ "title": "Tintu's Day at Garden",
+ "pages": [
+  {
+   "img": "img/pb-tintus-day-at-garden/02.webp",
+   "text": "One evening Tintu was playing with his garden friends."
+  },
+  {
+   "img": "img/pb-tintus-day-at-garden/03.webp",
+   "text": "He was enjoying the bird's play and suddenly.."
+  },
+  {
+   "img": "img/pb-tintus-day-at-garden/04.webp",
+   "text": "a beetle called Tintu and asked him to feed it with something delicious."
+  },
+  {
+   "img": "img/pb-tintus-day-at-garden/05.webp",
+   "text": "Tintu rushed home and took some vegetables."
+  },
+  {
+   "img": "img/pb-tintus-day-at-garden/06.webp",
+   "text": "He made a tasty and yummy soup."
+  },
+  {
+   "img": "img/pb-tintus-day-at-garden/07.webp",
+   "text": "The beetle was happy to taste the soup."
+  }
+ ],
+ "words": 52,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ambika Balamurugan"
+  ],
+  "illustrators": [
+   "Kabini Amin",
+   "Muniza Shariq",
+   "Rajeev Verma 'Banjara'",
+   "Soumya Menon"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4827-tintu-s-day-at-garden",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

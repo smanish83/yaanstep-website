@@ -1,0 +1,70 @@
+{
+ "id": "pb-smile-please",
+ "title": "Smile Please!",
+ "pages": [
+  {
+   "img": "img/pb-smile-please/02.webp",
+   "text": "A fawn was racing in the forest."
+  },
+  {
+   "img": "img/pb-smile-please/03.webp",
+   "text": "He was ahead of the rabbit."
+  },
+  {
+   "img": "img/pb-smile-please/04.webp",
+   "text": "He was ahead of the elephant."
+  },
+  {
+   "img": "img/pb-smile-please/05.webp",
+   "text": "He leapt and cleared the stream."
+  },
+  {
+   "img": "img/pb-smile-please/06.webp",
+   "text": "He ran past the crumbling wall."
+  },
+  {
+   "img": "img/pb-smile-please/07.webp",
+   "text": "There was a large boulder on the grassy plain. He stumbled and fell down."
+  },
+  {
+   "img": "img/pb-smile-please/08.webp",
+   "text": "He burst into tears."
+  },
+  {
+   "img": "img/pb-smile-please/09.webp",
+   "text": "The monkey massaged his leg. Tears flowed from the fawn's eyes."
+  },
+  {
+   "img": "img/pb-smile-please/10.webp",
+   "text": "Brother Bear picked him up. The fawn didn't stop crying."
+  },
+  {
+   "img": "img/pb-smile-please/11.webp",
+   "text": "His mother came. She said, “Look, we'll beat up this bad boulder!”"
+  },
+  {
+   "img": "img/pb-smile-please/12.webp",
+   "text": "The fawn said, “Oh, don't do that or he will also start crying.” His mother laughed. So did the fawn."
+  }
+ ],
+ "words": 102,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Sanjiv Jaiswal 'Sanjay'"
+  ],
+  "illustrators": [
+   "Ajit Narayan"
+  ],
+  "translators": [
+   "Manisha Chaudhry"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1-veh-hans-diyaa",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

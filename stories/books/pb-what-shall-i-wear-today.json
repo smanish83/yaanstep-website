@@ -1,0 +1,60 @@
+{
+ "id": "pb-what-shall-i-wear-today",
+ "title": "What Shall I Wear Today?",
+ "pages": [
+  {
+   "img": "img/pb-what-shall-i-wear-today/02.webp",
+   "text": "Do you get the feeling sometimes that none of your clothes are just right? I do!"
+  },
+  {
+   "img": "img/pb-what-shall-i-wear-today/03.webp",
+   "text": "The shirt buttons trouble me.\n\nThe pants feel too tight on me."
+  },
+  {
+   "img": "img/pb-what-shall-i-wear-today/04.webp",
+   "text": "The lehenga seems to trip me.\n\nThe choli does not fit me."
+  },
+  {
+   "img": "img/pb-what-shall-i-wear-today/05.webp",
+   "text": "My salwar keeps slipping.\n\nThe golden zari keeps itching."
+  },
+  {
+   "img": "img/pb-what-shall-i-wear-today/06.webp",
+   "text": "The churidaar pulls and tugs everywhere.\n\nNothing perfect seems to be there."
+  },
+  {
+   "img": "img/pb-what-shall-i-wear-today/07.webp",
+   "text": "This frock is too bright.\n\nBrother's T-shirt? What a funny sight!"
+  },
+  {
+   "img": "img/pb-what-shall-i-wear-today/08.webp",
+   "text": "Papa's kurta is rather long.\n\nMummy's sari is wrapped all wrong.\n\nSome things are well out of my reach. Oh, it really makes me want to screech!"
+  },
+  {
+   "img": "img/pb-what-shall-i-wear-today/09.webp",
+   "text": "These clothes seem to say, ‘We shall trouble you all day.'\n\nBut I have made up my mind today..."
+  },
+  {
+   "img": "img/pb-what-shall-i-wear-today/10.webp",
+   "text": "... to mix and match these clothes in a way that I have my very own style today!"
+  }
+ ],
+ "words": 135,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Natasha Sharma"
+  ],
+  "illustrators": [
+   "Tanvi Choudhury"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/191-what-shall-i-wear-today",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

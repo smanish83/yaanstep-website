@@ -1,0 +1,64 @@
+{
+ "id": "pb-toothpaste-trouble",
+ "title": "Toothpaste trouble!!",
+ "pages": [
+  {
+   "img": "img/pb-toothpaste-trouble/02.webp",
+   "text": "Tilia and Max lived in Carlafonia. It was the 1960's. Their getting up routine was to get up and brush. In those days, they used to brush with wood and cream."
+  },
+  {
+   "img": "img/pb-toothpaste-trouble/03.webp",
+   "text": "They found it very difficult to brush because the toothbrush was made out of wood and they used cream as paste."
+  },
+  {
+   "img": "img/pb-toothpaste-trouble/04.webp",
+   "text": "Soon, the whole country started complaining about the paste. Granny's teeth had rot."
+  },
+  {
+   "img": "img/pb-toothpaste-trouble/05.webp",
+   "text": "People started putting the cans of cream in the junkyard."
+  },
+  {
+   "img": "img/pb-toothpaste-trouble/06.webp",
+   "text": "So one day, Mr. Wilbur, the owner of the cream factory was passing a painting and he saw the painter pouring paint out of a tube. So he got an idea."
+  },
+  {
+   "img": "img/pb-toothpaste-trouble/07.webp",
+   "text": "So he thought he would make pastes like painting tubes."
+  },
+  {
+   "img": "img/pb-toothpaste-trouble/08.webp",
+   "text": "He put in sugar and wood."
+  },
+  {
+   "img": "img/pb-toothpaste-trouble/09.webp",
+   "text": "And he also put in fruits, vegetables, neem and cloves."
+  },
+  {
+   "img": "img/pb-toothpaste-trouble/10.webp",
+   "text": "In 2 days time, the toothpastes were made."
+  },
+  {
+   "img": "img/pb-toothpaste-trouble/11.webp",
+   "text": "From that day on, people did'nt have to use cream!"
+  }
+ ],
+ "words": 150,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Rachita Uday Kumar"
+  ],
+  "illustrators": [
+   "Rajiv Eipe"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3580-toothpaste-trouble",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

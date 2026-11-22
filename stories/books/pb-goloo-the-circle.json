@@ -1,0 +1,56 @@
+{
+ "id": "pb-goloo-the-circle",
+ "title": "Goloo the Circle",
+ "pages": [
+  {
+   "img": "img/pb-goloo-the-circle/02.webp",
+   "text": "I am Goloo the circle.\n\nEveryone likes me.\n\nYou can find me\n\neverywhere, any time!"
+  },
+  {
+   "img": "img/pb-goloo-the-circle/03.webp",
+   "text": "The sun looks like me.\n\nWhen it's too hot,\n\nyou need an umbrella which also\n\nlooks like half of me."
+  },
+  {
+   "img": "img/pb-goloo-the-circle/04.webp",
+   "text": "At night, the moon\n\nlooks like me with a smile.\n\nI look at it through\n\nthe owl's round eyes."
+  },
+  {
+   "img": "img/pb-goloo-the-circle/05.webp",
+   "text": "Huge watermelons, apples, oranges, tomatoes,\n\neven the tiny lemons - all look like me... and mithai!\n\nJuicy rasgullas, syrupy gulabjamuns, lovely laddus...\n\nare among the many sweets that look like me."
+  },
+  {
+   "img": "img/pb-goloo-the-circle/06.webp",
+   "text": "Animals want me to decorate them.\n\nThe cheetah, the chital deer,\n\nhave me all over their skin.\n\nI'm there on ladybirds and butterflies too!"
+  },
+  {
+   "img": "img/pb-goloo-the-circle/07.webp",
+   "text": "In the playground,\n\nI'm there as a ball,\n\na hoopla ring and\n\nmany other joyful games!"
+  },
+  {
+   "img": "img/pb-goloo-the-circle/08.webp",
+   "text": "Why, your trucks,\n\naeroplanes, cars, cycles,\n\nwould not be able to move...\n\nif it weren't for me."
+  },
+  {
+   "img": "img/pb-goloo-the-circle/09.webp",
+   "text": "And yet there is one place where I am not welcome.\n\nOn your report card! Sorry friends!\n\nI also feel sad when that happens.\n\nYou will have to work hard to change that!"
+  }
+ ],
+ "words": 174,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Jagdish Joshi"
+  ],
+  "illustrators": [
+   "Jagdish Joshi"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/90-goloo-the-circle",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

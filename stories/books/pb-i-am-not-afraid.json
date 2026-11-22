@@ -1,0 +1,68 @@
+{
+ "id": "pb-i-am-not-afraid",
+ "title": "I Am Not Afraid!",
+ "pages": [
+  {
+   "img": "img/pb-i-am-not-afraid/02.webp",
+   "text": "I am a big girl. I go out of the house alone."
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/03.webp",
+   "text": "It is so dark! Is someone there? Who is it?"
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/04.webp",
+   "text": "Oh, it is only the cat. I am not afraid."
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/05.webp",
+   "text": "I can see a big dark thing outside! What is it?"
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/06.webp",
+   "text": "Oh, it is only the well. I am not afraid."
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/07.webp",
+   "text": "And that sound! Creak creak creak! What is it?"
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/08.webp",
+   "text": "Only my sister drawing water from the well! I am not afraid."
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/09.webp",
+   "text": "I hear footsteps! Who is it? Who is it?"
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/10.webp",
+   "text": "It is my mother. She has come home from the fields."
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/11.webp",
+   "text": "I am a big girl now."
+  },
+  {
+   "img": "img/pb-i-am-not-afraid/12.webp",
+   "text": "I am not afraid of anything!"
+  }
+ ],
+ "words": 106,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Mini Shrinivasan"
+  ],
+  "illustrators": [
+   "Rayika Sen"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/959-i-am-not-afraid",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

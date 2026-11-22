@@ -1,0 +1,64 @@
+{
+ "id": "asp-things-i-know",
+ "title": "Things I know",
+ "pages": [
+  {
+   "img": "img/asp-things-i-know/02.webp",
+   "text": "This is a Manyatta. It is my home. My home is in Turkana County."
+  },
+  {
+   "img": "img/asp-things-i-know/03.webp",
+   "text": "This is a camel. In Turkana County people keep many different animals. But the camel is very important."
+  },
+  {
+   "img": "img/asp-things-i-know/04.webp",
+   "text": "These are my teachers. I like going to school. My school is called Lolupe Primary School. I like my Art teacher very much."
+  },
+  {
+   "img": "img/asp-things-i-know/05.webp",
+   "text": "This is a ship. Ships are big. They are used to transport people and goods on water. If I go to Mombasa, I can see a ship."
+  },
+  {
+   "img": "img/asp-things-i-know/06.webp",
+   "text": "This is a bed. I like the bed that my father made for me. I share it with my younger brother. It is comfortable."
+  },
+  {
+   "img": "img/asp-things-i-know/07.webp",
+   "text": "This is a cock. At home, we have two cocks. We also have many chickens. The chickens lay many eggs."
+  },
+  {
+   "img": "img/asp-things-i-know/08.webp",
+   "text": "This is a mouse. Mice are dangerous animals. They eat food. They also destroy clothes. They can cause disease."
+  },
+  {
+   "img": "img/asp-things-i-know/09.webp",
+   "text": "This is a dog. Dogs are domestic animals. Our dog is called Daa. He barks a lot."
+  },
+  {
+   "img": "img/asp-things-i-know/10.webp",
+   "text": "This is an umbrella. My parents have a big umbrella. It has red, blue, orange and green colours. When it rains, we use an umbrella so we do not get wet."
+  },
+  {
+   "img": "img/asp-things-i-know/11.webp",
+   "text": "I am in class two and I know many things. I want to know many more. What I do not know, I ask my parents or my teacher."
+  }
+ ],
+ "words": 221,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Michael Nakuwa"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/things-i-know",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

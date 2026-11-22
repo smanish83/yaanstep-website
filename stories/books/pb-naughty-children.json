@@ -1,0 +1,28 @@
+{
+ "id": "pb-naughty-children",
+ "title": "Naughty Children",
+ "pages": [
+  {
+   "img": "img/pb-naughty-children/02.webp",
+   "text": "One day teacher was absent. All the naughty students were playing in the class. One of the student writing on the board and he said all the students come here. That boy teaching a lesson and all the students enjoying the day."
+  }
+ ],
+ "words": 42,
+ "minutes": 1,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Ajay Chandel"
+  ],
+  "illustrators": [
+   "Soumya Menon"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2546-naughty-children",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

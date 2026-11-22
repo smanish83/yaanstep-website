@@ -1,0 +1,56 @@
+{
+ "id": "asp-rooster-and-hare",
+ "title": "Rooster and Hare",
+ "pages": [
+  {
+   "img": "img/asp-rooster-and-hare/02.webp",
+   "text": "Once upon a time, there was a rooster and a hare. They were very good friends."
+  },
+  {
+   "img": "img/asp-rooster-and-hare/03.webp",
+   "text": "One night, Hare visited Rooster and his family at home. They enjoyed supper together."
+  },
+  {
+   "img": "img/asp-rooster-and-hare/04.webp",
+   "text": "Then came the time to go to bed. Hare saw that as Rooster and his family slept, their heads were hidden."
+  },
+  {
+   "img": "img/asp-rooster-and-hare/05.webp",
+   "text": "Hare saw that Rooster and his family slept very well. He was not able to sleep the whole night."
+  },
+  {
+   "img": "img/asp-rooster-and-hare/06.webp",
+   "text": "In the morning, Hare wanted to know Rooster's secret. \"Where do you put your heads at night?\" he asked."
+  },
+  {
+   "img": "img/asp-rooster-and-hare/07.webp",
+   "text": "Rooster decided to play a joke on Hare. He said, \"My friend, we birds have a secret for going to sleep. At bedtime, we chop off our heads. Without heads, we sleep very well.\""
+  },
+  {
+   "img": "img/asp-rooster-and-hare/08.webp",
+   "text": "\"Then in the morning, we put our heads back on,\" explained Rooster."
+  },
+  {
+   "img": "img/asp-rooster-and-hare/09.webp",
+   "text": "Hare went home and told his family the secret of the chickens. The Hare family decided to try it themselves!\n\nWhat do you think happened?"
+  }
+ ],
+ "words": 160,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Geoffrey Thiiru"
+  ],
+  "illustrators": [
+   "Duane Arthur"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/rooster-and-hare",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

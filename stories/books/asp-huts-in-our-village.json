@@ -1,0 +1,61 @@
+{
+ "id": "asp-huts-in-our-village",
+ "title": "Huts in our village",
+ "pages": [
+  {
+   "img": "img/asp-huts-in-our-village/02.webp",
+   "text": "A hut is made using poles, grass and mud."
+  },
+  {
+   "img": "img/asp-huts-in-our-village/03.webp",
+   "text": "A hut has got one door and two windows."
+  },
+  {
+   "img": "img/asp-huts-in-our-village/04.webp",
+   "text": "Huts are very good to stay in during dry seasons because they are cool."
+  },
+  {
+   "img": "img/asp-huts-in-our-village/05.webp",
+   "text": "Huts are also good to stay in When it is raining because you do not hear noise like on iron sheets."
+  },
+  {
+   "img": "img/asp-huts-in-our-village/06.webp",
+   "text": "Huts are very easy to make ."
+  },
+  {
+   "img": "img/asp-huts-in-our-village/07.webp",
+   "text": "Every village in Uganda has got huts."
+  },
+  {
+   "img": "img/asp-huts-in-our-village/08.webp",
+   "text": "BUT our village Nandahabi has got the most beautiful huts."
+  }
+ ],
+ "words": 76,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Yusuf",
+   "Yvonne",
+   "Desire",
+   "Arafat",
+   "Judith",
+   "Susan"
+  ],
+  "illustrators": [
+   "Magriet Brink",
+   "Rob Owen",
+   "Danica Strydom",
+   "Wiehan de Jager",
+   "Kathy Arbuckle"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/huts-our-village",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

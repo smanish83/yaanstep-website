@@ -1,0 +1,74 @@
+{
+ "id": "asp-lion-is-sick",
+ "title": "Lion is sick",
+ "pages": [
+  {
+   "img": "img/asp-lion-is-sick/02.webp",
+   "text": "One day, all the wild animals got together to choose a king. They decided that Lion should be their king."
+  },
+  {
+   "img": "img/asp-lion-is-sick/03.webp",
+   "text": "In celebration of the new king, they had a great big party that went on for a week. They ate, they drank, they sang and they danced."
+  },
+  {
+   "img": "img/asp-lion-is-sick/04.webp",
+   "text": "When the celebration was over, everyone went home."
+  },
+  {
+   "img": "img/asp-lion-is-sick/05.webp",
+   "text": "King Lion went home too. The next day, when Hyena arrived at Lion's house to visit the king, he found Lion was sick in bed. Lion said weakly, \"I have got a terrible illness. I don't know what to do.\""
+  },
+  {
+   "img": "img/asp-lion-is-sick/06.webp",
+   "text": "Hyena said, \"O great king, don't worry. Hare will know the cure for this illness.\"\n\nThe reason he said this was because he wanted to get Hare into trouble with the king. Hyena knew that Hare would not be able to cure Lion's illness."
+  },
+  {
+   "img": "img/asp-lion-is-sick/07.webp",
+   "text": "Lion cheered up and right away sent Hyena to call Hare."
+  },
+  {
+   "img": "img/asp-lion-is-sick/08.webp",
+   "text": "Hyena ran to call Hare and said, \"Let's go to the king because he is very sick. He sent me to call you.\"\n\nSo Hare hurried to Lion's house."
+  },
+  {
+   "img": "img/asp-lion-is-sick/09.webp",
+   "text": "Lion said, \"I am so happy to see, my dear Hare. I have called you because my life is hanging by a thread. I have an incurable illness. Hyena told me that you have the cure for this sickness of mine.\"\n\nAnd Hare replied, \"You are correct, O king. I am able to heal this illness. But the medicine is very difficult to get a hold of.\""
+  },
+  {
+   "img": "img/asp-lion-is-sick/10.webp",
+   "text": "Lion replied, \"Don't you worry, Hare, about this medicine being difficult to find. The bird that flies is the one that is caught. Come on now, tell us about this medicine!\""
+  },
+  {
+   "img": "img/asp-lion-is-sick/11.webp",
+   "text": "And Hare replied, \"O my king, when I say that the medicine is hard to find I don't mean that it is far away. For you to be healed at once, you must make an ointment from the heart of a hyena.\""
+  },
+  {
+   "img": "img/asp-lion-is-sick/12.webp",
+   "text": "When Hyena heard that, he started trembling all over. He was the one who had told Lion that Hare had the medicine to cure his illness! It was useless now to try to contradict Hare about the medicine."
+  },
+  {
+   "img": "img/asp-lion-is-sick/13.webp",
+   "text": "So Hyena ran away. And to this day, hyenas like to eat hares, but always avoid lions."
+  }
+ ],
+ "words": 374,
+ "minutes": 6,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Francisco Escondido",
+   "Little Zebra Books (adaptation)"
+  ],
+  "illustrators": [
+   "Claudio Molina",
+   "Hélder de Paz Alexandre"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/lion-sick",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

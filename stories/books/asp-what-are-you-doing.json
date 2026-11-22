@@ -1,0 +1,56 @@
+{
+ "id": "asp-what-are-you-doing",
+ "title": "What are you doing?",
+ "pages": [
+  {
+   "img": "img/asp-what-are-you-doing/02.webp",
+   "text": "I am singing."
+  },
+  {
+   "img": "img/asp-what-are-you-doing/03.webp",
+   "text": "She is waving."
+  },
+  {
+   "img": "img/asp-what-are-you-doing/04.webp",
+   "text": "I am clapping."
+  },
+  {
+   "img": "img/asp-what-are-you-doing/05.webp",
+   "text": "She is stretching."
+  },
+  {
+   "img": "img/asp-what-are-you-doing/06.webp",
+   "text": "He is calling."
+  },
+  {
+   "img": "img/asp-what-are-you-doing/07.webp",
+   "text": "I am answering."
+  },
+  {
+   "img": "img/asp-what-are-you-doing/08.webp",
+   "text": "She is listening."
+  },
+  {
+   "img": "img/asp-what-are-you-doing/09.webp",
+   "text": "What are you doing?"
+  }
+ ],
+ "words": 25,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Nina Orange"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/what-are-you-doing",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

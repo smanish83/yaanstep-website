@@ -1,0 +1,70 @@
+{
+ "id": "pb-rain-rain",
+ "title": "Rain, Rain",
+ "pages": [
+  {
+   "img": "img/pb-rain-rain/02.webp",
+   "text": "A cloud rolled along merrily in the sky."
+  },
+  {
+   "img": "img/pb-rain-rain/03.webp",
+   "text": "The peacock said, “Why don't you rain? I will dance for you.”"
+  },
+  {
+   "img": "img/pb-rain-rain/04.webp",
+   "text": "The fish said, \"Please rain. I need more water.\""
+  },
+  {
+   "img": "img/pb-rain-rain/05.webp",
+   "text": "The farmer said, “Please rain. I'll plant seeds for the next crop.”"
+  },
+  {
+   "img": "img/pb-rain-rain/06.webp",
+   "text": "Raju said, “If you rain, I'll sail paper boats.”"
+  },
+  {
+   "img": "img/pb-rain-rain/07.webp",
+   "text": "The cloud rained in a shower of shimmering drops."
+  },
+  {
+   "img": "img/pb-rain-rain/08.webp",
+   "text": "The peacock spread its pretty feathers and danced."
+  },
+  {
+   "img": "img/pb-rain-rain/09.webp",
+   "text": "The pond filled up. The fish was happy."
+  },
+  {
+   "img": "img/pb-rain-rain/10.webp",
+   "text": "The farmer started planting seeds."
+  },
+  {
+   "img": "img/pb-rain-rain/11.webp",
+   "text": "Splish! Splash! Splosh! Raju and his friends had a wonderful time in the puddles."
+  },
+  {
+   "img": "img/pb-rain-rain/12.webp",
+   "text": "The cloud filled everybody's heart with joy. It moved on. All the children waved goodbye."
+  }
+ ],
+ "words": 109,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Sanjiv Jaiswal 'Sanjay'"
+  ],
+  "illustrators": [
+   "Ajit Narayan"
+  ],
+  "translators": [
+   "Manisha Chaudhry"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/695-barsaa-baadal",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

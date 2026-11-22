@@ -1,0 +1,52 @@
+{
+ "id": "pb-not-now-not-now",
+ "title": "Not Now, Not Now!",
+ "pages": [
+  {
+   "img": "img/pb-not-now-not-now/02.webp",
+   "text": "I asked Ajji, “May I please have some laddoos?”\n\n“Not now, beta, maybe tomorrow.”\n\nBut I did not want to wait till tomorrow."
+  },
+  {
+   "img": "img/pb-not-now-not-now/03.webp",
+   "text": "I asked Ajja, “May I go out to play with my friends?”\n\n“Not now, beta. Maybe after your nap?”But I did not want to wait till after my nap."
+  },
+  {
+   "img": "img/pb-not-now-not-now/04.webp",
+   "text": "I asked Ma, “May I wear these new clothes?”\n\n“Not now, beta, you can wear them when we go out.” But I did not want to wait till we went out."
+  },
+  {
+   "img": "img/pb-not-now-not-now/05.webp",
+   "text": "I asked Papa, “May I open that nice\n\nlooking box?”\n\n“Not now, not now. You must wait.”\n\nBut I did not want to wait any more."
+  },
+  {
+   "img": "img/pb-not-now-not-now/06.webp",
+   "text": "Why do big people always say,\n\n‘Not now, not now'?\n\nThat night, I went to sleep feeling angry."
+  },
+  {
+   "img": "img/pb-not-now-not-now/07.webp",
+   "text": "The next day, I woke up early and went into the kitchen. Ajji said, “You can eat these laddoos now.”"
+  },
+  {
+   "img": "img/pb-not-now-not-now/08.webp",
+   "text": "Ajja said, “We can play cricket now.”\n\nMa said, “You can wear these clothes now.”\n\nPapa said, “You can open this box now.” And they all said, “Happy birthday!”"
+  }
+ ],
+ "words": 176,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Rohini Nilekani"
+  ],
+  "illustrators": [
+   "Ruchi Shah"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/33-not-now-not-now",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

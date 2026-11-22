@@ -1,0 +1,58 @@
+{
+ "id": "asp-soccer-game",
+ "title": "Soccer game",
+ "pages": [
+  {
+   "img": "img/asp-soccer-game/02.webp",
+   "text": "We love soccer."
+  },
+  {
+   "img": "img/asp-soccer-game/03.webp",
+   "text": "Moloko is teaching us soccer."
+  },
+  {
+   "img": "img/asp-soccer-game/04.webp",
+   "text": "We are playing soccer."
+  },
+  {
+   "img": "img/asp-soccer-game/05.webp",
+   "text": "Moloko is the best teacher!"
+  },
+  {
+   "img": "img/asp-soccer-game/06.webp",
+   "text": "After the game, Moloko told us that she has a surprise for us."
+  },
+  {
+   "img": "img/asp-soccer-game/07.webp",
+   "text": "But she will only let us know tomorrow."
+  },
+  {
+   "img": "img/asp-soccer-game/08.webp",
+   "text": "The next day we all came early to the field. We all love surprises."
+  },
+  {
+   "img": "img/asp-soccer-game/09.webp",
+   "text": "Moloko has new soccer kits and balls for all of us! What a great surprise!"
+  }
+ ],
+ "words": 67,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Letta Machoga"
+  ],
+  "illustrators": [
+   "Vusi Malindi"
+  ],
+  "translators": [
+   "Lorato Trok"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/soccer-game",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

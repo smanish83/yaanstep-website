@@ -1,0 +1,68 @@
+{
+ "id": "pb-colours-tell-me-now-series",
+ "title": "Colours (Tell me now series)",
+ "pages": [
+  {
+   "img": "img/pb-colours-tell-me-now-series/02.webp",
+   "text": "Why is the sky blue?"
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/03.webp",
+   "text": "It is not always blue. Is it?"
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/04.webp",
+   "text": "Why are leaves green?"
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/05.webp",
+   "text": "They are not always green. Are they?"
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/06.webp",
+   "text": "Why are bananas yellow?"
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/07.webp",
+   "text": "Ripe bananas are yellow. Raw bananas are green."
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/08.webp",
+   "text": "Why are umbrellas black?"
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/09.webp",
+   "text": "All umbrellas are not black."
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/10.webp",
+   "text": "Why is blood red?"
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/11.webp",
+   "text": "There is iron in the blood. That makes it red."
+  },
+  {
+   "img": "img/pb-colours-tell-me-now-series/12.webp",
+   "text": "Why is salt white?\n\nI don't know."
+  }
+ ],
+ "words": 65,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Madhav Chavan"
+  ],
+  "illustrators": [
+   "Rijuta Ghate"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/462-colours-tell-me-now-series",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "id": "asp-things-i-do-at-school",
+ "title": "Things I do at school.",
+ "pages": [
+  {
+   "img": "img/asp-things-i-do-at-school/02.webp",
+   "text": "I read with friends."
+  },
+  {
+   "img": "img/asp-things-i-do-at-school/03.webp",
+   "text": "I learn to write numbers."
+  },
+  {
+   "img": "img/asp-things-i-do-at-school/04.webp",
+   "text": "I learn to write letters."
+  },
+  {
+   "img": "img/asp-things-i-do-at-school/05.webp",
+   "text": "I play with friends."
+  },
+  {
+   "img": "img/asp-things-i-do-at-school/06.webp",
+   "text": "I sing at school."
+  },
+  {
+   "img": "img/asp-things-i-do-at-school/07.webp",
+   "text": "I can dance too."
+  },
+  {
+   "img": "img/asp-things-i-do-at-school/08.webp",
+   "text": "I also go to garden with the teacher and friends."
+  },
+  {
+   "img": "img/asp-things-i-do-at-school/09.webp",
+   "text": "Teacher sings for us a lullaby."
+  },
+  {
+   "img": "img/asp-things-i-do-at-school/10.webp",
+   "text": "What do you do at your school?"
+  }
+ ],
+ "words": 49,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ivan Higenyi"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "Karlien de Villiers",
+   "Alice Toich",
+   "Kathy Arbuckle",
+   "Jano Strydom",
+   "Vusi Malindi",
+   "Catherine Groenewald",
+   "Candace di Talamo"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/things-i-do-school-0",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

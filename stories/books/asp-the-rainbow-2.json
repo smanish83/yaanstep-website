@@ -1,0 +1,72 @@
+{
+ "id": "asp-the-rainbow-2",
+ "title": "The rainbow",
+ "pages": [
+  {
+   "img": "img/asp-the-rainbow-2/02.webp",
+   "text": "I love the rainbow"
+  },
+  {
+   "img": "img/asp-the-rainbow-2/03.webp",
+   "text": "I love all the colours of the rainbow."
+  },
+  {
+   "img": "img/asp-the-rainbow-2/04.webp",
+   "text": "I wish I could have a rainbow house"
+  },
+  {
+   "img": "img/asp-the-rainbow-2/05.webp",
+   "text": "It could have a red roof."
+  },
+  {
+   "img": "img/asp-the-rainbow-2/06.webp",
+   "text": "It could have a blue windows."
+  },
+  {
+   "img": "img/asp-the-rainbow-2/07.webp",
+   "text": "I could have it painted yellow outside."
+  },
+  {
+   "img": "img/asp-the-rainbow-2/08.webp",
+   "text": "It could have violet walls inside."
+  },
+  {
+   "img": "img/asp-the-rainbow-2/09.webp",
+   "text": "It could have orange flowers."
+  },
+  {
+   "img": "img/asp-the-rainbow-2/10.webp",
+   "text": "It could have indigo bed."
+  },
+  {
+   "img": "img/asp-the-rainbow-2/11.webp",
+   "text": "It could have a green garden."
+  }
+ ],
+ "words": 61,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Jane Tsharane",
+   "Mmapule Nkuna"
+  ],
+  "illustrators": [
+   "Natalie Propa",
+   "Jesse Breytenbach",
+   "Wiehan de Jager",
+   "Marleen Visser",
+   "Maya Marshak",
+   "Benjamin Mitchley",
+   "Magriet Brink",
+   "Michael Nakuwa"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/rainbow-0",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

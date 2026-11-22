@@ -1,0 +1,28 @@
+{
+ "id": "pb-the-mango-tree",
+ "title": "The Mango Tree",
+ "pages": [
+  {
+   "img": "img/pb-the-mango-tree/02.webp",
+   "text": "Once upon a time there was a mango tree. The mango tree did not have any friend. He was very sad. He was so sad that he started to cry. Then one day a bird came and sat on the tree. The bird asked the tree why he was crying. The tree did not tell the bird why he was crying. So the bird just sat there."
+  }
+ ],
+ "words": 67,
+ "minutes": 1,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Mahiti Mahesh"
+  ],
+  "illustrators": [
+   "Vinayak Varma"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/5236-the-mango-tree",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "id": "pb-tree-on-a-plate",
+ "title": "Tree on a plate",
+ "pages": [
+  {
+   "img": "img/pb-tree-on-a-plate/02.webp",
+   "text": "Dinner time is fun for Roma. She does many things on her plate"
+  },
+  {
+   "img": "img/pb-tree-on-a-plate/03.webp",
+   "text": "Ma gives her rice. Roma makes a hill from it. White hill with steam coming from the top."
+  },
+  {
+   "img": "img/pb-tree-on-a-plate/04.webp",
+   "text": "Roma pours dal on her rice. She thinks it makes a small yellow lake. She laughs when she dips a spoon in her yellow lake"
+  },
+  {
+   "img": "img/pb-tree-on-a-plate/05.webp",
+   "text": "There is a green forest on her plate. There are leaves. Some are big and some are small. She likes some. But she does not like some."
+  },
+  {
+   "img": "img/pb-tree-on-a-plate/06.webp",
+   "text": "She likes a vegetable that looks like a tree. It has a round top like a mango tree."
+  },
+  {
+   "img": "img/pb-tree-on-a-plate/07.webp",
+   "text": "The 'tree vegetable' also has a stock. It is almost white in colour Roma thinks it looks like a happy tree."
+  },
+  {
+   "img": "img/pb-tree-on-a-plate/08.webp",
+   "text": "Do you know what is Roma's happy tree? We call it cauliflower. Roma likes it very much. I love it too. What about you?"
+  }
+ ],
+ "words": 146,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Madhuri Pai"
+  ],
+  "illustrators": [
+   "Ajit Narayan",
+   "Angie & Upesh",
+   "Henu",
+   "Padmanabh",
+   "Rijuta Ghate",
+   "Suvidha Mistry"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1960-tree-on-a-plate",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

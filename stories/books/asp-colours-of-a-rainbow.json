@@ -1,0 +1,88 @@
+{
+ "id": "asp-colours-of-a-rainbow",
+ "title": "Colours of a rainbow",
+ "pages": [
+  {
+   "img": "img/asp-colours-of-a-rainbow/02.webp",
+   "text": "A rainbow has seven colours."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/03.webp",
+   "text": "The first colour is red."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/04.webp",
+   "text": "Kewyu is wearing a red shirt."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/05.webp",
+   "text": "The second colour is orange."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/06.webp",
+   "text": "This is an orange.\n\nWhat else can you see that is the colour orange?"
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/07.webp",
+   "text": "The third colour is yellow."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/08.webp",
+   "text": "The yolk of an egg is yellow.\n\nWhat else can you see that is the colour yellow?"
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/09.webp",
+   "text": "The fourth colour is green."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/10.webp",
+   "text": "Our banana garden is green."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/11.webp",
+   "text": "The fifth colour is blue."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/12.webp",
+   "text": "The sky is blue."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/13.webp",
+   "text": "The sixth colour is indigo."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/14.webp",
+   "text": "These berries are the colour indigo."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/15.webp",
+   "text": "The seventh colour is violet."
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/16.webp",
+   "text": "My dress is violet.\n\nViolet is my favourite colour!\n\nWhat is your favourite colour?"
+  },
+  {
+   "img": "img/asp-colours-of-a-rainbow/17.webp",
+   "text": "Do you know the seven colours of the rainbow?"
+  }
+ ],
+ "words": 115,
+ "minutes": 4,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Caren Echesa"
+  ],
+  "illustrators": [
+   "Jesse Breytenbach"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/colours-rainbow",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

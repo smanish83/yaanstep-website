@@ -1,0 +1,57 @@
+{
+ "id": "pb-have-you-seen-these-birds",
+ "title": "Have You Seen These Birds?",
+ "pages": [
+  {
+   "img": "img/pb-have-you-seen-these-birds/02.webp",
+   "text": "Flamingoes"
+  },
+  {
+   "img": "img/pb-have-you-seen-these-birds/03.webp",
+   "text": "Vulture"
+  },
+  {
+   "img": "img/pb-have-you-seen-these-birds/04.webp",
+   "text": "Sunbird"
+  },
+  {
+   "img": "img/pb-have-you-seen-these-birds/05.webp",
+   "text": "Hornbill"
+  },
+  {
+   "img": "img/pb-have-you-seen-these-birds/06.webp",
+   "text": "Indian Roller"
+  },
+  {
+   "img": "img/pb-have-you-seen-these-birds/07.webp",
+   "text": "Bulbul"
+  },
+  {
+   "img": "img/pb-have-you-seen-these-birds/08.webp",
+   "text": "Weaver Bird"
+  },
+  {
+   "img": "img/pb-have-you-seen-these-birds/09.webp",
+   "text": "Sparrow"
+  }
+ ],
+ "words": 10,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Yamini"
+  ],
+  "illustrators": [
+   "Muniza Shariq",
+   "Preeti Krishnamurthy"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1892-have-you-seen-these-birds",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

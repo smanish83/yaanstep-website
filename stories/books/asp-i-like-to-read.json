@@ -1,0 +1,58 @@
+{
+ "id": "asp-i-like-to-read",
+ "title": "I like to read!",
+ "pages": [
+  {
+   "img": "img/asp-i-like-to-read/02.webp",
+   "text": "I like to read."
+  },
+  {
+   "img": "img/asp-i-like-to-read/03.webp",
+   "text": "Who can I read to?"
+  },
+  {
+   "img": "img/asp-i-like-to-read/04.webp",
+   "text": "My sister is asleep."
+  },
+  {
+   "img": "img/asp-i-like-to-read/05.webp",
+   "text": "Who can I read to?"
+  },
+  {
+   "img": "img/asp-i-like-to-read/06.webp",
+   "text": "My mother and grandmother are busy."
+  },
+  {
+   "img": "img/asp-i-like-to-read/07.webp",
+   "text": "Who can I read to?"
+  },
+  {
+   "img": "img/asp-i-like-to-read/08.webp",
+   "text": "My father and grandfather are busy."
+  },
+  {
+   "img": "img/asp-i-like-to-read/09.webp",
+   "text": "Who can I read to? I can read to myself!"
+  }
+ ],
+ "words": 45,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Letta Machoga"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [
+   "Letta Machoga"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/i-read",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

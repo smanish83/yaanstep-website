@@ -1,0 +1,90 @@
+{
+ "id": "asp-my-new-friends",
+ "title": "My new friends",
+ "pages": [
+  {
+   "img": "img/asp-my-new-friends/02.webp",
+   "text": "My name is Simo"
+  },
+  {
+   "img": "img/asp-my-new-friends/03.webp",
+   "text": "Meet my new friends"
+  },
+  {
+   "img": "img/asp-my-new-friends/04.webp",
+   "text": "Zizo, Lele, Sisa and Ayanda"
+  },
+  {
+   "img": "img/asp-my-new-friends/05.webp",
+   "text": "Zizo loves football"
+  },
+  {
+   "img": "img/asp-my-new-friends/06.webp",
+   "text": "Lele loves to swim"
+  },
+  {
+   "img": "img/asp-my-new-friends/07.webp",
+   "text": "Sisa loves to play hide and seek"
+  },
+  {
+   "img": "img/asp-my-new-friends/08.webp",
+   "text": "Ayanda loves reading"
+  },
+  {
+   "img": "img/asp-my-new-friends/09.webp",
+   "text": "I enjoy everything my friends love"
+  },
+  {
+   "img": "img/asp-my-new-friends/10.webp",
+   "text": "I will play football with Zizo"
+  },
+  {
+   "img": "img/asp-my-new-friends/11.webp",
+   "text": "Sometimes I swim with Lele"
+  },
+  {
+   "img": "img/asp-my-new-friends/12.webp",
+   "text": "Or even play hide and seek with Sisa"
+  },
+  {
+   "img": "img/asp-my-new-friends/13.webp",
+   "text": "Come on , make new friends and have fun"
+  },
+  {
+   "img": "img/asp-my-new-friends/14.webp",
+   "text": "Play football together"
+  },
+  {
+   "img": "img/asp-my-new-friends/15.webp",
+   "text": "Swim together"
+  },
+  {
+   "img": "img/asp-my-new-friends/16.webp",
+   "text": "Play hide and seek together"
+  },
+  {
+   "img": "img/asp-my-new-friends/17.webp",
+   "text": "Or even read together"
+  }
+ ],
+ "words": 77,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Zimbili Dlamini",
+   "Hlengiwe Zondi",
+   "Bathokwa book club (adaptation)"
+  ],
+  "illustrators": [
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-new-friends",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

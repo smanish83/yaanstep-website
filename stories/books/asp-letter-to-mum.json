@@ -1,0 +1,96 @@
+{
+ "id": "asp-letter-to-mum",
+ "title": "Letter to mum",
+ "pages": [
+  {
+   "img": "img/asp-letter-to-mum/02.webp",
+   "text": "Mother was finishing packing her clothes in a small bag."
+  },
+  {
+   "img": "img/asp-letter-to-mum/03.webp",
+   "text": "As she went out the door, she hugged me and said, \"Bye for now.\""
+  },
+  {
+   "img": "img/asp-letter-to-mum/04.webp",
+   "text": "\"Where are you going, mum?\" I looked up at her as I asked."
+  },
+  {
+   "img": "img/asp-letter-to-mum/05.webp",
+   "text": "I started to cry wanting to follow her but dad lifted me up on his shoulder."
+  },
+  {
+   "img": "img/asp-letter-to-mum/06.webp",
+   "text": "Dad said, \"Your mother is going to the hospital to have a baby.\""
+  },
+  {
+   "img": "img/asp-letter-to-mum/07.webp",
+   "text": "When I heard \"baby\" I stopped crying and looked at him. \"Why is she going to get the baby from the hospital?\" I asked him."
+  },
+  {
+   "img": "img/asp-letter-to-mum/08.webp",
+   "text": "Dad sat me on a small chair and said, \"I will tell you why she is going to get the baby from the hospital.\""
+  },
+  {
+   "img": "img/asp-letter-to-mum/09.webp",
+   "text": "I listened keenly to him as he explained although I didn't quite understand why she wasn't having the baby at home. When dad finished explaining, I asked, \"Will she still love me when she comes back with the other baby?\""
+  },
+  {
+   "img": "img/asp-letter-to-mum/10.webp",
+   "text": "My dad held me close and said, \"We will always love you.\""
+  },
+  {
+   "img": "img/asp-letter-to-mum/11.webp",
+   "text": "\"Can I write a letter to her while she is there?\" I asked dad."
+  },
+  {
+   "img": "img/asp-letter-to-mum/12.webp",
+   "text": "That evening, I began to write a letter to mum."
+  },
+  {
+   "img": "img/asp-letter-to-mum/13.webp",
+   "text": "I tore a paper from my exercise book and began to write..."
+  },
+  {
+   "img": "img/asp-letter-to-mum/14.webp",
+   "text": "\"Mummy, mummy, dad said that you have gone to bring another baby..."
+  },
+  {
+   "img": "img/asp-letter-to-mum/15.webp",
+   "text": "...Please hurry up and return home..."
+  },
+  {
+   "img": "img/asp-letter-to-mum/16.webp",
+   "text": "...I want you to bring a baby girl, so I can play with her when she grows up..."
+  },
+  {
+   "img": "img/asp-letter-to-mum/17.webp",
+   "text": "...You can bring two so one can be mine..."
+  },
+  {
+   "img": "img/asp-letter-to-mum/18.webp",
+   "text": "...I am waiting for you here outside our house.\""
+  },
+  {
+   "img": "img/asp-letter-to-mum/19.webp",
+   "text": "I folded my letter so I could give it to my father to bring it to mum. When I woke up the following morning, the letter was gone."
+  }
+ ],
+ "words": 285,
+ "minutes": 6,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/letter-mum",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

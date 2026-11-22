@@ -1,0 +1,70 @@
+{
+ "id": "asp-a-man-who-built-a-house",
+ "title": "A man who built a house",
+ "pages": [
+  {
+   "img": "img/asp-a-man-who-built-a-house/02.webp",
+   "text": "There was a great builder in Kabubbu village."
+  },
+  {
+   "img": "img/asp-a-man-who-built-a-house/03.webp",
+   "text": "He built many houses in the village."
+  },
+  {
+   "img": "img/asp-a-man-who-built-a-house/04.webp",
+   "text": "But he was sleeping in a bad hut."
+  },
+  {
+   "img": "img/asp-a-man-who-built-a-house/05.webp",
+   "text": "The village people talked about him every day."
+  },
+  {
+   "img": "img/asp-a-man-who-built-a-house/06.webp",
+   "text": "One day he got some money."
+  },
+  {
+   "img": "img/asp-a-man-who-built-a-house/07.webp",
+   "text": "He bought cement, sand, iron sheets, bricks and nails."
+  },
+  {
+   "img": "img/asp-a-man-who-built-a-house/08.webp",
+   "text": "He built a beautiful flat house with a fence."
+  },
+  {
+   "img": "img/asp-a-man-who-built-a-house/09.webp",
+   "text": "His friends rejoiced with him."
+  },
+  {
+   "img": "img/asp-a-man-who-built-a-house/10.webp",
+   "text": "He prepared for a party,invited his friends, they ate ,drank and danced."
+  },
+  {
+   "img": "img/asp-a-man-who-built-a-house/11.webp",
+   "text": "He got many presents."
+  }
+ ],
+ "words": 76,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Remedial class (Kabubbu community Library)"
+  ],
+  "illustrators": [
+   "Rob Owen",
+   "Marleen Visser",
+   "Wiehan de Jager",
+   "Alex Zablon",
+   "Jano Strydom",
+   "Kathy Arbuckle",
+   "Magriet Brink"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/man-who-built-his-own-house",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

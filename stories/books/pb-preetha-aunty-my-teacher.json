@@ -1,0 +1,44 @@
+{
+ "id": "pb-preetha-aunty-my-teacher",
+ "title": "Preetha Aunty- My teacher",
+ "pages": [
+  {
+   "img": "img/pb-preetha-aunty-my-teacher/02.webp",
+   "text": "This is Preetha Aunty. She teaches us Hindi.\n\nWe began with the letters, now we have finished up till 'dda'."
+  },
+  {
+   "img": "img/pb-preetha-aunty-my-teacher/03.webp",
+   "text": "Preeta aunty tells us one or two words with the letters.\n\nKa se Kamal, Ka se kalam, Ka se Kutta.\n\nAunty drew the lotus and the pen. But she did not know how to draw the dog.\n\nSo I drew it for her!"
+  },
+  {
+   "img": "img/pb-preetha-aunty-my-teacher/04.webp",
+   "text": "It is my birthday, I am very happy.\n\nI got chocolates for all my friends and teachers."
+  },
+  {
+   "img": "img/pb-preetha-aunty-my-teacher/05.webp",
+   "text": "I gave a chocolate to Preetha Aunty.\n\nShe told me \"Dhanyawaad\"\n\nI also said Dhanyawaad because I did not know how to say\" Welcome\" in Hindi.\n\nDo you?"
+  }
+ ],
+ "words": 108,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Arthi Anand-Navaneeth"
+  ],
+  "illustrators": [
+   "Greystroke",
+   "Herminder Ohri",
+   "Rijuta Ghate",
+   "Sheetal Thapa",
+   "Soumya Menon"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1812-preetha-aunty-my-teacher",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

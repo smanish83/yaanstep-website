@@ -1,0 +1,90 @@
+{
+ "id": "asp-ah-football",
+ "title": "Ah! Football!",
+ "pages": [
+  {
+   "img": "img/asp-ah-football/02.webp",
+   "text": "I like playing with my friend Chuma."
+  },
+  {
+   "img": "img/asp-ah-football/03.webp",
+   "text": "Chuma and I like each other. When we are sent, we go together."
+  },
+  {
+   "img": "img/asp-ah-football/04.webp",
+   "text": "One day I was sent by my grandmother to the shop to buy salt and cooking oil. I went with Chuma."
+  },
+  {
+   "img": "img/asp-ah-football/05.webp",
+   "text": "On the way, we saw our friends playing football."
+  },
+  {
+   "img": "img/asp-ah-football/06.webp",
+   "text": "I wanted to play the ball very much. I said, \"Ah! Football.\""
+  },
+  {
+   "img": "img/asp-ah-football/07.webp",
+   "text": "I said to Chuma, \"Let's go and ask them to let us play with them. I like playing football very much.\""
+  },
+  {
+   "img": "img/asp-ah-football/08.webp",
+   "text": "Chuma replied, \"Let us go to the shop first then we can come to play.\""
+  },
+  {
+   "img": "img/asp-ah-football/09.webp",
+   "text": "But I told Chuma, \"Let us play first! If we go home, grandmother will not allow us.\""
+  },
+  {
+   "img": "img/asp-ah-football/10.webp",
+   "text": "Our friends allowed us to play the ball with them. I was the goal keeper."
+  },
+  {
+   "img": "img/asp-ah-football/11.webp",
+   "text": "I worked hard to catch the ball. My friends were not able to score any goals."
+  },
+  {
+   "img": "img/asp-ah-football/12.webp",
+   "text": "The field was full of sand. The goal posts were made of two big stones."
+  },
+  {
+   "img": "img/asp-ah-football/13.webp",
+   "text": "After the game, we went to the shop but we had lost the money. I started to cry. Chuma said, \"Stop crying. You wanted us to play before going to the shop.\""
+  },
+  {
+   "img": "img/asp-ah-football/14.webp",
+   "text": "We returned home without salt or cooking oil. We were very dirty and worried."
+  },
+  {
+   "img": "img/asp-ah-football/15.webp",
+   "text": "Grandmother was very annoyed when we reached home. The first question she asked us was, \"Where were you all this time?\""
+  },
+  {
+   "img": "img/asp-ah-football/16.webp",
+   "text": "She forgave us but warned us, \"Never go to play again without permission.\""
+  },
+  {
+   "img": "img/asp-ah-football/17.webp",
+   "text": "We quickly went to feed the ducks. Later on, we cleaned ourselves."
+  }
+ ],
+ "words": 253,
+ "minutes": 5,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Stella Kihweo"
+  ],
+  "illustrators": [
+   "Onesmus Kakungi"
+  ],
+  "translators": [
+   "Ursula Nafula"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/ah-football",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

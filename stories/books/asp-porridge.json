@@ -1,0 +1,73 @@
+{
+ "id": "asp-porridge",
+ "title": "Porridge",
+ "pages": [
+  {
+   "img": "img/asp-porridge/02.webp",
+   "text": "Zama is getting ready for school."
+  },
+  {
+   "img": "img/asp-porridge/03.webp",
+   "text": "Dad is cooking porridge for breakfast."
+  },
+  {
+   "img": "img/asp-porridge/04.webp",
+   "text": "\"Mom makes the best porridge!\" says Zama."
+  },
+  {
+   "img": "img/asp-porridge/05.webp",
+   "text": "Porridge gives Zama energy for school."
+  },
+  {
+   "img": "img/asp-porridge/06.webp",
+   "text": "The porridge is ready."
+  },
+  {
+   "img": "img/asp-porridge/07.webp",
+   "text": "Dad pours the milk, with love."
+  },
+  {
+   "img": "img/asp-porridge/08.webp",
+   "text": "\"Dad, I think this porridge needs more sugar,\" says Zama."
+  },
+  {
+   "img": "img/asp-porridge/09.webp",
+   "text": "\"Mom's porridge tastes much better than Dad's porridge,\" thinks Zama."
+  },
+  {
+   "img": "img/asp-porridge/10.webp",
+   "text": "\"Dad, please can I have more sugar?\" asks Zama."
+  },
+  {
+   "img": "img/asp-porridge/11.webp",
+   "text": "Dad gives Zama more sugar."
+  },
+  {
+   "img": "img/asp-porridge/12.webp",
+   "text": "\"Wu! Dad! You put salt on my porridge!\""
+  },
+  {
+   "img": "img/asp-porridge/13.webp",
+   "text": "\"Dad, when will Mom be home?\" asks Zama."
+  }
+ ],
+ "words": 85,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Zimbili Dlamini",
+   "Hlengiwe Zondi"
+  ],
+  "illustrators": [
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/porridge",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

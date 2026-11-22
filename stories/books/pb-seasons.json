@@ -1,0 +1,41 @@
+{
+ "id": "pb-seasons",
+ "title": "Seasons",
+ "pages": [
+  {
+   "img": "img/pb-seasons/02.webp",
+   "text": "Summer"
+  },
+  {
+   "img": "img/pb-seasons/03.webp",
+   "text": "Autumn"
+  },
+  {
+   "img": "img/pb-seasons/04.webp",
+   "text": "Winter"
+  },
+  {
+   "img": "img/pb-seasons/05.webp",
+   "text": "Spring"
+  }
+ ],
+ "words": 4,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Gayathri Kalyanaraman"
+  ],
+  "illustrators": [
+   "Gayathri Kalyanaraman",
+   "Priya Kuriyan"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/5435-seasons",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

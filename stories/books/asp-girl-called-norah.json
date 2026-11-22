@@ -1,0 +1,58 @@
+{
+ "id": "asp-girl-called-norah",
+ "title": "Girl called Norah",
+ "pages": [
+  {
+   "img": "img/asp-girl-called-norah/02.webp",
+   "text": "This is a girl called Norah. Her doll's name is Selah."
+  },
+  {
+   "img": "img/asp-girl-called-norah/03.webp",
+   "text": "Norah loves her doll very much. Norah plays with Selah every day. She sleeps with her doll every night."
+  },
+  {
+   "img": "img/asp-girl-called-norah/04.webp",
+   "text": "One day, Norah could not find her doll. She looked everywhere, but could not find Selah. Norah got very worried."
+  },
+  {
+   "img": "img/asp-girl-called-norah/05.webp",
+   "text": "Norah did not know that her mother took Selah for washing. She hung the doll outside to dry."
+  },
+  {
+   "img": "img/asp-girl-called-norah/06.webp",
+   "text": "\"I can't find my doll,\" cried Norah. \"Don't worry,\" said her mother."
+  },
+  {
+   "img": "img/asp-girl-called-norah/07.webp",
+   "text": "That evening, Norah's mother gave the doll to Norah. The doll was very clean. Selah looked like a new doll!"
+  },
+  {
+   "img": "img/asp-girl-called-norah/08.webp",
+   "text": "Norah was very happy. She jumped up and down. She danced. She laughed loudly."
+  },
+  {
+   "img": "img/asp-girl-called-norah/09.webp",
+   "text": "And she thanked her mother."
+  }
+ ],
+ "words": 119,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Annet Ssebaggala"
+  ],
+  "illustrators": [
+   "Melany Pietersen"
+  ],
+  "translators": [
+   "Annet Ssebaggala"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/girl-called-norah-0",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

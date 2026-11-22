@@ -1,0 +1,74 @@
+{
+ "id": "asp-clever-cat",
+ "title": "Clever cat",
+ "pages": [
+  {
+   "img": "img/asp-clever-cat/02.webp",
+   "text": "In my village lives Mister Kiio. Mister Kiio has a cat with black and white spots called Safi."
+  },
+  {
+   "img": "img/asp-clever-cat/03.webp",
+   "text": "When Mister Kiio goes to work, he leaves the door open."
+  },
+  {
+   "img": "img/asp-clever-cat/04.webp",
+   "text": "Safi sits in the doorway to watch over Mister Kiio's house."
+  },
+  {
+   "img": "img/asp-clever-cat/05.webp",
+   "text": "When the neighbour's dog comes close, Safi stares at him and shows her nails."
+  },
+  {
+   "img": "img/asp-clever-cat/06.webp",
+   "text": "The dog runs away."
+  },
+  {
+   "img": "img/asp-clever-cat/07.webp",
+   "text": "When a neighbour appears, Safi is ready to scratch."
+  },
+  {
+   "img": "img/asp-clever-cat/08.webp",
+   "text": "The neighbour turns and runs away."
+  },
+  {
+   "img": "img/asp-clever-cat/09.webp",
+   "text": "When Safi feels hungry, she pushes the door and then closes it with her paws."
+  },
+  {
+   "img": "img/asp-clever-cat/10.webp",
+   "text": "She goes inside and eats her food."
+  },
+  {
+   "img": "img/asp-clever-cat/11.webp",
+   "text": "When Safi finishes, she jumps onto the sofa and sleeps. All you hear is, \"Purr! Purr! Purr!\""
+  },
+  {
+   "img": "img/asp-clever-cat/12.webp",
+   "text": "When Mister Kiio arrives, Safi stretches happily and welcomes him home."
+  },
+  {
+   "img": "img/asp-clever-cat/13.webp",
+   "text": "Mister Kiio and Safi sit down next to the fireplace and each reads the newspaper."
+  }
+ ],
+ "words": 138,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Catherine Groenewald"
+  ],
+  "translators": [
+   "Ursula Nafula"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/clever-cat",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "id": "asp-clouds",
+ "title": "Clouds",
+ "pages": [
+  {
+   "img": "img/asp-clouds/02.webp",
+   "text": "Clouds can bring rain. I like clouds."
+  },
+  {
+   "img": "img/asp-clouds/03.webp",
+   "text": "Clouds can bring snow. I like clouds."
+  },
+  {
+   "img": "img/asp-clouds/04.webp",
+   "text": "Clouds can hide the sun. I like clouds."
+  },
+  {
+   "img": "img/asp-clouds/05.webp",
+   "text": "Clouds can hide the stars. I like clouds."
+  }
+ ],
+ "words": 30,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Clark Ness"
+  ],
+  "illustrators": [
+   "Microsoft Clip Art"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/clouds",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

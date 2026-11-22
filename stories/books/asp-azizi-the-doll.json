@@ -1,0 +1,72 @@
+{
+ "id": "asp-azizi-the-doll",
+ "title": "Azizi the doll",
+ "pages": [
+  {
+   "img": "img/asp-azizi-the-doll/02.webp",
+   "text": "This is Azizi. Azizi is my doll."
+  },
+  {
+   "img": "img/asp-azizi-the-doll/03.webp",
+   "text": "I like Azizi because he always smiles."
+  },
+  {
+   "img": "img/asp-azizi-the-doll/04.webp",
+   "text": "After I wake up I wash my face. Then I look for Azizi."
+  },
+  {
+   "img": "img/asp-azizi-the-doll/05.webp",
+   "text": "When I find Azizi I brush his hair."
+  },
+  {
+   "img": "img/asp-azizi-the-doll/06.webp",
+   "text": "When I eat breakfast I feed Azizi."
+  },
+  {
+   "img": "img/asp-azizi-the-doll/07.webp",
+   "text": "When I eat sweets I give one to Azizi."
+  },
+  {
+   "img": "img/asp-azizi-the-doll/08.webp",
+   "text": "But Azizi never eats his sweet. I wonder why!"
+  },
+  {
+   "img": "img/asp-azizi-the-doll/09.webp",
+   "text": "I walk around the compound picking flowers."
+  },
+  {
+   "img": "img/asp-azizi-the-doll/10.webp",
+   "text": "I give a flower to Azizi. But he never says, \"Thank you.\""
+  },
+  {
+   "img": "img/asp-azizi-the-doll/11.webp",
+   "text": "I wash Azizi clean before my mother bathes me."
+  },
+  {
+   "img": "img/asp-azizi-the-doll/12.webp",
+   "text": "I dress Azizi in red because I love the colour red."
+  },
+  {
+   "img": "img/asp-azizi-the-doll/13.webp",
+   "text": "When I go to sleep, I lay Azizi beside me."
+  }
+ ],
+ "words": 109,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Lawrence A. Konjuro"
+  ],
+  "illustrators": [
+   "Natalie Propa"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/azizi-doll",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

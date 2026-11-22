@@ -1,0 +1,28 @@
+{
+ "id": "pb-a-brighter-day",
+ "title": "A Brighter Day",
+ "pages": [
+  {
+   "img": "img/pb-a-brighter-day/02.webp",
+   "text": "\"Hello there!\" said the bear. As glad as the cactus was to see the bear, it was starting to rain and there was a very important task she had to get done. The light was starting to flicker. She had a rope ladder to make her way up to her ledge, but not one that could reach the ceiling lamp.\nNow, this was no problem for the bear at all. She was tall enough to reach it, and she was great at fixing lamps. The cactus handed the bear a spare bulb. \"There you go,\" said the bear. \"You're the best!\" said the cactus with a great big grin."
+  }
+ ],
+ "words": 109,
+ "minutes": 1,
+ "ages": "9-12",
+ "credits": {
+  "authors": [
+   "Aditi"
+  ],
+  "illustrators": [
+   "Anjora Noronha"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3863-a-brighter-day",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

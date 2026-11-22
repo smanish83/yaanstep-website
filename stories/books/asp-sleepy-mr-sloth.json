@@ -1,0 +1,72 @@
+{
+ "id": "asp-sleepy-mr-sloth",
+ "title": "Sleepy Mr. Sloth",
+ "pages": [
+  {
+   "img": "img/asp-sleepy-mr-sloth/02.webp",
+   "text": "One day, Mr. Sloth came to visit. He said:\n\nI'm sleepy! I need a good branch for a bed!"
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/03.webp",
+   "text": "I'm quite good at climbing. I know how to swing. But sleeping's my favourite, favourite thing."
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/04.webp",
+   "text": "This branch looks lovely! I think I'll sleep here.\n\nAnd you? Don't you think that's a splendid idea?"
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/05.webp",
+   "text": "Oh no, Mr. Sloth! A giraffe's eating there! He might think you're lunch and start nibbling your hair!"
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/06.webp",
+   "text": "This branch looks lovely! I think I'll sleep here. And you? Don't you think that's a splendid idea?"
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/07.webp",
+   "text": "Oh no, Mr. Sloth! There's a beehive right there! You'll never get sleep with those bees everywhere!"
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/08.webp",
+   "text": "This branch looks lovely! I think I'll sleep here. And you? Don't you think that's a splendid idea?"
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/09.webp",
+   "text": "Oh no, Mr. Sloth, that's a snake over there! Not a branch! Poor old snake. You gave him quite a scare."
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/10.webp",
+   "text": "This branch looks lovely! I think I'll sleep here. And you? Don't you think that's a splendid idea?"
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/11.webp",
+   "text": "Oh no, Mr. Sloth! There's a bird squawking there! You'll never get sleep with that noise in the air!"
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/12.webp",
+   "text": "Try climb one more branch, Mr. Sloth! they all said. And that branch was just the right one for his bed."
+  },
+  {
+   "img": "img/asp-sleepy-mr-sloth/13.webp",
+   "text": "The bird and the snake, the giraffe and each bee were happy to have Mr. Sloth in their tree."
+  }
+ ],
+ "words": 222,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Paul Kennedy"
+  ],
+  "illustrators": [
+   "Graham Paterson"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/sleepy-mr-sloth",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

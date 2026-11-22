@@ -1,0 +1,44 @@
+{
+ "id": "pb-tita",
+ "title": "Tita",
+ "pages": [
+  {
+   "img": "img/pb-tita/02.webp",
+   "text": "Tita is playing with her mother's saree."
+  },
+  {
+   "img": "img/pb-tita/03.webp",
+   "text": "Her mother did'nt like it. So she scolded Tita."
+  },
+  {
+   "img": "img/pb-tita/04.webp",
+   "text": "One day, she heard her mother was going to the neighbouring village."
+  },
+  {
+   "img": "img/pb-tita/05.webp",
+   "text": "So she ironed all her clothes."
+  },
+  {
+   "img": "img/pb-tita/06.webp",
+   "text": "Tita's mother praised her for that ."
+  }
+ ],
+ "words": 40,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Rachita Uday Kumar"
+  ],
+  "illustrators": [
+   "Suvidha Mistry"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2632-tita",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

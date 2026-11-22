@@ -1,0 +1,72 @@
+{
+ "id": "pb-noisy-crows",
+ "title": "Noisy Crows",
+ "pages": [
+  {
+   "img": "img/pb-noisy-crows/02.webp",
+   "text": "I live in the mango tree. I eat lots of ripe fruit in summer."
+  },
+  {
+   "img": "img/pb-noisy-crows/03.webp",
+   "text": "When my babies are in the nest, I have to be on guard."
+  },
+  {
+   "img": "img/pb-noisy-crows/04.webp",
+   "text": "Come peep into my nest. See the lovely things I have found."
+  },
+  {
+   "img": "img/pb-noisy-crows/05.webp",
+   "text": "I love to fly up in the sky, like a plane."
+  },
+  {
+   "img": "img/pb-noisy-crows/06.webp",
+   "text": "I sit on the tree and look around for some tasty bits of food."
+  },
+  {
+   "img": "img/pb-noisy-crows/07.webp",
+   "text": "I look to my right. I look to my left."
+  },
+  {
+   "img": "img/pb-noisy-crows/08.webp",
+   "text": "I love fish. When I spot it, I fly down to pick it up."
+  },
+  {
+   "img": "img/pb-noisy-crows/09.webp",
+   "text": "With my cawing I call my friends to share the feast with me."
+  },
+  {
+   "img": "img/pb-noisy-crows/10.webp",
+   "text": "Some people shout at me, “Go away, you noisy bird.”"
+  },
+  {
+   "img": "img/pb-noisy-crows/11.webp",
+   "text": "Mr Fox likes my singing. He told me so himself."
+  },
+  {
+   "img": "img/pb-noisy-crows/12.webp",
+   "text": "LET US LEARN SOME NEW WORDS.\n\nThe sound that each animal or bird makes, has a special name. How many of these do you know?\n\nA crow caws.\n\nA cat mews."
+  },
+  {
+   "img": "img/pb-noisy-crows/13.webp",
+   "text": "A lion roars.\n\nA dog barks.\n\nCrows make a lot of noise. So when some people talk loudly we say, “As noisy as a crow”."
+  }
+ ],
+ "words": 177,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Kanchan Bannerjee"
+  ],
+  "illustrators": [
+   "Deepa Balsavar"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1062-noisy-crows",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

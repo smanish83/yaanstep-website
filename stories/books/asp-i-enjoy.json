@@ -1,0 +1,68 @@
+{
+ "id": "asp-i-enjoy",
+ "title": "I enjoy",
+ "pages": [
+  {
+   "img": "img/asp-i-enjoy/02.webp",
+   "text": "I enjoy skipping."
+  },
+  {
+   "img": "img/asp-i-enjoy/03.webp",
+   "text": "I enjoy skipping rope alone."
+  },
+  {
+   "img": "img/asp-i-enjoy/04.webp",
+   "text": "I enjoy skipping with my friend."
+  },
+  {
+   "img": "img/asp-i-enjoy/05.webp",
+   "text": "I enjoy reading interesting stories."
+  },
+  {
+   "img": "img/asp-i-enjoy/06.webp",
+   "text": "I enjoy walking in the field with my friends."
+  },
+  {
+   "img": "img/asp-i-enjoy/07.webp",
+   "text": "I enjoy washing dishes to help at home."
+  },
+  {
+   "img": "img/asp-i-enjoy/08.webp",
+   "text": "I enjoy writing big letters which I can read easily."
+  },
+  {
+   "img": "img/asp-i-enjoy/09.webp",
+   "text": "I enjoy eating different fruits."
+  },
+  {
+   "img": "img/asp-i-enjoy/10.webp",
+   "text": "I enjoy sleeping on a big bed."
+  },
+  {
+   "img": "img/asp-i-enjoy/11.webp",
+   "text": "I enjoy listening to my mother's interesting stories."
+  },
+  {
+   "img": "img/asp-i-enjoy/12.webp",
+   "text": "I enjoy doing all these things!"
+  }
+ ],
+ "words": 72,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/ninafurahi-i-enjoy",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

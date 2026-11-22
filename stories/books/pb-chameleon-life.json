@@ -1,0 +1,39 @@
+{
+ "id": "pb-chameleon-life",
+ "title": "Chameleon Life",
+ "pages": [
+  {
+   "img": "img/pb-chameleon-life/02.webp",
+   "text": "A Chameleon is color changing animal and it is small in size.\n\nOn day, Chameleon sleeping on a tree and from the other side a snake came on the same tree.\n\nChameleon got scared on started changing its color, It has changed color to brown and started running away from snake."
+  },
+  {
+   "img": "img/pb-chameleon-life/03.webp",
+   "text": "The snake started following the chameleon & Chameleon started moving from tree to sand and in between stones to escape from snake by changing color.\n\nNow after escaping from snake, Chameleon was very tired and he wants to drink water and take rest in some safe place."
+  },
+  {
+   "img": "img/pb-chameleon-life/04.webp",
+   "text": "On the way to Pond, Chameleon saw crocodiles and was scared to go near. Then he changed color and went slowly near pond to drink water. After drinking water chameleon went to bushes and changed color of bushes and finally relaxed there."
+  }
+ ],
+ "words": 139,
+ "minutes": 2,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Prateek Chandrawal"
+  ],
+  "illustrators": [
+   "Herminder Ohri",
+   "Muniza Shariq",
+   "Nirvaan Pahwa",
+   "Rajeev Verma 'Banjara'"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2482-chameleon-life",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

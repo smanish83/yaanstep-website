@@ -1,0 +1,62 @@
+{
+ "id": "asp-rats",
+ "title": "Rats!",
+ "pages": [
+  {
+   "img": "img/asp-rats/02.webp",
+   "text": "There was a man who sold oil that he made in his house."
+  },
+  {
+   "img": "img/asp-rats/03.webp",
+   "text": "And in that house there were rats. Lots of rats!"
+  },
+  {
+   "img": "img/asp-rats/04.webp",
+   "text": "Every day the rats looked at the oil and said, \"How can we get that oil?\""
+  },
+  {
+   "img": "img/asp-rats/05.webp",
+   "text": "The rats tried to put their mouths into the bottles. But the spaces in the bottles were too small."
+  },
+  {
+   "img": "img/asp-rats/06.webp",
+   "text": "The rats tried to tip over the bottles. But the oil would not flow out."
+  },
+  {
+   "img": "img/asp-rats/07.webp",
+   "text": "The rats had a meeting to discuss the problem. After a while, one rat said, \"Let's put our tails into the bottles. Then we can lick the oil off our tails.\""
+  },
+  {
+   "img": "img/asp-rats/08.webp",
+   "text": "And that's exactly what the rats did. They put their tails into the bottles, and then licked the oil off each other's tails. The rats did this until they had licked up all the oil."
+  },
+  {
+   "img": "img/asp-rats/09.webp",
+   "text": "The man of the house saw that all his oil was gone!"
+  },
+  {
+   "img": "img/asp-rats/10.webp",
+   "text": "And that was the end of it."
+  }
+ ],
+ "words": 158,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Lourenço Magaia Sabão"
+  ],
+  "illustrators": [
+   "Stephanie Simpson"
+  ],
+  "translators": [
+   "Little Zebra Books"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/rats",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

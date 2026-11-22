@@ -1,0 +1,56 @@
+{
+ "id": "pb-best-friends-forever",
+ "title": "Best Friends Forever",
+ "pages": [
+  {
+   "img": "img/pb-best-friends-forever/02.webp",
+   "text": "There were two girls, they were best friends. Their names were Salima and Begum."
+  },
+  {
+   "img": "img/pb-best-friends-forever/03.webp",
+   "text": "They watched each other so many times in mirror and said we both look same."
+  },
+  {
+   "img": "img/pb-best-friends-forever/04.webp",
+   "text": "They played, worked, ate, slept together. One day Begum and her family shifted to Hyderabad."
+  },
+  {
+   "img": "img/pb-best-friends-forever/05.webp",
+   "text": "They two cried for each other."
+  },
+  {
+   "img": "img/pb-best-friends-forever/06.webp",
+   "text": "Salima also shifted to Hyderabad, the two of them's houses were near, but they don't know that. They searched for each other. They lived in the hut areas."
+  },
+  {
+   "img": "img/pb-best-friends-forever/07.webp",
+   "text": "They two found each other at their houses."
+  },
+  {
+   "img": "img/pb-best-friends-forever/08.webp",
+   "text": "They were so happy and hugged."
+  },
+  {
+   "img": "img/pb-best-friends-forever/09.webp",
+   "text": "They lived happily ever after."
+  }
+ ],
+ "words": 97,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Lakshmi Stitha"
+  ],
+  "illustrators": [
+   "Suvidha Mistry"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3156-best-friends-forever",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

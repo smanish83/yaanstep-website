@@ -1,0 +1,72 @@
+{
+ "id": "asp-punishment",
+ "title": "Punishment",
+ "pages": [
+  {
+   "img": "img/asp-punishment/02.webp",
+   "text": "One day, mama got a lot of fruit."
+  },
+  {
+   "img": "img/asp-punishment/03.webp",
+   "text": "\"When can we have some fruit?\" we ask.\n\n\"We will have the fruit tonight,\" says mama."
+  },
+  {
+   "img": "img/asp-punishment/04.webp",
+   "text": "My brother Rahim is greedy. He tastes all the fruit. He eats a lot of it."
+  },
+  {
+   "img": "img/asp-punishment/05.webp",
+   "text": "\"Look at what Rahim did!\" shouts my little brother.\n\n\"Rahim is naughty and selfish,\" I say."
+  },
+  {
+   "img": "img/asp-punishment/06.webp",
+   "text": "Mother is angry with Rahim."
+  },
+  {
+   "img": "img/asp-punishment/07.webp",
+   "text": "We are also angry with Rahim. But Rahim is not sorry."
+  },
+  {
+   "img": "img/asp-punishment/08.webp",
+   "text": "\"Aren't you going to punish Rahim?\" asks little brother."
+  },
+  {
+   "img": "img/asp-punishment/09.webp",
+   "text": "\"Rahim, soon you will be sorry,\" warns mama."
+  },
+  {
+   "img": "img/asp-punishment/10.webp",
+   "text": "Rahim starts to feel sick."
+  },
+  {
+   "img": "img/asp-punishment/11.webp",
+   "text": "\"My tummy is so sore,\" whispers Rahim."
+  },
+  {
+   "img": "img/asp-punishment/12.webp",
+   "text": "Mama knew this would happen. The fruit is punishing Rahim!"
+  },
+  {
+   "img": "img/asp-punishment/13.webp",
+   "text": "Later, Rahim says sorry to us. \"I will never be so greedy again,\" he promises.\n\nAnd we all believe him."
+  }
+ ],
+ "words": 131,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Adelheid Marie Bwire"
+  ],
+  "illustrators": [
+   "Melany Pietersen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/punishment",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

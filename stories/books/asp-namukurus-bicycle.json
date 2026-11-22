@@ -1,0 +1,56 @@
+{
+ "id": "asp-namukurus-bicycle",
+ "title": "Namukuru's bicycle",
+ "pages": [
+  {
+   "img": "img/asp-namukurus-bicycle/02.webp",
+   "text": "Namukuru and her brother are ready for school."
+  },
+  {
+   "img": "img/asp-namukurus-bicycle/03.webp",
+   "text": "Namukuru carries her brother on her bicycle."
+  },
+  {
+   "img": "img/asp-namukurus-bicycle/04.webp",
+   "text": "Their friends cheer for them as they ride into school."
+  },
+  {
+   "img": "img/asp-namukurus-bicycle/05.webp",
+   "text": "While they are in the classroom, a monkey arrives outside. The monkey rides away on Namukuru's bicycle!"
+  },
+  {
+   "img": "img/asp-namukurus-bicycle/06.webp",
+   "text": "The children chase the monkey."
+  },
+  {
+   "img": "img/asp-namukurus-bicycle/07.webp",
+   "text": "The monkey leaves the bicycle under a tree."
+  },
+  {
+   "img": "img/asp-namukurus-bicycle/08.webp",
+   "text": "The monkey swims to an island in the middle of the lake. He climbs high into a tree."
+  },
+  {
+   "img": "img/asp-namukurus-bicycle/09.webp",
+   "text": "The monkey waves goodbye! The children wave back. Namukuru has her bicycle again."
+  }
+ ],
+ "words": 86,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Munanga ASP teachers"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/namu%E2%80%99s-bicycle",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

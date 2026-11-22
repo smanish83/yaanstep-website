@@ -1,0 +1,55 @@
+{
+ "id": "asp-weather",
+ "title": "Weather",
+ "pages": [
+  {
+   "img": "img/asp-weather/02.webp",
+   "text": "Clouds are a big sign of rain."
+  },
+  {
+   "img": "img/asp-weather/03.webp",
+   "text": "it is very hot today. Why?"
+  },
+  {
+   "img": "img/asp-weather/04.webp",
+   "text": "Clouds can hide the sun. I like clouds so much ."
+  },
+  {
+   "img": "img/asp-weather/05.webp",
+   "text": "is it raining out side ? \"Asked teacher Nabune\""
+  },
+  {
+   "img": "img/asp-weather/06.webp",
+   "text": "is it windy ?"
+  },
+  {
+   "img": "img/asp-weather/07.webp",
+   "text": "Tell me more about weather........"
+  }
+ ],
+ "words": 39,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Clark Ness",
+   "Nabune Beatres (adaptation)",
+   "Hamba Dinah (adaptation)",
+   "Alungho Rose (adaptation)"
+  ],
+  "illustrators": [
+   "Microsoft Clip Art",
+   "Jesse Breytenbach",
+   "Wiehan de Jager",
+   "Rijuta Ghate",
+   "Vusi Malindi"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/weather-0",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

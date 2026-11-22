@@ -1,0 +1,55 @@
+{
+ "id": "asp-thandi-misses-her-school-bus",
+ "title": "Thandi misses her school bus",
+ "pages": [
+  {
+   "img": "img/asp-thandi-misses-her-school-bus/02.webp",
+   "text": "Thandi woke up happy and she wanted to play before going to school."
+  },
+  {
+   "img": "img/asp-thandi-misses-her-school-bus/03.webp",
+   "text": "Grandma says to Thandi \"you will be late for your bus Thandi\" Thandi replies \"I will go now grandma\" Thandi leaves 5 minutes later..."
+  },
+  {
+   "img": "img/asp-thandi-misses-her-school-bus/04.webp",
+   "text": "Thandi goes to the bus stop too late. The bus has left..."
+  },
+  {
+   "img": "img/asp-thandi-misses-her-school-bus/05.webp",
+   "text": "The old man asked \"why are you crying child\" Thandi replies \"I missed my school bus\" The old man says \"I will walk you to school\"."
+  },
+  {
+   "img": "img/asp-thandi-misses-her-school-bus/06.webp",
+   "text": "The old man askes Thandi \"Is that your school\". Thandi replies \"Yes it is. Thank you\" The old man leaves her at school."
+  },
+  {
+   "img": "img/asp-thandi-misses-her-school-bus/07.webp",
+   "text": "Thandi tells her teacher and friend's about she missed her bus and the nice, old man who helped her."
+  },
+  {
+   "img": "img/asp-thandi-misses-her-school-bus/08.webp",
+   "text": "THE END"
+  }
+ ],
+ "words": 119,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Melissa Chetty"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "Marleen Visser",
+   "Catherine Groenewald",
+   "Cathy Feek"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/thandi-misses-her-school-bus",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

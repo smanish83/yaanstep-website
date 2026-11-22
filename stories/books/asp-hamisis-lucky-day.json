@@ -1,0 +1,58 @@
+{
+ "id": "asp-hamisis-lucky-day",
+ "title": "Hamisi's lucky day",
+ "pages": [
+  {
+   "img": "img/asp-hamisis-lucky-day/02.webp",
+   "text": "Hamisi needs a new school uniform. His dad takes him to the market."
+  },
+  {
+   "img": "img/asp-hamisis-lucky-day/03.webp",
+   "text": "Hamisi sees a boy wearing a beautiful shirt. \"That is a very fine shirt,\" thinks Hamisi."
+  },
+  {
+   "img": "img/asp-hamisis-lucky-day/04.webp",
+   "text": "\"I wish I had a shirt like that boy,\" says Hamisi."
+  },
+  {
+   "img": "img/asp-hamisis-lucky-day/05.webp",
+   "text": "\"Look, she is selling those special shirts,\" says Hamisi. \"Dad, please buy one for me,\" he asks."
+  },
+  {
+   "img": "img/asp-hamisis-lucky-day/06.webp",
+   "text": "\"Hamisi, I have to buy your uniform,\" says dad."
+  },
+  {
+   "img": "img/asp-hamisis-lucky-day/07.webp",
+   "text": "\"I do not have enough money for that shirt,\" says dad."
+  },
+  {
+   "img": "img/asp-hamisis-lucky-day/08.webp",
+   "text": "Hamisi's dad pays for the uniform. He is surprised when he gets the change. There is enough money left over to buy a shirt!"
+  },
+  {
+   "img": "img/asp-hamisis-lucky-day/09.webp",
+   "text": "It is Hamisi's lucky day! Which shirt will he choose?"
+  }
+ ],
+ "words": 111,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Adelheid Marie Bwire"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [
+   "Adelheid Marie Bwire"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/hamisis-lucky-day",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

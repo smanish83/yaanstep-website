@@ -1,0 +1,52 @@
+{
+ "id": "pb-this-and-that",
+ "title": "This and That",
+ "pages": [
+  {
+   "img": "img/pb-this-and-that/02.webp",
+   "text": "This is Bekku.\n\nAnd that is me in the mirror."
+  },
+  {
+   "img": "img/pb-this-and-that/03.webp",
+   "text": "This is what I love to do\n\n... and this is what Bekku likes to do."
+  },
+  {
+   "img": "img/pb-this-and-that/04.webp",
+   "text": "This is Bekku's favorite place, and that is mine.\n\nWhen Bekku sees a mouse she runs after it."
+  },
+  {
+   "img": "img/pb-this-and-that/05.webp",
+   "text": "But if I see a mouse, I run from it."
+  },
+  {
+   "img": "img/pb-this-and-that/06.webp",
+   "text": "Then when I run after my beeping car, Bekku scoots out through the door ajar."
+  },
+  {
+   "img": "img/pb-this-and-that/07.webp",
+   "text": "When mamma gives us milk, we both go SLURP, SLURP.\n\nThen follow our loud BURP, BURPS!"
+  },
+  {
+   "img": "img/pb-this-and-that/08.webp",
+   "text": "We like different things - that is very plain.\n\nOur common love for milk, this will always remain!"
+  }
+ ],
+ "words": 101,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Radha HS"
+  ],
+  "illustrators": [
+   "Ruchi Shah"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/276-this-and-that",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "id": "asp-nanus-taxi",
+ "title": "Nanu's taxi",
+ "pages": [
+  {
+   "img": "img/asp-nanus-taxi/02.webp",
+   "text": "Hello! My name is Nanu. I am waiting with my mother for a taxi. We are going home."
+  },
+  {
+   "img": "img/asp-nanus-taxi/03.webp",
+   "text": "Here I am standing in line. My mother sings me a song. \"Come Mr Taxi can't you see? We are waiting, Nanu and me!\""
+  },
+  {
+   "img": "img/asp-nanus-taxi/04.webp",
+   "text": "The lady next to me is taking her chickens home. They will lay eggs for her to eat."
+  },
+  {
+   "img": "img/asp-nanus-taxi/05.webp",
+   "text": "These men are coming back from work. They smile at me. I hear them sing, \"Hey little Nanu, don't you worry. Taxi's coming in a hurry.\""
+  },
+  {
+   "img": "img/asp-nanus-taxi/06.webp",
+   "text": "A lady walks past. She is a very smart lady. Aren't her shoes beautiful? They go \"click, click, click...click, click, click...\" when she walks."
+  },
+  {
+   "img": "img/asp-nanus-taxi/07.webp",
+   "text": "This man is selling cold drinks. I love cold drinks. They are so cold and sweet. Do you like them?"
+  },
+  {
+   "img": "img/asp-nanus-taxi/08.webp",
+   "text": "Look! There are ladies taking their supper home on their heads. Aren't they clever?"
+  },
+  {
+   "img": "img/asp-nanus-taxi/09.webp",
+   "text": "That lady is having her hair done. She is going out with her friends tonight."
+  },
+  {
+   "img": "img/asp-nanus-taxi/10.webp",
+   "text": "I am tired now. My mother puts me on her back where I can rest. She sings, \"Please Mr Taxi, don't be late, Gogo is waiting at our gate.\""
+  },
+  {
+   "img": "img/asp-nanus-taxi/11.webp",
+   "text": "There is my friend Tumi. He is also resting. We will be home soon."
+  },
+  {
+   "img": "img/asp-nanus-taxi/12.webp",
+   "text": "High up there the birds are flying home. They must get home before it is dark."
+  },
+  {
+   "img": "img/asp-nanus-taxi/13.webp",
+   "text": "This lady has beautiful earrings. I think she bought them in town today. When I grow up I will buy many earrings for me and my mother."
+  },
+  {
+   "img": "img/asp-nanus-taxi/14.webp",
+   "text": "My mother is getting tired now. I sing her a song, \"Please Mr Taxi, won't you come, we are waiting, me and mum.\""
+  },
+  {
+   "img": "img/asp-nanus-taxi/15.webp",
+   "text": "Wait! I can hear the taxi! Here it comes!!!"
+  },
+  {
+   "img": "img/asp-nanus-taxi/16.webp",
+   "text": "This is our big red taxi. It has come to take me and my mother home. I am very happy!"
+  },
+  {
+   "img": "img/asp-nanus-taxi/17.webp",
+   "text": "Goodbye!!!"
+  }
+ ],
+ "words": 298,
+ "minutes": 6,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Marion Drew"
+  ],
+  "illustrators": [
+   "Marion Drew"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/nanu%E2%80%99s-taxi",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

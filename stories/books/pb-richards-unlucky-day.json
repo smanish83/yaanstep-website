@@ -1,0 +1,52 @@
+{
+ "id": "pb-richards-unlucky-day",
+ "title": "Richard's unlucky day",
+ "pages": [
+  {
+   "img": "img/pb-richards-unlucky-day/02.webp",
+   "text": "Once there was a boy named Richard and he always had good luck but this day he was not going to have good luck and he knew it."
+  },
+  {
+   "img": "img/pb-richards-unlucky-day/03.webp",
+   "text": "He had woken up very early so he was very tired and dizzy so to wake him up he had a shower but the water was cold so he came out of the shower straight away"
+  },
+  {
+   "img": "img/pb-richards-unlucky-day/04.webp",
+   "text": "He got dressed and had some breakfast but the breakfast was old and yuck so he decided to go outside and play with his friend Josh. But when he got outside he realised it was raining so he went back inside."
+  },
+  {
+   "img": "img/pb-richards-unlucky-day/05.webp",
+   "text": "Richard wanted to play with his toys but his sister Amy was taking all the toys and not sharing them so he told his mum that Amy was not sharing, but all she said was ''HUH''"
+  },
+  {
+   "img": "img/pb-richards-unlucky-day/06.webp",
+   "text": "He decided he would eat a snack so he went to the cupboard to grab some cookies but when he opened the door of the cupboard he saw that the ants had eaten all the cookies so now he had nothing to eat."
+  },
+  {
+   "img": "img/pb-richards-unlucky-day/07.webp",
+   "text": "Then at that moment he smelled something good and he saw his mum had made a very yummy cake. They really enjoyed it!"
+  }
+ ],
+ "words": 207,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Lotte Van Oijen"
+  ],
+  "illustrators": [
+   "Angie & Upesh",
+   "Deepa Balsavar",
+   "Greystroke",
+   "Lavanya Karthik",
+   "Rijuta Ghate"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2198-richard-s-unlucky-day",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

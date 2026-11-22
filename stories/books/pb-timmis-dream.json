@@ -1,0 +1,60 @@
+{
+ "id": "pb-timmis-dream",
+ "title": "Timmi's dream",
+ "pages": [
+  {
+   "img": "img/pb-timmis-dream/02.webp",
+   "text": "Timmi wanted a dog her whole life."
+  },
+  {
+   "img": "img/pb-timmis-dream/03.webp",
+   "text": "She dreamt that she had a dog of her own. Next day, she got a dog of her own."
+  },
+  {
+   "img": "img/pb-timmis-dream/04.webp",
+   "text": "She taught her dog how to stand."
+  },
+  {
+   "img": "img/pb-timmis-dream/05.webp",
+   "text": "She taught her dog how to lift a paw."
+  },
+  {
+   "img": "img/pb-timmis-dream/06.webp",
+   "text": "She taught it how to think."
+  },
+  {
+   "img": "img/pb-timmis-dream/07.webp",
+   "text": "She taught it how to be funny."
+  },
+  {
+   "img": "img/pb-timmis-dream/08.webp",
+   "text": "She taught it how to be scary."
+  },
+  {
+   "img": "img/pb-timmis-dream/09.webp",
+   "text": "she taught it how to touch it's nose."
+  },
+  {
+   "img": "img/pb-timmis-dream/10.webp",
+   "text": "At the end, Timmi's dream had come true."
+  }
+ ],
+ "words": 78,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Rachita Uday Kumar"
+  ],
+  "illustrators": [
+   "Santosh Pujari"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2232-timmi-s-dream",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

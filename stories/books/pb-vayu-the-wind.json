@@ -1,0 +1,66 @@
+{
+ "id": "pb-vayu-the-wind",
+ "title": "Vayu, the Wind",
+ "pages": [
+  {
+   "img": "img/pb-vayu-the-wind/02.webp",
+   "text": "Everytime I finish my hot, hot bath,\n\nMy wet body feels so cool, cool cool.\n\nWho makes that happen?\n\nVayu the Wind!"
+  },
+  {
+   "img": "img/pb-vayu-the-wind/03.webp",
+   "text": "The milk in my cup is too hot, too hot.\n\nBut soon it is ready for me to gulp.\n\nWho makes that happen?\n\nVayu the Wind!"
+  },
+  {
+   "img": "img/pb-vayu-the-wind/04.webp",
+   "text": "The window curtains flutter\n\nAnd gently brush my face.\n\nWho makes it happen?\n\nVayu, the Wind!"
+  },
+  {
+   "img": "img/pb-vayu-the-wind/05.webp",
+   "text": "A bolt of lightning far away.\n\nBlack clouds moving my way.\n\nWho makes that happen?\n\nVayu, the Wind!"
+  },
+  {
+   "img": "img/pb-vayu-the-wind/06.webp",
+   "text": "Branches sway and leaves tremble.\n\nFlowers gently fall.\n\nWho did it all?\n\nVayu, the Wind!"
+  },
+  {
+   "img": "img/pb-vayu-the-wind/07.webp",
+   "text": "Far from the house, we are playing,\n\nYet, I can smell the sweets mother is preparing.\n\nWho makes it happen?\n\nVayu, the Wind!"
+  },
+  {
+   "img": "img/pb-vayu-the-wind/08.webp",
+   "text": "A glass tumbler on a window sill,\n\nCrashes on the ground.\n\nThank God, I was not around.\n\nWho played this mischief?\n\nOf course, it was Vayu, the Wind!"
+  },
+  {
+   "img": "img/pb-vayu-the-wind/09.webp",
+   "text": "A whistle blows. A train rolls in.\n\nI cannot see, but I hear its din.\n\nWho makes that happen?\n\nVayu, the Wind!"
+  },
+  {
+   "img": "img/pb-vayu-the-wind/10.webp",
+   "text": "Cannot be seen\n\nCannot be heard\n\nDoes all the work\n\nWithout a word.\n\nWho can it be?"
+  },
+  {
+   "img": "img/pb-vayu-the-wind/11.webp",
+   "text": "Of course!\n\nThe wind!\n\nVayu, the wind!"
+  }
+ ],
+ "words": 194,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Madhuri Pai"
+  ],
+  "illustrators": [
+   "Rijuta Ghate"
+  ],
+  "translators": [
+   "Rohini Nilekani"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/15-vaaraa",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

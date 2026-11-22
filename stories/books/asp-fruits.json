@@ -1,0 +1,57 @@
+{
+ "id": "asp-fruits",
+ "title": "Fruits",
+ "pages": [
+  {
+   "img": "img/asp-fruits/02.webp",
+   "text": "Fruits, fruits, fruits."
+  },
+  {
+   "img": "img/asp-fruits/03.webp",
+   "text": "Fruit is sweet to eat."
+  },
+  {
+   "img": "img/asp-fruits/04.webp",
+   "text": "People eat different types of fruits."
+  },
+  {
+   "img": "img/asp-fruits/05.webp",
+   "text": "One may eat mangoes, another may eat pineapples."
+  },
+  {
+   "img": "img/asp-fruits/06.webp",
+   "text": "We also enjoy oranges."
+  },
+  {
+   "img": "img/asp-fruits/07.webp",
+   "text": "Children enjoy apples."
+  },
+  {
+   "img": "img/asp-fruits/08.webp",
+   "text": "Birds enjoy corn."
+  },
+  {
+   "img": "img/asp-fruits/09.webp",
+   "text": "Oh fruits are good for health. People, animals and birds like fruits so much."
+  }
+ ],
+ "words": 46,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ritah Katetemera"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/fruits",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

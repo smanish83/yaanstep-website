@@ -1,0 +1,73 @@
+{
+ "id": "asp-jojo-and-cow",
+ "title": "Jojo And Cow",
+ "pages": [
+  {
+   "img": "img/asp-jojo-and-cow/02.webp",
+   "text": "Jojo is a young boy."
+  },
+  {
+   "img": "img/asp-jojo-and-cow/03.webp",
+   "text": "Jojo living with his mother and a milk cow."
+  },
+  {
+   "img": "img/asp-jojo-and-cow/04.webp",
+   "text": "Jojo loves the cow."
+  },
+  {
+   "img": "img/asp-jojo-and-cow/05.webp",
+   "text": "Every morning Jojo's mother milks the cow."
+  },
+  {
+   "img": "img/asp-jojo-and-cow/06.webp",
+   "text": "Jojo takes the milk."
+  },
+  {
+   "img": "img/asp-jojo-and-cow/07.webp",
+   "text": "Jojo takes the cow to graze"
+  },
+  {
+   "img": "img/asp-jojo-and-cow/08.webp",
+   "text": "Jojo gives the cow the water."
+  },
+  {
+   "img": "img/asp-jojo-and-cow/09.webp",
+   "text": "Jojo's mother cooks food."
+  },
+  {
+   "img": "img/asp-jojo-and-cow/10.webp",
+   "text": "Jojo enjoys food"
+  },
+  {
+   "img": "img/asp-jojo-and-cow/11.webp",
+   "text": "Jojo plays the ball with his friend."
+  },
+  {
+   "img": "img/asp-jojo-and-cow/12.webp",
+   "text": "Jojo reads his book."
+  },
+  {
+   "img": "img/asp-jojo-and-cow/13.webp",
+   "text": "Jojo says bye to the cow and go to bed to sleep."
+  }
+ ],
+ "words": 71,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Isiira Patrick"
+  ],
+  "illustrators": [
+   "Rob Owen",
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/jojo-and-cow",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

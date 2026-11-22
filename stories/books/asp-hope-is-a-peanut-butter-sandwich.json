@@ -1,0 +1,28 @@
+{
+ "id": "asp-hope-is-a-peanut-butter-sandwich",
+ "title": "Hope is a Peanut Butter Sandwich",
+ "pages": [
+  {
+   "img": "img/asp-hope-is-a-peanut-butter-sandwich/02.webp",
+   "text": "hope is peanut butter spread thinly between two slices of government issue bread just enough to awaken a hunger for fullness"
+  }
+ ],
+ "words": 21,
+ "minutes": 1,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Johanna Kistner"
+  ],
+  "illustrators": [
+   "Johanna Kistner"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/hope-peanut-butter-sandwich",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

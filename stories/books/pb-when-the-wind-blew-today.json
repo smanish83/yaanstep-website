@@ -1,0 +1,44 @@
+{
+ "id": "pb-when-the-wind-blew-today",
+ "title": "When the Wind Blew Today...",
+ "pages": [
+  {
+   "img": "img/pb-when-the-wind-blew-today/02.webp",
+   "text": "... I saw a kite flying a frog (or maybe it was the frog that flew the kite)..."
+  },
+  {
+   "img": "img/pb-when-the-wind-blew-today/03.webp",
+   "text": "...and a feather flying an ant (or maybe the ant was flying the feather)..."
+  },
+  {
+   "img": "img/pb-when-the-wind-blew-today/04.webp",
+   "text": "...and a water droplet flying a gnat (or maybe the gnat flew the droplet)..."
+  },
+  {
+   "img": "img/pb-when-the-wind-blew-today/05.webp",
+   "text": "...and a balloon that flew a rat (or maybe it was the rat that flew the balloon)."
+  },
+  {
+   "img": "img/pb-when-the-wind-blew-today/06.webp",
+   "text": "What did you see when the wind blew today?"
+  }
+ ],
+ "words": 71,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Vinayak Varma"
+  ],
+  "illustrators": [
+   "Vinayak Varma"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2747-when-the-wind-blew-today",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "id": "pb-i-can-make-things",
+ "title": "I Can Make Things!",
+ "pages": [
+  {
+   "img": "img/pb-i-can-make-things/02.webp",
+   "text": "I am a big boy now.\n\nI can draw and I can make things."
+  },
+  {
+   "img": "img/pb-i-can-make-things/03.webp",
+   "text": "I draw my mother, she sits still."
+  },
+  {
+   "img": "img/pb-i-can-make-things/04.webp",
+   "text": "I draw my sister, she does not sit still."
+  },
+  {
+   "img": "img/pb-i-can-make-things/05.webp",
+   "text": "I draw many things."
+  },
+  {
+   "img": "img/pb-i-can-make-things/06.webp",
+   "text": "But I am told not to draw on the wall."
+  },
+  {
+   "img": "img/pb-i-can-make-things/07.webp",
+   "text": "I can make things."
+  },
+  {
+   "img": "img/pb-i-can-make-things/08.webp",
+   "text": "I make a drawing of a cat, she is fat."
+  },
+  {
+   "img": "img/pb-i-can-make-things/09.webp",
+   "text": "I make a fish. It is small."
+  },
+  {
+   "img": "img/pb-i-can-make-things/10.webp",
+   "text": "I make paper boats, birds and planes."
+  },
+  {
+   "img": "img/pb-i-can-make-things/11.webp",
+   "text": "I make houses and trains."
+  },
+  {
+   "img": "img/pb-i-can-make-things/12.webp",
+   "text": "My sister makes a mess!\n\nI can make many things. But my sister cannot!"
+  }
+ ],
+ "words": 91,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Mini Shrinivasan"
+  ],
+  "illustrators": [
+   "Tanvee Nabar"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/859-i-can-make-things",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

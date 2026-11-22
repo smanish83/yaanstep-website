@@ -1,0 +1,60 @@
+{
+ "id": "pb-the-day-of-an-owl",
+ "title": "The day of an owl",
+ "pages": [
+  {
+   "img": "img/pb-the-day-of-an-owl/02.webp",
+   "text": "I am an owl\n\nI see in the night...."
+  },
+  {
+   "img": "img/pb-the-day-of-an-owl/03.webp",
+   "text": ".....and I sleep all the day"
+  },
+  {
+   "img": "img/pb-the-day-of-an-owl/04.webp",
+   "text": "One day all the birds woke me up from the sleep"
+  },
+  {
+   "img": "img/pb-the-day-of-an-owl/05.webp",
+   "text": "Cause their friend is falling on the ground....."
+  },
+  {
+   "img": "img/pb-the-day-of-an-owl/06.webp",
+   "text": ".....and vulture moving around"
+  },
+  {
+   "img": "img/pb-the-day-of-an-owl/07.webp",
+   "text": "All of us helped the bird to get on the branch"
+  },
+  {
+   "img": "img/pb-the-day-of-an-owl/08.webp",
+   "text": "The peacock danced for me"
+  },
+  {
+   "img": "img/pb-the-day-of-an-owl/09.webp",
+   "text": "All the birds are happy"
+  },
+  {
+   "img": "img/pb-the-day-of-an-owl/10.webp",
+   "text": "I am again sleepy...."
+  }
+ ],
+ "words": 63,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Vvs Prakash Bommisetti"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3329-the-day-of-an-owl",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

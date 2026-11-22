@@ -1,0 +1,74 @@
+{
+ "id": "asp-rainbow-visits-the-village",
+ "title": "Rainbow visits the village",
+ "pages": [
+  {
+   "img": "img/asp-rainbow-visits-the-village/02.webp",
+   "text": "Kobole lived in a small village."
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/03.webp",
+   "text": "One afternoon, Kobole was out picking passion fruits. Something unusual happened."
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/04.webp",
+   "text": "He saw colourful lines curved across the sky."
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/05.webp",
+   "text": "He dropped all the fruit and ran home to tell the villagers."
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/06.webp",
+   "text": "He found everybody already standing outside their homes. They were looking at the sky."
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/07.webp",
+   "text": "Kobole said, \"It is a beautiful cloth hanging from the sky.\" Neno said, \"No! I think someone is pouring paint from the sky.\""
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/08.webp",
+   "text": "Some people agreed with Kobole. Others thought that Neno was right. The two groups argued."
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/09.webp",
+   "text": "A man from a faraway village arrived and said, \"You are all wrong.\""
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/10.webp",
+   "text": "The people shouted, \"Then what is it?\""
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/11.webp",
+   "text": "The stranger said, \"It is the rainbow. Have you never seen the rainbow before?\""
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/12.webp",
+   "text": "\"What is a r-a-i-n-b-ow?\" the villagers asked, looking at the stranger."
+  },
+  {
+   "img": "img/asp-rainbow-visits-the-village/13.webp",
+   "text": "Neno asked, \"Is it ours? Can we keep it here?\" But the man had already gone away."
+  }
+ ],
+ "words": 151,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [
+   "Ursula Nafula"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/day-we-saw-rainbow",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

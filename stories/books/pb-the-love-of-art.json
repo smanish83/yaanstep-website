@@ -1,0 +1,64 @@
+{
+ "id": "pb-the-love-of-art",
+ "title": "The love of art",
+ "pages": [
+  {
+   "img": "img/pb-the-love-of-art/02.webp",
+   "text": "Ridhima and Rohan loved painting. They painted all day. They won many art prizes in school."
+  },
+  {
+   "img": "img/pb-the-love-of-art/03.webp",
+   "text": "One day, mummy told them that they were moving to a new house. The children were very happy. Mummy told them that they also had to paint the house."
+  },
+  {
+   "img": "img/pb-the-love-of-art/04.webp",
+   "text": "They liked the house very much. The builders told them to paint the fence. They happily agreed."
+  },
+  {
+   "img": "img/pb-the-love-of-art/05.webp",
+   "text": "After they finished, they asked the builder if they could paint the gate. The builder happily agreed."
+  },
+  {
+   "img": "img/pb-the-love-of-art/06.webp",
+   "text": "After they finished, they wanted to paint the house. So they went inside."
+  },
+  {
+   "img": "img/pb-the-love-of-art/07.webp",
+   "text": "They had to first clean they house. They cleaned it and then they started painting."
+  },
+  {
+   "img": "img/pb-the-love-of-art/08.webp",
+   "text": "They designed the walls with fingerprints and checkers."
+  },
+  {
+   "img": "img/pb-the-love-of-art/09.webp",
+   "text": "After they had finished, everyone around the neighbourhood came and praised them."
+  },
+  {
+   "img": "img/pb-the-love-of-art/10.webp",
+   "text": "After the people had gone, mummy told them to make paintings. So they made them. They even sold their paintings. Mummy was very pleased with their talent."
+  },
+  {
+   "img": "img/pb-the-love-of-art/11.webp",
+   "text": "Ridhima and Rohan were world famous for their paintings. They even started their own little shop. If we want to make something like them, we should love art."
+  }
+ ],
+ "words": 182,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Rachita Uday Kumar"
+  ],
+  "illustrators": [
+   "Tanvi Choudhury"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2942-the-love-of-art",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

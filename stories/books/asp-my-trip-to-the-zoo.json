@@ -1,0 +1,58 @@
+{
+ "id": "asp-my-trip-to-the-zoo",
+ "title": "My trip to the Zoo",
+ "pages": [
+  {
+   "img": "img/asp-my-trip-to-the-zoo/02.webp",
+   "text": "Today I went to the Zoo"
+  },
+  {
+   "img": "img/asp-my-trip-to-the-zoo/03.webp",
+   "text": "I saw a lot.\n\nI saw a Lion"
+  },
+  {
+   "img": "img/asp-my-trip-to-the-zoo/04.webp",
+   "text": "I saw an Elephant."
+  },
+  {
+   "img": "img/asp-my-trip-to-the-zoo/05.webp",
+   "text": "I saw a crocodile."
+  },
+  {
+   "img": "img/asp-my-trip-to-the-zoo/06.webp",
+   "text": "I saw a Giraffe."
+  },
+  {
+   "img": "img/asp-my-trip-to-the-zoo/07.webp",
+   "text": "I saw a lot of zebras."
+  },
+  {
+   "img": "img/asp-my-trip-to-the-zoo/08.webp",
+   "text": "And I even saw a cow."
+  },
+  {
+   "img": "img/asp-my-trip-to-the-zoo/09.webp",
+   "text": "It was a lot of fun.\n\nBut then daddy drove us home."
+  }
+ ],
+ "words": 50,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Mmapule Nkuna"
+  ],
+  "illustrators": [
+   "Melany Pietersen",
+   "Rob Owen",
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-trip-zoo",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

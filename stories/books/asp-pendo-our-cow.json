@@ -1,0 +1,72 @@
+{
+ "id": "asp-pendo-our-cow",
+ "title": "Pendo our cow",
+ "pages": [
+  {
+   "img": "img/asp-pendo-our-cow/02.webp",
+   "text": "This is Ndalo."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/03.webp",
+   "text": "Ndalo likes to read books."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/04.webp",
+   "text": "This is Pendo."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/05.webp",
+   "text": "Pendo likes to eat carrots."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/06.webp",
+   "text": "Ndalo grazes Pendo after school."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/07.webp",
+   "text": "He gives fresh water to Pendo."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/08.webp",
+   "text": "Father gives grain to Pendo."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/09.webp",
+   "text": "He milks Pendo every day."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/10.webp",
+   "text": "Pendo gives a lot of milk."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/11.webp",
+   "text": "Father sells Pendo's milk."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/12.webp",
+   "text": "Ndalo drinks fresh milk every day."
+  },
+  {
+   "img": "img/asp-pendo-our-cow/13.webp",
+   "text": "He says, \"Thank you Pendo!\""
+  }
+ ],
+ "words": 58,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ruth Odondi"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/pendo-our-cow",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

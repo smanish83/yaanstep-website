@@ -1,0 +1,37 @@
+{
+ "id": "pb-the-race",
+ "title": "The Race",
+ "pages": [
+  {
+   "img": "img/pb-the-race/02.webp",
+   "text": "Here are two animals talking about. Who is the fastest animal in the forest? So they kept a race for all the animals that wanted to participate."
+  },
+  {
+   "img": "img/pb-the-race/03.webp",
+   "text": "The race began and the participants Lui the lion, Cheek the cheetah, Srap the snake, Mew the cat and Rocky the dog etc participated."
+  },
+  {
+   "img": "img/pb-the-race/04.webp",
+   "text": "The winner was Cheek the cheetah by 5.9 secs. Lui was 6.0, Srap was 9.9 secs, Mew was 6.7 secs, Rocky was 6.1 secs and Harry was 6.0 secs. So we know that the cheetah is the fastest animal."
+  }
+ ],
+ "words": 90,
+ "minutes": 1,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Kushagra Agarwal"
+  ],
+  "illustrators": [
+   "Greystroke",
+   "kushagra agarwal"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2261-the-race",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

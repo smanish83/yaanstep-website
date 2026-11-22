@@ -1,0 +1,59 @@
+{
+ "id": "asp-a-dog",
+ "title": "A dog",
+ "pages": [
+  {
+   "img": "img/asp-a-dog/02.webp",
+   "text": "There was a man with his one dog."
+  },
+  {
+   "img": "img/asp-a-dog/03.webp",
+   "text": "He loved his dog so much."
+  },
+  {
+   "img": "img/asp-a-dog/04.webp",
+   "text": "It was hard working and it used to go to the market to buy meat."
+  },
+  {
+   "img": "img/asp-a-dog/05.webp",
+   "text": "fetching water from the well."
+  },
+  {
+   "img": "img/asp-a-dog/06.webp",
+   "text": "Guarding every thing at home."
+  },
+  {
+   "img": "img/asp-a-dog/07.webp",
+   "text": "One day the man thanked his dog in a special way for being faithful."
+  },
+  {
+   "img": "img/asp-a-dog/08.webp",
+   "text": "The dog became so happy and it continued working hard."
+  }
+ ],
+ "words": 63,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ritah Katetemera"
+  ],
+  "illustrators": [
+   "Catherine Groenewald",
+   "Wiehan de Jager",
+   "Jean Fullalove",
+   "Ursula Nafula",
+   "Sandy Campbell"
+  ],
+  "translators": [
+   "Ritah Katetemera",
+   "Cissy Namugerwa"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/dog",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

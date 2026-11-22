@@ -1,0 +1,66 @@
+{
+ "id": "asp-friends-become-enemies",
+ "title": "Friends become enemies",
+ "pages": [
+  {
+   "img": "img/asp-friends-become-enemies/02.webp",
+   "text": "Once upon a time there lived two friends, Hyena and Hare. Hyena was a hardworking farmer. He woke up early every morning and went to work in his field."
+  },
+  {
+   "img": "img/asp-friends-become-enemies/03.webp",
+   "text": "Hare woke up when it was already broad daylight. He would yawn and stretch. Then he would go looking for food."
+  },
+  {
+   "img": "img/asp-friends-become-enemies/04.webp",
+   "text": "Most mornings, Hare would take some seeds from Hyena's granary. Then he went to his field and pretended to work. He would light a fire and roast the seeds. He did nothing, except eat roasted seeds."
+  },
+  {
+   "img": "img/asp-friends-become-enemies/05.webp",
+   "text": "At harvest time, Hare went and stole his friend's ripe maize. He carried it to his own granary."
+  },
+  {
+   "img": "img/asp-friends-become-enemies/06.webp",
+   "text": "Hyena complained about the stolen crops. Hare answered, \"Maybe the neighbours stole your maize. They are suffering from famine because they are lazy.\""
+  },
+  {
+   "img": "img/asp-friends-become-enemies/07.webp",
+   "text": "Hyena thought about this problem for a long time. He came up with an idea. He collected gum from the trees. He put that sticky gum around the whole field. The thief would get stuck in the gum."
+  },
+  {
+   "img": "img/asp-friends-become-enemies/08.webp",
+   "text": "During the night, Hare went to Hyena's field to steal more maize. Before entering the field he looked around to see if it was safe."
+  },
+  {
+   "img": "img/asp-friends-become-enemies/09.webp",
+   "text": "Hare did not see the gum that Hyena had put around the field. Hare stood in the gum and was stuck. He started shouting for help."
+  },
+  {
+   "img": "img/asp-friends-become-enemies/10.webp",
+   "text": "Hyena heard the shouts and ran out to catch the thief. He could not believe his eyes. It was his friend Hare who was stuck in the gum!"
+  },
+  {
+   "img": "img/asp-friends-become-enemies/11.webp",
+   "text": "From that time, Hyena went his way and Hare went the other way. That marked the end of their friendship."
+  }
+ ],
+ "words": 264,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Kennedy Amandu"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [
+   "Nelson Acadri"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/friends-become-enemies",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

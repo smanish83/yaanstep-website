@@ -1,0 +1,48 @@
+{
+ "id": "pb-ranis-first-day-at-school",
+ "title": "Rani's First Day at School",
+ "pages": [
+  {
+   "img": "img/pb-ranis-first-day-at-school/02.webp",
+   "text": "It is my first day at school.\n\nMummy is holding my hand and walking with me.\n\n“I am grown up now,” I say. “Let go, let go!”\n\nMummy holds my hand very tight."
+  },
+  {
+   "img": "img/pb-ranis-first-day-at-school/03.webp",
+   "text": "There are many children near the school.\n\nThey come by bus. They come by car.\n\nThey come by rickshaw. They cycle.\n\nThey walk, like me."
+  },
+  {
+   "img": "img/pb-ranis-first-day-at-school/04.webp",
+   "text": "We reach the gate. Mummy lets go of my hand.\n\nShe stays at the gate. I have to go inside alone.\n\nThere are many new faces all around me."
+  },
+  {
+   "img": "img/pb-ranis-first-day-at-school/05.webp",
+   "text": "I take one step. I take another step. I look back. Mummy gets smaller as I walk away. Will she disappear?\n\nI run back to her. I don't feel so grown up. I hold her hand.\n\n“Don't go away,” I say."
+  },
+  {
+   "img": "img/pb-ranis-first-day-at-school/06.webp",
+   "text": "Everyone is inside now. I am the only one outside. The teacher comes out. She smiles at me. I smile back.\n\nMummy says, \"Rani, I will be here when you come out.\"\n\nI let go of her hand. She waves to me."
+  },
+  {
+   "img": "img/pb-ranis-first-day-at-school/07.webp",
+   "text": "I run inside. Mummy will be there after school!"
+  }
+ ],
+ "words": 179,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Cheryl Rao"
+  ],
+  "illustrators": [
+   "Mayur Mistry"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/98-rani-s-first-day-at-school",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

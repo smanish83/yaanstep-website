@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Story library | Yaanstep</title>
+<meta name="description" content="Free complete picture books for children aged 3 to 12, shared under open licences by StoryWeaver and African Storybook. Read together, or let your device's own voice read with a marker on each word. No sign-in.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f4fbf8;--ink:#17332c;--teal:#1F7A6D;--card:#fff;--line:#c6e3da}
+*{box-sizing:border-box}body{margin:0;font:18px/1.45 system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+main{max-width:680px;margin:0 auto;padding:16px;overflow-wrap:anywhere}h1{font-size:1.35rem;margin:.2em 0}
+.card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.note{font-size:.85rem;background:#fff7e0;border:1px solid #ecd48a;border-radius:10px;padding:8px 12px}
+button{font:inherit;cursor:pointer;min-height:56px;min-width:56px;border-radius:14px;border:2px solid var(--teal);background:#fff;color:var(--ink);padding:8px 14px}
+button:focus-visible{outline:4px solid #f0a500;outline-offset:2px}button.primary{background:var(--teal);color:#fff;font-weight:600}
+button:disabled{cursor:default}
+.small{min-height:48px;font-size:.85rem;border-color:#aab9b3}.top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.steps{display:grid;gap:10px}.step{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-height:72px;font-size:1.1rem;font-weight:600}.step small{color:#51675f;font-weight:400}
+.parent{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:.85rem;color:#51675f}.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0}
+.tile{min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-width:3px;padding:8px 4px}
+.tile svg{width:64px;height:64px;max-width:100%}.tile .w{font-size:1rem;font-weight:600}
+.tile.right,.choice.right{background:#e6f6ea;border-color:#1b7a3d}.tile.wrong,.choice.wrong{opacity:.55;border-style:dashed}
+.letter{font-size:3.2rem;font-weight:800;text-align:center;margin:0;line-height:1.1}
+.ask{font-size:1.15rem;font-weight:600;text-align:center;margin:6px 0}
+.sub{font-size:1rem;color:#51675f;font-weight:600;min-height:1.5em;text-align:center}.sub.yes{color:#1b7a3d}.sub.try{color:#7a5a00}
+.beatpic{display:flex;flex-direction:column;align-items:center;gap:4px;margin:8px 0}.beatpic svg{width:96px;height:96px}
+.word{font-size:1.6rem;font-weight:800}.split{font-size:1.6rem;font-weight:800;text-align:center;color:var(--teal);margin:4px 0}
+.beatbtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0}.beatbtns button{display:flex;flex-direction:column;align-items:center;font-weight:600}
+.claps{font-size:1.1rem;letter-spacing:2px}
+.done{background:#e6f6ea;border:3px solid #7bc48f;border-radius:16px;padding:18px;text-align:center;margin:12px 0}.done b{font-size:1.5rem;display:block;margin-bottom:8px}
+.count{font-size:.85rem;color:#51675f}
+.back{margin:0 0 4px}.back a{color:var(--teal);font-weight:600}
+.moveit{margin:12px 0 4px}.nexthead{margin:14px 0 4px;font-weight:600}.nextgames{justify-content:center;align-items:center}.nextgames a{display:inline-flex;align-items:center;min-height:48px;padding:0 10px;color:var(--ink)}.pic{display:flex;justify-content:center;margin:8px 0}.pic svg{width:120px;height:120px}.text{font-size:1.4rem;font-weight:600;line-height:1.9;margin:10px 0}.text .w{border-radius:6px;padding:0 2px;margin:0 -2px}.text .w.now{background:#FFE08A;box-shadow:0 0 0 2px #E0B93B;position:relative}.text .w.now::before{content:"";position:absolute;left:50%;top:-11px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#C2410C}@media (prefers-reduced-motion:no-preference){.text .w.now::before{animation:hop .35s ease-out}@keyframes hop{0%{transform:translateY(-8px)}60%{transform:translateY(2px)}100%{transform:translateY(0)}}}.ask{font-size:1rem;background:#eef6fb;border:1px solid #b9d7ea;border-radius:10px;padding:8px 12px}.theend{font-size:1.6rem;font-weight:800;text-align:center;margin:8px 0}.wordshead{font-weight:600;margin:12px 0 4px}.words{display:flex;flex-wrap:wrap;gap:8px}.wordbtn{font-size:1.2rem;font-weight:600}.lib-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:8px 0}
+.lib-filters label{display:block;font-weight:600;font-size:.9rem;margin-bottom:4px}
+.lib-filters select,.lib-filters input{font:inherit;width:100%;min-height:48px;border:2px solid #5d716a;border-radius:10px;padding:6px 10px;background:#fff;color:var(--ink)}
+.lib-filters select:focus-visible,.lib-filters input:focus-visible,a:focus-visible{outline:4px solid #f0a500;outline-offset:2px}
+.shelf{list-style:none;padding:0;margin:10px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.bookbtn{width:100%;height:100%;display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:4px;padding:8px}
+.bookbtn img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:#eef3f1}
+.bookbtn .bt{font-weight:700;font-size:1rem}.bookbtn small{color:#51675f;font-size:.8rem}
+.pg{display:block;width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:10px;background:#f6f8f7;margin:6px 0}
+.ltext{font-size:1.35rem;font-weight:600;line-height:1.9;margin:10px 0;white-space:normal}
+.ltext .w{border-radius:6px;padding:0 2px;margin:0 -2px}.ltext .w.now{background:#FFE08A;box-shadow:0 0 0 2px #E0B93B;position:relative}
+.ltext .w.now::before{content:"";position:absolute;left:50%;top:-11px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#C2410C}
+@media (prefers-reduced-motion:no-preference){.ltext .w.now::before{animation:hop .35s ease-out}@keyframes hop{0%{transform:translateY(-8px)}60%{transform:translateY(2px)}100%{transform:translateY(0)}}}
+.cover-t{font-size:1.5rem;font-weight:800;margin:8px 0 2px}.meta{color:#51675f;margin:0 0 8px}
+.credits{font-size:.85rem;color:#3f554d;border-top:1px solid var(--line);margin-top:12px;padding-top:6px}.credits p{margin:.2em 0}.credits a{color:var(--teal);font-weight:600}
+</style></head><body><main>
+<p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
+<h1>Story library</h1>
+<p class="lead">Complete picture books to read together, for ages 3 to 12.</p>
+<p class="note"><b>Free books from open libraries.</b> Each book was written and drawn by the people named in its credits and shared under an open licence (CC BY) by <a href="https://storyweaver.org.in/">StoryWeaver</a> or <a href="https://www.africanstorybook.org/">African Storybook</a>. Yaanstep's AI team picked and checked them for young children, but please look through a book before reading it with your child. Pictures are resized; the words are as the authors wrote them. No sign-in, no ads. Nothing is recorded or sent.</p>
+<p id="novoice" class="note" hidden>No built-in voice was found on this device, so the books show words without sound. A grown-up can read them aloud, or try another browser.</p>
+<p id="loaderr" class="note" hidden>The books did not load. Please check your connection and reload the page.</p>
+<section id="library" aria-labelledby="lib-h">
+<h2 id="lib-h" class="ys-sr">Find a book</h2>
+<div class="lib-filters">
+<div><label for="ages">Age</label><select id="ages"><option value="all">All ages</option><option value="3-5">Ages 3 to 5</option><option value="5-7">Ages 5 to 7</option><option value="7-9">Ages 7 to 9</option><option value="9-12">Ages 9 to 12</option></select></div>
+<div><label for="length">Length</label><select id="length"><option value="all">Any length</option><option value="short">Up to 4 minutes</option><option value="medium">5 to 9 minutes</option><option value="long">10 minutes or more</option></select></div>
+<div><label for="q">Search titles</label><input id="q" type="search" autocomplete="off"></div>
+</div>
+<p class="count" aria-live="polite"><span id="found"></span> of <span id="total">0</span></p>
+<ul class="shelf" id="shelf"></ul>
+<p><button type="button" id="more" hidden>Show more books</button></p>
+<div class="parent"><p>Parent area</p><p>Pick a book together. Read each page aloud, or tap "Read this page to me" to use your device's own voice; a marker lights up each word as it is read. Talk about the pictures as you go. The minutes are a rough guide for reading aloud with time to look at the pictures.</p><p>The voice and speed you chose on the <a href="reading.html">reading page</a> are used here as well.</p></div>
+</section>
+<section id="reader" hidden aria-labelledby="btitle"><div class="card"><div class="top"><b id="btitle"></b><span class="count" id="rcount"></span><button id="rexit" class="small">Back to the books</button></div><div id="rpage" aria-live="polite"></div><div class="row"><button id="readit" class="small" hidden>Read this page to me</button><button id="rprev" class="small" hidden>Previous page</button><button id="rnext" class="primary">Next page</button></div></div></section>
+</main>
+<script src="assets/library.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>

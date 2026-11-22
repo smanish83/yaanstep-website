@@ -1,0 +1,72 @@
+{
+ "id": "asp-tom-the-banana-seller",
+ "title": "Tom the banana seller",
+ "pages": [
+  {
+   "img": "img/asp-tom-the-banana-seller/02.webp",
+   "text": "Tom carries a tray of ripe bananas."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/03.webp",
+   "text": "Tom goes to the market to sell bananas."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/04.webp",
+   "text": "People at the market are buying fruit."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/05.webp",
+   "text": "But no one is buying\n\nTom's bananas.\n\nThey prefer to buy fruit from women."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/06.webp",
+   "text": "\"In our community, only women sell fruit,\" people say. \"What kind of a man is this?\" people ask."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/07.webp",
+   "text": "But Tom does not give up.\n\nHe calls, \"Buy my bananas!\n\nBuy my sweet ripe bananas!\""
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/08.webp",
+   "text": "One woman picks up a bunch of bananas from the tray.\n\nShe looks at the bananas carefully."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/09.webp",
+   "text": "The woman buys the bananas."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/10.webp",
+   "text": "More people come to the stall.\n\nThey buy Tom's bananas and eat them."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/11.webp",
+   "text": "Soon, the tray is empty.\n\nTom counts the money he earned."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/12.webp",
+   "text": "Then Tom buys soap, sugar, and bread.\n\nHe puts the things in his tray."
+  },
+  {
+   "img": "img/asp-tom-the-banana-seller/13.webp",
+   "text": "Tom balances the tray on his head and goes home."
+  }
+ ],
+ "words": 140,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Humphreys Odunga"
+  ],
+  "illustrators": [
+   "Zablon Alex Nguku"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/tom-banana-seller",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

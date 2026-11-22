@@ -1,0 +1,67 @@
+{
+ "id": "asp-sane-in-the-market",
+ "title": "Sane in the market",
+ "pages": [
+  {
+   "img": "img/asp-sane-in-the-market/02.webp",
+   "text": "Sane at home."
+  },
+  {
+   "img": "img/asp-sane-in-the-market/03.webp",
+   "text": "It is Sane's birthday."
+  },
+  {
+   "img": "img/asp-sane-in-the-market/04.webp",
+   "text": "Sane at the bus stop."
+  },
+  {
+   "img": "img/asp-sane-in-the-market/05.webp",
+   "text": "Sane in the bus."
+  },
+  {
+   "img": "img/asp-sane-in-the-market/06.webp",
+   "text": "Sane at the market."
+  },
+  {
+   "img": "img/asp-sane-in-the-market/07.webp",
+   "text": "Ooh! Many fruits."
+  },
+  {
+   "img": "img/asp-sane-in-the-market/08.webp",
+   "text": "Sweet apples."
+  },
+  {
+   "img": "img/asp-sane-in-the-market/09.webp",
+   "text": "But where is mother mother?"
+  },
+  {
+   "img": "img/asp-sane-in-the-market/10.webp",
+   "text": "I went to buy a birthday present for you."
+  },
+  {
+   "img": "img/asp-sane-in-the-market/11.webp",
+   "text": "Thank you mum!"
+  }
+ ],
+ "words": 42,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Alice Kapolondo"
+  ],
+  "illustrators": [
+   "Felicity Bell",
+   "Wiehan de Jager",
+   "Cathy Feek",
+   "Melany Pietersen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/sane-market",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

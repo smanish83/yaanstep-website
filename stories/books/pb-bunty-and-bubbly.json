@@ -1,0 +1,68 @@
+{
+ "id": "pb-bunty-and-bubbly",
+ "title": "Bunty and Bubbly",
+ "pages": [
+  {
+   "img": "img/pb-bunty-and-bubbly/02.webp",
+   "text": "Bunty loves to play with butterflies..."
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/03.webp",
+   "text": "...and with birds."
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/04.webp",
+   "text": "She loves to play with paper boats."
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/05.webp",
+   "text": "She also likes to make sand castles."
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/06.webp",
+   "text": "When Bunty goes back home,\n\nher mother asks her to clean up.\n\nBut she refuses."
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/07.webp",
+   "text": "\"I hate soaps!\" she screams."
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/08.webp",
+   "text": "One night, she has a dream.\n\nThe germs are all around her castle, and are attacking her."
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/09.webp",
+   "text": "Bunty is chased by the germs.\n\nShe runs for her life and screams, “Help... Help!”"
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/10.webp",
+   "text": "Suddenly, Soap King Bubbly appears.\n\n“Bunty, don't be afraid,” he says. “Go attack the germs!”\n\nthe Soap King orders his army of bubbles."
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/11.webp",
+   "text": "The army of bubbles chases the germs away."
+  },
+  {
+   "img": "img/pb-bunty-and-bubbly/12.webp",
+   "text": "These days, Bunty likes to use soap,\n\nand she brushes and scrubs herself clean."
+  }
+ ],
+ "words": 120,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Sorit Gupto"
+  ],
+  "illustrators": [
+   "Sorit Gupto"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/202-bunty-and-bubbly",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

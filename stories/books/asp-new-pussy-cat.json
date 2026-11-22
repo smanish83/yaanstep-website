@@ -1,0 +1,56 @@
+{
+ "id": "asp-new-pussy-cat",
+ "title": "New pussy cat",
+ "pages": [
+  {
+   "img": "img/asp-new-pussy-cat/02.webp",
+   "text": "Prosy wanted a pussy cat."
+  },
+  {
+   "img": "img/asp-new-pussy-cat/03.webp",
+   "text": "Prosy's family went to visit the pussy cats."
+  },
+  {
+   "img": "img/asp-new-pussy-cat/04.webp",
+   "text": "Prosy wanted this cat.\n\nIt was too big for her."
+  },
+  {
+   "img": "img/asp-new-pussy-cat/05.webp",
+   "text": "Tim wanted this kitten.\n\nIt was too small for him."
+  },
+  {
+   "img": "img/asp-new-pussy-cat/06.webp",
+   "text": "Mum wanted this kitten.\n\nIt was too quick for her."
+  },
+  {
+   "img": "img/asp-new-pussy-cat/07.webp",
+   "text": "Everyone liked this kitten."
+  },
+  {
+   "img": "img/asp-new-pussy-cat/08.webp",
+   "text": "They took the kitten."
+  },
+  {
+   "img": "img/asp-new-pussy-cat/09.webp",
+   "text": "Everyone is happy with the new pussy cat."
+  }
+ ],
+ "words": 59,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ritah Katetemera"
+  ],
+  "illustrators": [
+   "Marleen Visser"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/new-pussy-cat",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

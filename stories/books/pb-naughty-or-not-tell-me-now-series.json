@@ -1,0 +1,68 @@
+{
+ "id": "pb-naughty-or-not-tell-me-now-series",
+ "title": "Naughty or Not (Tell me now series)",
+ "pages": [
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/02.webp",
+   "text": "Am I a good boy?"
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/03.webp",
+   "text": "Yes, you are a good boy."
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/04.webp",
+   "text": "Am I a sweet girl?"
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/05.webp",
+   "text": "Yes, sometimes you are a sweet girl."
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/06.webp",
+   "text": "Is he a bad boy?"
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/07.webp",
+   "text": "Yes, sometimes he is a bad boy."
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/08.webp",
+   "text": "Is she a naughty girl?"
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/09.webp",
+   "text": "Sometimes she is very naughty."
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/10.webp",
+   "text": "Is he a quiet boy?"
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/11.webp",
+   "text": "He likes noise."
+  },
+  {
+   "img": "img/pb-naughty-or-not-tell-me-now-series/12.webp",
+   "text": "You are the best.\n\nYou are the best too."
+  }
+ ],
+ "words": 62,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Madhav Chavan"
+  ],
+  "illustrators": [
+   "Rijuta Ghate"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/470-naughty-or-not-tell-me-now-series",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

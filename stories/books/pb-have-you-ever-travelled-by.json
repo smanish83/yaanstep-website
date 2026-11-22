@@ -1,0 +1,62 @@
+{
+ "id": "pb-have-you-ever-travelled-by",
+ "title": "Have You Ever Travelled By?",
+ "pages": [
+  {
+   "img": "img/pb-have-you-ever-travelled-by/02.webp",
+   "text": "A cycle"
+  },
+  {
+   "img": "img/pb-have-you-ever-travelled-by/03.webp",
+   "text": "A bike"
+  },
+  {
+   "img": "img/pb-have-you-ever-travelled-by/04.webp",
+   "text": "An auto rickshaw"
+  },
+  {
+   "img": "img/pb-have-you-ever-travelled-by/05.webp",
+   "text": "A car"
+  },
+  {
+   "img": "img/pb-have-you-ever-travelled-by/06.webp",
+   "text": "A train"
+  },
+  {
+   "img": "img/pb-have-you-ever-travelled-by/07.webp",
+   "text": "A boat"
+  },
+  {
+   "img": "img/pb-have-you-ever-travelled-by/08.webp",
+   "text": "An aeroplane"
+  },
+  {
+   "img": "img/pb-have-you-ever-travelled-by/09.webp",
+   "text": "A parachute?"
+  }
+ ],
+ "words": 17,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Payoshni Saraf"
+  ],
+  "illustrators": [
+   "Ajanta Guhathakurta",
+   "Deepa Balsavar",
+   "Lavanya Karthik",
+   "Priya Kuriyan",
+   "Rajeev Verma 'Banjara'",
+   "Shikha Nambiar",
+   "Taposhi Ghoshal"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4775-have-you-ever-travelled-by",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

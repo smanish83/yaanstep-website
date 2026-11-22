@@ -1,0 +1,70 @@
+{
+ "id": "asp-come-back-cat",
+ "title": "Come back, cat",
+ "pages": [
+  {
+   "img": "img/asp-come-back-cat/02.webp",
+   "text": "Come back, cat! Play with me."
+  },
+  {
+   "img": "img/asp-come-back-cat/03.webp",
+   "text": "Sit in your basket. Stay right here!"
+  },
+  {
+   "img": "img/asp-come-back-cat/04.webp",
+   "text": "Come back, cat! That's way too high."
+  },
+  {
+   "img": "img/asp-come-back-cat/05.webp",
+   "text": "Come back, cat! Don't go outside."
+  },
+  {
+   "img": "img/asp-come-back-cat/06.webp",
+   "text": ""
+  },
+  {
+   "img": "img/asp-come-back-cat/07.webp",
+   "text": "Come back, cat! That's not yours."
+  },
+  {
+   "img": "img/asp-come-back-cat/08.webp",
+   "text": "Come back, cat! What have you got?"
+  },
+  {
+   "img": "img/asp-come-back-cat/09.webp",
+   "text": "Come back, cat! That's not your friend!"
+  },
+  {
+   "img": "img/asp-come-back-cat/10.webp",
+   "text": "Hello, cat! Are you back?"
+  },
+  {
+   "img": null,
+   "text": "Stay in your basket. It's nap time now."
+  },
+  {
+   "img": null,
+   "text": "Cat?"
+  }
+ ],
+ "words": 60,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Nicola Rijsdijk"
+  ],
+  "illustrators": [
+   "Karen Lilje"
+  ],
+  "translators": [
+   "Nicola Rijsdijk"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/come-back-cat",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed. Some pages have no picture because no matching picture was available in the source files."
+ }
+}

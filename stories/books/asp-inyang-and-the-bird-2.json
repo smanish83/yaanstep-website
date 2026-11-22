@@ -1,0 +1,96 @@
+{
+ "id": "asp-inyang-and-the-bird-2",
+ "title": "Inyang and the Bird",
+ "pages": [
+  {
+   "img": "img/asp-inyang-and-the-bird-2/02.webp",
+   "text": "Inyang was a herd's boy."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/03.webp",
+   "text": "One day..."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/04.webp",
+   "text": "...he was very hungry"
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/05.webp",
+   "text": "He got a bird..."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/06.webp",
+   "text": "...and sent it home."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/07.webp",
+   "text": "The bird flew..."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/08.webp",
+   "text": "...and landed on the hut."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/09.webp",
+   "text": "People heard the bird."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/10.webp",
+   "text": "Food was cooked."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/11.webp",
+   "text": "They took food..."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/12.webp",
+   "text": "... found him under the tree."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/13.webp",
+   "text": "The cows had gone."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/14.webp",
+   "text": "They fed him."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/15.webp",
+   "text": "His father went for the cows."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/16.webp",
+   "text": "Inyang ate enough."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/17.webp",
+   "text": "Inyang and the cows were taken home."
+  },
+  {
+   "img": "img/asp-inyang-and-the-bird-2/18.webp",
+   "text": "The bird had saved Inyang!!"
+  }
+ ],
+ "words": 70,
+ "minutes": 4,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Simon Ipoo"
+  ],
+  "illustrators": [
+   "Catherine Groenewald",
+   "Wiehan de Jager",
+   "Kathy Arbuckle",
+   "Rijuta Ghate",
+   "Jemma Kahn"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/inyang-and-bird",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

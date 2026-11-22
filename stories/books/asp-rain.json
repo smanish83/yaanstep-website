@@ -1,0 +1,58 @@
+{
+ "id": "asp-rain",
+ "title": "Rain",
+ "pages": [
+  {
+   "img": "img/asp-rain/02.webp",
+   "text": "I love water."
+  },
+  {
+   "img": "img/asp-rain/03.webp",
+   "text": "I enjoy playing with water."
+  },
+  {
+   "img": "img/asp-rain/04.webp",
+   "text": "It is raining."
+  },
+  {
+   "img": "img/asp-rain/05.webp",
+   "text": "Rain gives us water."
+  },
+  {
+   "img": "img/asp-rain/06.webp",
+   "text": "I enjoy playing outside."
+  },
+  {
+   "img": "img/asp-rain/07.webp",
+   "text": "But it is raining."
+  },
+  {
+   "img": "img/asp-rain/08.webp",
+   "text": "I enjoy playing out in the rain."
+  },
+  {
+   "img": "img/asp-rain/09.webp",
+   "text": "My hair is wet from playing in the rain. My father is fixing my hair."
+  }
+ ],
+ "words": 45,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Letta Machoga"
+  ],
+  "illustrators": [
+   "Marleen Visser"
+  ],
+  "translators": [
+   "Lorato Trok"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/rain",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

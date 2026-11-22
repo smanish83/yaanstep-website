@@ -1,0 +1,73 @@
+{
+ "id": "asp-zama-is-great",
+ "title": "Zama is great!",
+ "pages": [
+  {
+   "img": "img/asp-zama-is-great/02.webp",
+   "text": "My little brother sleeps very late. I wake early, because I am great!"
+  },
+  {
+   "img": "img/asp-zama-is-great/03.webp",
+   "text": "I am the one who lets in the sun."
+  },
+  {
+   "img": "img/asp-zama-is-great/04.webp",
+   "text": "\"You're my morning star,\" says Ma."
+  },
+  {
+   "img": "img/asp-zama-is-great/05.webp",
+   "text": "I wash myself, I don't need any help."
+  },
+  {
+   "img": "img/asp-zama-is-great/06.webp",
+   "text": "I can cope with cold water and blue smelly soap."
+  },
+  {
+   "img": "img/asp-zama-is-great/07.webp",
+   "text": "Ma reminds, \"Don't forget teeth.\" I reply, \"Never, not me!\""
+  },
+  {
+   "img": "img/asp-zama-is-great/08.webp",
+   "text": "After washing, I greet Grandpa and Auntie, and wish them a good day."
+  },
+  {
+   "img": "img/asp-zama-is-great/09.webp",
+   "text": "Then I dress myself, \"I'm big now Ma,\" I say."
+  },
+  {
+   "img": "img/asp-zama-is-great/10.webp",
+   "text": "I can close my buttons and buckle my shoes."
+  },
+  {
+   "img": "img/asp-zama-is-great/11.webp",
+   "text": "And I make sure little brother knows all the school news."
+  },
+  {
+   "img": "img/asp-zama-is-great/12.webp",
+   "text": "In class I do my best in every way."
+  },
+  {
+   "img": "img/asp-zama-is-great/13.webp",
+   "text": "I do all these good things every day. But the thing I like most, is to play and play!"
+  }
+ ],
+ "words": 127,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Michael Oguttu",
+   "Nina Orange (adaptation)"
+  ],
+  "illustrators": [
+   "Vusi Malindi"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/zama-great",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

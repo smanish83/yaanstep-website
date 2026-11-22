@@ -1,0 +1,68 @@
+{
+ "id": "pb-why-oh-why",
+ "title": "Why, Oh Why!",
+ "pages": [
+  {
+   "img": "img/pb-why-oh-why/02.webp",
+   "text": "Eyes are red."
+  },
+  {
+   "img": "img/pb-why-oh-why/03.webp",
+   "text": "Why, oh why?"
+  },
+  {
+   "img": "img/pb-why-oh-why/04.webp",
+   "text": "Nose just runs. Wipe it dry."
+  },
+  {
+   "img": "img/pb-why-oh-why/05.webp",
+   "text": "Cheeks feel hot. Touch me not!"
+  },
+  {
+   "img": "img/pb-why-oh-why/06.webp",
+   "text": "Throat is sore. No water nearby!"
+  },
+  {
+   "img": "img/pb-why-oh-why/07.webp",
+   "text": "Mouth goes round. Why, oh why?"
+  },
+  {
+   "img": "img/pb-why-oh-why/08.webp",
+   "text": "Air all gone."
+  },
+  {
+   "img": "img/pb-why-oh-why/09.webp",
+   "text": "Why, oh why?"
+  },
+  {
+   "img": "img/pb-why-oh-why/10.webp",
+   "text": "Now, what shall we do?"
+  },
+  {
+   "img": "img/pb-why-oh-why/11.webp",
+   "text": "Use the thread. Tie the balloon."
+  },
+  {
+   "img": "img/pb-why-oh-why/12.webp",
+   "text": "You blow the balloon. Your turn now."
+  }
+ ],
+ "words": 54,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Richa Bhaskar"
+  ],
+  "illustrators": [
+   "Shailja Jain Chougule"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/991-why-oh-why",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

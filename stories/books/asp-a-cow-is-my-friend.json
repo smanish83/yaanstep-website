@@ -1,0 +1,42 @@
+{
+ "id": "asp-a-cow-is-my-friend",
+ "title": "A cow is my friend",
+ "pages": [
+  {
+   "img": "img/asp-a-cow-is-my-friend/02.webp",
+   "text": "Mother cow cow, I like you cow."
+  },
+  {
+   "img": "img/asp-a-cow-is-my-friend/03.webp",
+   "text": "Yesterday you gave me milk."
+  },
+  {
+   "img": "img/asp-a-cow-is-my-friend/04.webp",
+   "text": "My father buys meat every Saturday."
+  },
+  {
+   "img": "img/asp-a-cow-is-my-friend/05.webp",
+   "text": "Mummy has a nice bag, and I have very good shoes."
+  }
+ ],
+ "words": 29,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Frista",
+   "Fatima"
+  ],
+  "illustrators": [
+   "Marleen Visser",
+   "Felicity Bell"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/cow-my-friend",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

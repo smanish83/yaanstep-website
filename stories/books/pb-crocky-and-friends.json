@@ -1,0 +1,53 @@
+{
+ "id": "pb-crocky-and-friends",
+ "title": "Crocky and friends",
+ "pages": [
+  {
+   "img": "img/pb-crocky-and-friends/02.webp",
+   "text": "Crocky the crocodile was sad."
+  },
+  {
+   "img": "img/pb-crocky-and-friends/03.webp",
+   "text": "He had no friends to play with."
+  },
+  {
+   "img": "img/pb-crocky-and-friends/04.webp",
+   "text": "Babloo, the butterfly said, \"I will play with you, Crocky. Do not cry.\""
+  },
+  {
+   "img": "img/pb-crocky-and-friends/05.webp",
+   "text": "Tutoo, the turtle said, \"I will play with you, Crocky. Do not cry.\""
+  },
+  {
+   "img": "img/pb-crocky-and-friends/06.webp",
+   "text": "Susie, the snake said, \"I will also play with you, Crocky. Do not cry.\""
+  },
+  {
+   "img": "img/pb-crocky-and-friends/07.webp",
+   "text": "Fred, the frog and Fenny, the fish also came to play."
+  },
+  {
+   "img": "img/pb-crocky-and-friends/08.webp",
+   "text": "So, Crocky found new friends to play with. He became happy."
+  }
+ ],
+ "words": 74,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Khushboo Awasthi"
+  ],
+  "illustrators": [
+   "Bulbul Sharma",
+   "Herminder Ohri"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4821-crocky-and-friends",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "id": "asp-looking-for-water",
+ "title": "Looking for water",
+ "pages": [
+  {
+   "img": "img/asp-looking-for-water/02.webp",
+   "text": "Where can I get water."
+  },
+  {
+   "img": "img/asp-looking-for-water/03.webp",
+   "text": "There is some water in the pot."
+  },
+  {
+   "img": "img/asp-looking-for-water/04.webp",
+   "text": "It is too hot."
+  },
+  {
+   "img": "img/asp-looking-for-water/05.webp",
+   "text": "Can this water be cold."
+  }
+ ],
+ "words": 21,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Augustine Napagi"
+  ],
+  "illustrators": [
+   "Hélder de Paz Alexandre"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/looking-water",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "id": "asp-i-love-to-read",
+ "title": "I love to read",
+ "pages": [
+  {
+   "img": "img/asp-i-love-to-read/02.webp",
+   "text": "I love to read"
+  },
+  {
+   "img": "img/asp-i-love-to-read/03.webp",
+   "text": "Who can I read for?"
+  },
+  {
+   "img": "img/asp-i-love-to-read/04.webp",
+   "text": "The baby is sleeping"
+  },
+  {
+   "img": "img/asp-i-love-to-read/05.webp",
+   "text": "Who can I read for?"
+  },
+  {
+   "img": "img/asp-i-love-to-read/06.webp",
+   "text": "Mom and grandmother are cooking"
+  },
+  {
+   "img": "img/asp-i-love-to-read/07.webp",
+   "text": "Who can I read for?"
+  },
+  {
+   "img": "img/asp-i-love-to-read/08.webp",
+   "text": "Father and grandfather are fixing the car"
+  },
+  {
+   "img": "img/asp-i-love-to-read/09.webp",
+   "text": "Who can I read for? I will sit and read for myself"
+  }
+ ],
+ "words": 47,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Letta Machoga"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [
+   "Letta Machoga",
+   "Bathokwa book club"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/i-love-read",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "asp-crocodile-and-baboon",
+ "title": "Crocodile and Baboon",
+ "pages": [
+  {
+   "img": "img/asp-crocodile-and-baboon/02.webp",
+   "text": "Baboon and Crocodile were the best of friends. They played together. They ate together. They did everything together."
+  },
+  {
+   "img": "img/asp-crocodile-and-baboon/03.webp",
+   "text": "But one day, Crocodile got so sick that he was almost dead. When he saw that his sickness was getting worse, Crocodile went to the nyabezi who said, \"If you want to get better, you have to eat baboon meat.\""
+  },
+  {
+   "img": "img/asp-crocodile-and-baboon/04.webp",
+   "text": "When he heard this, Crocodile was sad. But there was no other option to heal himself except to eat his friend the baboon."
+  },
+  {
+   "img": "img/asp-crocodile-and-baboon/05.webp",
+   "text": "When Baboon went to see his friend, Crocodile put him on his back and took him out to the deepest part of the river."
+  },
+  {
+   "img": "img/asp-crocodile-and-baboon/06.webp",
+   "text": "Crocodile said, \"The nyabezi told me that if I am to be healed I must eat you, my friend.\""
+  },
+  {
+   "img": "img/asp-crocodile-and-baboon/07.webp",
+   "text": "Then, Baboon replied, \"No, my friend. Don't eat me. I'm too small. Wait a minute and I'll call my grandfather. He's bigger than me. Eat him and you'll be full.\""
+  },
+  {
+   "img": "img/asp-crocodile-and-baboon/08.webp",
+   "text": "Then Crocodile said, \"Where is this grandfather of yours?\" Baboon said, \"He's in that tree, over on that island.\" Crocodile said, \"Go get him so that I may eat him.\""
+  },
+  {
+   "img": "img/asp-crocodile-and-baboon/09.webp",
+   "text": "Baboon jumped off Crocodile's back and ran straight up the tree and stayed there. Crocodile waited and waited. But he didn't see any sign of Baboon. And that was the end of their friendship."
+  }
+ ],
+ "words": 218,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Basilio Gimo"
+  ],
+  "illustrators": [
+   "Jeremiah Dube"
+  ],
+  "translators": [
+   "Little Zebra Books"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/crocodile-and-baboon",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

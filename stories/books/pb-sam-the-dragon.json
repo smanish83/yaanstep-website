@@ -1,0 +1,75 @@
+{
+ "id": "pb-sam-the-dragon",
+ "title": "Sam the Dragon",
+ "pages": [
+  {
+   "img": "img/pb-sam-the-dragon/02.webp",
+   "text": "Sam the dragon was a flying lighthouse. He showed ships the way back home by breathing out fire."
+  },
+  {
+   "img": "img/pb-sam-the-dragon/03.webp",
+   "text": "Sam's best friend was called Sar. He was a movie star. He acted in Dragon Breath the movie as a road. But he was not very good at singing."
+  },
+  {
+   "img": "img/pb-sam-the-dragon/04.webp",
+   "text": "Sam was far away from his parents. He wanted to go home."
+  },
+  {
+   "img": "img/pb-sam-the-dragon/05.webp",
+   "text": "Toothless was Sam's Doctor. He told Sam to go home to see his parents."
+  },
+  {
+   "img": "img/pb-sam-the-dragon/06.webp",
+   "text": "Toothless told Sam to follow the square footprints home."
+  },
+  {
+   "img": "img/pb-sam-the-dragon/07.webp",
+   "text": "On the way home, Sam saw many strange things. Like a Cactus Dragon."
+  },
+  {
+   "img": "img/pb-sam-the-dragon/08.webp",
+   "text": "He met a girl called Sham. He asked her to help him find his way because he was lost and very sad."
+  },
+  {
+   "img": "img/pb-sam-the-dragon/09.webp",
+   "text": "She looked at her Dragon Book to look for Sam's parents and find out where they lived."
+  },
+  {
+   "img": "img/pb-sam-the-dragon/10.webp",
+   "text": "She said 'We have to follow the Dragon Train. Not the square footprints.\""
+  },
+  {
+   "img": "img/pb-sam-the-dragon/11.webp",
+   "text": "The Dragon Train went straight to Sam's house. When he saw his father in the sky, Sam felt happy!"
+  },
+  {
+   "img": "img/pb-sam-the-dragon/12.webp",
+   "text": "This is Sam's mother. She is burning food for dinner. She has made Sam's favourite food: pasta."
+  },
+  {
+   "img": "img/pb-sam-the-dragon/13.webp",
+   "text": "Sam goes back to his job. He is happy now because he has met his parents now."
+  }
+ ],
+ "words": 200,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Menaka Raman"
+  ],
+  "illustrators": [
+   "Priya Kuriyan",
+   "Somesh Kumar",
+   "Suvidha Mistry",
+   "Vinayak Varma"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4574-sam-the-dragon",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

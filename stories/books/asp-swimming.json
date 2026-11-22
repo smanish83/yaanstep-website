@@ -1,0 +1,71 @@
+{
+ "id": "asp-swimming",
+ "title": "Swimming",
+ "pages": [
+  {
+   "img": "img/asp-swimming/02.webp",
+   "text": "Once upon a time there lived two friends, Tortoise and Snake."
+  },
+  {
+   "img": "img/asp-swimming/03.webp",
+   "text": "On day Tortoise said to Snake, \"Let us go and swim.\" \"Alright, but I don't know to swim,\" answered Snake. \"I will teach you,\" replied Tortoise."
+  },
+  {
+   "img": "img/asp-swimming/04.webp",
+   "text": "They went to a swimming pool. \"Who will enter the water first?\" asked Tortoise. \"You will, and I will watch you,\" said Snake."
+  },
+  {
+   "img": "img/asp-swimming/05.webp",
+   "text": "Tortoise entered the swimming pool. Snake observed from the steps."
+  },
+  {
+   "img": "img/asp-swimming/06.webp",
+   "text": "After some time, Snake entered the pool as Tortoise gave instructions."
+  },
+  {
+   "img": "img/asp-swimming/07.webp",
+   "text": "Tortoise and Snake swam in the shallow end of the pool."
+  },
+  {
+   "img": "img/asp-swimming/08.webp",
+   "text": "They started floating on the water."
+  },
+  {
+   "img": "img/asp-swimming/09.webp",
+   "text": "As they were floating, Tortoise started swimming backstroke. While imitating Tortoise, Snake could not propel himself and started drowning."
+  },
+  {
+   "img": "img/asp-swimming/10.webp",
+   "text": "On realising that Snake had disappeared, Tortoise hurriedly went under water and rescued the life of the snake."
+  },
+  {
+   "img": "img/asp-swimming/11.webp",
+   "text": "As soon as Tortoise got out of the water, he turned Snake upsidedown in order to get rid of the water that Snake swallowed."
+  },
+  {
+   "img": "img/asp-swimming/12.webp",
+   "text": "Finally, Tortoise used the mouth-to-mouth method to remove more water."
+  }
+ ],
+ "words": 169,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Alice Inzikuru"
+  ],
+  "illustrators": [
+   "Alice Inzikuru",
+   "Robert McEwan"
+  ],
+  "translators": [
+   "Nelson Acadri"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/swimming",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

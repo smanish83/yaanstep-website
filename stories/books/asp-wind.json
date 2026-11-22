@@ -1,0 +1,68 @@
+{
+ "id": "asp-wind",
+ "title": "Wind",
+ "pages": [
+  {
+   "img": "img/asp-wind/02.webp",
+   "text": "The wind roars.\n\nIt roars past our home."
+  },
+  {
+   "img": "img/asp-wind/03.webp",
+   "text": "The wind is powerful.\n\nIt tears my kite from my hand."
+  },
+  {
+   "img": "img/asp-wind/04.webp",
+   "text": "I run after my kite.\n\nThe wind blows me away from the kite!"
+  },
+  {
+   "img": "img/asp-wind/05.webp",
+   "text": "The wind becomes a tornado.\n\nIt carries my kite higher and higher."
+  },
+  {
+   "img": "img/asp-wind/06.webp",
+   "text": "The tornado swallows me up!\n\nI see nothing, I touch nothing."
+  },
+  {
+   "img": "img/asp-wind/07.webp",
+   "text": "Where is my kite now?\n\nPerhaps it is caught in a tree."
+  },
+  {
+   "img": "img/asp-wind/08.webp",
+   "text": "Perhaps my kite is still flying in the sky."
+  },
+  {
+   "img": "img/asp-wind/09.webp",
+   "text": "The wind finally dies down.\n\nI am still spinning."
+  },
+  {
+   "img": "img/asp-wind/10.webp",
+   "text": "When I stop spinning I look around.\n\nWhere did the wind go?"
+  },
+  {
+   "img": "img/asp-wind/11.webp",
+   "text": "I cannot see my kite anywhere.\n\nI cannot hear the wind anymore."
+  },
+  {
+   "img": "img/asp-wind/12.webp",
+   "text": "Perhaps tomorrow I will find my kite.\n\nNow, I must go home, before the wind starts to roar again."
+  }
+ ],
+ "words": 128,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Marion Drew"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/wind",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

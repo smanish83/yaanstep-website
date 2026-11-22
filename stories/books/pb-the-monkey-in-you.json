@@ -1,0 +1,63 @@
+{
+ "id": "pb-the-monkey-in-you",
+ "title": "The Monkey in You",
+ "pages": [
+  {
+   "img": "img/pb-the-monkey-in-you/02.webp",
+   "text": "Monkey see,\n\nMonkey do"
+  },
+  {
+   "img": "img/pb-the-monkey-in-you/03.webp",
+   "text": "I'm a monkey,\n\nJust like you!"
+  },
+  {
+   "img": "img/pb-the-monkey-in-you/04.webp",
+   "text": "Swinging high,\n\nSwinging low,"
+  },
+  {
+   "img": "img/pb-the-monkey-in-you/05.webp",
+   "text": "I'm always moving,\n\nOn the go"
+  },
+  {
+   "img": "img/pb-the-monkey-in-you/06.webp",
+   "text": "Hungry, hungry\n\nAll the time"
+  },
+  {
+   "img": "img/pb-the-monkey-in-you/07.webp",
+   "text": "Food is always on my mind"
+  },
+  {
+   "img": "img/pb-the-monkey-in-you/08.webp",
+   "text": "Making mischief on a tree"
+  },
+  {
+   "img": "img/pb-the-monkey-in-you/09.webp",
+   "text": "Takes its toll,\n\nAs you can see!"
+  }
+ ],
+ "words": 43,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Menaka Raman"
+  ],
+  "illustrators": [
+   "Ajit Narayan",
+   "Deepa Balsavar",
+   "Greystroke",
+   "Priya Kuriyan",
+   "Rajiv Eipe",
+   "Ruchi Shah",
+   "Santosh Pujari",
+   "Tapas Guha"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4742-the-monkey-in-you",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

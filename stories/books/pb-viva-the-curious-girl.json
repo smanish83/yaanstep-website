@@ -1,0 +1,43 @@
+{
+ "id": "pb-viva-the-curious-girl",
+ "title": "Viva.., the curious girl",
+ "pages": [
+  {
+   "img": "img/pb-viva-the-curious-girl/02.webp",
+   "text": "Viva, a cute little girl from a village called Kinwat. She goes to the school regularly.\n\nShe enjoys her journey towards the school. She is curious to know about the things that she comes across daily."
+  },
+  {
+   "img": "img/pb-viva-the-curious-girl/03.webp",
+   "text": "Her teacher teaches her about flowers, butterflies , clouds and many more interesting things in the nature. Viva is fascinated by all the things that her teacher teaches her daily. One day her teacher asks her to observe things in the surroundings."
+  },
+  {
+   "img": "img/pb-viva-the-curious-girl/04.webp",
+   "text": "Viva is happy to see those butterflies, flower blooming , clouds and small plants around her.\n\nShe can actually find what all she had learnt in the class in her surroundings ."
+  },
+  {
+   "img": "img/pb-viva-the-curious-girl/05.webp",
+   "text": "This experiences make her the \"The active pupil\" because of her curious nature in the class. All the other pupils takes her as inspiration to learn new things."
+  }
+ ],
+ "words": 135,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Swathi Vivo"
+  ],
+  "illustrators": [
+   "Greystroke",
+   "Sheetal Thapa",
+   "Sorit Gupto",
+   "Soumya Menon"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3155-viva-the-curious-girl",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "id": "pb-my-friends",
+ "title": "My Friends",
+ "pages": [
+  {
+   "img": "img/pb-my-friends/02.webp",
+   "text": "I have many friends."
+  },
+  {
+   "img": "img/pb-my-friends/03.webp",
+   "text": "Some of my friends are older and..."
+  },
+  {
+   "img": "img/pb-my-friends/04.webp",
+   "text": "some of them are younger than me."
+  },
+  {
+   "img": "img/pb-my-friends/05.webp",
+   "text": "Some of my friends are old."
+  },
+  {
+   "img": "img/pb-my-friends/06.webp",
+   "text": "And some of them are tiny!"
+  },
+  {
+   "img": "img/pb-my-friends/07.webp",
+   "text": "Some of my friends have tails..."
+  },
+  {
+   "img": "img/pb-my-friends/08.webp",
+   "text": "Some of my friends have no feet."
+  },
+  {
+   "img": "img/pb-my-friends/09.webp",
+   "text": "Some of my friends fly. Some of them swim."
+  },
+  {
+   "img": "img/pb-my-friends/10.webp",
+   "text": "Oh! Books are my friends too!"
+  },
+  {
+   "img": "img/pb-my-friends/11.webp",
+   "text": "But who is my best friend?\n\nWho? Who? Who?"
+  },
+  {
+   "img": "img/pb-my-friends/12.webp",
+   "text": "My mother!!!"
+  }
+ ],
+ "words": 69,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Rukmini Banerji"
+  ],
+  "illustrators": [
+   "Rajeev Verma 'Banjara'"
+  ],
+  "translators": [
+   "Manisha Chaudhry"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/342-mere-dost",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

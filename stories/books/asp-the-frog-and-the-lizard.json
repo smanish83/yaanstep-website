@@ -1,0 +1,69 @@
+{
+ "id": "asp-the-frog-and-the-lizard",
+ "title": "The frog and the lizard",
+ "pages": [
+  {
+   "img": "img/asp-the-frog-and-the-lizard/02.webp",
+   "text": "The frog and the lizard were once good friends ."
+  },
+  {
+   "img": "img/asp-the-frog-and-the-lizard/03.webp",
+   "text": "They used to live at the beach which was the frog's compound."
+  },
+  {
+   "img": "img/asp-the-frog-and-the-lizard/04.webp",
+   "text": "The frog lived in water but could always come out to the beach."
+  },
+  {
+   "img": "img/asp-the-frog-and-the-lizard/05.webp",
+   "text": "The lizard lived on one of the tall dry trees near the beach."
+  },
+  {
+   "img": "img/asp-the-frog-and-the-lizard/06.webp",
+   "text": "One day, the lizard requested the frog to pay a visit to him at his home on the tree."
+  },
+  {
+   "img": "img/asp-the-frog-and-the-lizard/07.webp",
+   "text": "''I cannot climb a tree'' a frog explained to his friend,\" I will help you to climb\" answered the lizard."
+  },
+  {
+   "img": "img/asp-the-frog-and-the-lizard/08.webp",
+   "text": "They then agreed to a certain date, the one frog could pay the visit."
+  },
+  {
+   "img": "img/asp-the-frog-and-the-lizard/09.webp",
+   "text": "The day came and the lizard tied a rope onto the frog's tail."
+  },
+  {
+   "img": "img/asp-the-frog-and-the-lizard/10.webp",
+   "text": "He started pulling the frog upwards the tree .the frog cried out \"am feeling a lot of pain, the lizard however, continued pulling the rope upwards the frog's tail got removed and the Frog fell down."
+  },
+  {
+   "img": "img/asp-the-frog-and-the-lizard/11.webp",
+   "text": "The frog lost his tail to date the frog does not have its tail."
+  }
+ ],
+ "words": 163,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Nabune Beatres"
+  ],
+  "illustrators": [
+   "Hélder de Paz Alexandre",
+   "Wiehan de Jager",
+   "Graham Paterson",
+   "Rob Owen",
+   "Maya Marshak",
+   "Marion Drew"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/frog-and-lizard",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

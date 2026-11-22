@@ -1,0 +1,54 @@
+{
+ "id": "pb-i-lost-my-bat-i-found-my-bat",
+ "title": "I lost my bat! I found my bat!",
+ "pages": [
+  {
+   "img": "img/pb-i-lost-my-bat-i-found-my-bat/02.webp",
+   "text": "I can't find my bat, it's lost!"
+  },
+  {
+   "img": "img/pb-i-lost-my-bat-i-found-my-bat/03.webp",
+   "text": "It's not behind the door."
+  },
+  {
+   "img": "img/pb-i-lost-my-bat-i-found-my-bat/04.webp",
+   "text": "It's not on the shelf."
+  },
+  {
+   "img": "img/pb-i-lost-my-bat-i-found-my-bat/05.webp",
+   "text": "It's not under the bed either."
+  },
+  {
+   "img": "img/pb-i-lost-my-bat-i-found-my-bat/06.webp",
+   "text": "It's not in the box."
+  },
+  {
+   "img": "img/pb-i-lost-my-bat-i-found-my-bat/07.webp",
+   "text": "It's not in the loft."
+  },
+  {
+   "img": "img/pb-i-lost-my-bat-i-found-my-bat/08.webp",
+   "text": "I can't find it anywhere!"
+  }
+ ],
+ "words": 38,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Meera Tendolkar"
+  ],
+  "illustrators": [
+   "Rijuta Ghate"
+  ],
+  "translators": [
+   "Niranjana C"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/867-maazee-bat-haravlee-maazee-bat-saapadlee",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

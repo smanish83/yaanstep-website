@@ -1,0 +1,60 @@
+{
+ "id": "pb-going-to-buy-a-book",
+ "title": "Going to Buy a Book",
+ "pages": [
+  {
+   "img": "img/pb-going-to-buy-a-book/02.webp",
+   "text": "One day, grandfather gave my brother and me some money.\n\n\"Go and buy books,\" he said.\n\nWe were both very happy. We both love to read."
+  },
+  {
+   "img": "img/pb-going-to-buy-a-book/03.webp",
+   "text": "Should we go now? Should we go later?\n\nShould we go today? Should we go tomorrow?\n\nWe decided to go right now."
+  },
+  {
+   "img": "img/pb-going-to-buy-a-book/04.webp",
+   "text": "Should we go to the big market? Should we go to the small shop?\n\nShould we go with somebody? Should we go alone?\n\nWe decided to go to the small shop, just the two of us."
+  },
+  {
+   "img": "img/pb-going-to-buy-a-book/05.webp",
+   "text": "We like the small bookshop. It is small but it has many books.\n\nThe man in the shop likes us. He always helps us."
+  },
+  {
+   "img": "img/pb-going-to-buy-a-book/06.webp",
+   "text": "Should I buy a book with a lot of pictures?\n\nShould I buy a book with many stories?\n\nShould I buy a thin book?\n\nI could not decide."
+  },
+  {
+   "img": "img/pb-going-to-buy-a-book/07.webp",
+   "text": "We do not know which book to buy. The man in the shop smiled at us. “Relax, come with me,” he said. “These books are about animals. Those are about machines. Those over there are about wars. Take what you want.”"
+  },
+  {
+   "img": "img/pb-going-to-buy-a-book/08.webp",
+   "text": "I picked up some books. My brother picked up some books.\n\nI sat on the floor. He sat on the chair.\n\nAnd we read and we read and we read."
+  },
+  {
+   "img": "img/pb-going-to-buy-a-book/09.webp",
+   "text": "It was very quiet. There was no sound.\n\nOne hour passed. Two hours passed.\n\nFinally, we knew which books to buy."
+  },
+  {
+   "img": "img/pb-going-to-buy-a-book/10.webp",
+   "text": "The man in the bookshop smiled at us. I got a fat book with many stories. My brother got a big book with many pictures.\n\nWe ran home to our grandfather. We climbed on his bed.\n\nHe put his arms around us and then we read, and read, and read."
+  }
+ ],
+ "words": 278,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Rukmini Banerji"
+  ],
+  "illustrators": [
+   "Santosh Pujari"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/758-going-to-buy-a-book",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

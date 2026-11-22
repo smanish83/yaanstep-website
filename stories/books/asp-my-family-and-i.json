@@ -1,0 +1,61 @@
+{
+ "id": "asp-my-family-and-i",
+ "title": "My family and I",
+ "pages": [
+  {
+   "img": "img/asp-my-family-and-i/02.webp",
+   "text": "My dinosaur and I look at my birds in the sky."
+  },
+  {
+   "img": "img/asp-my-family-and-i/03.webp",
+   "text": "My birds and I meet Chimpanzee in the tree."
+  },
+  {
+   "img": "img/asp-my-family-and-i/04.webp",
+   "text": "My chimpanzee and I play with my giraffes on the hill."
+  },
+  {
+   "img": "img/asp-my-family-and-i/05.webp",
+   "text": "My giraffes and I make monkey balls from clay."
+  },
+  {
+   "img": "img/asp-my-family-and-i/06.webp",
+   "text": "My monkey and I eat bananas with Gorilla every day."
+  },
+  {
+   "img": "img/asp-my-family-and-i/07.webp",
+   "text": "My gorilla and monkey fear Tortoise in every way."
+  },
+  {
+   "img": "img/asp-my-family-and-i/08.webp",
+   "text": "Tortoise and I go home very slowly with Snake."
+  },
+  {
+   "img": "img/asp-my-family-and-i/09.webp",
+   "text": "Snake and I love to hiss and sing songs by the lake."
+  },
+  {
+   "img": "img/asp-my-family-and-i/10.webp",
+   "text": "My entire family and I live together in great happiness!"
+  }
+ ],
+ "words": 90,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Waako Joshua",
+   "Cornelius Gulere"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-family-and-i",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

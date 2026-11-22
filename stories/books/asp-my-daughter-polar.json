@@ -1,0 +1,56 @@
+{
+ "id": "asp-my-daughter-polar",
+ "title": "My daughter Polar",
+ "pages": [
+  {
+   "img": "img/asp-my-daughter-polar/02.webp",
+   "text": "This my daughter Polar."
+  },
+  {
+   "img": "img/asp-my-daughter-polar/03.webp",
+   "text": "She is a good girl."
+  },
+  {
+   "img": "img/asp-my-daughter-polar/04.webp",
+   "text": "She likes telling stories."
+  },
+  {
+   "img": "img/asp-my-daughter-polar/05.webp",
+   "text": "Her mother tells her stories."
+  },
+  {
+   "img": "img/asp-my-daughter-polar/06.webp",
+   "text": "Polar tells her friends too"
+  },
+  {
+   "img": "img/asp-my-daughter-polar/07.webp",
+   "text": "One day Polar told a very good story."
+  },
+  {
+   "img": "img/asp-my-daughter-polar/08.webp",
+   "text": "The story was about cooking."
+  },
+  {
+   "img": "img/asp-my-daughter-polar/09.webp",
+   "text": "Her teacher gave her a cake and all became happy."
+  }
+ ],
+ "words": 46,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Cissy Namugerwa"
+  ],
+  "illustrators": [
+   "Vusi Malindi"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-daughter-polar",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

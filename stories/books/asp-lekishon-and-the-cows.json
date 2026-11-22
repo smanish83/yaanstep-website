@@ -1,0 +1,58 @@
+{
+ "id": "asp-lekishon-and-the-cows",
+ "title": "Lekishon and the cows",
+ "pages": [
+  {
+   "img": "img/asp-lekishon-and-the-cows/02.webp",
+   "text": "This is Lekishon. Lekishon is calling his dog."
+  },
+  {
+   "img": "img/asp-lekishon-and-the-cows/03.webp",
+   "text": "Lekishon and his dog are going to graze the animals. The sun is hot."
+  },
+  {
+   "img": "img/asp-lekishon-and-the-cows/04.webp",
+   "text": "Lekishon and his dog are thirsty and hungry."
+  },
+  {
+   "img": "img/asp-lekishon-and-the-cows/05.webp",
+   "text": "They go to look for water."
+  },
+  {
+   "img": "img/asp-lekishon-and-the-cows/06.webp",
+   "text": "Lekishon loses track of his cows."
+  },
+  {
+   "img": "img/asp-lekishon-and-the-cows/07.webp",
+   "text": "Lekishon starts to cry."
+  },
+  {
+   "img": "img/asp-lekishon-and-the-cows/08.webp",
+   "text": "He decides to go home with his dog."
+  },
+  {
+   "img": "img/asp-lekishon-and-the-cows/09.webp",
+   "text": "The cows found the way home! Lekishon and his dog are very happy."
+  }
+ ],
+ "words": 67,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Paul Maseri"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [
+   "Paul Maseri"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/lekishon-and-cows",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

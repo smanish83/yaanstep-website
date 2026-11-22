@@ -1,0 +1,68 @@
+{
+ "id": "asp-joy-goes-to-school",
+ "title": "Joy goes to school",
+ "pages": [
+  {
+   "img": "img/asp-joy-goes-to-school/02.webp",
+   "text": "Joy played all the day."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/03.webp",
+   "text": "Her mother told her to wash."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/04.webp",
+   "text": "She picked up her tooth brush."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/05.webp",
+   "text": "Her mother put water in basin for her."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/06.webp",
+   "text": "She dried her face."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/07.webp",
+   "text": "She joined her sister to sleep."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/08.webp",
+   "text": "In the morning she brushed her teeth."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/09.webp",
+   "text": "Her mother helped her dress up."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/10.webp",
+   "text": "She tied her shoes."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/11.webp",
+   "text": "Joy goes to school."
+  },
+  {
+   "img": "img/asp-joy-goes-to-school/12.webp",
+   "text": "Joy is in class."
+  }
+ ],
+ "words": 60,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Augustine Napagi"
+  ],
+  "illustrators": [
+   "Vusi Malindi"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/joy-goes-school",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "id": "pb-eat-and-share",
+ "title": "Eat and Share",
+ "pages": [
+  {
+   "img": "img/pb-eat-and-share/02.webp",
+   "text": "Do not waste food, please be humble,\n\nLook at the beggar children, with no food, their tummy must rumble!\n\nThe children on the street, dream about the food that you do not eat.\n\nThe food that you throw away, could give someone a happiness ray!"
+  }
+ ],
+ "words": 45,
+ "minutes": 1,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Nirvaan Pahwa"
+  ],
+  "illustrators": [
+   "Greystroke",
+   "Rajeev Verma 'Banjara'"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1925-eat-and-share",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

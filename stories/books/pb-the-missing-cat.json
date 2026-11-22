@@ -1,0 +1,52 @@
+{
+ "id": "pb-the-missing-cat",
+ "title": "The missing cat",
+ "pages": [
+  {
+   "img": "img/pb-the-missing-cat/02.webp",
+   "text": "Ruchi had a cat named Reena. Ruchi loved and cared for Reena so much that she would not let anyone touch Reena."
+  },
+  {
+   "img": "img/pb-the-missing-cat/03.webp",
+   "text": "Ruchi played with Reena day and night till they got tired."
+  },
+  {
+   "img": "img/pb-the-missing-cat/04.webp",
+   "text": "Ruchi fed Reena fish and milk. After a few years, Ruchi was sent to school."
+  },
+  {
+   "img": "img/pb-the-missing-cat/05.webp",
+   "text": "So when Ruchi was studying under a tree, Reena would sit on top of the tree and listen."
+  },
+  {
+   "img": "img/pb-the-missing-cat/06.webp",
+   "text": "One such day when Ruchi came back from school, Reena was gone. Ruchi searched the wholetown, but she was not there."
+  },
+  {
+   "img": "img/pb-the-missing-cat/07.webp",
+   "text": "Ruchi was heartbroken on that day. She pinned up missing posters all around the town."
+  },
+  {
+   "img": "img/pb-the-missing-cat/08.webp",
+   "text": "One day when Ruchi was drinking milk, she saw Reena running towards. At last, Ruchi had found her dream cat, Reena."
+  }
+ ],
+ "words": 123,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Rachita Uday Kumar"
+  ],
+  "illustrators": [
+   "Ruchi Shah"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2651-the-missing-cat",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

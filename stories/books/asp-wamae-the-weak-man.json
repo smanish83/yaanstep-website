@@ -1,0 +1,79 @@
+{
+ "id": "asp-wamae-the-weak-man",
+ "title": "WAMAŊE THE WEAK MAN",
+ "pages": [
+  {
+   "img": "img/asp-wamae-the-weak-man/02.webp",
+   "text": "Once upon a time, there was a weak man."
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/03.webp",
+   "text": "This man was called Wamaŋe."
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/04.webp",
+   "text": "Wamaŋe did not want to work at all."
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/05.webp",
+   "text": "He was an idler."
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/06.webp",
+   "text": "Wamaŋe had no good clothes but rugs."
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/07.webp",
+   "text": "This man had no hut to live in."
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/08.webp",
+   "text": "He slept outside at night and watched the moon and stars as they gave out light."
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/09.webp",
+   "text": "One day, it rained heavily"
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/10.webp",
+   "text": "The night was very cold."
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/11.webp",
+   "text": "Wamaŋe felt very cold. He started thinking of making a hut for himself."
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/12.webp",
+   "text": "He sung,\"Tomorrow I will build myself a hut\" ×4 In the morning when the sun started shinning clearly,"
+  },
+  {
+   "img": "img/asp-wamae-the-weak-man/13.webp",
+   "text": "Wamaŋe became warm. He changed the song. \"It is hot why should I build a hut?\" ×4"
+  }
+ ],
+ "words": 115,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Monica Tulina"
+  ],
+  "illustrators": [
+   "Rob Owen",
+   "Alex Zablon",
+   "Benjamin Mitchley",
+   "Wiehan de Jager",
+   "Catherine Groenewald",
+   "Microsoft Clip Art",
+   "Genevieve Terblanche",
+   "Jesse Breytenbach"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/wama%C5%8Be-weak-man-1",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

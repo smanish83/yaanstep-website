@@ -1,0 +1,48 @@
+{
+ "id": "pb-my-juggling-grandma",
+ "title": "My Juggling Grandma",
+ "pages": [
+  {
+   "img": "img/pb-my-juggling-grandma/02.webp",
+   "text": "Grandma likes juggling.\n\nShe juggles wherever she goes."
+  },
+  {
+   "img": "img/pb-my-juggling-grandma/03.webp",
+   "text": "She juggles from day to night.\n\nShe juggles till the stars are bright."
+  },
+  {
+   "img": "img/pb-my-juggling-grandma/04.webp",
+   "text": "She juggled in the office where she was praised.\n\nShe juggled in the shop and got hundred rupees."
+  },
+  {
+   "img": "img/pb-my-juggling-grandma/05.webp",
+   "text": "She tried juggling with mangoes, but they fell down with a!!SPLAT!!\n\nGrandma was very sad. She wanted a set of juggling balls."
+  },
+  {
+   "img": "img/pb-my-juggling-grandma/06.webp",
+   "text": "Grandma told grandpa she needed a set of juggling balls.\n\nSo she got one. She was very happy."
+  },
+  {
+   "img": "img/pb-my-juggling-grandma/07.webp",
+   "text": "Grandma soon became a professional juggler.\n\nShe was the best juggler in the world."
+  }
+ ],
+ "words": 93,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Rachita Uday Kumar"
+  ],
+  "illustrators": [
+   "Niloufer Wadia"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2945-my-juggling-grandma",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

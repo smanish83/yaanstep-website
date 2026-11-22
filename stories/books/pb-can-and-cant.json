@@ -1,0 +1,52 @@
+{
+ "id": "pb-can-and-cant",
+ "title": "Can and Can't",
+ "pages": [
+  {
+   "img": "img/pb-can-and-cant/02.webp",
+   "text": "I can't knit, cats can't write, fish can't blink..."
+  },
+  {
+   "img": "img/pb-can-and-cant/03.webp",
+   "text": "... pigs can't fly!"
+  },
+  {
+   "img": "img/pb-can-and-cant/04.webp",
+   "text": "Dogs can't dance, ants can't read, crows can't sing..."
+  },
+  {
+   "img": "img/pb-can-and-cant/05.webp",
+   "text": "... monkeys can't cook!"
+  },
+  {
+   "img": "img/pb-can-and-cant/06.webp",
+   "text": "But, monkeys can swing!"
+  },
+  {
+   "img": "img/pb-can-and-cant/07.webp",
+   "text": "Crows can caw... ants can bite...\n\ndogs can bark!"
+  },
+  {
+   "img": "img/pb-can-and-cant/08.webp",
+   "text": "Pigs can eat, fish can swim, cats can jump...\n\nand I can read!"
+  }
+ ],
+ "words": 50,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Radha HS"
+  ],
+  "illustrators": [
+   "Ruchi Shah"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/137-can-and-can-t",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

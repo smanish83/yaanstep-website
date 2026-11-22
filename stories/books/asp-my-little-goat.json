@@ -1,0 +1,47 @@
+{
+ "id": "asp-my-little-goat",
+ "title": "My little goat",
+ "pages": [
+  {
+   "img": "img/asp-my-little-goat/02.webp",
+   "text": "Where are you going my little goat?"
+  },
+  {
+   "img": "img/asp-my-little-goat/03.webp",
+   "text": "I am going to market to buy a new coat."
+  },
+  {
+   "img": "img/asp-my-little-goat/04.webp",
+   "text": "A coat for a goat?"
+  },
+  {
+   "img": "img/asp-my-little-goat/05.webp",
+   "text": "Can a goat have a coat?"
+  },
+  {
+   "img": "img/asp-my-little-goat/06.webp",
+   "text": "People will laugh at a goat with a coat!"
+  }
+ ],
+ "words": 37,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Bukheye Mulongo"
+  ],
+  "illustrators": [
+   "Marion Drew",
+   "Rob Owen",
+   "Catherine Groenewald",
+   "Magriet Brink"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-little-goat-colour",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "id": "asp-what-will-i-use-to-travel",
+ "title": "What will I use to travel?",
+ "pages": [
+  {
+   "img": "img/asp-what-will-i-use-to-travel/02.webp",
+   "text": "There are many ways to travel. Which will I choose?"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/03.webp",
+   "text": "Should I use a plane?"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/04.webp",
+   "text": "Planes fly very high. I am afraid of flying!"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/05.webp",
+   "text": "Perhaps I should use a helcopter?"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/06.webp",
+   "text": "But helicopters and planes are the same!"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/07.webp",
+   "text": "Should I perhaps use a train?"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/08.webp",
+   "text": "But the train station is very far."
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/09.webp",
+   "text": "Or, perhaps, I should use a bus?"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/10.webp",
+   "text": "Our village has only one bus!"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/11.webp",
+   "text": "Perhaps I will use a lorry to travel."
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/12.webp",
+   "text": "But lorries are used for carrying heavy luggage."
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/13.webp",
+   "text": "Should I use a bicycle to travel?"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/14.webp",
+   "text": "But will my father give me his bicycle?"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/15.webp",
+   "text": "Perhaps I will try to use a boat?"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/16.webp",
+   "text": "But I do not trust boats very much!"
+  },
+  {
+   "img": "img/asp-what-will-i-use-to-travel/17.webp",
+   "text": "Aah! I know how I will travel! I will use a tractor."
+  }
+ ],
+ "words": 122,
+ "minutes": 4,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Catherine Groenewald",
+   "Rob Owen",
+   "Louwrisa Blaauw",
+   "Jesse Breytenbach",
+   "Vusi Malindi",
+   "Marion Drew",
+   "Mango Tree",
+   "Jano Strydom",
+   "Sue Kramer",
+   "Natalie Propa",
+   "Wiehan de Jager"
+  ],
+  "translators": [
+   "Ursual Nafula"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/what-shall-i-use-travel",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

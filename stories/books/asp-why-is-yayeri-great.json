@@ -1,0 +1,74 @@
+{
+ "id": "asp-why-is-yayeri-great",
+ "title": "Why is Yayeri great?",
+ "pages": [
+  {
+   "img": "img/asp-why-is-yayeri-great/02.webp",
+   "text": "Yayeri the great one wakes up very early every morning. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/03.webp",
+   "text": "She is grateful for the night past. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/04.webp",
+   "text": "She prepares her bed very well. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/05.webp",
+   "text": "She greets her parents and grandparents. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/06.webp",
+   "text": "She cleans her face with blue soap. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/07.webp",
+   "text": "She brushes her teeth with the lughano toothbrush. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/08.webp",
+   "text": "She takes a cold water bath. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/09.webp",
+   "text": "She puts on her orange school uniform. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/10.webp",
+   "text": "She puts on her black shoes. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/11.webp",
+   "text": "She hurries to her school at Mbala. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/12.webp",
+   "text": "She studies Science, Social Studies and Mathematics. We ask ourselves, \"Why is Yayeri great?\""
+  },
+  {
+   "img": "img/asp-why-is-yayeri-great/13.webp",
+   "text": "She sings, and dances otamenhaibuga, and plays football. We ask ourselves, \"Why is Yayeri great?\""
+  }
+ ],
+ "words": 169,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Michael Oguttu"
+  ],
+  "illustrators": [
+   "Vusi Malindi"
+  ],
+  "translators": [
+   "Cornelius Gulere"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/why-yayeri-great",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

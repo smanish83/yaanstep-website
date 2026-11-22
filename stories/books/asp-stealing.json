@@ -1,0 +1,43 @@
+{
+ "id": "asp-stealing",
+ "title": "Stealing",
+ "pages": [
+  {
+   "img": "img/asp-stealing/02.webp",
+   "text": "A man called Kato lived in Bunghumu village. He used to steal peoples' animals."
+  },
+  {
+   "img": "img/asp-stealing/03.webp",
+   "text": "One day he went and stole a goat from the neighbouring village. He slaughtered and kept the meat in his house."
+  },
+  {
+   "img": "img/asp-stealing/04.webp",
+   "text": "The following morning the people found out that Kato had stolen the goat.They started looking for him."
+  },
+  {
+   "img": "img/asp-stealing/05.webp",
+   "text": "When they reached Kato's home, they found him roasting the meat."
+  }
+ ],
+ "words": 63,
+ "minutes": 1,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Deborah"
+  ],
+  "illustrators": [
+   "Jemma Kahn",
+   "Wiehan de Jager",
+   "Catherine Groenewald",
+   "Kathy Arbuckle"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/stealing",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

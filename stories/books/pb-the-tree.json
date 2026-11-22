@@ -1,0 +1,70 @@
+{
+ "id": "pb-the-tree",
+ "title": "The Tree",
+ "pages": [
+  {
+   "img": "img/pb-the-tree/02.webp",
+   "text": "Here is a tree.\n\nThe tree is on the ground.\n\nAnd green grass grows all around.\n\nAnd green grass grows all around."
+  },
+  {
+   "img": "img/pb-the-tree/03.webp",
+   "text": "Here is a tree. The tree is on the ground.\n\nIts roots are in the soil.\n\nAnd green grass grows all around.\n\nAnd green grass grows all around."
+  },
+  {
+   "img": "img/pb-the-tree/04.webp",
+   "text": "Here is a tree. The tree is on the ground.\n\nIts roots are in the soil. Soil covers the roots.\n\nAnd green grass grows all around.\n\nAnd green grass grows all around."
+  },
+  {
+   "img": "img/pb-the-tree/05.webp",
+   "text": "Here is a tree.\n\nThe tree is on the ground.\n\nIts roots are in the soil.\n\nSoil covers the roots.\n\nThe trunk stands above.\n\nAnd green grass grows all around.\n\nAnd green grass grows all around."
+  },
+  {
+   "img": "img/pb-the-tree/06.webp",
+   "text": "Here is a tree.\n\nThe tree is on the ground.\n\nIts roots are in the soil.\n\nSoil covers the roots.\n\nThe trunk stands above.\n\nAnd branches spread from the trunk.\n\nAnd green grass grows all around.\n\nAnd green grass grows all around."
+  },
+  {
+   "img": "img/pb-the-tree/07.webp",
+   "text": "Here is a tree.\n\nThe tree is on the ground.\n\nIts roots are in the soil.\n\nSoil covers the roots.\n\nThe trunk stands above.\n\nBranches spread from the trunk,\n\nand leaves sprout from the branches,\n\nand green grass grows all around.\n\nAnd green grass grows all around."
+  },
+  {
+   "img": "img/pb-the-tree/08.webp",
+   "text": "Here is a tree.\n\nThe tree is on the ground.\n\nIts roots are in the soil.\n\nSoil covers the roots.\n\nThe trunk stands above.\n\nBranches spread from the trunk.\n\nLeaves sprout from the branches.\n\nAnd flowers bloom by the leaves,\n\nand green grass grows all around.\n\nAnd green grass grows all around."
+  },
+  {
+   "img": "img/pb-the-tree/09.webp",
+   "text": "Here is a tree.\n\nThe tree is on the ground.\n\nIts roots are in the soil.\n\nSoil covers the roots.\n\nThe trunk stands above.\n\nBranches spread from the trunk.\n\nLeaves sprout from the branches.\n\nFlowers bloom by the leaves.\n\nAnd fruits grow from flowers,\n\nand green grass grows all around.\n\nAnd green grass grows all around."
+  },
+  {
+   "img": "img/pb-the-tree/10.webp",
+   "text": "Here is a tree.\n\nThe tree is on the ground.\n\nIts roots are in the soil.\n\nSoil covers the roots.\n\nThe trunk stands above.\n\nBranches spread from the trunk.\n\nLeaves sprout from the branches.\n\nFlowers bloom by the leaves.\n\nFruits grow from flowers.\n\nAnd inside the fruit is a seed.\n\nAnd green grass grows all around.\n\nAnd green grass grows all around."
+  },
+  {
+   "img": "img/pb-the-tree/11.webp",
+   "text": "Soon...\n\nA tiny little plant will come from the seed. One day it will be a tree.\n\nAnd green grass will grow all around.\n\nAnd green grass will grow all around."
+  },
+  {
+   "img": "img/pb-the-tree/12.webp",
+   "text": ""
+  }
+ ],
+ "words": 408,
+ "minutes": 6,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Usha Rane"
+  ],
+  "illustrators": [
+   "Ketan Raut"
+  ],
+  "translators": [
+   "Madhav Chavan"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/212-the-tree",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

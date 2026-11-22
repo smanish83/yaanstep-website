@@ -1,0 +1,68 @@
+{
+ "id": "pb-i-can-help",
+ "title": "I Can Help!",
+ "pages": [
+  {
+   "img": "img/pb-i-can-help/02.webp",
+   "text": "I am a big girl.\n\nI can help other people."
+  },
+  {
+   "img": "img/pb-i-can-help/03.webp",
+   "text": "After school, I like to feed my brother.\n\nHe loves it."
+  },
+  {
+   "img": "img/pb-i-can-help/04.webp",
+   "text": "When I have a holiday,\n\nI help my mother to get ready to go to the office."
+  },
+  {
+   "img": "img/pb-i-can-help/05.webp",
+   "text": "In the evening, I help my father in his shop."
+  },
+  {
+   "img": "img/pb-i-can-help/06.webp",
+   "text": "But sometimes my mother says, “Please, do not help me!”"
+  },
+  {
+   "img": "img/pb-i-can-help/07.webp",
+   "text": "And sometimes my father says,\n\n“Thank you, but please do not help me today.”"
+  },
+  {
+   "img": "img/pb-i-can-help/08.webp",
+   "text": "Sometimes they both tell me to sit in one place.\n\nI like to read a book then!"
+  },
+  {
+   "img": "img/pb-i-can-help/09.webp",
+   "text": "I like to help my grandmother.\n\nShe tells me stories."
+  },
+  {
+   "img": "img/pb-i-can-help/10.webp",
+   "text": "My brother is still small.\n\nHe cannot help at all."
+  },
+  {
+   "img": "img/pb-i-can-help/11.webp",
+   "text": "But I am a big girl."
+  },
+  {
+   "img": "img/pb-i-can-help/12.webp",
+   "text": "I can help other people."
+  }
+ ],
+ "words": 120,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Mini Shrinivasan"
+  ],
+  "illustrators": [
+   "Aman Randhawa"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/968-i-can-help",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "id": "pb-my-home",
+ "title": "My Home",
+ "pages": [
+  {
+   "img": "img/pb-my-home/02.webp",
+   "text": "This is my home."
+  },
+  {
+   "img": "img/pb-my-home/03.webp",
+   "text": "I live here with my whole family."
+  },
+  {
+   "img": "img/pb-my-home/04.webp",
+   "text": "We take off our shoes and chappals here."
+  },
+  {
+   "img": "img/pb-my-home/05.webp",
+   "text": "This is where we wash our face and hands."
+  },
+  {
+   "img": "img/pb-my-home/06.webp",
+   "text": "I hang my clothes on the hook."
+  },
+  {
+   "img": "img/pb-my-home/07.webp",
+   "text": "My grandfather keeps his stick in the corner."
+  },
+  {
+   "img": "img/pb-my-home/08.webp",
+   "text": "We also keep our mats there."
+  },
+  {
+   "img": "img/pb-my-home/09.webp",
+   "text": "My father keeps his motorcycle outside."
+  },
+  {
+   "img": "img/pb-my-home/10.webp",
+   "text": "But his helmet is on the cupboard."
+  },
+  {
+   "img": "img/pb-my-home/11.webp",
+   "text": "My mother and grandmother keep their saris in the trunk."
+  },
+  {
+   "img": "img/pb-my-home/12.webp",
+   "text": "Tasty food is cooked in the kitchen."
+  },
+  {
+   "img": "img/pb-my-home/13.webp",
+   "text": "When it is cold, we bring out quilts."
+  },
+  {
+   "img": "img/pb-my-home/14.webp",
+   "text": "When it is hot, we use a fan."
+  },
+  {
+   "img": "img/pb-my-home/15.webp",
+   "text": "When we have important guests, we bring out the chairs."
+  },
+  {
+   "img": "img/pb-my-home/16.webp",
+   "text": "You must come and visit my home. Come soon."
+  }
+ ],
+ "words": 114,
+ "minutes": 4,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Rukmini Banerji"
+  ],
+  "illustrators": [
+   "Rajeev Verma 'Banjara'"
+  ],
+  "translators": [
+   "Manisha Chaudhry"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/206-mera-ghar",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

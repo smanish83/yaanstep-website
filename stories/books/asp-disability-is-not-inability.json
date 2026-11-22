@@ -1,0 +1,56 @@
+{
+ "id": "asp-disability-is-not-inability",
+ "title": "Disability is Not Inability",
+ "pages": [
+  {
+   "img": "img/asp-disability-is-not-inability/02.webp",
+   "text": "This is Agnes. She is my teacher."
+  },
+  {
+   "img": "img/asp-disability-is-not-inability/03.webp",
+   "text": "Agnes uses crutches to walk."
+  },
+  {
+   "img": "img/asp-disability-is-not-inability/04.webp",
+   "text": "This is Metobo. He is my favourite radio DJ."
+  },
+  {
+   "img": "img/asp-disability-is-not-inability/05.webp",
+   "text": "Metobo has problems with his eyes."
+  },
+  {
+   "img": "img/asp-disability-is-not-inability/06.webp",
+   "text": "This is Moraa, my neighbour. Moraa is a farmer."
+  },
+  {
+   "img": "img/asp-disability-is-not-inability/07.webp",
+   "text": "Moraa cannot hear. She speaks using Sign Language."
+  },
+  {
+   "img": "img/asp-disability-is-not-inability/08.webp",
+   "text": "This is Osero. He is the best soccer player at my school."
+  },
+  {
+   "img": "img/asp-disability-is-not-inability/09.webp",
+   "text": "Osero has no hands. But he scores many goals for our team!"
+  }
+ ],
+ "words": 68,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Agnes Mabururu"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/disability-not-inability",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "id": "asp-pickpocketer",
+ "title": "Pickpocketer",
+ "pages": [
+  {
+   "img": "img/asp-pickpocketer/02.webp",
+   "text": "Once upon a time there was a Pickpocketer called Matome."
+  },
+  {
+   "img": "img/asp-pickpocketer/03.webp",
+   "text": "Matome tried to steal Mmamontsho's purse. His hand got stuck inside her handbag."
+  },
+  {
+   "img": "img/asp-pickpocketer/04.webp",
+   "text": "Matome asked Mmamontsho to help him pull up his hand from her handbag."
+  },
+  {
+   "img": "img/asp-pickpocketer/05.webp",
+   "text": "Passengers were very angry when they see what is happening.they called the train Gaurd."
+  },
+  {
+   "img": "img/asp-pickpocketer/06.webp",
+   "text": "The train guard came. Mmamontsho touched Matome's arm to release his hand from been trapped inside her handbag."
+  },
+  {
+   "img": "img/asp-pickpocketer/07.webp",
+   "text": "Matome was locked in jail for pickpocketing."
+  }
+ ],
+ "words": 75,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Kate Nkwane"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/pickpocketer-0",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

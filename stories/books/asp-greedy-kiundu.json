@@ -1,0 +1,72 @@
+{
+ "id": "asp-greedy-kiundu",
+ "title": "Greedy Kiundu",
+ "pages": [
+  {
+   "img": "img/asp-greedy-kiundu/02.webp",
+   "text": "A long time ago, in the village of Nyamani, there lived a man known as Kiundu. He liked to eat meat a lot."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/03.webp",
+   "text": "One day, the chief of Nyamani village invited all the villagers to his son's wedding."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/04.webp",
+   "text": "Kiundu also heard that there was another wedding party in Katumbi village. \"Ugh! Two parties on the same day!\" Kiundu thought."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/05.webp",
+   "text": "\"I must attend both parties,\" Kiundu said. \"I will first walk to Katumbi then come back to Nyamani.\""
+  },
+  {
+   "img": "img/asp-greedy-kiundu/06.webp",
+   "text": "Kiundu woke up early in the morning and walked to Katumbi village. He looked around and saw that the party had not yet started. \"I will go back to Nyamani and return to Katumbi later,\" Kiundu decided."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/07.webp",
+   "text": "Kiundu walked back to Nyamani hoping to find the meat ready. He was now very hungry. When he arrived, men were still preparing the food."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/08.webp",
+   "text": "\"I left cooks at Katumbi preparing to cook,\" he thought. \"The food must be ready now.\" Kiundu decided to go back to Katumbi."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/09.webp",
+   "text": "When Kiundu arrived at the Katumbi party, people had already eaten. Guests were giving presents to the bride and the groom. Kiundu was very mean. He did not have a present to give. He only wanted to eat."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/10.webp",
+   "text": "Kiundu was very disappointed about missing the food. He decided to walk back to Nyamani village. Because he was hungry and tired, he could not walk fast."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/11.webp",
+   "text": "When he arrived at Nyamani village, people were singing and dancing. They had already eaten all the food."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/12.webp",
+   "text": "Upon hearing that there was no food, Kiundu fell and fainted. He had missed meat from both parties. All he got was some porridge in a small cup."
+  },
+  {
+   "img": "img/asp-greedy-kiundu/13.webp",
+   "text": "Slowly, he walked home sad and hungry."
+  }
+ ],
+ "words": 280,
+ "minutes": 5,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Mutugi Kamundi"
+  ],
+  "illustrators": [
+   "Zablon Alex Nguku"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/greedy-kiundu",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

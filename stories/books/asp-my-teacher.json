@@ -1,0 +1,60 @@
+{
+ "id": "asp-my-teacher",
+ "title": "My teacher",
+ "pages": [
+  {
+   "img": "img/asp-my-teacher/02.webp",
+   "text": "I love my teacher."
+  },
+  {
+   "img": "img/asp-my-teacher/03.webp",
+   "text": "She is beautiful. She is a good teacher. She is kind and patient."
+  },
+  {
+   "img": "img/asp-my-teacher/04.webp",
+   "text": "She has braided her hair very nicely today."
+  },
+  {
+   "img": "img/asp-my-teacher/05.webp",
+   "text": "She has decorated her hair with colourful beads."
+  },
+  {
+   "img": "img/asp-my-teacher/06.webp",
+   "text": "Her beads are green, white, red, and yellow."
+  },
+  {
+   "img": "img/asp-my-teacher/07.webp",
+   "text": "Mom, please would you braid my hair like my teacher's?"
+  },
+  {
+   "img": "img/asp-my-teacher/08.webp",
+   "text": "When I am older I will also put beads in my hair."
+  },
+  {
+   "img": "img/asp-my-teacher/09.webp",
+   "text": "I will grow up to be just like my teacher!"
+  }
+ ],
+ "words": 73,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Zimbili Dlamini",
+   "Hlengiwe Zondi"
+  ],
+  "illustrators": [
+   "Jesse Pietersen"
+  ],
+  "translators": [
+   "Zimbili Dlamini",
+   "Hlengiwe Zondi"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-teacher",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

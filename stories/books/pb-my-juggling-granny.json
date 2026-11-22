@@ -1,0 +1,56 @@
+{
+ "id": "pb-my-juggling-granny",
+ "title": "My Juggling Granny",
+ "pages": [
+  {
+   "img": "img/pb-my-juggling-granny/02.webp",
+   "text": "Grannies come in many sizes,\n\nAnd they give us funny surprises!\n\nDid you know my granny juggles?\n\nWith her, I like to snuggle!"
+  },
+  {
+   "img": "img/pb-my-juggling-granny/03.webp",
+   "text": "A great spotter of things is she,\n\nShe's not one to let things be!\n\nAn expert at tossing everything in sight,\n\nPeople around get quite a fright!"
+  },
+  {
+   "img": "img/pb-my-juggling-granny/04.webp",
+   "text": "Kitchens, office, the street or the market,\n\nShe juggles everywhere and cannot stop it!\n\nIt's hard for her to check herself,\n\nNo one dares to offer her help!"
+  },
+  {
+   "img": "img/pb-my-juggling-granny/05.webp",
+   "text": "Umbrellas and glasses go flying in the air,\n\nSpoiltsports now begin to stare!\n\nJuicy mangoes land with a splash,\n\nGrandfather's teeth begin to gnash!"
+  },
+  {
+   "img": "img/pb-my-juggling-granny/06.webp",
+   "text": "Coloured balls he brings as a gift,\n\nSays, “Toss them all without a twist!”\n\nGranny blushes and feels quite shy,\n\nThat she has this lovely gift to try!"
+  },
+  {
+   "img": "img/pb-my-juggling-granny/07.webp",
+   "text": "Grandfather now sleeps through the night,\n\nGranny juggles till the morning light!\n\nHer shadow dances on the curtain,\n\nShe's the best, I am certain!"
+  },
+  {
+   "img": "img/pb-my-juggling-granny/08.webp",
+   "text": "Dear Reader,\n\nHave you ever seen jugglers in a circus?\n\nWhat do they throw in the air?\n\nDo you think it is possible to juggle with items like the ones used by this granny?"
+  }
+ ],
+ "words": 188,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Mala Kumar",
+   "Manisha Chaudhry"
+  ],
+  "illustrators": [
+   "Niloufer Wadia"
+  ],
+  "translators": [
+   "Mala Kumar",
+   "Manisha Chaudhry"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1277-nirali-dadi",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

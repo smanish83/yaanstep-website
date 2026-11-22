@@ -1,0 +1,65 @@
+{
+ "id": "asp-what-type-of-teeth",
+ "title": "What type of teeth?",
+ "pages": [
+  {
+   "img": "img/asp-what-type-of-teeth/02.webp",
+   "text": "A crocodile has sharp teeth."
+  },
+  {
+   "img": "img/asp-what-type-of-teeth/03.webp",
+   "text": "A lion has sharp teeth as well."
+  },
+  {
+   "img": "img/asp-what-type-of-teeth/04.webp",
+   "text": "A shark has very sharp teeth! Why do some animals have sharp teeth?"
+  },
+  {
+   "img": "img/asp-what-type-of-teeth/05.webp",
+   "text": "A cow has strong teeth for grinding."
+  },
+  {
+   "img": "img/asp-what-type-of-teeth/06.webp",
+   "text": "A bird does not have teeth. How does a bird eat?"
+  },
+  {
+   "img": "img/asp-what-type-of-teeth/07.webp",
+   "text": "Rats have big front teeth."
+  },
+  {
+   "img": "img/asp-what-type-of-teeth/08.webp",
+   "text": "I used to have front teeth."
+  },
+  {
+   "img": "img/asp-what-type-of-teeth/09.webp",
+   "text": "My front teeth fell out! How many teeth do you have?"
+  }
+ ],
+ "words": 65,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Zanele Buthelezi",
+   "Thembani Dladla",
+   "Clare Verbeek",
+   "Abu Enock",
+   "Dudu Mary",
+   "Ajuru Florence"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [
+   "Abu Enock",
+   "Dudu Mary",
+   "Ajuru Florence"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/what-type-teeth",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

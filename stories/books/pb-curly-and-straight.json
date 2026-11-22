@@ -1,0 +1,76 @@
+{
+ "id": "pb-curly-and-straight",
+ "title": "Curly and Straight",
+ "pages": [
+  {
+   "img": "img/pb-curly-and-straight/02.webp",
+   "text": "I like straight hair."
+  },
+  {
+   "img": "img/pb-curly-and-straight/03.webp",
+   "text": "I like curly hair."
+  },
+  {
+   "img": "img/pb-curly-and-straight/04.webp",
+   "text": "I like curly tails."
+  },
+  {
+   "img": "img/pb-curly-and-straight/05.webp",
+   "text": "I like straight tails."
+  },
+  {
+   "img": "img/pb-curly-and-straight/06.webp",
+   "text": "I like staircases which curl upwards."
+  },
+  {
+   "img": "img/pb-curly-and-straight/07.webp",
+   "text": "I like straight staircases.\n\nI like the straight road up the hill."
+  },
+  {
+   "img": "img/pb-curly-and-straight/08.webp",
+   "text": "I like the road that curls around the hill."
+  },
+  {
+   "img": "img/pb-curly-and-straight/09.webp",
+   "text": "I like to draw straight lines..."
+  },
+  {
+   "img": "img/pb-curly-and-straight/10.webp",
+   "text": "I always draw curly lines..."
+  },
+  {
+   "img": "img/pb-curly-and-straight/11.webp",
+   "text": "Want some Chakli?"
+  },
+  {
+   "img": "img/pb-curly-and-straight/12.webp",
+   "text": "I love Chakli!"
+  },
+  {
+   "img": "img/pb-curly-and-straight/13.webp",
+   "text": "Straight or Curly?"
+  },
+  {
+   "img": "img/pb-curly-and-straight/14.webp",
+   "text": "Straight or Curly, who cares! We love Chaklis both ways!"
+  }
+ ],
+ "words": 73,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Radha HS"
+  ],
+  "illustrators": [
+   "Ruchi Shah"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/254-curly-and-straight",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

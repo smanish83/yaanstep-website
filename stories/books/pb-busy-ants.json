@@ -1,0 +1,68 @@
+{
+ "id": "pb-busy-ants",
+ "title": "Busy Ants",
+ "pages": [
+  {
+   "img": "img/pb-busy-ants/02.webp",
+   "text": "Hello, I am the fourth one in the line. Can you see me?"
+  },
+  {
+   "img": "img/pb-busy-ants/03.webp",
+   "text": "Left, right, left, right. We walk silently in a line."
+  },
+  {
+   "img": "img/pb-busy-ants/04.webp",
+   "text": "I just got an idea. I am going to get a set of WHEELS to move faster!"
+  },
+  {
+   "img": "img/pb-busy-ants/05.webp",
+   "text": "We are not noisy like other animals. Ours is a language of smells."
+  },
+  {
+   "img": "img/pb-busy-ants/06.webp",
+   "text": "One kind of smell says, “Follow me this way for a feast.”"
+  },
+  {
+   "img": "img/pb-busy-ants/07.webp",
+   "text": "Another smell says, “Danger! Do not go there.”"
+  },
+  {
+   "img": "img/pb-busy-ants/08.webp",
+   "text": "I love cakes and all kinds of sweets, just like you."
+  },
+  {
+   "img": "img/pb-busy-ants/09.webp",
+   "text": "Want to see my muscles at work? I may look very tiny to you, but I am very strong."
+  },
+  {
+   "img": "img/pb-busy-ants/10.webp",
+   "text": "Never mind if the door is shut. I can slip through the smallest crack."
+  },
+  {
+   "img": "img/pb-busy-ants/11.webp",
+   "text": "Believe it or not, hundreds of us live happily in a colony."
+  },
+  {
+   "img": "img/pb-busy-ants/12.webp",
+   "text": "LET US LEARN SOME NEW WORDS.\n\nSmall - Big\n\nSlow - Fast\n\nShort - Tall\n\nThin - Fat\n\nHard - Soft\n\nNoisy - Quiet\n\nHere are some words with their opposites. Can you make a sentence for each pair of opposite words?\n\nFor example, ‘An ant is small; an elephant is big'.\n\n“As busy as an ant” is a nice way to describe someone who is very hard working."
+  }
+ ],
+ "words": 192,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Kanchan Bannerjee"
+  ],
+  "illustrators": [
+   "Deepa Balsavar"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1052-busy-ants",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

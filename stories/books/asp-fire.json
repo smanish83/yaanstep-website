@@ -1,0 +1,64 @@
+{
+ "id": "asp-fire",
+ "title": "Fire",
+ "pages": [
+  {
+   "img": "img/asp-fire/02.webp",
+   "text": "Look, fire!"
+  },
+  {
+   "img": "img/asp-fire/03.webp",
+   "text": "Fire burns."
+  },
+  {
+   "img": "img/asp-fire/04.webp",
+   "text": "Fire cooks."
+  },
+  {
+   "img": "img/asp-fire/05.webp",
+   "text": "Fire gives warmth."
+  },
+  {
+   "img": "img/asp-fire/06.webp",
+   "text": "Fire gives light."
+  },
+  {
+   "img": "img/asp-fire/07.webp",
+   "text": "Look, fire!"
+  },
+  {
+   "img": "img/asp-fire/08.webp",
+   "text": "Fire is wonderful."
+  },
+  {
+   "img": "img/asp-fire/09.webp",
+   "text": "And it is powerful."
+  }
+ ],
+ "words": 21,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Deborah Namugosa",
+   "Beatrice Nabune",
+   "Alison Tukei",
+   "Rose Sabano"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [
+   "Deborah Namugosa",
+   "Beatrice Nabune",
+   "Alison Tukei",
+   "Rose Sabano"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/fire",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

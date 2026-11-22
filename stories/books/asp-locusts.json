@@ -1,0 +1,72 @@
+{
+ "id": "asp-locusts",
+ "title": "Locusts",
+ "pages": [
+  {
+   "img": "img/asp-locusts/02.webp",
+   "text": "One day we saw a strange black cloud move in from far away.\n\nIt was a swarm of locusts, headed for our village."
+  },
+  {
+   "img": "img/asp-locusts/03.webp",
+   "text": "The locusts attacked farms and ate the crops."
+  },
+  {
+   "img": "img/asp-locusts/04.webp",
+   "text": "We tried to chase the locusts away.\n\nBut they would not go."
+  },
+  {
+   "img": "img/asp-locusts/05.webp",
+   "text": "We made noises and screamed, \"Wuwi, wuwi!\"\n\nBut the locusts would not go."
+  },
+  {
+   "img": "img/asp-locusts/06.webp",
+   "text": "We hit tins and metal pots.\n\nBut the locusts would not go."
+  },
+  {
+   "img": "img/asp-locusts/07.webp",
+   "text": "We lit fires to chase the locusts away.\n\nBut they would not go."
+  },
+  {
+   "img": "img/asp-locusts/08.webp",
+   "text": "They settled on trees.\n\nBranches broke because of the weight of all the locusts."
+  },
+  {
+   "img": "img/asp-locusts/09.webp",
+   "text": "Then we remembered that roasted locusts are good to eat!\n\nEveryone started to collect the locusts in sacks and nets."
+  },
+  {
+   "img": "img/asp-locusts/10.webp",
+   "text": "Children brought gourds and filled them with locusts."
+  },
+  {
+   "img": "img/asp-locusts/11.webp",
+   "text": "We roasted locusts and fried them.\n\nWe even dried locusts for the cold season.\n\nBut still, there were so many locusts."
+  },
+  {
+   "img": "img/asp-locusts/12.webp",
+   "text": "Then, the next morning, the locusts flew away. The cloud left our village."
+  },
+  {
+   "img": "img/asp-locusts/13.webp",
+   "text": "When the farmers saw their farms, they moaned loudly: \"Our farms are destroyed!\"\n\nThe villagers cried, \"What will we eat this year? What have the locusts left us?\""
+  }
+ ],
+ "words": 185,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Mary Okere"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/locusts",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

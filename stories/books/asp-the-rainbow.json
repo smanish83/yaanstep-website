@@ -1,0 +1,49 @@
+{
+ "id": "asp-the-rainbow",
+ "title": "The Rainbow",
+ "pages": [
+  {
+   "img": "img/asp-the-rainbow/02.webp",
+   "text": "It has many colours."
+  },
+  {
+   "img": "img/asp-the-rainbow/03.webp",
+   "text": "They appear together."
+  },
+  {
+   "img": "img/asp-the-rainbow/04.webp",
+   "text": "You see orange."
+  },
+  {
+   "img": "img/asp-the-rainbow/05.webp",
+   "text": "You see blue."
+  },
+  {
+   "img": "img/asp-the-rainbow/06.webp",
+   "text": "You see red."
+  },
+  {
+   "img": "img/asp-the-rainbow/07.webp",
+   "text": "The colours are so beautiful."
+  }
+ ],
+ "words": 21,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Catherine Groenewald",
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/rainbow",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "id": "pb-inhabitants-of-the-sea",
+ "title": "Inhabitants of the Sea",
+ "pages": [
+  {
+   "img": "img/pb-inhabitants-of-the-sea/02.webp",
+   "text": "This is a Seahorse.\n\nIt is mostly found in shallow tropical and temperate waters throughout the world."
+  },
+  {
+   "img": "img/pb-inhabitants-of-the-sea/03.webp",
+   "text": "This is an Octopus.\n\nOctopuses inhabit diverse regions of the ocean, including coral reefs and the ocean floor."
+  },
+  {
+   "img": "img/pb-inhabitants-of-the-sea/04.webp",
+   "text": "This is a Clown Fish.\n\nClown Fish are native to warmer waters and live at the bottom of shallow seas in sheltered reefs or in shallow lagoons."
+  },
+  {
+   "img": "img/pb-inhabitants-of-the-sea/05.webp",
+   "text": "These are Dolphins.\n\nThey are found across the world with most species of Dolphins preferring the warmer waters of the tropical zones. A few species however prefer colder climates."
+  },
+  {
+   "img": "img/pb-inhabitants-of-the-sea/06.webp",
+   "text": "This is a Sea Turtle (also known as Marine Turtle)\n\nSea turtles can be found in all oceans except for the polar regions."
+  },
+  {
+   "img": "img/pb-inhabitants-of-the-sea/07.webp",
+   "text": "This big fish here is a Manta Ray.\n\nMantas are found in temperate, subtropical and tropical waters."
+  },
+  {
+   "img": "img/pb-inhabitants-of-the-sea/08.webp",
+   "text": "This is a Starfish (also known as Sea Stars).\n\nStarfishes are found in salt waters all over the world, from the Atlantic Ocean to the Indian Ocean and beyond."
+  }
+ ],
+ "words": 160,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Payoshni Saraf"
+  ],
+  "illustrators": [
+   "Muniza Shariq",
+   "Sangeeta Das"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3565-inhabitants-of-the-sea",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

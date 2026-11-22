@@ -1,0 +1,68 @@
+{
+ "id": "pb-happy-and-sad-tell-me-now-series",
+ "title": "Happy and Sad (Tell me now series)",
+ "pages": [
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/02.webp",
+   "text": "Why is the baby crying?"
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/03.webp",
+   "text": "I think she is hungry."
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/04.webp",
+   "text": "Why is the boy sad?"
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/05.webp",
+   "text": "I think he is missing his father."
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/06.webp",
+   "text": "Why is the girl happy?"
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/07.webp",
+   "text": "She has a new dress."
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/08.webp",
+   "text": "Why is the old man laughing?"
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/09.webp",
+   "text": "He read a good joke."
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/10.webp",
+   "text": "Why is the lady smiling?"
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/11.webp",
+   "text": "Her children are reading quietly."
+  },
+  {
+   "img": "img/pb-happy-and-sad-tell-me-now-series/12.webp",
+   "text": "What is this lady feeling?\n\nI think she is feeling shy."
+  }
+ ],
+ "words": 64,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Madhav Chavan"
+  ],
+  "illustrators": [
+   "Rijuta Ghate"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/453-happy-and-sad-tell-me-now-series",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

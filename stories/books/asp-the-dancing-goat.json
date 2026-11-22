@@ -1,0 +1,64 @@
+{
+ "id": "asp-the-dancing-goat",
+ "title": "The Dancing Goat",
+ "pages": [
+  {
+   "img": "img/asp-the-dancing-goat/02.webp",
+   "text": "One day, a goat went out in the bush, and wandered around happily. But then she got lost!"
+  },
+  {
+   "img": "img/asp-the-dancing-goat/03.webp",
+   "text": "Suddenly, she met a wolf! The wolf came up to her, and he looked very hungry."
+  },
+  {
+   "img": "img/asp-the-dancing-goat/04.webp",
+   "text": "The goat said: Mr. Wolf, I know you want to eat me. But I would like to die happy!"
+  },
+  {
+   "img": "img/asp-the-dancing-goat/05.webp",
+   "text": "The wolf asked the goat: What do you mean? Die happy? How?"
+  },
+  {
+   "img": "img/asp-the-dancing-goat/06.webp",
+   "text": "The goat answered: If I have to die, I would like to die dancing!"
+  },
+  {
+   "img": "img/asp-the-dancing-goat/07.webp",
+   "text": "Then the wolf took his guitar. He sat down and started playing it."
+  },
+  {
+   "img": "img/asp-the-dancing-goat/08.webp",
+   "text": "And the goat started dancing, though she was still a little bit worried."
+  },
+  {
+   "img": "img/asp-the-dancing-goat/09.webp",
+   "text": "Near that place, there were dogs. They came to see what was happening."
+  },
+  {
+   "img": "img/asp-the-dancing-goat/10.webp",
+   "text": "Now that wolf was afraid of dogs. So he turned and ran away!"
+  },
+  {
+   "img": "img/asp-the-dancing-goat/11.webp",
+   "text": "And the goat kept on dancing, because now she was free from the wolf!"
+  }
+ ],
+ "words": 145,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "folktale"
+  ],
+  "illustrators": [
+   "José Nhambo"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/dancing-goat",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

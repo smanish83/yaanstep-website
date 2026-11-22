@@ -1,0 +1,61 @@
+{
+ "id": "asp-the-big-juicy-mango",
+ "title": "The Big Juicy Mango",
+ "pages": [
+  {
+   "img": "img/asp-the-big-juicy-mango/02.webp",
+   "text": "Tiny shoot begins to show, A tiny plant begins to grow."
+  },
+  {
+   "img": "img/asp-the-big-juicy-mango/03.webp",
+   "text": "Reaching higher towards the sun, Reaching higher until it's done."
+  },
+  {
+   "img": "img/asp-the-big-juicy-mango/04.webp",
+   "text": "Now it's a big tree, leafy and green, Spreading it's branches so it can be seen."
+  },
+  {
+   "img": "img/asp-the-big-juicy-mango/05.webp",
+   "text": "The branches are strong now, sturdy and steady, The tree needs some fruit now, the branches are ready."
+  },
+  {
+   "img": "img/asp-the-big-juicy-mango/06.webp",
+   "text": "First comes the flowers, then come the bees, Then after the bees come the fruit on the trees."
+  },
+  {
+   "img": "img/asp-the-big-juicy-mango/07.webp",
+   "text": "The mangoes are picked by my fumbling hands, And put into big baskets to eat or make jams."
+  },
+  {
+   "img": "img/asp-the-big-juicy-mango/08.webp",
+   "text": "This juicy, red mango looks delicious and fresh, Inside of the skin is bright yellow flesh."
+  },
+  {
+   "img": "img/asp-the-big-juicy-mango/09.webp",
+   "text": "Just one bite to taste it, sweet, juicy, cool, That one little taste is making me drool!"
+  },
+  {
+   "img": "img/asp-the-big-juicy-mango/10.webp",
+   "text": "My mango is finished, I ate it so fast, I must get another and it won't be my last!"
+  }
+ ],
+ "words": 143,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Katelyn Mostert"
+  ],
+  "illustrators": [
+   "Catherine Groenewald",
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/big-juicy-mango-1",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

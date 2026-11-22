@@ -1,0 +1,62 @@
+{
+ "id": "asp-fires-story",
+ "title": "Fire's story",
+ "pages": [
+  {
+   "img": "img/asp-fires-story/02.webp",
+   "text": "Let me tell you my story. I start as a small spark."
+  },
+  {
+   "img": "img/asp-fires-story/03.webp",
+   "text": "I run wild when the wind carries me."
+  },
+  {
+   "img": "img/asp-fires-story/04.webp",
+   "text": "We are good friends, you and I."
+  },
+  {
+   "img": "img/asp-fires-story/05.webp",
+   "text": "I cook your food."
+  },
+  {
+   "img": "img/asp-fires-story/06.webp",
+   "text": "I light your night."
+  },
+  {
+   "img": "img/asp-fires-story/07.webp",
+   "text": "I have many tricks."
+  },
+  {
+   "img": "img/asp-fires-story/08.webp",
+   "text": "I am part of your family."
+  },
+  {
+   "img": "img/asp-fires-story/09.webp",
+   "text": "But be careful when you invite me to your home. I don't like to be left alone."
+  }
+ ],
+ "words": 62,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Deborah Namugosa",
+   "Beatrice Nabune",
+   "Alison Tukei",
+   "Rose Sabano",
+   "Nina Orange (adaptation)"
+  ],
+  "illustrators": [
+   "Rob Owen",
+   "Wiehan de Jager",
+   "Amir Bachir António Necas"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/fires-story",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

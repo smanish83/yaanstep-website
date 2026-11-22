@@ -1,0 +1,58 @@
+{
+ "id": "asp-hen-tricks-eagle",
+ "title": "Hen tricks Eagle",
+ "pages": [
+  {
+   "img": "img/asp-hen-tricks-eagle/02.webp",
+   "text": "Long ago Hen and Eagle were friends. One day, Eagle found Hen under a tree resting with her shopping bags. Hen was standing on one leg."
+  },
+  {
+   "img": "img/asp-hen-tricks-eagle/03.webp",
+   "text": "Eagle asked Hen, \"Where is your other leg?\""
+  },
+  {
+   "img": "img/asp-hen-tricks-eagle/04.webp",
+   "text": "Hen told Eagle, \"The shopkeeper cut off my leg and gave me these groceries in return.\""
+  },
+  {
+   "img": "img/asp-hen-tricks-eagle/05.webp",
+   "text": "Eagle asked Hen whether he could do the same. He also wanted a bag of groceries. Hen agreed."
+  },
+  {
+   "img": "img/asp-hen-tricks-eagle/06.webp",
+   "text": "Eagle went to the shopkeeper and asked her to cut off one of his legs in exchange for groceries. The shopkeeper accepted."
+  },
+  {
+   "img": "img/asp-hen-tricks-eagle/07.webp",
+   "text": "The eagle hopped on one leg all the way home. But he was happy with the things the shopkeeper gave him."
+  },
+  {
+   "img": "img/asp-hen-tricks-eagle/08.webp",
+   "text": "When Eagle reached home, he found Hen with both her legs."
+  },
+  {
+   "img": "img/asp-hen-tricks-eagle/09.webp",
+   "text": "Eagle was furious and chased Hen. But he never caught her. Instead, Eagle always looks out for Hen's children. Whenever he catches one, he eats it."
+  }
+ ],
+ "words": 148,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Nathan Higenyi"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [
+   "Nathan Higenyi"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/hen-tricks-eagle",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

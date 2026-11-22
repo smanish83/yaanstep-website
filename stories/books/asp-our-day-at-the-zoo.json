@@ -1,0 +1,73 @@
+{
+ "id": "asp-our-day-at-the-zoo",
+ "title": "Our day at the zoo",
+ "pages": [
+  {
+   "img": "img/asp-our-day-at-the-zoo/02.webp",
+   "text": "Today we are going to the zoo."
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/03.webp",
+   "text": "We are going in dad's car."
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/04.webp",
+   "text": "We are going to see animals."
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/05.webp",
+   "text": "Look!\n\nAn elephant.\n\nLook!\n\nA lion."
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/06.webp",
+   "text": "We walk through the whole zoo!"
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/07.webp",
+   "text": "Look!\n\nIce cream.\n\nLook!\n\nSweets."
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/08.webp",
+   "text": "And there is a clown with balloons."
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/09.webp",
+   "text": "Dad buys us nice things."
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/10.webp",
+   "text": "Soon we must go home."
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/11.webp",
+   "text": "We saw many animals today!"
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/12.webp",
+   "text": "We are happy and tired."
+  },
+  {
+   "img": "img/asp-our-day-at-the-zoo/13.webp",
+   "text": "I wish every day was like today!"
+  }
+ ],
+ "words": 70,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Zimbili Dlamini",
+   "Hlengiwe Zondi"
+  ],
+  "illustrators": [
+   "Melany Pietersen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/our-day-zoo",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

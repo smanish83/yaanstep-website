@@ -1,0 +1,55 @@
+{
+ "id": "pb-animals-are-kind",
+ "title": "Animals Are Kind",
+ "pages": [
+  {
+   "img": "img/pb-animals-are-kind/02.webp",
+   "text": "Once upon a time, there lived a farmer. He never liked birds as he believed that they will ruin his crop. The farmer always used to stone the birds at sight"
+  },
+  {
+   "img": "img/pb-animals-are-kind/03.webp",
+   "text": "But the farmer's only son, Sanju was quite opposite to him. He loved birds and would feed them. Farmer used to scold Sanju for this but Sanju never stopped feeding the birds."
+  },
+  {
+   "img": "img/pb-animals-are-kind/04.webp",
+   "text": "One day, while going to school, Sanju slipped and fell off. He was injured and could not walk for long. No one was around him to help."
+  },
+  {
+   "img": "img/pb-animals-are-kind/05.webp",
+   "text": "A bird saw Sanju and understood that Sanju was having trouble. The bird remembered Sanju helping him. So he also decided to help Sanju."
+  },
+  {
+   "img": "img/pb-animals-are-kind/06.webp",
+   "text": "The bird went back to farmer's house and started making a big noise."
+  },
+  {
+   "img": "img/pb-animals-are-kind/07.webp",
+   "text": "This irritated the farmer. So the farmer started chasing the bird until he found Sanju lying on the ground helpless."
+  },
+  {
+   "img": "img/pb-animals-are-kind/08.webp",
+   "text": "Farmer at once took Sanju to hospital. Sanju then explained everything to his father. Father felt ashamed for his rude behavior. Thereafter he too started liking animals and birds."
+  }
+ ],
+ "words": 176,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Preksha Pc"
+  ],
+  "illustrators": [
+   "Ajit Narayan",
+   "Padmanabh",
+   "Rijuta Ghate",
+   "Sanjay Sarkar"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2083-animals-are-kind",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

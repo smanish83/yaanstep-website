@@ -1,0 +1,56 @@
+{
+ "id": "asp-the-talking-bag",
+ "title": "The talking bag",
+ "pages": [
+  {
+   "img": "img/asp-the-talking-bag/02.webp",
+   "text": "Once upon a time there was a female giant. As she was walking near the lake one day, she found three little girls. She asked them, \"Who among you is loved by both parents?\""
+  },
+  {
+   "img": "img/asp-the-talking-bag/03.webp",
+   "text": "One of the girls said, \"My mother loves me most.\" Another said, \"My father loves me most.\" But the third one said, \"I am loved by both parents.\""
+  },
+  {
+   "img": "img/asp-the-talking-bag/04.webp",
+   "text": "The giant then asked the girl loved by both parents to help her put a load of firewood on her back. So the girl followed the giant."
+  },
+  {
+   "img": "img/asp-the-talking-bag/05.webp",
+   "text": "After going for some distance, the girl asked the giant, \"Where is your firewood?\" The giant replied, \"It is near those trees over there!\""
+  },
+  {
+   "img": "img/asp-the-talking-bag/06.webp",
+   "text": "When they reached the trees, the girl asked again, \"Where is your firewood?\" The giant answered, \"Not far now!\""
+  },
+  {
+   "img": "img/asp-the-talking-bag/07.webp",
+   "text": "They walked on and met a man. He asked the giant, \"What is the name of your child?\" The giant replied, \"She is called the 'talking bag'.\""
+  },
+  {
+   "img": "img/asp-the-talking-bag/08.webp",
+   "text": "The girl burst out singing: \"I am not called the talking bag. My name is Kaamungei! Oh! My mother, whom I love, Oh! My father, whom I love, Oh! My calabash, which I use to drink milk!\""
+  },
+  {
+   "img": "img/asp-the-talking-bag/09.webp",
+   "text": "When the man heard what the girl sang, he rescued her and took her back to her parents. The story ends there!"
+  }
+ ],
+ "words": 218,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Caroline Lentupuru"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/talking-bag",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

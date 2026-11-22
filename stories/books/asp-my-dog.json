@@ -1,0 +1,49 @@
+{
+ "id": "asp-my-dog",
+ "title": "My dog",
+ "pages": [
+  {
+   "img": "img/asp-my-dog/02.webp",
+   "text": "The name of my dog is Stopie."
+  },
+  {
+   "img": "img/asp-my-dog/03.webp",
+   "text": "Stopie likes to bark at night."
+  },
+  {
+   "img": "img/asp-my-dog/04.webp",
+   "text": "Stopie has two puppies."
+  },
+  {
+   "img": "img/asp-my-dog/05.webp",
+   "text": "Stopie's young puppy likes to steal food in the kitchen."
+  },
+  {
+   "img": "img/asp-my-dog/06.webp",
+   "text": "The other puppy has three legs."
+  },
+  {
+   "img": "img/asp-my-dog/07.webp",
+   "text": "The three dogs barks during the day and at night."
+  }
+ ],
+ "words": 43,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Pinky Macheke"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "Heslia Schon"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-dog-0",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "id": "asp-the-race",
+ "title": "The Race",
+ "pages": [
+  {
+   "img": "img/asp-the-race/02.webp",
+   "text": "One day the rabbit found a snail. He said to the snail, \"You can't run! All you know is how to crawl on the ground.\""
+  },
+  {
+   "img": "img/asp-the-race/03.webp",
+   "text": "The snail said, \"Come on Sunday and you will see.\""
+  },
+  {
+   "img": "img/asp-the-race/04.webp",
+   "text": "The snail prepared a hundred bits of paper and wrote the same message on them."
+  },
+  {
+   "img": "img/asp-the-race/05.webp",
+   "text": "The snail handed out the papers to his friends and said, \"When the rabbit comes here calling me, one of you must say: I am the snail.\""
+  },
+  {
+   "img": "img/asp-the-race/06.webp",
+   "text": "Then the snail told his friends to hide behind the bushes where the rabbit and the snail were to pass."
+  },
+  {
+   "img": "img/asp-the-race/07.webp",
+   "text": "On Sunday, the rabbit arrived and found the snail. The rabbit said, \"Let´s have a race. But I will win.\""
+  },
+  {
+   "img": "img/asp-the-race/08.webp",
+   "text": "Snails were lined up on the racing track so that each time the rabbit passed, a snail would shout, 'I am a snail...' During the race, the rabbit called out, \"Snail! Snail!\""
+  },
+  {
+   "img": "img/asp-the-race/09.webp",
+   "text": "One of the snails hidden behind the bushes answered, \"I am the snail, I am the snail.\""
+  },
+  {
+   "img": "img/asp-the-race/10.webp",
+   "text": "Finally, the rabbit was very tired. He lay down, saying, \"Snail, I am so tired; you have won.\""
+  },
+  {
+   "img": "img/asp-the-race/11.webp",
+   "text": "So the snail won because of his cleverness!"
+  }
+ ],
+ "words": 192,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Mozambican folktale"
+  ],
+  "illustrators": [
+   "Amir Bachir António Necas"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/race",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

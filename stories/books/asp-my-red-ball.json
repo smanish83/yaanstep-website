@@ -1,0 +1,91 @@
+{
+ "id": "asp-my-red-ball",
+ "title": "My red ball",
+ "pages": [
+  {
+   "img": "img/asp-my-red-ball/02.webp",
+   "text": "Ball."
+  },
+  {
+   "img": "img/asp-my-red-ball/03.webp",
+   "text": "My ball."
+  },
+  {
+   "img": "img/asp-my-red-ball/04.webp",
+   "text": "My red ball."
+  },
+  {
+   "img": "img/asp-my-red-ball/05.webp",
+   "text": "My big red ball."
+  },
+  {
+   "img": "img/asp-my-red-ball/06.webp",
+   "text": "I kick."
+  },
+  {
+   "img": "img/asp-my-red-ball/07.webp",
+   "text": "I kick my ball."
+  },
+  {
+   "img": "img/asp-my-red-ball/08.webp",
+   "text": "I kick my red ball."
+  },
+  {
+   "img": "img/asp-my-red-ball/09.webp",
+   "text": "I kick my red ball hard!"
+  },
+  {
+   "img": "img/asp-my-red-ball/10.webp",
+   "text": "Where?"
+  },
+  {
+   "img": "img/asp-my-red-ball/11.webp",
+   "text": "Where is my ball?"
+  },
+  {
+   "img": "img/asp-my-red-ball/12.webp",
+   "text": "Where is my ball now?"
+  },
+  {
+   "img": "img/asp-my-red-ball/13.webp",
+   "text": "Where is my red ball now?"
+  },
+  {
+   "img": "img/asp-my-red-ball/14.webp",
+   "text": "It is up."
+  },
+  {
+   "img": "img/asp-my-red-ball/15.webp",
+   "text": "It is high up."
+  },
+  {
+   "img": "img/asp-my-red-ball/16.webp",
+   "text": "It is high up in the sky."
+  },
+  {
+   "img": "img/asp-my-red-ball/17.webp",
+   "text": "It is high up in the sky. It is over the moon. It is gone!"
+  }
+ ],
+ "words": 72,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Marion Drew"
+  ],
+  "illustrators": [
+   "Marion Drew"
+  ],
+  "translators": [
+   "Khothatso Ranoosi",
+   "Marion Drew"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-red-ball",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

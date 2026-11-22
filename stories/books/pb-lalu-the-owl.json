@@ -1,0 +1,57 @@
+{
+ "id": "pb-lalu-the-owl",
+ "title": "Lalu the Owl",
+ "pages": [
+  {
+   "img": "img/pb-lalu-the-owl/02.webp",
+   "text": "Lalu the owl was a friendly fellow. All the birds in the jungle were his friends."
+  },
+  {
+   "img": "img/pb-lalu-the-owl/03.webp",
+   "text": "But Lalu's best friend in the jungle was Rainbow, the peacock."
+  },
+  {
+   "img": "img/pb-lalu-the-owl/04.webp",
+   "text": "Rainbow the peacock was a great entertainer. He could sing and dance really well."
+  },
+  {
+   "img": "img/pb-lalu-the-owl/05.webp",
+   "text": "One day Lalu organised a party and called all his friends!"
+  },
+  {
+   "img": "img/pb-lalu-the-owl/06.webp",
+   "text": "All of Lalu's friends came and danced and sang songs and even gifted Lalu a crown of feathers.\n\nBut Lalu was said. Rainbow had not come to the party."
+  },
+  {
+   "img": "img/pb-lalu-the-owl/07.webp",
+   "text": "Lalu waited and waited. His eyes were only on the door."
+  },
+  {
+   "img": "img/pb-lalu-the-owl/08.webp",
+   "text": "Finally he saw Rainbow rushing towards his house. Huffing and puffing.\n\nOhh, the joy and relief on Lalu's face."
+  },
+  {
+   "img": "img/pb-lalu-the-owl/09.webp",
+   "text": "Lalu was a happy owl again!"
+  }
+ ],
+ "words": 117,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Payoshni Saraf"
+  ],
+  "illustrators": [
+   "Padmanabh",
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4780-lalu-the-owl",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

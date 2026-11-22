@@ -1,0 +1,33 @@
+{
+ "id": "pb-frog-in-the-movie",
+ "title": "Frog in the Movie",
+ "pages": [
+  {
+   "img": "img/pb-frog-in-the-movie/02.webp",
+   "text": "One day, Raju, Dimpy and Pinky went to watch a movie. They were very happy to finish their exams and were waiting to go for a movie. When they heard about Jungle Raja movie, they were very happy."
+  },
+  {
+   "img": "img/pb-frog-in-the-movie/03.webp",
+   "text": "When they were watching the movie, instead of hearing the tiger's roar, they were hearing a frogs's croaking noise. They were wondering what happened to the mighty tiger. They were curios. And suddenly they see Sharma uncle jumping off his seat screaming. And alas, what they see? A on his seat. All burst out laughing. Adventure movie of Jungle Raja became a comedy movie of Frogiee Raja."
+  }
+ ],
+ "words": 105,
+ "minutes": 1,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Aparna Ganapathy"
+  ],
+  "illustrators": [
+   "Delwyn Remedios",
+   "Vartika Sharma"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/5239-frog-in-the-movie",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

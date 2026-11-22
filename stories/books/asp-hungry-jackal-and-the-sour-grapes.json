@@ -1,0 +1,56 @@
+{
+ "id": "asp-hungry-jackal-and-the-sour-grapes",
+ "title": "Hungry jackal and the sour grapes",
+ "pages": [
+  {
+   "img": "img/asp-hungry-jackal-and-the-sour-grapes/02.webp",
+   "text": "Once upon a time there was a hungry jackal. He was walking around the bush looking for food."
+  },
+  {
+   "img": "img/asp-hungry-jackal-and-the-sour-grapes/03.webp",
+   "text": "He came upon a big orchard of fresh ripe grapes. He spotted a bunch of grapes hanging from a high branch."
+  },
+  {
+   "img": "img/asp-hungry-jackal-and-the-sour-grapes/04.webp",
+   "text": "\"Those look really delicious,\" he thought to himself. He took a few steps back so that he could make his highest jump."
+  },
+  {
+   "img": "img/asp-hungry-jackal-and-the-sour-grapes/05.webp",
+   "text": "The grapes were too high. Jackal fell on his back without getting to the grapes."
+  },
+  {
+   "img": "img/asp-hungry-jackal-and-the-sour-grapes/06.webp",
+   "text": "Jackal got up and went further back from his starting spot. This time he was planning to jump higher. He almost got high enough but he fell harder on his back."
+  },
+  {
+   "img": "img/asp-hungry-jackal-and-the-sour-grapes/07.webp",
+   "text": "He tried again and again, but couldn't get to the grapes. He kept falling until his back was very sore."
+  },
+  {
+   "img": "img/asp-hungry-jackal-and-the-sour-grapes/08.webp",
+   "text": "Finally, he gave up and walked away."
+  },
+  {
+   "img": "img/asp-hungry-jackal-and-the-sour-grapes/09.webp",
+   "text": "Jackal was not happy at all. He stopped, looked back at the grapes and thought, \"Those grapes look really sour anyway.\" He carried on walking. He was hungrier than before."
+  }
+ ],
+ "words": 164,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Kholeka Mabeta"
+  ],
+  "illustrators": [
+   "Benjamin Mitchley"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/hungry-jackal-and-sour-grapes",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

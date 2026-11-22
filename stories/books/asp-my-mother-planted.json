@@ -1,0 +1,58 @@
+{
+ "id": "asp-my-mother-planted",
+ "title": "My mother planted",
+ "pages": [
+  {
+   "img": "img/asp-my-mother-planted/02.webp",
+   "text": "My mother planted. She planted a small garden. She planted a small garden of peas."
+  },
+  {
+   "img": "img/asp-my-mother-planted/03.webp",
+   "text": "My father planted. He planted a small garden. He planted a small garden of flowers."
+  },
+  {
+   "img": "img/asp-my-mother-planted/04.webp",
+   "text": "My mother weeded in both gardens."
+  },
+  {
+   "img": "img/asp-my-mother-planted/05.webp",
+   "text": "My father watered in both gardens."
+  },
+  {
+   "img": "img/asp-my-mother-planted/06.webp",
+   "text": "My parents and I worked in the small gardens. My sister and I harvested the flowers and peas."
+  },
+  {
+   "img": "img/asp-my-mother-planted/07.webp",
+   "text": "The small garden of peas yielded sacks of peas. The small garden of flowers yielded sacks of flowers."
+  },
+  {
+   "img": "img/asp-my-mother-planted/08.webp",
+   "text": "My mother planted. She planted a large garden. The large garden she planted was of peas."
+  },
+  {
+   "img": "img/asp-my-mother-planted/09.webp",
+   "text": "My father planted. He planted a large garden. The large garden he planted was of flowers."
+  }
+ ],
+ "words": 110,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Tom Sabwa"
+  ],
+  "illustrators": [
+   "Jonathan Field"
+  ],
+  "translators": [
+   "Cornelius Gulere"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-mother-planted-0",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

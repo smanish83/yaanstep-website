@@ -1,0 +1,92 @@
+{
+ "id": "asp-friends",
+ "title": "Friends",
+ "pages": [
+  {
+   "img": "img/asp-friends/02.webp",
+   "text": "My name is Simo."
+  },
+  {
+   "img": "img/asp-friends/03.webp",
+   "text": "I have four friends."
+  },
+  {
+   "img": "img/asp-friends/04.webp",
+   "text": "Their names are Zizo, Lele, Sisa and Ayanda."
+  },
+  {
+   "img": "img/asp-friends/05.webp",
+   "text": "My friend Zizo likes to play soccer."
+  },
+  {
+   "img": "img/asp-friends/06.webp",
+   "text": "My friend Lele likes to swim."
+  },
+  {
+   "img": "img/asp-friends/07.webp",
+   "text": "My friend Sisa likes to play hide-and-seek."
+  },
+  {
+   "img": "img/asp-friends/08.webp",
+   "text": "My friend Ayanda likes to read."
+  },
+  {
+   "img": "img/asp-friends/09.webp",
+   "text": "Me? I like to do all the things they like to do."
+  },
+  {
+   "img": "img/asp-friends/10.webp",
+   "text": "I play soccer with Zizo."
+  },
+  {
+   "img": "img/asp-friends/11.webp",
+   "text": "I swim with Lele."
+  },
+  {
+   "img": "img/asp-friends/12.webp",
+   "text": "I play hide-and-seek with Sisa."
+  },
+  {
+   "img": "img/asp-friends/13.webp",
+   "text": "Come, friend, what do you like?"
+  },
+  {
+   "img": "img/asp-friends/14.webp",
+   "text": "Come, play soccer with us."
+  },
+  {
+   "img": "img/asp-friends/15.webp",
+   "text": "Come, swim with us."
+  },
+  {
+   "img": "img/asp-friends/16.webp",
+   "text": "Come, play hide-andseek with us."
+  },
+  {
+   "img": "img/asp-friends/17.webp",
+   "text": "Come, read with us!"
+  }
+ ],
+ "words": 92,
+ "minutes": 4,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Zimbili Dlamini",
+   "Hlengiwe Zondi"
+  ],
+  "illustrators": [
+   "Catherine Groenewald"
+  ],
+  "translators": [
+   "Zimbili Dlamini",
+   "Hlengiwe Zondi"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/friends",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

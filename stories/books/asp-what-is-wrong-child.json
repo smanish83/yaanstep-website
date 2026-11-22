@@ -1,0 +1,56 @@
+{
+ "id": "asp-what-is-wrong-child",
+ "title": "What is wrong child?",
+ "pages": [
+  {
+   "img": "img/asp-what-is-wrong-child/02.webp",
+   "text": "This is Matende."
+  },
+  {
+   "img": "img/asp-what-is-wrong-child/03.webp",
+   "text": "Matende cried all the time."
+  },
+  {
+   "img": "img/asp-what-is-wrong-child/04.webp",
+   "text": "When his mother fed him, Matende cried."
+  },
+  {
+   "img": "img/asp-what-is-wrong-child/05.webp",
+   "text": "When Matende was put down to rest, he still cried."
+  },
+  {
+   "img": "img/asp-what-is-wrong-child/06.webp",
+   "text": "When his mother changed his nappies, Matende continued to cry."
+  },
+  {
+   "img": "img/asp-what-is-wrong-child/07.webp",
+   "text": "When his mother carried him on her shoulder, Matende cried more."
+  },
+  {
+   "img": "img/asp-what-is-wrong-child/08.webp",
+   "text": "When he fell asleep, Matende looked like he would start to cry again."
+  },
+  {
+   "img": "img/asp-what-is-wrong-child/09.webp",
+   "text": "Matende's mother looked at her son.\n\nShe did not know what was wrong with him."
+  }
+ ],
+ "words": 74,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/what-wrong-child-mtoto-shida-ni-nini",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "id": "asp-my-first-trip-to-kampala",
+ "title": "My first Trip to kampala",
+ "pages": [
+  {
+   "img": "img/asp-my-first-trip-to-kampala/02.webp",
+   "text": "A walk in kampala, what do you see? Shops selling clothes, in very congested streets."
+  },
+  {
+   "img": "img/asp-my-first-trip-to-kampala/03.webp",
+   "text": "A shower in Nakivuubo, what do you see? owino market, taxi park, play ground, petrol station, mukwano arcade."
+  },
+  {
+   "img": "img/asp-my-first-trip-to-kampala/04.webp",
+   "text": "A drive in kampala, what do you see? very tall buildings, very many cars of different types."
+  },
+  {
+   "img": "img/asp-my-first-trip-to-kampala/05.webp",
+   "text": "Languages in kampala, what do you hear? Luganda, Swahili, English and Lunyankole, all are being spoken."
+  },
+  {
+   "img": "img/asp-my-first-trip-to-kampala/06.webp",
+   "text": "A breakfast in Kampala, what do you see? menvu, black tea, milk tea and Bushera."
+  },
+  {
+   "img": "img/asp-my-first-trip-to-kampala/07.webp",
+   "text": "A trip to kampala, do you wish to go back?"
+  }
+ ],
+ "words": 91,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Barke Ramadhan",
+   "Herbert Haumba (adaptation)",
+   "ROSE ALUNGHO (adaptation)"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "Laura Libertore",
+   "Catherine Groenewald",
+   "Rijuta Ghate",
+   "Jemma Kahn"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/my-first-trip-kampala",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

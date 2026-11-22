@@ -1,0 +1,64 @@
+{
+ "id": "pb-what-if",
+ "title": "What If?",
+ "pages": [
+  {
+   "img": "img/pb-what-if/02.webp",
+   "text": "My name is Shyam, I am ten years old.\n\nI am a little skinny, but very bold!\n\nWaking up for school is no fun at all\n\nI am so sleepy as I get up, I think I will fall."
+  },
+  {
+   "img": "img/pb-what-if/03.webp",
+   "text": "My eyes close as I begin to brush,\n\nI hear Amma making dosas in a rush.\n\nMy mind slowly begins to wander away,\n\nAnd many, many ideas come into play."
+  },
+  {
+   "img": "img/pb-what-if/04.webp",
+   "text": "What if my neck was ten times as long?\n\nHalf in school, half at home, where would I belong?"
+  },
+  {
+   "img": "img/pb-what-if/05.webp",
+   "text": "What if my legs were as tall as trees?\n\nMy school building would only come up to my knees!"
+  },
+  {
+   "img": "img/pb-what-if/06.webp",
+   "text": "What if my arms were strong enough?\n\nThen, lifting Amma would not be tough!"
+  },
+  {
+   "img": "img/pb-what-if/07.webp",
+   "text": "What if there was nothing too hard for my teeth?\n\nThink of all the things I could eat!"
+  },
+  {
+   "img": "img/pb-what-if/08.webp",
+   "text": "What if my belly was as round as could be?\n\nAll my friends could jump and bounce off me!"
+  },
+  {
+   "img": "img/pb-what-if/09.webp",
+   "text": "What if I had big and floppy ears?\n\nI could hear everything, far and near!"
+  },
+  {
+   "img": "img/pb-what-if/10.webp",
+   "text": "What if — I begin, but Amma shouts,\n\n“Shyam, you'll be late, what are you thinking about?”"
+  },
+  {
+   "img": "img/pb-what-if/11.webp",
+   "text": "I find myself still standing with my brush in my hand,\n\nAnd I smile and think of my secret little land."
+  }
+ ],
+ "words": 210,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Hari Kumar Nair"
+  ],
+  "illustrators": [
+   "Hari Kumar Nair"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/880-what-if",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

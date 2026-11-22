@@ -1,0 +1,68 @@
+{
+ "id": "pb-cheep-cheep-drip-drip",
+ "title": "Cheep Cheep Drip Drip",
+ "pages": [
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/02.webp",
+   "text": "It's hard to be still,\n\nit's hard to be quiet."
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/03.webp",
+   "text": "It's hard to say no,\n\nto toes that wiggle so."
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/04.webp",
+   "text": "It's hard to keep down\n\nthese merry feet,"
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/05.webp",
+   "text": "When sounds all around tap a happy beat.\n\nCheep, cheep, cheep call the sparrows."
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/06.webp",
+   "text": "Drip, drip, drip goes the tap."
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/07.webp",
+   "text": "SHEE... SHEEEE..."
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/08.webp",
+   "text": "SHEE... sings the cooker."
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/09.webp",
+   "text": "Crunch, crunch, crunch...\n\n... uh oh, I know what that is!"
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/10.webp",
+   "text": "“Why little one, have you wandered so far, away from your books, your toys and your cars? Why indeed? There's nothing here to hear or to see.”"
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/11.webp",
+   "text": "I look up at mamma. I look in surprise. Can she not see?\n\nCan she not hear? The cheep, the drip, the sheee..."
+  },
+  {
+   "img": "img/pb-cheep-cheep-drip-drip/12.webp",
+   "text": "... and the crunch? A world full of sounds, all waiting to be found?"
+  }
+ ],
+ "words": 127,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Lubaina Bandukwala"
+  ],
+  "illustrators": [
+   "Zainab Tambawalla"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/153-cheep-cheep-drip-drip",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "id": "asp-rabbit-under-the-tree",
+ "title": "Rabbit under the tree",
+ "pages": [
+  {
+   "img": "img/asp-rabbit-under-the-tree/02.webp",
+   "text": "Rabbit was sleeping under an apple tree. An apple fell down from a branch."
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/03.webp",
+   "text": "A voice said, \"Run rabbit run!\" She woke up quickly and ran away with great speed."
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/04.webp",
+   "text": "She met a chicken. \"Why are you running?\" asked the chicken. Rabbit replied, \"I don't know. I just heard something falling and a voice said, 'Run rabbit run!'\""
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/05.webp",
+   "text": "The chicken was frightened. She started running when she heard what the rabbit said."
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/06.webp",
+   "text": "They met a dog. Dog asked, \"Why are you running?\" Chicken said, \"I don't know. I just heard what the rabbit said, and she doesn't know. She heard something falling and a voice said, 'Run rabbit run!'\""
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/07.webp",
+   "text": "The dog was surprised about what she heard. She started running with Rabbit and Chicken."
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/08.webp",
+   "text": "They met a horse. The horse asked the dog, \"Why are you running?\" Dog said, \"I don't know. I just heard what the chicken said, and she doesn't know. She heard what the rabbit said and she doesn't know. She heard something falling and a voice said, 'Run rabbit run!'\""
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/09.webp",
+   "text": "The horse starts to run with the others."
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/10.webp",
+   "text": "They met a donkey. The donkey asked, \"Why are you running?\" Horse replied, \"I don't know. I just heard what the dog said, and he doesn't know. He heard what the chicken said and she doesn't know. She heard what the rabbit said and she doesn't know. She heard something falling and a voice said, 'Run rabbit run!'\""
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/11.webp",
+   "text": "So Donkey starts running too."
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/12.webp",
+   "text": "They met a cow. The cow asked, \"Why are you running?\" Donkey replied, \"I don't know. I just heard what the horse said, and she doesn't know. She heard what the dog said and he doesn't know. He heard what the chicken said and she doesn't know. She heard what the rabbit said and she doesn't know. She heard something falling and a voice said, 'Run rabbit run!'\""
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/13.webp",
+   "text": "The cow is worried and starts to run as well."
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/14.webp",
+   "text": "They met a cat. The cat asked, \"Why are you running?\" Cow replied, \"I don't know. I just heard what the donkey said, and he doesn't know. He heard what the horse said and she doesn't know. She heard what the dog said and he doesn't know. He heard what the chicken said and she doesn't know. She heard what the rabbit said and she doesn't know. She heard something falling and a voice said, 'Run rabbit run!'\""
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/15.webp",
+   "text": "The cat started running with the other animals."
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/16.webp",
+   "text": "Then they met the boy riding the bicycle and he asked, \"Why are you running?'' And the animals replied, \"We don't know. We heard what the rabbit said and she doesn't know. She heard something falling and a voice said, 'Run rabbit run!'\""
+  },
+  {
+   "img": "img/asp-rabbit-under-the-tree/17.webp",
+   "text": "The boy laughed and said, \"An apple feel off the tree because of the wind. I'm the one who said, 'Run rabbit run!'\""
+  }
+ ],
+ "words": 475,
+ "minutes": 7,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Phumy Zikode"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [
+   "Phumy Zikode"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/rabbit-under-tree",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

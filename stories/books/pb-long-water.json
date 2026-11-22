@@ -1,0 +1,53 @@
+{
+ "id": "pb-long-water",
+ "title": "Long Water",
+ "pages": [
+  {
+   "img": "img/pb-long-water/02.webp",
+   "text": "I am a body of water. I am long. I go from here to there.\n\nThere is a riddle about me.\n\nRead what I can do.\n\nCan you guess who I am?"
+  },
+  {
+   "img": "img/pb-long-water/03.webp",
+   "text": "I am big. I am bigger than a stream. I have lot of water. My water is used for drinking.\n\nThey say I always run. I never walk.\n\nMy water moves from here to there. They say I flow."
+  },
+  {
+   "img": "img/pb-long-water/04.webp",
+   "text": "I have a mouth. But I never eat. I can't even talk. You hear the sound when I flow.\n\nI move soil and small rocks. I help move logs of wood.\n\nI do so much work but I don't have hands."
+  },
+  {
+   "img": "img/pb-long-water/05.webp",
+   "text": "I have a bed. But I don't sleep. I am always awake.\n\nI am always moving.\n\nI make soil. I make valleys.\n\nMy water is sweet."
+  },
+  {
+   "img": "img/pb-long-water/06.webp",
+   "text": "Let me tell you again. I have no legs but I can run.\n\nI can't eat or talk but I have a mouth.\n\nI have a long bed but I never sleep.\n\nI have a bank but there is no money in it. Did you guess who am I?"
+  },
+  {
+   "img": "img/pb-long-water/07.webp",
+   "text": "A river! I am a river.\n\nDo you know some names I have?"
+  }
+ ],
+ "words": 200,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Madhuri Pai"
+  ],
+  "illustrators": [
+   "Herminder Ohri",
+   "Sanjay Sarkar",
+   "Santosh Pujari",
+   "Sonal Goyal",
+   "Sumit Sakhuja",
+   "Sonal Goyal, Sumit Sakhuja"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2011-long-water",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

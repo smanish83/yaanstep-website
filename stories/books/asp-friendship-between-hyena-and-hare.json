@@ -1,0 +1,52 @@
+{
+ "id": "asp-friendship-between-hyena-and-hare",
+ "title": "Friendship between Hyena and Hare",
+ "pages": [
+  {
+   "img": "img/asp-friendship-between-hyena-and-hare/02.webp",
+   "text": "Hare and Hyena were friends. They decided to farm potatoes together."
+  },
+  {
+   "img": "img/asp-friendship-between-hyena-and-hare/03.webp",
+   "text": "They worked hard on the farm."
+  },
+  {
+   "img": "img/asp-friendship-between-hyena-and-hare/04.webp",
+   "text": "After work, Hare and Hyena played together."
+  },
+  {
+   "img": "img/asp-friendship-between-hyena-and-hare/05.webp",
+   "text": "But sometimes Hyena chased Hare. Hare would run away."
+  },
+  {
+   "img": "img/asp-friendship-between-hyena-and-hare/06.webp",
+   "text": "One day, Hare asked, \"If you are my friend, why do you chase me?\""
+  },
+  {
+   "img": "img/asp-friendship-between-hyena-and-hare/07.webp",
+   "text": "Then Hare asked, \"But if you are not my friend, why do we work and play together?\""
+  },
+  {
+   "img": "img/asp-friendship-between-hyena-and-hare/08.webp",
+   "text": "A friend is someone who is always a friend."
+  }
+ ],
+ "words": 73,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Adapted Aesop's Fable"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/friendship-between-hyena-and-hare",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

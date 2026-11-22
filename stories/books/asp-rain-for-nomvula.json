@@ -1,0 +1,59 @@
+{
+ "id": "asp-rain-for-nomvula",
+ "title": "Rain for Nomvula",
+ "pages": [
+  {
+   "img": "img/asp-rain-for-nomvula/02.webp",
+   "text": "\"No Nomvula, don't play with water. It is so scarce!\" \"But it's hot, Mama! I feel like getting into this water. I want to be cool.\""
+  },
+  {
+   "img": "img/asp-rain-for-nomvula/03.webp",
+   "text": "\"No, Nomvula. Don't play with water. Water is scarce.\" \"But it's hot, Mama, I'm thirsty. I'd like to drink cold water.\""
+  },
+  {
+   "img": "img/asp-rain-for-nomvula/04.webp",
+   "text": "It is raining. There is going to be a lot of water. Now I can't play – I wish it could be hot."
+  },
+  {
+   "img": "img/asp-rain-for-nomvula/05.webp",
+   "text": "Look at the vegetables. They are growing and becoming green. Look! The bowls and buckets are overflowing with water."
+  },
+  {
+   "img": "img/asp-rain-for-nomvula/06.webp",
+   "text": "It has stopped raining. Now we can play! Look how beautiful everything is after the rain. The sky is clear and blue. Trees and grass are green, and the plants are flowering."
+  },
+  {
+   "img": "img/asp-rain-for-nomvula/07.webp",
+   "text": "Oh no! There the rain is again! When are we going to play?"
+  },
+  {
+   "img": "img/asp-rain-for-nomvula/08.webp",
+   "text": "Oh no, me! I'm going to play, even if it's raining! Oh it's so lovely to play in the rain. Chapha chapha chapha! Imanz'ilokhwe yam! Imanz'ilokhwe yam! Chapha chapha chapha! Zimanz'iinwele zam! Zimanz'iinwele zam!"
+  },
+  {
+   "img": "img/asp-rain-for-nomvula/09.webp",
+   "text": "Nomvula, you don't want to listen, my child. Come closer, let me dry and comb your hair. Chapha chapha chapha! Zimanz'iinwele zakho! Zimanz'iinwele zakho!"
+  }
+ ],
+ "words": 191,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Letta Machoga"
+  ],
+  "illustrators": [
+   "Marleen Visser"
+  ],
+  "translators": [
+   "Nolitha Bikitsha",
+   "Thandabantu Magengelele"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/rain-nomvula",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

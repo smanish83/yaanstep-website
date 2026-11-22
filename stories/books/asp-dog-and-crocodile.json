@@ -1,0 +1,72 @@
+{
+ "id": "asp-dog-and-crocodile",
+ "title": "Dog and Crocodile",
+ "pages": [
+  {
+   "img": "img/asp-dog-and-crocodile/02.webp",
+   "text": "One day at the river, Dog came across some eggs in the sand. He asked himself, \"Which animal left these eggs here?\""
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/03.webp",
+   "text": "He counted ten eggs and thought they might belong to Duck. He put them in his bag."
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/04.webp",
+   "text": "He took the eggs home and put them in a warm place."
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/05.webp",
+   "text": "When Dog returned to the river, he met Crocodile. She asked, \"Have you seen my eggs?\"\"I don't know anything about your eggs,\" he replied."
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/06.webp",
+   "text": "Crocodile started visiting all the animals asking about her eggs."
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/07.webp",
+   "text": "Meanwhile, the eggs hatched one by one."
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/08.webp",
+   "text": "Dog did his best to look after the baby crocodiles, but there was never enough food. The young crocodiles were always hungry."
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/09.webp",
+   "text": "One day Crocodile went to Dog's house looking for her eggs. As she stood outside, she heard the rumbling of little crocodile bellies!"
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/10.webp",
+   "text": "Crocodile stormed inside and hit Dog with her tail. Dog yelped and jumped through the window."
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/11.webp",
+   "text": "Crocodile chased Dog all the way to the river."
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/12.webp",
+   "text": "Dog cried, \"I'm sorry, I didn't know they were your eggs!\""
+  },
+  {
+   "img": "img/asp-dog-and-crocodile/13.webp",
+   "text": "Crocodile believed him and forgave him. She took her offspring for their first swimming lesson."
+  }
+ ],
+ "words": 188,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Candiru Enzikuru Mary"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/dog-and-crocodile",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

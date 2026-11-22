@@ -1,0 +1,56 @@
+{
+ "id": "pb-dadhis-crazy-specatal-day",
+ "title": "Dadhi's crazy specatal day",
+ "pages": [
+  {
+   "img": "img/pb-dadhis-crazy-specatal-day/02.webp",
+   "text": "I like to hide dadhi's spectacles."
+  },
+  {
+   "img": "img/pb-dadhis-crazy-specatal-day/03.webp",
+   "text": "When she finds it, I end up get scoldings."
+  },
+  {
+   "img": "img/pb-dadhis-crazy-specatal-day/04.webp",
+   "text": "Sometimes she is angry with me."
+  },
+  {
+   "img": "img/pb-dadhis-crazy-specatal-day/05.webp",
+   "text": "Sometimes she is not."
+  },
+  {
+   "img": "img/pb-dadhis-crazy-specatal-day/06.webp",
+   "text": "When dadhi loses her spectacles, I help her find it."
+  },
+  {
+   "img": "img/pb-dadhis-crazy-specatal-day/07.webp",
+   "text": "And I try to knit her a sweater."
+  },
+  {
+   "img": "img/pb-dadhis-crazy-specatal-day/08.webp",
+   "text": "To end her day I sing her a song."
+  },
+  {
+   "img": "img/pb-dadhis-crazy-specatal-day/09.webp",
+   "text": "To end her day I sing her a song."
+  }
+ ],
+ "words": 61,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Rachita Uday Kumar"
+  ],
+  "illustrators": [
+   "Tanaya Vyas"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2236-dadhi-s-crazy-specatal-day",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "id": "pb-amazing-ants",
+ "title": "Amazing Ants",
+ "pages": [
+  {
+   "img": "img/pb-amazing-ants/02.webp",
+   "text": "This is Ramu. He was eating some sweets and few pieces fell down. After sometime he saw a big black line. He goes closer to see what it was and finds they were ants coming in a line to eat the sweet."
+  },
+  {
+   "img": "img/pb-amazing-ants/03.webp",
+   "text": "Each ant carries a piece of sweet on its back. They all stuck together to carry the sweet."
+  },
+  {
+   "img": "img/pb-amazing-ants/04.webp",
+   "text": "Ramu once again saw the ants going back home in a line. The ants had a big feast that night."
+  },
+  {
+   "img": "img/pb-amazing-ants/05.webp",
+   "text": "See how the ants shared their food with each other.\n\nDo you also share your food with others?"
+  }
+ ],
+ "words": 98,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Jerina puthuran"
+  ],
+  "illustrators": [
+   "Deepa Balsavar"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2001-amazing-ants",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

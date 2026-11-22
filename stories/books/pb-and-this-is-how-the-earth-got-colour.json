@@ -1,0 +1,64 @@
+{
+ "id": "pb-and-this-is-how-the-earth-got-colour",
+ "title": "And this is how the earth got colour.",
+ "pages": [
+  {
+   "img": "img/pb-and-this-is-how-the-earth-got-colour/02.webp",
+   "text": "There was a artist and his destiny was to paint.\n\nThe world was colourless."
+  },
+  {
+   "img": "img/pb-and-this-is-how-the-earth-got-colour/03.webp",
+   "text": "So he painted the trees brown and green."
+  },
+  {
+   "img": "img/pb-and-this-is-how-the-earth-got-colour/04.webp",
+   "text": "And then he painted the earth brown."
+  },
+  {
+   "img": "img/pb-and-this-is-how-the-earth-got-colour/05.webp",
+   "text": "He painted the elephants grey with white tusks."
+  },
+  {
+   "img": "img/pb-and-this-is-how-the-earth-got-colour/06.webp",
+   "text": "He painted the Praying Mantis green."
+  },
+  {
+   "img": "img/pb-and-this-is-how-the-earth-got-colour/07.webp",
+   "text": "He painted the starfish red and white."
+  },
+  {
+   "img": "img/pb-and-this-is-how-the-earth-got-colour/08.webp",
+   "text": "And the seahorse was painted pale orange with green eyes."
+  },
+  {
+   "img": "img/pb-and-this-is-how-the-earth-got-colour/09.webp",
+   "text": "Then the artist sat on the beach and looked at the sky."
+  },
+  {
+   "img": "img/pb-and-this-is-how-the-earth-got-colour/10.webp",
+   "text": "It was a beautiful sight of blue and white. He wondered who painted the sky?"
+  }
+ ],
+ "words": 87,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Krutarth Shah"
+  ],
+  "illustrators": [
+   "Greystroke",
+   "Ketan Raut",
+   "Muniza Shariq",
+   "Nimret Handa",
+   "Phidi Pulu"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3584-and-this-is-how-the-earth-got-colour",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

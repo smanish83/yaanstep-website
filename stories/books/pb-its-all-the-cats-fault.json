@@ -1,0 +1,60 @@
+{
+ "id": "pb-its-all-the-cats-fault",
+ "title": "It's All the Cat's Fault!",
+ "pages": [
+  {
+   "img": "img/pb-its-all-the-cats-fault/02.webp",
+   "text": "Why haven't you done your homework?\n\nMiss, it's all the cat's fault."
+  },
+  {
+   "img": "img/pb-its-all-the-cats-fault/03.webp",
+   "text": "If she had not got stuck on the tree, I would not have taken the ladder to climb it."
+  },
+  {
+   "img": "img/pb-its-all-the-cats-fault/04.webp",
+   "text": "If I had not taken the ladder to climb it, I would not have needed to fix it.\n\nIf I had not needed to fix it, I wouldn't have woken up the baby."
+  },
+  {
+   "img": "img/pb-its-all-the-cats-fault/05.webp",
+   "text": "If I had not woken up the baby, my mother would not have rushed out of the kitchen.\n\nIf my mother had not rushed out of the kitchen, the monkey would not have got in."
+  },
+  {
+   "img": "img/pb-its-all-the-cats-fault/06.webp",
+   "text": "If the monkey had not got in, he would not have eaten up all the food.\n\nIf he had not eaten up all the food, my father would not have bought rotis and chicken curry at the tea-shop."
+  },
+  {
+   "img": "img/pb-its-all-the-cats-fault/07.webp",
+   "text": "If my father had not bought rotis and chicken curry at the tea-shop, the dog would not have followed him home."
+  },
+  {
+   "img": "img/pb-its-all-the-cats-fault/08.webp",
+   "text": "If the dog had not followed him home, he would not have eaten my homework."
+  },
+  {
+   "img": "img/pb-its-all-the-cats-fault/09.webp",
+   "text": "So, you're saying the dog ate your homework?"
+  },
+  {
+   "img": "img/pb-its-all-the-cats-fault/10.webp",
+   "text": "Yes, Miss, it's all the cat's fault!"
+  }
+ ],
+ "words": 188,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Anushka Ravishankar"
+  ],
+  "illustrators": [
+   "Priya Kuriyan"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1281-it-s-all-the-cat-s-fault",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

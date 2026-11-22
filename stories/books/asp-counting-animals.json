@@ -1,0 +1,58 @@
+{
+ "id": "asp-counting-animals",
+ "title": "Counting animals",
+ "pages": [
+  {
+   "img": "img/asp-counting-animals/02.webp",
+   "text": "One elephant is going to drink water."
+  },
+  {
+   "img": "img/asp-counting-animals/03.webp",
+   "text": "Two giraffes are going to drink water."
+  },
+  {
+   "img": "img/asp-counting-animals/04.webp",
+   "text": "Three buffaloes and four birds are also going to drink water."
+  },
+  {
+   "img": "img/asp-counting-animals/05.webp",
+   "text": "Five impalas and six warthogs are walking to the water."
+  },
+  {
+   "img": "img/asp-counting-animals/06.webp",
+   "text": "Seven zebras are running to the water."
+  },
+  {
+   "img": "img/asp-counting-animals/07.webp",
+   "text": "Eight frogs and nine fish are swimming in the water."
+  },
+  {
+   "img": "img/asp-counting-animals/08.webp",
+   "text": "One lion roars. He also wants to drink. Who is afraid of the lion?"
+  },
+  {
+   "img": "img/asp-counting-animals/09.webp",
+   "text": "One elephant is drinking water with the lion."
+  }
+ ],
+ "words": 74,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Zanele Buthelezi",
+   "Thembani Dladla",
+   "Clare Verbeek"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/counting-animals",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

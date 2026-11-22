@@ -1,0 +1,52 @@
+{
+ "id": "asp-no-naughty-fingers-no-weird-websites",
+ "title": "No Naughty Fingers, No Weird Websites",
+ "pages": [
+  {
+   "img": "img/asp-no-naughty-fingers-no-weird-websites/02.webp",
+   "text": "Once there was a butterfly named Fiffie. She was clever at working with computers."
+  },
+  {
+   "img": "img/asp-no-naughty-fingers-no-weird-websites/03.webp",
+   "text": "Fiffie saw a girl who was upset and sad. The girl saw a nasty picture on a website."
+  },
+  {
+   "img": "img/asp-no-naughty-fingers-no-weird-websites/04.webp",
+   "text": "Fiffie flew over to the girl's house."
+  },
+  {
+   "img": "img/asp-no-naughty-fingers-no-weird-websites/05.webp",
+   "text": "She said to the girl, \"Never go on the internet without a grownup.\""
+  },
+  {
+   "img": "img/asp-no-naughty-fingers-no-weird-websites/06.webp",
+   "text": "The girl and Fiffie became friends. Fiffie went to live with the girl."
+  },
+  {
+   "img": "img/asp-no-naughty-fingers-no-weird-websites/07.webp",
+   "text": "When the girl grew up she opened her own computer shop. Every week she had lessons to teach children how to work on computers."
+  },
+  {
+   "img": "img/asp-no-naughty-fingers-no-weird-websites/08.webp",
+   "text": "She taught the children never to go on websites without the permission of grownups. Because of Fiffie, the woman never had naughty fingers again!"
+  }
+ ],
+ "words": 113,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Danica Strydom"
+  ],
+  "illustrators": [
+   "Danica Strydom"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/no-naughty-fingers-no-weird-websites",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

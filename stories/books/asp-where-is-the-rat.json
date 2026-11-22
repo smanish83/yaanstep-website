@@ -1,0 +1,73 @@
+{
+ "id": "asp-where-is-the-rat",
+ "title": "Where is the rat?",
+ "pages": [
+  {
+   "img": "img/asp-where-is-the-rat/02.webp",
+   "text": "Where is the rat?"
+  },
+  {
+   "img": "img/asp-where-is-the-rat/03.webp",
+   "text": "Find the rat in the bucket."
+  },
+  {
+   "img": "img/asp-where-is-the-rat/04.webp",
+   "text": "Where is it?"
+  },
+  {
+   "img": "img/asp-where-is-the-rat/05.webp",
+   "text": "Look, look! Find it under the bed."
+  },
+  {
+   "img": "img/asp-where-is-the-rat/06.webp",
+   "text": "Where is it ? A a a a ! Are you behind the door ? No, you are not behind the door."
+  },
+  {
+   "img": "img/asp-where-is-the-rat/07.webp",
+   "text": "Where are you? Are you in the bag? No, you are not in the bag."
+  },
+  {
+   "img": "img/asp-where-is-the-rat/08.webp",
+   "text": "Are you in the saucepan? No, you are not in the saucepan."
+  },
+  {
+   "img": "img/asp-where-is-the-rat/09.webp",
+   "text": "Where can you be? In the cupboard?"
+  },
+  {
+   "img": "img/asp-where-is-the-rat/10.webp",
+   "text": "Where, where? I can not find you."
+  },
+  {
+   "img": "img/asp-where-is-the-rat/11.webp",
+   "text": "Are you under the mat? No, no."
+  },
+  {
+   "img": "img/asp-where-is-the-rat/12.webp",
+   "text": "In the case, oh yes. I can see the rat in the case."
+  }
+ ],
+ "words": 100,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ritah Katetemera"
+  ],
+  "illustrators": [
+   "Michael Nakuwa",
+   "Benjamin Mitchley",
+   "Wiehan de Jager",
+   "Bronwen Heath",
+   "Catherine Groenewald",
+   "Rijuta Ghate"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/where-rat",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

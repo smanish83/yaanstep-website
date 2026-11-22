@@ -1,0 +1,68 @@
+{
+ "id": "pb-little-painters",
+ "title": "Little Painters",
+ "pages": [
+  {
+   "img": "img/pb-little-painters/02.webp",
+   "text": "It was holiday time. Veena and Vinay were in the garden. There were tins of paint everywhere."
+  },
+  {
+   "img": "img/pb-little-painters/03.webp",
+   "text": "There was white paint and red paint and green paint and blue paint and yellow paint."
+  },
+  {
+   "img": "img/pb-little-painters/04.webp",
+   "text": "The painters were busy. One painter was on a ladder. Another was hanging from the roof on a swing. “Can we help?” asked Veena and Vinay."
+  },
+  {
+   "img": "img/pb-little-painters/05.webp",
+   "text": "The painter gave each of them a brush. “Paint the inside of the gate,” he said to Veena.\n\n“Paint the outside of the gate,” he said to Vinay."
+  },
+  {
+   "img": "img/pb-little-painters/06.webp",
+   "text": "They picked up two tins of paint and set to work. Veena painted one side of the gate. Vinay painted the other side of the gate."
+  },
+  {
+   "img": "img/pb-little-painters/07.webp",
+   "text": "The paint fell on the ground.\n\nThe paint fell on the wall.\n\nThe paint fell on them."
+  },
+  {
+   "img": "img/pb-little-painters/08.webp",
+   "text": "At last they finished. They wiped off the paint that had splashed on the ground. They wiped off the paint that had splashed on the wall."
+  },
+  {
+   "img": "img/pb-little-painters/09.webp",
+   "text": "They wiped off the paint that had splashed on them."
+  },
+  {
+   "img": "img/pb-little-painters/10.webp",
+   "text": "\"I love my red gate!\" said Veena."
+  },
+  {
+   "img": "img/pb-little-painters/11.webp",
+   "text": "\"I love my green gate!\" said Vinay."
+  },
+  {
+   "img": "img/pb-little-painters/12.webp",
+   "text": "“Oh, you have made a two-coloured gate!” cried the painter.\n\n“Let us keep it that way!” said Mother."
+  }
+ ],
+ "words": 198,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Cheryl Rao"
+  ],
+  "illustrators": [
+   "Tanvi Choudhury"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/218-little-painters",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

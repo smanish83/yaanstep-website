@@ -1,0 +1,70 @@
+{
+ "id": "pb-topsy-turvy",
+ "title": "Topsy Turvy",
+ "pages": [
+  {
+   "img": "img/pb-topsy-turvy/02.webp",
+   "text": "I do not know why I woke up very early today\n\nSoon I saw that it was a strange new day!"
+  },
+  {
+   "img": "img/pb-topsy-turvy/03.webp",
+   "text": "Nothing at all was as it really should be\n\nAnd I could hear someone shouting loudly at me!"
+  },
+  {
+   "img": "img/pb-topsy-turvy/04.webp",
+   "text": "Our cot had climbed right up the wall\n\nAnd my little clock had grown very tall!"
+  },
+  {
+   "img": "img/pb-topsy-turvy/05.webp",
+   "text": "Our umbrella was twirling madly round and round\n\nMy red and blue cap was making a clicking sound!"
+  },
+  {
+   "img": "img/pb-topsy-turvy/06.webp",
+   "text": "What on earth has happened to our little room?\n\nI fear I am going to faint very soon!"
+  },
+  {
+   "img": "img/pb-topsy-turvy/07.webp",
+   "text": "The fan has turned into a big octopus\n\nMy sister's doll is eating dal and rice without a fuss."
+  },
+  {
+   "img": "img/pb-topsy-turvy/08.webp",
+   "text": "Our cat is sitting up in Papa's chair\n\nAnd look! A mouse is reading the news on the air!"
+  },
+  {
+   "img": "img/pb-topsy-turvy/09.webp",
+   "text": "In the mirror - Aah! See! I am seven feet high!\n\nI know I am going to loudly cry!"
+  },
+  {
+   "img": "img/pb-topsy-turvy/10.webp",
+   "text": "But now look! Here comes a magic man\n\n“Sorry! Sorry!” he says, “I will do what I can!”"
+  },
+  {
+   "img": "img/pb-topsy-turvy/11.webp",
+   "text": "“Yes, yes! It was I who made this little mess\n\nIt was not so nice of me, I do confess!”"
+  },
+  {
+   "img": "img/pb-topsy-turvy/12.webp",
+   "text": "So Abra-ca-da-dabra chin chin choo!\n\nRoom! Get back in order - one - three - two!"
+  }
+ ],
+ "words": 198,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Rohini Nilekani"
+  ],
+  "illustrators": [
+   "Angie & Upesh"
+  ],
+  "translators": [
+   "Rohini Nilekani"
+  ],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/956-ulat-paalat",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

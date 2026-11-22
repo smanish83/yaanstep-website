@@ -1,0 +1,28 @@
+{
+ "id": "pb-my-anti-litter-poem",
+ "title": "My Anti Litter Poem",
+ "pages": [
+  {
+   "img": "img/pb-my-anti-litter-poem/02.webp",
+   "text": "I am smelly, I am dirty!\n\nI never feel guilty!\n\nI cause a lot of pain and acid rain,\n\nstopping me you will have a strain!\n\nI cause malaria in your area,\n\nCausing dengue is fun because it makes you run!\n\nSea animals die and soon you will cry,\n\nSave your planet, save your earth,\n\nor more diseases soon will take birth"
+  }
+ ],
+ "words": 62,
+ "minutes": 1,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Baani Pahwa"
+  ],
+  "illustrators": [
+   "Sorit Gupto"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1922-my-anti-litter-poem",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

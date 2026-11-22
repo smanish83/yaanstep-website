@@ -1,0 +1,33 @@
+{
+ "id": "pb-cat-dreams",
+ "title": "Cat Dreams",
+ "pages": [
+  {
+   "img": "img/pb-cat-dreams/02.webp",
+   "text": "The dreamy cat saw fishes falling from the sky like a rain."
+  },
+  {
+   "img": "img/pb-cat-dreams/03.webp",
+   "text": "The cat thought if she eats enough fishes, she will grow up and become a tiger."
+  }
+ ],
+ "words": 28,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Aasma Pratap"
+  ],
+  "illustrators": [
+   "Deepa Balsavar",
+   "Manjari Chakravarti"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/5085-cat-dreams",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

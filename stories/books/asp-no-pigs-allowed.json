@@ -1,0 +1,58 @@
+{
+ "id": "asp-no-pigs-allowed",
+ "title": "No pigs allowed",
+ "pages": [
+  {
+   "img": "img/asp-no-pigs-allowed/02.webp",
+   "text": "Years ago, a group of horned animals decided to have a big party high up in the mountains. They only invited other animals with horns. No one else."
+  },
+  {
+   "img": "img/asp-no-pigs-allowed/03.webp",
+   "text": "When the pig heard about the party, he thought, \"I don't have horns. What am I going to do?\""
+  },
+  {
+   "img": "img/asp-no-pigs-allowed/04.webp",
+   "text": "The next day, he had an idea. He'd stick some horns to his head with wax!"
+  },
+  {
+   "img": "img/asp-no-pigs-allowed/05.webp",
+   "text": "It worked and the pig felt very clever when he was allowed into the party. The problem was that the party was taking place close to the sun."
+  },
+  {
+   "img": "img/asp-no-pigs-allowed/06.webp",
+   "text": "When the party started heating up, the wax began to melt and his horns fell off. The horned animals were shocked. \"Who's that one with no horns? Why did he come here?\" they asked."
+  },
+  {
+   "img": "img/asp-no-pigs-allowed/07.webp",
+   "text": "The king of the animals commanded, \"Grab that pig and throw him down to earth.\" They grabbed the pig and threw him down to earth."
+  },
+  {
+   "img": "img/asp-no-pigs-allowed/08.webp",
+   "text": "Poor pig! When he fell, he landed on his nose. And his nose was flattened into a snout."
+  },
+  {
+   "img": "img/asp-no-pigs-allowed/09.webp",
+   "text": "So don't be surprised when you see the pig's flat snout, because it's been that way ever since."
+  }
+ ],
+ "words": 186,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Basilio Gimo"
+  ],
+  "illustrators": [
+   "Laura Libertore"
+  ],
+  "translators": [
+   "Little Zebra Books"
+  ],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/no-pigs-allowed",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

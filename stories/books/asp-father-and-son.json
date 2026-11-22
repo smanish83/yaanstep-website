@@ -1,0 +1,57 @@
+{
+ "id": "asp-father-and-son",
+ "title": "Father and son",
+ "pages": [
+  {
+   "img": "img/asp-father-and-son/02.webp",
+   "text": "There was a man called Nsangabisibe."
+  },
+  {
+   "img": "img/asp-father-and-son/03.webp",
+   "text": "This man had a son. The son's name was Mudduawulira."
+  },
+  {
+   "img": "img/asp-father-and-son/04.webp",
+   "text": "One day the man said to his son, \"Let's go for a walk.\""
+  },
+  {
+   "img": "img/asp-father-and-son/05.webp",
+   "text": "On the way, they saw a very nice suitcase. It was packed full."
+  },
+  {
+   "img": "img/asp-father-and-son/06.webp",
+   "text": "The man got very excited. He said to Mudduawulira, \"Pick it up and we will take it home.\""
+  },
+  {
+   "img": "img/asp-father-and-son/07.webp",
+   "text": "The son did what the father told him to do. Mudduawulira put the suitcase on his head and carried it."
+  },
+  {
+   "img": "img/asp-father-and-son/08.webp",
+   "text": "On the way home, a snake slithered out of the suitcase. It landed on Mudduawulira's feet!"
+  },
+  {
+   "img": "img/asp-father-and-son/09.webp",
+   "text": "Father and son were both very scared. Mudduawulira dropped the suitcase. They ran away very fast!"
+  }
+ ],
+ "words": 112,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Frista Nattabira"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "João Carlos Brito"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/father-and-son",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

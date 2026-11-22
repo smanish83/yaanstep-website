@@ -1,0 +1,68 @@
+{
+ "id": "pb-my-best-friend",
+ "title": "My Best Friend",
+ "pages": [
+  {
+   "img": "img/pb-my-best-friend/02.webp",
+   "text": "I have a friend. She lives in my house."
+  },
+  {
+   "img": "img/pb-my-best-friend/03.webp",
+   "text": "When I am happy, so is she."
+  },
+  {
+   "img": "img/pb-my-best-friend/04.webp",
+   "text": "When I cry, she cries too."
+  },
+  {
+   "img": "img/pb-my-best-friend/05.webp",
+   "text": "But I cannot hear her voice. My friend lives inside the mirror."
+  },
+  {
+   "img": "img/pb-my-best-friend/06.webp",
+   "text": "“Come out,” I tell her, “we will play.” She does not come out."
+  },
+  {
+   "img": "img/pb-my-best-friend/07.webp",
+   "text": "I am not happy. I go to sleep."
+  },
+  {
+   "img": "img/pb-my-best-friend/08.webp",
+   "text": "She comes out of the mirror in my sleep! And we have fun."
+  },
+  {
+   "img": "img/pb-my-best-friend/09.webp",
+   "text": "We play, we run, we shout and scream together."
+  },
+  {
+   "img": "img/pb-my-best-friend/10.webp",
+   "text": "When I talk to her, she also talks to me."
+  },
+  {
+   "img": "img/pb-my-best-friend/11.webp",
+   "text": "In the morning, my friend will go back into the mirror."
+  },
+  {
+   "img": "img/pb-my-best-friend/12.webp",
+   "text": "But I don't mind at all. We will play again in my dreams!"
+  }
+ ],
+ "words": 111,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Anupa Lal"
+  ],
+  "illustrators": [
+   "Suvidha Mistry"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1042-my-best-friend",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

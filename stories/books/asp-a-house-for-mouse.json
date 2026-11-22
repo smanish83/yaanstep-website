@@ -1,0 +1,72 @@
+{
+ "id": "asp-a-house-for-mouse",
+ "title": "A house for Mouse",
+ "pages": [
+  {
+   "img": "img/asp-a-house-for-mouse/02.webp",
+   "text": "Mouse was looking for a new house."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/03.webp",
+   "text": "This looks like a nice house."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/04.webp",
+   "text": "\"You can come and sleep with me,\" said Puppy.\n\n\"Thank you,\" said Mouse."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/05.webp",
+   "text": "That night, Mouse's dreams were bouncy and muddy."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/06.webp",
+   "text": "\"You can come and sleep with me,\" said Parrot.\n\n\"Thank you,\" said Mouse."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/07.webp",
+   "text": "That night, Mouse's dreams were noisy and wild."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/08.webp",
+   "text": "\"You can come and sleep with me,\" said Fish.\n\n\"Thank you,\" said Mouse."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/09.webp",
+   "text": "That night, Mouse's dreams were cold and wet."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/10.webp",
+   "text": "Mouse needed somewhere warm and dry."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/11.webp",
+   "text": ""
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/12.webp",
+   "text": "Mouse found a bookshelf nearby."
+  },
+  {
+   "img": "img/asp-a-house-for-mouse/13.webp",
+   "text": "That night, Mouse had warm and cosy dreams.\n\nGood night Mouse."
+  }
+ ],
+ "words": 98,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Michele Fry"
+  ],
+  "illustrators": [
+   "Amy Uzzell"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/house-mouse",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "id": "asp-our-river-our-life",
+ "title": "Our river, our life",
+ "pages": [
+  {
+   "img": "img/asp-our-river-our-life/02.webp",
+   "text": "Two small streams formed River Temu. The sheep, goats and deer lived because of River Temu."
+  },
+  {
+   "img": "img/asp-our-river-our-life/03.webp",
+   "text": "But when Matata became headman, he cut down trees. He made a path from the top of the hill to the bottom."
+  },
+  {
+   "img": "img/asp-our-river-our-life/04.webp",
+   "text": "Matata's children and their friends ran all over the place. They broke branches. They lit fires and left them burning."
+  },
+  {
+   "img": "img/asp-our-river-our-life/05.webp",
+   "text": "River Temu stopped flowing. The deer went away. The sheep and goats grew thinner and thinner."
+  },
+  {
+   "img": "img/asp-our-river-our-life/06.webp",
+   "text": "The people chased away Matata, the headman. They appointed Baraka as the new leader. The people were happy."
+  },
+  {
+   "img": "img/asp-our-river-our-life/07.webp",
+   "text": "The path was closed and grass grew once again. River Temu was revived. The land became greener than ever before."
+  },
+  {
+   "img": "img/asp-our-river-our-life/08.webp",
+   "text": "People sang, \"Long live Baraka, long live Baraka.\" \"May our children and children's children forever respect River Temu.\""
+  }
+ ],
+ "words": 130,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Rebecca Njuguna",
+   "Ursula Nafula (adaptation)"
+  ],
+  "illustrators": [
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/river-temu",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

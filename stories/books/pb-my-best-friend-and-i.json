@@ -1,0 +1,40 @@
+{
+ "id": "pb-my-best-friend-and-i",
+ "title": "My best friend and I",
+ "pages": [
+  {
+   "img": "img/pb-my-best-friend-and-i/02.webp",
+   "text": "My name is Neha and my friend's name is Aiyana...\n\nWe watch movies, have some snacks, Chit- Chat, paint masks, draw and color,\nplay instrument, do horse riding, make lollipops, ice-creams, cup-cakes, chocolates, and cookies."
+  },
+  {
+   "img": "img/pb-my-best-friend-and-i/03.webp",
+   "text": "One day I called my friend out in the BEAUTIFUL PARK....\n\nWe climbed a tall and beautiful tree, and sat on a branch.. Oh I said.. we took some rest. and all\n\nwas quiet. A bird came and sat on my hand, we sang a song; flowers started blooming; the sun shined bright; we got fresh air and it felt like MAGIC was surrounding us."
+  },
+  {
+   "img": "img/pb-my-best-friend-and-i/04.webp",
+   "text": "It was turning dark. We got down from the tree and we were talking and walking and talking and walking and.... walking and talking and walking and talking. I knew it was my birthday tomorrow but wanted to surprise my friend."
+  },
+  {
+   "img": "img/pb-my-best-friend-and-i/05.webp",
+   "text": "I felt happy that she remembered it was my BIRTHDAY. I was filled with joy.\n\nI promised to fulfill her dream too."
+  }
+ ],
+ "words": 163,
+ "minutes": 2,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Neha Harsh"
+  ],
+  "illustrators": [
+   "Suvidha Mistry"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4970-my-best-friend-and-i",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

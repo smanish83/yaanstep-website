@@ -1,0 +1,28 @@
+{
+ "id": "pb-eldorado",
+ "title": "Eldorado",
+ "pages": [
+  {
+   "img": "img/pb-eldorado/01.webp",
+   "text": "Eldorado\n\nGaily bedlight,\n\nA gallent knight,\n\nIn sunshine and in shadow,\n\nHad journeyed long,\n\nsinging a song,\n\nIn search of Eldorado.\n\nBut he grew old\n\nThis knight so bold\n\nAnd over his heart a shadow\n\nFell as he found\n\nNo spot of ground\n\nThat looked like Eldorado\n\nAnd, as he strength\n\nFailed him at length,\n\nHe met a pilgrim shadow\n\n'Shadow', said he\n\nWhere can it be\n\n'The land of Eldorado?'"
+  }
+ ],
+ "words": 71,
+ "minutes": 1,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Divyesh Jha"
+  ],
+  "illustrators": [
+   "Manisha Ahuja"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/3963-eldorado",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

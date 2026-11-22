@@ -1,0 +1,28 @@
+{
+ "id": "pb-the-cat-and-the-monkey",
+ "title": "The cat and the monkey",
+ "pages": [
+  {
+   "img": "img/pb-the-cat-and-the-monkey/02.webp",
+   "text": "Once there lived a granny, mamma, a kid. Then a monkey sneaked through the window and ate up the fruits. The cat ate up the fruits in the garden. That's all."
+  }
+ ],
+ "words": 31,
+ "minutes": 1,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Vivaan M"
+  ],
+  "illustrators": [
+   "Priya Kuriyan"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1444-the-cat-and-the-monkey",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

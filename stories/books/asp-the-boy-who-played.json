@@ -1,0 +1,75 @@
+{
+ "id": "asp-the-boy-who-played",
+ "title": "The boy who played",
+ "pages": [
+  {
+   "img": "img/asp-the-boy-who-played/02.webp",
+   "text": "Aunt Merane gave some money to Joe. Go to the shop. Buy sugar and bread."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/03.webp",
+   "text": "Joe picked an old car Tyre. He ran fast with to the shop."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/04.webp",
+   "text": "Before reaching the shop,he saw the ball. He forgot the tyre. He picked the ball and kicked it."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/05.webp",
+   "text": "He saw a flying bird. He wanted to catch it."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/06.webp",
+   "text": "He saw the cows. He stopped and started singing to them."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/07.webp",
+   "text": "\"Where is Joe? Asked Jessica\" \"He is just late but he is coming.\" Aunt Merane said."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/08.webp",
+   "text": "Uncle Don sat with baby Tara. He wanted to have breakfast before going for work."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/09.webp",
+   "text": "Joe saw a puppy. He ran with it around the fields."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/10.webp",
+   "text": "He got tired. He sat down and checked his pocket. The money was not there."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/11.webp",
+   "text": "He ran home without sugar and bread."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/12.webp",
+   "text": "\"Joe, Where is sugar and bread? Where is the money?'' Asked Aunt Merane."
+  },
+  {
+   "img": "img/asp-the-boy-who-played/13.webp",
+   "text": "Am very sorry Aunt Merane. I played too much and lost the money."
+  }
+ ],
+ "words": 157,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Annet Ssebaggala"
+  ],
+  "illustrators": [
+   "Kathy Arbuckle",
+   "Mlungisi Dlamini",
+   "Catherine Groenewald",
+   "Benjamin Mitchley"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/boy-who-played",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "id": "asp-a-trip-to-zanzibar",
+ "title": "A Trip to Zanzibar",
+ "pages": [
+  {
+   "img": "img/asp-a-trip-to-zanzibar/02.webp",
+   "text": "A walk in Zanzibar, what do you see? Shops selling sweets, in very narrow streets."
+  },
+  {
+   "img": "img/asp-a-trip-to-zanzibar/03.webp",
+   "text": "A swim in Zanzibar, what do you see? Changu, Kibua, Tasi, Pono, Jodari na Kambisi."
+  },
+  {
+   "img": "img/asp-a-trip-to-zanzibar/04.webp",
+   "text": "A drive in Zanzibar, what do you see? Animals in a jungle, watching at an angle"
+  },
+  {
+   "img": "img/asp-a-trip-to-zanzibar/05.webp",
+   "text": "A dance in Zanzibar, what do you see? Swahili, English and Arab, all dancing Taarab."
+  },
+  {
+   "img": "img/asp-a-trip-to-zanzibar/06.webp",
+   "text": "A drink in Zanzibar, what do you see? miwa, madafu juicy, coffee and tea are spicy."
+  },
+  {
+   "img": "img/asp-a-trip-to-zanzibar/07.webp",
+   "text": "A trip to Zanzibar, do you wish to go back?"
+  }
+ ],
+ "words": 87,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Barke Ramadhan"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "Laura Libertore",
+   "Catherine Groenewald",
+   "Rijuta Ghate"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/trip-zanzibar",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "id": "pb-fonkys-fishy-party",
+ "title": "Fonky's Fishy Party",
+ "pages": [
+  {
+   "img": "img/pb-fonkys-fishy-party/02.webp",
+   "text": "Once there was a frog named Fonky. Fonky jumped into a pond to meet his friends. He had many fish friends. They played catch and cook."
+  },
+  {
+   "img": "img/pb-fonkys-fishy-party/03.webp",
+   "text": "Then suddenly Tutu, the turtle came. They were all happily surprised. Fonky jumped on Tutu's back, Marina jumped over Fonky in joy. Gippy asked Tutu, \"Where were you all this while? We were waiting for you.. Come and join us!\""
+  },
+  {
+   "img": "img/pb-fonkys-fishy-party/04.webp",
+   "text": "Tutu joined them to play. They suddenly heard a loud sound! The little fish got scared, but Tutu was brave and he said,\" Let's go and see what happened.\""
+  },
+  {
+   "img": "img/pb-fonkys-fishy-party/05.webp",
+   "text": "They saw a big yellow box sitting in the water. Everyone started poking it. Suddenly there was music coming from it.\" Oh! It is a Radio!\", said Fonky."
+  },
+  {
+   "img": "img/pb-fonkys-fishy-party/06.webp",
+   "text": "Goldie, the goldfish, came to meet Fonky and the friends. Fonky told her about the new Radio. Goldie was very excited, she turned up the volume, \"BOOM! BOOM! BOOM!\" and they all had a fishy party!"
+  },
+  {
+   "img": "img/pb-fonkys-fishy-party/07.webp",
+   "text": "Everyone danced a lot and had lots of fun! Fonky, Tutu and Goldie were then tired. Fonky said, \"I must go back home, my mother is waiting for me\". Tutu said, \"Good bye! Let's do this again tomorrow.\" And they all went home."
+  }
+ ],
+ "words": 202,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Vinuta Shirgopikar"
+  ],
+  "illustrators": [
+   "Greystroke",
+   "Srikrishna Kedilaya"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/4111-fonky-s-fishy-party",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

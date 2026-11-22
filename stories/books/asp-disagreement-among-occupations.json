@@ -1,0 +1,56 @@
+{
+ "id": "asp-disagreement-among-occupations",
+ "title": "Disagreement among occupations",
+ "pages": [
+  {
+   "img": "img/asp-disagreement-among-occupations/02.webp",
+   "text": "In a village there was a disagreement among people of different occupations. Everyone thought their work was the most important!"
+  },
+  {
+   "img": "img/asp-disagreement-among-occupations/03.webp",
+   "text": "The teacher said that he had the most important occupation. \"Without teachers you could not go to school and learn.\""
+  },
+  {
+   "img": "img/asp-disagreement-among-occupations/04.webp",
+   "text": "The builder said that he had the most important occupation. \"Without builders you would not have schools to learn in or houses to sleep in.\""
+  },
+  {
+   "img": "img/asp-disagreement-among-occupations/05.webp",
+   "text": "The carpenter said that he had the most important occupation. \"Without carpenters you would have no furniture for your houses and schools.\""
+  },
+  {
+   "img": "img/asp-disagreement-among-occupations/06.webp",
+   "text": "The doctor claimed that he had the most important occupation. \"Without doctors and nurses you could get sick and die.\""
+  },
+  {
+   "img": "img/asp-disagreement-among-occupations/07.webp",
+   "text": "The farmer said that she had the most important occupation. \"Without farmers you would you would not have food to eat.\""
+  },
+  {
+   "img": "img/asp-disagreement-among-occupations/08.webp",
+   "text": "The student argued that students had the most important work. \"Without students, there would be no teachers, builders, doctors, farmers, or carpenters.\""
+  },
+  {
+   "img": "img/asp-disagreement-among-occupations/09.webp",
+   "text": "Eventually everyone agreed that all the occupations are important. We need teachers, builders, doctors, farmers, and carpenters. But everyone has to be a student first!"
+  }
+ ],
+ "words": 175,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Beatrice Inzikuru"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/disagreement-among-occupations-0",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

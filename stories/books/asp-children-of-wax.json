@@ -1,0 +1,68 @@
+{
+ "id": "asp-children-of-wax",
+ "title": "Children of wax",
+ "pages": [
+  {
+   "img": "img/asp-children-of-wax/02.webp",
+   "text": "Once upon a time, there lived a happy family."
+  },
+  {
+   "img": "img/asp-children-of-wax/03.webp",
+   "text": "They never fought with each other. They helped their parents at home and in the fields."
+  },
+  {
+   "img": "img/asp-children-of-wax/04.webp",
+   "text": "But they were not allowed to go near a fire."
+  },
+  {
+   "img": "img/asp-children-of-wax/05.webp",
+   "text": "They had to do all their work during the night.\n\nBecause they were made of wax!"
+  },
+  {
+   "img": "img/asp-children-of-wax/06.webp",
+   "text": "But one of the boys longed to go out in the sunlight."
+  },
+  {
+   "img": "img/asp-children-of-wax/07.webp",
+   "text": "One day the longing was too strong. His brothers warned him..."
+  },
+  {
+   "img": "img/asp-children-of-wax/08.webp",
+   "text": "But it was too late! He melted in the hot sun."
+  },
+  {
+   "img": "img/asp-children-of-wax/09.webp",
+   "text": "The wax children were so sad to see their brother melting away."
+  },
+  {
+   "img": "img/asp-children-of-wax/10.webp",
+   "text": "But they made a plan. They shaped the lump of melted wax into a bird."
+  },
+  {
+   "img": "img/asp-children-of-wax/11.webp",
+   "text": "They took their bird brother up to a high mountain."
+  },
+  {
+   "img": "img/asp-children-of-wax/12.webp",
+   "text": "And as the sun rose, he flew away singing into the morning light."
+  }
+ ],
+ "words": 135,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Southern African Folktale"
+  ],
+  "illustrators": [
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/children-wax",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

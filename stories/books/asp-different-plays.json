@@ -1,0 +1,45 @@
+{
+ "id": "asp-different-plays",
+ "title": "Different Plays",
+ "pages": [
+  {
+   "img": "img/asp-different-plays/02.webp",
+   "text": "Skipping"
+  },
+  {
+   "img": "img/asp-different-plays/03.webp",
+   "text": "Running"
+  },
+  {
+   "img": "img/asp-different-plays/04.webp",
+   "text": "Kicking the ball"
+  },
+  {
+   "img": "img/asp-different-plays/05.webp",
+   "text": "Jumping"
+  }
+ ],
+ "words": 6,
+ "minutes": 1,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ajarubo Philiam"
+  ],
+  "illustrators": [
+   "Vusi Malindi",
+   "Marion Drew",
+   "Benjamin Mitchley",
+   "Joseph Ejoyi",
+   "Mlungisi Dlamini",
+   "Kathy Arbuckle"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/different-plays",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}

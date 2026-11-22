@@ -1,0 +1,56 @@
+{
+ "id": "pb-many-bananas",
+ "title": "Many Bananas",
+ "pages": [
+  {
+   "img": "img/pb-many-bananas/02.webp",
+   "text": "I am hungry!\n\nI want a banana!"
+  },
+  {
+   "img": "img/pb-many-bananas/03.webp",
+   "text": "I go to the tree.\n\nI pluck bananas."
+  },
+  {
+   "img": "img/pb-many-bananas/04.webp",
+   "text": "I have bananas, now."
+  },
+  {
+   "img": "img/pb-many-bananas/05.webp",
+   "text": "I eat a banana.\n\nI eat two bananas.\n\nI eat three bananas.\n\nI eat many bananas."
+  },
+  {
+   "img": "img/pb-many-bananas/06.webp",
+   "text": "I am not hungry, now.\n\nI have a hundred bananas"
+  },
+  {
+   "img": "img/pb-many-bananas/07.webp",
+   "text": "What will I do?"
+  },
+  {
+   "img": "img/pb-many-bananas/08.webp",
+   "text": "I will mix banana and sugar.\n\nI will make banana halwa!"
+  },
+  {
+   "img": "img/pb-many-bananas/09.webp",
+   "text": "I will eat banana halwa.\n\nI am happy!"
+  }
+ ],
+ "words": 68,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Smruthi K"
+  ],
+  "illustrators": [
+   "Angie & Upesh"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2987-many-bananas",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

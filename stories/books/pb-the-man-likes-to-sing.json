@@ -1,0 +1,28 @@
+{
+ "id": "pb-the-man-likes-to-sing",
+ "title": "The Man likes to Sing",
+ "pages": [
+  {
+   "img": "img/pb-the-man-likes-to-sing/02.webp",
+   "text": "One Day man went to forest and to see the forest, Practice the music over there. He found the some good decent place over there and found one interesting Big Mushroom over there. He started sitting over the Mushroom and practicing over there for a while. After a few days of Practicing the Birds and Animals are started listening to music of him."
+  }
+ ],
+ "words": 63,
+ "minutes": 1,
+ "ages": "7-9",
+ "credits": {
+  "authors": [
+   "Ajay Puttam"
+  ],
+  "illustrators": [
+   "Prashant Miranda"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/2455-the-man-likes-to-sing",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

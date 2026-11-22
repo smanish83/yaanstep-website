@@ -1,0 +1,49 @@
+{
+ "id": "pb-subamis-family",
+ "title": "Subami's Family",
+ "pages": [
+  {
+   "img": "img/pb-subamis-family/02.webp",
+   "text": "I am Subaami. This is my mother- Swetha.\n\nMy father's name is Sujan. My brother's name is Shreyas.\n\nAll our names begin with S!\n\nShreyas and I, made the picture on the wall."
+  },
+  {
+   "img": "img/pb-subamis-family/03.webp",
+   "text": "Today Amma has worn a saree that is just the colour of the sun in the picture.\n\nIt looks so pretty with orange and red and yellow."
+  },
+  {
+   "img": "img/pb-subamis-family/04.webp",
+   "text": "Amma goes to office. She reads a lot. She makes very nice food.\n\nHmmmmm...smells so good!\n\nI think she is making sweet corn curry."
+  },
+  {
+   "img": "img/pb-subamis-family/05.webp",
+   "text": "We have a pet cat.\n\nHer name also begins with S- Sweety."
+  },
+  {
+   "img": "img/pb-subamis-family/06.webp",
+   "text": "My grandma lives with us.\n\nShe tells me stories, I read my story books to her.\n\nAnd her name? Sundaravalli."
+  },
+  {
+   "img": "img/pb-subamis-family/07.webp",
+   "text": "And S...yes, we are one sweet happy family!"
+  }
+ ],
+ "words": 124,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Arthi Anand-Navaneeth"
+  ],
+  "illustrators": [
+   "Greystroke",
+   "Priya Kuriyan"
+  ],
+  "translators": [],
+  "publisher": "Pratham Books",
+  "platform": "StoryWeaver",
+  "source": "https://storyweaver.org.in/stories/1742-subami-s-family",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces and blank lines removed."
+ }
+}

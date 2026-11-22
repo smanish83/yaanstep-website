@@ -1,0 +1,88 @@
+{
+ "id": "asp-decision",
+ "title": "Decision",
+ "pages": [
+  {
+   "img": "img/asp-decision/02.webp",
+   "text": "My village had many problems.\n\nWe made a long line to fetch water from one tap."
+  },
+  {
+   "img": "img/asp-decision/03.webp",
+   "text": "We waited for food donated by others."
+  },
+  {
+   "img": "img/asp-decision/04.webp",
+   "text": "We locked our houses early because of thieves."
+  },
+  {
+   "img": "img/asp-decision/05.webp",
+   "text": "Many children dropped out of school."
+  },
+  {
+   "img": "img/asp-decision/06.webp",
+   "text": "Young girls worked as maids in other villages."
+  },
+  {
+   "img": "img/asp-decision/07.webp",
+   "text": "Young boys roamed around the village while others worked on people's farms."
+  },
+  {
+   "img": "img/asp-decision/08.webp",
+   "text": "When the wind blew, waste paper hung on trees and fences."
+  },
+  {
+   "img": "img/asp-decision/09.webp",
+   "text": "People were cut by broken glass that was thrown carelessly."
+  },
+  {
+   "img": "img/asp-decision/10.webp",
+   "text": "Then one day, the tap dried up and our containers were empty."
+  },
+  {
+   "img": "img/asp-decision/11.webp",
+   "text": "My father walked from house to house asking people to attend a village meeting."
+  },
+  {
+   "img": "img/asp-decision/12.webp",
+   "text": "People gathered under a big tree and listened."
+  },
+  {
+   "img": "img/asp-decision/13.webp",
+   "text": "My father stood up and said, \"We need to work together to solve our problems.\""
+  },
+  {
+   "img": "img/asp-decision/14.webp",
+   "text": "Eight-year-old Juma, sitting on a tree trunk shouted, \"I can help with cleaning up.\""
+  },
+  {
+   "img": "img/asp-decision/15.webp",
+   "text": "One woman said, \"The women can join me to grow food.\""
+  },
+  {
+   "img": "img/asp-decision/16.webp",
+   "text": "Another man stood up and said, \"The men will dig a well.\""
+  },
+  {
+   "img": "img/asp-decision/17.webp",
+   "text": "We all shouted with one voice, \"We must change our lives.\"\n\nFrom that day we worked together to solve our problems."
+  }
+ ],
+ "words": 185,
+ "minutes": 5,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Vusi Malindi"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/stories/decision",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Line breaks from the PDF layout joined into running text; extra spaces and blank lines removed."
+ }
+}
