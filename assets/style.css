@@ -37,7 +37,7 @@ th{background:var(--tint2)}
 footer.site{border-top:1px solid var(--line);padding:1.5rem 0;background:var(--footer-bg)}
 footer.site p{margin:.35rem 0}
 footer.site a{color:var(--teal-dark)}
-@media (max-width:40rem){h1,.hero h1{font-size:2rem}}
+@media (max-width:40rem){h1,.hero h1{font-size:2rem}th,td{padding:.45rem .4rem;overflow-wrap:anywhere}}
 @media (prefers-reduced-motion:no-preference){.btn{transition:background .15s}}
 /* Interactive pages: try-it and time calculator */
 .demo,.calc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;margin:1.5rem 0}
