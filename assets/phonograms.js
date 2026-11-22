@@ -289,7 +289,8 @@
     var opts = shuffle([r.p].concat(wrongSplits(r)));
     var col = el('div', { 'class': 'choices', id: 'choices' });
     opts.forEach(function (o) {
-      var b = el('button', { type: 'button', 'class': 'choice', 'data-split': o.join('|'), 'aria-label': o.join(', ') });
+      var b = el('button', { type: 'button', 'class': 'choice', 'data-split': o.join('|') });
+      b.appendChild(el('span', { 'class': 'sr' }, o.join(', ')));
       b.appendChild(boxes(o));
       b.addEventListener('click', function () {
         if (solved) return;

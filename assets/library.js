@@ -86,13 +86,16 @@
         (!q || b.title.toLowerCase().indexOf(q) > -1);
     });
   }
-  var PAGE_SIZE = 24, limit = PAGE_SIZE;
+  var PAGE_SIZE = 24, limit = PAGE_SIZE, cards = {};
   function drawShelf() {
     var list = shown(), shelf = $('shelf');
     shelf.innerHTML = '';
     $('found').textContent = list.length === 1 ? '1 book' : list.length + ' books';
     list.slice(0, limit).forEach(function (b) {
+      // Keep each card once made, so a cover that is still loading is not thrown away when the shelf is redrawn.
+      if (cards[b.id]) { shelf.appendChild(cards[b.id]); return; }
       var li = el('li', {});
+      cards[b.id] = li;
       var btn = el('button', { type: 'button', 'class': 'bookbtn', 'data-id': b.id });
       var img = el('img', { src: BASE + b.cover, alt: '', width: '160', height: '120', loading: 'lazy', decoding: 'async' });
       btn.appendChild(img);
