@@ -46,7 +46,7 @@
   }
   function spans() { return document.querySelectorAll('#ltext .w'); }
   function mark(i) { var s = spans(); for (var k = 0; k < s.length; k++) s[k].className = k === i ? 'w now' : 'w'; }
-  function unmark() { clearTimeout(markTimer); markTimer = null; mark(-1); }
+  function unmark() { clearInterval(markTimer); markTimer = null; mark(-1); }
   function hush() { reading++; unmark(); try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) { /* nothing */ } }
   function wordsInto(p, text) {
     text.split(/(\s+)/).forEach(function (part) {
@@ -55,41 +55,59 @@
       else p.appendChild(el('span', { 'class': 'w' }, part));
     });
   }
+  // The marker follows the voice. Where the voice reports each word, the marker jumps to it; between reports, and on
+  // voices that report nothing, it moves on by time. The time per letter is learnt from each page the voice has read,
+  // so the marker keeps up with this device's voice at the chosen speed instead of falling behind it.
+  var paceAt1 = 62; // ms per letter at speed 1, counting a space as a letter and a pause after . ! ? or , as several
+  function plan(words) {
+    var at = [], t = 0;
+    words.forEach(function (w) { at.push(t); t += w.length + 1 + (/[.!?]["”’']?$/.test(w) ? 6 : /[,;:]["”’']?$/.test(w) ? 3 : 0); });
+    return { at: at, total: t };
+  }
   function readAlong(text, done) {
     if (!voice) return;
     hush();
-    var starts = [], re = /\S+/g, m, me = ++reading, heard = false, over = false, guard = null;
-    function finish() {
-      if (over || me !== reading) return;
-      over = true; clearTimeout(guard); unmark();
-      if (done) done();
-    }
+    var starts = [], re = /\S+/g, m, me = ++reading, over = false, guard = null;
     while ((m = re.exec(text))) starts.push(m.index);
-    var words = text.match(/\S+/g) || [];
-    function onTimer(i) {
-      if (heard || me !== reading) return;
-      if (i >= words.length) { unmark(); return; }
-      mark(i);
-      markTimer = setTimeout(function () { onTimer(i + 1); }, (220 + 45 * words[i].length + (/[.!?,]["”']?$/.test(words[i]) ? 260 : 0)) / rate);
+    var words = text.match(/\S+/g) || [], p = plan(words), cur = -1, began = 0, anchorT = 0, anchorW = 0, myRate = rate;
+    function tick() {
+      if (me !== reading || !words.length) return;
+      var pos = p.at[anchorW] + (Date.now() - anchorT) * myRate / paceAt1, i = anchorW;
+      while (i + 1 < words.length && p.at[i + 1] <= pos) i++;
+      if (i !== cur) { cur = i; mark(i); }
+    }
+    function begin(at) { anchorT = at; anchorW = 0; tick(); clearInterval(markTimer); markTimer = setInterval(tick, 50); }
+    function finish(e) {
+      if (over || me !== reading) return;
+      over = true; clearTimeout(guard);
+      var took = Date.now() - began;
+      if (e && e.type === 'end' && began && took > 400 && p.total > 20) {
+        var seen = took * myRate / p.total;
+        if (seen > 25 && seen < 160) paceAt1 = paceAt1 * 0.3 + seen * 0.7;
+      }
+      unmark();
+      if (done) done();
     }
     try {
       var u = new SpeechSynthesisUtterance(text);
-      u.voice = voice; u.lang = voice.lang; u.rate = rate;
-      u.onstart = function () { if (!heard) onTimer(0); };
+      u.voice = voice; u.lang = voice.lang; u.rate = myRate;
+      // Some voices never say they have started, so the marker starts when asked to speak and is reset on start.
+      u.onstart = function () { if (me === reading) { began = Date.now(); begin(began); } };
       u.onboundary = function (e) {
         if ((e.name && e.name !== 'word') || me !== reading) return;
-        heard = true; clearTimeout(markTimer);
         var i = 0;
         while (i + 1 < starts.length && starts[i + 1] <= e.charIndex) i++;
-        mark(i);
+        anchorW = i; anchorT = Date.now(); cur = -1; tick();
       };
-      u.onend = u.onerror = finish;
+      u.onend = function (e) { finish(e && e.type ? e : { type: 'end' }); };
+      u.onerror = function () { finish(null); };
       window.speechSynthesis.speak(u);
+      began = Date.now(); begin(began);
       // Some voices never say they have finished: move on after about twice the time the page should take.
-      var est = words.reduce(function (t, w) { return t + 220 + 45 * w.length; }, 0) / rate;
-      guard = setTimeout(finish, 2 * est + 4000);
+      guard = setTimeout(finish, 2 * p.total * paceAt1 / myRate + 4000);
     } catch (e) { unmark(); }
   }
+  window.YS_READ = { pace: function () { return paceAt1; } };
 
   /* ---------- the shelf ---------- */
 
