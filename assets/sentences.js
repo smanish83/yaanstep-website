@@ -152,6 +152,8 @@
   /* ---------- rounds ---------- */
 
   // Each maker returns { kind, pic, before, after, answer, choices, hint }.
+  /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
+  function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   function whoRound() {
     var item = pick(WHO);
     return {
@@ -188,7 +190,9 @@
       hint: 'Look at the picture. What color is the ' + item.word + '?'
     };
   }
-  var MAKERS = [whoRound, doingRound, whereRound, likeRound];
+  var MAKERS = [whoRound, doingRound, whereRound, likeRound].map(function (make) {
+    return function () { var r = make(); r.choices = fewer(r.choices, r.answer); return r; };
+  });
   var KIND_LABEL = { who: 'Who or what?', doing: 'What is it doing?', where: 'Where?', like: 'What is it like?' };
 
   /* ---------- screens ---------- */

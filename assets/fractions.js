@@ -47,6 +47,8 @@
   /* Uneven cuts for the "equal parts?" game: clearly not the same size, but the same number of parts. */
   var UNEVEN = { 2: [[0.3], [0.68]], 3: [[0.18, 0.5], [0.4, 0.82], [0.25, 0.75]], 4: [[0.1, 0.4, 0.75], [0.3, 0.45, 0.8], [0.15, 0.3, 0.6]] };
 
+  /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
+  function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   /** Three choices for "what fraction is shaded": the answer, the part left white, and the same count over another size. */
   function choices(k, d) {
     var ans = frac(k, d), picks = [];
@@ -56,7 +58,7 @@
     shuffle([k - 1, k + 1]).forEach(function (x) { if (x >= 1 && x < d) picks.push(frac(x, d)); });
     var out = [];
     picks.forEach(function (p) { if (p !== ans && out.indexOf(p) < 0 && out.length < 2) out.push(p); });
-    return shuffle([ans].concat(out));
+    return fewer(shuffle([ans].concat(out)), ans);
   }
 
   /* ---------- the rounds: one maker per game ---------- */

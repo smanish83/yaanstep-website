@@ -411,13 +411,15 @@
     }
     return ul;
   }
+  /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
+  function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   function choices(c) {
     var a = typeof c.a === 'number' ? c.a : c.ans - c.b;
     var alts = { '+': [Math.abs(a - c.b), c.ans + 10, c.ans - 10], '−': [a + c.b, c.ans + 10, c.ans - 10], '×': [a + c.b, c.ans + a, c.ans - a], '÷': [a - c.b, c.ans + 1, c.ans * 2] }[c.op] || [];
     alts = alts.concat([c.ans + 1, c.ans - 1, c.ans + 2]);
     var picks = [];
     alts.forEach(function (v) { if (v > 0 && v !== c.ans && picks.indexOf(v) < 0 && picks.length < 2) picks.push(v); });
-    return shuffle([c.ans].concat(picks));
+    return fewer(shuffle([c.ans].concat(picks)), c.ans);
   }
 
 

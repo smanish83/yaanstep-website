@@ -1,0 +1,116 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calm corner | Yaanstep</title>
+<meta name="description" content="Calm play for any child aged 3 to 8: pop slow bubbles, breathe with a growing circle, color a picture and make a first-then picture plan. No score, no timer, nothing to lose. Nothing is sent.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/learn.css">
+<style>
+[hidden]{display:none!important}
+.calm-nav{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.calm-nav a{display:inline-flex;align-items:center;min-height:48px;padding:6px 14px;border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font-weight:600;text-decoration:none}
+.calm-nav a:hover{border-color:var(--teal)}
+h2{font-size:1.2rem;margin:.1em 0 .3em}
+.say-line{margin:4px 0 8px}
+.hear{display:inline-flex;align-items:center;gap:6px;min-height:48px;font-size:.95rem}
+.hear svg{width:22px;height:22px}
+.status{min-height:1.5em;font-weight:600;color:#1b5e33;text-align:center;margin:6px 0}
+/* Bubbles */
+.bubbles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0}
+.bubble{min-height:96px;display:flex;align-items:center;justify-content:center;border:2px solid #b7d8e8;background:#f2f9fc;border-radius:20px;padding:4px}
+.bubble svg{width:76px;height:76px;max-width:100%;overflow:visible}
+.bubble .b-ball{transform-box:fill-box;transform-origin:center}
+.bubble.popped .b-ball{opacity:0}
+.bubble .b-ring{opacity:0}.bubble.popped .b-ring{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+.bubble .b-ball{transition:opacity .9s ease-out,transform .9s ease-out}
+.bubble.popped .b-ball{transform:scale(1.25)}
+.bubble.rising .b-ball{animation:rise 1.8s ease-out both}
+.breath .b-grow{transition:transform var(--pace,4s) ease-in-out}
+}
+@keyframes rise{from{transform:translateY(40%) scale(.6);opacity:0}to{transform:none;opacity:1}}
+/* Breathing */
+.breath{display:flex;justify-content:center;margin:6px 0}.breath svg{width:220px;max-width:100%;height:auto}
+.breath .b-grow{transform-box:fill-box;transform-origin:center;transform:scale(.55)}
+.breath.big .b-grow{transform:scale(1)}
+.breath-word{font-size:1.35rem;font-weight:700;text-align:center;min-height:1.6em;margin:4px 0}
+.breath-steps{text-align:center;font-size:1.05rem;margin:4px 0}
+/* Coloring */
+.palette{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.palette button{width:56px;padding:0;display:flex;align-items:center;justify-content:center}
+.palette button span.sw{width:32px;height:32px;border-radius:50%;display:block;border:2px solid #17332c}
+.palette button[aria-pressed=true]{border-width:4px;border-color:#17332c;background:#fff}
+.picture{display:flex;justify-content:center}.picture svg{width:100%;max-width:420px;height:auto;touch-action:manipulation}
+.picture .part{cursor:pointer;stroke:#17332c;stroke-width:2}
+.picture .part:focus{outline:none}.picture .part:focus-visible{stroke:#b45309;stroke-width:5}
+/* First, then */
+.cards-pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:8px 0}
+.cards-pick button{display:flex;flex-direction:column;align-items:center;gap:4px;min-height:104px;font-weight:600}
+.cards-pick svg,.plan svg.pic{width:56px;height:56px}
+.plan{list-style:none;padding:0;margin:8px 0;display:grid;gap:10px}
+.plan li{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border:3px solid var(--line);border-radius:16px;padding:10px;background:#fff}
+.plan li .what{flex:1 1 140px;font-size:1.15rem}.plan li .what b{display:block;font-size:.9rem;color:#51675f;text-transform:uppercase;letter-spacing:.04em}
+.plan li.is-done{background:#e6f6ea;border-color:#1b7a3d}
+.plan .tick{width:48px;height:48px;visibility:hidden}.plan li.is-done .tick{visibility:visible}
+.plan button[aria-pressed=true]{background:#e6f6ea;border-color:#1b7a3d}
+.all-done{background:#e6f6ea;border:3px solid #7bc48f;border-radius:16px;padding:12px;text-align:center;font-weight:700;font-size:1.15rem}
+</style>
+</head><body><main>
+<p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
+<h1>Calm corner</h1>
+<p class="note"><b>Calm play for any child, ages 3 to 8.</b> No score, no timer and no way to lose. Everything works by tapping, or with the keyboard. There are no sounds except the device's own voice when you tap a Hear it button. Made by Yaanstep's AI team and not yet tested with children. Nothing is recorded or sent, and nothing is saved on this device.</p>
+<p id="novoice" class="note" hidden>No built-in voice was found on this device, so the Hear it buttons are hidden. A grown-up can read the words aloud.</p>
+<nav class="calm-nav" aria-label="Calm corner"><a href="#bubbles">Slow bubbles</a><a href="#breathe">Breathing circle</a><a href="#color">Color a picture</a><a href="#plan-h">First, then</a></nav>
+
+<section class="card" id="bubbles" aria-labelledby="bubbles-h">
+<h2 id="bubbles-h">Slow bubbles</h2>
+<p class="say-line" id="bubbles-say">Tap a bubble to pop it softly. A new bubble floats up after a moment.</p>
+<button type="button" class="small hear" data-say="bubbles-say"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Hear it</button>
+<div class="bubbles" id="bubble-field"></div>
+<p class="status" id="bubble-status" role="status"></p>
+</section>
+
+<section class="card" id="breathe" aria-labelledby="breathe-h">
+<h2 id="breathe-h">Breathing circle</h2>
+<p class="say-line" id="breathe-say">Breathe in slowly while the circle grows. Breathe out slowly while it gets small. You can stop any time.</p>
+<button type="button" class="small hear" data-say="breathe-say"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Hear it</button>
+<div class="row" role="group" aria-labelledby="pace-l" id="pace"><span id="pace-l" class="sr">How to go</span>
+<button type="button" data-pace="4" aria-pressed="true">Slow</button><button type="button" data-pace="6" aria-pressed="false">Slower</button><button type="button" data-pace="0" aria-pressed="false">I tap for each step</button>
+</div>
+<div class="breath" id="breath"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><circle cx="100" cy="100" r="96" fill="#eef7f4" stroke="#c6e3da" stroke-width="2"/><circle class="b-grow" cx="100" cy="100" r="90" fill="#9fd3c5" stroke="#1F7A6D" stroke-width="3"/></svg></div>
+<p class="breath-word" id="breath-word" aria-live="polite"></p>
+<p class="breath-steps" id="breath-count"></p>
+<div class="row center"><button type="button" class="primary" id="breath-start">Start</button><button type="button" id="breath-next" hidden>Next step</button><button type="button" id="breath-stop" hidden>Stop</button></div>
+</section>
+
+<section class="card" id="color" aria-labelledby="color-h">
+<h2 id="color-h">Color a picture</h2>
+<p class="say-line" id="color-say">Pick a color, then tap a part of the picture to color it. There is no wrong color.</p>
+<button type="button" class="small hear" data-say="color-say"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Hear it</button>
+<div class="palette" id="palette" role="group" aria-label="Colors"></div>
+<div class="picture" id="picture"></div>
+<p class="status" id="color-status" role="status"></p>
+<div class="row"><button type="button" id="color-clear">Start again</button></div>
+</section>
+
+<section class="card" aria-labelledby="plan-h">
+<h2 id="plan-h">First, then</h2>
+<p class="say-line" id="plan-say">A picture plan. Tap up to 4 pictures in the order you will do them. Tap Done when each one is finished.</p>
+<button type="button" class="small hear" data-say="plan-say"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Hear it</button>
+<div class="cards-pick" id="plan-cards"></div>
+<p class="status" id="plan-status" role="status"></p>
+<ol class="plan" id="plan" aria-labelledby="plan-h"></ol>
+<div class="row"><button type="button" id="plan-clear">Start a new plan</button></div>
+<p class="muted">The plan is kept only while this browser tab is open. It is gone when you close the tab. Nothing is sent.</p>
+</section>
+
+<noscript><p class="note">The calm games need JavaScript. Without it, you can still breathe along: breathe in slowly while you count to 4, then breathe out slowly while you count to 4. Do it five times.</p></noscript>
+
+<div class="parent"><p>Parent area</p>
+<p>The calm corner is quiet play for any child, any time: before a lesson, after one, or instead of one. Nothing is counted and nothing can be lost. The breathing circle goes at the pace you choose, or one step for each tap, and stops whenever your child wants.</p>
+<p>The First, then plan helps a child see what comes next. A grown-up and child can make it together. With calm mode on, or with reduce motion set on your device, nothing moves and the breathing circle shows one step at a time.</p>
+<p>These are simple games made by our AI team. They are not advice from a doctor or teacher. They have not yet been tried with children, and we have not yet tested them with switch access or every screen reader.</p>
+<p><a href="sprouts.html#comfort">Comfort settings</a> such as calm mode, bigger buttons and easy reading work on this page too. <button type="button" class="small" data-ys-comfort hidden>Choose comfort settings</button></p>
+</div>
+</main>
+<script src="assets/calm.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>

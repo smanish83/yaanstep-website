@@ -1,0 +1,11 @@
+/* Brain games (brain.html, 22 Nov 2026): the memory board and puzzle pictures. The rest of the look is learn.css. */
+.board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px auto;max-width:420px}
+.mcard{aspect-ratio:1;min-width:48px;min-height:48px;padding:4px;display:flex;align-items:center;justify-content:center;border-width:3px}
+.mcard svg{width:100%;height:100%;max-width:84px;max-height:84px}
+.mcard.found{background:#e6f6ea;border-color:#1b7a3d}
+#prompt:focus{outline:3px solid #0B4F46;outline-offset:2px}
+.scene.small svg{max-width:120px}
+.tiles.many .tile{min-height:80px}.tiles.many .tile svg{width:60px;height:60px}
+html.ys-big .board{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (prefers-reduced-motion:no-preference){.mcard.flip svg{animation:ysFlip .3s ease-out}}
+@keyframes ysFlip{from{transform:scaleX(0)}to{transform:none}}

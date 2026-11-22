@@ -28,22 +28,28 @@
 
   /* ---------- storage: one key, this browser only ---------- */
 
+  function raw() { try { return JSON.parse(window.localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
   function load() {
-    try {
-      var p = JSON.parse(window.localStorage.getItem(KEY) || 'null');
-      if (!p || AGES.indexOf(+p.age) < 0) return null;
-      return { age: +p.age, color: COLORS[+p.color] ? +p.color : 0, nick: cleanNick(p.nick || ''), comfort: cleanComfort(p.comfort) };
-    } catch (e) { return null; }
+    var p = raw();
+    if (!p || AGES.indexOf(+p.age) < 0) return null;
+    return { age: +p.age, color: COLORS[+p.color] ? +p.color : 0, nick: cleanNick(p.nick || ''), comfort: cleanComfort(p.comfort) };
   }
+  /* Comfort settings can be kept without an age: { comfort: [...] } in the same key. Nothing else is asked for. */
+  function comfortList() { var p = raw(); return p ? cleanComfort(p.comfort) : []; }
+  function comfortOn(id) { return comfortList().indexOf(id) > -1; }
   function save(p) { try { window.localStorage.setItem(KEY, JSON.stringify(p)); } catch (e) { /* private mode: works for this visit */ } }
   function forget() { try { window.localStorage.removeItem(KEY); } catch (e) { /* nothing */ } }
   /* Comfort settings (SCRUM-498): chosen by need, never by a diagnosis. Kept inside the same profile key. */
   var COMFORT = [
     { id: 'easy', name: 'Easy reading', hint: 'Bigger text with more space between letters, words and lines, on a cream background.' },
-    { id: 'calm', name: 'Calm mode', hint: 'No moving pictures or bouncing. Lessons show their last picture straight away.' },
+    { id: 'calm', name: 'Calm mode', hint: 'No moving pictures, bouncing, extra sounds or countdowns. Lessons show their last picture straight away.' },
     { id: 'big', name: 'Bigger buttons', hint: 'Buttons and answer tiles at least 64 pixels, with more space between them.' },
     { id: 'contrast', name: 'Strong contrast', hint: 'Black text on white, thick dark edges on buttons, and underlined links.' },
-    { id: 'rest', name: 'Break reminders', hint: 'After 10 minutes of play, a short break to stretch and look far away.' }
+    { id: 'rest', name: 'Break reminders', hint: 'After 10 minutes of play, a short break to stretch and look far away.' },
+    { id: 'fewer', name: 'Fewer choices', hint: 'Two answers to pick from instead of three or more, in most games. One of them is always right.' },
+    { id: 'read', name: 'Read questions aloud', hint: 'Each new question is spoken once with this device\'s own voice, and a Hear it button says it again.' },
+    { id: 'quiet', name: 'Quiet rewards', hint: 'No moving celebrations. A right answer gets a plain tick and words.' },
+    { id: 'font', name: 'Easy-reading font', hint: 'Plain, wide letters (Verdana or a similar font already on this device).' }
   ];
   function cleanComfort(list) {
     return (Array.isArray(list) ? list : []).filter(function (c, i, all) {
@@ -51,9 +57,138 @@
     });
   }
   function applyComfort() {
-    var p = load(), on = p ? p.comfort : [], root = document.documentElement;
+    var on = comfortList(), root = document.documentElement;
     COMFORT.forEach(function (c) { root.classList.toggle('ys-' + c.id, on.indexOf(c.id) > -1); });
+    if (on.indexOf('calm') > -1) quietMedia();
+    reader.set(on.indexOf('read') > -1);
   }
+  /** Keeps only what is right and one wrong choice: never drops a right answer. right: one value or a list. */
+  function fewer(list, right) {
+    if (!comfortOn('fewer') || !list || list.length <= 2 || right == null) return list;
+    var good = [].concat(right).map(String), wrongKept = false;
+    if (!list.some(function (o) { return good.indexOf(String(o)) > -1; })) return list;
+    return list.filter(function (o) {
+      if (good.indexOf(String(o)) > -1) return true;
+      if (wrongKept) return false;
+      wrongKept = true;
+      return true;
+    });
+  }
+
+  /* ---------- calm mode: no sound but speech ----------
+     The games make no sound of their own today; this keeps it so if a page ever plays audio or video. */
+  function quietMedia() {
+    Array.prototype.forEach.call(document.querySelectorAll('audio,video'), function (m) { try { m.pause(); m.muted = true; } catch (e) { /* nothing */ } });
+  }
+  try {
+    var mediaPlay = window.HTMLMediaElement && HTMLMediaElement.prototype.play;
+    if (mediaPlay) HTMLMediaElement.prototype.play = function () { if (comfortOn('calm')) { this.muted = true; return Promise.resolve(); } return mediaPlay.apply(this, arguments); };
+  } catch (e) { /* no media */ }
+
+  /* ---------- read questions aloud ----------
+     Speaks each new question once, with an on-device voice only, on pages that do not already speak it themselves,
+     and adds a "Hear it" button where the page has none. */
+  var reader = (function () {
+    var on = false, obs = null, lastCount = null, lastText = '', since = 0, pageSpoke = 0, ours = false, timer = 0, wrapped = false;
+    var SAY = ['#say:not(button)', '#q', '#stepline', '#player-say', '#prompt'];
+    function shown(n) { return !!(n && n.getClientRects().length && !n.closest('[hidden]')); }
+    function voice() {
+      try {
+        var local = window.speechSynthesis.getVoices().filter(function (v) { return v.localService && v.lang && v.lang.toLowerCase().indexOf('en') === 0; });
+        var wanted = null;
+        try { wanted = window.localStorage.getItem('voice-name'); } catch (e) { /* nothing */ }
+        return local.filter(function (v) { return v.name === wanted; })[0] || local.filter(function (v) { return v.lang === 'en-US'; })[0] || local[0] || null;
+      } catch (e) { return null; }
+    }
+    function speak(text) {
+      var v = voice();
+      if (!v || !text) return;
+      var rate = 0.9;
+      try { var r = parseFloat(window.localStorage.getItem('rd-speed')); if (r >= 0.5 && r <= 1.5) rate = r; } catch (e) { /* default */ }
+      try {
+        ours = true;
+        window.speechSynthesis.cancel();
+        var u = new SpeechSynthesisUtterance(text);
+        u.voice = v; u.lang = v.lang; u.rate = rate;
+        window.speechSynthesis.speak(u);
+      } catch (e) { /* silent */ }
+      ours = false;
+    }
+    function watchSpeech() {
+      if (wrapped) return;
+      wrapped = true;
+      try {
+        var ss = window.speechSynthesis, orig = ss.speak;
+        ss.speak = function () { if (!ours) pageSpoke = Date.now(); return orig.apply(ss, arguments); };
+      } catch (e) { /* no speech */ }
+    }
+    function anchor() {
+      for (var i = 0; i < SAY.length; i++) { var n = document.querySelector('main ' + SAY[i]); if (shown(n) && n.textContent.trim()) return n; }
+      return null;
+    }
+    function question() {
+      var parts = [];
+      SAY.forEach(function (s) { var n = document.querySelector('main ' + s); if (shown(n) && n.textContent.trim()) parts.push(n.textContent.trim()); });
+      var ask = Array.prototype.filter.call(document.querySelectorAll('main .ask'), function (n) {
+        return shown(n) && n.id !== 'right' && n.id !== 'answer' && n.id !== 'prompt' && n.tagName !== 'H2' && n.textContent.trim();
+      })[0];
+      if (ask && parts.indexOf(ask.textContent.trim()) < 0) parts.push(ask.textContent.trim());
+      return { text: parts.join(' '), at: anchor() || ask || null };
+    }
+    function counter() {
+      var c = ['#count', '#player-progress', '#prog'].map(function (s) { return document.querySelector('main ' + s); }).filter(shown)[0];
+      return c ? c.textContent.trim() : '';
+    }
+    function hearButton(q) {
+      var mine = $('ys-hear');
+      var own = Array.prototype.some.call(document.querySelectorAll('main button'), function (b) { return b.id !== 'ys-hear' && shown(b) && /\bhear\b/i.test(b.textContent); });
+      if (own || !q.at || !voice()) { if (mine) mine.remove(); return; }
+      if (mine && mine.previousElementSibling === q.at) return;
+      if (!mine) {
+        mine = el('button', { type: 'button', id: 'ys-hear', 'class': 'ys-hear' });
+        mine.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg><span>Hear it</span>';
+        mine.addEventListener('click', function () { speak(question().text); });
+      }
+      q.at.parentNode.insertBefore(mine, q.at.nextSibling);
+    }
+    function look() {
+      timer = 0;
+      if (!on) return;
+      var q = question();
+      hearButton(q);
+      if (!q.text) return;
+      var count = counter(), text = q.text, same = count === lastCount;
+      // A right answer takes the question away and leaves the words above it: nothing new to say.
+      if (same && lastText.indexOf(text) > -1) return;
+      var fresh = same && text.indexOf(lastText) === 0 ? text.slice(lastText.length).trim() : text;
+      lastCount = count; lastText = text;
+      // The page said it already (the learn pages, reading and first learning do): do not say it twice.
+      if (pageSpoke >= since - 150) return;
+      speak(fresh);
+    }
+    function changed(list) {
+      if (list && list.every(function (m) { return m.target.id === 'ys-hear' || (m.target.closest && m.target.closest('#ys-hear')) || Array.prototype.every.call(m.addedNodes, function (n) { return n.id === 'ys-hear'; }) && m.type === 'childList' && !m.removedNodes.length; })) return;
+      if (!timer) { since = Date.now(); timer = setTimeout(look, 250); }
+    }
+    return {
+      set: function (want) {
+        if (want === on) return;
+        on = want;
+        if (on) {
+          watchSpeech();
+          obs = new MutationObserver(changed);
+          obs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['hidden'] });
+          lastCount = null; lastText = '';
+          changed();
+        } else {
+          if (obs) obs.disconnect();
+          obs = null;
+          var b = $('ys-hear'); if (b) b.remove();
+        }
+      },
+      speak: speak
+    };
+  })();
   function cleanNick(s) { return String(s).replace(/[^A-Za-z '\-]/g, '').replace(/\s+/g, ' ').trim().slice(0, 12); }
   /* Game progress: points, garden, stars and finished chapters. Settings, the profile and the theme are kept. */
   var PROGRESS_KEYS = ['demo-ch', 'demo-garden'];
@@ -151,7 +286,18 @@
     'html.ys-contrast main :is(button,a.btn,[role=button],input,select){border:3px solid #000!important}' +
     'html.ys-contrast a{text-decoration:underline!important}' +
     'html.ys-contrast :focus-visible{outline:4px solid #000!important;outline-offset:3px!important}' +
-    '.ys-rest p{margin:0 0 10px}.ys-rest .ys-big-ico{font-size:2.4rem;line-height:1;margin:0 0 6px}';
+    '.ys-rest p{margin:0 0 10px}.ys-rest .ys-big-ico{font-size:2.4rem;line-height:1;margin:0 0 6px}' +
+    /* Fewer choices: two tiles sit side by side. */
+    'html.ys-fewer main .tiles:has(> :nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}' +
+    /* Read questions aloud: the Hear it button the reader adds where a page has none. */
+    '.ys-hear{display:inline-flex;align-items:center;gap:6px;font:inherit;font-weight:600;min-height:48px;min-width:48px;padding:6px 14px;margin:4px 0;border-radius:12px;border:2px solid #1F7A6D;background:#fff;color:#17312D;cursor:pointer}' +
+    '.ys-hear:focus-visible{outline:4px solid #f0a500;outline-offset:2px}' +
+    /* Quiet rewards: nothing moves when an answer is right; a plain tick and the words stay. */
+    'html.ys-quiet main :is(.right,.good,.yes,.done,.tick,.garden,.stars),html.ys-quiet main :is(.right,.good,.yes,.done,.tick,.garden,.stars) *{animation:none!important;transition:none!important}' +
+    'html.ys-quiet main .right::after{content:"\\2713";display:block;font-size:1.3rem;font-weight:800;line-height:1;color:#1b5e33}' +
+    'html.ys-quiet main .yes::before{content:"\\2713  ";font-weight:800}' +
+    /* Easy-reading font: fonts already on the device, nothing is downloaded. */
+    'html.ys-font body,html.ys-font body *:not(svg):not(svg *){font-family:Verdana,Tahoma,"Trebuchet MS",sans-serif!important}';
 
   /* ---------- break reminders (SCRUM-498) ----------
      Counts time while a Sprouts page is open and visible, across pages in this visit (sessionStorage only).
@@ -186,7 +332,8 @@
     var left = restWait();
     function draw() {
       go.disabled = left > 0;
-      go.textContent = left > 0 ? 'Back to play in ' + left : 'Back to play';
+      // Calm mode shows no countdown: the button just waits.
+      go.textContent = left > 0 ? (comfortOn('calm') ? 'Back to play soon' : 'Back to play in ' + left) : 'Back to play';
     }
     draw();
     var iv = setInterval(function () { left--; draw(); if (left <= 0) { clearInterval(iv); go.focus(); } }, 1000);
@@ -266,7 +413,11 @@
     var row = el('div', { 'class': 'ys-ages', role: 'group', 'aria-label': 'Age in years' });
     AGES.forEach(function (a) {
       var b = el('button', { type: 'button', 'data-age': String(a) }, String(a));
-      b.addEventListener('click', function () { save({ age: a, color: 0, nick: '' }); refresh(); var bd = $('ys-badge'); if (bd) bd.focus(); });
+      b.addEventListener('click', function () {
+        var keep = { age: a, color: 0, nick: '' }, c = comfortList();
+        if (c.length) keep.comfort = c;
+        save(keep); refresh(); var bd = $('ys-badge'); if (bd) bd.focus();
+      });
       row.appendChild(b);
     });
     box.appendChild(row);
@@ -327,18 +478,7 @@
       b.addEventListener('click', function () { draft.color = i; fillDialog(); });
       cols.appendChild(b);
     });
-    var comfort = d.querySelector('.ys-comfort');
-    COMFORT.forEach(function (c) {
-      var b = el('button', { type: 'button', 'data-comfort': c.id });
-      b.appendChild(el('span', {}, c.name));
-      b.appendChild(el('small', {}, c.hint));
-      b.addEventListener('click', function () {
-        var i = draft.comfort.indexOf(c.id);
-        if (i > -1) draft.comfort.splice(i, 1); else draft.comfort.push(c.id);
-        fillDialog();
-      });
-      comfort.appendChild(b);
-    });
+    comfortButtons(d.querySelector('.ys-comfort'), fillDialog);
     d.querySelector('#ys-nickin').addEventListener('input', function (e) { draft.nick = e.target.value; });
     d.querySelector('#ys-save').addEventListener('click', function () {
       var keep = { age: draft.age, color: draft.color, nick: cleanNick(draft.nick) };
@@ -374,13 +514,82 @@
     document.body.appendChild(d);
     return d;
   }
+  function comfortButtons(box, after) {
+    COMFORT.forEach(function (c) {
+      var b = el('button', { type: 'button', 'data-comfort': c.id });
+      b.appendChild(el('span', {}, c.name));
+      b.appendChild(el('small', {}, c.hint));
+      b.addEventListener('click', function () {
+        var i = draft.comfort.indexOf(c.id);
+        if (i > -1) draft.comfort.splice(i, 1); else draft.comfort.push(c.id);
+        after();
+      });
+      box.appendChild(b);
+    });
+  }
+  function markComfort(box) {
+    Array.prototype.forEach.call(box.querySelectorAll('button[data-comfort]'), function (b) { b.setAttribute('aria-pressed', String(draft.comfort.indexOf(b.getAttribute('data-comfort')) > -1)); });
+  }
+
+  /* ---------- comfort settings without a profile ----------
+     A grown-up can choose comfort settings without giving an age. With a profile, the profile dialog opens instead. */
+  var opener = null;
+  function openComfort(e) {
+    opener = e && e.currentTarget || null;
+    if (load()) {
+      openProfile();
+      var f = document.querySelector('#ys-profile .ys-comfort button');
+      if (f) f.focus();
+      return;
+    }
+    draft = { comfort: comfortList() };
+    var d = $('ys-comfort-dlg');
+    if (!d) {
+      d = el('dialog', { id: 'ys-comfort-dlg', 'class': 'ys-dlg', 'aria-labelledby': 'ys-ch' });
+      d.innerHTML = '<h2 id="ys-ch">Comfort settings</h2>' +
+        '<fieldset class="ys-comfort"><legend>Turn on what helps</legend><p class="ys-hint">For any child. You do not need to tell us why, and no age is needed. These settings are kept only on this device. Nothing is sent.</p></fieldset>' +
+        '<div class="ys-row"><button type="button" class="ys-save" id="ys-csave">Save</button><button type="button" id="ys-cclose">Close</button></div>';
+      var box = d.querySelector('.ys-comfort');
+      comfortButtons(box, function () { markComfort(box); });
+      d.querySelector('#ys-csave').addEventListener('click', function () {
+        var p = raw(), list = cleanComfort(draft.comfort);
+        if (load()) { p.comfort = list; if (!list.length) delete p.comfort; save(p); }
+        else if (list.length) save({ comfort: list });
+        else forget();
+        closeComfort();
+        refresh();
+      });
+      d.querySelector('#ys-cclose').addEventListener('click', closeComfort);
+      d.addEventListener('cancel', function () { setTimeout(function () { if (opener) opener.focus(); }, 0); });
+      document.body.appendChild(d);
+    }
+    markComfort(d);
+    if (d.showModal) d.showModal(); else d.setAttribute('open', '');
+    d.querySelector('button[data-comfort]').focus();
+  }
+  function closeComfort() {
+    var d = $('ys-comfort-dlg');
+    if (d) { if (d.close) d.close(); else d.removeAttribute('open'); }
+    if (opener) opener.focus();
+  }
+  function wireComfortLinks() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ys-comfort]'), function (b) {
+      if (b.hasAttribute('data-ys-wired')) return;
+      b.setAttribute('data-ys-wired', '');
+      b.hidden = false;
+      var row = b.closest('[data-ys-comfort-row]');
+      if (row) row.hidden = false;
+      b.addEventListener('click', openComfort);
+    });
+  }
+
   function fillDialog() {
     var d = $('ys-profile');
     d.querySelector('#ys-pv').innerHTML = avatar(draft.age, draft.color);
     d.querySelector('#ys-pvtext').textContent = 'Age ' + draft.age + ': a ' + STAGES[stage(draft.age)] + '.';
     Array.prototype.forEach.call(d.querySelectorAll('.ys-dages button'), function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-age') === draft.age)); });
     Array.prototype.forEach.call(d.querySelectorAll('.ys-colors button'), function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-color') === draft.color)); });
-    Array.prototype.forEach.call(d.querySelectorAll('.ys-comfort button'), function (b) { b.setAttribute('aria-pressed', String(draft.comfort.indexOf(b.getAttribute('data-comfort')) > -1)); });
+    markComfort(d);
     var pts = points();
     d.querySelector('#ys-ptext').textContent = 'Progress on this device: ' + pts + (pts === 1 ? ' point.' : ' points.');
     d.querySelector('#ys-confirm').hidden = true;
@@ -417,7 +626,7 @@
       old.parentNode.insertBefore(note, old);
     } else if (!has && note) note.remove();
   }
-  function refresh() { applyComfort(); drawAsk(); drawBadge(); applyFilter(); placeReset(); }
+  function refresh() { applyComfort(); drawAsk(); drawBadge(); applyFilter(); placeReset(); wireComfortLinks(); }
   function init() {
     var st = el('style', { id: 'ys-profile-css' });
     st.textContent = CSS;
@@ -437,6 +646,8 @@
 
   // Test hook: lets automated tests draw an avatar and compare it with the badge.
   window.YS_PROFILE = { comfort: COMFORT.map(function (c) { return c.id; }), avatar: avatar, stage: function (age) { return STAGES[stage(age)]; }, refresh: refresh };
+  // Shared hook for the game pages: which comfort settings are on, fewer choices, and the device voice.
+  window.YSComfort = { on: comfortOn, fewer: fewer, say: function (t) { reader.speak(t); }, open: openComfort };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

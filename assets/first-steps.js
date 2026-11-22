@@ -203,7 +203,10 @@
     });
     h.appendChild(b);
   }
+  /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
+  function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   function tiles(options, draw1, onPick, labelOf) {
+    options = fewer(options, r && r.ans);
     var row = el('div', { 'class': 'tiles', id: 'choices' });
     options.forEach(function (o) {
       var b = el('button', { type: 'button', 'class': 'tile', 'data-v': String(o), 'aria-label': labelOf(o) });

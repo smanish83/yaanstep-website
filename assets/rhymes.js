@@ -163,6 +163,8 @@
     $('sub').className = 'sub try';
     say(message);
   }
+  /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
+  function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   function tiles(choices, onTap) {
     var row = el('div', { 'class': 'tiles', role: 'group', 'aria-label': 'Pictures' });
     choices.forEach(function (w) {
@@ -180,7 +182,7 @@
     var group = pick(RHYMES);
     var target = pick(group);
     var answer = pick(group.filter(function (w) { return w !== target; }));
-    var choices = shuffle([answer].concat(shuffle(rhymeWrongs(target)).slice(0, 2)));
+    var choices = fewer(shuffle([answer].concat(shuffle(rhymeWrongs(target)).slice(0, 2))), answer);
     var ask = 'Which picture rhymes with ' + target + '?';
     var area = $('area');
     area.innerHTML = '';
@@ -220,7 +222,7 @@
   function teamRound() {
     var item = pick(TEAMS);
     var answer = pick(item.words);
-    var choices = shuffle([answer].concat(shuffle(teamWrongs(item.t)).slice(0, 2)));
+    var choices = fewer(shuffle([answer].concat(shuffle(teamWrongs(item.t)).slice(0, 2))), answer);
     var ask = 'Which picture has ' + item.t + ', as in ' + item.anchor + '?';
     var area = $('area');
     area.innerHTML = '';

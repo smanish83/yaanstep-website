@@ -51,6 +51,8 @@
     return svg(340, 130, label, side(a, 0) + '<line x1="170" y1="6" x2="170" y2="124" stroke="#c6e3da" stroke-width="2"/>' + side(b, 172));
   }
 
+  /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
+  function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   /** Three answer choices for a number from 10 to 99: the answer, often the digits swapped, and ten or one more or less. */
   function choices(n) {
     var t = Math.floor(n / 10), o = n % 10, picks = [];
@@ -59,7 +61,7 @@
     shuffle([n + 10, n - 10, n + 1, n - 1]).forEach(function (v) {
       if (v >= 10 && v <= 99 && picks.indexOf(v) < 0 && picks.length < 2) picks.push(v);
     });
-    return shuffle([n].concat(picks.slice(0, 2)));
+    return fewer(shuffle([n].concat(picks.slice(0, 2))), n);
   }
 
   /* ---------- the rounds: one maker per game ---------- */

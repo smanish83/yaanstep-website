@@ -53,6 +53,10 @@
       window.speechSynthesis.speak(u);
     } catch (e) { /* silent fallback */ }
   }
+  /** A comfort setting from the child's profile (SCRUM-498), read from this browser only. */
+  function comfortOn(id) {
+    try { var p = JSON.parse(window.localStorage.getItem('ys-profile') || 'null'); return !!(p && Array.isArray(p.comfort) && p.comfort.indexOf(id) > -1); } catch (e) { return false; }
+  }
   function hush() { try { window.speechSynthesis.cancel(); } catch (e) { /* nothing */ } }
 
   /** A picture that plays again on "Watch again". make() returns { svg, vb, label }. */
@@ -70,6 +74,8 @@
 
   function run(cfg) {
     var game = null, round = 0, part = 0, solved = false, lastAns = [], spoken = '', current = null;
+    /** Rounds in the game on screen: a page may set its own per game with cfg.rounds. */
+    function total() { return (cfg.rounds && cfg.rounds[game]) || ROUNDS; }
     function show(id) { ['menu', 'game'].forEach(function (s) { $(s).hidden = s !== id; }); }
     function setSub(text, kind) { var s = $('sub'); s.className = 'sub' + (kind ? ' ' + kind : ''); s.textContent = text; }
     function start(g) {
@@ -85,7 +91,7 @@
       $('more').hidden = true;
       if (game === 'learn') { drawLearn(); return; }
       $('again').hidden = false;
-      $('count').textContent = 'Round ' + (round + 1) + ' of ' + ROUNDS;
+      $('count').textContent = 'Round ' + (round + 1) + ' of ' + total();
       cfg.games[game]($('area'), ctx);
     }
     /* Learn: the lesson, one part at a time. */
@@ -126,14 +132,14 @@
       setSub(text, 'yes');
       $('howbox').innerHTML = '';
       var more = $('more');
-      more.textContent = round < ROUNDS - 1 ? 'Next' : 'Finish';
+      more.textContent = round < total() - 1 ? 'Next' : 'Finish';
       more.hidden = false;
       more.focus();
       say(speak || text);
     }
     function next() {
       hush();
-      if (round < ROUNDS - 1) { round++; draw(); return; }
+      if (round < total() - 1) { round++; draw(); return; }
       $('game').querySelector('.card').hidden = true;
       $('alldone').hidden = false;
       $('keep').focus();
@@ -156,8 +162,22 @@
       });
       h.appendChild(b);
     }
-    /** Choice tiles. draw1(o) returns an element; labelOf(o) is its accessible name. */
+    /** Choice tiles. draw1(o) returns an element; labelOf(o) is its accessible name.
+        With "Fewer choices" on, only the right answer and one wrong answer are kept (the round's ans, or its list of right answers). */
     function tiles(options, draw1, onPick, labelOf, cls) {
+      // A game where every choice is needed (for example "odd one out") opts out with cfg.allChoices: { <game id>: true }.
+      if (current && options.length > 2 && comfortOn('fewer') && !(cfg.allChoices && cfg.allChoices[game])) {
+        var good = [].concat(current.right || [], current.ans != null ? [current.ans] : []).map(String), wrongKept = false;
+        if (good.length && options.some(function (o) { return good.indexOf(String(o)) > -1; })) {
+          options = options.filter(function (o) {
+            if (good.indexOf(String(o)) > -1) return true;
+            if (wrongKept) return false;
+            wrongKept = true;
+            return true;
+          });
+          if (!cls || cls === 'tiles') cls = 'tiles two';
+        }
+      }
       var row = el('div', { 'class': cls || 'tiles', id: 'choices' });
       options.forEach(function (o) {
         // The name is spoken from a hidden line; what is drawn is for the eyes only.
@@ -180,7 +200,7 @@
     }
     function ask(area, text, speak) { area.appendChild(el('p', { 'class': 'ask', id: 'prompt' }, text)); spoken = speak || text; say(spoken); }
     var ctx = {
-      round: function () { return round; }, rounds: ROUNDS, solved: function () { return solved; },
+      round: function () { return round; }, get rounds() { return total(); }, solved: function () { return solved; },
       ask: ask, win: win, miss: miss, tiles: tiles, word: word, fresh: fresh, setSub: setSub, say: say,
       moviePanel: moviePanel, el: el, svgEl: svgEl, set: function (r) { current = r; }
     };

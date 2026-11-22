@@ -465,9 +465,11 @@
   ];
   var KINDS = ['add', 'take', 'more'];
 
+  /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
+  function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   function choices(answer) {
     var near = shuffle([answer - 2, answer - 1, answer + 1, answer + 2]).filter(function (n) { return n >= 0; });
-    return [answer, near[0], near[1]].sort(function (a, b) { return a - b; });
+    return fewer([answer, near[0], near[1]].sort(function (a, b) { return a - b; }), answer);
   }
 
   function makeQuestion(kind, max) {

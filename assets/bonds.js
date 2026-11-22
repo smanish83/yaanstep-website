@@ -29,13 +29,15 @@
   var ROUNDS = 8;
   var TEAL = '#1F7A6D', ORANGE = '#C2410C';
 
+  /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
+  function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   /** Three answer choices: the answer and two near it, all 0 to 20 and all different. */
   function choices(ans) {
     var picks = [];
     shuffle([ans - 1, ans + 1, ans - 2, ans + 2]).forEach(function (v) {
       if (v >= 0 && v <= 20 && picks.length < 2) picks.push(v);
     });
-    return shuffle([ans].concat(picks));
+    return fewer(shuffle([ans].concat(picks)), ans);
   }
 
   /* ---------- the pictures ---------- */

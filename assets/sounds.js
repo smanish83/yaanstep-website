@@ -131,11 +131,13 @@
 
   /* ---------- First sounds ---------- */
 
+  /** Fewer choices (a comfort setting in the child's profile): keeps the right answer and one wrong one. */
+  function fewer(list, right) { return window.YSComfort ? window.YSComfort.fewer(list, right) : list; }
   function firstRound() {
     var item = pick(FIRST);
     var answer = pick(item.words);
     var others = shuffle(FIRST_POOL.filter(function (w) { return !sameSound(w[0], item.l); })).slice(0, 2);
-    var choices = shuffle([answer].concat(others));
+    var choices = fewer(shuffle([answer].concat(others)), answer);
     var ask = 'Which picture starts with ' + item.l + ', as in ' + item.anchor + '?';
     var area = $('area');
     area.innerHTML = '';
