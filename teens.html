@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yaanstep Teens planner: calendar with countdowns | Yaanstep</title>
+<meta name="description" content="Yaanstep Teens planner, an early preview for ages 13 to 17: a planner book and calendar with a live countdown to every event and help to prepare for tests. No sign-in. Kept only in your browser.">
+<link rel="canonical" href="https://yaanstep.com/teens.html">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/themes.css">
+<script src="assets/theme.js"></script>
+<link rel="stylesheet" href="assets/teens.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap bar">
+<a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="" width="40" height="40"><span>Yaanstep</span></a>
+<nav aria-label="Main"><a href="index.html">Home</a><a href="how-it-works.html">How it works</a><a href="team.html">Team</a><a href="testers.html" class="nav-cta">Join the testers</a></nav>
+</div></header>
+<main id="main" class="wrap">
+
+<h1>Yaanstep Teens planner</h1>
+<p class="lead">A planner book and a calendar in one, for ages 13 to 17. Every event counts down to when it starts. Add a test and the planner helps you plan how to get ready for it.</p>
+
+<div class="notice" role="note">
+<p><strong>Early preview.</strong> Made by Yaanstep's AI team. Not tested with teens yet. Some parts are still to come.</p>
+<p>No sign-in. Your planner is kept only in this browser and nothing is sent. Clearing your browser data deletes it.</p>
+</div>
+
+<div id="app" hidden>
+
+<section class="next-up" aria-labelledby="next-h">
+<h2 id="next-h" class="visually-hidden">Next up</h2>
+<p id="next-banner" class="next-banner">Nothing coming up yet. Add your first event below.</p>
+</section>
+
+<div class="planner-grid">
+
+<section class="day-page" aria-labelledby="day-title">
+<div class="day-head">
+<button type="button" class="btn ghost small" id="prev-day" aria-label="Previous day">&larr;</button>
+<h2 id="day-title">Today</h2>
+<button type="button" class="btn ghost small" id="next-day" aria-label="Next day">&rarr;</button>
+<button type="button" class="btn ghost small" id="today">Today</button>
+</div>
+
+<h3 id="sched-h">Plan for the day</h3>
+<ul id="day-events" class="day-events" aria-labelledby="sched-h"></ul>
+<p id="day-empty" class="muted">No events on this day.</p>
+
+<h3 id="todo-h">To-do</h3>
+<div class="row">
+<label for="todo-text" class="visually-hidden">New to-do</label>
+<input type="text" id="todo-text" maxlength="120" placeholder="Add a to-do" autocomplete="off">
+<button type="button" class="btn small" id="todo-add">Add</button>
+</div>
+<ul id="todos" class="todos" aria-labelledby="todo-h"></ul>
+
+<h3><label for="day-note">Note for the day</label></h3>
+<input type="text" id="day-note" maxlength="300" autocomplete="off" placeholder="Anything to remember">
+</section>
+
+<section class="side" aria-labelledby="up-h">
+<h2 id="up-h">Coming up</h2>
+<ul id="upcoming" class="upcoming"></ul>
+<p id="up-empty" class="muted">Nothing coming up yet.</p>
+</section>
+
+</div>
+
+<section class="panel" id="detail" aria-labelledby="detail-title" hidden tabindex="-1">
+<h2 id="detail-title">Event</h2>
+<p id="detail-count" class="count big"></p>
+<p id="detail-when"></p>
+<p id="detail-where" class="muted"></p>
+<div id="detail-help"></div>
+<p class="btn-row"><button type="button" class="btn ghost" id="detail-close">Close</button><button type="button" class="btn ghost danger" id="detail-delete">Delete event</button></p>
+</section>
+
+<section class="panel" id="prep" aria-labelledby="prep-title" hidden tabindex="-1">
+<h2 id="prep-title">Get ready for your test</h2>
+<p id="prep-intro"></p>
+<fieldset class="choices">
+<legend>How do you want to prepare?</legend>
+<label><input type="radio" name="prep-how" value="practice" checked> Practice problems</label>
+<label><input type="radio" name="prep-how" value="notes"> Review my notes</label>
+<label><input type="radio" name="prep-how" value="flashcards"> Flashcards</label>
+<label><input type="radio" name="prep-how" value="friend"> Study with a friend</label>
+<label><input type="radio" name="prep-how" value="teacher"> Ask my teacher</label>
+</fieldset>
+<fieldset class="topics">
+<legend>Which topics are on the test, and how sure do you feel? (1 is not sure, 5 is very sure)</legend>
+<div class="topic-row"><label for="topic-1">Topic 1</label><input type="text" id="topic-1" maxlength="60" autocomplete="off"><label for="conf-1" class="visually-hidden">How sure for topic 1</label><select id="conf-1"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div>
+<div class="topic-row"><label for="topic-2">Topic 2</label><input type="text" id="topic-2" maxlength="60" autocomplete="off"><label for="conf-2" class="visually-hidden">How sure for topic 2</label><select id="conf-2"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div>
+<div class="topic-row"><label for="topic-3">Topic 3</label><input type="text" id="topic-3" maxlength="60" autocomplete="off"><label for="conf-3" class="visually-hidden">How sure for topic 3</label><select id="conf-3"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div>
+</fieldset>
+<p><label for="prep-time">Study time each day</label><br><input type="time" id="prep-time" value="17:00"></p>
+<p><strong>Want a preparation guide?</strong> We will spread short study blocks across the days left, weakest topic first, and put them in your planner.</p>
+<p class="btn-row"><button type="button" class="btn" id="prep-yes">Yes, make my plan</button><button type="button" class="btn ghost" id="prep-no">No thanks</button></p>
+<ol id="prep-plan" class="prep-plan"></ol>
+</section>
+
+<section class="panel add" aria-labelledby="add-h">
+<h2 id="add-h">Add an event</h2>
+<form id="add-form" novalidate>
+<p><label for="ev-title">What is it?</label><br><input type="text" id="ev-title" maxlength="80" autocomplete="off" placeholder="For example: Maths test" required></p>
+<p id="ev-guess" class="muted" aria-live="polite"></p>
+<div class="two">
+<p><label for="ev-date">Date</label><br><input type="date" id="ev-date" required></p>
+<p><label for="ev-start">Starts</label><br><input type="time" id="ev-start" value="09:00" required></p>
+<p><label for="ev-end">Ends (optional)</label><br><input type="time" id="ev-end"></p>
+<p><label for="ev-cat">Type</label><br><select id="ev-cat">
+<option value="auto">Pick for me</option>
+<option value="test">Test or exam</option>
+<option value="assignment">Assignment due</option>
+<option value="school">School or class</option>
+<option value="sport">Sport or practice</option>
+<option value="social">Outing or party</option>
+<option value="family">Family</option>
+<option value="health">Appointment</option>
+<option value="study">Study time</option>
+<option value="other">Other</option>
+</select></p>
+</div>
+<p><label for="ev-place">Where (optional)</label><br><input type="text" id="ev-place" maxlength="80" autocomplete="off"></p>
+<div class="two">
+<p><label for="ev-repeat">Repeats</label><br><select id="ev-repeat">
+<option value="none">Does not repeat</option>
+<option value="daily">Every day</option>
+<option value="weekly">Every week</option>
+</select></p>
+<p id="until-wrap" hidden><label for="ev-until">Until (optional)</label><br><input type="date" id="ev-until"></p>
+</div>
+<fieldset id="ev-days" class="choices days" hidden>
+<legend>On these days</legend>
+<label><input type="checkbox" value="1"> Mon</label>
+<label><input type="checkbox" value="2"> Tue</label>
+<label><input type="checkbox" value="3"> Wed</label>
+<label><input type="checkbox" value="4"> Thu</label>
+<label><input type="checkbox" value="5"> Fri</label>
+<label><input type="checkbox" value="6"> Sat</label>
+<label><input type="checkbox" value="0"> Sun</label>
+</fieldset>
+<p class="btn-row"><button type="submit" class="btn" id="ev-save">Add to planner</button></p>
+<p id="add-msg" role="status" class="muted"></p>
+</form>
+</section>
+
+<section class="panel data" aria-labelledby="data-h">
+<h2 id="data-h">Your planner data</h2>
+<p class="muted">Everything you add is kept only in this browser. No one at Yaanstep can see it.</p>
+<p class="btn-row"><button type="button" class="btn ghost danger" id="wipe">Delete everything</button></p>
+<p id="wipe-msg" role="status" class="muted"></p>
+</section>
+
+</div>
+
+<noscript>
+<p class="notice">The planner needs JavaScript. Here is what it does.</p>
+</noscript>
+<section id="static-about" aria-labelledby="about-h">
+<h2 id="about-h">What the planner does</h2>
+<ul>
+<li><strong>Planner book:</strong> one page for each day with your events, a to-do list and a note.</li>
+<li><strong>Countdown:</strong> every event shows how long until it starts, like "in 2 days 4 hours".</li>
+<li><strong>Knows the kind of event:</strong> "Maths test" is a test in maths, "Sam's party" is an outing.</li>
+<li><strong>Test help:</strong> it asks how you want to prepare and which topics feel hard, then spreads short study blocks across the days left.</li>
+<li><strong>Repeats:</strong> classes and practice can repeat every day or on chosen days of the week.</li>
+</ul>
+<p class="muted">Coming next: week and month calendar views, outfit ideas and checklists for outings, a habit builder, and short daily suggestions like a walk or a phone-free hour.</p>
+</section>
+
+</main>
+<footer class="site"><div class="wrap">
+<p><strong>Yaanstep</strong> coaches habits. It is not therapy and not medical advice. The main Yaanstep app is for ages 13 and up.</p>
+<p>The Yaanstep team is made of AI agents, led by one human founder. <a href="team.html">Meet the team</a>.</p>
+<nav class="foot" aria-label="Footer"><a href="index.html#products">Products</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="accessibility.html">Accessibility</a></nav>
+<p class="muted">This site sets no cookies and uses no trackers. It remembers your theme choice, progress in the learning games, a child profile if you set one, and your Yaanstep Teens planner if you use it, only in your browser.</p>
+</div></footer>
+<script src="assets/teens.js" defer></script>
+</body>
+</html>
