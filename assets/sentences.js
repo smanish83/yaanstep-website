@@ -104,12 +104,47 @@
     }
     $('novoice').hidden = !!voice;
   }
-  function say(text) {
+  /* Read-along (SCRUM-496): when a sentence on screen is read, the word being read lights up.
+     holder holds one span.w per word of text. Browser word positions move the marker where given,
+     a timer from word lengths and speed does otherwise. */
+  var markTimer = null, reading = 0, marked = null;
+  function mark(i) { if (!marked) return; var w = marked.querySelectorAll('.w'); for (var k = 0; k < w.length; k++) w[k].className = k === i ? 'w now' : 'w'; }
+  function unmark() { clearTimeout(markTimer); markTimer = null; mark(-1); marked = null; }
+  function wordsInto(p, text) {
+    text.split(/(\s+)/).forEach(function (part) {
+      if (!part) return;
+      if (/^\s+$/.test(part)) p.appendChild(document.createTextNode(part));
+      else { var w = el('span', { 'class': 'w' }); w.textContent = part; p.appendChild(w); }
+    });
+    return p;
+  }
+  function say(text, holder) {
+    reading++; unmark();
     if (!voice) return;
+    var me = reading, heard = false, starts = [], re = /\S+/g, m, words = text.match(/\S+/g) || [];
+    while ((m = re.exec(text))) starts.push(m.index);
+    function onTimer(i) {
+      if (heard || me !== reading) return;
+      if (i >= words.length) { unmark(); return; }
+      mark(i);
+      markTimer = setTimeout(function () { onTimer(i + 1); }, (220 + 45 * words[i].length + (/[.!?,]$/.test(words[i]) ? 260 : 0)) / rate);
+    }
     try {
       window.speechSynthesis.cancel();
       var u = new SpeechSynthesisUtterance(text);
       u.voice = voice; u.lang = voice.lang; u.rate = rate;
+      if (holder) {
+        marked = holder;
+        u.onstart = function () { if (!heard) onTimer(0); };
+        u.onboundary = function (e) {
+          if ((e.name && e.name !== 'word') || me !== reading) return;
+          heard = true; clearTimeout(markTimer);
+          var i = 0;
+          while (i + 1 < starts.length && starts[i + 1] <= e.charIndex) i++;
+          mark(i);
+        };
+        u.onend = u.onerror = function () { if (me === reading) unmark(); };
+      }
       window.speechSynthesis.speak(u);
     } catch (e) { /* silent fallback */ }
   }
@@ -181,13 +216,13 @@
       line.appendChild(el('span', { 'class': 'part ' + p[1], title: LABEL[p[1]] }, p[0]));
     });
     area.appendChild(line);
-    area.appendChild(el('p', { 'class': 'ask', id: 'lessonsay' }, s.say));
+    var lsay = area.appendChild(wordsInto(el('p', { 'class': 'ask', id: 'lessonsay' }), s.say));
     area.appendChild(el('p', { 'class': 'keyline' }, s.note));
     $('sub').textContent = ''; $('sub').className = 'sub';
-    $('again').hidden = false; $('again').onclick = function () { say(s.say); };
+    $('again').hidden = false; $('again').onclick = function () { say(s.say, lsay); };
     $('more').hidden = false;
     $('more').textContent = lessonAt < LESSON.length - 1 ? 'Next' : 'Start the game';
-    say(s.say);
+    say(s.say, lsay);
   }
   function startGame() {
     // one round of each kind, then one more at random, in a shuffled order
@@ -229,9 +264,11 @@
           var full = r.before + ' ' + w + (r.after === '.' ? '.' : ' ' + r.after);
           Array.prototype.forEach.call(row.querySelectorAll('button'), function (x) { x.disabled = true; });
           b.classList.add('right');
-          $('sub').textContent = (firstTry ? 'Yes! ' : 'You got it! ') + full;
-          $('sub').className = 'sub yes';
-          say(full);
+          var sub = $('sub');
+          sub.textContent = (firstTry ? 'Yes! ' : 'You got it! ');
+          var said = sub.appendChild(wordsInto(el('span', { id: 'saidline' }), full));
+          sub.className = 'sub yes';
+          say(full, said);
           $('more').hidden = false; $('more').focus();
         } else {
           firstTry = false;
