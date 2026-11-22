@@ -2,7 +2,9 @@
    (CC BY or public domain), kept on this site with the credits each licence asks for.
    Plain script, no build step. Nothing is stored or sent: the page only reads the voice and
    speed a parent chose on the reading page, and the profile age. The voice speaks only when tapped.
-   While the voice reads, the word it is on lights up (read-along marker, SCRUM-496). */
+   While the voice reads, the word it is on lights up (read-along marker, SCRUM-496).
+   "Read the whole story to me" reads each page and turns to the next by itself (Manish, 22 Nov 2026),
+   at a speed that starts slow for young children and can be changed in the reader (not saved). */
 (function () {
   'use strict';
 
@@ -23,10 +25,16 @@
 
   /* ---------- voice: on-device voices only, with a marker on the word being read ---------- */
 
-  var voice = null, rate = 0.9, markTimer = null, reading = 0;
+  var voice = null, rate = 0.8, markTimer = null, reading = 0;
+  // Reading speeds; the start depends on the child's age: younger children hear it slower.
+  var SPEEDS = [{ v: '0.6', name: 'Very slow' }, { v: '0.7', name: 'Slow' }, { v: '0.8', name: 'Gentle' }, { v: '0.95', name: 'Normal' }];
+  function startRate() {
+    var r = parseFloat(read('rd-speed')), age = childAge();
+    var byAge = !age ? 0.8 : age <= 5 ? 0.7 : age <= 7 ? 0.8 : 0.95;
+    // A speed a grown-up chose on the reading page counts only when it is slower than the age speed.
+    return r >= 0.5 && r <= 1.5 ? Math.min(r, byAge) : byAge;
+  }
   function setUpVoice() {
-    var r = parseFloat(read('rd-speed'));
-    if (r >= 0.5 && r <= 1.5) rate = r;
     voice = null;
     if ('speechSynthesis' in window) {
       var local = window.speechSynthesis.getVoices().filter(function (v) { return v.localService && v.lang && v.lang.toLowerCase().indexOf('en') === 0; });
@@ -34,7 +42,7 @@
       voice = local.filter(function (v) { return v.name === wanted; })[0] || local.filter(function (v) { return v.lang === 'en-US'; })[0] || local[0] || null;
     }
     $('novoice').hidden = !!voice;
-    if (book) $('readit').hidden = !voice || page >= book.pages.length;
+    if (book) { $('readit').hidden = !voice || auto || page < 0 || page >= book.pages.length; showAuto(); }
   }
   function spans() { return document.querySelectorAll('#ltext .w'); }
   function mark(i) { var s = spans(); for (var k = 0; k < s.length; k++) s[k].className = k === i ? 'w now' : 'w'; }
@@ -47,10 +55,15 @@
       else p.appendChild(el('span', { 'class': 'w' }, part));
     });
   }
-  function readAlong(text) {
+  function readAlong(text, done) {
     if (!voice) return;
     hush();
-    var starts = [], re = /\S+/g, m, me = ++reading, heard = false;
+    var starts = [], re = /\S+/g, m, me = ++reading, heard = false, over = false, guard = null;
+    function finish() {
+      if (over || me !== reading) return;
+      over = true; clearTimeout(guard); unmark();
+      if (done) done();
+    }
     while ((m = re.exec(text))) starts.push(m.index);
     var words = text.match(/\S+/g) || [];
     function onTimer(i) {
@@ -70,8 +83,11 @@
         while (i + 1 < starts.length && starts[i + 1] <= e.charIndex) i++;
         mark(i);
       };
-      u.onend = u.onerror = function () { if (me === reading) unmark(); };
+      u.onend = u.onerror = finish;
       window.speechSynthesis.speak(u);
+      // Some voices never say they have finished: move on after about twice the time the page should take.
+      var est = words.reduce(function (t, w) { return t + 220 + 45 * w.length; }, 0) / rate;
+      guard = setTimeout(finish, 2 * est + 4000);
     } catch (e) { unmark(); }
   }
 
@@ -137,12 +153,14 @@
     return box;
   }
   function render() {
-    hush();
+    hush(); clearTimeout(turnTimer);
     var area = $('rpage'), n = book.pages.length;
     area.innerHTML = '';
     $('rprev').hidden = page < 0;
     $('rnext').hidden = page >= n;
-    $('readit').hidden = page < 0 || page >= n || !voice;
+    $('readit').hidden = page < 0 || page >= n || !voice || auto;
+    if (page >= n) auto = false;
+    showAuto();
     if (page < 0) {
       $('rcount').textContent = 'Cover';
       if (book.pages[0] && book.pages[0].img) area.appendChild(el('img', { 'class': 'pg', src: BASE + book.pages[0].img, alt: '', width: '800', height: '600' }));
@@ -176,7 +194,39 @@
     var nx = book.pages[page + 1];
     if (nx && nx.img) { var pre = new Image(); pre.src = BASE + nx.img; }
   }
+  /* ---------- reading the whole story: each page is read, then the next page turns by itself ---------- */
+
+  var auto = false, turnTimer = null;
+  function pauseMs() { return (window.YS_TURN_MS != null ? window.YS_TURN_MS : 1500) / rate; }
+  function showAuto() {
+    var have = !!voice && !!book && page < book.pages.length;
+    $('readall').hidden = !have || auto;
+    $('pauseread').hidden = !auto;
+    $('speedrow').hidden = !voice || !book || page >= book.pages.length;
+  }
+  function readOn() {
+    if (!auto || !book) return;
+    if (page < 0) { page = 0; render(); }
+    if (page >= book.pages.length) { stopAuto(); return; }
+    readAlong(book.pages[page].text, function () {
+      if (!auto) return;
+      turnTimer = setTimeout(function () {
+        if (!auto) return;
+        page += 1; render();
+        if (page < book.pages.length) readOn(); else { stopAuto(); var a = $('lagain'); if (a) a.focus(); }
+      }, pauseMs());
+    });
+  }
+  function startAuto() { if (!voice || !book) return; auto = true; showAuto(); $('readit').hidden = true; readOn(); $('pauseread').focus(); }
+  function stopAuto() {
+    var was = auto;
+    auto = false; clearTimeout(turnTimer); hush();
+    if (book) { showAuto(); $('readit').hidden = page < 0 || page >= book.pages.length || !voice; }
+    if (was && !$('readall').hidden && document.activeElement && document.activeElement.id === 'pauseread') $('readall').focus();
+  }
+
   function closeBook() {
+    auto = false; clearTimeout(turnTimer);
     hush();
     $('reader').hidden = true; $('library').hidden = false;
     book = null;
@@ -195,8 +245,16 @@
       var first = limit; limit += PAGE_SIZE; drawShelf();
       var b = $('shelf').querySelectorAll('.bookbtn')[first]; if (b) b.focus();
     });
-    $('rnext').addEventListener('click', function () { page += 1; render(); ($('lagain') || $('rnext')).focus(); });
-    $('rprev').addEventListener('click', function () { page = Math.max(-1, page - 1); render(); });
+    $('rnext').addEventListener('click', function () { page += 1; render(); if (auto) readOn(); ($('lagain') || $('rnext')).focus(); });
+    $('rprev').addEventListener('click', function () { page = Math.max(-1, page - 1); render(); if (auto) readOn(); });
+    $('readall').addEventListener('click', startAuto);
+    $('pauseread').addEventListener('click', stopAuto);
+    var sp = $('rspeed');
+    SPEEDS.forEach(function (o) { sp.appendChild(el('option', { value: o.v }, o.name)); });
+    rate = startRate();
+    sp.value = (SPEEDS.filter(function (o) { return +o.v <= rate + 0.001; }).pop() || SPEEDS[0]).v;
+    rate = +sp.value;
+    sp.addEventListener('change', function () { rate = +sp.value; if (auto) { clearTimeout(turnTimer); readOn(); } });
     $('rexit').addEventListener('click', closeBook);
     $('readit').addEventListener('click', function () { if (book && page >= 0 && page < book.pages.length) readAlong(book.pages[page].text); });
     setUpVoice();
