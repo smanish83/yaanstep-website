@@ -335,7 +335,7 @@
     area.appendChild(el('p', { 'class': 'ask' }, 'Tap an animal to hear what it says.'));
     var grid = el('div', { 'class': 'tiles listen', id: 'listen' });
     ANIMALS.forEach(function (an) {
-      var b = el('button', { type: 'button', 'class': 'tile', 'data-v': an.a, 'aria-label': an.a });
+      var b = el('button', { type: 'button', 'class': 'tile', 'data-v': an.a });
       b.appendChild(animalTile(an));
       var bubble = el('span', { 'class': 'bubble', 'aria-hidden': 'true' }, cap(an.s) + '!');
       b.appendChild(bubble);
