@@ -73,6 +73,10 @@ nav a.nav-cta:hover,nav a.nav-cta[aria-current]{background:var(--teal-dark)}
 .products li{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;display:flex;flex-direction:column;gap:.35rem}
 .products .pill{align-self:flex-start;font-size:.85rem;font-weight:600;padding:.1rem .6rem;border-radius:1rem;background:var(--tint);color:var(--ink);border:1px solid var(--line)}
 .products .btn,.products .muted{margin-top:auto}
+.p-head{display:flex;align-items:center;gap:.75rem}.p-head h2{margin:0}.p-icon{flex:none}
+.products .for{margin:0;font-weight:600;color:var(--muted)}
+.btn-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:auto}
+.products .btn-row .btn{margin-top:0}
 footer.site nav.foot{gap:.25rem 1rem;margin:.5rem 0}
 footer.site nav.foot a{border-bottom:1px solid transparent}
 

@@ -38,6 +38,18 @@
   function save(p) { try { window.localStorage.setItem(KEY, JSON.stringify(p)); } catch (e) { /* private mode: works for this visit */ } }
   function forget() { try { window.localStorage.removeItem(KEY); } catch (e) { /* nothing */ } }
   function cleanNick(s) { return String(s).replace(/[^A-Za-z '\-]/g, '').replace(/\s+/g, ' ').trim().slice(0, 12); }
+  /* Game progress: points, garden, stars and finished chapters. Settings, the profile and the theme are kept. */
+  var PROGRESS_KEYS = ['demo-ch', 'demo-garden'];
+  function wipeProgress() {
+    try {
+      var ls = window.localStorage, gone = [];
+      for (var i = 0; i < ls.length; i++) {
+        var k = ls.key(i);
+        if (k && (k.indexOf('sprouts:') === 0 || PROGRESS_KEYS.indexOf(k) > -1)) gone.push(k);
+      }
+      gone.forEach(function (k) { ls.removeItem(k); });
+    } catch (e) { /* nothing stored */ }
+  }
   function points() {
     try { var s = JSON.parse(window.localStorage.getItem('sprouts:demo') || 'null'); return s && s.points > 0 ? Math.floor(s.points) : 0; } catch (e) { return 0; }
   }
@@ -101,6 +113,7 @@
     '.ys-preview{display:flex;align-items:center;gap:10px;margin:0 0 10px}.ys-preview svg{width:64px;height:64px}' +
     '.ys-colors{display:flex;flex-wrap:wrap;gap:8px}.ys-colors button{width:48px;padding:0;display:flex;align-items:center;justify-content:center}.ys-colors span{width:28px;height:28px;border-radius:50%;display:block}' +
     '.ys-dlg label{display:block;font-weight:600;margin-bottom:4px}.ys-dlg input{box-sizing:border-box;font:inherit;width:100%;min-height:48px;padding:6px 10px;border:2px solid #5d716a;border-radius:10px;color:#17312D;background:#fff}' +
+    '.ys-progress{border-top:1px solid #c8d6d1;margin-top:14px;padding-top:6px}.ys-dlg .ys-danger{background:#a3271c;border-color:#a3271c;color:#fff}' +
     '.ys-hint{font-size:.85rem;color:#3f554d;margin:4px 0 12px}.ys-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}';
 
   /* ---------- filtering by age ---------- */
@@ -214,7 +227,10 @@
       '<label for="ys-nickin">Nickname (you can leave this empty)</label>' +
       '<input id="ys-nickin" maxlength="12" autocomplete="off" spellcheck="false">' +
       '<p class="ys-hint">Please use a nickname, not a full name. Letters only, up to 12. The age, color and nickname are kept only on this device. Nothing is sent.</p>' +
-      '<div class="ys-row"><button type="button" class="ys-save" id="ys-save">Save</button><button type="button" id="ys-cancel">Close</button><button type="button" class="ys-plain" id="ys-remove">Remove profile</button></div>';
+      '<div class="ys-row"><button type="button" class="ys-save" id="ys-save">Save</button><button type="button" id="ys-cancel">Close</button><button type="button" class="ys-plain" id="ys-remove">Remove profile</button></div>' +
+      '<div class="ys-progress"><p class="ys-hint" id="ys-ptext"></p><button type="button" class="ys-plain" id="ys-reset">Reset progress…</button>' +
+      '<div id="ys-confirm" role="alertdialog" aria-labelledby="ys-confirm-q" hidden><p id="ys-confirm-q"><b>Delete all points, garden, stars and finished chapters on this device?</b> This cannot be undone. The age, color and nickname stay.</p>' +
+      '<div class="ys-row"><button type="button" class="ys-save" id="ys-keep">No, keep progress</button><button type="button" class="ys-danger" id="ys-wipe">Yes, delete progress</button></div></div></div>';
     var ages = d.querySelector('.ys-dages');
     AGES.forEach(function (a) {
       var b = el('button', { type: 'button', 'data-age': String(a) }, String(a));
@@ -238,6 +254,19 @@
       refresh();
     });
     d.querySelector('#ys-cancel').addEventListener('click', closeProfile);
+    d.querySelector('#ys-reset').addEventListener('click', function () { $('ys-confirm').hidden = false; $('ys-keep').focus(); });
+    d.querySelector('#ys-keep').addEventListener('click', function () { $('ys-confirm').hidden = true; $('ys-reset').focus(); });
+    d.querySelector('#ys-wipe').addEventListener('click', function () {
+      wipeProgress();
+      $('ys-confirm').hidden = true;
+      fillDialog();
+      drawBadge();
+      $('ys-ptext').textContent = 'Progress deleted. The games start fresh.';
+      $('ys-reset').focus();
+      // Pages that hold progress in memory (maths) start fresh when the dialog closes.
+      d.setAttribute('data-wiped', '');
+    });
+    d.addEventListener('close', function () { if (d.hasAttribute('data-wiped') && document.getElementById('menu') && document.getElementById('pts')) location.reload(); });
     d.querySelector('#ys-remove').addEventListener('click', function () {
       forget();
       showAll = false; skipped = false;
@@ -256,6 +285,9 @@
     d.querySelector('#ys-pvtext').textContent = 'Age ' + draft.age + ': a ' + STAGES[stage(draft.age)] + '.';
     Array.prototype.forEach.call(d.querySelectorAll('.ys-dages button'), function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-age') === draft.age)); });
     Array.prototype.forEach.call(d.querySelectorAll('.ys-colors button'), function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-color') === draft.color)); });
+    var pts = points();
+    d.querySelector('#ys-ptext').textContent = 'Progress on this device: ' + pts + (pts === 1 ? ' point.' : ' points.');
+    d.querySelector('#ys-confirm').hidden = true;
     var input = d.querySelector('#ys-nickin');
     if (input.value !== draft.nick) input.value = draft.nick;
   }
@@ -277,7 +309,19 @@
 
   /* ---------- wiring ---------- */
 
-  function refresh() { drawAsk(); drawBadge(); applyFilter(); }
+  /* Reset lives in the profile once there is one; the maths page keeps its own button only without a profile. */
+  function placeReset() {
+    var old = $('reset');
+    if (!old) return;
+    var has = !!load();
+    old.hidden = has;
+    var note = $('ys-reset-note');
+    if (has && !note) {
+      note = el('p', { id: 'ys-reset-note', 'class': 'ys-hint' }, 'To reset progress, open your child\'s profile: tap the picture in the corner.');
+      old.parentNode.insertBefore(note, old);
+    } else if (!has && note) note.remove();
+  }
+  function refresh() { drawAsk(); drawBadge(); applyFilter(); placeReset(); }
   function init() {
     var st = el('style', { id: 'ys-profile-css' });
     st.textContent = CSS;
