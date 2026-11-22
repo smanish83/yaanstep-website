@@ -1,0 +1,84 @@
+{
+ "id": "us-real-mother-goose-04",
+ "title": "Robin Hood and Little John and Other Rhymes",
+ "pages": [
+  {
+   "img": "img/us-real-mother-goose-04/01.webp",
+   "text": "Robin Hood, Robin Hood,\nIs in the mickle wood!\nLittle John, Little John,\nHe to the town is gone.\nRobin Hood, Robin Hood,\nTelling his beads,\nAll in the greenwood\nAmong the green weeds.\nLittle John, Little John,\nIf he comes no more,\nRobin Hood, Robin Hood,\nWe shall fret full sore!"
+  },
+  {
+   "img": "img/us-real-mother-goose-04/02.webp",
+   "text": "There came an old woman from France\nWho taught grown-up children to dance;\nBut they were so stiff,\nShe sent them home in a sniff,\nThis sprightly old woman from France."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/03.webp",
+   "text": "I won't be my father's Jack,\nI won't be my father's Jill;\nI will be the fiddler's wife,\nAnd have music when I will.\nT'other little tune,\nT'other little tune,\nPrithee, Love, play me\nT'other little tune."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/04.webp",
+   "text": "Hey, my kitten, my kitten,\nAnd hey, my kitten, my deary!\nSuch a sweet pet as this\nWas neither far nor neary."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/05.webp",
+   "text": "Great A, little a,\nThis is pancake day;\nToss the ball high,\nThrow the ball low,\nThose that come after\nMay sing heigh-ho!"
+  },
+  {
+   "img": "img/us-real-mother-goose-04/06.webp",
+   "text": "Here sits the Lord Mayor,\nHere sit his two men,\nHere sits the cock,\nHere sits the hen,\nHere sit the little chickens,\nHere they run in.\nChin-chopper, chin-chopper, chin chopper, chin!"
+  },
+  {
+   "img": "img/us-real-mother-goose-04/07.webp",
+   "text": "If you are to be a gentleman,\nAs I suppose you'll be,\nYou'll neither laugh nor smile,\nFor a tickling of the knee."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/08.webp",
+   "text": "Hey diddle dinkety poppety pet,\nThe merchants of London they wear scarlet,\nSilk in the collar and gold in the hem,\nSo merrily march the merchant men."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/09.webp",
+   "text": "How many miles is it to Babylon?—\nThreescore miles and ten.\nCan I get there by candle-light?—\nYes, and back again.\nIf your heels are nimble and light,\nYou may get there by candle-light."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/10.webp",
+   "text": "I'll tell you a story\nAbout Jack-a-Nory:\nAnd now my story's begun.\nI'll tell you another\nAbout his brother:\nAnd now my story is done."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/11.webp",
+   "text": "Sleep, baby, sleep,\nOur cottage vale is deep:\nThe little lamb is on the green,\nWith woolly fleece so soft and clean—\nSleep, baby, sleep.\nSleep, baby, sleep,\nDown where the woodbines creep;\nBe always like the lamb so mild,\nA kind, and sweet, and gentle child.\nSleep, baby, sleep."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/12.webp",
+   "text": "When little Fred went to bed,\nHe always said his prayers;\nHe kissed mamma, and then papa,\nAnd straightway went upstairs."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/13.webp",
+   "text": "Baa, baa, black sheep,\nHave you any wool?\nYes, marry, have I,\nThree bags full;\nOne for my master,\nOne for my dame,\nBut none for the little boy\nWho cries in the lane."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/14.webp",
+   "text": "Hey, diddle, diddle!\nThe cat and the fiddle,\nThe cow jumped over the moon;\nThe little dog laughed\nTo see such sport,\nAnd the dish ran away with the spoon."
+  },
+  {
+   "img": "img/us-real-mother-goose-04/15.webp",
+   "text": "\"Jacky, come and give me thy fiddle,\nIf ever thou mean to thrive.\"\n\"Nay, I'll not give my fiddle\nTo any man alive.\n\"If I should give my fiddle,\nThey'll think that I've gone mad;\nFor many a joyous day\nMy fiddle and I have had.\""
+  }
+ ],
+ "words": 487,
+ "minutes": 7,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Traditional nursery rhymes"
+  ],
+  "illustrators": [
+   "Blanche Fisher Wright"
+  ],
+  "translators": [],
+  "publisher": "Rand McNally & Company, Chicago, 1916",
+  "platform": "Project Gutenberg",
+  "source": "https://www.gutenberg.org/ebooks/10607",
+  "licence": "Public Domain",
+  "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "changes": "Part 4 of 10 from The Real Mother Goose (1916): rhymes that have their own picture, one rhyme to a page, in the order of the original book. Rhyme titles and rhymes without a picture left out; some rhymes left out for young readers. Pictures resized and converted to WebP; double hyphens written as dashes."
+ }
+}

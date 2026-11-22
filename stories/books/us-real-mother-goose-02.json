@@ -1,0 +1,84 @@
+{
+ "id": "us-real-mother-goose-02",
+ "title": "Lucy Locket and Other Rhymes",
+ "pages": [
+  {
+   "img": "img/us-real-mother-goose-02/01.webp",
+   "text": "Lucy Locket lost her pocket,\nKitty Fisher found it;\nNothing in it, nothing in it,\nBut the binding round it."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/02.webp",
+   "text": "Barber, barber, shave a pig.\nHow many hairs will make a wig?\nFour and twenty; that's enough.\nGive the barber a pinch of snuff."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/03.webp",
+   "text": "Dickory, dickory, dare,\nThe pig flew up in the air;\nThe man in brown soon brought\nhim down,\nDickory,\ndickory,\ndare."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/04.webp",
+   "text": "Hush-a-bye, baby, on the tree top!\nWhen the wind blows the cradle will rock;\nWhen the bough breaks the cradle will fall;\nDown will come baby, bough, cradle and all."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/05.webp",
+   "text": "Three wise men of Gotham\nWent to sea in a bowl;\nIf the bowl had been stronger\nMy song had been longer."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/06.webp",
+   "text": "As I was going up Pippen Hill,\nPippen Hill was dirty;\nThere I met a pretty Miss,\nAnd she dropped me a curtsy.\nLittle Miss, pretty Miss,\nBlessings light upon you;\nIf I had half-a-crown a day,\nI'd spend it all upon you."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/07.webp",
+   "text": "\"Pussy-cat, pussy-cat,\nWhere have you been?\"\n\"I've been to London\nTo look at the Queen.\"\n\"Pussy-cat, pussy-cat,\nWhat did you there?\"\n\"I frightened a little mouse\nUnder the chair.\""
+  },
+  {
+   "img": "img/us-real-mother-goose-02/08.webp",
+   "text": "Clap, clap handies,\nMammie's wee, wee ain;\nClap, clap handies,\nDaddie's comin' hame,\nHame till his bonny wee bit laddie;\nClap, clap handies,\nMy wee, wee ain."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/09.webp",
+   "text": "Great A, little a,\nBouncing B!\nThe cat's in the cupboard,\nAnd can't see me."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/10.webp",
+   "text": "Ride a cock-horse to Banbury Cross,\nTo see an old lady upon a white horse.\nRings on her fingers, and bells on her toes,\nShe shall have music wherever she goes."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/11.webp",
+   "text": "Wee Willie Winkie runs through the town,\nUpstairs and downstairs, in his nightgown;\nRapping at the window, crying through the lock,\n\"Are the children in their beds? Now it's eight o'clock.\""
+  },
+  {
+   "img": "img/us-real-mother-goose-02/12.webp",
+   "text": "About the bush, Willie,\nAbout the beehive,\nAbout the bush, Willie,\nI'll meet thee alive."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/13.webp",
+   "text": "See-saw, Margery Daw,\nSold her bed and lay upon straw."
+  },
+  {
+   "img": "img/us-real-mother-goose-02/14.webp",
+   "text": "This little pig went to market;\nThis little pig stayed at home;\nThis little pig had roast beef;\nThis little pig had none;\nThis little pig said, \"Wee, wee!\nI can't find my way home.\""
+  },
+  {
+   "img": "img/us-real-mother-goose-02/15.webp",
+   "text": "Doctor Foster went to Glo'ster,\nIn a shower of rain;\nHe stepped in a puddle, up to his middle,\nAnd never went there again."
+  }
+ ],
+ "words": 377,
+ "minutes": 6,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Traditional nursery rhymes"
+  ],
+  "illustrators": [
+   "Blanche Fisher Wright"
+  ],
+  "translators": [],
+  "publisher": "Rand McNally & Company, Chicago, 1916",
+  "platform": "Project Gutenberg",
+  "source": "https://www.gutenberg.org/ebooks/10607",
+  "licence": "Public Domain",
+  "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "changes": "Part 2 of 10 from The Real Mother Goose (1916): rhymes that have their own picture, one rhyme to a page, in the order of the original book. Rhyme titles and rhymes without a picture left out; some rhymes left out for young readers. Pictures resized and converted to WebP; double hyphens written as dashes."
+ }
+}
