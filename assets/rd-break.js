@@ -8,7 +8,7 @@
     'Stand up and reach up high, like a tall tree.',
     'Hop like a frog: three small hops.',
     'Wiggle your fingers, then wiggle your toes.',
-    'March on the spot and count to ten.',
+    'March in place and count to ten.',
     'Shrug your shoulders up and down three times.',
     'Clap your hands above your head, then by your knees.'
   ];
@@ -42,7 +42,7 @@
     var move = document.createElement('p');
     move.id = 'moveit';
     move.className = 'moveit';
-    move.innerHTML = '<strong>Move break:</strong> ' + MOVES[m] + ' Grown-up: you can do it together.';
+    move.innerHTML = '<strong>Move break:</strong> Put the screen down and find a clear space. ' + MOVES[m] + ' You can also do it sitting down. Grown-up: you can do it together.';
     move.setAttribute('data-move', String(m));
     box.appendChild(move);
 
@@ -55,7 +55,7 @@
     if (others.length || pages.length) {
       var h = document.createElement('p');
       h.className = 'nexthead';
-      h.textContent = 'Or try something different:';
+      h.textContent = 'After your break, you could try:';
       box.appendChild(h);
       var row = document.createElement('div');
       row.className = 'row nextgames';

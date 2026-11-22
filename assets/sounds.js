@@ -36,6 +36,7 @@
   /* ---------- helpers ---------- */
 
   function $(id) { return document.getElementById(id); }
+  function cap(w) { return w.charAt(0).toUpperCase() + w.slice(1); }
   function rnd(n) { return Math.floor(Math.random() * n); }
   function pick(list) { return list[rnd(list.length)]; }
   function shuffle(list) {
@@ -148,7 +149,7 @@
         b.querySelector('.w').hidden = false;
         if (w === answer) {
           b.classList.add('right');
-          right((firstTry ? 'Yes! ' : 'You found it! ') + w + ' starts with ' + item.l + '.');
+          right((firstTry ? 'Yes! ' : 'You found it! ') + cap(w) + ' starts with ' + item.l + '.');
         } else {
           notYet(b, 'Not yet. That is ' + w + '. Listen again: ' + item.l + ', as in ' + item.anchor + '.');
         }
@@ -182,7 +183,7 @@
           b.classList.add('right');
           var shown = parts.join(' &middot; ');
           area.appendChild(el('p', { 'class': 'split', id: 'split' }, shown));
-          right((firstTry ? 'Yes! ' : 'You got it! ') + word + ' has ' + n + (n === 1 ? ' beat.' : ' beats.'));
+          right((firstTry ? 'Yes! ' : 'You got it! ') + cap(word) + ' has ' + n + (n === 1 ? ' beat.' : ' beats.'));
         } else {
           notYet(b, 'Not yet. Listen to ' + word + ' slowly, and clap once for each beat.', 'Not yet. Listen: ' + word + '.');
           window.setTimeout(function () { say(word, true); }, 1400);

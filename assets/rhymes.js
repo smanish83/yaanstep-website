@@ -21,7 +21,7 @@
   var POEMS = [
     { title: 'Little cat', lines: ['Clap, clap, little *cat*,', 'Find your coat and find your *hat*.', 'Off you go, the sun is *out*,', 'Skip and hop and run *about*!'] },
     { title: 'Frog on a log', lines: ['Hop, hop, the little *frog*', 'Jumps up on a big brown *log*.', 'Splish and splash, and in he *goes*,', 'Water up to froggy\'s *toes*!'] },
-    { title: 'Goat in a boat', lines: ['A goat in a boat went out to *sea*,', 'He waved to a fish and he waved to a *bee*.', 'The fish said "Hello!" and the bee said "*Hum*!",', 'Then the goat sailed home to his cosy *mum*.'] },
+    { title: 'Goat in a boat', lines: ['A goat in a boat went out to *sea*,', 'He waved to a fish and he waved to a *bee*.', 'The fish said "Hello!" and the bee said "*Hum*!"', 'Then the goat sailed home to the beat of a *drum*.'] },
     { title: 'The big red bus', lines: ['Bump, bump, goes the big red *bus*,', 'There is room for you and room for *us*.', 'Round the tree and past the *shop*,', 'Ding, ding, ding, and now we *stop*!'] }
   ];
 
@@ -56,6 +56,7 @@
   /* ---------- helpers ---------- */
 
   function $(id) { return document.getElementById(id); }
+  function cap(w) { return w.charAt(0).toUpperCase() + w.slice(1); }
   function rnd(n) { return Math.floor(Math.random() * n); }
   function pick(list) { return list[rnd(list.length)]; }
   function shuffle(list) {
@@ -188,7 +189,7 @@
     area.appendChild(tiles(choices, function (w, b) {
       if (w === answer) {
         b.classList.add('right');
-        right((firstTry ? 'Yes! ' : 'You found it! ') + target + ' and ' + w + ' rhyme.');
+        right((firstTry ? 'Yes! ' : 'You found it! ') + cap(target) + ' and ' + w + ' rhyme.');
       } else {
         notYet(b, 'Not yet. That is ' + w + '. Say ' + target + ', then find a word that ends the same way.');
       }
@@ -230,7 +231,7 @@
       if (w === answer) {
         b.classList.add('right');
         b.querySelector('.w').innerHTML = marked(w, item.t);
-        right((firstTry ? 'Yes! ' : 'You found it! ') + w + ' has ' + item.t + '.');
+        right((firstTry ? 'Yes! ' : 'You found it! ') + cap(w) + ' has ' + item.t + '.');
       } else {
         notYet(b, 'Not yet. That is ' + w + '. Listen again: ' + item.t + ', as in ' + item.anchor + '.');
       }

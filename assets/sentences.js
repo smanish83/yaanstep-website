@@ -46,7 +46,7 @@
 
   var LESSON = [
     {
-      say: 'A sentence tells a whole idea. It starts with a capital letter and ends with a full stop.',
+      say: 'A sentence tells a whole idea. It starts with a capital letter and ends with a period.',
       pic: 'cat',
       parts: [['The cat', 'who'], ['naps', 'doing'], ['.', 'stop']],
       note: 'Capital letter at the start. Full stop at the end.'
@@ -64,7 +64,7 @@
       note: 'What it is like: big. Where: to the tree.'
     }
   ];
-  var LABEL = { who: 'who or what', doing: 'what it is doing', where: 'where', like: 'what it is like', stop: 'full stop' };
+  var LABEL = { who: 'who or what', doing: 'what it is doing', where: 'where', like: 'what it is like', stop: 'period' };
 
   /* ---------- helpers ---------- */
 
@@ -141,7 +141,7 @@
     return {
       kind: 'where', pic: item.word, before: item.sentence[0], after: '.', answer: item.sentence[1],
       choices: shuffle([item.sentence[1]].concat(shuffle(item.wrong).slice(0, 2))),
-      hint: 'Where can a ' + item.word + ' be?'
+      hint: 'Where is the ' + item.word + '?'
     };
   }
   function likeRound() {
@@ -150,7 +150,7 @@
     return {
       kind: 'like', pic: item.word, before: 'The ' + item.word + ' is', after: '.', answer: item.colour,
       choices: shuffle([item.colour].concat(wrong)),
-      hint: 'Look at the picture. What colour is the ' + item.word + '?'
+      hint: 'Look at the picture. What color is the ' + item.word + '?'
     };
   }
   var MAKERS = [whoRound, doingRound, whereRound, likeRound];

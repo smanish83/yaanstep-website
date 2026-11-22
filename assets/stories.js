@@ -13,10 +13,10 @@
     {
       id: 'ball', title: 'Where is the ball?', band: 'Ages 3 to 4',
       pages: [
-        { pic: 'dog', text: 'Dog has a red ball.', ask: 'Can you point to the ball?' },
+        { pic: 'ball', text: 'Dog has a red ball.', ask: 'Can you point to the ball?' },
         { pic: 'bed', text: 'The ball rolls under the bed.', ask: 'Where did the ball go?' },
         { pic: 'cat', text: 'Cat looks under the chair. No ball!', ask: 'Where else could the ball be?' },
-        { pic: 'ball', text: 'Dog looks under the bed. There it is!', ask: 'How do you think Dog feels now?' }
+        { pic: 'dog', text: 'Dog looks under the bed. There it is!', ask: 'How do you think Dog feels now?' }
       ],
       words: ['dog', 'ball', 'bed', 'cat', 'chair', 'red']
     },
@@ -33,13 +33,13 @@
     {
       id: 'boat', title: 'Goat and the little boat', band: 'Ages 5 to 7',
       pages: [
-        { pic: 'goat', text: 'Goat had a little brown boat. Every day, she sat in it on the pond.', ask: 'Where does Goat sit every day?' },
+        { pic: 'goat', text: 'Goat had a little brown boat. She always wore her life jacket in it.', ask: 'What did Goat always wear in her boat?' },
         { pic: 'frog', text: 'One day, Frog hopped up. "Can I come too?" he asked.', ask: 'What do you think Goat will say?' },
         { pic: 'boat', text: '"Yes," said Goat. "There is room for two." Off they went.', ask: 'Why do you think Goat said yes?' },
         { pic: 'fish', text: 'A fish swam by. A bee buzzed past. The sun was warm on their backs.', ask: 'What did they see on the pond?' },
-        { pic: 'moon', text: 'When the moon came up, they went home. "Same time tomorrow?" said Frog.', ask: 'What would you take on a boat trip?' }
+        { pic: 'sun', text: 'When the sun went down, they went home. "Can we go again tomorrow?" said Frog.', ask: 'What would you take on a boat trip?' }
       ],
-      words: ['goat', 'boat', 'frog', 'room', 'fish', 'moon']
+      words: ['goat', 'boat', 'frog', 'room', 'fish', 'jacket']
     },
     {
       id: 'bun', title: 'Half a bun', band: 'Ages 5 to 7',
@@ -48,7 +48,7 @@
         { pic: 'bus', text: 'On the bus, Mo sat next to Sam. Mo had no snack.', ask: 'How do you think Mo feels?' },
         { pic: 'bun', text: 'Sam looked at the bun. Then Sam broke it in two.', ask: 'What do you think Sam will do next?' },
         { pic: 'bun', text: '"Half for you and half for me," said Sam. Mo smiled a big smile.', ask: 'Why did Sam share the bun?' },
-        { pic: 'cow', text: 'At the farm, a cow said moo. It was the best half a bun ever.', ask: 'Can you think of a time you shared something?' }
+        { pic: 'cow', text: 'At the farm, a cow said, "Moo!" It was the best half of a bun ever.', ask: 'Can you think of a time you shared something?' }
       ],
       words: ['bun', 'bus', 'snack', 'half', 'smile', 'farm']
     }
