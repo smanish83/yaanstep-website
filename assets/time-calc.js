@@ -30,7 +30,7 @@
     var p2 = document.createElement('p');
     p2.textContent = 'Winning back ' + back + ' minutes a day is about ' + fmt(backHours) +
       ' hours a year, or around ' + fmt(backDays) + ' waking days.';
-    if (back / 60 > h && h > 0) {
+    if (back / 60 > h) {
       p2.textContent += ' That is more than you entered, so try a smaller amount.';
     }
     out.appendChild(p1);
