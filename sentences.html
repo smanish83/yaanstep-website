@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Parts of a sentence | Yaanstep</title>
+<meta name="description" content="A short lesson on the parts of a sentence for ages 5 to 7, then fill-the-gap rounds: who or what, what it is doing, where, and what it is like. No sign-in. Nothing is recorded or sent.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f4fbf8;--ink:#17332c;--teal:#1F7A6D;--card:#fff;--line:#c6e3da}
+*{box-sizing:border-box}body{margin:0;font:18px/1.45 system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+main{max-width:680px;margin:0 auto;padding:16px;overflow-wrap:anywhere}h1{font-size:1.35rem;margin:.2em 0}
+.card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.note{font-size:.85rem;background:#fff7e0;border:1px solid #ecd48a;border-radius:10px;padding:8px 12px}
+button{font:inherit;cursor:pointer;min-height:56px;min-width:56px;border-radius:14px;border:2px solid var(--teal);background:#fff;color:var(--ink);padding:8px 14px}
+button:focus-visible{outline:4px solid #f0a500;outline-offset:2px}button.primary{background:var(--teal);color:#fff;font-weight:600}button:disabled{cursor:default}
+.small{min-height:48px;font-size:.85rem;border-color:#aab9b3}.top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.steps{display:grid;gap:10px}.step{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-height:72px;font-size:1.1rem;font-weight:600}.step small{color:#51675f;font-weight:400}
+.parent{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:.85rem;color:#51675f}.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.pic{display:flex;justify-content:center;margin:6px 0}.pic svg{width:96px;height:96px}
+.parts{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;font-size:1.5rem;font-weight:800;margin:8px 0}
+.part{padding:2px 8px;border-radius:8px;border-bottom:4px solid}
+.part.who{background:#e3effd;border-color:#2f6fd0}.part.doing{background:#e6f6ea;border-color:#1b7a3d}.part.where{background:#f3e8fb;border-color:#7a3fb5}.part.like{background:#fff1dc;border-color:#b85a10}.part.stop{border-color:transparent}
+.ask{font-size:1.1rem;font-weight:600;text-align:center;margin:6px 0}.keyline{text-align:center;color:#51675f;margin:4px 0}
+.kind{text-align:center;font-weight:700;color:var(--teal);margin:4px 0}
+.gapline{font-size:1.6rem;font-weight:800;text-align:center;margin:8px 0}
+.gap{display:inline-block;min-width:3.5em;border-bottom:4px solid var(--teal);color:#51675f}.gap.filled{color:var(--ink)}
+.words{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0}.words button{font-size:1.2rem;font-weight:700}
+.choice.right{background:#e6f6ea;border-color:#1b7a3d}.choice.wrong{opacity:.55;border-style:dashed}
+.sub{font-size:1rem;color:#51675f;font-weight:600;min-height:1.5em;text-align:center}.sub.yes{color:#1b7a3d}.sub.try{color:#7a5a00}
+.done{background:#e6f6ea;border:3px solid #7bc48f;border-radius:16px;padding:18px;text-align:center;margin:12px 0}.done b{font-size:1.5rem;display:block;margin-bottom:8px}
+.count{font-size:.85rem;color:#51675f}
+.back{margin:0 0 4px}.back a{color:var(--teal);font-weight:600}
+</style></head><body><main>
+<p class="back"><a href="learning.html">&larr; Back to Learning</a></p>
+<h1>Parts of a sentence</h1>
+<p class="note"><b>A short lesson and game, best used by a parent and child together.</b> Made by Yaanstep's AI team. Not yet tested with children. Not a replacement for school. Pictures are simple original drawings. No sign-in, no ads. Nothing is recorded or sent: no microphone, no camera. Nothing is saved on this device.</p>
+<p id="novoice" class="note" hidden>No built-in voice was found on this device, so the words show without sound. A parent can read them aloud, or try another browser.</p>
+<section id="menu"><div class="card"><p><b>Ages 5 to 7. Start with the lesson:</b></p><div class="steps">
+<button class="step" id="play-lesson">1. The lesson<small>Three short screens: who or what, what it is doing, where, and what it is like.</small></button>
+<button class="step" id="play-game">2. Fill the gap<small>Five sentences with a word missing. Pick the word that fits.</small></button>
+</div></div>
+<div class="parent"><p>Parent area</p><p>The voice reads each sentence. Read it together, point to each word, and talk about why the other words do not fit. The voice and speed you chose on the <a href="reading.html">reading page</a> are used here as well.</p></div></section>
+<section id="game" hidden><div class="card"><div class="top"><b id="title"></b><span class="count" id="count"></span><button id="exit" class="small">Back</button></div><div id="area"></div><div id="sub" class="sub" aria-live="polite"></div><div class="row"><button id="again" class="small">Hear it again</button><button id="more" class="primary" hidden>Next</button></div></div>
+<div id="alldone" class="done" hidden><b>All done for now!</b>Great reading. Time for a break.<div class="row" style="justify-content:center"><button id="keep">Play again</button><button id="stop" class="primary">Finish</button></div></div></section>
+</main>
+<script src="assets/pictures.js"></script>
+<script src="assets/sentences.js"></script>
+</body></html>
