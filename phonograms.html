@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phonogram games | Yaanstep</title>
+<meta name="description" content="Learn what a phonogram is, split words into phonograms, spell and read with them. Moving picture lessons for ages 5 to 7. No sign-in. Nothing is recorded or sent.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f4fbf8;--ink:#17332c;--teal:#1F7A6D;--card:#fff;--line:#c6e3da}
+*{box-sizing:border-box}body{margin:0;font:18px/1.45 system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+main{max-width:680px;margin:0 auto;padding:16px;overflow-wrap:anywhere}h1{font-size:1.35rem;margin:.2em 0}
+.card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.note{font-size:.85rem;background:#fff7e0;border:1px solid #ecd48a;border-radius:10px;padding:8px 12px}
+button{font:inherit;cursor:pointer;min-height:56px;min-width:56px;border-radius:14px;border:2px solid var(--teal);background:#fff;color:var(--ink);padding:8px 14px}
+button:focus-visible{outline:4px solid #f0a500;outline-offset:2px}button.primary{background:var(--teal);color:#fff;font-weight:600}
+button:disabled{cursor:default}
+.small{min-height:48px;font-size:.85rem;border-color:#aab9b3}.top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.steps{display:grid;gap:10px}.step{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-height:72px;font-size:1.1rem;font-weight:600}.step small{color:#51675f;font-weight:400}
+.parent{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:.85rem;color:#51675f}.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0}
+.tile{min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-width:3px;padding:8px 4px}
+.tile svg{width:64px;height:64px;max-width:100%}.tile .w{font-size:1rem;font-weight:600}
+.tile.right,.choice.right{background:#e6f6ea;border-color:#1b7a3d}.tile.wrong,.choice.wrong{opacity:.55;border-style:dashed}
+.letter{font-size:3.2rem;font-weight:800;text-align:center;margin:0;line-height:1.1}
+.ask{font-size:1.15rem;font-weight:600;text-align:center;margin:6px 0}
+.sub{font-size:1rem;color:#51675f;font-weight:600;min-height:1.5em;text-align:center}.sub.yes{color:#1b7a3d}.sub.try{color:#7a5a00}
+.beatpic{display:flex;flex-direction:column;align-items:center;gap:4px;margin:8px 0}.beatpic svg{width:96px;height:96px}
+.word{font-size:1.6rem;font-weight:800}.split{font-size:1.6rem;font-weight:800;text-align:center;color:var(--teal);margin:4px 0}
+.beatbtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0}.beatbtns button{display:flex;flex-direction:column;align-items:center;font-weight:600}
+.claps{font-size:1.1rem;letter-spacing:2px}
+.done{background:#e6f6ea;border:3px solid #7bc48f;border-radius:16px;padding:18px;text-align:center;margin:12px 0}.done b{font-size:1.5rem;display:block;margin-bottom:8px}
+.count{font-size:.85rem;color:#51675f}
+.poem{font-size:1.15rem;line-height:1.7;text-align:center;margin:8px 0}.poem b{color:var(--teal)}.hint{font-size:.85rem;color:#51675f;text-align:center;margin:4px 0}.tile .w b{color:var(--teal);text-decoration:underline}
+.back{margin:0 0 4px}.back a{color:var(--teal);font-weight:600}
+.moveit{margin:12px 0 4px}.nexthead{margin:14px 0 4px;font-weight:600}.nextgames{justify-content:center;align-items:center}.nextgames a{display:inline-flex;align-items:center;min-height:48px;padding:0 10px;color:var(--ink)}
+.bigpic{display:flex;flex-direction:column;align-items:center;gap:6px;margin:8px 0}.bigpic svg{width:96px;height:96px}
+.choices{display:grid;gap:10px;margin:10px 0}.choice{display:flex;justify-content:center;padding:10px}
+.pboxes{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:8px 0}
+.pbox{display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:52px;padding:4px 10px;border:3px solid var(--teal);border-radius:10px;background:#fff;font-size:1.6rem;font-weight:800;color:var(--ink)}
+.pbox.team{border-color:#C2410C;background:#FFF1C2}.pbox.empty{border-style:dashed;border-color:#8aa49b}
+.choice .pbox{min-height:44px;min-width:40px;font-size:1.35rem}
+.readrow .pbox{min-height:64px;min-width:64px}.readrow .pbox.heard{box-shadow:0 0 0 4px #ffe08a}
+.readrow.swept{background:linear-gradient(#1F7A6D,#1F7A6D) bottom/100% 4px no-repeat;padding-bottom:10px}
+.tilesrow{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:12px 0}.ptile{font-size:1.5rem;font-weight:800;min-width:64px;min-height:64px}.ptile.used{opacity:.35}
+.center{justify-content:center}.explain{font-size:1.05rem;text-align:center;margin:8px 0}
+.how-panel{background:#FFF8E6;border:2px solid #E3CF7D;border-radius:14px;padding:10px 14px;margin-top:10px}.how-panel h3{font-size:1rem;margin:0 0 4px}.how-panel h3:focus{outline:3px solid #0B4F46;outline-offset:2px}.how-panel p{margin:.3em 0}.muted{color:#51675f;font-size:.9rem}
+.moving svg{width:100%;height:auto;max-width:400px;display:block;margin:0 auto}.moving .mv-in,.moving .mv-slide{transform-box:fill-box;transform-origin:center}
+.watch-again{display:block;margin:4px auto 8px}
+@media (prefers-reduced-motion:no-preference){.moving .mv-in{animation:mvIn .45s ease-out both}.moving .mv-slide{animation:mvSlide .8s ease-in-out both}.ptile.shake{animation:shake .4s}}
+@keyframes mvIn{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+@keyframes mvSlide{from{transform:translateX(var(--dx,0))}to{transform:none}}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+h2.ask{font-size:1.2rem}</style></head><body><main>
+<p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
+<h1>Phonogram games</h1>
+<p class="note"><b>Moving picture lessons and games about phonograms, best played by a parent and child together.</b> Made by Yaanstep's AI team. Not yet tested with children. Not a replacement for school. Pictures are simple original drawings. No sign-in, no ads. Nothing is recorded or sent: no microphone, no camera. Nothing is saved on this device.</p>
+<p id="novoice" class="note" hidden>No built-in voice was found on this device, so the games show words without sound. A parent can read the question aloud, or try another browser.</p>
+<section id="menu"><div class="card"><p><b>A phonogram is a letter, or a team of letters, that writes one sound.</b> Start with the lesson, then play:</p><div class="steps">
+<button class="step" id="play-learn">What is a phonogram?<small>Ages 5 to 7. A short moving lesson in six parts.</small></button>
+<button class="step" id="play-split">Split the word<small>Ages 5 to 7. Find the right way to split a word into its phonograms.</small></button>
+<button class="step" id="play-build">Build the word<small>Ages 5 to 7. Spell a word by tapping its phonograms in order.</small></button>
+<button class="step" id="play-read">Read and match<small>Ages 5 to 7. Tap each phonogram, blend them, and find the picture.</small></button>
+</div></div>
+<div class="parent"><p>Parent area</p><p>A computer voice cannot say a sound on its own well, so each phonogram is said with an example word, for example "sh, as in shoe". Say the sound yourself too, and say it together.</p><p>The words start with one letter for each sound, then letter teams like sh and ck, then vowel teams like ee, oa and ar. Some phonograms write more than one sound in other words; these games use the most common sound.</p><p>The voice and speed you chose on the <a href="reading.html">reading page</a> are used here as well. Letter teams are also in <a href="rhymes.html">Rhymes and letter teams</a>.</p></div></section>
+<section id="game" hidden><div class="card"><div class="top"><b id="title"></b><span class="count" id="count"></span><button id="exit" class="small">Back</button></div><div id="area"></div><div id="sub" class="sub" aria-live="polite"></div><div id="howbox"></div><div class="row"><button id="again" class="small">Hear it again</button><button id="more" class="primary" hidden>Next</button></div></div>
+<div id="alldone" class="done" hidden><b>All done for now!</b>Great work with phonograms. Time for a break: stand up and stretch.<div class="row" style="justify-content:center"><button id="keep">Keep playing</button><button id="stop" class="primary">Finish</button></div></div></section>
+</main>
+<script src="assets/pictures.js"></script>
+<script src="assets/phonograms.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>
