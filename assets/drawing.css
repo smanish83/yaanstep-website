@@ -1,0 +1,61 @@
+/* Drawing: coloring pages and step-by-step drawing (SCRUM-515, 23 Nov 2026). Builds on learn.css. */
+main{max-width:980px}
+h2.vh{font-size:1.25rem;margin:0}
+.bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0 4px}
+.backbtn,.navbtn{display:inline-flex;align-items:center;min-height:56px;padding:8px 16px;border:2px solid var(--teal);border-radius:14px;background:#fff;color:var(--ink);font-weight:700;text-decoration:none}
+.backbtn:hover,.navbtn:hover{background:#e9f6f1}
+.navbtn[aria-disabled=true]{visibility:hidden}
+.hub{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0}
+.bigtile{display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 8px;background:#fff;border:3px solid var(--line);border-radius:22px;color:var(--ink);text-decoration:none;min-height:200px}
+.bigtile:hover,.tile-a:hover{border-color:var(--teal);background:#f3fbf8}
+.bigtile .pic svg{width:150px;height:150px;max-width:100%}
+.bigtile .w{font-size:1.3rem;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:12px 0}
+.grid.pages{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+.tile-a{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px;background:#fff;border:3px solid var(--line);border-radius:18px;color:var(--ink);text-decoration:none;min-height:120px}
+.tile-a img{width:100%;height:auto;aspect-ratio:850/1100;object-fit:contain;background:#fff;border-radius:8px}
+.tile-a .w{font-weight:700;text-align:center;font-size:1.05rem}
+.tile-a .n{font-size:.8rem;color:#51675f}
+.tag{position:absolute;top:10px;left:10px;background:#1b7a3d;color:#fff;font-size:.75rem;font-weight:700;border-radius:8px;padding:2px 8px}
+.colorwrap{display:flex;gap:12px;align-items:flex-start}
+.palette{display:grid;grid-template-columns:repeat(2,56px);gap:8px;flex:none}
+.palette button{width:56px;height:56px;min-width:0;padding:0;border:3px solid #8aa49b;border-radius:50%}
+.palette button[aria-pressed=true]{outline:4px solid var(--ink);outline-offset:3px;border-color:#fff}
+.palette .eraser{background:#fff;font-size:.7rem;font-weight:700;border-radius:14px}
+.sheet{flex:1;min-width:0;background:#fff;border:2px solid var(--line);border-radius:12px;padding:6px}
+.sheet svg{width:100%;height:auto;display:block;touch-action:manipulation}
+.sheet svg [data-f]{cursor:pointer}
+.stepwrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.stepsvg svg{width:100%;height:auto;max-width:420px;display:block;margin:0 auto;background:#fff;border-radius:12px}
+.stepsvg path{fill:none;stroke:#222;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+.stepsvg path.now{stroke:#1F7A6D;stroke-width:10}
+.say{font-size:1.25rem;font-weight:700;text-align:center;min-height:3em;margin:8px 0}
+.pad{position:relative;width:100%;max-width:420px;margin:0 auto;aspect-ratio:1;background:#fff;border:2px dashed #8aa49b;border-radius:12px;overflow:hidden}
+.pad canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.ghost{position:absolute;inset:0;opacity:.28;pointer-events:none}
+.ghost svg{width:100%;height:100%}
+.ghost path{fill:none;stroke:#222;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+#pens button{width:56px;padding:0;border-width:3px}
+#pens button[aria-pressed=true]{outline:4px solid var(--ink);outline-offset:3px}
+.lvl{margin:18px 0 0;font-size:1.1rem}
+.steptile svg{width:100%;height:auto;aspect-ratio:1;background:#fff;border-radius:8px}
+.steptile svg path{fill:none;stroke:#222;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+@media (prefers-reduced-motion:no-preference){
+.stepsvg path.now.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:pen var(--t,1.2s) ease-in-out forwards}
+}
+html.ys-calm .stepsvg path.now.draw{animation:none;stroke-dashoffset:0}
+@keyframes pen{to{stroke-dashoffset:0}}
+@media (max-width:720px){.stepwrap{grid-template-columns:1fr}}
+@media (max-width:480px){.hub{gap:10px}.bigtile .pic svg{width:110px;height:110px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.colorwrap{flex-direction:column}.palette{grid-template-columns:repeat(auto-fill,56px);width:100%;justify-content:center}}
+@media print{
+@page{size:letter;margin:.25in}
+body>:not(main){display:none!important}
+body{background:#fff}
+.noprint,.back,.note,.parent,#ys-hear,header,footer,.palette{display:none!important}
+main{max-width:none;padding:0;margin:0}
+h1{display:none}
+#v-page{display:block!important}
+.sheet{border:0;padding:0}
+.sheet svg{width:100%;height:auto;max-height:10.4in}
+}

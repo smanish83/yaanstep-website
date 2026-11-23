@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drawing and coloring pages | Yaanstep</title>
+<meta name="description" content="Yaanstep Sprouts Drawing: over 2,000 free coloring pages to color on screen, print or download, and easy step-by-step drawings shown one line at a time. For ages 3 to 12. Free, no sign-in, nothing stored.">
+<link rel="canonical" href="https://yaanstep.com/drawing.html">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/learn.css">
+<link rel="stylesheet" href="assets/drawing.css">
+</head><body><main id="main">
+<p class="back noprint"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
+<h1 id="h1" tabindex="-1">Drawing</h1>
+<p class="note noprint" id="topnote"><b>Coloring pages and step-by-step drawing, ages 3 to 12. Free.</b> Every picture is drawn by Yaanstep's own code, and every page carries the Yaanstep Sprouts name. No sign-in, no ads. Nothing is recorded, sent or kept.</p>
+<noscript><p class="note">These pages need JavaScript, which is switched off in this browser. Away from the screen: draw a big circle, then ask "What could this become? A sun, a face, a ball?" and finish it together.</p></noscript>
+<p id="novoice" class="note noprint" hidden>No built-in voice was found on this device, so the steps show words without sound. A grown-up can read them aloud.</p>
+
+<section id="v-home" class="view noprint" hidden>
+<div class="hub">
+<a class="bigtile" href="#color" id="go-color"><span class="pic" id="pic-color"></span><span class="w">Coloring pages</span></a>
+<a class="bigtile" href="#steps" id="go-steps"><span class="pic" id="pic-steps"></span><span class="w">Step by step</span></a>
+</div>
+<div class="parent"><p>Parent area</p>
+<p><b>Coloring pages:</b> pick a picture, then pick one of its pages. Color it on the screen by choosing a color and tapping a space, or print it, or download it as a picture or a PDF. Easy pages with big spaces come first. Every page has the Yaanstep Sprouts name in the corner.</p>
+<p><b>Step by step:</b> one line is added at a time, with a short sentence read aloud by the device's own voice. Your child draws along on paper or in the drawing box, with a see-through guide to trace if they like. Drawings go from easy (ages 3 to 5) to harder (ages 8 to 12).</p>
+<p>There are no points here: drawing is for fun. Nothing your child draws or colors leaves this device or is kept after the page closes. The voice and speed you chose on the <a href="reading.html">reading page</a> are used here as well.</p></div>
+</section>
+
+<section id="v-cats" class="view noprint" hidden>
+<div class="bar"><a class="backbtn" href="#">&larr; Back</a><h2 class="vh" tabindex="-1">Pick a picture</h2></div>
+<div class="grid" id="cats"></div>
+<p class="muted" id="total"></p>
+</section>
+
+<section id="v-subs" class="view noprint" hidden>
+<div class="bar"><a class="backbtn" href="#color">&larr; Back</a><h2 class="vh" id="subs-h" tabindex="-1"></h2></div>
+<div class="grid" id="subs"></div>
+</section>
+
+<section id="v-vars" class="view noprint" hidden>
+<div class="bar"><a class="backbtn" id="vars-back" href="#color">&larr; Back</a><h2 class="vh" id="vars-h" tabindex="-1"></h2></div>
+<div class="grid pages" id="vars"></div>
+</section>
+
+<section id="v-page" class="view" hidden>
+<div class="bar noprint"><a class="backbtn" id="page-back" href="#color">&larr; Back</a><h2 class="vh" id="page-h" tabindex="-1"></h2></div>
+<div class="colorwrap">
+<div class="palette noprint" id="palette" role="group" aria-label="Colors"></div>
+<div class="sheet" id="sheet" aria-live="off"></div>
+</div>
+<p class="muted noprint" id="page-tip">Pick a color, then tap a space in the picture.</p>
+<div class="row center noprint">
+<button id="undo" class="small">Undo</button>
+<button id="restart" class="small">Start again</button>
+<button id="print" class="primary">Print</button>
+<button id="png">Download picture</button>
+<button id="pdf">Download PDF</button>
+</div>
+<div class="row center noprint"><a class="navbtn" id="prev" href="#">&larr; Page before</a><span class="count" id="page-count"></span><a class="navbtn" id="next" href="#">Next page &rarr;</a></div>
+<p class="sub noprint" id="page-msg" aria-live="polite"></p>
+</section>
+
+<section id="v-steps" class="view noprint" hidden>
+<div class="bar"><a class="backbtn" href="#">&larr; Back</a><h2 class="vh" tabindex="-1">What shall we draw?</h2></div>
+<div id="steplist"></div>
+</section>
+
+<section id="v-step" class="view noprint" hidden>
+<div class="bar"><a class="backbtn" href="#steps">&larr; Back</a><h2 class="vh" id="step-h" tabindex="-1"></h2></div>
+<div class="stepwrap">
+<div class="card stepcard"><div class="top"><span class="count" id="step-count"></span><button id="hear" class="small">Hear it again</button></div>
+<div class="stepsvg" id="stepsvg"></div>
+<p class="say" id="say" aria-live="polite"></p>
+<div class="row center"><button id="sback" class="small">&larr; Back a step</button><button id="snext" class="primary">Next step &rarr;</button></div>
+</div>
+<div class="card padcard"><div class="top"><b>Draw here</b><button id="guide" class="small" aria-pressed="false">See-through guide</button></div>
+<div class="pad" id="pad"><div class="ghost" id="ghost" hidden></div><canvas id="canvas" width="800" height="800" role="img" aria-label="Drawing box: draw with a finger, a pen or the mouse"></canvas></div>
+<div class="row center" role="group" aria-label="Pen color" id="pens"></div>
+<div class="row center"><button id="clear" class="small">Clear</button><button id="savepad" class="small">Save my drawing</button></div>
+</div>
+</div>
+</section>
+</main>
+<script src="assets/steps-data.js"></script>
+<script src="assets/drawing.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>
