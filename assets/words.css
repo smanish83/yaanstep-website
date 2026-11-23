@@ -1,0 +1,96 @@
+/* Word of the day, dictionary and grammar pages (23 Nov 2026). Builds on learn.css. */
+.linkstep{display:flex;flex-direction:column;align-items:flex-start;text-decoration:none;color:var(--ink);background:#fff;border:2px solid var(--teal);border-radius:14px;padding:8px 14px}
+.kicker{margin:0 0 6px;font-size:.9rem;font-weight:700;color:#7a5a00;background:#fff7e0;display:inline-block;padding:2px 10px;border-radius:999px}
+.word{position:relative}
+.wordhead{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.wordhead>div{flex:1 1 140px;min-width:0}
+.wpic svg{width:84px;height:84px;display:block}
+.headword{font-size:2.2rem;margin:0;line-height:1.1;letter-spacing:.02em}.headword:focus{outline:3px solid #0B4F46;outline-offset:2px}
+.pos{margin:2px 0 0;color:#51675f;font-weight:600}
+.hear{flex:none}
+.part{margin-top:14px;padding-top:10px;border-top:1px dashed var(--line)}
+.part h3{font-size:1rem;margin:0 0 6px;color:#0B4F46}
+.meaning{font-size:1.25rem;font-weight:600;margin:0}
+/* the word split: colored blocks */
+.split{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:6px 0}
+.split .plus{align-self:center;font-size:1.4rem;font-weight:800;color:#51675f}
+.block{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:56px;min-height:64px;border-radius:12px;border:3px solid;padding:6px 10px;color:#17332c;line-height:1.15;background:#fff}
+.block .bt{font-size:1.5rem;font-weight:800}
+.block .bk{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.block .bm{font-size:.8rem;max-width:12em;text-align:center}
+.block.pre{background:#F1E8FF;border-color:#6D28D9}.block.pre .bk{color:#5B21B6}
+.block.root{background:#E2F4EF;border-color:#1F7A6D}.block.root .bk{color:#0B4F46}
+.block.suf{background:#FFEDE0;border-color:#C2410C}.block.suf .bk{color:#9A3412}
+.block.syl.s0{background:#E3EEFB;border-color:#2F6FBF}.block.syl.s0 .bk{color:#1E4F8F}
+.block.syl.s1{background:#FFF6D6;border-color:#B7791F}.block.syl.s1 .bk{color:#7a5a00}
+.split .whole{align-self:center;font-size:1.6rem;font-weight:800;padding:4px 12px;border-radius:12px;background:#17332c;color:#fff}
+.split.built{min-height:72px;border:2px dashed #8aa49b;border-radius:14px;padding:6px;justify-content:center}
+.block.placed{cursor:default}
+.block.nudge{outline:3px dashed #b45309}
+/* sentences */
+.exlist{display:grid;gap:6px}
+.exrow{display:flex;align-items:center;gap:8px;justify-content:space-between;background:#f7fcfa;border-radius:10px;padding:4px 4px 4px 12px}
+.exrow[hidden]{display:none}
+.ex{margin:0;font-size:1.1rem}
+.ex mark{background:#FFE58F;color:#17332c;border-radius:4px;padding:0 3px;font-weight:700}
+.exhear{flex:none}
+/* family tree, synonyms and opposites */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0}
+.treetop{display:flex;flex-direction:column;align-items:center;gap:4px;padding-bottom:12px;position:relative}
+.treetop::after{content:"";position:absolute;bottom:0;left:50%;width:3px;height:12px;background:#1F7A6D}
+.treeroot{font-size:.85rem;color:#51675f}
+.branches{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;border-top:3px solid #1F7A6D;padding-top:10px;max-width:100%}
+.chip{display:inline-flex;align-items:center;min-height:48px;padding:6px 14px;border-radius:999px;border:2px solid #aab9b3;background:#fff;font-weight:600;font-size:1.05rem;margin:3px}
+button.chip{border-color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.chip.root{background:#17332c;color:#fff;border-color:#17332c;font-size:1.25rem}
+.chip.fam{background:#E2F4EF}
+.chip.syn{background:#E6F6EA;border-color:#1b7a3d}
+.chip.opp{background:#FFEDE0;border-color:#C2410C}
+.pairs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:480px){.pairs{grid-template-columns:1fr}}
+.pair{border-radius:12px;padding:8px}.pair.same{background:#F2FBF4}.pair.opp{background:#FFF6EF}
+.pairhead{font-weight:700;margin:8px 0 4px}
+.bands{align-items:center;margin-top:10px}
+/* browse */
+.find label{font-weight:700;display:block;margin-bottom:4px}
+.find input{font:inherit;font-size:1.2rem;min-height:56px;flex:1 1 160px;min-width:0;border:2px solid var(--teal);border-radius:14px;padding:6px 12px}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.cat{display:flex;flex-direction:column;align-items:center;gap:2px;min-height:120px}
+.cat svg{width:56px;height:56px}.cat .cn{font-weight:700;text-align:center}.cat small{color:#51675f}
+.abc{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px}
+.letter{font-size:1.3rem;font-weight:800;padding:4px}.letter:disabled{opacity:.35}
+.results-head{margin:16px 0 6px;font-size:1.1rem}.results-head:empty{display:none}
+.results{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.wbtn{display:flex;align-items:center;gap:6px;font-weight:700;font-size:1.1rem;justify-content:flex-start;text-align:left}
+.wbtn svg{width:40px;height:40px;flex:none}
+/* game */
+.tiles.stack{grid-template-columns:1fr}
+.small-word{font-size:1.3rem}
+.gap{font-size:1.3rem;text-align:center;background:#f7fcfa;border-radius:12px;padding:10px;margin:6px 0;font-weight:600}
+@media (prefers-reduced-motion:no-preference){
+.split.big .block,.split.big .whole{animation:blockIn .5s ease-out both}
+.mv-pop{animation:mvIn .5s ease-out both}
+}
+@keyframes blockIn{from{opacity:0;transform:translateY(14px) scale(.8)}to{opacity:1;transform:none}}
+/* grammar */
+.sentence{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0}
+.wb{display:inline-flex;flex-direction:column;align-items:center;font-size:1.25rem;font-weight:600;padding:6px 10px;border-radius:10px;border:2px solid #c6e3da;background:#fff;min-height:48px;justify-content:center}
+.wb small{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.wb.noun{background:#E3EEFB;border-color:#2F6FBF}.wb.verb{background:#FFEDE0;border-color:#C2410C}
+.wb.adjective{background:#F1E8FF;border-color:#6D28D9}.wb.adverb{background:#FCE7F3;border-color:#BE185D}
+.wb.pronoun{background:#E2F4EF;border-color:#1F7A6D}.wb.joining{background:#FFF6D6;border-color:#B7791F}
+.wb.mark,.wb.capital{background:#FFF6D6;border-color:#B7791F}
+.wb.subject{background:#E3EEFB;border-color:#2F6FBF}.wb.predicate{background:#FFEDE0;border-color:#C2410C}
+.wb.piece{background:#FFF1F1;border-color:#B91C1C;border-style:dashed}.wb.whole{background:#E6F6EA;border-color:#1b7a3d}
+.change{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:10px 0}
+.change .arrow{font-size:1.6rem;font-weight:800;color:#51675f}
+.change .wb{font-size:1.6rem}
+.change .new{color:#C2410C;text-decoration:underline;text-decoration-thickness:3px}
+.moreex{margin:8px 0 0;padding:0;list-style:none}.moreex li{background:#f7fcfa;border-radius:10px;padding:6px 10px;margin:4px 0;font-size:1.05rem}
+.tapline{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:12px 0}
+.tapline .tile{min-height:56px;padding:6px 12px;flex-direction:row}
+.tapline .tile .wordtile{font-size:1.25rem}
+.optext{font-size:1.15rem;font-weight:600}
+.pickall{display:grid;gap:10px;margin:12px 0}
+.shape svg{width:56px;height:56px}
+@media (prefers-reduced-motion:no-preference){.sentence .wb,.change .wb{animation:blockIn .45s ease-out both}}

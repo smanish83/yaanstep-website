@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word of the day and picture dictionary | Yaanstep</title>
+<meta name="description" content="A new word every day for ages 3 to 12, with its meaning, how the word splits into parts, where it comes from, its word family, words that mean the same and the opposite, and many example sentences. Look up words by picture or letter. Read aloud. No sign-in.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/learn.css">
+<link rel="stylesheet" href="assets/words.css">
+</head><body><main>
+<p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
+<h1>Word of the day</h1>
+<p class="note"><b>Words for ages 3 to 12, best with a grown-up.</b> Made by Yaanstep's AI team. Not yet tested with children. Every meaning and sentence is our own. Only words from our checked list are ever shown. No sign-in, no ads. Nothing is recorded or sent. Only points are kept on this device, and only with a child profile.</p>
+<noscript><p class="note">The word of the day, the dictionary and the word games need JavaScript. Please turn it on to use this page.</p></noscript>
+<p id="novoice" class="note" hidden>No built-in voice was found on this device, so words show without sound. A grown-up can read them aloud.</p>
+<section id="menu">
+<div id="today"></div>
+<div class="steps">
+<button class="step" id="go-browse">Look up a word<small>Pick a picture group or a letter. <span id="word-count"></span></small></button>
+<button class="step" id="play-play">Play with words<small>8 rounds: find the picture, build the word, fill the gap, same and opposite.</small></button>
+<a class="step linkstep" href="grammar.html">Grammar: how sentences work<small>Naming words, doing words, whole sentences and pieces, and more.</small></a>
+</div>
+<div class="parent"><p>Parent area</p><p>A new word comes each day, the same for every child of the same age group. Read the sentences together and make up one more of your own. Tap each colored block to hear the parts of the word.</p><p>The game starts at your child's age and gets harder after two right answers in a row, easier after a miss. The voice and speed you chose on the <a href="reading.html">reading page</a> are used here as well.</p></div>
+</section>
+<section id="browse" hidden>
+<div class="card">
+<div class="top"><h2 id="browse-h" tabindex="-1">Look up a word</h2><button id="browse-back" class="small">Back</button></div>
+<form id="find" class="find" role="search"><label for="q">Type a word</label><div class="row"><input id="q" type="search" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="24"><button type="submit" class="primary">Find</button></div></form>
+<p class="pairhead">Pick a picture</p>
+<div class="cats" id="cats"></div>
+<p class="pairhead">Pick a letter</p>
+<div class="abc" id="abc"></div>
+<h3 id="results-head" tabindex="-1" class="results-head"></h3>
+<div class="results" id="results"></div>
+</div>
+</section>
+<section id="entry" hidden>
+<div class="row"><button id="entry-back" class="small">Back</button></div>
+<div id="entry-body"></div>
+</section>
+<section id="game" hidden><div class="card"><div class="top"><b id="title"></b><span class="count" id="count"></span><button id="exit" class="small">Back</button></div><div id="area"></div><div id="sub" class="sub" aria-live="polite"></div><div id="howbox"></div><div class="row"><button id="again" class="small">Hear it again</button><button id="more" class="primary" hidden>Next</button></div></div>
+<div id="alldone" class="done" hidden><b>All done for now!</b>Well done. Time for a break: can you stretch up tall like a tree?<div class="row" style="justify-content:center"><button id="keep">Keep playing</button><button id="stop" class="primary">Finish</button></div></div></section>
+</main>
+<script src="assets/learn-shell.js"></script>
+<script src="assets/topics/food.js"></script>
+<script src="assets/topics/body.js"></script>
+<script src="assets/topics/feelings.js"></script>
+<script src="assets/topics/family.js"></script>
+<script src="assets/topics/vehicles.js"></script>
+<script src="assets/topics/opposites.js"></script>
+<script src="assets/topics/jobs.js"></script>
+<script src="assets/topics/plants.js"></script>
+<script src="assets/topics/habitats.js"></script>
+<script src="assets/topics/seasons.js"></script>
+<script src="assets/topics/space.js"></script>
+<script src="assets/words/animals.js"></script>
+<script src="assets/words/nature.js"></script>
+<script src="assets/words/food-home.js"></script>
+<script src="assets/words/people-feelings.js"></script>
+<script src="assets/words/actions-describing.js"></script>
+<script src="assets/words/school-world.js"></script>
+<script src="assets/words/bigwords.js"></script>
+<script src="assets/words.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>
