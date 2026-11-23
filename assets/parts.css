@@ -1,0 +1,21 @@
+/* Fractions, decimals and percent (parts.html, 23 Nov 2026): the question line with its "?", fraction tiles, grid tiles
+   and the picture of the child's answer after a miss. The rest of the look is learn.css. */
+#prompt:focus{outline:3px solid #0B4F46;outline-offset:2px}
+.scene svg{max-width:360px}
+.qline{text-align:center;font-size:1.3rem;font-weight:800;margin:6px 0 2px}
+.qline .gap{display:inline-block;min-width:1.8em;padding:0 6px;border-bottom:3px dashed #7a5a00;color:#7a5a00;text-align:center}
+.qline .gap.filled{border-bottom:3px solid #1b7a3d;background:#e6f6ea;color:#1b7a3d;border-radius:6px 6px 0 0}
+#choices.tiles:not(.two){grid-template-columns:repeat(auto-fit,minmax(112px,1fr))}
+#choices.tiles.words{grid-template-columns:1fr}
+#choices .tile{min-height:80px}
+#choices .wordtile{font-size:1.3rem;line-height:1.2;overflow-wrap:anywhere}
+.tiles.words .wordtile{font-size:1.15rem}
+.frac{display:inline-flex;flex-direction:column;align-items:center;font-size:1.5rem;font-weight:800;line-height:1.15}
+.frac .top{border-bottom:3px solid currentColor;padding:0 8px}
+.frac .bot{padding:0 8px}
+.tiles.grids .tile svg{width:96px;height:96px}
+.pic{display:flex;flex-direction:column;align-items:center;width:100%}
+.try-pic{margin:8px 0;padding:8px 10px;background:#fffbea;border:1px solid #e3cf7d;border-radius:12px;color:#17312D}
+.try-pic p{margin:0 0 6px;font-size:1.05rem}
+.try-pic svg{display:block;width:100%;max-width:360px;height:auto;margin:0 auto}
+#older-note{text-align:center;margin:0 0 4px}
