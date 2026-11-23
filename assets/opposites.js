@@ -1,7 +1,10 @@
-/* Yaanstep Sprouts: Opposites (ages 3 to 8; Manish, 23 Nov 2026: "Also add opposites along with the graphical
+/* Yaanstep Sprouts: Opposites (ages 3 to 12; Manish, 23 Nov 2026: "Also add opposites along with the graphical
    representation. In between give the example of the words which are not properties, like Plastic. There is no
-   opposite of word Plastic. Explain why like that.").
-   Learn: a moving lesson in 5 parts. Games: Find the opposite, Opposites or not?
+   opposite of word Plastic. Explain why like that." Later the same day he found the words too few, so the word games
+   and the big word list in assets/opposites-words.js were added).
+   Learn: a moving lesson in 5 parts. Picture games: Find the opposite, Opposites or not? (31 drawn pairs).
+   Word games: Word opposites (a word read aloud, word tiles; 3 up to age 6, 4 from 7; 2 of 10 rounds have no opposite)
+   and Make the opposite (un, dis, in, im, ir, il; for ages 7 and up). No word comes back in a visit until its list is used up.
    Some words have no opposite: words for what a thing is made of (plastic, wood, glass, paper, metal, wool) and
    names of things (apple, chair, dog, tree). About 1 round in 4 of Find the opposite is one of these, never two in a row.
    Each game fits the child's age from the profile ("ys-profile"), read only. Original drawings only.
@@ -35,6 +38,17 @@
   var box = function (front) { return '<path d="M10 30l6-8h32l6 8" fill="#a8743f" stroke="' + INK + '" stroke-width="2"/>' + front; };
   function tower(n) { var o = ''; for (var i = 0; i < n; i++) o += '<rect x="23" y="' + (52 - i * 9) + '" width="18" height="8" rx="2" fill="#e8812a" stroke="' + INK + '" stroke-width="1.5"/>'; return o + '<path d="M8 61h48" stroke="#8aa49b" stroke-width="2"/>'; }
   function pencil(x1, x2) { return '<rect x="' + (x1 + 9) + '" y="26" width="' + (x2 - x1 - 16) + '" height="12" fill="#f7c948" stroke="#a87800" stroke-width="2"/><path d="M' + (x1 + 9) + ' 26L' + x1 + ' 32l' + 9 + ' 6z" fill="#f3dcc0" stroke="#a87800" stroke-width="2" stroke-linejoin="round"/><path d="M' + x1 + ' 32l3-1.5v3z" fill="' + INK + '"/><rect x="' + (x2 - 7) + '" y="26" width="7" height="12" rx="2" fill="#f4a3b6" stroke="#a87800" stroke-width="2"/>'; }
+  function table() { return '<rect x="8" y="30" width="48" height="6" rx="2" fill="#a8743f" stroke="' + INK + '" stroke-width="2"/><path d="M14 36v24M50 36v24" stroke="#8a5a33" stroke-width="4" stroke-linecap="round"/>'; }
+  var sky = '<rect x="2" y="2" width="60" height="60" rx="8" fill="#bfe3f7"/><rect x="2" y="54" width="60" height="8" rx="3" fill="#4fb36a"/>';
+  function bird(x, y) { return '<path d="M' + (x - 15) + ' ' + y + 'q7.5-10 15 0q7.5-10 15 0" stroke="' + INK + '" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'; }
+  function shelves(cy) { return '<rect x="12" y="6" width="40" height="54" fill="#c9965a" stroke="#8a5a33" stroke-width="2"/><path d="M12 24h40M12 42h40" stroke="#8a5a33" stroke-width="2"/><circle cx="32" cy="' + cy + '" r="6" fill="#d6453d" stroke="' + INK + '" stroke-width="1.5"/>'; }
+  function dots(xy) { return xy.map(function (p) { return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="6.5" fill="#d6453d" stroke="' + INK + '" stroke-width="1.5"/>'; }).join(''); }
+  function lights(lit) {
+    var on = ['#e23b2e', '#f2c230', '#2fbf5a'], o = '<rect x="20" y="4" width="24" height="56" rx="6" fill="#33413d" stroke="' + INK + '" stroke-width="2"/>';
+    for (var i = 0; i < 3; i++) o += '<circle cx="32" cy="' + (16 + i * 16) + '" r="6" fill="' + (i === lit ? on[i] : '#6b7772') + '"' + (i === lit ? ' stroke="#fff" stroke-width="2"' : '') + '/>';
+    return o;
+  }
+  var water = '<rect x="6" y="18" width="52" height="42" rx="3" fill="#cfeefb" stroke="#3a8fd6" stroke-width="2"/><path d="M6 28h52" stroke="#3a8fd6" stroke-width="2"/>';
   function arrow(up) {
     return up ? '<circle cx="32" cy="12" r="9" fill="#d6453d" stroke="' + INK + '" stroke-width="2"/><path d="M32 60V28M20 38l12-12 12 12" stroke="#1F7A6D" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
       : '<circle cx="32" cy="52" r="9" fill="#d6453d" stroke="' + INK + '" stroke-width="2"/><path d="M32 4v32M20 26l12 12 12-12" stroke="#1F7A6D" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>';
@@ -75,14 +89,60 @@
     clean: { w: 'clean', art: plate + sparkle(50, 14, 6) + sparkle(20, 40, 4), pic: 'a clean plate' },
     dirty: { w: 'dirty', art: plate + '<g fill="#8a5a33"><circle cx="24" cy="30" r="4"/><ellipse cx="40" cy="40" rx="6" ry="3.5"/><circle cx="36" cy="24" r="2.5"/><circle cx="20" cy="44" r="3"/><circle cx="46" cy="28" r="2"/></g>', pic: 'a dirty plate' },
     on: { w: 'on', art: bulb('#f7d34a', '#a87800') + '<g stroke="#e8a21c" stroke-width="3" stroke-linecap="round"><path d="M4 22h6M54 22h6M9 6l5 4M55 6l-5 4"/></g>', pic: 'a light bulb that is on' },
-    off: { w: 'off', art: bulb('#e4e8ea', '#8a989c'), pic: 'a light bulb that is off' }
+    off: { w: 'off', art: bulb('#e4e8ea', '#8a989c'), pic: 'a light bulb that is off' },
+    /* 23 Nov 2026: 14 more picture pairs, so the youngest have more to play with. */
+    awake: { w: 'awake', art: '<circle cx="32" cy="32" r="26" fill="#f7c948" stroke="' + INK + '" stroke-width="2"/><circle cx="23" cy="27" r="6.5" fill="#fff" stroke="' + INK + '" stroke-width="1.5"/><circle cx="41" cy="27" r="6.5" fill="#fff" stroke="' + INK + '" stroke-width="1.5"/><circle cx="23" cy="27" r="3" fill="' + INK + '"/><circle cx="41" cy="27" r="3" fill="' + INK + '"/><circle cx="32" cy="44" r="4" fill="#8f2a24"/>', pic: 'a face with eyes wide open' },
+    asleep: { w: 'asleep', art: '<circle cx="30" cy="34" r="25" fill="#f7c948" stroke="' + INK + '" stroke-width="2"/><path d="M15 31q6 5 12 0M33 31q6 5 12 0" stroke="' + INK + '" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M25 45q5 3 10 0" stroke="' + INK + '" stroke-width="2.5" fill="none" stroke-linecap="round"/><text x="47" y="15" font-size="13" font-weight="700" fill="#2f6fbf">z</text><text x="55" y="7" font-size="9" font-weight="700" fill="#2f6fbf">z</text>', pic: 'a face with eyes closed, asleep' },
+    thick: { w: 'thick', art: door + '<rect x="12" y="10" width="40" height="50" rx="3" fill="#2f6fbf" stroke="' + INK + '" stroke-width="2"/><path d="M17 14v42M47 14v42" stroke="#bcd3f0" stroke-width="2"/><rect x="22" y="22" width="20" height="8" rx="1" fill="#f7c948"/>', pic: 'a thick book' },
+    thin: { w: 'thin', art: door + '<rect x="28" y="10" width="8" height="50" rx="2" fill="#2f6fbf" stroke="' + INK + '" stroke-width="2"/><rect x="30" y="22" width="4" height="8" fill="#f7c948"/>', pic: 'a thin book' },
+    over: { w: 'over', art: door + table() + '<circle cx="32" cy="16" r="9" fill="#d6453d" stroke="' + INK + '" stroke-width="2"/>', pic: 'a ball over a table' },
+    under: { w: 'under', art: door + table() + '<circle cx="32" cy="51" r="9" fill="#d6453d" stroke="' + INK + '" stroke-width="2"/>', pic: 'a ball under a table' },
+    sweet: { w: 'sweet', art: '<path d="M16 34h32l-5 24H21z" fill="#f4a3b6" stroke="#a8436a" stroke-width="2"/><path d="M22 36l2 20M32 36v20M42 36l-2 20" stroke="#a8436a" stroke-width="1.2" opacity=".6"/><path d="M12 35q0-16 20-18q20 2 20 18z" fill="#fff4e0" stroke="#a87800" stroke-width="2"/><circle cx="32" cy="12" r="5" fill="#d6453d" stroke="#8f2a24" stroke-width="1.5"/><g fill="#2f6fbf"><rect x="20" y="26" width="4" height="2" rx="1"/><rect x="36" y="23" width="4" height="2" rx="1"/><rect x="42" y="29" width="4" height="2" rx="1"/></g>', pic: 'a sweet cupcake' },
+    sour: { w: 'sour', art: '<path d="M40 19q6-9 14-7" stroke="#3f9d4a" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="32" cy="36" rx="24" ry="17" fill="#f7e04a" stroke="#a89000" stroke-width="2"/><path d="M8 36H4M56 36h4" stroke="#a89000" stroke-width="3" stroke-linecap="round"/><path d="M20 30q4-3 8 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>', pic: 'a sour lemon' },
+    straight: { w: 'straight', art: '<path d="M8 56L56 8" stroke="#e8812a" stroke-width="7" stroke-linecap="round"/>', pic: 'a straight line' },
+    curved: { w: 'curved', art: '<path d="M8 54Q32-6 56 54" stroke="#e8812a" stroke-width="7" fill="none" stroke-linecap="round"/>', pic: 'a curved line' },
+    high: { w: 'high', art: sky + bird(32, 14), pic: 'a bird flying high in the sky' },
+    low: { w: 'low', art: sky + bird(32, 48), pic: 'a bird flying low, near the grass' },
+    hard: { w: 'hard', art: '<rect x="6" y="22" width="52" height="26" rx="2" fill="#c0563b" stroke="#7a2e1d" stroke-width="2"/><path d="M6 35h52M24 22v13M42 35v13" stroke="#7a2e1d" stroke-width="1.5"/>', pic: 'a hard brick' },
+    soft: { w: 'soft', art: '<path d="M10 20q22-8 44 0q4 14 0 28q-22 8-44 0q-4-14 0-28z" fill="#e6f0f7" stroke="#6f8796" stroke-width="2"/><path d="M18 28q14 6 28 0M18 40q14-6 28 0" stroke="#b8c8d4" stroke-width="2" fill="none"/>', pic: 'a soft pillow' },
+    top: { w: 'top', art: shelves(18), pic: 'a ball on the top shelf' },
+    bottom: { w: 'bottom', art: shelves(54), pic: 'a ball on the bottom shelf' },
+    many: { w: 'many', art: dots([[12, 12], [32, 12], [52, 12], [12, 32], [32, 32], [52, 32], [12, 52], [32, 52], [52, 52], [22, 22], [42, 22], [22, 42], [42, 42]]), pic: 'many red dots' },
+    few: { w: 'few', art: dots([[22, 34], [42, 34]]), pic: 'a few red dots' },
+    same: { w: 'same', art: '<polygon points="16,14 28,40 4,40" fill="#3f9d4a" stroke="' + INK + '" stroke-width="2" stroke-linejoin="round"/><polygon points="48,14 60,40 36,40" fill="#3f9d4a" stroke="' + INK + '" stroke-width="2" stroke-linejoin="round"/><path d="M4 54h56" stroke="#8aa49b" stroke-width="2"/>', pic: 'two green triangles that are the same' },
+    different: { w: 'different', art: '<polygon points="16,14 28,40 4,40" fill="#3f9d4a" stroke="' + INK + '" stroke-width="2" stroke-linejoin="round"/><circle cx="48" cy="28" r="12" fill="#e8812a" stroke="' + INK + '" stroke-width="2"/><path d="M4 54h56" stroke="#8aa49b" stroke-width="2"/>', pic: 'a green triangle and an orange circle that are different' },
+    left: { w: 'left', art: '<circle cx="10" cy="32" r="8" fill="#d6453d" stroke="' + INK + '" stroke-width="2"/><path d="M60 32H26M36 20L24 32l12 12" stroke="#1F7A6D" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>', pic: 'an arrow pointing left to a ball' },
+    right: { w: 'right', art: '<circle cx="54" cy="32" r="8" fill="#d6453d" stroke="' + INK + '" stroke-width="2"/><path d="M4 32h34M28 20l12 12-12 12" stroke="#1F7A6D" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>', pic: 'an arrow pointing right to a ball' },
+    stop: { w: 'stop', art: lights(0), pic: 'a traffic light with the top red light on' },
+    go: { w: 'go', art: lights(2), pic: 'a traffic light with the bottom green light on' },
+    narrow: { w: 'narrow', art: '<rect x="2" y="2" width="60" height="60" rx="8" fill="#bfe3a7"/><rect x="27" y="2" width="10" height="60" fill="#c9b28a" stroke="#8a6a4a" stroke-width="1.5"/>', pic: 'a narrow path through the grass' },
+    wide: { w: 'wide', art: '<rect x="2" y="2" width="60" height="60" rx="8" fill="#bfe3a7"/><rect x="10" y="2" width="44" height="60" fill="#8e9aa6" stroke="#5b6670" stroke-width="1.5"/><path d="M32 6v10M32 26v10M32 46v10" stroke="#fff" stroke-width="3"/>', pic: 'a wide road through the grass' },
+    float: { w: 'float', art: water + '<path d="M18 21h28l-5 8H23z" fill="#d6453d" stroke="' + INK + '" stroke-width="2" stroke-linejoin="round"/><path d="M32 21V6l10 11z" fill="#fff" stroke="' + INK + '" stroke-width="1.5" stroke-linejoin="round"/>', pic: 'a toy boat floating on the water' },
+    sink: { w: 'sink', art: water + '<ellipse cx="32" cy="53" rx="12" ry="6" fill="#8e9aa6" stroke="#5b6670" stroke-width="2"/><circle cx="30" cy="40" r="2" fill="none" stroke="#3a8fd6" stroke-width="1.5"/><circle cx="35" cy="33" r="1.6" fill="none" stroke="#3a8fd6" stroke-width="1.5"/>', pic: 'a stone sinking to the bottom of the water' }
   };
   var PAIRS = [['big', 'small'], ['hot', 'cold'], ['full', 'empty'], ['tall', 'short-h'], ['fast', 'slow'], ['happy', 'sad'], ['up', 'down'], ['open', 'closed'], ['wet', 'dry'],
-    ['day', 'night'], ['long', 'short-l'], ['heavy', 'light'], ['loud', 'quiet'], ['in', 'out'], ['old', 'new'], ['clean', 'dirty'], ['on', 'off']];
+    ['day', 'night'], ['long', 'short-l'], ['heavy', 'light'], ['loud', 'quiet'], ['in', 'out'], ['old', 'new'], ['clean', 'dirty'], ['on', 'off'],
+    ['awake', 'asleep'], ['thick', 'thin'], ['over', 'under'], ['sweet', 'sour'], ['straight', 'curved'], ['high', 'low'], ['hard', 'soft'],
+    ['top', 'bottom'], ['many', 'few'], ['same', 'different'], ['left', 'right'], ['stop', 'go'], ['narrow', 'wide'], ['float', 'sink']];
+  /** What each picture pair is about. Words that share one are never choices together, so a round has one right answer
+      and never offers a word that means nearly the same as the answer (high and up, soft and quiet, few and empty). */
+  var PSENSE = { big: 'size', hot: 'temp', full: 'full', tall: 'height', fast: 'speed move', happy: 'happy', up: 'vert', open: 'open', wet: 'wet',
+    day: 'day light sleep', long: 'length', heavy: 'weight', loud: 'vol sleep', 'in': 'inout', old: 'age', clean: 'clean', on: 'light',
+    awake: 'sleep', thick: 'width size', over: 'vert', sweet: 'taste', straight: 'straight', high: 'vert height', hard: 'hard vol',
+    top: 'vert', many: 'more full', same: 'same', left: 'left', stop: 'move', narrow: 'width size', float: 'vert' };
   /** Ages 3 and 4 start with the pairs that are easiest to see. */
-  var EASY = ['big', 'hot', 'full', 'happy', 'up', 'open', 'wet', 'day', 'in', 'on', 'fast'];
-  var OPP = {};
-  PAIRS.forEach(function (p) { OPP[p[0]] = p[1]; OPP[p[1]] = p[0]; });
+  var EASY = ['big', 'hot', 'full', 'happy', 'up', 'open', 'wet', 'day', 'in', 'on', 'fast', 'awake', 'over', 'sweet', 'hard', 'stop', 'many'];
+  var OPP = {}, SENSES = {};
+  PAIRS.forEach(function (p) {
+    OPP[p[0]] = p[1]; OPP[p[1]] = p[0];
+    p.forEach(function (id) { SENSES[id] = PSENSE[p[0]].split(' '); });
+  });
+  /** Senses of a word by what it says ("short" is about height and length). */
+  function sensesOf(word) {
+    var out = [];
+    Object.keys(W).forEach(function (id) { if (W[id].w === word) SENSES[id].forEach(function (s) { if (out.indexOf(s) < 0) out.push(s); }); });
+    return out;
+  }
   /** The words each word is the opposite of, by what they say: "short" has two (tall and long). */
   function oppWords(word) {
     var out = [];
@@ -118,10 +178,14 @@
   /** Wrong choices: words that are not the word, not its opposite, and not the same word as any other choice. */
   function wrongWords(word, n, lv) {
     var said = [word === 'none' ? '' : label(word)], bad = W[word] ? oppWords(W[word].w) : [];
+    // Never a word about the same thing as the word or its opposite (no second right answer, no near-twin of the answer).
+    var banned = [];
+    if (W[word]) [W[word].w].concat(bad).forEach(function (w) { banned = banned.concat(sensesOf(w)); });
     var pool = shuffle(Object.keys(W).filter(function (id) { return lv > 0 || EASY.indexOf(id) > -1 || EASY.indexOf(OPP[id]) > -1; })), out = [];
     pool.forEach(function (id) {
       var w = W[id].w;
       if (out.length >= n || id === word || said.indexOf(w) > -1 || bad.indexOf(w) > -1) return;
+      if (sensesOf(w).some(function (s) { return banned.indexOf(s) > -1; })) return;
       out.push(id); said.push(w);
     });
     return out;
@@ -144,6 +208,22 @@
     var r;
     do { r = shuffle(Array.apply(null, Array(total - 1)).map(function (x, i) { return i + 1; })).slice(0, 2).sort(function (a, b) { return a - b; }); } while (r[1] - r[0] < 2);
     return r;
+  }
+
+  /* ---------- no repeats within a visit: each game keeps its own list of what it has asked (in memory only) ---------- */
+  var USED = {}, LAST = {};
+  /** A pick from list that this game has not asked yet in this visit. Once the list is used up it starts again (never the last one twice). */
+  function freshIn(key, list) {
+    var u = USED[key] = USED[key] || {};
+    var pool = list.filter(function (x) { return !u[x]; });
+    if (!pool.length) {
+      u = USED[key] = {};
+      pool = list.filter(function (x) { return x !== LAST[key]; });
+      if (!pool.length) pool = list.slice();
+    }
+    var pick = pool[rnd(pool.length)];
+    u[pick] = 1; LAST[key] = pick;
+    return pick;
   }
 
   /* ---------- pictures for the lesson and the games ---------- */
@@ -187,10 +267,10 @@
     var q;
     if (plan.indexOf(round) > -1) {
       var nones = lv === 0 ? NONE_EASY : Object.keys(NONE);
-      q = makeFind(lv, n, 'none', ctx.fresh(nones));
+      q = makeFind(lv, n, 'none', freshIn('find-none', nones));
     } else {
       var pairIds = PAIRS.filter(function (p) { return lv > 0 || EASY.indexOf(p[0]) > -1; }).map(function (p) { return p[0]; });
-      var p0 = ctx.fresh(pairIds), w = rnd(2) ? p0 : OPP[p0];
+      var p0 = freshIn('find', pairIds), w = rnd(2) ? p0 : OPP[p0];
       q = makeFind(lv, n, 'pair', w, rnd(2) === 1);
     }
     var labels = {};
@@ -241,7 +321,7 @@
   }
   function pairsGame(area, ctx) {
     var lv = level(age()), ids = Object.keys(OPP).filter(function (id) { return lv > 0 || EASY.indexOf(id) > -1 || EASY.indexOf(OPP[id]) > -1; });
-    var q = makePair(lv, rnd(2) === 1, ctx.fresh(ids));
+    var q = makePair(lv, rnd(2) === 1, freshIn('pairs', ids));
     ctx.set({ game: 'pairs', q: q, ans: q.ans, right: [q.ans], choices: ['yes', 'no'] });
     ctx.ask(area, 'Are ' + q.la + ' and ' + q.lb + ' opposites?');
     var show = el('div', { 'class': 'pairshow', id: 'pair' });
@@ -267,6 +347,215 @@
       });
       refocus();
     }, function (v) { return names[v]; }, 'tiles two'));
+  }
+
+  /* ---------- the word list (assets/opposites-words.js) ---------- */
+  var DATA = window.YS_OPPOSITES || {};
+  var WP = DATA.wordPairs || [], PRE = DATA.prefixes || [], NW = DATA.noneWords || [], GROUPS = DATA.groups || {};
+  var NOPE = 'no-opposite'; // the value of the "No opposite!" tile in the word games
+  /** Each word: its opposites, what it is about (its senses) and its groups. */
+  var WX = {};
+  WP.forEach(function (p) {
+    [[p.a, p.b], [p.b, p.a]].forEach(function (x) {
+      var e = WX[x[0]] = WX[x[0]] || { opp: [], sense: [], groups: [] };
+      if (e.opp.indexOf(x[1]) < 0) e.opp.push(x[1]);
+      p.sense.forEach(function (s) { if (e.sense.indexOf(s) < 0) e.sense.push(s); });
+      if (e.groups.indexOf(p.group) < 0) e.groups.push(p.group);
+    });
+  });
+  var NONEW = {};
+  NW.forEach(function (n) { NONEW[n.w] = n; });
+  /** The hardest pair a child sees in the word games: up to age 4 for ages 3 and 4, up to 6 for ages 5 and 6 and with no profile,
+      then one year above the child's age from 7 (so ages 11 and 12 get the whole list). */
+  function wordMax(a) { return !a ? 6 : a <= 4 ? 4 : a <= 6 ? 6 : a + 1; }
+  /** Word choices: 3 up to age 6, 4 from age 7. */
+  function wordChoices(a) { return a >= 7 ? 4 : 3; }
+  function shareSense(a, b) { return a.some(function (s) { return b.indexOf(s) > -1; }); }
+  /** One is the other with a bit added (quick and quickly, light and lighter): too close to be a fair wrong choice. */
+  function related(a, b) { var n = Math.min(a.length, b.length); return n >= 3 && (a.indexOf(b) === 0 || b.indexOf(a) === 0); }
+  /** n wrong words for a round: from the same group first, never about the same thing as the word or its answer, each about something different. */
+  function wrongWordList(words, n, maxAge, group) {
+    var banned = [];
+    words.forEach(function (w) { if (WX[w]) banned = banned.concat(WX[w].sense, [].concat.apply([], WX[w].opp.map(function (o) { return WX[o].sense; }))); });
+    var out = [], used = banned.slice();
+    function take(list) {
+      shuffle(list).forEach(function (p) {
+        shuffle([p.a, p.b]).forEach(function (w) {
+          if (out.length >= n || out.indexOf(w) > -1 || words.indexOf(w) > -1 || NONEW[w]) return;
+          if (shareSense(WX[w].sense, used)) return;
+          if (words.some(function (x) { return related(x, w) || (WX[x] && WX[x].opp.some(function (o) { return related(o, w); })); })) return;
+          out.push(w); used = used.concat(WX[w].sense);
+        });
+      });
+    }
+    var young = WP.filter(function (p) { return p.age <= maxAge; });
+    take(young.filter(function (p) { return p.group === group; }));
+    if (out.length < n) take(young);
+    if (out.length < n) take(WP);
+    return out;
+  }
+  /** A word round. kind "pair": pair i, shown from side (0: a, 1: b). kind "none": a word with no opposite. */
+  function makeWord(maxAge, n, kind, pick, side, withNone) {
+    if (kind === 'none') {
+      var nw = NONEW[pick] || NW[rnd(NW.length)];
+      return { game: 'words', kind: 'none', word: nw.w, choices: shuffle(wrongWordList([], n, maxAge, '')).concat([NOPE]), ans: NOPE, why: whyNoneWord(nw) };
+    }
+    var p = WP[pick != null ? pick : rnd(WP.length)], s = side != null ? side : rnd(2);
+    var word = s ? p.b : p.a, ans = s ? p.a : p.b;
+    var ch = shuffle([ans].concat(wrongWordList([word, ans], n - 1, Math.max(maxAge, p.age), p.group)));
+    if (withNone) ch.push(NOPE);
+    return { game: 'words', kind: 'pair', word: word, ans: ans, group: p.group, groupName: GROUPS[p.group] || '', pair: [p.a, p.b], choices: ch };
+  }
+  function whyNoneWord(n) {
+    if (n.kind === 'made') return cap(n.w) + ' tells us what ' + an(n.thing) + ' can be made of. It is not a way the ' + n.thing + ' can be, like hot or cold, so it has no opposite.';
+    return cap(n.w) + ' is the name of a thing. It tells us what something is, not how it is. ' + cap(an(n.w)) + ' can be ' + n.can[0] + ' or ' + n.can[1] + ', but the word ' + n.w + ' has no opposite.';
+  }
+  function wordLabel(v) { return v === NOPE ? 'No opposite!' : v; }
+
+  /* A word card with no picture, and lesson pictures drawn with words. */
+  function bigWord(text, id) {
+    var c = el('div', { 'class': 'wordcard words-only' });
+    if (id) c.id = id;
+    c.appendChild(el('b', {}, text));
+    return c;
+  }
+  function wordBox(x, w, fill) { return '<rect x="' + (x - 62) + '" y="26" width="124" height="44" rx="10" fill="' + (fill || '#f1f7f5') + '" stroke="#1F7A6D" stroke-width="2"/><text x="' + x + '" y="55" text-anchor="middle" font-size="' + (w.length > 10 ? 15 : 19) + '" font-weight="800" fill="' + INK + '">' + w + '</text>'; }
+  function wordPairMovie(a, b) {
+    var out = '<g' + at(0.2) + '>' + wordBox(66, a) + '</g><g' + at(1.6) + '>' + wordBox(254, b) + '</g>';
+    out += '<g' + at(0.9) + '><path d="M132 48h56M140 40l-8 8 8 8M180 40l8 8-8 8" stroke="#1F7A6D" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="160" y="94" text-anchor="middle" font-size="14" font-weight="700" fill="#1b7a3d">opposites</text></g>';
+    return { svg: out, vb: '0 0 320 104', label: 'The word ' + a + ', and the word ' + b + '. An arrow both ways joins them: ' + a + ' and ' + b + ' are opposites.' };
+  }
+  function wordNoneMovie(w) {
+    var out = '<g' + at(0.2) + '>' + wordBox(66, w) + '</g>';
+    out += '<g' + at(1.0) + '><path d="M132 48h56M140 40l-8 8 8 8M180 40l8 8-8 8" stroke="#8aa49b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M148 32l24 32M172 32l-24 32" stroke="#C2410C" stroke-width="5" stroke-linecap="round"/></g>';
+    out += '<g' + at(1.8) + '>' + wordBox(254, 'No opposite!', '#fff7e0') + '</g>';
+    return { svg: out, vb: '0 0 320 104', label: 'The word ' + w + '. An arrow to an opposite is crossed out, and a card says: No opposite!' };
+  }
+  /* Tiles in the word games say their word when they get focus with the keyboard (not when the game moves focus itself). */
+  var quietFocus = false;
+  function speakOnFocus(row, ctx, sayOf) {
+    [].forEach.call(row.querySelectorAll('button'), function (b) {
+      b.addEventListener('focus', function () { if (!quietFocus) ctx.say(sayOf(b.getAttribute('data-v'))); });
+    });
+    return row;
+  }
+  function refocusQuiet() { quietFocus = true; refocus(); quietFocus = false; }
+  function markNope(row) { var t = row.querySelector('button[data-v="' + NOPE + '"]'); if (t) t.classList.add('none-tile'); return row; }
+
+  /* ---------- 3. Word opposites: a word, read aloud; pick its opposite from word tiles ---------- */
+  var wordPlan = [];
+  function wordsGame(area, ctx) {
+    var a = age(), max = wordMax(a), n = wordChoices(a), round = ctx.round();
+    if (round === 0) wordPlan = planNone(ctx.rounds);
+    var q;
+    if (wordPlan.indexOf(round) > -1) {
+      q = makeWord(max, n, 'none', freshIn('words-none', NW.map(function (x) { return x.w; })));
+    } else {
+      // A pair not asked yet in this visit, shown from a side whose word has not been asked yet either.
+      var shown = USED['words-shown'] = USED['words-shown'] || {};
+      var ok = [];
+      WP.forEach(function (p, i) { if (p.age <= max && (!shown[p.a] || !shown[p.b])) ok.push(String(i)); });
+      if (!ok.length) { shown = USED['words-shown'] = {}; WP.forEach(function (p, i) { if (p.age <= max) ok.push(String(i)); }); }
+      var i = +freshIn('words', ok), p = WP[i];
+      var side = shown[p.a] ? 1 : shown[p.b] ? 0 : rnd(2);
+      q = makeWord(max, n, 'pair', i, side, rnd(2) === 1);
+      shown[q.word] = 1;
+    }
+    var labels = {};
+    q.choices.forEach(function (v) { labels[v] = wordLabel(v); });
+    ctx.set({ game: 'words', q: q, kind: q.kind, word: q.word, label: q.word, labels: labels, ans: q.ans, right: [q.ans], choices: q.choices, maxAge: max });
+    ctx.ask(area, 'What is the opposite of ' + q.word + '?');
+    area.appendChild(bigWord(q.word, 'word'));
+    if (q.kind === 'pair' && q.groupName) area.appendChild(el('p', { 'class': 'muted center', id: 'word-group' }, q.groupName));
+    var row = ctx.tiles(q.choices, function (v) { return el('span', { 'class': 'wordtile' }, wordLabel(v)); }, function (v, b) {
+      if (v === q.ans) {
+        b.classList.add('right');
+        if (q.kind === 'none') ctx.win('Yes! ' + q.why);
+        else ctx.win('Yes! ' + cap(q.word) + ' and ' + q.ans + ' are opposites.');
+        return;
+      }
+      var why;
+      if (v === NOPE) why = 'You tapped No opposite! But ' + q.word + ' does have an opposite: ' + q.ans + '.';
+      else if (q.kind === 'none') why = 'You tapped ' + v + '. ' + cap(v) + ' is the opposite of ' + WX[v].opp[0] + '. But ' + q.word + ' is not ' + v + ' or ' + WX[v].opp[0] + '. ' + (NONEW[q.word].kind === 'made' ? cap(q.word) + ' tells us what a thing is made of.' : cap(q.word) + ' is the name of a thing.');
+      else why = 'You tapped ' + v + '. ' + cap(v) + ' is the opposite of ' + WX[v].opp[0] + ', not of ' + q.word + '.';
+      ctx.miss(b, why, function (box) {
+        box.appendChild(el('p', {}, why));
+        if (q.kind === 'none') {
+          var others = NW.filter(function (x) { return x.w !== q.word; }), k = others[rnd(others.length)];
+          box.appendChild(ctx.moviePanel(function () { return wordNoneMovie(k.w); }));
+          box.appendChild(el('p', { id: 'lesson-say' }, 'Ask: is this word a way something can be, or something we do? If not, it has no opposite. ' + whyNoneWord(k)));
+        } else if (v === NOPE) {
+          box.appendChild(ctx.moviePanel(function () { return wordPairMovie(q.word, q.ans); }));
+          box.appendChild(el('p', { id: 'lesson-say' }, cap(q.word) + ' is a way a thing can be, or something we can do, so it has an opposite. The opposite of ' + q.word + ' is ' + q.ans + '.'));
+        } else {
+          var ex = WP.filter(function (p) { return p.group === q.group && p.age <= 6 && p.a !== q.word && p.b !== q.word && p.a !== q.ans && p.b !== q.ans; });
+          var e = ex.length ? ex[rnd(ex.length)] : WP[0];
+          box.appendChild(ctx.moviePanel(function () { return wordPairMovie(e.a, e.b); }));
+          box.appendChild(el('p', { id: 'lesson-say' }, 'Opposites are as different as they can be. ' + cap(e.a) + ' is the opposite of ' + e.b + '. So think: what is as different from ' + q.word + ' as it can be?'));
+        }
+      });
+      refocusQuiet();
+    }, wordLabel, 'tiles two words');
+    area.appendChild(speakOnFocus(markNope(row), ctx, wordLabel));
+  }
+
+  /* ---------- 4. Make the opposite: pick the beginning (un, dis, in, im, ir, il) that turns a word into its opposite ---------- */
+  var BEGIN = ['un', 'dis', 'in', 'im'], MORE_BEGIN = ['ir', 'il'];
+  /** How the voice says a beginning: the short ones are spelled out, so "im" is not read as "I'm". */
+  var SAYPRE = { un: 'un', dis: 'dis', 'in': 'in', im: 'i, m', ir: 'i, r', il: 'i, l' };
+  /** Prefix roots for an age: the age 7 words under 7 (with a gentle note), then up to a year above the child's age. */
+  function prefixMax(a) { return !a || a < 7 ? 7 : a + 1; }
+  function prefixChoices(a) { return a >= 7 ? 4 : 3; }
+  function makePrefix(n, root) {
+    var it = PRE.filter(function (x) { return x.root === root; })[0] || PRE[rnd(PRE.length)];
+    var wrong = shuffle(BEGIN.filter(function (b) { return b !== it.pre && it.avoid.indexOf(b) < 0; }));
+    var spare = MORE_BEGIN.filter(function (b) { return b !== it.pre && it.avoid.indexOf(b) < 0; });
+    // ir and il only come before r and l: they are a wrong choice first for a word that starts with that letter, otherwise only when more are needed.
+    wrong = spare.filter(function (b) { return it.root.charAt(0) === b.charAt(1); }).concat(wrong, spare.filter(function (b) { return it.root.charAt(0) !== b.charAt(1); }));
+    return { game: 'prefix', root: it.root, ans: it.pre, word: it.word, pos: it.pos, ex: it.ex, choices: shuffle([it.pre].concat(wrong.slice(0, n - 1))) };
+  }
+  function meaning(it) { return it.pos === 'adj' ? cap(it.word) + ' means not ' + it.root + '.' : cap(it.word) + ' is the opposite of ' + it.root + '.'; }
+  function prefixMovie(pre, root) {
+    var out = '<g' + at(0.2) + '><rect x="10" y="22" width="70" height="44" rx="10" fill="#fff7e0" stroke="#b07d00" stroke-width="2"/><text x="45" y="51" text-anchor="middle" font-size="20" font-weight="800" fill="' + INK + '">' + pre + '</text></g>';
+    out += '<text x="94" y="52" text-anchor="middle" font-size="24" font-weight="800" fill="#1F7A6D"' + at(0.6) + '>+</text>';
+    out += '<g' + at(0.9) + '><rect x="108" y="22" width="96" height="44" rx="10" fill="#f1f7f5" stroke="#1F7A6D" stroke-width="2"/><text x="156" y="51" text-anchor="middle" font-size="' + (root.length > 8 ? 13 : 17) + '" font-weight="800" fill="' + INK + '">' + root + '</text></g>';
+    out += '<text x="216" y="52" text-anchor="middle" font-size="24" font-weight="800" fill="#1F7A6D"' + at(1.4) + '>=</text>';
+    out += '<g' + at(1.9) + '><rect x="228" y="22" width="86" height="44" rx="10" fill="#e6f6ea" stroke="#1b7a3d" stroke-width="2"/><text x="271" y="51" text-anchor="middle" font-size="' + ((pre + root).length > 9 ? 11 : 15) + '" font-weight="800" fill="' + INK + '">' + pre + root + '</text></g>';
+    return { svg: out, vb: '0 0 320 88', label: 'The beginning ' + pre + ' and the word ' + root + ' join to make ' + pre + root + '.' };
+  }
+  function prefixGame(area, ctx) {
+    var a = age(), max = prefixMax(a), n = prefixChoices(a);
+    var roots = PRE.filter(function (x) { return x.age <= max; }).map(function (x) { return x.root; });
+    var q = makePrefix(n, freshIn('prefix', roots)), it = PRE.filter(function (x) { return x.root === q.root; })[0];
+    ctx.set({ game: 'prefix', q: q, word: q.root, label: q.root, built: q.word, ans: q.ans, right: [q.ans], choices: q.choices });
+    if (!a || a < 7) area.appendChild(el('p', { 'class': 'muted', id: 'older-note' }, 'This game is for ages 7 and up, but anyone can have a go. A grown-up can help.'));
+    ctx.ask(area, 'Which beginning makes the opposite of ' + q.root + '?');
+    var card = bigWord('', 'word'), shown = card.querySelector('b');
+    shown.appendChild(el('span', { 'class': 'sr' }, 'a gap, then '));
+    shown.appendChild(el('span', { 'class': 'blank', 'aria-hidden': 'true' }, '?'));
+    shown.appendChild(document.createTextNode(q.root));
+    area.appendChild(card);
+    var row = ctx.tiles(q.choices, function (v) { return el('span', { 'class': 'wordtile' }, v + '-'); }, function (v, b) {
+      if (v === q.ans) {
+        b.classList.add('right');
+        shown.innerHTML = '';
+        shown.appendChild(el('span', { 'class': 'pre' }, q.ans));
+        shown.appendChild(document.createTextNode(q.root));
+        var text = 'Yes! ' + cap(q.ans) + ' and ' + q.root + ' make ' + q.word + '. ' + meaning(it) + ' ' + q.ex;
+        ctx.win(text, 'Yes! ' + cap(q.word) + '. ' + meaning(it) + ' ' + q.ex);
+        return;
+      }
+      var why = 'You tapped ' + v + '. ' + cap(v) + ' and ' + q.root + ' do not make a word we use. Try saying each one out loud.';
+      ctx.miss(b, why, function (box) {
+        box.appendChild(el('p', {}, why));
+        var others = PRE.filter(function (x) { return x.pre === q.ans && x.root !== q.root; }), e = others.length ? others[rnd(others.length)] : it;
+        box.appendChild(ctx.moviePanel(function () { return prefixMovie(e.pre, e.root); }));
+        var rule = { im: 'Im often goes before words that start with p, b or m.', ir: 'Ir goes before some words that start with r.', il: 'Il goes before some words that start with l.' }[q.ans] || 'Un, dis and in all can mean not, or the opposite of.';
+        box.appendChild(el('p', { id: 'lesson-say' }, 'A beginning can turn a word into its opposite. ' + cap(e.pre) + ' and ' + e.root + ' make ' + e.word + '. ' + rule + ' Say each choice with ' + q.root + ': which one sounds like a real word?'));
+      });
+      refocusQuiet();
+    }, function (v) { return v; }, 'tiles two words');
+    area.appendChild(speakOnFocus(row, ctx, function (v) { return SAYPRE[v] || v; }));
   }
 
   /* ---------- the lesson ---------- */
@@ -307,7 +596,9 @@
     var a = age(), note = $('level-note');
     if (!note) return;
     var t = (a ? 'Set for age ' + a + ', from your child\'s profile.' : 'No age picked, so the games are set in the middle, for about ages 5 and 6. A grown-up can pick an age on the Yaanstep Sprouts page.') +
-      ' Find the opposite shows ' + choiceCount(a) + ' pictures to pick from.';
+      ' Find the opposite shows ' + choiceCount(a) + ' pictures to pick from. Word opposites shows ' + wordChoices(a) + ' words, ' +
+      (a && a < 5 ? 'with the easiest words (it suits ages 5 and up best).' : a >= 7 ? 'with harder words as your child grows.' : 'with common words.') +
+      (a >= 7 ? ' Make the opposite fits age ' + a + '.' : ' Make the opposite is for ages 7 and up, but anyone can have a go.');
     if (note.textContent !== t) note.textContent = t;
   }
   function focusPrompt(fn) {
@@ -321,9 +612,11 @@
 
   S.run({
     area: 'english',
-    names: { learn: 'Learn opposites', find: 'Find the opposite', pairs: 'Opposites or not?' },
+    names: { learn: 'Learn opposites', find: 'Find the opposite', pairs: 'Opposites or not?', words: 'Word opposites', prefix: 'Make the opposite' },
     learn: LEARN,
-    games: { find: focusPrompt(find), pairs: focusPrompt(pairsGame) },
+    games: { find: focusPrompt(find), pairs: focusPrompt(pairsGame), words: focusPrompt(wordsGame), prefix: focusPrompt(prefixGame) },
+    // About 1 round in 5 of Word opposites has no opposite: 2 of 10.
+    rounds: { words: 10 },
     init: function () {
       showLevel();
       document.addEventListener('click', showLevel);
@@ -331,9 +624,14 @@
     }
   });
   // Test hook, read only: the question makers, the words and the plan of rounds with no opposite.
-  window.YS_OPPOSITES = {
-    age: age, level: level, choiceCount: choiceCount, pairs: PAIRS, none: Object.keys(NONE), easy: EASY, whyNone: whyNone,
+  // It is added to the word list's own object (assets/opposites-words.js), which keeps its groups, wordPairs, prefixes and noneWords.
+  var hook = {
+    age: age, level: level, choiceCount: choiceCount, pairs: PAIRS, none: Object.keys(NONE), easy: EASY, whyNone: whyNone, senses: SENSES,
     labels: Object.keys(W).reduce(function (o, k) { o[k] = W[k].w; return o; }, {}),
-    make: { find: makeFind, pairs: makePair }, planNone: planNone, plan: function () { return plan.slice(); }
+    make: { find: makeFind, pairs: makePair, words: makeWord, prefix: makePrefix }, planNone: planNone, plan: function () { return plan.slice(); },
+    wordPlan: function () { return wordPlan.slice(); }, wordMax: wordMax, wordChoices: wordChoices, prefixMax: prefixMax, prefixChoices: prefixChoices,
+    noOpposite: NOPE, whyNoneWord: whyNoneWord
   };
+  Object.keys(hook).forEach(function (k) { DATA[k] = hook[k]; });
+  window.YS_OPPOSITES = DATA;
 })();

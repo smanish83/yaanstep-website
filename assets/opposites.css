@@ -11,3 +11,12 @@
 .pairshow .wordcard{margin:4px 0;max-width:150px;padding:6px 10px}.pairshow .wordcard svg{width:84px;height:84px}
 .pairshow .and{font-size:1.3rem;font-weight:800}
 .wordtile.yn{font-size:1.1rem}
+/* Word opposites and Make the opposite (23 Nov 2026): word tiles, the big word card with no picture, the gap for the beginning. */
+.tiles.words .tile{min-height:64px}
+.tiles.words .wordtile{font-size:1.25rem;overflow-wrap:anywhere;line-height:1.2}
+.wordcard.words-only{max-width:100%;padding:14px 18px}
+.wordcard.words-only b{font-size:1.9rem;overflow-wrap:anywhere;text-align:center;line-height:1.2}
+.wordcard .blank{display:inline-block;min-width:1.6em;margin-right:2px;border-bottom:3px solid #b07d00;color:#7a5a00;text-align:center}
+.wordcard .pre{color:#1b7a3d;text-decoration:underline;text-decoration-thickness:3px}
+.center{text-align:center}
+#word-group{margin:0}
