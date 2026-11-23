@@ -71,7 +71,8 @@ button.chip{border-color:var(--teal);text-decoration:underline;text-underline-of
 .split.big .block,.split.big .whole{animation:blockIn .5s ease-out both}
 .mv-pop{animation:mvIn .5s ease-out both}
 }
-@keyframes blockIn{from{opacity:0;transform:translateY(14px) scale(.8)}to{opacity:1;transform:none}}
+@keyframes blockIn{from{transform:translateY(14px) scale(.8)}to{transform:none}}
+/* Blocks move in but never fade, so their text is always readable (and passes the contrast check) while they arrive. */
 /* grammar */
 .sentence{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0}
 .wb{display:inline-flex;flex-direction:column;align-items:center;font-size:1.25rem;font-weight:600;padding:6px 10px;border-radius:10px;border:2px solid #c6e3da;background:#fff;min-height:48px;justify-content:center}
