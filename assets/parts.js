@@ -701,7 +701,7 @@
     if (p === 25) return '25% is a quarter. Half of ' + show(W) + ' is ' + show(W / 2) + ', and half of that is ' + show(W / 4) + '.';
     if (p === 75) return '75% is three quarters. A quarter of ' + show(W) + ' is ' + show(W / 4) + ', and 3 × ' + show(W / 4) + ' = ' + show(W * 3 / 4) + '.';
     var out = '10% is ' + show(W) + ' ÷ 10 = ' + show(ten) + '.';
-    if (p === 10) return out;
+    if (p === 10) return '10% means 10 out of every 100, which is 1 out of every 10. So divide by 10: ' + show(W) + ' ÷ 10 = ' + show(ten) + '.';
     if (p === 18) return out + ' So 20% is ' + show(2 * ten) + '. 1% is ' + show(W / 100) + ', so 2% is ' + show(W / 50) + '. 18% = ' + show(2 * ten) + ' − ' + show(W / 50) + ' = ' + show(W * 18 / 100) + '.';
     var tens = Math.floor(p / 10), five = p % 10 === 5;
     if (tens > 1) out += ' ' + tens * 10 + '% is ' + tens + ' × ' + show(ten) + ' = ' + show(tens * ten) + '.';
