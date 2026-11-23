@@ -129,6 +129,8 @@
       var b = el('button', { type: 'button', 'class': 'sky-btn' + (o.h ? ' part' : ''), 'data-obj': o.id, style: box });
       b.appendChild(el('span', { 'class': 'sky-name' }, sceneName(o)));
       b.addEventListener('click', function () { showObject(o, b); });
+      /* Keyboard users: bring a part fully into view inside the picture's own scroll box. */
+      b.addEventListener('focus', function () { if (b.scrollIntoView) b.scrollIntoView({ block: 'nearest', inline: 'nearest' }); });
       sky.appendChild(b);
     });
     $('sky-box').scrollLeft = 0;
