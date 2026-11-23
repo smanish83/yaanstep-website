@@ -92,6 +92,32 @@
         svg('rect', { x: 8, y: 58, width: 64, height: 10, rx: 5, fill: color, stroke: INK, 'stroke-width': 2 }),
         svg('circle', { cx: 40, cy: 13, r: 6, fill: '#fff', stroke: INK, 'stroke-width': 2 })
       ]));
+    },
+    shirt: function (color, pattern) {
+      return pic('0 0 80 80', 72, [svg('path', {
+        d: 'M28 10 l-18 10 6 14 8 -4 v40 h32 v-40 l8 4 6 -14 -18 -10 q-6 8 -12 8 q-6 0 -12 -8 z',
+        fill: color, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round'
+      })].concat(patternMarks(pattern, { stripes: [[24, 36, 32], [24, 50, 32]], dots: [[32, 34], [46, 44], [34, 56]] })));
+    },
+    boot: function (color, pattern) {
+      return pic('0 0 80 80', 72, [svg('path', {
+        d: 'M22 8 h26 v38 l16 8 q10 4 10 12 v4 h-52 z',
+        fill: color, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round'
+      })].concat(patternMarks(pattern, { stripes: [[22, 16, 26], [22, 30, 26]], dots: [[30, 18], [40, 28], [30, 40]] }),
+        [svg('rect', { x: 20, y: 68, width: 56, height: 7, rx: 3, fill: INK })]));
+    },
+    umbrella: function (color, pattern) {
+      return pic('0 0 80 80', 72, [
+        svg('path', { d: 'M40 40 v24 q0 8 -8 6', fill: 'none', stroke: INK, 'stroke-width': 4, 'stroke-linecap': 'round' }),
+        svg('path', { d: 'M6 42 q34 -42 68 0 q-8 -6 -17 0 q-8 -6 -17 0 q-8 -6 -17 0 q-8 -6 -17 0 z', fill: color, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' })
+      ].concat(patternMarks(pattern, { stripes: [[26, 24, 28], [16, 32, 48]], dots: [[30, 28], [46, 26], [54, 35]] })));
+    },
+    bag: function (color, pattern) {
+      return pic('0 0 80 80', 72, [
+        svg('path', { d: 'M30 16 q0 -10 10 -10 q10 0 10 10', fill: 'none', stroke: INK, 'stroke-width': 4 }),
+        svg('path', { d: 'M16 26 q0 -10 10 -10 h28 q10 0 10 10 v40 q0 6 -6 6 h-36 q-6 0 -6 -6 z', fill: color, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' })
+      ].concat(patternMarks(pattern, { stripes: [[16, 30, 48], [16, 42, 48]], dots: [[28, 30], [50, 36], [32, 46]] }),
+        [svg('rect', { x: 24, y: 52, width: 32, height: 14, rx: 4, fill: 'none', stroke: INK, 'stroke-width': 2 })]));
     }
   };
   /* Shapes for "find the different one" and sorting. Each draws in any color, at any size. */
@@ -113,8 +139,56 @@
     },
     fish: function (c, px) { return pic('0 0 80 80', px, [svg('path', { d: 'M10 40 q20 -24 44 -10 l16 -12 v44 l-16 -12 q-24 14 -44 -10 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }), svg('circle', { cx: 24, cy: 37, r: 3, fill: INK })]); },
     leaf: function (c, px) { return pic('0 0 80 80', px, [svg('path', { d: 'M12 68 q0 -52 56 -56 q0 52 -56 56 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }), svg('path', { d: 'M14 66 l50 -50', stroke: INK, 'stroke-width': 2 })]); },
-    kite: function (c, px) { return pic('0 0 80 80', px, [svg('path', { d: 'M40 6 l24 26 -24 42 -24 -42 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }), svg('path', { d: 'M16 32 h48 M40 6 v68', stroke: '#fff', 'stroke-width': 2 })]); }
+    kite: function (c, px) { return pic('0 0 80 80', px, [svg('path', { d: 'M40 6 l24 26 -24 42 -24 -42 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }), svg('path', { d: 'M16 32 h48 M40 6 v68', stroke: '#fff', 'stroke-width': 2 })]); },
+    car: function (c, px) {
+      return pic('0 0 80 80', px, [
+        svg('path', { d: 'M6 54 v-12 q0 -6 6 -6 h6 l12 -14 h20 l8 14 h12 q6 0 6 6 v12 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }),
+        svg('path', { d: 'M33 26 h15 l6 10 h-27 z', fill: '#fff', opacity: 0.8 }),
+        svg('circle', { cx: 22, cy: 56, r: 8, fill: INK }), svg('circle', { cx: 58, cy: 56, r: 8, fill: INK }),
+        svg('circle', { cx: 22, cy: 56, r: 3, fill: '#fff' }), svg('circle', { cx: 58, cy: 56, r: 3, fill: '#fff' })
+      ]);
+    },
+    boat: function (c, px) {
+      return pic('0 0 80 80', px, [
+        svg('path', { d: 'M36 10 v38', stroke: INK, 'stroke-width': 3 }),
+        svg('path', { d: 'M39 12 l26 30 h-26 z', fill: '#fff', stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }),
+        svg('path', { d: 'M6 48 h68 l-12 18 h-46 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' })
+      ]);
+    },
+    apple: function (c, px) {
+      return pic('0 0 80 80', px, [
+        svg('path', { d: 'M40 24 q2 -10 10 -14', fill: 'none', stroke: INK, 'stroke-width': 3, 'stroke-linecap': 'round' }),
+        svg('path', { d: 'M40 26 q-28 -12 -28 16 q0 28 22 28 q6 0 6 -3 q0 3 6 3 q22 0 22 -28 q0 -28 -28 -16 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }),
+        svg('path', { d: 'M24 34 q-4 6 -2 14', fill: 'none', stroke: '#fff', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: 0.7 })
+      ]);
+    },
+    house: function (c, px) {
+      return pic('0 0 80 80', px, [
+        svg('rect', { x: 18, y: 36, width: 44, height: 34, fill: c, stroke: INK, 'stroke-width': 2 }),
+        svg('path', { d: 'M10 38 l30 -26 30 26 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }),
+        svg('rect', { x: 34, y: 50, width: 12, height: 20, fill: '#fff', stroke: INK, 'stroke-width': 2 }),
+        svg('rect', { x: 23, y: 42, width: 8, height: 8, fill: '#fff', stroke: INK, 'stroke-width': 1.5 })
+      ]);
+    },
+    tree: function (c, px) {
+      return pic('0 0 80 80', px, [
+        svg('rect', { x: 35, y: 48, width: 10, height: 24, fill: '#8A5A2B', stroke: INK, 'stroke-width': 2 }),
+        svg('path', { d: 'M40 8 q20 0 24 18 q10 4 6 16 q-4 12 -18 10 q-6 6 -12 6 q-6 0 -12 -6 q-14 2 -18 -10 q-4 -12 6 -16 q4 -18 24 -18 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' })
+      ]);
+    },
+    cloud: function (c, px) { return pic('0 0 80 80', px, [svg('path', { d: 'M20 58 q-12 0 -12 -12 q0 -12 14 -12 q4 -14 18 -14 q14 0 18 14 q14 0 14 12 q0 12 -12 12 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' })]); },
+    bird: function (c, px) {
+      return pic('0 0 80 80', px, [
+        svg('path', { d: 'M10 44 q6 -22 30 -22 q16 0 22 12 l12 4 -12 4 q-4 18 -26 18 q-18 0 -26 -16 z', fill: c, stroke: INK, 'stroke-width': 2, 'stroke-linejoin': 'round' }),
+        svg('path', { d: 'M26 42 q10 -10 20 0 q-10 6 -20 0 z', fill: '#fff', opacity: 0.7 }),
+        svg('circle', { cx: 54, cy: 36, r: 3, fill: INK })
+      ]);
+    }
   };
+  /* Shapes that point one way, so one can be turned the other way round. */
+  var FACING = ['fish', 'leaf', 'moon', 'car', 'boat', 'bird'];
+  function turned(node) { node.style.transform = 'scaleX(-1)'; return node; }
+  function an(word) { return (/^[aeiou]/.test(word) ? 'an ' : 'a ') + word; }
   function block(color, size) { return SHAPES.block(color, size || 56); }
 
   /* Part-and-whole bar picture.
@@ -276,7 +350,7 @@
   function pickOdd(items, oddIndex, rightMsg, hint) {
     return function (ctx) {
       var misses = 0;
-      var tray = el('div', { 'class': 'tray', role: 'group', 'aria-label': 'Four things' });
+      var tray = el('div', { 'class': 'tray', role: 'group', 'aria-label': (items.length === 5 ? 'Five' : 'Four') + ' things' });
       var buttons = items.map(function (it, i) {
         var b = el('button', { type: 'button', 'class': 'item-btn', 'aria-label': it.name });
         b.appendChild(it.draw());
@@ -290,6 +364,47 @@
             misses += 1;
             nudge(b);
             ctx.tell(misses < 2 ? 'Not yet. That one has friends that look the same.' : 'Not yet. ' + hint, 'try');
+          }
+        });
+        tray.appendChild(b);
+        return b;
+      });
+      ctx.stage.appendChild(tray);
+    };
+  }
+
+  /* Match the shadow: a dark shape, and colored things to pick from. One of them fits the shadow. */
+  function matchShadow(choices, right) {
+    return function (ctx) {
+      var misses = 0;
+      var want = choices[right];
+      var dark = SHAPES[want.shape]('#4A5A57', 110);
+      Array.prototype.forEach.call(dark.querySelectorAll('*'), function (n) {
+        if (n.getAttribute('fill') && n.getAttribute('fill') !== 'none') n.setAttribute('fill', '#4A5A57');
+        if (n.getAttribute('stroke')) n.setAttribute('stroke', '#4A5A57');
+        n.removeAttribute('opacity');
+      });
+      if (want.flip) turned(dark);
+      dark.removeAttribute('aria-hidden');
+      dark.setAttribute('role', 'img');
+      dark.setAttribute('aria-label', 'The shadow of ' + an(want.shape) + (want.flip ? ', turned the other way' : ''));
+      ctx.stage.appendChild(el('div', { 'class': 'shadow-box' }, [dark]));
+      var tray = el('div', { 'class': 'tray', role: 'group', 'aria-label': 'Things to match' });
+      var buttons = choices.map(function (it, i) {
+        var b = el('button', { type: 'button', 'class': 'item-btn', 'aria-label': it.name });
+        var d = SHAPES[it.shape](it.color.fill, 64);
+        if (it.flip) turned(d);
+        b.appendChild(d);
+        b.addEventListener('click', function () {
+          if (i === right) {
+            buttons.forEach(function (x) { x.disabled = true; });
+            b.classList.add('done');
+            ctx.tell('Yes! The ' + want.shape + ' fits its shadow.', 'yes');
+            ctx.done(false);
+          } else {
+            misses += 1;
+            nudge(b);
+            ctx.tell(misses < 2 ? 'Not yet. Look at the outside edge of the shadow.' : 'Not yet. The shadow is shaped like ' + an(want.shape) + '.', 'try');
           }
         });
         tray.appendChild(b);
@@ -655,6 +770,7 @@
           if (v === fact.answer) {
             buttons.forEach(function (x) { x.disabled = true; });
             b.classList.add('right');
+            card.textContent = fact.text + ' = ' + fact.answer; // the ? becomes the answer (Manish, 23 Nov 2026)
             ctx.tell((first ? 'Found it! ' : 'You worked it out! ') + fact.text + ' = ' + fact.answer + '.', 'yes');
             ctx.done(first);
           } else {
@@ -666,7 +782,7 @@
         grid.appendChild(b);
         return b;
       });
-      ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
+      var card = ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
       ctx.stage.appendChild(help);
       ctx.stage.appendChild(grid);
     };
@@ -692,6 +808,7 @@
           if (v === fact.answer) {
             buttons.forEach(function (x) { x.disabled = true; });
             b.classList.add('right');
+            card.textContent = fact.text + ' = ' + fact.answer; // the ? becomes the answer (Manish, 23 Nov 2026)
             ctx.tell((first ? 'Yes! ' : 'You worked it out! ') + fact.text + ' = ' + fact.answer + '.', 'yes');
             ctx.done(first);
           } else {
@@ -705,7 +822,7 @@
         line.appendChild(b);
         buttons.push(b);
       }(n));
-      ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
+      var card = ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
       ctx.stage.appendChild(line);
       hintLine(ctx, 'Tap the answer on the number line.');
     };
@@ -827,42 +944,86 @@
 
   function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
-  /* Same and different: every part is made fresh each time from many things, colors, shapes and sizes (SCRUM-493). */
+  /* Same and different: every part is made fresh each time from many things, colors, patterns, shapes and sizes
+     (SCRUM-493; more kinds of things, a shadow game and harder rounds from age 4 added 23 Nov 2026 for Manish). */
+  var REAL_FIRST = {
+    sock: 'Pair up real socks together.',
+    mitten: 'Find real mittens or gloves and pair them up.',
+    cup: 'Line up some cups and find two that are the same.',
+    hat: 'Find two hats or caps at home. Are they the same or different?',
+    shirt: 'Fold some shirts with a grown-up and find two of the same color.',
+    boot: 'Pair up the shoes by the door.',
+    umbrella: 'Look out of the window and find two things of the same color.',
+    bag: 'Sort some toys into two bags: soft ones and hard ones.'
+  };
   function buildSorting() {
-    // 1. Find the same: socks, mittens, cups or hats, in 6 colors and 3 patterns.
+    var hard = childAge() >= 4;   // age 4 and 5: more things to look at, closer look-alikes
+    var PATTERNS = ['stripes', 'dots', 'plain'];
+
+    // 1. Find the same: 8 kinds of things in 6 colors and 3 patterns.
     var kind = pick(Object.keys(PAIR_THINGS));
     var designs = [];
     COLORS.forEach(function (c) {
-      ['stripes', 'dots', 'plain'].forEach(function (p) {
-        designs.push({ key: c.word + p, name: c.name + ' ' + kind + ', ' + p, color: c.fill, pattern: p });
+      PATTERNS.forEach(function (p) {
+        designs.push({ key: c.word + p, name: c.name + ' ' + kind + ', ' + p, color: c.fill, pattern: p, c: c.word });
       });
     });
-    var three = shuffle(designs).slice(0, 3);
-    var pairs = shuffle([three[0], three[1], three[2], three[0]]);
+    designs = shuffle(designs);
+    var twin = designs[0];
+    var others = designs.slice(1);
+    if (hard) {
+      // Two look-alikes: the same color with another pattern, so the child looks at both.
+      var near = others.filter(function (d) { return d.c === twin.c; }).slice(0, 2);
+      others = near.concat(others.filter(function (d) { return near.indexOf(d) < 0; }));
+    }
+    var pairs = shuffle([twin, twin].concat(others.slice(0, hard ? 4 : 2)));
 
-    // 2. Find the different one: by shape, by color or by size.
-    var oddAt = rnd(4);
-    var how = pick(['shape', 'color', 'size']);
-    var shapes = shuffle(SHAPE_NAMES).slice(0, 2);
+    // 2. Find the different one: by shape, color, size or the way it faces.
+    var count = hard ? 5 : 4;
+    var oddAt = rnd(count);
+    var how = pick(['shape', 'color', 'size', 'facing']);
+    var shapes = how === 'facing' ? [pick(FACING)] : shuffle(SHAPE_NAMES).slice(0, 2);
     var cols = twoColors();
     var bigOdd = rnd(2) === 0;
-    var things = [0, 1, 2, 3].map(function (i) {
-      var odd = i === oddAt;
-      var shape = how === 'shape' && odd ? shapes[1] : shapes[0];
-      var color = how === 'color' && odd ? cols[1] : cols[0];
-      var big = how === 'size' ? (odd ? bigOdd : !bigOdd) : true;
-      var name = (how === 'size' ? (big ? 'Big ' : 'Small ') + color.word : color.name) + ' ' + shape;
-      return { name: name, draw: function () { return SHAPES[shape](color.fill, big ? 72 : 40); } };
-    });
-    var oddWord = how === 'shape' ? shapes[1] : how === 'color' ? cols[1].word + ' ' + shapes[0] : (bigOdd ? 'big ' : 'small ') + shapes[0];
+    var things = [];
+    for (var i = 0; i < count; i++) {
+      (function (odd) {
+        var shape = how === 'shape' && odd ? shapes[1] : shapes[0];
+        var color = how === 'color' && odd ? cols[1] : cols[0];
+        var big = how === 'size' ? (odd ? bigOdd : !bigOdd) : true;
+        var flip = how === 'facing' && odd;
+        var name = (how === 'size' ? (big ? 'Big ' : 'Small ') + color.word : color.name) + ' ' + shape + (flip ? ', turned the other way' : '');
+        things.push({ name: name, draw: function () { var d = SHAPES[shape](color.fill, big ? 72 : 40); return flip ? turned(d) : d; } });
+      }(i === oddAt));
+    }
+    var oddWord = how === 'shape' ? shapes[1] : how === 'color' ? cols[1].word + ' ' + shapes[0]
+      : how === 'size' ? (bigOdd ? 'big ' : 'small ') + shapes[0] : shapes[0] + ' turned the other way';
     var oddHint = {
-      shape: 'Look at the shapes. Three are the same shape. Which shape is alone?',
-      color: 'Look at the colors. Three are the same color. Which color is alone?',
-      size: 'Look at the sizes. Three are the same size. Which one is a different size?'
+      shape: 'Look at the shapes. The others are all the same shape. Which shape is alone?',
+      color: 'Look at the colors. The others are all the same color. Which color is alone?',
+      size: 'Look at the sizes. The others are all the same size. Which one is a different size?',
+      facing: 'Look at which way they point. The others all point the same way. Which one points the other way?'
     }[how];
 
-    // 3. Sort into two baskets: by color, by shape or by size.
-    var by = pick(['color', 'shape', 'size']);
+    // 3. Match the shadow: 3 things, or 4 from age 4. From age 4 one of them may be the same shape turned round.
+    var shadowShapes = shuffle(SHAPE_NAMES).slice(0, hard ? 4 : 3);
+    var shadowAt = rnd(shadowShapes.length);
+    var shadowFlip = hard && FACING.indexOf(shadowShapes[shadowAt]) > -1 && rnd(2) === 0;
+    var shadowChoices = shadowShapes.map(function (sh, k) {
+      var c = pick(COLORS);
+      return { shape: sh, color: c, flip: k === shadowAt && shadowFlip, name: c.name + ' ' + sh };
+    });
+    if (window.YSComfort) {
+      // Fewer choices: keep the right one and one other.
+      var names = shadowChoices.map(function (c) { return c.name; });
+      var keepNames = window.YSComfort.fewer(names, names[shadowAt]);
+      var rightName = names[shadowAt];
+      shadowChoices = shadowChoices.filter(function (c) { return keepNames.indexOf(c.name) > -1; });
+      shadowAt = keepNames.indexOf(rightName);
+    }
+
+    // 4. Sort into two baskets: by color, shape, size or pattern.
+    var by = pick(['color', 'shape', 'size', 'pattern']);
     var groups;
     if (by === 'color') {
       groups = twoColors().map(function (c) {
@@ -873,13 +1034,15 @@
       });
     } else if (by === 'shape') {
       var c1 = pick(COLORS);
-      groups = shuffle(SHAPE_NAMES).slice(0, 2).map(function (s) {
+      groups = shuffle(SHAPE_NAMES).slice(0, 2).map(function (sh) {
+        // From age 4 the colors are mixed, so only the shape tells the baskets apart.
+        function col() { return hard ? pick(COLORS).fill : c1.fill; }
         return {
-          word: s, item: cap(s), basket: cap(s) + ' basket', wrong: 'That is a ' + s, edge: INK,
-          big: function () { return SHAPES[s](c1.fill, 56); }, small: function () { return SHAPES[s](c1.fill, 34); }
+          word: sh, item: cap(sh), basket: cap(sh) + ' basket', wrong: 'That is ' + an(sh), edge: INK,
+          big: function () { return SHAPES[sh](col(), 56); }, small: function () { return SHAPES[sh](col(), 34); }
         };
       });
-    } else {
+    } else if (by === 'size') {
       var s1 = pick(SHAPE_NAMES), c2 = pick(COLORS);
       groups = [['big', 60, 34], ['small', 32, 20]].map(function (z) {
         return {
@@ -887,21 +1050,33 @@
           big: function () { return SHAPES[s1](c2.fill, z[1]); }, small: function () { return SHAPES[s1](c2.fill, z[2]); }
         };
       });
+    } else {
+      var thing = pick(Object.keys(PAIR_THINGS)), c3 = pick(COLORS);
+      groups = [['striped', 'stripes'], ['dotted', 'dots']].map(function (z) {
+        function draw(px) { var d = PAIR_THINGS[thing](c3.fill, z[1]); d.setAttribute('width', px); d.setAttribute('height', px); return d; }
+        return {
+          word: z[0], item: cap(z[0]) + ' ' + thing, basket: cap(z[0]) + ' basket', wrong: 'That ' + thing + ' is ' + z[0], edge: INK,
+          big: function () { return draw(60); }, small: function () { return draw(34); }
+        };
+      });
     }
     var sortSay = {
       color: 'Drag each block to the basket with the same color.',
       shape: 'Drag each one to the basket with the same shape.',
-      size: 'Put the big ones in one basket and the small ones in the other.'
+      size: 'Put the big ones in one basket and the small ones in the other.',
+      pattern: 'Put the striped ones in one basket and the dotted ones in the other.'
     }[by];
-    var order = shuffle([0, 0, 0, 1, 1, 1]);
-    var real = pick([
-      ['Pair up real socks together.', 'Then share a picture book and name three things in it.'],
-      ['Pair up real socks together.', 'Then find three things at home that are the same color.'],
-      ['Pair up real socks together.', 'Then sort some spoons: big ones and small ones.']
-    ]);
+    var order = shuffle(hard ? [0, 0, 0, 0, 1, 1, 1, 1] : [0, 0, 0, 1, 1, 1]);
+    var real = [REAL_FIRST[kind], pick([
+      'Then share a picture book and name three things in it.',
+      'Then find three things at home that are the same color.',
+      'Then sort some spoons: big ones and small ones.',
+      'Then look for a shadow on the wall and guess what makes it.',
+      'Then find one thing that is different from the rest on a shelf.'
+    ])];
 
     return {
-      kicker: 'Same and different · age 3, with a grown-up',
+      kicker: 'Same and different · with a grown-up',
       area: 'world',
       steps: [
         { name: 'Find the same', who: READ, asks: true, say: ['Two ' + kind + 's are the same. Put them together.'], build: pickTwo(pairs, kind) },
@@ -909,6 +1084,7 @@
           name: 'Find the different one', who: READ, asks: true, say: ['One is different. Tap it.'],
           build: pickOdd(things, oddAt, 'Yes! The ' + oddWord + ' is different.', oddHint)
         },
+        { name: 'Match the shadow', who: READ, asks: true, say: ['Which one fits the shadow? Tap it.'], build: matchShadow(shadowChoices, shadowAt) },
         { name: 'Sort by ' + by, who: READ, asks: true, say: [sortSay], build: sortThings(groups, order) },
         {
           name: 'Now do it for real', who: GROWNUP, end: true,
@@ -1167,7 +1343,7 @@
   closeBtn.addEventListener('click', close);
 
   function checked(name, fallback) {
-    var box = root.querySelector('input[name="' + name + '"]:checked');
+    var box = document.querySelector('input[name="' + name + '"]:checked');
     return box ? box.value : fallback;
   }
   var sortBtn = document.getElementById('start-sorting');
@@ -1190,4 +1366,6 @@
 
   root.hidden = false;
   if (staticBox) staticBox.hidden = true;
+  // The cards for the games on this page need JavaScript, so they start hidden. The age filter (profile.js) may hide them again.
+  Array.prototype.forEach.call(document.querySelectorAll('.js-card'), function (c) { if (!c.classList.contains('ys-hidden')) c.hidden = false; });
 }());

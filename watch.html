@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Slow things to watch | Yaanstep</title>
+<meta name="description" content="Calm things to watch for any child aged 3 to 12: a slowly turning fan, soft glowing lights, a lava lamp, fish, falling snow, sea waves, a pinwheel and floating balloons. No sound, nothing to win. Nothing is sent.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/learn.css">
+<style>
+[hidden]{display:none!important}
+.picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin:10px 0}
+.picks button{display:flex;flex-direction:column;align-items:center;gap:6px;min-height:120px;font-weight:600;background:#fff}
+.picks button svg{width:64px;height:64px}
+.picks button[aria-current=true]{border-width:4px;background:#eef6f3}
+.viewer h2{font-size:1.2rem;margin:.1em 0 .4em}
+.viewer h2:focus{outline:none}
+.screen{background:#1d2b38;border-radius:18px;overflow:hidden;line-height:0}
+.screen canvas{width:100%;height:auto;display:block}
+.viewer .row{margin-top:10px}
+.viewer [aria-pressed=true]{background:#e6f2ee;border-width:3px}
+.screen:fullscreen{display:flex;align-items:center;justify-content:center;background:#1d2b38}
+.screen:fullscreen canvas{width:100vw;height:auto;max-height:100vh;object-fit:contain}
+</style>
+</head><body><main>
+<p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
+<h1>Slow things to watch</h1>
+<p class="note"><b>Tap a picture to watch it move slowly.</b> No sound, no score and nothing to win. It keeps going until you tap Stop. Made by Yaanstep's AI team and not yet tested with children. Nothing is recorded or sent, and nothing is saved on this device.</p>
+
+<div class="picks" id="picks" role="group" aria-label="Things to watch"></div>
+
+<section class="card viewer" id="viewer" aria-labelledby="scene-h" hidden>
+<h2 id="scene-h" tabindex="-1"></h2>
+<div class="screen" id="screen"><canvas id="scene" width="960" height="600" role="img" aria-label=""></canvas></div>
+<p class="status" id="scene-status" role="status"></p>
+<div class="row">
+<button type="button" class="primary" id="stop">Stop</button>
+<button type="button" id="next">Next thing</button>
+<button type="button" id="full" hidden>Full screen</button>
+</div>
+<div class="row" role="group" aria-labelledby="speed-l"><span id="speed-l" class="sr">How fast</span>
+<button type="button" data-speed="1" aria-pressed="true">Slow</button><button type="button" data-speed="0.5" aria-pressed="false">Slower</button>
+</div>
+</section>
+
+<noscript><p class="note">The moving pictures need JavaScript. Without it, you can watch real slow things together: clouds, a fan, leaves in the wind or fish in a tank.</p></noscript>
+
+<div class="parent"><p>Parent area</p>
+<p>Some children find it calming to watch something move slowly and the same way again and again, like a fan or soft lights. Each picture here moves only after your child taps it, has no sound and no flashing, and changes brightness slowly over several seconds. Tap Stop at any time. Slower makes everything move at half the speed.</p>
+<p>If your device is set to reduce motion, or calm mode is on, the pictures start at the slower speed. The pictures are drawn by the page itself; nothing is downloaded from other sites.</p>
+<p>These are simple pictures made by our AI team. They are not advice from a doctor or teacher, and they have not yet been tried with children. Break reminders from your child's profile still work on this page.</p>
+<p><a href="sprouts.html#comfort">Comfort settings</a> such as calm mode, bigger buttons and easy reading work on this page too.</p>
+</div>
+</main>
+<script src="assets/watch.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>

@@ -267,11 +267,17 @@
       var b = el('button', { type: 'button', 'data-v': String(v) }, String(v));
       b.addEventListener('click', function () {
         if (v === r.ans) { if (!solved) point('maths'); solved = true; render(); $('go').focus(); }
-        else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = TRY[r.game]; offerHow(panel); }
+        else { b.classList.add('wrong'); b.disabled = true; tip.className = 'tip try'; tip.textContent = TRY[r.game]; if (window.YSSum) window.YSSum.showWrong(panel, sumOf(r), v); offerHow(panel); }
       });
       row.appendChild(b);
     });
     panel.appendChild(row);
+  }
+
+  /* The round as a sum with a "?", for the picture of a wrong try (sum-picture.js). */
+  function sumOf(q) {
+    if (q.game === 'bonds') return q.hide === 'whole' ? q.a + ' + ' + q.b + ' = ?' : q.a + ' + ? = ' + q.whole;
+    return q.sum;
   }
 
   function offerHow(panel) {
