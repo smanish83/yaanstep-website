@@ -125,5 +125,41 @@
     { q: 'What grows from a seed first?', ans: ['sprout'], pool: ['tree', 'flower', 'fruit'], hint: 'First a tiny sprout pushes up out of the soil.' },
     { q: 'Which plant can live in a dry desert and keeps water in its thick stem?', ans: ['cactus'], pool: ['sunflower', 'tree'], hint: 'A cactus keeps water inside, so it can live where it is very dry.' },
     { q: 'What do plants need to grow?', ans: ['sunlight', 'water', 'soil', 'air'], pool: ['fruit', 'flower', 'cactus', 'sunflower'], hint: 'Plants need sunlight, water, air, and most grow in soil.' }
-  ]
+  ],
+  /* "See them all together" (Manish, 23 Nov 2026): one tomato plant, cut away at the ground so the roots show, with the
+     sun, rain, air and soil around it and a seed just starting to grow. Each tap area is its own rectangle (x, y, w, h in
+     picture pixels); none overlap and each is at least 44 px each way. */
+  scene: {
+    button: 'See them all together',
+    small: 'One plant, above and below the ground. Tap a part to hear what it does.',
+    title: 'A plant, above and below the ground',
+    hint: 'Look up at the sky, and down under the ground.',
+    prompt: 'Tap a part of the plant, or the sun, rain, air or soil, to hear what it does.',
+    note: 'We cannot really see through soil. This picture shows the roots as if we could.',
+    label: 'A tomato plant with a flower, a red tomato, green leaves and a stem above the ground, and roots under the ground. The sun shines, rain falls from a cloud, the wind blows, and a seed is starting to grow in the soil.',
+    vb: '0 0 340 450',
+    back: '<rect width="340" height="284" fill="#d9f1fb"/><rect y="280" width="340" height="170" fill="#8b5a2b"/><path d="M0 282H340" stroke="#5cb83f" stroke-width="8"/><path d="M60 82L112 160M78 66L140 120" stroke="#f7d548" stroke-width="3" stroke-dasharray="6 6" opacity=".8"/><g fill="#4bb3e8"><circle cx="150" cy="300" r="3"/><circle cx="196" cy="306" r="3"/><circle cx="174" cy="316" r="2.5"/></g>',
+    objects: [
+      { id: 'sunlight', x: 0, y: 0, w: 96, h: 96, compare: 'Leaves turn toward the light to catch more sunlight.',
+        art: '<g stroke="#f7a541" stroke-width="4" stroke-linecap="round"><path d="M46 8v8M46 76v8M8 46h8M76 46h8M19 19l6 6M67 67l6 6M73 19l-6 6M25 67l-6 6"/></g><circle cx="46" cy="46" r="22" fill="#f7c948" stroke="#f7a541" stroke-width="3"/>' },
+      { id: 'water', x: 244, y: 0, w: 96, h: 110, name: 'Rain', say: 'Rain gives plants water. The roots take it in from the soil.', compare: 'The stem carries the water up to the leaves.',
+        art: '<path d="M258 58q-4-22 18-22q6-16 24-14q16-10 26 6q16 2 12 30z" fill="#ffffff" stroke="#9fb3c8" stroke-width="2"/><g stroke="#2f86c8" stroke-width="4" stroke-linecap="round"><path d="M268 70l-4 10M290 72l-4 10M312 70l-4 10M278 90l-4 10M300 92l-4 10M322 88l-4 10"/></g>' },
+      { id: 'air', x: 0, y: 110, w: 96, h: 90, compare: 'Plants give out oxygen. That is the part of the air we breathe in.',
+        art: '<g stroke="#5f8fb4" stroke-width="4" fill="none" stroke-linecap="round"><path d="M10 138H58q14 0 14-12t-12-8"/><path d="M18 158H74q14 0 14 12t-12 8"/><path d="M8 180H44"/></g>' },
+      { id: 'flower', x: 120, y: 18, w: 100, h: 86, compare: 'Bees and butterflies visit flowers. They help flowers make seeds.',
+        art: '<g fill="#f27aa8" stroke="#c94f7c" stroke-width="2"><circle cx="170" cy="40" r="14"/><circle cx="191" cy="56" r="14"/><circle cx="183" cy="80" r="14"/><circle cx="157" cy="80" r="14"/><circle cx="149" cy="56" r="14"/></g><circle cx="170" cy="62" r="12" fill="#f7d548" stroke="#d9a94e" stroke-width="2"/>' },
+      { id: 'fruit', x: 200, y: 110, w: 90, h: 76, compare: 'This fruit is a tomato. Its seeds can grow into new tomato plants.',
+        art: '<path d="M170 150Q206 120 240 132" stroke="#3e8e2f" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="242" cy="156" r="20" fill="#e2412e" stroke="#a8301f" stroke-width="2.5"/><path d="M232 138l10 6 10-6-4 8h-12z" fill="#3e8e2f"/><path d="M232 150q4-6 10-6" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>' },
+      { id: 'leaf', x: 194, y: 192, w: 100, h: 70, name: 'Leaves', compare: 'Leaves are green. The green part catches the sunlight.',
+        art: '<path d="M170 200Q140 156 102 178Q130 214 170 200Z" fill="#5cb83f" stroke="#2f6e22" stroke-width="2.5"/><path d="M170 200Q138 186 110 180" stroke="#2f6e22" stroke-width="2" fill="none"/><path d="M170 240Q220 190 270 216Q226 262 170 240Z" fill="#5cb83f" stroke="#2f6e22" stroke-width="2.5"/><path d="M170 240Q220 222 260 218" stroke="#2f6e22" stroke-width="2" fill="none"/>' },
+      { id: 'stem', x: 146, y: 104, w: 48, h: 176, compare: 'A strong stem helps the leaves reach up to the sunlight.',
+        art: '<path d="M170 92V282" stroke="#2f6e22" stroke-width="12" stroke-linecap="round"/><path d="M170 92V282" stroke="#4e9a3a" stroke-width="7" stroke-linecap="round"/>' },
+      { id: 'roots', x: 110, y: 290, w: 120, h: 100, compare: 'Roots stay under the ground, so we do not often see them.',
+        art: '<g stroke="#f1dcb0" stroke-width="5" fill="none" stroke-linecap="round"><path d="M170 282V378"/><path d="M170 300Q140 316 124 352"/><path d="M170 300Q200 316 216 352"/><path d="M170 330Q150 346 142 380"/><path d="M170 330Q190 346 198 380"/></g><g stroke="#f1dcb0" stroke-width="2.5" fill="none" stroke-linecap="round"><path d="M134 334l-10-2M206 334l10-2M146 362l-10 4M194 362l10 4"/></g>' },
+      { id: 'soil', x: 0, y: 296, w: 104, h: 150, compare: 'Worms live in the soil. They help keep it soft.',
+        art: '<g fill="#6b4422"><ellipse cx="22" cy="318" rx="8" ry="5"/><ellipse cx="84" cy="420" rx="10" ry="6"/><ellipse cx="30" cy="432" rx="6" ry="4"/><ellipse cx="80" cy="322" rx="5" ry="4"/></g><path d="M20 404q8-10 16 0t16 0t14-4" stroke="#e38fa0" stroke-width="7" fill="none" stroke-linecap="round"/>' },
+      { id: 'seed', x: 240, y: 296, w: 100, h: 124, compare: 'This seed has just started to grow. A tiny root goes down, and a little shoot goes up.',
+        art: '<path d="M290 378V312q0-10-10-8" stroke="#8fd16f" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M290 392q-2 12 4 22" stroke="#f1dcb0" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="290" cy="386" rx="15" ry="10" fill="#e9c27a" stroke="#a87b32" stroke-width="2.5"/>' }
+    ]
+  }
 };
