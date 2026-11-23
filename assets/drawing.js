@@ -335,8 +335,8 @@
     if (!d) { location.hash = '#steps'; return; }
     show('step');
     if (!drawing || drawing.id !== d.id) { drawing = d; at = 0; clearPad(); }
-    $('step-h').textContent = 'Draw a ' + d.name.toLowerCase();
-    if (/^[aeiou]/i.test(d.name)) $('step-h').textContent = 'Draw an ' + d.name.toLowerCase();
+    var w = d.name.toLowerCase();
+    $('step-h').textContent = 'Draw ' + (/s$/.test(w) ? '' : /^[aeiou]/.test(w) ? 'an ' : 'a ') + w;
     renderStep(true);
   }
   function renderStep(speak) {

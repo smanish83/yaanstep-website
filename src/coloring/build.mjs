@@ -50,6 +50,16 @@ export function render(cat, sub, v, k) {
   return page({ back: sc.back, items, front: sc.front || '', name: sub.label || sub.name });
 }
 
+/** Draw a subject from any category at x,y with scale s (for letter and number pages). Empty if it does not exist. */
+const every = [];
+for (const f of files) { try { const m = await import(`./subjects/${f}`); every.push(...[].concat(m.default)); } catch (e) { /* half-written file */ } }
+export function pic(catId, subId, style, x, y, s, flip = false) {
+  const cat = every.find((c) => c.id === catId), sub = cat && cat.subjects.find((x) => x.id === subId);
+  if (!sub || sub.pages) return '';
+  const k = s * (sub.scale || 1);
+  return `<g transform="translate(${x} ${y}) scale(${flip ? -k : k} ${k})" stroke-width="${(6 / k).toFixed(1)}">${sub.draw(style % sub.styles, rng(`${catId}/${subId}/pic/${style}`), makeCtx(k))}</g>`;
+}
+
 if (process.argv[1] && process.argv[1].endsWith('build.mjs')) {
   const outDir = new URL('../../coloring/', import.meta.url);
   if (!only) rmSync(outDir, { recursive: true, force: true });
@@ -59,6 +69,13 @@ if (process.argv[1] && process.argv[1].endsWith('build.mjs')) {
     mkdirSync(new URL(`${cat.id}/`, outDir), { recursive: true });
     const entry = { id: cat.id, name: cat.name, icon: '', subjects: [] };
     for (const sub of cat.subjects) {
+      if (sub.pages) { // a subject that lays out its own pages (letters, numbers)
+        const list = sub.pages(pic);
+        list.forEach((svg, i) => { writeFileSync(new URL(`${cat.id}/${sub.id}-${i + 1}.svg`, outDir), svg); bytes += svg.length; });
+        entry.subjects.push({ id: sub.id, name: sub.name, n: list.length, easy: sub.easy ?? list.length });
+        total += list.length;
+        continue;
+      }
       const vs = variantsFor(cat, sub);
       vs.forEach((v, i) => {
         const svg = render(cat, sub, v, i + 1);
