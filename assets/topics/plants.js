@@ -153,7 +153,7 @@
       { id: 'leaf', x: 194, y: 192, w: 100, h: 70, name: 'Leaves', compare: 'Leaves are green. The green part catches the sunlight.',
         art: '<path d="M170 200Q140 156 102 178Q130 214 170 200Z" fill="#5cb83f" stroke="#2f6e22" stroke-width="2.5"/><path d="M170 200Q138 186 110 180" stroke="#2f6e22" stroke-width="2" fill="none"/><path d="M170 240Q220 190 270 216Q226 262 170 240Z" fill="#5cb83f" stroke="#2f6e22" stroke-width="2.5"/><path d="M170 240Q220 222 260 218" stroke="#2f6e22" stroke-width="2" fill="none"/>' },
       { id: 'stem', x: 146, y: 104, w: 48, h: 176, compare: 'A strong stem helps the leaves reach up to the sunlight.',
-        art: '<path d="M170 92V282" stroke="#2f6e22" stroke-width="12" stroke-linecap="round"/><path d="M170 92V282" stroke="#4e9a3a" stroke-width="7" stroke-linecap="round"/>' },
+        art: '<path d="M165 92Q170 86 175 92L177 282H163Z" fill="#4e9a3a" stroke="#2f6e22" stroke-width="2.5" stroke-linejoin="round"/>' },
       { id: 'roots', x: 110, y: 290, w: 120, h: 100, compare: 'Roots stay under the ground, so we do not often see them.',
         art: '<g stroke="#f1dcb0" stroke-width="5" fill="none" stroke-linecap="round"><path d="M170 282V378"/><path d="M170 300Q140 316 124 352"/><path d="M170 300Q200 316 216 352"/><path d="M170 330Q150 346 142 380"/><path d="M170 330Q190 346 198 380"/></g><g stroke="#f1dcb0" stroke-width="2.5" fill="none" stroke-linecap="round"><path d="M134 334l-10-2M206 334l10-2M146 362l-10 4M194 362l10 4"/></g>' },
       { id: 'soil', x: 0, y: 296, w: 104, h: 150, compare: 'Worms live in the soil. They help keep it soft.',
