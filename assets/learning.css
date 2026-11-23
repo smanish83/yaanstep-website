@@ -102,3 +102,12 @@ body.playing .player{margin-top:0}
 @keyframes mvSlide{from{transform:translateX(var(--dx,60px))}to{transform:none}}
 @keyframes mvAway{from{opacity:1;transform:none}to{opacity:.3;transform:translateY(-10px)}}
 @keyframes mvPulse{0%,100%{transform:none}50%{transform:scale(1.35)}}
+
+/* Yaanstep Sprouts page (23 Nov 2026): a picture on every card, one short note at the top, the shadow game. */
+.games-cards li{display:flex;flex-direction:column}
+.games-cards li>p:last-child{margin-top:auto;padding-top:.5rem}
+.card-icon{display:block;width:56px;height:56px;margin:0 0 .35rem}
+.notice.one-line{margin:1rem 0}
+.games-cards details{margin-top:.5rem}
+.shadow-box{display:flex;justify-content:center;margin:.25rem 0 1rem}
+.shadow-box svg{background:#F1F4F3;border-radius:.8rem;padding:.5rem}
