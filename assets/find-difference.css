@@ -1,0 +1,20 @@
+/* Find the difference (find-difference.html, 23 Nov 2026): the two scenes, their tap places and the clue outline. The rest of the look is learn.css. */
+.spot-wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
+@media (max-width:560px){.spot-wrap{grid-template-columns:minmax(0,1fr)}}
+.pic-fig{margin:0;min-width:0}
+.pic-fig figcaption{font-size:.9rem;font-weight:600;text-align:center;margin:0 0 4px}
+.pic{position:relative;border:2px solid #6f8a81;border-radius:12px;overflow:hidden;background:#fff;line-height:0}
+.pic>svg{display:block;width:100%;height:auto}
+.pic .spot{position:absolute;min-width:0;min-height:0;margin:0;padding:0;border:3px solid transparent;border-radius:12px;background:transparent}
+.pic .spot:hover{border-color:rgba(23,51,44,.45)}
+.pic .spot:focus-visible{outline:4px solid #f0a500;outline-offset:-7px}
+.pic .spot.missed{border:3px dashed #7a5a00}
+.pic .spot.found{border-color:transparent}
+.found-count{text-align:center;font-weight:700;margin:4px 0}
+#prompt:focus{outline:3px solid #0B4F46;outline-offset:2px}
+.tiles.many .tile{min-height:80px}.tiles.many .tile svg{width:60px;height:60px}
+/* The clue: a still dashed outline; a soft glow only when moving pictures are allowed. */
+.hint,.pic .spot.hint{outline:5px dashed #9a4a00;outline-offset:-7px}
+.tile.hint{outline-offset:3px}
+@media (prefers-reduced-motion:no-preference){.hint.glow{animation:ysGlow 1.6s ease-in-out 3}}
+@keyframes ysGlow{50%{box-shadow:0 0 0 7px rgba(240,165,0,.55),inset 0 0 0 7px rgba(240,165,0,.55)}}

@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Big and small | Yaanstep</title>
+<meta name="description" content="Compare games for ages 3 to 8: big or small, which is smaller in real life, more or fewer, and the bigger number. A moving lesson first. Free, no sign-in, nothing stored.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/learn.css">
+<link rel="stylesheet" href="assets/compare.css">
+</head><body><main>
+<p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
+<h1>Big and small</h1>
+<p class="note"><b>Big and small, more and fewer, ages 3 to 8. Free.</b> Made by Yaanstep's AI team. Not yet tested with children. Not a replacement for school. The pictures are our own simple drawings. No sign-in, no ads. Nothing is recorded or sent. Only points are kept on this device, and only with a child profile.</p>
+<noscript><p class="note">These games need JavaScript, which is switched off in this browser. Away from the screen, try the same with things at home: line up cups from smallest to biggest, ask which is bigger in real life, a spoon or a bathtub, or make two piles of spoons and match them up to see which has more.</p></noscript>
+<p id="novoice" class="note" hidden>No built-in voice was found on this device, so the games show words without sound. A grown-up can read the words aloud.</p>
+<section id="menu"><div class="card"><p><b>Start with the lesson, or pick a game:</b></p><p class="muted" id="level-note"></p><div class="steps">
+<button class="step" id="play-learn">Learn big and small<small>A moving lesson in 5 short parts.</small></button>
+<button class="step" id="play-size">Big or small?<small>The same thing at two sizes. Which is bigger, which is smaller? Three sizes from age 7.</small></button>
+<button class="step" id="play-real">Which is smaller?<small>A cup or a bucket? Think about the real things, not the size of the picture.</small></button>
+<button class="step" id="play-count">More or fewer?<small>Two groups. Which has more, which has fewer? Up to 5 for ages 3 and 4, up to 20 for ages 7 and 8.</small></button>
+<button class="step" id="play-number">Bigger number<small>Which number is bigger or smaller? Up to 10, 20 or 100, by age.</small></button>
+</div></div>
+<div class="parent"><p>Parent area</p><p>These games are about comparing: bigger and smaller, more and fewer, and which number is bigger. Each game fits the age in your child's profile, and sits in the middle when no age is picked. After a few right answers in a row the next ones get a little closer, and after a miss they get easier again; this is kept only while the page is open. There are no timers and no losing. A wrong tap says what was tapped, kindly, and offers a short moving lesson.</p><p>In "Which is smaller?" the pictures are sometimes drawn the same size, or the wrong way round, on purpose: the question is about the real things. Talk about it: "Could a cup fit in a bucket? How many cups would fill it?"</p><p>The voice and speed you chose on the <a href="reading.html">reading page</a> are used here as well.</p></div></section>
+<section id="game" hidden><div class="card"><div class="top"><b id="title"></b><span class="count" id="count"></span><button id="exit" class="small">Back</button></div><div id="area"></div><div id="sub" class="sub" aria-live="polite"></div><div id="howbox"></div><div class="row"><button id="again" class="small">Hear it again</button><button id="more" class="primary" hidden>Next</button></div></div>
+<div id="alldone" class="done" hidden><b>All done for now!</b>Well done. Time for a break: can you find something big and something small in the room?<div class="row" style="justify-content:center"><button id="keep">Keep playing</button><button id="stop" class="primary">Finish</button></div></div></section>
+</main>
+<script src="assets/pictures.js"></script>
+<script src="assets/learn-shell.js"></script>
+<script src="assets/compare.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>

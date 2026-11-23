@@ -1,7 +1,8 @@
 /* Yaanstep Sprouts: "Learn about the world" topics (ages 3 to 8; Manish, 22 Nov 2026).
    Each topic pack in assets/topics/ adds itself to window.YS_TOPICS. This page lists them; for each one there is
    a moving lesson (one picture at a time) and a game. Original drawings only. Nothing is stored or sent.
-   A link like topics.html#food opens that topic. */
+   A link like topics.html#food opens that topic. A pack with a scene also gets "See them all together": one picture of
+   the whole topic, where tapping a thing shows and says what it is (styles in assets/topics-scene.css). */
 (function () {
   'use strict';
   var S = window.YSShell, el = S.el, svgEl = S.svgEl, rnd = S.rnd, shuffle = S.shuffle, cap = S.cap;
@@ -12,7 +13,7 @@
   var FIND = { flags: 'Find the flag of {name}.', feelings: 'Who looks {name}?', opposites: 'Find {name}.', seasons: 'Find {name}.', healthy: 'Find: {name}.', body: 'Find the {name}.', space: 'Find {the}{name}.', habitats: 'Find the {name}.' };
   // Faces that look alike are never shown together in a "find it" question.
   var NEAR = { surprised: ['scared'], scared: ['surprised', 'worried'], worried: ['scared'], calm: ['tired', 'shy'], tired: ['calm'], shy: ['calm'] };
-  var topic = null, learn = [], names = { learn: 'Learn', play: 'Play' };
+  var topic = null, learn = [], names = { learn: 'Learn', play: 'Play' }, shell = null;
 
   function item(id) { return topic.items.filter(function (i) { return i.id === id; })[0]; }
   function art(it, extra) { return '<svg x="0" y="0" width="64" height="64" viewBox="' + (it.vb || '0 0 64 64') + '"' + (extra || '') + '>' + it.art + '</svg>'; }
@@ -84,6 +85,70 @@
     }, function (id) { var it = item(id); return topic.id === 'flags' ? cap(called(it)) : it.name; }));
   }
 
+  /* ---------- "See them all together": the whole topic in one picture (Manish, 23 Nov 2026) ----------
+     A pack may add scene: { button, small, title, hint, prompt, note, label, vb, back, objects: [{ id, x, w, art, compare, name? }] }.
+     The picture is drawn at its own size and scrolls sideways inside its box on a narrow screen. Each object has an
+     HTML button over its strip (x to x + w): tapping it shows the item's sentence and the compare line, and says them. */
+  var sceneSaid = '';
+  function hush() { try { window.speechSynthesis.cancel(); } catch (e) { /* no voice */ } }
+  function speak(text) { sceneSaid = text; if (shell) shell.say(text); }
+  function buildScene() {
+    if (!document.querySelector('link[href$="topics-scene.css"]')) document.head.appendChild(el('link', { rel: 'stylesheet', href: 'assets/topics-scene.css' }));
+    var go = el('button', { type: 'button', 'class': 'step', id: 'play-scene' }, 'See them all together');
+    go.appendChild(el('small', {}, ''));
+    go.hidden = true; go.style.display = 'none'; // .step sets display, which would beat the hidden attribute
+    go.addEventListener('click', openScene);
+    $('other-topic').parentNode.insertBefore(go, $('other-topic'));
+    var view = el('section', { id: 'scene-view' });
+    view.hidden = true;
+    view.innerHTML = '<div class="card"><div class="top"><h2 class="topic-title" id="scene-title" tabindex="-1"></h2><button type="button" id="scene-exit" class="small">Back</button></div>' +
+      '<p class="muted" id="scene-hint"></p><div class="sky-box" id="sky-box"><div class="sky" id="sky"></div></div><p class="muted" id="scene-note"></p>' +
+      '<div class="sky-panel" id="scene-panel" aria-live="polite"></div><div class="row"><button type="button" class="small" id="scene-again">Hear it again</button></div></div>';
+    $('game').parentNode.insertBefore(view, $('game'));
+    $('scene-exit').addEventListener('click', closeScene);
+    $('scene-again').addEventListener('click', function () { speak(sceneSaid); });
+  }
+  function sceneName(o) { var it = item(o.item || o.id); return o.name || cap(it ? it.name : o.id); }
+  function openScene() {
+    var sc = topic && topic.scene;
+    if (!sc) return;
+    var vb = sc.vb.split(/\s+/).map(Number), W = vb[2], H = vb[3], sky = $('sky');
+    $('menu').hidden = true; $('game').hidden = true; $('scene-view').hidden = false;
+    $('scene-title').textContent = sc.title;
+    $('scene-hint').textContent = sc.hint;
+    $('scene-note').textContent = sc.note;
+    sky.innerHTML = '';
+    sky.style.width = W + 'px'; sky.style.height = H + 'px';
+    var pic = (sc.back || '') + sc.objects.map(function (o) { return '<g data-obj="' + o.id + '">' + o.art + '</g>'; }).join('');
+    sky.appendChild(svgEl(pic, sc.vb, sc.label));
+    sc.objects.forEach(function (o) {
+      var b = el('button', { type: 'button', 'class': 'sky-btn', 'data-obj': o.id, style: 'left:' + (100 * o.x / W).toFixed(3) + '%;width:' + (100 * o.w / W).toFixed(3) + '%' });
+      b.appendChild(el('span', { 'class': 'sky-name' }, sceneName(o)));
+      b.addEventListener('click', function () { showObject(o, b); });
+      sky.appendChild(b);
+    });
+    $('sky-box').scrollLeft = 0;
+    var panel = $('scene-panel');
+    panel.innerHTML = '';
+    panel.appendChild(el('p', { 'class': 'muted' }, sc.prompt));
+    speak(sc.title + '. ' + sc.prompt);
+    $('scene-title').focus();
+  }
+  function showObject(o, b) {
+    var it = item(o.item || o.id), name = sceneName(o), panel = $('scene-panel');
+    Array.prototype.forEach.call($('sky').querySelectorAll('.sky-btn'), function (x) { x.classList.toggle('on', x === b); });
+    panel.innerHTML = '';
+    panel.appendChild(el('p', { 'class': 'sky-head', id: 'scene-name' }, name));
+    if (it) panel.appendChild(el('p', { id: 'scene-say' }, it.say));
+    if (o.compare) panel.appendChild(el('p', { id: 'scene-compare' }, o.compare));
+    speak(name + '. ' + [it ? it.say : '', o.compare || ''].join(' ').trim());
+  }
+  function closeScene() {
+    hush();
+    $('scene-view').hidden = true; $('menu').hidden = false;
+    $('play-scene').focus();
+  }
+
   /* ---------- picking a topic ---------- */
   function $(id) { return document.getElementById(id); }
   function choose(id, focus) {
@@ -94,12 +159,16 @@
     $('topic-name').textContent = topic.name;
     $('topic-ages').textContent = 'Ages ' + topic.ages.replace('-', ' to ') + '. ' + topic.blurb;
     $('play-learn').firstChild.textContent = 'Learn about ' + topic.name.toLowerCase().replace(/^the /, '');
+    var go = $('play-scene'), sc = topic.scene;
+    go.hidden = !sc; go.style.display = sc ? '' : 'none';
+    if (sc) { go.firstChild.textContent = sc.button; go.lastChild.textContent = sc.small; }
+    $('scene-view').hidden = true;
     $('picker').hidden = true; $('menu').hidden = false; $('game').hidden = true;
     try { history.replaceState(null, '', '#' + id); } catch (e) { /* file pages */ }
     if (focus) $('topic-name').focus();
   }
   function showPicker() {
-    $('picker').hidden = false; $('menu').hidden = true; $('game').hidden = true;
+    $('picker').hidden = false; $('menu').hidden = true; $('game').hidden = true; $('scene-view').hidden = true;
     try { history.replaceState(null, '', location.pathname); } catch (e) { /* nothing */ }
     var b = topic && $('topic-' + topic.id); if (b) b.focus();
   }
@@ -124,8 +193,10 @@
     names: names,
     learn: learn,
     games: { play: play },
-    init: function () {
+    init: function (ctx) {
+      shell = ctx;
       buildPicker();
+      buildScene();
       $('other-topic').addEventListener('click', showPicker);
       // After the shell shows the menu: open the topic in the link, or the list.
       setTimeout(function () {

@@ -397,10 +397,12 @@
     var p = load();
     var items = Array.prototype.slice.call(document.querySelectorAll('[data-ages]'));
     var groups = [];
-    items.forEach(function (i) { if (groups.indexOf(i.parentElement) < 0) groups.push(i.parentElement); });
+    // Cards inside one [data-age-group] (the Sprouts frames) count as one list. Hidden by age: a frame with no card left hides too.
+    function groupOf(i) { return (i.closest && i.closest('[data-age-group]')) || i.parentElement; }
+    items.forEach(function (i) { if (groups.indexOf(groupOf(i)) < 0) groups.push(groupOf(i)); });
     var anyHidden = false;
     groups.forEach(function (g) {
-      var kids = items.filter(function (i) { return i.parentElement === g; });
+      var kids = items.filter(function (i) { return groupOf(i) === g; });
       var some = p && kids.some(function (i) { return fits(i, p.age); });
       kids.forEach(function (i) {
         var hide = !!(p && !showAll && some && !fits(i, p.age));
@@ -408,6 +410,10 @@
         i.hidden = hide;
         i.classList.toggle('ys-hidden', hide);
       });
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-frame]'), function (f) {
+      var cards = f.querySelectorAll('[data-ages]');
+      f.hidden = cards.length > 0 && Array.prototype.every.call(cards, function (c) { return c.classList.contains('ys-hidden'); });
     });
     var bar = $('ys-filter');
     if (!p || !groups.length || (!anyHidden && !showAll)) { if (bar) bar.remove(); return; }

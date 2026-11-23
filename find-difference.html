@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find the difference | Yaanstep</title>
+<meta name="description" content="Looking games for ages 3 to 8: odd one out and spot the differences, with our own simple drawings. The puzzles start from your child's age and get trickier or easier as they play. Free, no sign-in, nothing stored.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/learn.css">
+<link rel="stylesheet" href="assets/find-difference.css">
+</head><body><main>
+<p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
+<h1>Find the difference</h1>
+<p class="note"><b>Looking games: odd one out and spot the differences, ages 3 to 8. Free.</b> Made by Yaanstep's AI team. Not yet tested with children. Not a replacement for school. The pictures are our own simple drawings. No sign-in, no ads. Nothing is recorded or sent. Only points are kept on this device, and only with a child profile.</p>
+<noscript><p class="note">These games need JavaScript, which is switched off in this browser. Away from the screen, try the same games at home: put four spoons in a row with one fork, and ask which one is different. Or set out a few toys, have your child close their eyes, move one, and ask what changed.</p></noscript>
+<p id="novoice" class="note" hidden>No built-in voice was found on this device, so the games show words without sound. A grown-up can read the words aloud.</p>
+<section id="menu"><div class="card"><p><b>Start with the lesson, or pick a game:</b></p><p class="muted" id="level-note"></p><div class="steps">
+<button class="step" id="play-learn">Learn to look closely<small>A moving lesson in 5 short parts.</small></button>
+<button class="step" id="play-odd">Odd one out<small>A group of pictures. One is different: its color, shape, size, the way it faces, or a small detail.</small></button>
+<button class="step" id="play-spot">Spot the differences<small>Two pictures that look almost the same. Tap what changed in the second one.</small></button>
+</div></div>
+<div class="parent"><p>Parent area</p><p>These games are about looking carefully and comparing. They start from the age in your child's profile, and in the middle when no age is picked. Then they follow how your child plays: a puzzle solved with no missed taps makes the next one a little trickier (more pictures, smaller changes), and a few missed taps or a clue makes the next one easier. This is kept only while the page is open. There are no timers and no losing. After a quiet pause, a soft outline shows one place to look.</p><p>Talk while you play: "What is the same? What changed? How did you know?" Try it away from the screen too, with spoons, socks or toys.</p><p>With "Fewer choices" turned on in the child profile, Odd one out shows only 3 pictures at a time. With "Calm mode" or reduced motion, the clue is a still outline.</p><p>The voice and speed you chose on the <a href="reading.html">reading page</a> are used here as well.</p></div></section>
+<section id="game" hidden><div class="card"><div class="top"><b id="title"></b><span class="count" id="count"></span><button id="exit" class="small">Back</button></div><div id="area"></div><div id="sub" class="sub" aria-live="polite"></div><div id="howbox"></div><div class="row"><button id="again" class="small">Hear it again</button><button id="more" class="primary" hidden>Next</button></div></div>
+<div id="alldone" class="done" hidden><b>All done for now!</b>Well done. Time for a break: can you find two things in the room that are the same color?<div class="row" style="justify-content:center"><button id="keep">Keep playing</button><button id="stop" class="primary">Finish</button></div></div></section>
+</main>
+<script src="assets/pictures.js"></script>
+<script src="assets/learn-shell.js"></script>
+<script src="assets/find-difference.js"></script>
+<script src="assets/profile.js"></script>
+</body></html>

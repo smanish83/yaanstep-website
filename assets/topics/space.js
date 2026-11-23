@@ -122,5 +122,42 @@
     { q: 'Which is the red planet?', ans: ['mars'], pool: ['mercury', 'venus', 'earth', 'jupiter', 'saturn', 'uranus', 'neptune'], hint: 'Mars is covered in red dust, so it looks red.' },
     { q: 'Which is a star that gives us daylight?', ans: ['sun'], pool: ['moon', 'earth', 'mars', 'jupiter', 'comet'], hint: 'The Sun is a star. It gives us light and heat.' },
     { q: 'Which planet is closest to the Sun?', ans: ['mercury'], pool: ['venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'], hint: 'Mercury is the first planet from the Sun.' }
-  ]
+  ],
+  /* "See them all together" (Manish, 23 Nov 2026): the Sun and the planets in order, in one picture, so the sizes can be
+     compared. Earth's radius is 6 units; every other radius is Earth's times its real width compared with Earth
+     (Sun 109, Mercury 0.383, Venus 0.949, Moon 0.273, Mars 0.532, Jupiter 11.21, Saturn 9.45, Uranus 4.01, Neptune 3.88).
+     Distances are not to scale. Each object's main circle has class "body". x and w are its tap strip, left to right. */
+  scene: {
+    button: 'See them all together',
+    small: 'The Sun and the planets in one picture. Tap one to hear about it.',
+    title: 'The Sun and the planets',
+    hint: 'Slide the picture sideways to see them all.',
+    prompt: 'Tap the Sun, the Moon or a planet to hear about it.',
+    note: 'The sizes are about right. The distances are squeezed to fit: in real space the planets are much, much farther apart, and the Sun is so big that only its edge fits here.',
+    label: 'The Sun and the eight planets in order from the Sun: Mercury, Venus, Earth with the Moon, Mars, Jupiter, Saturn, Uranus and Neptune. The sizes are about right, the distances are squeezed.',
+    vb: '0 0 1016 232',
+    back: '<rect width="1016" height="232" fill="#141a3d"/><g fill="#ffffff" opacity=".8"><circle cx="90" cy="28" r=".9"/><circle cx="130" cy="62" r=".7"/><circle cx="150" cy="186" r=".9"/><circle cx="200" cy="34" r=".7"/><circle cx="330" cy="176" r=".9"/><circle cx="362" cy="30" r=".9"/><circle cx="404" cy="150" r=".7"/><circle cx="598" cy="24" r=".9"/><circle cx="660" cy="196" r=".7"/><circle cx="842" cy="30" r=".9"/><circle cx="858" cy="176" r=".7"/><circle cx="934" cy="40" r=".9"/><circle cx="1000" cy="186" r=".9"/><circle cx="1004" cy="20" r=".7"/><circle cx="250" cy="190" r=".7"/></g>',
+    objects: [
+      { id: 'sun', x: 0, w: 70, compare: 'The Sun is much bigger than all the planets. About 109 Earths would fit across it.',
+        art: '<circle cx="-598" cy="104" r="664" fill="#f7a541" opacity=".35"/><circle class="body" cx="-598" cy="104" r="654" fill="#f7c948" stroke="#f7a541" stroke-width="3"/><circle cx="30" cy="60" r="5" fill="#f7a541" opacity=".6"/><circle cx="38" cy="150" r="4" fill="#f7a541" opacity=".6"/>' },
+      { id: 'mercury', x: 70, w: 72, compare: 'Mercury is only a little bigger than our Moon, and not even half as wide as Earth.',
+        art: '<circle class="body" cx="106" cy="104" r="2.3" fill="#b5afa5"/>' },
+      { id: 'venus', x: 142, w: 72, compare: 'Venus is almost the same size as Earth, just a little smaller.',
+        art: '<circle class="body" cx="178" cy="104" r="5.7" fill="#efcf7d"/><path d="M173.5 102.5h9M173 105.5h10" stroke="#d9a94e" stroke-width="1"/>' },
+      { id: 'earth', x: 214, w: 72, compare: 'Earth is the biggest of the four rocky planets near the Sun. Venus is almost as big.',
+        art: '<circle class="body" cx="250" cy="104" r="6" fill="#3d8fd1"/><path d="M247 101.5q2-1.5 3.5 0t-1 3zM251.5 105q2 0 2 1.5t-2.5 1z" fill="#5cb83f"/>' },
+      { id: 'moon', x: 286, w: 60, compare: 'The Moon is not a planet. It is smaller than all eight planets, and almost 4 Moons would fit across Earth.',
+        art: '<circle cx="250" cy="104" r="50.2" fill="none" stroke="#7d88c9" stroke-width="1" stroke-dasharray="3 4"/><circle class="body" cx="296" cy="84" r="1.64" fill="#e6e3d8"/>' },
+      { id: 'mars', x: 346, w: 72, compare: 'Mars is the second smallest planet. It is about half as wide as Earth.',
+        art: '<circle class="body" cx="382" cy="104" r="3.2" fill="#d2552f"/><path d="M380.5 101.4h3" stroke="#ffffff" stroke-width=".8" stroke-linecap="round"/>' },
+      { id: 'jupiter', x: 418, w: 160, compare: 'About 11 Earths would fit across Jupiter, side by side.',
+        art: '<circle class="body" cx="498" cy="104" r="67.3" fill="#e8c59a"/><ellipse cx="498" cy="64" rx="50" ry="5" fill="#c98a5a"/><ellipse cx="498" cy="89" rx="62" ry="6" fill="#b8754a"/><ellipse cx="498" cy="116" rx="62" ry="5" fill="#c98a5a"/><ellipse cx="498" cy="140" rx="52" ry="5" fill="#b8754a"/><ellipse cx="520" cy="127" rx="10" ry="6" fill="#d6453d"/>' },
+      { id: 'saturn', x: 578, w: 270, compare: 'Saturn is the second biggest planet. About 9 Earths would fit across it, without its rings.',
+        art: '<g transform="rotate(-12 713 104)" fill="none"><path d="M594 104A119 26 0 0 1 832 104" stroke="#cdb57c" stroke-width="7"/><path d="M622 104A91 20 0 0 1 804 104" stroke="#e8d7a0" stroke-width="10"/></g><circle class="body" cx="713" cy="104" r="56.7" fill="#e8c77a"/><g transform="rotate(-12 713 104)"><ellipse cx="713" cy="80" rx="48" ry="5" fill="#d9a94e"/><ellipse cx="713" cy="122" rx="50" ry="5" fill="#d9a94e"/><g fill="none"><path d="M594 104A119 26 0 0 0 832 104" stroke="#cdb57c" stroke-width="7"/><path d="M622 104A91 20 0 0 0 804 104" stroke="#e8d7a0" stroke-width="10"/></g></g>' },
+      { id: 'uranus', x: 848, w: 84, compare: 'Uranus is about 4 times as wide as Earth. It is just a little bigger than Neptune.',
+        art: '<circle class="body" cx="890" cy="104" r="24.1" fill="#9fe3e8"/><path d="M885 82q-3 22 0 44" stroke="#86d3da" stroke-width="3" fill="none"/><ellipse cx="890" cy="104" rx="7" ry="44" fill="none" stroke="#c8f0f2" stroke-width="1.2" opacity=".7" transform="rotate(8 890 104)"/>' },
+      { id: 'neptune', x: 932, w: 84, compare: 'Neptune is about 4 times as wide as Earth, almost the same size as Uranus.',
+        art: '<circle class="body" cx="974" cy="104" r="23.3" fill="#3b5fd9"/><ellipse cx="966" cy="98" rx="5" ry="3" fill="#24399a"/><path d="M958 112q14 3 30-1" stroke="#a9c4ff" stroke-width="2" fill="none" stroke-linecap="round"/>' }
+    ]
+  }
 };

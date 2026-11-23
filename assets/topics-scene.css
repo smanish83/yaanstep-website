@@ -1,0 +1,14 @@
+/* "See them all together" on the topics page (topics.js, topic.scene; 23 Nov 2026). The picture is a night sky, so the
+   colours here are fixed. The picture keeps its own size and scrolls sideways inside .sky-box on a narrow screen. */
+.sky-box{overflow-x:auto;overflow-y:hidden;max-width:100%;border-radius:14px;background:#141a3d;margin:8px 0}
+.sky{position:relative}
+.sky svg{display:block;width:100%;height:100%}
+.sky-btn{position:absolute;top:0;bottom:0;height:auto;min-width:0;min-height:0;margin:0;padding:0 0 6px;border:0;border-radius:12px;background:transparent;color:#ffffff;display:flex;align-items:flex-end;justify-content:center}
+.sky-btn:focus-visible{outline:4px solid #f0a500;outline-offset:-4px}
+.sky-btn.on{box-shadow:inset 0 0 0 3px #ffffff}
+.sky-name{background:#0b1030;color:#ffffff;font-size:.8rem;font-weight:700;line-height:1.2;padding:3px 6px;border-radius:8px;white-space:nowrap}
+.sky-btn:hover .sky-name,.sky-btn.on .sky-name{background:#2c3a8a}
+.sky-panel{background:#FFF8E6;border:2px solid #E3CF7D;border-radius:14px;padding:10px 14px;margin-top:10px;min-height:3em}
+.sky-panel p{margin:.3em 0}.sky-head{font-weight:700;font-size:1.1rem}
+#scene-note{margin:4px 0}
+#play-scene[hidden]{display:none}
