@@ -132,14 +132,15 @@
       sky.appendChild(b);
     });
     $('sky-box').scrollLeft = 0;
-    seen = {}; rewarded = false;
+    seen = {};
     var panel = $('scene-panel');
     panel.innerHTML = '';
     panel.appendChild(el('p', { 'class': 'muted' }, sc.prompt));
     speak(sc.title + '. ' + sc.prompt);
     $('scene-title').focus();
   }
-  var seen = {}, rewarded = false;
+  /* One World point per picture per visit to the page: looking again is welcome but earns nothing more. */
+  var seen = {};
   function showObject(o, b) {
     var it = item(o.item || o.id), name = sceneName(o), panel = $('scene-panel'), say = o.say || (it ? it.say : '');
     Array.prototype.forEach.call($('sky').querySelectorAll('.sky-btn'), function (x) { x.classList.toggle('on', x === b); });
@@ -150,8 +151,8 @@
     var line = name + '. ' + [say, o.compare || ''].join(' ').trim();
     seen[o.id] = true;
     var sc = topic.scene;
-    if (!rewarded && sc.objects.every(function (x) { return seen[x.id]; })) {
-      rewarded = true;
+    if (!sc.rewarded && sc.objects.every(function (x) { return seen[x.id]; })) {
+      sc.rewarded = true;
       if (window.YSPoints) window.YSPoints.add('world', 1);
       var done = 'You looked at every part of the picture. Well done!';
       panel.appendChild(el('p', { 'class': 'sky-done', id: 'scene-done' }, done));
