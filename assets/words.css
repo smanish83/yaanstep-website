@@ -95,3 +95,14 @@ button.chip{border-color:var(--teal);text-decoration:underline;text-underline-of
 .pickall{display:grid;gap:10px;margin:12px 0}
 .shape svg{width:56px;height:56px}
 @media (prefers-reduced-motion:no-preference){.sentence .wb,.change .wb{animation:blockIn .45s ease-out both}}
+/* grammar games: mixed-up words, blanks, punctuation detective */
+.wb.mixup{background:#E0F4F8;border-color:#0E7490}.wb.blank{background:#EEF2F6;border-color:#475569}
+.gap mark.filled{background:#E6F6EA;color:#14532d;border-bottom:3px solid #1b7a3d;padding:0 4px;border-radius:4px;font-weight:800}
+.placeline{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px;margin:12px 0;font-size:1.35rem;font-weight:600}
+.placeline .pw{padding:4px 2px}
+.gapbtn{min-width:34px;min-height:48px;padding:0 4px;border:2px dashed #8aa49b;border-radius:10px;background:#fff;color:#7a5a00;font-size:1.6rem;font-weight:800;line-height:1;cursor:pointer}
+.gapbtn:hover,.gapbtn:focus-visible{background:#FFF6D6;border-color:#B7791F}
+.gapbtn.right{border-style:solid;border-color:#1b7a3d;background:#E6F6EA;color:#14532d}
+.gapbtn.miss,.gapbtn.wrong{border-color:#B91C1C}
+.mpic{display:flex;justify-content:center;margin:6px 0}.mpic svg{width:72px;height:72px}
+.optext.big{font-size:1.2rem;font-weight:600}
