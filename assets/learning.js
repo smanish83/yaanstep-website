@@ -770,6 +770,7 @@
           if (v === fact.answer) {
             buttons.forEach(function (x) { x.disabled = true; });
             b.classList.add('right');
+            card.textContent = fact.text + ' = ' + fact.answer; // the ? becomes the answer (Manish, 23 Nov 2026)
             ctx.tell((first ? 'Found it! ' : 'You worked it out! ') + fact.text + ' = ' + fact.answer + '.', 'yes');
             ctx.done(first);
           } else {
@@ -781,7 +782,7 @@
         grid.appendChild(b);
         return b;
       });
-      ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
+      var card = ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
       ctx.stage.appendChild(help);
       ctx.stage.appendChild(grid);
     };
@@ -807,6 +808,7 @@
           if (v === fact.answer) {
             buttons.forEach(function (x) { x.disabled = true; });
             b.classList.add('right');
+            card.textContent = fact.text + ' = ' + fact.answer; // the ? becomes the answer (Manish, 23 Nov 2026)
             ctx.tell((first ? 'Yes! ' : 'You worked it out! ') + fact.text + ' = ' + fact.answer + '.', 'yes');
             ctx.done(first);
           } else {
@@ -820,7 +822,7 @@
         line.appendChild(b);
         buttons.push(b);
       }(n));
-      ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
+      var card = ctx.stage.appendChild(el('p', { 'class': 'fact-card' }, [fact.text + ' = ?']));
       ctx.stage.appendChild(line);
       hintLine(ctx, 'Tap the answer on the number line.');
     };
