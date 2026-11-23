@@ -120,5 +120,47 @@
     { q: 'What do you walk with?', ans: ['feet'], pool: ['eyes', 'ears', 'nose', 'mouth', 'teeth', 'hair', 'shoulders'], hint: 'We walk on our feet.' },
     { q: 'What do you hold a cup with?', ans: ['hands', 'fingers'], pool: ['eyes', 'ears', 'nose', 'hair', 'knees', 'toes', 'tummy'], hint: 'We hold a cup with our hands and fingers.' },
     { q: 'What do you chew with?', ans: ['teeth', 'mouth'], pool: ['eyes', 'ears', 'nose', 'hair', 'hands', 'feet', 'knees', 'toes'], hint: 'We chew food with the teeth in our mouth.' }
-  ]
+  ],
+  /* "See them all together" (Manish, 23 Nov 2026): one child standing, from the hair down to the feet. Each part's tap
+     area is its own rectangle (x, y, w, h in picture pixels), none overlapping and each at least 44 px each way, so the
+     head is drawn big. Only one ear, one arm and one hand are tap areas; the other side is the same. */
+  scene: {
+    button: 'See them all together',
+    small: 'One picture of a whole child. Tap a part to hear what it helps us do.',
+    title: 'My whole body',
+    hint: 'Start at the hair and go all the way down to the feet.',
+    prompt: 'Tap a part of the body to hear what it helps us do.',
+    note: 'This is a simple drawing. Real people come in many shapes, sizes and colors.',
+    label: 'A smiling child standing, with the head, hair, ears, eyes, nose, mouth, shoulders, arms, tummy, hands, legs, knees and feet.',
+    vb: '0 0 320 612',
+    back: '<rect width="320" height="612" fill="#e3f4fb"/><rect y="588" width="320" height="24" fill="#9fd27f"/><circle cx="292" cy="30" r="16" fill="#f7d548"/><path d="M14 44q0-12 14-12q4-10 16-8q10-6 18 4q12 0 12 16z" fill="#ffffff"/><g fill="#f27aa8"><circle cx="24" cy="584" r="5"/><circle cx="296" cy="582" r="5"/></g><path d="M24 589v-6M296 588v-6" stroke="#4e9a3a" stroke-width="2"/>',
+    objects: [
+      { id: 'head', x: 112, y: 60, w: 96, h: 44, compare: 'We nod our head to say yes, and shake it to say no.',
+        art: '<ellipse cx="66" cy="142" rx="15" ry="23" fill="#c68642" stroke="#17332c" stroke-width="3"/><ellipse cx="254" cy="142" rx="15" ry="23" fill="#c68642" stroke="#17332c" stroke-width="3"/><rect x="146" y="236" width="28" height="40" fill="#c68642" stroke="#17332c" stroke-width="3"/><ellipse cx="160" cy="150" rx="88" ry="100" fill="#c68642" stroke="#17332c" stroke-width="3"/><circle cx="110" cy="186" r="12" fill="#e07a5f" opacity=".45"/><circle cx="210" cy="186" r="12" fill="#e07a5f" opacity=".45"/>' },
+      { id: 'hair', x: 104, y: 16, w: 112, h: 44, compare: 'Our hair keeps growing, a tiny bit every day.',
+        art: '<path d="M76 142C66 64 108 22 160 22C212 22 254 64 244 142C238 110 230 88 214 78Q198 84 186 70Q172 82 158 68Q144 82 130 70Q116 84 104 78C90 88 82 110 76 142Z" fill="#2b1d14" stroke="#17332c" stroke-width="3" stroke-linejoin="round"/><path d="M118 40q20-10 40-10" stroke="#5a4030" stroke-width="5" fill="none" stroke-linecap="round"/>' },
+      { id: 'ears', x: 10, y: 108, w: 64, h: 64, compare: 'Two ears help us tell where a sound is coming from.',
+        art: '<path d="M64 130q-9 12 0 24M256 130q9 12 0 24" stroke="#8a5a2b" stroke-width="3" fill="none" stroke-linecap="round"/>' },
+      { id: 'eyes', x: 100, y: 104, w: 120, h: 44, compare: 'We blink to keep our eyes clean and wet.',
+        art: '<path d="M110 110q14-8 28 0M182 110q14-8 28 0" stroke="#2b1d14" stroke-width="4" fill="none" stroke-linecap="round"/><ellipse cx="124" cy="130" rx="12" ry="14" fill="#ffffff" stroke="#17332c" stroke-width="2.5"/><circle cx="126" cy="132" r="7" fill="#3b2a1a"/><circle cx="128" cy="129" r="2.4" fill="#ffffff"/><ellipse cx="196" cy="130" rx="12" ry="14" fill="#ffffff" stroke="#17332c" stroke-width="2.5"/><circle cx="194" cy="132" r="7" fill="#3b2a1a"/><circle cx="196" cy="129" r="2.4" fill="#ffffff"/>' },
+      { id: 'nose', x: 136, y: 148, w: 48, h: 44, compare: 'Smelling helps us taste our food too.',
+        art: '<path d="M160 152q-6 14-10 22q10 7 20 0" stroke="#8a5a2b" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="153" cy="178" r="2" fill="#8a5a2b"/><circle cx="167" cy="178" r="2" fill="#8a5a2b"/>' },
+      { id: 'mouth', x: 116, y: 200, w: 88, h: 50, compare: 'Inside our mouth are our teeth and our tongue.',
+        art: '<path d="M134 194Q160 222 186 194Z" fill="#7a2b2b" stroke="#17332c" stroke-width="3" stroke-linejoin="round"/><path d="M139 196h42l-2 4q-19 4-38 0z" fill="#ffffff"/><path d="M151 208q9-6 18 0q-9 5-18 0z" fill="#e66a6a"/>' },
+      { id: 'shoulders', x: 76, y: 270, w: 168, h: 44, compare: 'Our shoulders let our arms swing round and round.',
+        art: '<path d="M98 300Q100 270 132 268H188Q220 270 222 300V404H98Z" fill="#f2b33d" stroke="#17332c" stroke-width="3" stroke-linejoin="round"/><path d="M140 268q20 20 40 0" fill="#c68642" stroke="#17332c" stroke-width="3"/>' },
+      { id: 'arms', x: 30, y: 314, w: 70, h: 78, compare: 'Our elbow is in the middle of our arm. It lets our arm bend.',
+        art: '<path d="M84 318L74 402" stroke="#17332c" stroke-width="28" stroke-linecap="round"/><path d="M84 318L74 402" stroke="#c68642" stroke-width="22" stroke-linecap="round"/><path d="M70 362q8 4 16 0" stroke="#8a5a2b" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M100 296Q80 296 68 330L98 340Z" fill="#f2b33d" stroke="#17332c" stroke-width="3" stroke-linejoin="round"/>' },
+      { id: 'tummy', x: 116, y: 322, w: 88, h: 70, compare: 'A hungry tummy can make a rumbling sound!',
+        art: '<path d="M98 398H222V446H168L160 426L152 446H98Z" fill="#3d6fd1" stroke="#17332c" stroke-width="3" stroke-linejoin="round"/><path d="M160 336l4 8h9l-7 6 3 9-9-6-9 6 3-9-7-6h9z" fill="#ffffff" opacity=".8"/>' },
+      { id: 'hands', x: 220, y: 388, w: 70, h: 52, compare: 'Each hand has four fingers and a thumb.',
+        art: '<path d="M236 318L246 402" stroke="#17332c" stroke-width="28" stroke-linecap="round"/><path d="M236 318L246 402" stroke="#c68642" stroke-width="22" stroke-linecap="round"/><path d="M220 296Q240 296 252 330L222 340Z" fill="#f2b33d" stroke="#17332c" stroke-width="3" stroke-linejoin="round"/><circle cx="74" cy="412" r="15" fill="#c68642" stroke="#17332c" stroke-width="3"/><path d="M86 404q8-2 8 6" stroke="#17332c" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="246" cy="412" r="15" fill="#c68642" stroke="#17332c" stroke-width="3"/><path d="M234 404q-8-2-8 6" stroke="#17332c" stroke-width="3" fill="none" stroke-linecap="round"/>' },
+      { id: 'legs', x: 104, y: 440, w: 112, h: 44, name: 'Legs', say: 'Our legs hold us up. We walk, run and jump with our legs.', compare: 'Our legs grow longer as we grow taller.',
+        art: '<path d="M136 444V566M184 444V566" stroke="#17332c" stroke-width="30"/><path d="M136 444V566M184 444V566" stroke="#c68642" stroke-width="24"/><path d="M98 398H222V446H168L160 426L152 446H98Z" fill="none" stroke="#17332c" stroke-width="3" stroke-linejoin="round"/>' },
+      { id: 'knees', x: 104, y: 484, w: 112, h: 44, compare: 'Babies crawl on their hands and knees.',
+        art: '<ellipse cx="136" cy="506" rx="17" ry="12" fill="#c68642" stroke="#17332c" stroke-width="3"/><ellipse cx="184" cy="506" rx="17" ry="12" fill="#c68642" stroke="#17332c" stroke-width="3"/><path d="M128 504q8 6 16 0M176 504q8 6 16 0" stroke="#8a5a2b" stroke-width="2.5" fill="none" stroke-linecap="round"/>' },
+      { id: 'feet', x: 90, y: 552, w: 140, h: 48, compare: 'Each foot has five toes.',
+        art: '<path d="M106 584q0-20 30-20q18 0 18 20z" fill="#d6453d" stroke="#17332c" stroke-width="3" stroke-linejoin="round"/><path d="M214 584q0-20-30-20q-18 0-18 20z" fill="#d6453d" stroke="#17332c" stroke-width="3" stroke-linejoin="round"/><path d="M104 586H156M166 586H216" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>' }
+    ]
+  }
 };
