@@ -106,3 +106,9 @@ button.chip{border-color:var(--teal);text-decoration:underline;text-underline-of
 .gapbtn.miss,.gapbtn.wrong{border-color:#B91C1C}
 .mpic{display:flex;justify-content:center;margin:6px 0}.mpic svg{width:72px;height:72px}
 .optext.big{font-size:1.2rem;font-weight:600}
+
+/* Another word, next to Word of the day */
+.kickrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 6px}
+.kickrow .kicker{margin:0}
+.kickrow .next-word{min-height:48px;font-size:1.05rem;margin-left:auto}
+@media (max-width:420px){.kickrow .next-word{margin-left:0}}

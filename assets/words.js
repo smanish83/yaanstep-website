@@ -158,7 +158,12 @@
     opts = opts || {};
     shown = e.w;
     var card = el('article', { 'class': 'card word', id: opts.id || 'word-card', 'data-word': e.w });
-    if (opts.kicker) card.appendChild(el('p', { 'class': 'kicker' }, opts.kicker));
+    if (opts.kicker) {
+      var kr = el('div', { 'class': 'kickrow' });
+      kr.appendChild(el('p', { 'class': 'kicker' }, opts.kicker));
+      (opts.tools || []).forEach(function (t) { kr.appendChild(t); });
+      card.appendChild(kr);
+    }
     var head = el('div', { 'class': 'wordhead' });
     var p = picSvg(e.w);
     if (p) { var pb = el('span', { 'class': 'wpic mv-pop' }); pb.appendChild(p); head.appendChild(pb); }
@@ -233,20 +238,42 @@
   var VIEWS = ['menu', 'browse', 'entry', 'game'];
   function view(id) { VIEWS.forEach(function (v) { if ($(v)) $(v).hidden = v !== id; }); window.scrollTo(0, 0); }
   var band = null;
-  function drawToday() {
+  /* "Another word": a random word for the same age group, never the same word twice in one visit. */
+  var extra = null, seenWords = [];
+  function anotherWord() {
+    var today = wordOfDay(todayKey(), band), pool = bandWords(band);
+    if (seenWords.indexOf(today.w) < 0) seenWords.push(today.w);
+    var left = pool.filter(function (e) { return seenWords.indexOf(e.w) < 0; });
+    if (!left.length) { seenWords = [today.w]; if (extra) seenWords.push(extra.w); left = pool.filter(function (e) { return seenWords.indexOf(e.w) < 0; }); }
+    if (!left.length) return today;
+    var e = left[Math.floor(Math.random() * left.length)];
+    seenWords.push(e.w);
+    return e;
+  }
+  function drawToday(focusId) {
     var key = todayKey(), age = childAge();
     if (!band) band = bandOf(age || 6);
-    var e = wordOfDay(key, band), box = $('today');
+    var today = wordOfDay(key, band), e = extra || today, box = $('today');
     box.innerHTML = '';
-    box.appendChild(wordCard(e, { id: 'wotd', kicker: 'Word of the day: ' + niceDate(key), h: 'h2' }));
+    var tools = [];
+    var next = el('button', { type: 'button', 'class': 'primary next-word', id: 'next-word' }, extra ? 'One more word' : 'Another word');
+    next.addEventListener('click', function () { extra = anotherWord(); drawToday('wotd-h'); });
+    tools.push(next);
+    if (extra) {
+      var back = el('button', { type: 'button', 'class': 'small', id: 'back-today' }, "Today's word");
+      back.addEventListener('click', function () { extra = null; drawToday('wotd-h'); });
+      tools.push(back);
+    }
+    box.appendChild(wordCard(e, { id: 'wotd', kicker: extra ? 'Another word for ages ' + band.from + ' to ' + band.to : 'Word of the day: ' + niceDate(key), h: 'h2', tools: tools }));
     var row = el('div', { 'class': 'row center bands' });
     row.appendChild(el('span', { 'class': 'muted' }, 'Word for ages:'));
     BANDS.forEach(function (b) {
       var btn = el('button', { type: 'button', 'class': 'small', id: 'band-' + b.id, 'aria-pressed': String(b === band) }, b.from + ' to ' + b.to);
-      btn.addEventListener('click', function () { band = b; drawToday(); $('band-' + b.id).focus(); });
+      btn.addEventListener('click', function () { band = b; extra = null; drawToday('band-' + b.id); });
       row.appendChild(btn);
     });
     box.appendChild(row);
+    if (focusId && $(focusId)) $(focusId).focus();
   }
   var backTo = 'menu';
   function openWord(w, focus) {
