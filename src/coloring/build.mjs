@@ -1,6 +1,8 @@
 // Builds the Yaanstep Sprouts coloring pages into coloring/ (SCRUM-515). Run from the site root: node src/coloring/build.mjs
 // Each subject is drawn in a few styles; each page puts one style (or two together) into a scene.
 import { writeFileSync, mkdirSync, rmSync, readdirSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { page, rng, makeCtx } from './lib.mjs';
 import { SCENES } from './scenes.mjs';
 
@@ -72,7 +74,7 @@ if (process.argv[1] && process.argv[1].endsWith('build.mjs')) {
       if (sub.pages) { // a subject that lays out its own pages (letters, numbers)
         const list = sub.pages(pic);
         list.forEach((svg, i) => { writeFileSync(new URL(`${cat.id}/${sub.id}-${i + 1}.svg`, outDir), svg); bytes += svg.length; });
-        entry.subjects.push({ id: sub.id, name: sub.name, n: list.length, easy: sub.easy ?? list.length });
+        entry.subjects.push({ id: sub.id, name: sub.name, n: list.length });
         total += list.length;
         continue;
       }
@@ -82,7 +84,7 @@ if (process.argv[1] && process.argv[1].endsWith('build.mjs')) {
         writeFileSync(new URL(`${cat.id}/${sub.id}-${i + 1}.svg`, outDir), svg);
         bytes += svg.length;
       });
-      entry.subjects.push({ id: sub.id, name: sub.name, n: vs.length, easy: vs.filter((v) => EASY.has(v.scene) && v.n === 1).length });
+      entry.subjects.push({ id: sub.id, name: sub.name, n: vs.length });
       total += vs.length;
     }
     entry.icon = `${cat.icon || cat.subjects[0].id}-1.svg`;
@@ -91,4 +93,9 @@ if (process.argv[1] && process.argv[1].endsWith('build.mjs')) {
   index.total = total;
   if (!only || process.env.WRITE_INDEX) writeFileSync(new URL('index.json', outDir), JSON.stringify(index));
   console.log(`${total} pages in ${cats.length} categories, ${(bytes / 1e6).toFixed(1)} MB`);
+  if (!only || process.env.WRITE_INDEX) {
+    // Easy, Medium or Hard for every page, from how many spaces there are to color (src/coloring/levels.py).
+    const r = spawnSync('python3', [fileURLToPath(new URL('./levels.py', import.meta.url))], { stdio: 'inherit' });
+    if (r.status !== 0) console.warn('Levels were not added. Run: python3 src/coloring/levels.py (needs cairosvg, numpy, scipy).');
+  }
 }
