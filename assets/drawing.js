@@ -68,6 +68,45 @@
   function pageUrl(cat, sub, n) { return 'coloring/' + cat + '/' + sub + '-' + n + '.svg'; }
   function pagesWord(n) { return n + (n === 1 ? ' page' : ' pages'); }
 
+  /* ---------- how hard: Easy, Medium, Hard for every page and every step-by-step drawing ---------- */
+  // 0 shows everything. The choice stays while the page is open; it is not stored on the device.
+  var LV_NAMES = ['All', 'Easy', 'Medium', 'Hard'];
+  var level = 0;
+  function lvOf(sub, n) { var v = parseInt((sub.lv || '').charAt(n - 1), 10); return v >= 1 && v <= 3 ? v : 2; }
+  function pagesAt(sub) {
+    var out = [];
+    for (var n = 1; n <= sub.n; n++) if (!level || lvOf(sub, n) === level) out.push(n);
+    return out;
+  }
+  function lvTag(v) { return el('span', { class: 'tag lv' + v }, LV_NAMES[v]); }
+  function syncBars() {
+    Array.prototype.forEach.call(document.querySelectorAll('.lvbar button'), function (b) {
+      b.setAttribute('aria-pressed', String(+b.getAttribute('data-lv') === level));
+    });
+  }
+  function buildBars() {
+    Array.prototype.forEach.call(document.querySelectorAll('.lvbar'), function (bar) {
+      LV_NAMES.forEach(function (name, v) {
+        var b = el('button', { type: 'button', class: 'lvchip lvc' + v, 'data-lv': String(v), 'aria-pressed': 'false' });
+        if (v) b.appendChild(el('span', { class: 'dots', 'aria-hidden': 'true' }, ['', '\u25CF', '\u25CF\u25CF', '\u25CF\u25CF\u25CF'][v]));
+        b.appendChild(el('span', { class: 'lw' }, name));
+        b.addEventListener('click', function () {
+          if (level === v) return;
+          level = v;
+          syncBars();
+          userNav = false;
+          route();
+          say(v ? name : 'Everything');
+        });
+        bar.appendChild(b);
+      });
+    });
+    syncBars();
+  }
+  function noneHere(box, what) {
+    box.appendChild(el('p', { class: 'muted none' }, 'No ' + LV_NAMES[level].toLowerCase() + ' ' + what + ' here. Tap All to see everything.'));
+  }
+
   /* ---------- views ---------- */
   function show(name) {
     VIEWS.forEach(function (v) { $('v-' + v).hidden = v !== name; });
@@ -97,11 +136,14 @@
     var box = $('cats');
     loadIndex().then(function (ix) {
       box.textContent = '';
+      var shown = 0;
       ix.categories.forEach(function (c) {
-        var n = c.subjects.reduce(function (t, s) { return t + s.n; }, 0);
-        box.appendChild(tile('#color/' + c.id, 'coloring/' + c.id + '/' + c.icon, c.name, pagesWord(n)));
+        var n = c.subjects.reduce(function (t, s) { return t + pagesAt(s).length; }, 0);
+        if (!n) return;
+        shown += n;
+        box.appendChild(tile('#color/' + c.id, 'coloring/' + c.id + '/' + c.icon, c.name, level ? n + ' ' + LV_NAMES[level].toLowerCase() : pagesWord(n)));
       });
-      $('total').textContent = ix.total + ' coloring pages in all, drawn by Yaanstep.';
+      $('total').textContent = level ? shown + ' ' + LV_NAMES[level].toLowerCase() + ' coloring pages, out of ' + ix.total + ' in all.' : ix.total + ' coloring pages in all, drawn by Yaanstep.';
       if (userNav) say('Pick a picture.');
     }, function () { failed(box); });
   }
@@ -113,7 +155,12 @@
       if (!cat) { location.hash = '#color'; return; }
       $('subs-h').textContent = cat.name;
       box.textContent = '';
-      cat.subjects.forEach(function (s) { box.appendChild(tile('#color/' + cat.id + '/' + s.id, pageUrl(cat.id, s.id, 1), s.name, pagesWord(s.n))); });
+      cat.subjects.forEach(function (s) {
+        var ns = pagesAt(s);
+        if (!ns.length) return;
+        box.appendChild(tile('#color/' + cat.id + '/' + s.id, pageUrl(cat.id, s.id, ns[0]), s.name, level ? ns.length + ' ' + LV_NAMES[level].toLowerCase() : pagesWord(s.n)));
+      });
+      if (!box.childNodes.length) noneHere(box, 'pages');
       if (userNav) say(cat.name);
     }, function () { failed(box); });
   }
@@ -126,11 +173,13 @@
       $('vars-h').textContent = sub.name;
       $('vars-back').setAttribute('href', '#color/' + cat.id);
       box.textContent = '';
-      for (var n = 1; n <= sub.n; n++) {
-        var t = tile('#page/' + cat.id + '/' + sub.id + '/' + n, pageUrl(cat.id, sub.id, n), 'Page ' + n, null, sub.name + ', page ' + n);
-        if (n <= sub.easy) t.appendChild(el('span', { class: 'tag' }, 'Easy'));
+      pagesAt(sub).forEach(function (n) {
+        var v = lvOf(sub, n);
+        var t = tile('#page/' + cat.id + '/' + sub.id + '/' + n, pageUrl(cat.id, sub.id, n), 'Page ' + n, null, sub.name + ', page ' + n + ', ' + LV_NAMES[v]);
+        t.appendChild(lvTag(v));
         box.appendChild(t);
-      }
+      });
+      if (!box.childNodes.length) noneHere(box, 'pages');
       if (userNav) say(sub.name + '. Pick a page.');
     }, function () { failed(box); });
   }
@@ -176,16 +225,19 @@
       n = parseInt(n, 10);
       if (!sub || !(n >= 1 && n <= sub.n)) { location.hash = '#color'; return; }
       cur = { cat: cat, sub: sub, n: n, url: pageUrl(cat.id, sub.id, n) };
-      $('page-h').textContent = sub.name + ', page ' + n;
+      $('page-h').textContent = sub.name + ', page ' + n + ' (' + LV_NAMES[lvOf(sub, n)] + ')';
       $('page-back').setAttribute('href', '#color/' + cat.id + '/' + sub.id);
       $('page-count').textContent = 'Page ' + n + ' of ' + sub.n;
+      // Page before and Next page stay within the level that is picked
+      var list = pagesAt(sub), before = list.filter(function (x) { return x < n; }), after = list.filter(function (x) { return x > n; });
+      var p = before.length ? before[before.length - 1] : 0, q = after.length ? after[0] : 0;
       var prev = $('prev'), next = $('next');
-      prev.setAttribute('href', '#page/' + cat.id + '/' + sub.id + '/' + (n - 1));
-      next.setAttribute('href', '#page/' + cat.id + '/' + sub.id + '/' + (n + 1));
-      prev.setAttribute('aria-disabled', n <= 1 ? 'true' : 'false');
-      next.setAttribute('aria-disabled', n >= sub.n ? 'true' : 'false');
-      if (n <= 1) prev.setAttribute('tabindex', '-1'); else prev.removeAttribute('tabindex');
-      if (n >= sub.n) next.setAttribute('tabindex', '-1'); else next.removeAttribute('tabindex');
+      prev.setAttribute('href', '#page/' + cat.id + '/' + sub.id + '/' + (p || n));
+      next.setAttribute('href', '#page/' + cat.id + '/' + sub.id + '/' + (q || n));
+      prev.setAttribute('aria-disabled', p ? 'false' : 'true');
+      next.setAttribute('aria-disabled', q ? 'false' : 'true');
+      if (!p) prev.setAttribute('tabindex', '-1'); else prev.removeAttribute('tabindex');
+      if (!q) next.setAttribute('tabindex', '-1'); else next.removeAttribute('tabindex');
       return loadSheet();
     }).catch(function () { failed(sheet); });
   }
@@ -297,7 +349,7 @@
 
   /* ---------- step-by-step drawing ---------- */
   var STEPS = (window.YS_STEPS || []).filter(function (d) { return d && SAFE.test(d.id) && Array.isArray(d.steps) && d.steps.length; });
-  var LEVELS = [[1, 'Easy, ages 3 to 5'], [2, 'A bit harder, ages 5 to 8'], [3, 'Harder, ages 8 to 12']];
+  var LEVELS = [[1, 'Easy, ages 3 to 5'], [2, 'Medium, ages 5 to 8'], [3, 'Hard, ages 8 to 12']];
   var drawing = null, at = 0;
 
   function pathsUpTo(d, upto, now) {
@@ -313,8 +365,9 @@
   function viewSteps() {
     show('steps');
     var box = $('steplist');
-    if (box.childNodes.length) return;
+    box.textContent = '';
     LEVELS.forEach(function (lv) {
+      if (level && lv[0] !== level) return;
       var list = STEPS.filter(function (d) { return d.level === lv[0]; });
       if (!list.length) return;
       box.appendChild(el('h3', { class: 'lvl' }, lv[1]));
@@ -324,6 +377,7 @@
         a.appendChild(svgEl(pathsUpTo(d, d.steps.length - 1, false), '0 0 400 400'));
         a.appendChild(el('span', { class: 'w' }, d.name));
         a.appendChild(el('span', { class: 'n' }, (d.steps.length - 1) + ' steps'));
+        a.appendChild(lvTag(d.level));
         grid.appendChild(a);
       });
       box.appendChild(grid);
@@ -432,6 +486,7 @@
     $('pic-color').appendChild(svgEl(PIC_COLOR, '0 0 150 150'));
     $('pic-steps').appendChild(svgEl(PIC_STEPS, '0 0 150 150'));
     buildPalette();
+    buildBars();
     setUpPad();
     setUpVoice();
     try { window.speechSynthesis.onvoiceschanged = setUpVoice; } catch (e) { /* no voices */ }
@@ -460,7 +515,8 @@
   window.YS_DRAW = {
     steps: function () { return STEPS.map(function (d) { return { id: d.id, name: d.name, level: d.level, n: d.steps.length }; }); },
     step: function () { return drawing ? { id: drawing.id, at: at, say: drawing.steps[at].say } : null; },
-    page: function () { return cur ? { cat: cur.cat.id, sub: cur.sub.id, n: cur.n, fillable: cur.fillable || 0 } : null; },
+    page: function () { return cur ? { cat: cur.cat.id, sub: cur.sub.id, n: cur.n, fillable: cur.fillable || 0, level: lvOf(cur.sub, cur.n) } : null; },
+    level: function () { return level; },
     pdf: makePdf
   };
 
