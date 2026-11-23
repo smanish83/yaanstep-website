@@ -1,5 +1,6 @@
 /* Yaanstep Sprouts: Clocks and time (ages 5 to 9; Manish, 22 Nov 2026).
-   Learn: a moving lesson in 7 parts. Games: Read the clock, Set the clock, How long?
+   Learn: a moving lesson in 7 parts. Games: Read the clock, Set the clock, How long?, and from clocks-more.js
+   Time around the world and Set the kitchen timer.
    The clock face is our own drawing. Nothing is stored or sent. */
 (function () {
   'use strict';
@@ -231,11 +232,15 @@
     }, function (v) { return v; }));
   }
 
+  // Time around the world and Set the kitchen timer come from clocks-more.js (23 Nov 2026), loaded before this file.
+  var names = { learn: 'Learn to tell the time', read: 'Read the clock', set: 'Set the clock', howlong: 'How long?' };
+  var games = { read: read, set: set, howlong: howlong }, more = window.YS_CLOCKS_MORE;
+  if (more) Object.keys(more.games).forEach(function (g) { names[g] = more.names[g]; games[g] = more.games[g]; });
   S.run({
     area: 'maths',
-    names: { learn: 'Learn to tell the time', read: 'Read the clock', set: 'Set the clock', howlong: 'How long?' },
+    names: names,
     learn: LEARN,
-    games: { read: read, set: set, howlong: howlong }
+    games: games
   });
   window.YS_CLOCKS = { fmt: fmt, named: named, dur: dur, angles: angles };
 })();
