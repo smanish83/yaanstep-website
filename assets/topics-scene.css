@@ -12,3 +12,6 @@
 .sky-panel p{margin:.3em 0}.sky-head{font-weight:700;font-size:1.1rem}
 #scene-note{margin:4px 0}
 #play-scene[hidden]{display:none}
+/* Scenes whose parts sit anywhere in the picture (object y and h set): the name sits in the middle of the part. */
+.sky-btn.part{align-items:center;padding:0}
+.sky-done{font-weight:700;color:#17604F}

@@ -88,7 +88,9 @@
   /* ---------- "See them all together": the whole topic in one picture (Manish, 23 Nov 2026) ----------
      A pack may add scene: { button, small, title, hint, prompt, note, label, vb, back, objects: [{ id, x, w, art, compare, name? }] }.
      The picture is drawn at its own size and scrolls sideways inside its box on a narrow screen. Each object has an
-     HTML button over its strip (x to x + w): tapping it shows the item's sentence and the compare line, and says them. */
+     HTML button over its strip (x to x + w, and y to y + h when the object gives y and h; full height otherwise):
+     tapping it shows the item's sentence and the compare line, and says them. An object may carry its own say line
+     instead of a pack item. Looking at every part once in a visit earns one World point (with a child profile). */
   var sceneSaid = '';
   function hush() { try { window.speechSynthesis.cancel(); } catch (e) { /* no voice */ } }
   function speak(text) { sceneSaid = text; if (shell) shell.say(text); }
@@ -122,26 +124,40 @@
     var pic = (sc.back || '') + sc.objects.map(function (o) { return '<g data-obj="' + o.id + '">' + o.art + '</g>'; }).join('');
     sky.appendChild(svgEl(pic, sc.vb, sc.label));
     sc.objects.forEach(function (o) {
-      var b = el('button', { type: 'button', 'class': 'sky-btn', 'data-obj': o.id, style: 'left:' + (100 * o.x / W).toFixed(3) + '%;width:' + (100 * o.w / W).toFixed(3) + '%' });
+      var box = 'left:' + (100 * o.x / W).toFixed(3) + '%;width:' + (100 * o.w / W).toFixed(3) + '%' +
+        (o.h ? ';top:' + (100 * (o.y || 0) / H).toFixed(3) + '%;height:' + (100 * o.h / H).toFixed(3) + '%;bottom:auto' : '');
+      var b = el('button', { type: 'button', 'class': 'sky-btn' + (o.h ? ' part' : ''), 'data-obj': o.id, style: box });
       b.appendChild(el('span', { 'class': 'sky-name' }, sceneName(o)));
       b.addEventListener('click', function () { showObject(o, b); });
       sky.appendChild(b);
     });
     $('sky-box').scrollLeft = 0;
+    seen = {}; rewarded = false;
     var panel = $('scene-panel');
     panel.innerHTML = '';
     panel.appendChild(el('p', { 'class': 'muted' }, sc.prompt));
     speak(sc.title + '. ' + sc.prompt);
     $('scene-title').focus();
   }
+  var seen = {}, rewarded = false;
   function showObject(o, b) {
-    var it = item(o.item || o.id), name = sceneName(o), panel = $('scene-panel');
+    var it = item(o.item || o.id), name = sceneName(o), panel = $('scene-panel'), say = o.say || (it ? it.say : '');
     Array.prototype.forEach.call($('sky').querySelectorAll('.sky-btn'), function (x) { x.classList.toggle('on', x === b); });
     panel.innerHTML = '';
     panel.appendChild(el('p', { 'class': 'sky-head', id: 'scene-name' }, name));
-    if (it) panel.appendChild(el('p', { id: 'scene-say' }, it.say));
+    if (say) panel.appendChild(el('p', { id: 'scene-say' }, say));
     if (o.compare) panel.appendChild(el('p', { id: 'scene-compare' }, o.compare));
-    speak(name + '. ' + [it ? it.say : '', o.compare || ''].join(' ').trim());
+    var line = name + '. ' + [say, o.compare || ''].join(' ').trim();
+    seen[o.id] = true;
+    var sc = topic.scene;
+    if (!rewarded && sc.objects.every(function (x) { return seen[x.id]; })) {
+      rewarded = true;
+      if (window.YSPoints) window.YSPoints.add('world', 1);
+      var done = 'You looked at every part of the picture. Well done!';
+      panel.appendChild(el('p', { 'class': 'sky-done', id: 'scene-done' }, done));
+      line += ' ' + done;
+    }
+    speak(line);
   }
   function closeScene() {
     hush();
