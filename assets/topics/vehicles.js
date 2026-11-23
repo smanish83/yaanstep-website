@@ -94,3 +94,66 @@
     { q: 'Which one stops at the bus stop?', ans: ['bus'], pool: ['boat', 'airplane', 'tractor', 'rocket', 'hot-air-balloon', 'ship'] }
   ]
 };
+
+/* "See them all together" (23 Nov 2026): sky, rails, road, a farm field and the sea in one picture. Each thing that
+   goes is drawn with its own lesson picture (put), except the long train, which is drawn here with its cars. */
+(function (T) {
+  function put(id, x, y, s) {
+    var it = T.items.filter(function (i) { return i.id === id; })[0];
+    return '<svg x="' + x + '" y="' + y + '" width="' + s + '" height="' + s + '" viewBox="0 0 64 64">' + it.art + '</svg>';
+  }
+  T.scene = {
+    button: 'See them all together',
+    small: 'The sky, the rails, the road and the sea in one picture. Tap one to hear about it.',
+    title: 'Things that go, all together',
+    hint: 'Slide the picture sideways to see them all.',
+    prompt: 'Tap something that goes to hear where it goes and what it carries.',
+    note: 'The sizes are not real. A real ship is much, much bigger than a bus, and an airplane flies much higher than a balloon.',
+    label: 'A busy picture of things that go. In the sky: a helicopter, an airplane, a hot air balloon and a rocket. On the rails: a long train. On the road: a scooter, a bicycle, a car, a bus, a police car, an ambulance and a fire truck. In a farm field: a tractor. On the sea: a sailboat and a big ship.',
+    vb: '0 0 1500 300',
+    back: '<rect width="1500" height="300" fill="#bfe6fb"/><circle cx="1250" cy="48" r="20" fill="#f7c948"/><g fill="#ffffff"><ellipse cx="236" cy="40" rx="30" ry="10"/><ellipse cx="256" cy="33" rx="18" ry="9"/><ellipse cx="570" cy="60" rx="28" ry="9"/><ellipse cx="930" cy="40" rx="34" ry="11"/><ellipse cx="952" cy="32" rx="20" ry="10"/><ellipse cx="1110" cy="80" rx="26" ry="9"/></g>' +
+      '<ellipse cx="860" cy="200" rx="110" ry="50" fill="#9fd47f"/><ellipse cx="1040" cy="205" rx="120" ry="55" fill="#8cc96c"/><polygon points="1006,160 1044,132 1082,160" fill="#b23a2e"/><rect x="1010" y="160" width="68" height="36" fill="#d6453d"/><rect x="1034" y="172" width="20" height="24" fill="#ffffff"/>' +
+      '<rect x="6" y="128" width="66" height="68" fill="#f2d1a0"/><rect x="78" y="104" width="60" height="92" fill="#9fb3c8"/><rect x="144" y="132" width="74" height="64" fill="#e8b4a0"/><rect x="224" y="100" width="64" height="96" fill="#d0c4e8"/><rect x="294" y="122" width="84" height="74" fill="#c9e4b4"/><rect x="384" y="108" width="62" height="88" fill="#f2d1a0"/><rect x="452" y="130" width="76" height="66" fill="#9fb3c8"/><rect x="534" y="102" width="66" height="94" fill="#e8b4a0"/><rect x="606" y="120" width="84" height="76" fill="#d0c4e8"/><rect x="696" y="134" width="66" height="62" fill="#c9e4b4"/>' +
+      '<path d="M14 140H64M14 156H64M14 172H64M86 116H130M86 132H130M86 148H130M86 164H130M86 180H130M152 144H210M152 160H210M152 176H210M232 112H280M232 128H280M232 144H280M232 160H280M232 176H280M302 134H370M302 150H370M302 166H370M302 182H370M392 120H438M392 136H438M392 152H438M392 168H438M392 184H438M460 142H520M460 158H520M460 174H520M542 114H592M542 130H592M542 146H592M542 162H592M542 178H592M614 132H682M614 148H682M614 164H682M614 180H682M704 146H754M704 162H754M704 178H754" stroke="#ffffff" stroke-width="7" stroke-dasharray="7 7" opacity=".75"/>' +
+      '<rect x="1140" y="196" width="360" height="104" fill="#7cc0ea"/><path d="M1150 252q12.5-5 25 0t25 0t25 0t25 0t25 0t25 0t25 0t25 0t25 0t25 0t25 0t25 0t25 0t25 0V300H1150z" fill="#4b8be8"/>' +
+      '<rect y="199" width="1130" height="10" fill="#9a9a8e"/><path d="M4 197H1128" stroke="#8a5a33" stroke-width="5" stroke-dasharray="4 10"/><path d="M0 194H1132" stroke="#6b7076" stroke-width="3"/><rect x="1124" y="182" width="8" height="14" fill="#d6453d" stroke="#17332c" stroke-width="1.5"/>' +
+      '<rect y="209" width="772" height="4" fill="#cfd6d4"/><rect y="213" width="772" height="87" fill="#5d6670"/><path d="M0 296H772" stroke="#f7f3e0" stroke-width="3" stroke-dasharray="20 14"/>' +
+      '<rect x="772" y="209" width="358" height="91" fill="#b98a55"/><rect x="772" y="207" width="358" height="5" fill="#7cc36a"/><path d="M772 232H1128M772 254H1128M772 276H1128" stroke="#9a6d3c" stroke-width="3"/>' +
+      '<rect x="1130" y="199" width="20" height="101" fill="#a8adb2" stroke="#6b7076" stroke-width="2"/>',
+    objects: [
+      { id: 'helicopter', x: 40, w: 150, y: 0, h: 112, compare: 'A helicopter does not need a runway. It can land on a small spot, even on a roof.',
+        art: put('helicopter', 60, 8, 100) },
+      { id: 'airplane', x: 300, w: 200, y: 0, h: 112, compare: 'A big airplane can carry hundreds of people. It is much faster than a car, a train or a ship.',
+        art: put('airplane', 320, -8, 140) },
+      { id: 'hot-air-balloon', x: 640, w: 130, y: 0, h: 112, compare: 'A balloon goes where the wind blows it. It is much slower than an airplane.',
+        art: put('hot-air-balloon', 660, 4, 92) },
+      { id: 'train', x: 80, w: 480, y: 118, h: 80, compare: 'One long train can carry hundreds of people. That is many more than a car or even a bus.',
+        art: '<g stroke="#17332c" stroke-width="2"><rect x="92" y="150" width="110" height="36" rx="5" fill="#f2b21c"/><rect x="210" y="150" width="110" height="36" rx="5" fill="#3f9e5a"/><rect x="328" y="150" width="110" height="36" rx="5" fill="#d6453d"/></g>' +
+          '<path d="M102 158h90M220 158h90M338 158h90" stroke="#cfe8f5" stroke-width="12" stroke-dasharray="14 6"/><path d="M202 178h8M320 178h8M438 178h8" stroke="#17332c" stroke-width="3"/>' +
+          '<g fill="#e6ecef"><circle cx="530" cy="124" r="6"/><circle cx="518" cy="128" r="4"/></g><rect x="520" y="134" width="12" height="18" fill="#17332c"/><rect x="486" y="152" width="56" height="34" rx="6" fill="#2f6fd0" stroke="#17332c" stroke-width="2"/><rect x="446" y="132" width="42" height="54" fill="#2f6fd0" stroke="#17332c" stroke-width="2"/><rect x="442" y="128" width="50" height="6" fill="#17332c"/><rect x="454" y="140" width="26" height="14" fill="#cfe8f5"/><rect x="538" y="162" width="6" height="6" rx="1" fill="#f7c948" stroke="#17332c"/>' +
+          '<g fill="#17332c"><circle cx="110" cy="188" r="6"/><circle cx="184" cy="188" r="6"/><circle cx="228" cy="188" r="6"/><circle cx="302" cy="188" r="6"/><circle cx="346" cy="188" r="6"/><circle cx="420" cy="188" r="6"/><circle cx="462" cy="187" r="7"/><circle cx="502" cy="188" r="6"/><circle cx="526" cy="188" r="6"/></g>' },
+      { id: 'scooter', x: 10, w: 80, y: 208, h: 92, compare: 'A scooter is smaller than a bicycle. You can carry it under your arm.',
+        art: put('scooter', 18, 224, 72) },
+      { id: 'bicycle', x: 90, w: 90, y: 208, h: 92, compare: 'A bicycle carries one rider. It is quiet and makes no smoke.',
+        art: put('bicycle', 96, 224, 80) },
+      { id: 'car', x: 180, w: 100, y: 208, h: 92, compare: 'A car has seats for about 5 people. A bus can carry 10 times as many, or more!',
+        art: put('car', 188, 224, 82) },
+      { id: 'bus', x: 280, w: 130, y: 208, h: 92, compare: 'A city bus can carry more than 50 people. That is as many as 10 full cars, but a bus takes up much less road.',
+        art: put('bus', 290, 198, 112) },
+      { id: 'police-car', x: 410, w: 100, y: 208, h: 92, compare: 'Its lights and siren tell other cars to move out of the way.',
+        art: put('police-car', 418, 224, 82) },
+      { id: 'ambulance', x: 510, w: 110, y: 208, h: 92, compare: 'It carries a bed on wheels and helpers called paramedics.',
+        art: put('ambulance', 518, 212, 92) },
+      { id: 'fire-truck', x: 620, w: 140, y: 208, h: 92, compare: 'Many fire trucks carry their own water and a long ladder that reaches high windows.',
+        art: put('fire-truck', 628, 200, 106) },
+      { id: 'tractor', x: 790, w: 140, y: 208, h: 92, compare: 'Its big back wheels help it drive through mud without getting stuck.',
+        art: put('tractor', 810, 196, 100) },
+      { id: 'boat', x: 1155, w: 115, y: 140, h: 160, compare: 'A sailboat needs no engine. It can carry a few people across a lake or the sea.',
+        art: put('boat', 1160, 172, 100) },
+      { id: 'ship', x: 1270, w: 180, y: 140, h: 160, compare: 'Some big ships carry thousands of people. It is like a small town floating on the sea!',
+        art: put('ship', 1280, 133, 150) },
+      { id: 'rocket', x: 1380, w: 110, y: 0, h: 136, compare: 'A rocket is the fastest thing here. It goes so fast that it can leave the Earth and fly into space.',
+        art: '<g fill="#e6ecef" stroke="#c4ccd2" stroke-width="1"><circle cx="1436" cy="100" r="8"/><circle cx="1428" cy="114" r="10"/><circle cx="1444" cy="122" r="9"/></g>' + put('rocket', 1395, 10, 82) }
+    ]
+  };
+})(window.YS_TOPICS.vehicles);
