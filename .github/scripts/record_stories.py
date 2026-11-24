@@ -3,7 +3,7 @@
 Manish, 24 Nov 2026: "Are the recorded voice better choice? I still feel that voice is not appropriain chrome browser",
 then "Yes, start with stories".
 
-For each book: one small Opus file per page, plus index.json with each word's start and end time, so the reader can
+For each book: one small MP3 file per page, plus index.json with each word's start and end time, so the reader can
 highlight the word being read. Usage:
   python tools/record_stories.py SITE_DIR OUT_DIR --ages 3-5 --shard 0 --shards 4 [--limit N]
 """
@@ -16,7 +16,7 @@ from kokoro import KPipeline
 VOICE = 'af_heart'
 SPEED = 0.85          # a little slower than Kokoro's normal pace, for young listeners; the reader's "Gentle" speed
 RATE = 24000
-BITRATE = '24k'
+BITRATE = '32k'       # MP3 plays everywhere, including iPhones and iPads, which don't play WebM reliably
 
 
 def norm(s):
@@ -74,10 +74,11 @@ def main():
     ap.add_argument('site'); ap.add_argument('out')
     ap.add_argument('--ages', default='3-5'); ap.add_argument('--shard', type=int, default=0)
     ap.add_argument('--shards', type=int, default=1); ap.add_argument('--limit', type=int, default=0)
+    ap.add_argument('--force', action='store_true', help='record again books that already have a recording')
     a = ap.parse_args()
     ages = set(a.ages.split(','))
     cat = json.load(open(os.path.join(a.site, 'stories', 'catalog.json')))
-    books = [c for c in cat if c['ages'] in ages and not c.get('audio')]
+    books = [c for c in cat if c['ages'] in ages and (a.force or not c.get('audio'))]
     books.sort(key=lambda c: c['id'])
     books = books[a.shard::a.shards]
     if a.limit: books = books[:a.limit]
@@ -97,11 +98,11 @@ def main():
             dur = len(audio) / RATE
             times, exact = align(words, toks, dur)
             if not exact: report['guessed_pages'].append(f"{c['id']}#{i + 1}")
-            name = f'{i + 1:02d}.webm'
+            name = f'{i + 1:02d}.mp3'
             with tempfile.NamedTemporaryFile(suffix='.wav') as w:
                 sf.write(w.name, audio, RATE)
-                subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', w.name, '-ac', '1', '-c:a', 'libopus',
-                                '-b:a', BITRATE, '-application', 'voip', '-vbr', 'on', os.path.join(d, name)], check=True)
+                subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', w.name, '-ac', '1', '-c:a', 'libmp3lame',
+                                '-b:a', BITRATE, '-write_xing', '0', os.path.join(d, name)], check=True)
             pages.append({'f': name, 'd': round(dur, 2), 'w': times})
             report['pages'] += 1; report['seconds'] += dur
         json.dump({'voice': 'Kokoro ' + VOICE, 'speed': SPEED, 'pages': pages}, open(os.path.join(d, 'index.json'), 'w'),
