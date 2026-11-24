@@ -460,7 +460,7 @@
     if (old) return;
     var box = el('section', { id: 'ys-ask', 'class': 'ys-ask', 'aria-labelledby': 'ys-ask-h' });
     box.appendChild(el('h2', { id: 'ys-ask-h' }, 'How old is your child?'));
-    box.appendChild(el('p', {}, 'Pick an age in years to see the games that fit. You can change it any time by tapping the picture in the corner. The age is kept only on this device.'));
+    box.appendChild(el('p', {}, 'Pick an age in years to see the games that fit. You can change it any time by tapping the picture in the corner. The age is kept only on this device; when we count visits, we count only the age group, never who you are.'));
     var row = el('div', { 'class': 'ys-ages', role: 'group', 'aria-label': 'Age in years' });
     AGES.forEach(function (a) {
       var b = el('button', { type: 'button', 'data-age': String(a) }, String(a));
@@ -508,7 +508,7 @@
       '<fieldset><legend>Color</legend><div class="ys-colors"></div></fieldset>' +
       '<label for="ys-nickin">Nickname (you can leave this empty)</label>' +
       '<input id="ys-nickin" maxlength="12" autocomplete="off" spellcheck="false">' +
-      '<p class="ys-hint">Please use a nickname, not a full name. Letters only, up to 12. The age, color and nickname are kept only on this device. Nothing is sent.</p>' +
+      '<p class="ys-hint">Please use a nickname, not a full name. Letters only, up to 12. The age, color and nickname are kept only on this device. The nickname and color are never sent; when we count visits, we count only the age group, never who you are.</p>' +
       '<fieldset class="ys-comfort"><legend>Comfort settings</legend><p class="ys-hint">For any child who reads, sees or moves more easily this way. Turn on what helps. You do not need to tell us why.</p></fieldset>' +
       '<div class="ys-row"><button type="button" class="ys-save" id="ys-save">Save</button><button type="button" id="ys-cancel">Close</button><button type="button" class="ys-plain" id="ys-remove">Remove profile</button></div>' +
       '<div class="ys-progress"><p class="ys-hint" id="ys-ptext"></p><button type="button" class="ys-plain" id="ys-reset">Reset progress…</button>' +
@@ -598,7 +598,7 @@
     if (!d) {
       d = el('dialog', { id: 'ys-comfort-dlg', 'class': 'ys-dlg', 'aria-labelledby': 'ys-ch' });
       d.innerHTML = '<h2 id="ys-ch">Comfort settings</h2>' +
-        '<fieldset class="ys-comfort"><legend>Turn on what helps</legend><p class="ys-hint">For any child. You do not need to tell us why, and no age is needed. These settings are kept only on this device. Nothing is sent.</p></fieldset>' +
+        '<fieldset class="ys-comfort"><legend>Turn on what helps</legend><p class="ys-hint">For any child. You do not need to tell us why, and no age is needed. These settings are kept only on this device and are never sent.</p></fieldset>' +
         '<div class="ys-row"><button type="button" class="ys-save" id="ys-csave">Save</button><button type="button" id="ys-cclose">Close</button></div>';
       var box = d.querySelector('.ys-comfort');
       comfortButtons(box, function () { markComfort(box); });
