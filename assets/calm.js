@@ -34,7 +34,7 @@
 
   /* ---------- voice: the device's own voice, only when a Hear it button is tapped ---------- */
   function hasVoice() {
-    try { return window.speechSynthesis.getVoices().some(function (v) { return v.localService && v.lang && v.lang.toLowerCase().indexOf('en') === 0; }); } catch (e) { return false; }
+    try { return window.YSVoice ? window.YSVoice.english().length > 0 : window.speechSynthesis.getVoices().some(function (v) { return v.localService && v.lang && v.lang.toLowerCase().indexOf('en') === 0; }); } catch (e) { return false; }
   }
   function say(text) { if (window.YSComfort) window.YSComfort.say(text); }
   function setUpVoice() {

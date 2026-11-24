@@ -73,9 +73,7 @@
   function readSetting(key) { try { return window.localStorage.getItem(key); } catch (e) { return null; } }
   function chooseVoice() {
     if (!('speechSynthesis' in window)) return null;
-    var local = window.speechSynthesis.getVoices().filter(function (v) {
-      return v.localService && v.lang && v.lang.toLowerCase().indexOf('en') === 0;
-    });
+    var local = (window.YSVoice ? window.YSVoice.english() : window.speechSynthesis.getVoices().filter(function (v) { return v.localService && v.lang && v.lang.toLowerCase().indexOf('en') === 0; }));
     if (!local.length) return null;
     var wanted = readSetting('voice-name');
     return local.filter(function (v) { return v.name === wanted; })[0] ||

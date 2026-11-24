@@ -94,7 +94,7 @@
     function shown(n) { return !!(n && n.getClientRects().length && !n.closest('[hidden]')); }
     function voice() {
       try {
-        var local = window.speechSynthesis.getVoices().filter(function (v) { return v.localService && v.lang && v.lang.toLowerCase().indexOf('en') === 0; });
+        var local = (window.YSVoice ? window.YSVoice.english() : window.speechSynthesis.getVoices().filter(function (v) { return v.localService && v.lang && v.lang.toLowerCase().indexOf('en') === 0; }));
         var wanted = null;
         try { wanted = window.localStorage.getItem('voice-name'); } catch (e) { /* nothing */ }
         return local.filter(function (v) { return v.name === wanted; })[0] || local.filter(function (v) { return v.lang === 'en-US'; })[0] || local[0] || null;
