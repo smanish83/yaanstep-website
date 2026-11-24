@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Site counts | Yaanstep</title>
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/themes.css">
+<script src="assets/theme.js"></script>
+<script src="assets/analytics-config.js"></script>
+<style>
+.gate,.panel{background:var(--card,#fff);border:2px solid #c6e3da;border-radius:16px;padding:16px;margin:16px 0}
+.gate label{display:block;font-weight:600;margin-bottom:6px}
+.gate input{font:inherit;min-height:48px;padding:8px 12px;border-radius:10px;border:2px solid #6f8796;width:min(100%,320px)}
+.gate button,.panel button{font:inherit;min-height:48px;padding:8px 16px;border-radius:12px;border:2px solid #1F7A6D;background:#1F7A6D;color:#fff;font-weight:600;cursor:pointer;margin-top:8px}
+.panel button[aria-pressed="true"]{background:#fff;color:#17332c}
+.err{color:#9b1c1c;font-weight:600}
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:0}
+.facts dt{font-weight:600}.facts dd{margin:0}
+.dash{width:100%;height:1600px;border:1px solid #c6e3da;border-radius:12px;background:#fff}
+code{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main id="main" class="wrap">
+<h1>Site counts</h1>
+<p class="muted">For the Yaanstep team. This page is not linked from the site and is hidden from search engines. The password only hides it: it is not real security, so nothing private is kept here.</p>
+
+<form class="gate" id="gate" autocomplete="off">
+<label for="pw">Password</label>
+<input id="pw" name="pw" type="password" autocomplete="off" required>
+<div><button type="submit">Open</button></div>
+<p class="err" id="pw-err" role="alert" hidden>That password is not right. Try again.</p>
+</form>
+
+<div id="counts" hidden>
+<section class="panel" aria-labelledby="h-status">
+<h2 id="h-status" tabindex="-1">Counting for the whole site</h2>
+<dl class="facts">
+<dt>Counting</dt><dd id="st-on"></dd>
+<dt>Service</dt><dd>Umami Cloud: cookie-free, no personal data</dd>
+<dt>Site code</dt><dd id="st-code"></dd>
+<dt>Dashboard link</dt><dd id="st-share"></dd>
+</dl>
+<p>To change these, edit <code>assets/analytics-config.js</code> and release the site: <code>enabled</code> turns counting on or off for everyone, <code>websiteId</code> is the site code from Umami, and <code>shareUrl</code> is the dashboard's share link.</p>
+</section>
+
+<section class="panel" aria-labelledby="h-dash">
+<h2 id="h-dash">The numbers</h2>
+<div id="dash"></div>
+</section>
+
+<section class="panel" aria-labelledby="h-read">
+<h2 id="h-read">How to read the dashboard</h2>
+<ul>
+<li><strong>How many people visited:</strong> Visitors and Visits at the top.</li>
+<li><strong>New or returning:</strong> under Events, open <em>visit</em> and look at <em>returning</em>: no is a first visit from that browser, yes is a return.</li>
+<li><strong>Most and least used:</strong> the Pages list, and under Events, <em>game-open</em> and <em>game-finish</em> by <em>game</em>. A game opened often but rarely finished may be too hard or too long.</li>
+<li><strong>Age groups:</strong> the <em>age</em> property on any event: 3-4, 5-6, 7-8, 9-10, 11-12, or none when no child profile is set.</li>
+</ul>
+<p>What is never counted: names, answers, typed or spoken words, drawings, or anything that tells who someone is. Teens pages are not counted, and browsers that ask not to be tracked are skipped.</p>
+</section>
+
+<section class="panel" aria-labelledby="h-me">
+<h2 id="h-me">This browser</h2>
+<p>Turn this on so your own testing doesn't show up in the numbers. It is kept only in this browser.</p>
+<button type="button" id="me-off" aria-pressed="false">Don't count this browser</button>
+<p id="me-state" aria-live="polite"></p>
+</section>
+</div>
+</main>
+<script>
+(function () {
+  'use strict';
+  /* Manish, 24 Nov 2026: an analytics page "accessible only through url" with an "easy password for now".
+     Only the SHA-256 of the password is in this page. */
+  var HASH = '8d116cf93b30ebc12cc5ab5e9eb736aaa4b20976de42ec8ab84ea8ac66fdfcc4';
+  var cfg = window.YS_ANALYTICS_CONFIG || {};
+  function $(id) { return document.getElementById(id); }
+  function hex(buf) { return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join(''); }
+  function check(pw) {
+    if (!window.crypto || !crypto.subtle) return Promise.resolve(false);
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw)).then(function (d) { return hex(d) === HASH; });
+  }
+  function codeSet() { return !!cfg.websiteId && !/PLACEHOLDER/.test(cfg.websiteId); }
+  function getOff() { try { return localStorage.getItem('ys-analytics-off') === '1'; } catch (e) { return false; } }
+  function setOff(v) { try { if (v) localStorage.setItem('ys-analytics-off', '1'); else localStorage.removeItem('ys-analytics-off'); } catch (e) { /* blocked */ } }
+  function showMe() {
+    var off = getOff();
+    $('me-off').setAttribute('aria-pressed', off ? 'true' : 'false');
+    $('me-state').textContent = off ? 'This browser is not counted.' : 'This browser is counted, like any visitor.';
+  }
+  function open() {
+    $('gate').hidden = true;
+    $('counts').hidden = false;
+    $('st-on').textContent = !cfg.enabled ? 'Off for everyone' : codeSet() ? 'On' : 'On, but nothing is sent until the site code is filled in';
+    $('st-code').textContent = codeSet() ? cfg.websiteId : 'Not filled in yet';
+    var share = /^https:\/\/[^\s"'<>]+$/.test(cfg.shareUrl || '') ? cfg.shareUrl : '';
+    $('st-share').textContent = share ? 'Set' : 'Not set yet';
+    var dash = $('dash');
+    if (share) {
+      var a = document.createElement('a');
+      a.href = share; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.textContent = 'Open the dashboard in a new tab';
+      var p = document.createElement('p'); p.appendChild(a); dash.appendChild(p);
+      var f = document.createElement('iframe');
+      f.className = 'dash'; f.src = share; f.title = 'Yaanstep visit counts from Umami'; f.loading = 'lazy';
+      f.setAttribute('referrerpolicy', 'no-referrer');
+      dash.appendChild(f);
+    } else {
+      var n = document.createElement('p');
+      n.textContent = 'No dashboard link yet. In Umami, open the website, choose Edit, turn on Share URL, and put that link in shareUrl in assets/analytics-config.js. The numbers then show here.';
+      dash.appendChild(n);
+    }
+    showMe();
+    $('h-status').focus();
+  }
+  $('gate').addEventListener('submit', function (e) {
+    e.preventDefault();
+    check($('pw').value).then(function (ok) {
+      if (ok) { $('pw').value = ''; open(); return; }
+      $('pw-err').hidden = false; $('pw').select();
+    });
+  });
+  $('me-off').addEventListener('click', function () { setOff(!getOff()); showMe(); });
+})();
+</script>
+</body>
+</html>
