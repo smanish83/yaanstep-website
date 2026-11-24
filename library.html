@@ -44,7 +44,7 @@ button:disabled{cursor:default}
 @media (prefers-reduced-motion:no-preference){.ltext .w.now::before{animation:hop .35s ease-out}@keyframes hop{0%{transform:translateY(-8px)}60%{transform:translateY(2px)}100%{transform:translateY(0)}}}
 .cover-t{font-size:1.5rem;font-weight:800;margin:8px 0 2px}.meta{color:#51675f;margin:0 0 8px}
 .credits{font-size:.85rem;color:#3f554d;border-top:1px solid var(--line);margin-top:12px;padding-top:6px}.credits p{margin:.2em 0}.credits a{color:var(--teal);font-weight:600}
-body.ys-reading #ys-badge{display:none}body.ys-reading.ys-has-badge{padding-bottom:0}
+body.ys-reading #ys-badge{display:none}.placehead{font-weight:600;margin:8px 0 4px}.places{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}.place{display:flex;flex-direction:column;align-items:flex-start;min-height:48px;padding:6px 12px;text-align:left}.place .pl{font-weight:700}.place small{font-size:.8rem;color:#51675f}.place[aria-pressed=true]{background:#FFE08A;border-color:#B7791F;color:#1f2a26}.place[aria-pressed=true] small{color:#3d4a44}.bookbtn small.from{font-weight:600}body.ys-reading.ys-has-badge{padding-bottom:0}
 </style><script src="assets/voices.js"></script><script src="assets/analytics-config.js" defer></script><script src="assets/analytics.js" defer></script>
 </head><body><main>
 <p class="back"><a href="sprouts.html">&larr; Back to Yaanstep Sprouts</a></p>
@@ -55,6 +55,8 @@ body.ys-reading #ys-badge{display:none}body.ys-reading.ys-has-badge{padding-bott
 <p id="loaderr" class="note" hidden>The books did not load. Please check your connection and reload the page.</p>
 <section id="library" aria-labelledby="lib-h">
 <h2 id="lib-h" class="ys-sr">Find a book</h2>
+<p class="placehead" id="places-h">Where the stories come from</p>
+<div class="places" id="places" role="group" aria-labelledby="places-h"></div>
 <div class="lib-filters">
 <div><label for="ages">Age</label><select id="ages" autocomplete="off"><option value="all">All ages</option><option value="3-5">Ages 3 to 5</option><option value="5-7">Ages 5 to 7</option><option value="7-9">Ages 7 to 9</option><option value="9-12">Ages 9 to 12</option></select></div>
 <div><label for="length">Length</label><select id="length" autocomplete="off"><option value="all">Any length</option><option value="short">Up to 4 minutes</option><option value="medium">5 to 9 minutes</option><option value="long">10 minutes or more</option></select></div>

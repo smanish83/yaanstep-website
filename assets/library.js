@@ -9,7 +9,16 @@
   'use strict';
 
   var BASE = 'stories/';
-  var catalog = [], book = null, page = 0, filters = { ages: 'all', length: 'all', q: '' };
+  var catalog = [], book = null, page = 0, filters = { ages: 'all', length: 'all', q: '', from: 'all' };
+  // Where each book comes from (Manish 24 Nov 2026: "group up books by countries or from where it got it").
+  var PLACES = [
+    { key: 'all', label: 'Everywhere' },
+    { key: 'African Storybook', label: 'Across Africa', note: 'African Storybook' },
+    { key: 'Book Dash', label: 'South Africa', note: 'Book Dash' },
+    { key: 'StoryWeaver', label: 'India', note: 'StoryWeaver' },
+    { key: 'Project Gutenberg', label: 'Old American classics', note: 'Project Gutenberg' }
+  ];
+  function placeOf(b) { for (var i = 1; i < PLACES.length; i++) if (PLACES[i].key === b.platform) return PLACES[i]; return null; }
 
   function $(id) { return document.getElementById(id); }
   function el(tag, attrs, text) {
@@ -183,12 +192,30 @@
   function shown() {
     var q = filters.q.trim().toLowerCase();
     return catalog.filter(function (b) {
-      return (filters.ages === 'all' || b.ages === filters.ages) &&
+      return (filters.from === 'all' || b.platform === filters.from) &&
+        (filters.ages === 'all' || b.ages === filters.ages) &&
         (filters.length === 'all' || lengthOf(b) === filters.length) &&
         (!q || b.title.toLowerCase().indexOf(q) > -1);
     });
   }
   var PAGE_SIZE = 24, limit = PAGE_SIZE, cards = {};
+  // One row of buttons, right above the shelf: tap a place to see only its books. No extra page or menu.
+  function drawPlaces() {
+    var row = $('places'); row.innerHTML = '';
+    PLACES.forEach(function (p) {
+      var n = p.key === 'all' ? catalog.length : catalog.filter(function (b) { return b.platform === p.key; }).length;
+      if (!n) return;
+      var btn = el('button', { type: 'button', 'class': 'place', 'data-from': p.key, 'aria-pressed': String(filters.from === p.key) });
+      btn.appendChild(el('span', { 'class': 'pl' }, p.label));
+      btn.appendChild(el('small', {}, (p.note ? p.note + ' · ' : '') + n + ' books'));
+      btn.addEventListener('click', function () {
+        filters.from = p.key; limit = PAGE_SIZE;
+        Array.prototype.forEach.call(row.querySelectorAll('button'), function (x) { x.setAttribute('aria-pressed', String(x === btn)); });
+        drawShelf();
+      });
+      row.appendChild(btn);
+    });
+  }
   function drawShelf() {
     var list = shown(), shelf = $('shelf');
     shelf.innerHTML = '';
@@ -202,6 +229,8 @@
       var img = el('img', { src: BASE + b.cover, alt: '', width: '160', height: '120', loading: 'lazy', decoding: 'async' });
       btn.appendChild(img);
       btn.appendChild(el('span', { 'class': 'bt' }, b.title));
+      var pl = placeOf(b);
+      if (pl) btn.appendChild(el('small', { 'class': 'from' }, 'From ' + (pl.key === 'Project Gutenberg' ? 'America, an old classic' : pl.label === 'Across Africa' ? 'Africa' : pl.label)));
       btn.appendChild(el('small', {}, BANDS[b.ages] + ' · about ' + b.minutes + (b.minutes === 1 ? ' minute' : ' minutes') + ' · ' + b.pages + ' pages'));
       btn.addEventListener('click', function () { openBook(b.id, btn); });
       li.appendChild(btn);
@@ -367,7 +396,7 @@
     setUpVoice();
     if ('speechSynthesis' in window && window.speechSynthesis.addEventListener) window.speechSynthesis.addEventListener('voiceschanged', setUpVoice);
     fetch(BASE + 'catalog.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); }).then(function (c) {
-      catalog = c; $('total').textContent = String(c.length); drawShelf();
+      catalog = c; $('total').textContent = String(c.length); drawPlaces(); drawShelf();
     }).catch(function () { $('loaderr').hidden = false; });
   }
 
