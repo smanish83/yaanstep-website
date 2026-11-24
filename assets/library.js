@@ -58,15 +58,23 @@
      page and each word's start and end time, so the marker follows the recording exactly. Books without one, and
      browsers that can't play the files, use the device voice as before. */
   var rec = null, player = null, REC_SPEED = 0.8; // the recording is made at the "Gentle" speed
-  function canPlayRec() {
-    try { return !!document.createElement('audio').canPlayType('audio/webm; codecs="opus"'); } catch (e) { return false; }
+  // MP3 plays in every browser, iPhones and iPads included (24 Nov 2026: the first WebM recordings played silently there).
+  var REC_TYPES = { mp3: 'audio/mpeg', webm: 'audio/webm; codecs="opus"', m4a: 'audio/mp4; codecs="mp4a.40.2"' };
+  function canPlayType(t) { try { return !!document.createElement('audio').canPlayType(t); } catch (e) { return false; } }
+  function canPlayRec(file) {
+    var ext = file ? String(file).split('.').pop().toLowerCase() : 'mp3';
+    return !!REC_TYPES[ext] && canPlayType(REC_TYPES[ext]);
   }
   function canRead() { return !!voice || !!rec; }
   function recPage(text) { return rec && book && page >= 0 && book.pages[page] && book.pages[page].text === text ? rec.pages[page] : null; }
   function playRec(rp, done) {
     hush();
     var me = ++reading, over = false, guard = null, w = rp.w || [], cur = -1;
-    if (!player) player = new Audio();
+    if (!player) {
+      player = new Audio();
+      // On iPhones and iPads, play the story even when the ring/silent switch is on (iOS 17 and later).
+      try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) { /* older devices */ }
+    }
     player.preload = 'auto';
     try { player.preservesPitch = true; } catch (e) { /* older browsers */ }
     player.src = BASE + 'audio/' + book.id + '/' + rp.f;
@@ -85,7 +93,8 @@
       if (!ok) {
         // The recording didn't play: carry on with the device voice, or stop if this device has none.
         rec = null; setUpVoice();
-        if (voice) readAlong(book.pages[page].text, done); else stopAuto();
+        if (voice) readAlong(book.pages[page].text, done);
+        else { stopAuto(); $('recerr').hidden = false; }
         return;
       }
       if (done) done();
@@ -206,7 +215,8 @@
       : Promise.resolve(null);
     Promise.all([fetch(BASE + 'books/' + id + '.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); }), getRec]).then(function (got) {
       var b = got[0];
-      rec = got[1] && got[1].pages && got[1].pages.length === b.pages.length ? got[1] : null;
+      rec = got[1] && got[1].pages && got[1].pages.length === b.pages.length && canPlayRec(got[1].pages[0].f) ? got[1] : null;
+      $('recerr').hidden = true;
       book = b; book.id = book.id || id; page = -1; finished = false;
       $('novoice').hidden = canRead();
       $('btitle').textContent = b.title;
