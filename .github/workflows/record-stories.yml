@@ -22,6 +22,8 @@ jobs:
       count: ${{ steps.p.outputs.count }}
       ages: ${{ steps.p.outputs.ages }}
       limit: ${{ steps.p.outputs.limit }}
+      force: ${{ steps.p.outputs.force }}
+      ids: ${{ steps.p.outputs.ids }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,6 +35,8 @@ jobs:
           echo "count=$(jq -r .shards $f)" >> "$GITHUB_OUTPUT"
           echo "ages=$(jq -r .ages $f)" >> "$GITHUB_OUTPUT"
           echo "limit=$(jq -r '.limit // 0' $f)" >> "$GITHUB_OUTPUT"
+          echo "force=$(jq -r 'if .force then "--force" else "" end' $f)" >> "$GITHUB_OUTPUT"
+          echo "ids=$(jq -r '(.ids // []) | join(",")' $f)" >> "$GITHUB_OUTPUT"
   record:
     needs: plan
     runs-on: ubuntu-latest
@@ -57,7 +61,7 @@ jobs:
           pip install -q torch --index-url https://download.pytorch.org/whl/cpu
           pip install -q "kokoro>=0.9.4" soundfile
       - name: Record
-        run: python .github/scripts/record_stories.py . out --ages "${{ needs.plan.outputs.ages }}" --shard ${{ matrix.shard }} --shards ${{ needs.plan.outputs.count }} --limit ${{ needs.plan.outputs.limit }}
+        run: python .github/scripts/record_stories.py . out --ages "${{ needs.plan.outputs.ages }}" --shard ${{ matrix.shard }} --shards ${{ needs.plan.outputs.count }} --limit ${{ needs.plan.outputs.limit }} ${{ needs.plan.outputs.force }} --ids "${{ needs.plan.outputs.ids }}"
       - uses: actions/upload-artifact@v4
         with:
           name: audio-${{ matrix.shard }}
@@ -84,8 +88,9 @@ jobs:
           cat reports/*.json || true
           git sparse-checkout disable
           mkdir -p stories/audio
+          for d in got/*/; do rm -rf "stories/audio/$(basename "$d")"; done
           cp -r got/* stories/audio/
-          git add stories/audio
+          git add -A stories/audio
           # Commits go under Manish's name, with either of his two addresses (his choice, 23 Nov 2026).
           if [ $((RANDOM % 2)) = 0 ]; then e=13033301+smanish83@users.noreply.github.com; else e=smanish83@gmail.com; fi
           git -c user.name="Manish Sandbhor" -c user.email="$e" commit -q -m "Recorded stories: ages ${{ needs.plan.outputs.ages }} (Kokoro, af_heart)" || echo nothing new
