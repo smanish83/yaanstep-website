@@ -41,13 +41,62 @@
       var wanted = read('voice-name');
       voice = local.filter(function (v) { return v.name === wanted; })[0] || local.filter(function (v) { return v.lang === 'en-US'; })[0] || local[0] || null;
     }
-    $('novoice').hidden = !!voice;
-    if (book) { $('readit').hidden = !voice || auto || page < 0 || page >= book.pages.length; showAuto(); }
+    $('novoice').hidden = canRead();
+    if (book) { $('readit').hidden = !canRead() || auto || page < 0 || page >= book.pages.length; showAuto(); }
   }
   function spans() { return document.querySelectorAll('#ltext .w'); }
   function mark(i) { var s = spans(); for (var k = 0; k < s.length; k++) s[k].className = k === i ? 'w now' : 'w'; }
   function unmark() { clearInterval(markTimer); markTimer = null; mark(-1); }
-  function hush() { reading++; unmark(); try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) { /* nothing */ } }
+  function hush() {
+    reading++; unmark();
+    if (player) { player.onended = player.onerror = null; try { player.pause(); } catch (e) { /* nothing */ } }
+    try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) { /* nothing */ }
+  }
+
+  /* ---------- recorded stories (Manish, 24 Nov 2026: "Yes, start with stories" for recorded voices) ----------
+     Books with "audio" in the catalog have a recording made with Kokoro (an open voice, Apache-2.0): one small file per
+     page and each word's start and end time, so the marker follows the recording exactly. Books without one, and
+     browsers that can't play the files, use the device voice as before. */
+  var rec = null, player = null, REC_SPEED = 0.8; // the recording is made at the "Gentle" speed
+  function canPlayRec() {
+    try { return !!document.createElement('audio').canPlayType('audio/webm; codecs="opus"'); } catch (e) { return false; }
+  }
+  function canRead() { return !!voice || !!rec; }
+  function recPage(text) { return rec && book && page >= 0 && book.pages[page] && book.pages[page].text === text ? rec.pages[page] : null; }
+  function playRec(rp, done) {
+    hush();
+    var me = ++reading, over = false, guard = null, w = rp.w || [], cur = -1;
+    if (!player) player = new Audio();
+    player.preload = 'auto';
+    try { player.preservesPitch = true; } catch (e) { /* older browsers */ }
+    player.src = BASE + 'audio/' + book.id + '/' + rp.f;
+    player.playbackRate = rate / REC_SPEED;
+    function tick() {
+      if (me !== reading) return;
+      var t = player.currentTime, i = cur;
+      if (i < 0 && w.length && t >= w[0][0]) i = 0;
+      while (i + 1 < w.length && w[i + 1][0] <= t) i++;
+      if (i !== cur) { cur = i; mark(i); }
+    }
+    function finish(ok) {
+      if (over || me !== reading) return;
+      over = true; clearTimeout(guard); unmark();
+      player.onended = player.onerror = null;
+      if (!ok) {
+        // The recording didn't play: carry on with the device voice, or stop if this device has none.
+        rec = null; setUpVoice();
+        if (voice) readAlong(book.pages[page].text, done); else stopAuto();
+        return;
+      }
+      if (done) done();
+    }
+    player.onended = function () { finish(true); };
+    player.onerror = function () { finish(false); };
+    clearInterval(markTimer); markTimer = setInterval(tick, 40);
+    guard = setTimeout(function () { finish(true); }, 2 * 1000 * (rp.d || 10) / player.playbackRate + 4000);
+    var pr = player.play();
+    if (pr && pr.catch) pr.catch(function () { finish(false); });
+  }
   function wordsInto(p, text) {
     text.split(/(\s+)/).forEach(function (part) {
       if (!part) return;
@@ -65,6 +114,8 @@
     return { at: at, total: t };
   }
   function readAlong(text, done) {
+    var rp = recPage(text);
+    if (rp) { playRec(rp, done); return; }
     if (!voice) return;
     hush();
     var starts = [], re = /\S+/g, m, me = ++reading, over = false, guard = null;
@@ -107,7 +158,7 @@
       guard = setTimeout(finish, 2 * p.total * paceAt1 / myRate + 4000);
     } catch (e) { unmark(); }
   }
-  window.YS_READ = { pace: function () { return paceAt1; } };
+  window.YS_READ = { pace: function () { return paceAt1; }, player: function () { return player; }, recorded: function () { return !!rec; } };
 
   /* ---------- the shelf ---------- */
 
@@ -149,8 +200,15 @@
   var finished = false;
   function openBook(id, from) {
     opener = from || null;
-    fetch(BASE + 'books/' + id + '.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); }).then(function (b) {
-      book = b; page = -1; finished = false;
+    var entry = (catalog || []).filter(function (c) { return c.id === id; })[0];
+    var getRec = entry && entry.audio && canPlayRec()
+      ? fetch(BASE + 'audio/' + id + '/index.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+      : Promise.resolve(null);
+    Promise.all([fetch(BASE + 'books/' + id + '.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); }), getRec]).then(function (got) {
+      var b = got[0];
+      rec = got[1] && got[1].pages && got[1].pages.length === b.pages.length ? got[1] : null;
+      book = b; book.id = book.id || id; page = -1; finished = false;
+      $('novoice').hidden = canRead();
       $('btitle').textContent = b.title;
       $('library').hidden = true; $('reader').hidden = false;
       render();
@@ -178,7 +236,7 @@
     area.innerHTML = '';
     $('rprev').hidden = page < 0;
     $('rnext').hidden = page >= n;
-    $('readit').hidden = page < 0 || page >= n || !voice || auto;
+    $('readit').hidden = page < 0 || page >= n || !canRead() || auto;
     if (page >= n) auto = false;
     showAuto();
     if (page < 0) {
@@ -221,10 +279,10 @@
   var auto = false, turnTimer = null;
   function pauseMs() { return (window.YS_TURN_MS != null ? window.YS_TURN_MS : 1500) / rate; }
   function showAuto() {
-    var have = !!voice && !!book && page < book.pages.length;
+    var have = canRead() && !!book && page < book.pages.length;
     $('readall').hidden = !have || auto;
     $('pauseread').hidden = !auto;
-    $('speedrow').hidden = !voice || !book || page >= book.pages.length;
+    $('speedrow').hidden = !canRead() || !book || page >= book.pages.length;
   }
   function readOn() {
     if (!auto || !book) return;
@@ -239,17 +297,17 @@
       }, pauseMs());
     });
   }
-  function startAuto() { if (!voice || !book) return; auto = true; showAuto(); $('readit').hidden = true; readOn(); $('pauseread').focus(); }
+  function startAuto() { if (!canRead() || !book) return; auto = true; showAuto(); $('readit').hidden = true; readOn(); $('pauseread').focus(); }
   function stopAuto() {
     var was = auto, hadFocus = document.activeElement && document.activeElement.id === 'pauseread';
     auto = false; clearTimeout(turnTimer); hush();
-    if (book) { showAuto(); $('readit').hidden = page < 0 || page >= book.pages.length || !voice; }
+    if (book) { showAuto(); $('readit').hidden = page < 0 || page >= book.pages.length || !canRead(); }
     if (was && hadFocus && !$('readall').hidden) $('readall').focus();
   }
 
   function closeBook() {
     auto = false; clearTimeout(turnTimer);
-    hush();
+    hush(); rec = null;
     $('reader').hidden = true; $('library').hidden = false;
     book = null;
     if (opener && document.body.contains(opener)) opener.focus(); else $('q').focus();
@@ -276,7 +334,12 @@
     rate = startRate();
     sp.value = (SPEEDS.filter(function (o) { return +o.v <= rate + 0.001; }).pop() || SPEEDS[0]).v;
     rate = +sp.value;
-    sp.addEventListener('change', function () { rate = +sp.value; if (auto) { clearTimeout(turnTimer); readOn(); } });
+    sp.addEventListener('change', function () {
+      rate = +sp.value;
+      // A recording changes speed as it plays; the device voice starts the page again at the new speed.
+      if (rec && player && !player.paused) { player.playbackRate = rate / REC_SPEED; return; }
+      if (auto) { clearTimeout(turnTimer); readOn(); }
+    });
     $('rexit').addEventListener('click', closeBook);
     $('readit').addEventListener('click', function () { if (book && page >= 0 && page < book.pages.length) readAlong(book.pages[page].text); });
     setUpVoice();
