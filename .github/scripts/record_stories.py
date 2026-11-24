@@ -75,10 +75,14 @@ def main():
     ap.add_argument('--ages', default='3-5'); ap.add_argument('--shard', type=int, default=0)
     ap.add_argument('--shards', type=int, default=1); ap.add_argument('--limit', type=int, default=0)
     ap.add_argument('--force', action='store_true', help='record again books that already have a recording')
+    ap.add_argument('--ids', default='', help='comma-separated book ids: record only these')
     a = ap.parse_args()
     ages = set(a.ages.split(','))
     cat = json.load(open(os.path.join(a.site, 'stories', 'catalog.json')))
     books = [c for c in cat if c['ages'] in ages and (a.force or not c.get('audio'))]
+    if a.ids:
+        want = set(a.ids.split(','))
+        books = [c for c in cat if c['id'] in want]
     books.sort(key=lambda c: c['id'])
     books = books[a.shard::a.shards]
     if a.limit: books = books[:a.limit]

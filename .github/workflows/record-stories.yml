@@ -23,6 +23,7 @@ jobs:
       ages: ${{ steps.p.outputs.ages }}
       limit: ${{ steps.p.outputs.limit }}
       force: ${{ steps.p.outputs.force }}
+      ids: ${{ steps.p.outputs.ids }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,6 +36,7 @@ jobs:
           echo "ages=$(jq -r .ages $f)" >> "$GITHUB_OUTPUT"
           echo "limit=$(jq -r '.limit // 0' $f)" >> "$GITHUB_OUTPUT"
           echo "force=$(jq -r 'if .force then "--force" else "" end' $f)" >> "$GITHUB_OUTPUT"
+          echo "ids=$(jq -r '(.ids // []) | join(",")' $f)" >> "$GITHUB_OUTPUT"
   record:
     needs: plan
     runs-on: ubuntu-latest
@@ -59,7 +61,7 @@ jobs:
           pip install -q torch --index-url https://download.pytorch.org/whl/cpu
           pip install -q "kokoro>=0.9.4" soundfile
       - name: Record
-        run: python .github/scripts/record_stories.py . out --ages "${{ needs.plan.outputs.ages }}" --shard ${{ matrix.shard }} --shards ${{ needs.plan.outputs.count }} --limit ${{ needs.plan.outputs.limit }} ${{ needs.plan.outputs.force }}
+        run: python .github/scripts/record_stories.py . out --ages "${{ needs.plan.outputs.ages }}" --shard ${{ matrix.shard }} --shards ${{ needs.plan.outputs.count }} --limit ${{ needs.plan.outputs.limit }} ${{ needs.plan.outputs.force }} --ids "${{ needs.plan.outputs.ids }}"
       - uses: actions/upload-artifact@v4
         with:
           name: audio-${{ matrix.shard }}
