@@ -82,6 +82,7 @@
     function setSub(text, kind) { var s = $('sub'); s.className = 'sub' + (kind ? ' ' + kind : ''); s.textContent = text; }
     function start(g) {
       game = g; round = 0; part = 0; lastAns = [];
+      if (window.YSAnalytics) window.YSAnalytics.track('game-open', { game: cfg.names[g] });
       $('title').textContent = cfg.names[g];
       $('alldone').hidden = true; $('game').querySelector('.card').hidden = false;
       show('game');
@@ -145,6 +146,7 @@
       hush();
       if (round < total() - 1) { round++; draw(); return; }
       $('game').querySelector('.card').hidden = true;
+      if (window.YSAnalytics) window.YSAnalytics.track('game-finish', { game: cfg.names[game] });
       $('alldone').hidden = false;
       $('keep').focus();
     }
