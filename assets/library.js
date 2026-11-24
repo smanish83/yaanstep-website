@@ -69,7 +69,7 @@
   function recPage(text) { return rec && book && page >= 0 && book.pages[page] && book.pages[page].text === text ? rec.pages[page] : null; }
   function playRec(rp, done) {
     hush();
-    var me = ++reading, over = false, guard = null, w = rp.w || [], cur = -1;
+    var me = ++reading, over = false, guard = null, w = rp.w || [], cur = -1, lastT = -1, lastMove = Date.now(), played = false;
     if (!player) {
       player = new Audio();
       // On iPhones and iPads, play the story even when the ring/silent switch is on (iOS 17 and later).
@@ -82,6 +82,9 @@
     function tick() {
       if (me !== reading) return;
       var t = player.currentTime, i = cur;
+      if (t !== lastT) { lastT = t; lastMove = Date.now(); if (t > 0.05) played = true; }
+      // Some phones never start or stall without saying why: after 6 seconds without moving, use the device voice.
+      else if (!player.ended && Date.now() - lastMove > 6000) { finish(false); return; }
       if (i < 0 && w.length && t >= w[0][0]) i = 0;
       while (i + 1 < w.length && w[i + 1][0] <= t) i++;
       if (i !== cur) { cur = i; mark(i); }
@@ -93,8 +96,12 @@
       if (!ok) {
         // The recording didn't play: carry on with the device voice, or stop if this device has none.
         rec = null; setUpVoice();
-        if (voice) readAlong(book.pages[page].text, done);
-        else { stopAuto(); $('recerr').hidden = false; }
+        try { player.pause(); } catch (e) { /* nothing */ }
+        $('recerr').hidden = false;
+        $('recerr').textContent = voice
+          ? "The recording didn't play on this device, so the device's own voice is reading instead."
+          : "The recording didn't play on this device. A grown-up can read the page aloud, or try another browser.";
+        if (voice) readAlong(book.pages[page].text, done); else stopAuto();
         return;
       }
       if (done) done();
@@ -102,7 +109,8 @@
     player.onended = function () { finish(true); };
     player.onerror = function () { finish(false); };
     clearInterval(markTimer); markTimer = setInterval(tick, 40);
-    guard = setTimeout(function () { finish(true); }, 2 * 1000 * (rp.d || 10) / player.playbackRate + 4000);
+    // A recording that ends without saying so moves on; one that never played counts as not playing.
+    guard = setTimeout(function () { finish(played); }, 2 * 1000 * (rp.d || 10) / player.playbackRate + 4000);
     var pr = player.play();
     if (pr && pr.catch) pr.catch(function () { finish(false); });
   }
