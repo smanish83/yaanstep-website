@@ -6,7 +6,7 @@
    shareUrl:   Umami's read-only share link for the dashboard, shown on the hidden analytics page. */
 window.YS_ANALYTICS_CONFIG = {
   enabled: true,
-  websiteId: 'PLACEHOLDER-SITE-CODE',
+  websiteId: '0e7aadd6-d172-42be-87af-db0848f7b49f',
   scriptSrc: 'https://cloud.umami.is/script.js',
   shareUrl: ''
 };
