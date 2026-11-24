@@ -229,6 +229,8 @@
       $('novoice').hidden = canRead();
       $('btitle').textContent = b.title;
       $('library').hidden = true; $('reader').hidden = false;
+      // The profile badge (points, nickname) isn't about stories, so it steps aside while a book is open.
+      document.body.classList.add('ys-reading');
       render();
       $('rexit').focus();
     }).catch(function () { $('loaderr').hidden = false; });
@@ -327,6 +329,7 @@
     auto = false; clearTimeout(turnTimer);
     hush(); rec = null;
     $('reader').hidden = true; $('library').hidden = false;
+    document.body.classList.remove('ys-reading');
     book = null;
     if (opener && document.body.contains(opener)) opener.focus(); else $('q').focus();
   }
@@ -335,7 +338,8 @@
 
   function init() {
     var age = childAge();
-    if (age) { filters.ages = band(age); $('ages').value = filters.ages; }
+    // All ages unless the child's profile gives an age. Set it every time, so a browser can't bring back an old choice.
+    filters.ages = age ? band(age) : 'all'; $('ages').value = filters.ages;
     $('ages').addEventListener('change', function (e) { filters.ages = e.target.value; limit = PAGE_SIZE; drawShelf(); });
     $('length').addEventListener('change', function (e) { filters.length = e.target.value; limit = PAGE_SIZE; drawShelf(); });
     $('q').addEventListener('input', function (e) { filters.q = e.target.value; limit = PAGE_SIZE; drawShelf(); });
