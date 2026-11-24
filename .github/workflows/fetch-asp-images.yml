@@ -27,6 +27,6 @@ jobs:
           emails=("13033301+smanish83@users.noreply.github.com" "smanish83@gmail.com")
           git config user.name "Manish Sandbhor"
           git config user.email "${emails[$((RANDOM % 2))]}"
-          git add -A stories/img .github/scripts/asp-images-report.json
+          git add --sparse -A stories/img .github/scripts/asp-images-report.json
           git commit -q -m "Pictures for the new African Storybook books" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" || exit 0
           git push -q origin HEAD:${GITHUB_REF_NAME}
