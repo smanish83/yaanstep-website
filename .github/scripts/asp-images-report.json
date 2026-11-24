@@ -1,0 +1,22 @@
+{
+ "ok": [
+  "asp-neo-finds-her-pig",
+  "asp-mother-changes",
+  "asp-holiday-time",
+  "asp-the-tree",
+  "asp-the-blacksmiths-dilemma",
+  "asp-palesa-loves-plants",
+  "asp-happy-and-sad",
+  "asp-keeper-and-his-special-nursery",
+  "asp-this-is-norah",
+  "asp-i-love-reading",
+  "asp-people-i-relate-with",
+  "asp-palm-tree",
+  "asp-river-temu",
+  "asp-different-abilities",
+  "asp-sambas-new-shirt"
+ ],
+ "failed": {
+  "asp-ekais-first-day-in-school": "illustrations/pages/11853.png: HTTP Error 404: Not Found"
+ }
+}

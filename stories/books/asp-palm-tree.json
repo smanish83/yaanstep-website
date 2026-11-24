@@ -1,0 +1,56 @@
+{
+ "id": "asp-palm-tree",
+ "title": "Palm Tree",
+ "pages": [
+  {
+   "img": "img/asp-palm-tree/02.webp",
+   "text": "Let me tell you about the palm tree."
+  },
+  {
+   "img": "img/asp-palm-tree/03.webp",
+   "text": "This tree lives when everything else is dry."
+  },
+  {
+   "img": "img/asp-palm-tree/04.webp",
+   "text": "The shade from a palm tree is always cool."
+  },
+  {
+   "img": "img/asp-palm-tree/05.webp",
+   "text": "We eat fruit from the palm tree."
+  },
+  {
+   "img": "img/asp-palm-tree/06.webp",
+   "text": "We use palm leaves to thatch our houses."
+  },
+  {
+   "img": "img/asp-palm-tree/07.webp",
+   "text": "We make brooms and mats from palm leaves."
+  },
+  {
+   "img": "img/asp-palm-tree/08.webp",
+   "text": "We use palm tree seeds for fuel."
+  },
+  {
+   "img": "img/asp-palm-tree/09.webp",
+   "text": "Do you see why the palm tree is important?"
+  }
+ ],
+ "words": 64,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Simon Ipoo"
+  ],
+  "illustrators": [
+   "Rob Owen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=13626",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

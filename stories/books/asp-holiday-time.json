@@ -1,0 +1,82 @@
+{
+ "id": "asp-holiday-time",
+ "title": "Holiday Time",
+ "pages": [
+  {
+   "img": "img/asp-holiday-time/02.webp",
+   "text": "It is now time for holidays. Every pupil is eager to go back home."
+  },
+  {
+   "img": "img/asp-holiday-time/03.webp",
+   "text": "During holiday time, we do a lot of work and play."
+  },
+  {
+   "img": "img/asp-holiday-time/04.webp",
+   "text": "Opio and Asio wake up very early to feed the chickens, pick eggs and collect firewood."
+  },
+  {
+   "img": "img/asp-holiday-time/05.webp",
+   "text": "Opio and his father take the cows to graze."
+  },
+  {
+   "img": "img/asp-holiday-time/06.webp",
+   "text": "Mother, Opio and Asio go to visit their grandmother in the village of Apokor."
+  },
+  {
+   "img": "img/asp-holiday-time/07.webp",
+   "text": "They go to the bus stop and wait for the bus to take them."
+  },
+  {
+   "img": "img/asp-holiday-time/08.webp",
+   "text": "Grandmother is very happy to see her grandchildren! They bring her some gifts too."
+  },
+  {
+   "img": "img/asp-holiday-time/09.webp",
+   "text": "Grandfather is also very happy to see his grandchildren!"
+  },
+  {
+   "img": "img/asp-holiday-time/10.webp",
+   "text": "Grandmother is preparing lunch for her visitors."
+  },
+  {
+   "img": "img/asp-holiday-time/11.webp",
+   "text": "Asio and Opio are served fish and rice for lunch."
+  },
+  {
+   "img": "img/asp-holiday-time/12.webp",
+   "text": "Late in the evening, Opio goes to play football with his friends."
+  },
+  {
+   "img": "img/asp-holiday-time/13.webp",
+   "text": "Asio joins the reading club in the evening too."
+  },
+  {
+   "img": "img/asp-holiday-time/14.webp",
+   "text": "On the last day of the holiday, Opio and Asio join the children's party. They meet new friends."
+  }
+ ],
+ "words": 157,
+ "minutes": 4,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "John Emongot"
+  ],
+  "illustrators": [
+   "Rob Owen",
+   "Alice Toich",
+   "Catherine Groenewald",
+   "Marion Drew",
+   "Mango Tree",
+   "Onesmus Kakungi",
+   "Wiehan de Jager"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=13021",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

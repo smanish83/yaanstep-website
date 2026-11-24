@@ -1,0 +1,63 @@
+{
+ "id": "asp-sambas-new-shirt",
+ "title": "Samba's New Shirt",
+ "pages": [
+  {
+   "img": "img/asp-sambas-new-shirt/02.webp",
+   "text": "Samba's dad bought him a new school shirt last market day."
+  },
+  {
+   "img": "img/asp-sambas-new-shirt/03.webp",
+   "text": "Samba never misses school. He walks to school with his little sister."
+  },
+  {
+   "img": "img/asp-sambas-new-shirt/04.webp",
+   "text": "Samba likes playing football after school. He wears his new shirt."
+  },
+  {
+   "img": "img/asp-sambas-new-shirt/05.webp",
+   "text": "The shirt gets dirty. But Samba does not want to wash it!"
+  },
+  {
+   "img": "img/asp-sambas-new-shirt/06.webp",
+   "text": "On the field, Samba wants everyone to see his new shirt."
+  },
+  {
+   "img": "img/asp-sambas-new-shirt/07.webp",
+   "text": "In the morning Samba goes to school with the dirty shirt. He sees the teacher waiting at the gate."
+  },
+  {
+   "img": "img/asp-sambas-new-shirt/08.webp",
+   "text": "Samba dodges school that day and goes across the road to play football."
+  },
+  {
+   "img": "img/asp-sambas-new-shirt/09.webp",
+   "text": "Unfortunately the new shirt gets torn. Now Samba is in trouble for dodging school and for tearing his new school shirt."
+  }
+ ],
+ "words": 110,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ivan Higenyi"
+  ],
+  "illustrators": [
+   "Sandy Lightly",
+   "Wiehan de Jager",
+   "Vusi Malindi",
+   "Jano Strydom",
+   "Benard Agasi",
+   "Joseph Ejoyi",
+   "Rob Owen",
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=10271",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

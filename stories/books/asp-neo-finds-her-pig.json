@@ -1,0 +1,57 @@
+{
+ "id": "asp-neo-finds-her-pig",
+ "title": "Neo Finds Her Pig",
+ "pages": [
+  {
+   "img": "img/asp-neo-finds-her-pig/02.webp",
+   "text": "Neo takes her pig for a ride on her bicycle."
+  },
+  {
+   "img": "img/asp-neo-finds-her-pig/03.webp",
+   "text": "She hits a stone in the road. The pig falls down. It cries. It says, \"Hooeeeee, hooeeeee!\""
+  },
+  {
+   "img": "img/asp-neo-finds-her-pig/04.webp",
+   "text": "Tsotang finds it. He says, \"Haaiee, who does this pig belong to?\""
+  },
+  {
+   "img": "img/asp-neo-finds-her-pig/05.webp",
+   "text": "Tsotang chases it, until he catches it."
+  },
+  {
+   "img": "img/asp-neo-finds-her-pig/06.webp",
+   "text": "He takes the pig to the chief. The chief tells him to look after it."
+  },
+  {
+   "img": "img/asp-neo-finds-her-pig/07.webp",
+   "text": "Neo passes by on the path. She hears the pig grunting, \"Hmmm, hmmm, hmmm!\""
+  },
+  {
+   "img": "img/asp-neo-finds-her-pig/08.webp",
+   "text": "She goes in. She is happy to see her pig."
+  },
+  {
+   "img": "img/asp-neo-finds-her-pig/09.webp",
+   "text": "Neo says to her pig, \"Come, let's go home. We will not ride the bicycle again.\""
+  }
+ ],
+ "words": 101,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Khothatso Ranoosi",
+   "Marion Drew"
+  ],
+  "illustrators": [
+   "Marion Drew"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=15972",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

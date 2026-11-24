@@ -1,0 +1,52 @@
+{
+ "id": "asp-river-temu",
+ "title": "River Temu",
+ "pages": [
+  {
+   "img": "img/asp-river-temu/02.webp",
+   "text": "Two small streams formed River Temu. The sheep, goats and deer lived because of River Temu."
+  },
+  {
+   "img": "img/asp-river-temu/03.webp",
+   "text": "When Matata became headman, he cut down trees. He made a path from the top of the hill to the bottom."
+  },
+  {
+   "img": "img/asp-river-temu/04.webp",
+   "text": "Matata's children and their friends ran all over the place. They broke branches. They lit fires and left them burning."
+  },
+  {
+   "img": "img/asp-river-temu/05.webp",
+   "text": "River Temu stopped flowing. The deer went away. Sheep and goats grew thinner and thinner."
+  },
+  {
+   "img": "img/asp-river-temu/06.webp",
+   "text": "The people chased away Matata, the headman. They appointed Baraka as the new leader. They were happy again."
+  },
+  {
+   "img": "img/asp-river-temu/07.webp",
+   "text": "The path was closed and grass grew once again. River Temu was revived. The land became greener than ever before."
+  },
+  {
+   "img": "img/asp-river-temu/08.webp",
+   "text": "People sang, \"Long live Baraka, long live Baraka.\" \"May our children and children's children forever respect River Temu.\""
+  }
+ ],
+ "words": 128,
+ "minutes": 2,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Catherine Groenewald"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=10561",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

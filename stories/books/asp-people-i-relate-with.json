@@ -1,0 +1,74 @@
+{
+ "id": "asp-people-i-relate-with",
+ "title": "People I Relate With",
+ "pages": [
+  {
+   "img": "img/asp-people-i-relate-with/02.webp",
+   "text": "My name is Anita. I am 8 years old."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/03.webp",
+   "text": "I like playing."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/04.webp",
+   "text": "I love playing with my friends at school."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/05.webp",
+   "text": "John is my brother. He is older than me."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/06.webp",
+   "text": "Our neighbours are good to us."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/07.webp",
+   "text": "John, Peter and I go to the same school."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/08.webp",
+   "text": "My mother and I go to the market every Saturday."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/09.webp",
+   "text": "My brother and I draw funny pictures."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/10.webp",
+   "text": "My brother John is a good reader. He reads for others in his class."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/11.webp",
+   "text": "My father is a librarian in our school. He chooses storybooks for children."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/12.webp",
+   "text": "When school closes, we go to visit our grandparents in the village."
+  },
+  {
+   "img": "img/asp-people-i-relate-with/13.webp",
+   "text": "I love my family, grandparents and neighbours very much."
+  }
+ ],
+ "words": 109,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Nyanchama Onywoki"
+  ],
+  "illustrators": [
+   "Rob Owen",
+   "Brandan Reynolds",
+   "Sarah Bouwer"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=15166",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}
