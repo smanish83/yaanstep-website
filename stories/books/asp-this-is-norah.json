@@ -1,0 +1,56 @@
+{
+ "id": "asp-this-is-norah",
+ "title": "This is Norah",
+ "pages": [
+  {
+   "img": "img/asp-this-is-norah/02.webp",
+   "text": "This is Norah. Norah's doll is called Sellah."
+  },
+  {
+   "img": "img/asp-this-is-norah/03.webp",
+   "text": "Norah loves Sellah very much. She plays and sleeps with Sellah every night."
+  },
+  {
+   "img": "img/asp-this-is-norah/04.webp",
+   "text": "One day, Norah was very worried because she could not find Sellah."
+  },
+  {
+   "img": "img/asp-this-is-norah/05.webp",
+   "text": "Norah's mother had washed Sellah."
+  },
+  {
+   "img": "img/asp-this-is-norah/06.webp",
+   "text": "Norah went to her mother crying, \"I can't find Sellah.\""
+  },
+  {
+   "img": "img/asp-this-is-norah/07.webp",
+   "text": "Before Norah slept, her mother brought Sellah to her."
+  },
+  {
+   "img": "img/asp-this-is-norah/08.webp",
+   "text": "Norah jumped out of bed and danced with Sellah."
+  },
+  {
+   "img": "img/asp-this-is-norah/09.webp",
+   "text": "Norah hugged her mother and thanked her for cleaning Sellah."
+  }
+ ],
+ "words": 76,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Melany Pietersen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=16120",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

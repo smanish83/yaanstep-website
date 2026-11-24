@@ -1,0 +1,74 @@
+{
+ "id": "asp-different-abilities",
+ "title": "Different Abilities",
+ "pages": [
+  {
+   "img": "img/asp-different-abilities/02.webp",
+   "text": "One day I met Agnes. Agnes is a teacher."
+  },
+  {
+   "img": "img/asp-different-abilities/03.webp",
+   "text": "Agnes uses crutches to walk."
+  },
+  {
+   "img": "img/asp-different-abilities/04.webp",
+   "text": "When I went to town, I saw Metobo. He is a radio DJ."
+  },
+  {
+   "img": "img/asp-different-abilities/05.webp",
+   "text": "Metobo has albinism. He has problems with his eyes and with his skin."
+  },
+  {
+   "img": "img/asp-different-abilities/06.webp",
+   "text": "My neighbour is Moraa. She is a farmer."
+  },
+  {
+   "img": "img/asp-different-abilities/07.webp",
+   "text": "Moraa has a problem with hearing. She speaks using Sign language."
+  },
+  {
+   "img": "img/asp-different-abilities/08.webp",
+   "text": "Osero is the best soccer player in my school. I like to watch him play."
+  },
+  {
+   "img": "img/asp-different-abilities/09.webp",
+   "text": "Osero lost his hands in an accident. However, he scores many goals for his team!"
+  },
+  {
+   "img": "img/asp-different-abilities/10.webp",
+   "text": "My sister Jackie plays sports. She is stronger than my brother!"
+  },
+  {
+   "img": "img/asp-different-abilities/11.webp",
+   "text": "I know that people with disabilities can do anything."
+  },
+  {
+   "img": "img/asp-different-abilities/12.webp",
+   "text": "Every person has different abilities."
+  },
+  {
+   "img": "img/asp-different-abilities/13.webp",
+   "text": "We can all work, play and have fun!"
+  }
+ ],
+ "words": 122,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Kenya Institute of Curriculum Development"
+  ],
+  "illustrators": [
+   "Jesse Breytenbach",
+   "Wiehan de Jager",
+   "Vusi Malindi"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=13496",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

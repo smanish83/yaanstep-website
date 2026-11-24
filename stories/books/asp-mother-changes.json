@@ -1,0 +1,77 @@
+{
+ "id": "asp-mother-changes",
+ "title": "Mother Changes",
+ "pages": [
+  {
+   "img": "img/asp-mother-changes/02.webp",
+   "text": "When mother was younger, we visited her friends."
+  },
+  {
+   "img": "img/asp-mother-changes/03.webp",
+   "text": "She took me to the market to buy vegetables."
+  },
+  {
+   "img": "img/asp-mother-changes/04.webp",
+   "text": "She took my brother to town."
+  },
+  {
+   "img": "img/asp-mother-changes/05.webp",
+   "text": "She taught me the names of plants."
+  },
+  {
+   "img": "img/asp-mother-changes/06.webp",
+   "text": "When mother grew older, her back bent."
+  },
+  {
+   "img": "img/asp-mother-changes/07.webp",
+   "text": "She stayed home more and talked to our neighbour's children."
+  },
+  {
+   "img": "img/asp-mother-changes/08.webp",
+   "text": "She fell sick more often."
+  },
+  {
+   "img": "img/asp-mother-changes/09.webp",
+   "text": "She walked with difficulty."
+  },
+  {
+   "img": "img/asp-mother-changes/10.webp",
+   "text": "Her grandchildren went to visit her during holiday time."
+  },
+  {
+   "img": "img/asp-mother-changes/11.webp",
+   "text": "Neighbours brought her milk from the shop."
+  },
+  {
+   "img": "img/asp-mother-changes/12.webp",
+   "text": "When mother was younger, she was stronger."
+  },
+  {
+   "img": "img/asp-mother-changes/13.webp",
+   "text": "Now, mother is older, she is weaker."
+  }
+ ],
+ "words": 86,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Catherine Groenewald",
+   "Rob Owen",
+   "Jesse Breytenbach",
+   "Mango Tree",
+   "Silva Afonso",
+   "Vusi Malindi"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=14836",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

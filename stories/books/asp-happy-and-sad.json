@@ -1,0 +1,72 @@
+{
+ "id": "asp-happy-and-sad",
+ "title": "Happy and Sad",
+ "pages": [
+  {
+   "img": "img/asp-happy-and-sad/02.webp",
+   "text": "Why is the baby crying?"
+  },
+  {
+   "img": "img/asp-happy-and-sad/03.webp",
+   "text": "I think she is hungry."
+  },
+  {
+   "img": "img/asp-happy-and-sad/04.webp",
+   "text": "Why is this boy sad?"
+  },
+  {
+   "img": "img/asp-happy-and-sad/05.webp",
+   "text": "I think he is missing his father."
+  },
+  {
+   "img": "img/asp-happy-and-sad/06.webp",
+   "text": "Why is this girl happy?"
+  },
+  {
+   "img": "img/asp-happy-and-sad/07.webp",
+   "text": "She has a new dress."
+  },
+  {
+   "img": "img/asp-happy-and-sad/08.webp",
+   "text": "Why is the old man laughing?"
+  },
+  {
+   "img": "img/asp-happy-and-sad/09.webp",
+   "text": "He is reading a funny book."
+  },
+  {
+   "img": "img/asp-happy-and-sad/10.webp",
+   "text": "Why is this lady smiling?"
+  },
+  {
+   "img": "img/asp-happy-and-sad/11.webp",
+   "text": "Her children are reading quietly."
+  },
+  {
+   "img": "img/asp-happy-and-sad/12.webp",
+   "text": "What is this lady feeling?"
+  },
+  {
+   "img": "img/asp-happy-and-sad/13.webp",
+   "text": "I think she is feeling shy."
+  }
+ ],
+ "words": 65,
+ "minutes": 3,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Ursula Nafula"
+  ],
+  "illustrators": [
+   "Rijuta Ghate"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=16086",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

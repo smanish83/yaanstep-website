@@ -1,0 +1,57 @@
+{
+ "id": "asp-i-love-reading",
+ "title": "I Love Reading",
+ "pages": [
+  {
+   "img": "img/asp-i-love-reading/02.webp",
+   "text": "I love reading."
+  },
+  {
+   "img": "img/asp-i-love-reading/03.webp",
+   "text": "I always go to read with my friend."
+  },
+  {
+   "img": "img/asp-i-love-reading/04.webp",
+   "text": "My teacher helps to read at school."
+  },
+  {
+   "img": "img/asp-i-love-reading/05.webp",
+   "text": "Who can I read to?"
+  },
+  {
+   "img": "img/asp-i-love-reading/06.webp",
+   "text": "I read with my friends."
+  },
+  {
+   "img": "img/asp-i-love-reading/07.webp",
+   "text": "Who can I read to?"
+  },
+  {
+   "img": "img/asp-i-love-reading/08.webp",
+   "text": "My father and grandfather are busy."
+  },
+  {
+   "img": "img/asp-i-love-reading/09.webp",
+   "text": "Who can I read to? I can read to myself!"
+  }
+ ],
+ "words": 49,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Rose Alungho"
+  ],
+  "illustrators": [
+   "Wiehan de Jager",
+   "Vusi Malindi"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=13499",
+  "licence": "CC BY 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

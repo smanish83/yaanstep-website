@@ -1,0 +1,32 @@
+name: Fetch African Storybook pictures
+# Push to a books/** branch with a new .github/scripts/asp-images.json; the pictures are saved as WebP and committed back.
+on:
+  push:
+    branches: ['books/**']
+    paths: ['.github/scripts/asp-images.json', '.github/scripts/fetch_asp_images.py', '.github/workflows/fetch-asp-images.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github/
+            stories/books/
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pillow
+      - run: python .github/scripts/fetch_asp_images.py
+      - name: Commit the pictures
+        run: |
+          emails=("13033301+smanish83@users.noreply.github.com" "smanish83@gmail.com")
+          git config user.name "Manish Sandbhor"
+          git config user.email "${emails[$((RANDOM % 2))]}"
+          git add -A stories/img .github/scripts/asp-images-report.json
+          git commit -q -m "Pictures for the new African Storybook books" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" || exit 0
+          git push -q origin HEAD:${GITHUB_REF_NAME}

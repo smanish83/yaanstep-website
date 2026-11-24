@@ -1,0 +1,56 @@
+{
+ "id": "asp-palesa-loves-plants",
+ "title": "Palesa Loves Plants",
+ "pages": [
+  {
+   "img": "img/asp-palesa-loves-plants/02.webp",
+   "text": "This is Palesa. Her name means 'flower' in her language, Setswana."
+  },
+  {
+   "img": "img/asp-palesa-loves-plants/03.webp",
+   "text": "In the morning Palesa talks to the orange tree. \"Orange tree, please give us lots of oranges.\""
+  },
+  {
+   "img": "img/asp-palesa-loves-plants/04.webp",
+   "text": "Palesa walks to school. On the way she says to the grass, \"Please grass, grow greener and don't dry up.\""
+  },
+  {
+   "img": "img/asp-palesa-loves-plants/05.webp",
+   "text": "Palesa passes wild flowers. \"Flowers, thank you for your bright colours.\""
+  },
+  {
+   "img": "img/asp-palesa-loves-plants/06.webp",
+   "text": "At school, Palesa talks to the little tree. \"Tree, please grow big branches so we can read under your shade.\""
+  },
+  {
+   "img": "img/asp-palesa-loves-plants/07.webp",
+   "text": "Palesa talks to the hedge round her school. \"Please grow strong and stop bad people from going inside.\""
+  },
+  {
+   "img": "img/asp-palesa-loves-plants/08.webp",
+   "text": "When Palesa returns home, she visits the orange tree. \"Are your oranges ripe yet?\" asks Palesa."
+  },
+  {
+   "img": "img/asp-palesa-loves-plants/09.webp",
+   "text": "\"The oranges are still green,\" sighs Palesa. \"I will see you tomorrow orange tree,\" she says. \"Perhaps then you will have a ripe orange for me!\""
+  }
+ ],
+ "words": 139,
+ "minutes": 3,
+ "ages": "5-7",
+ "credits": {
+  "authors": [
+   "African Storybook"
+  ],
+  "illustrators": [
+   "Jesse Pietersen"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=15271",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}

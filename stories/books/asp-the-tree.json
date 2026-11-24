@@ -1,0 +1,65 @@
+{
+ "id": "asp-the-tree",
+ "title": "The Tree",
+ "pages": [
+  {
+   "img": "img/asp-the-tree/02.webp",
+   "text": "I am a tree and I am your friend."
+  },
+  {
+   "img": "img/asp-the-tree/03.webp",
+   "text": "I am a tree I give you life."
+  },
+  {
+   "img": "img/asp-the-tree/04.webp",
+   "text": "I am a tree I give you shelter."
+  },
+  {
+   "img": "img/asp-the-tree/05.webp",
+   "text": "I am a tree I give you shade."
+  },
+  {
+   "img": "img/asp-the-tree/06.webp",
+   "text": "I am a tree I give you food."
+  },
+  {
+   "img": "img/asp-the-tree/07.webp",
+   "text": "I am a tree I give you furniture."
+  },
+  {
+   "img": "img/asp-the-tree/08.webp",
+   "text": "I am a tree I give you education."
+  },
+  {
+   "img": "img/asp-the-tree/09.webp",
+   "text": "I am a tree I give you fire."
+  },
+  {
+   "img": "img/asp-the-tree/10.webp",
+   "text": "I am a tree and I am your friend."
+  }
+ ],
+ "words": 74,
+ "minutes": 2,
+ "ages": "3-5",
+ "credits": {
+  "authors": [
+   "Jane Tsharane"
+  ],
+  "illustrators": [
+   "Kathy Arbuckle",
+   "Wiehan de Jager",
+   "Catherine Groenewald",
+   "Rob Owen",
+   "Vusi Malindi",
+   "Maya Marshak"
+  ],
+  "translators": [],
+  "publisher": "African Storybook Initiative",
+  "platform": "African Storybook",
+  "source": "https://africanstorybook.org/reader.php?id=13087",
+  "licence": "CC BY 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "Pictures resized and converted to WebP. Extra spaces removed."
+ }
+}
